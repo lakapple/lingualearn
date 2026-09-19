@@ -1,0 +1,176 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { byLang } from "../../lib/content-helpers.js";
+import { LANGS } from "../../lib/i18n.js";
+
+export function getStaticPaths() {
+    return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: "vi" | "en" };
+
+const allLessons = await getCollection("lessons");
+const recentLessons = byLang(allLessons, lang)
+    .sort((a, b) => (b.data.updatedDate ?? 0) - (a.data.updatedDate ?? 0))
+    .slice(0, 6);
+
+const t = {
+    vi: {
+        pageTitle: "Trang chủ",
+        heroTitle: "Thư viện Toán học phổ thông song ngữ",
+        heroDesc:
+            "Lingualearn là bách khoa toàn thư Toán học dành cho học sinh Việt Nam, trình bày song song Tiếng Việt và English.",
+        gradesTitle: "Danh mục khối lớp",
+        recentTitle: "Bài học mới cập nhật",
+        empty: "Chưa có bài học nào được đăng tải.",
+    },
+    en: {
+        pageTitle: "Home",
+        heroTitle: "Bilingual High-School Math Encyclopedia",
+        heroDesc:
+            "Lingualearn is a Math encyclopedia for Vietnamese students, presented in Vietnamese and English side by side.",
+        gradesTitle: "Browse by grade",
+        recentTitle: "Recently updated lessons",
+        empty: "No lessons published yet.",
+    },
+}[lang];
+
+const grades = [10, 11, 12].map((grade) => ({
+    grade,
+    href: `/${lang}/lop-${grade}`,
+}));
+---
+
+<BaseLayout title={t.pageTitle} lang={lang}>
+    <section class="hero">
+        <div class="container">
+            <h1>{t.heroTitle}</h1>
+            <p>{t.heroDesc}</p>
+        </div>
+    </section>
+
+    <section class="container grades">
+        <h2>{t.gradesTitle}</h2>
+        <div class="grade-cards">
+            {grades.map((g) => (
+                <a class="grade-card" href={g.href}>
+                    <span class="grade-card__num">
+                        {lang === "vi" ? "Lớp" : "Grade"} {g.grade}
+                    </span>
+                </a>
+            ))}
+        </div>
+    </section>
+
+    <section class="container recent">
+        <h2>{t.recentTitle}</h2>
+
+        {recentLessons.length === 0 ? (
+            <p>{t.empty}</p>
+        ) : (
+            <ul class="lesson-list">
+                {recentLessons.map((lesson) => (
+                    <li class="lesson-card">
+                        <a
+                            href={`/${lang}/lessons/${lesson.slug}`}
+                            class="lesson-card__title"
+                        >
+                            {lesson.data.title}
+                        </a>
+                        <p class="lesson-card__desc">
+                            {lesson.data.description}
+                        </p>
+                        <div class="lesson-card__tags">
+                            {lesson.data.tags.map((tag) => (
+                                <span class="tag-pill">{tag}</span>
+                            ))}
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        )}
+    </section>
+</BaseLayout>
+
+<style>
+    .hero {
+        background: var(--color-bg-subtle);
+        border-bottom: 1px solid var(--color-border);
+        padding-block: 3rem;
+        text-align: center;
+    }
+    .hero h1 {
+        margin-bottom: 0.75rem;
+        font-size: 1.9rem;
+    }
+    .hero p {
+        max-width: 640px;
+        margin-inline: auto;
+        color: var(--color-text-muted);
+    }
+
+    .grades,
+    .recent {
+        padding-block: 2.5rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.4rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .grade-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    .grade-card {
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 1.25rem;
+        color: var(--color-text);
+        transition:
+            border-color 0.15s,
+            box-shadow 0.15s;
+    }
+    .grade-card:hover {
+        text-decoration: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 2px 8px rgba(51, 102, 204, 0.12);
+    }
+    .grade-card__num {
+        display: block;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .lesson-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+    }
+    .lesson-card {
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+    .lesson-card__title {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .lesson-card__desc {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        margin: 0.5rem 0;
+    }
+    .lesson-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+</style>

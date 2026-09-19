@@ -1,0 +1,137 @@
+---
+// src/components/GeoGebra.astro
+interface Props {
+    id: string;
+    title?: string;
+    width?: number;
+    height?: number;
+    xmin?: number;
+    xmax?: number;
+    ymin?: number;
+    ymax?: number;
+}
+
+const {
+    id,
+    title = "Mô hình GeoGebra",
+    width = 600,
+    height = 420,
+    xmin = -0.5,
+    xmax = 4.0,
+    ymin = -0.5,
+    ymax = 3.5,
+} = Astro.props;
+
+// ID ngẫu nhiên duy nhất cho mỗi component
+const containerId = `ggb-${id}-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<div class="geogebra-wrapper">
+    <div id={containerId} class="ggb-target"></div>
+</div>
+
+<script is:inline src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script
+    is:inline
+    define:vars={{ containerId, id, width, height, xmin, xmax, ymin, ymax }}
+>
+    // DÙNG IIFE ĐỂ CÔ LẬP RIÊNG TỪNG COMPONENT, KHÔNG XUNG ĐỘT TRÊN CÙNG 1 TRANG
+    (() => {
+        function init() {
+            const el = document.getElementById(containerId);
+            if (!el || el.dataset.loaded) return;
+            el.dataset.loaded = "true";
+
+            const params = {
+                material_id: id,
+                appName: "classic",
+                width: width,
+                height: height,
+                allowStyleBar: false,
+                disableAutoScale: true,
+                preventFocus: true,
+                showToolBar: false,
+                showAlgebraInput: false,
+                showMenuBar: false,
+                showResetIcon: false,
+                showSettingsIcon: false,
+                enableRightClick: false,
+                enableShiftDragZoom: true,
+                perspective: "G",
+
+                appletOnLoad(api) {
+                    api.setPerspective("G");
+
+                    // THUẬT TOÁN TỰ ĐỘNG CÂN BẰNG TỈ LỆ 1:1 (KHÔNG BAO GIỜ BỊ CẮT VÀ KHÔNG BỊ MÉO)
+                    const dx = xmax - xmin;
+                    const dy = ymax - ymin;
+                    const targetAspect = width / height;
+
+                    let finalXmin = xmin;
+                    let finalXmax = xmax;
+                    let finalYmin = ymin;
+                    let finalYmax = ymax;
+
+                    if (dx / dy > targetAspect) {
+                        // Khung cao hơn tỉ lệ toạ độ -> Nới rộng chiều Y để không cắt mất hình
+                        const newDy = dx / targetAspect;
+                        const cy = (ymin + ymax) / 2;
+                        finalYmin = cy - newDy / 2;
+                        finalYmax = cy + newDy / 2;
+                    } else {
+                        // Khung ngang hơn tỉ lệ toạ độ -> Nới rộng chiều X để giữ tỉ lệ vuông
+                        const newDx = dy * targetAspect;
+                        const cx = (xmin + xmax) / 2;
+                        finalXmin = cx - newDx / 2;
+                        finalXmax = cx + newDx / 2;
+                    }
+
+                    api.setCoordSystem(
+                        finalXmin,
+                        finalXmax,
+                        finalYmin,
+                        finalYmax,
+                    );
+                    api.evalCommand("SetAxesRatio(1, 1)");
+
+                    // Làm đậm mũi tên vectơ
+                    const vectors = api.getAllObjectNames("vector");
+                    vectors.forEach((v) => api.setLineThickness(v, 4));
+
+                    const points = api.getAllObjectNames("point");
+                    points.forEach((p) => api.setPointSize(p, 5));
+                },
+            };
+
+            const applet = new GGBApplet(params, true);
+            applet.inject(containerId);
+        }
+
+        if (document.readyState === "complete") {
+            init();
+        } else {
+            window.addEventListener("DOMContentLoaded", init);
+        }
+        document.addEventListener("astro:page-load", init);
+    })();
+</script>
+
+<style>
+    .geogebra-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem 0;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .ggb-target {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        background-color: #ffffff;
+        flex-shrink: 0;
+    }
+</style>

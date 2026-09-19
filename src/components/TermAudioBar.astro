@@ -1,0 +1,160 @@
+---
+interface LangEntry {
+    title: string;
+    phonetic?: string;
+}
+
+interface Props {
+    vi: LangEntry | null;
+    en: LangEntry | null;
+}
+
+const { vi, en } = Astro.props;
+
+function stripParentheticalSSR(text: string): string {
+    return text
+        .replace(/\([^)]*\)/g, "")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+}
+
+const items = [
+    vi && {
+        code: "vi-VN",
+        label: "VI",
+        displayTitle: stripParentheticalSSR(vi.title),
+        phonetic: vi.phonetic,
+    },
+    en && {
+        code: "en-US",
+        label: "EN",
+        displayTitle: stripParentheticalSSR(en.title),
+        phonetic: en.phonetic,
+    },
+].filter(Boolean) as Array<{
+    code: string;
+    label: string;
+    displayTitle: string;
+    phonetic?: string;
+}>;
+---
+
+{items.length > 0 && (
+    <div class="term-audio-bar" role="group" aria-label="Phát âm thuật ngữ">
+        {items.map((item) => (
+            <button
+                type="button"
+                class="term-audio-btn"
+                data-speak-text={item.displayTitle}
+                data-speak-lang={item.code}
+            >
+                <svg
+                    class="term-audio-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                </svg>
+                <span class="term-audio-label">{item.label}</span>
+                <span class="term-audio-title">{item.displayTitle}</span>
+                {item.phonetic && (
+                    <span class="term-audio-phonetic">{item.phonetic}</span>
+                )}
+            </button>
+        ))}
+    </div>
+)}
+
+<style>
+    .term-audio-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+    }
+    .term-audio-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-subtle);
+        border-radius: 999px;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.85rem;
+        cursor: pointer;
+        color: var(--color-text);
+        transition:
+            border-color 0.15s,
+            background 0.15s;
+    }
+    .term-audio-btn:hover {
+        border-color: var(--color-accent);
+        background: var(--color-bg);
+    }
+    .term-audio-btn.is-speaking {
+        border-color: var(--color-accent);
+        background: var(--color-bg);
+    }
+    .term-audio-btn.is-unsupported {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    .term-audio-icon {
+        flex-shrink: 0;
+        color: var(--color-accent);
+    }
+    .term-audio-label {
+        font-weight: 700;
+        font-size: 0.7rem;
+        color: var(--color-text-muted);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        padding: 0 0.3rem;
+    }
+    .term-audio-title {
+        font-weight: 600;
+    }
+    .term-audio-phonetic {
+        font-family: "Noto Sans", "Segoe UI", sans-serif;
+        color: var(--color-text-muted);
+        font-style: italic;
+    }
+</style>
+
+<script>
+    import { speakText } from "../lib/speech.js";
+
+    function initTermAudioButtons() {
+        document
+            .querySelectorAll<HTMLButtonElement>("[data-speak-text]")
+            .forEach((btn) => {
+                if (btn.dataset.bound === "true") return;
+                btn.dataset.bound = "true";
+
+                const text = btn.dataset.speakText!;
+                const langCode = btn.dataset.speakLang!;
+
+                btn.addEventListener("click", () => {
+                    document
+                        .querySelectorAll(".term-audio-btn")
+                        .forEach((b) => b.classList.remove("is-speaking"));
+                    speakText(text, langCode, {
+                        onStart: () => btn.classList.add("is-speaking"),
+                        onEnd: () => btn.classList.remove("is-speaking"),
+                        onUnsupported: (reason) => {
+                            btn.classList.add("is-unsupported");
+                            btn.title =
+                                reason === "no-voice" &&
+                                langCode.startsWith("vi")
+                                    ? "Trình duyệt/máy của bạn chưa cài giọng đọc tiếng Việt."
+                                    : "Trình duyệt của bạn không hỗ trợ hoặc thiếu giọng đọc phù hợp.";
+                        },
+                    });
+                });
+            });
+    }
+
+    initTermAudioButtons();
+</script>

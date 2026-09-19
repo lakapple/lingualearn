@@ -1,0 +1,81 @@
+---
+// src/components/YouTube.astro
+interface Props {
+    url: string; // URL embed của YouTube
+    title?: string; // Tiêu đề video (tuỳ chọn)
+    maxWidth?: string; // Độ rộng tối đa (mặc định 800px)
+    aspectRatio?: string; // Tỉ lệ khung hình (mặc định 16/9)
+}
+
+const {
+    url,
+    title = "YouTube video player",
+    maxWidth = "800px",
+    aspectRatio = "16/9",
+} = Astro.props;
+
+// Hàm tự động chuẩn hoá: nếu là link thường thì tự chuyển thành link embed
+function getEmbedUrl(inputUrl: string): string {
+    try {
+        const parsed = new URL(inputUrl);
+
+        // Dạng: https://www.youtube.com/watch?v=VIDEO_ID
+        if (parsed.searchParams.has("v")) {
+            const id = parsed.searchParams.get("v");
+            return `https://www.youtube.com/embed/${id}`;
+        }
+
+        // Dạng rút gọn: https://youtu.be/VIDEO_ID
+        if (parsed.hostname === "youtu.be") {
+            const id = parsed.pathname.slice(1);
+            return `https://www.youtube.com/embed/${id}`;
+        }
+
+        // Nếu đã là link embed chuẩn (https://www.youtube.com/embed/VIDEO_ID)
+        return inputUrl;
+    } catch {
+        return inputUrl;
+    }
+}
+
+const embedSrc = getEmbedUrl(url);
+---
+
+<div class="youtube-wrapper" style={`max-width: ${maxWidth};`}>
+    <div class="youtube-frame-box" style={`aspect-ratio: ${aspectRatio};`}>
+        <iframe
+            src={embedSrc}
+            title={title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+    </div>
+</div>
+
+<style>
+    .youtube-wrapper {
+        width: 100%;
+        margin: 1.5rem auto;
+    }
+
+    .youtube-frame-box {
+        position: relative;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        background-color: #0f172a;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+    }
+</style>

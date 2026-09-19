@@ -1,0 +1,71 @@
+---
+import { LANGS, switchLangInPath } from "../lib/i18n.js";
+
+interface Props {
+    lang: string;
+    pathname: string;
+}
+const { lang, pathname } = Astro.props;
+const labels: Record<string, string> = { vi: "VI", en: "EN" };
+---
+
+<div
+    class="lang-switcher"
+    role="group"
+    aria-label="Chọn ngôn ngữ / Select language"
+>
+    {LANGS.map((l) => (
+        <a
+            href={switchLangInPath(pathname, l)}
+            class:list={["lang-btn", { "is-active": l === lang }]}
+            aria-current={l === lang ? "true" : undefined}
+            data-lang-switch
+        >
+            {labels[l]}
+        </a>
+    ))}
+</div>
+
+<style>
+    .lang-switcher {
+        display: flex;
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .lang-btn {
+        border: none;
+        background: var(--color-bg);
+        padding: 0.35rem 0.65rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--color-text-muted);
+    }
+    .lang-btn:hover {
+        text-decoration: none;
+    }
+    .lang-btn.is-active {
+        background: var(--color-accent);
+        color: white;
+    }
+</style>
+
+<script>
+    document
+        .querySelectorAll<HTMLAnchorElement>("[data-lang-switch]")
+        .forEach((link) => {
+            link.addEventListener("click", () => {
+                if (link.getAttribute("aria-current") === "true") return; // đang ở ngôn ngữ này, không cần lưu
+                try {
+                    sessionStorage.setItem(
+                        "lingualearn:scrollY",
+                        String(window.scrollY),
+                    );
+                } catch {
+                    // sessionStorage có thể bị chặn (chế độ ẩn danh nghiêm ngặt) — bỏ qua an toàn
+                }
+            });
+        });
+</script>

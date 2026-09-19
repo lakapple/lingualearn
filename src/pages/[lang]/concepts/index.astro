@@ -1,0 +1,109 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { byLang } from "../../../lib/content-helpers.js";
+import { LANGS } from "../../../lib/i18n.js";
+
+export function getStaticPaths() {
+    return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: "vi" | "en" };
+
+const allConcepts = await getCollection("concepts");
+const concepts = byLang(allConcepts, lang).sort((a, b) =>
+    a.data.title.localeCompare(b.data.title, lang === "vi" ? "vi" : "en"),
+);
+
+const t = {
+    vi: {
+        pageTitle: "Thuật ngữ Wiki",
+        heading: "Danh sách thuật ngữ",
+        intro: "Toàn bộ khái niệm và thuật ngữ Toán học được giải thích trong bộ bách khoa này.",
+        empty: "Chưa có thuật ngữ nào được đăng tải.",
+    },
+    en: {
+        pageTitle: "Wiki Glossary",
+        heading: "All terms",
+        intro: "All Math concepts and terms explained in this encyclopedia.",
+        empty: "No terms published yet.",
+    },
+}[lang];
+---
+
+<BaseLayout title={t.pageTitle} lang={lang}>
+    <section class="container concepts-index">
+        <h1>{t.heading}</h1>
+        <p class="concepts-index__intro">{t.intro}</p>
+
+        {concepts.length === 0 ? (
+            <p>{t.empty}</p>
+        ) : (
+            <ul class="concept-list">
+                {concepts.map((concept) => (
+                    <li class="concept-card">
+                        <a
+                            href={`/${lang}/concepts/${concept.slug}`}
+                            class="concept-card__title"
+                        >
+                            {concept.data.title}
+                        </a>
+                        <p class="concept-card__desc">
+                            {concept.data.description}
+                        </p>
+                        <div class="concept-card__tags">
+                            {concept.data.tags.map((tag) => (
+                                <span class="tag-pill">{tag}</span>
+                            ))}
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        )}
+    </section>
+</BaseLayout>
+
+<style>
+    .concepts-index {
+        padding-block: 2.5rem;
+    }
+    .concepts-index h1 {
+        font-size: 1.6rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .concepts-index__intro {
+        color: var(--color-text-muted);
+        margin-bottom: 1.5rem;
+    }
+
+    .concept-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+    }
+    .concept-card {
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+    .concept-card__title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--color-accent);
+    }
+    .concept-card__desc {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        margin: 0.5rem 0;
+    }
+    .concept-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+</style>

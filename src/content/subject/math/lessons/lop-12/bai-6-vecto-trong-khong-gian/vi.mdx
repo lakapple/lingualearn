@@ -1,0 +1,144 @@
+---
+title: "Bài 6: Vectơ trong không gian"
+description: "Khái niệm vectơ trong không gian, các phép toán và ứng dụng."
+grade: 12
+tags: ["vectơ", "hình học không gian", "lớp 12"]
+updatedDate: 2026-09-10
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';
+import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+* **Thuật ngữ:**
+  * Vectơ trong không gian
+* **Kiến thức, kĩ năng:**
+  * Nhận biết vectơ trong không gian.
+  * Nhận biết và thực hiện các phép toán vectơ trong không gian.
+
+---
+
+## Vectơ trong không gian
+
+<Youtube url="https://www.youtube.com/watch?v=phvpqxLNTUQ"/>
+
+### Định nghĩa và khái niệm cơ bản
+* **Định nghĩa:** Vectơ trong không gian là một đoạn thẳng có hướng.
+* **Định nghĩa độ dài:** Độ dài của vectơ trong không gian là khoảng cách giữa [[diem:điểm đầu và điểm cuối]] của vectơ đó.
+* **Giá của vectơ:** Đường thẳng đi qua điểm đầu và điểm cuối của một vectơ được gọi là giá của vectơ đó.
+* **Hai vectơ cùng phương:** Hai vectơ được gọi là cùng phương nếu chúng có giá song song hoặc trùng nhau.
+* **Hướng của hai vectơ cùng phương:** Nếu hai vectơ cùng phương thì chúng cùng hướng hoặc ngược hướng.
+* **Hai vectơ bằng nhau:** Hai vectơ $\vec{a}$ và $\vec{b}$ được gọi là bằng nhau, kí hiệu $\vec{a} = \vec{b}$, nếu chúng có cùng độ dài và cùng hướng.
+* **Vectơ-không:** Các vectơ có điểm đầu và điểm cuối trùng nhau, ví dụ như $\overrightarrow{AA}, \overrightarrow{BB},...$ gọi là các vectơ-không.
+
+### Chú ý và quy ước
+* **Kí hiệu điểm:** Vectơ có điểm đầu là $A$ và điểm cuối là $B$ được kí hiệu là $\overrightarrow{AB}$.
+* **Kí hiệu chung:** Khi không cần chỉ rõ điểm đầu và điểm cuối của vectơ thì vectơ còn được kí hiệu là $\vec{a}, \vec{b}, \vec{x}, \vec{y},...$
+* **Kí hiệu độ dài:** Độ dài của vectơ $\overrightarrow{AB}$ được kí hiệu là $|\overrightarrow{AB}|$, độ dài của vectơ $\vec{a}$ được kí hiệu là $|\vec{a}|$.
+* **Tính chất xác định điểm:** Trong không gian, với mỗi điểm $O$ và vectơ $\vec{a}$ cho trước, có duy nhất điểm $M$ sao cho $\overrightarrow{OM} = \vec{a}$.
+* **Quy ước về vectơ-không:** Ta quy ước vectơ-không có độ dài là $0$, cùng hướng (và vì vậy cùng phương) với mọi vectơ. Do đó, các vectơ-không đều bằng nhau và được kí hiệu chung là $\vec{0}$.
+
+---
+
+## Tổng và hiệu của hai vectơ trong không gian
+
+### a) Tổng của hai vectơ trong không gian
+
+* **Định nghĩa tổng:** Trong không gian, cho hai vectơ $\vec{a}$ và $\vec{b}$. Lấy một điểm $A$ bất kì và các điểm $B, C$ sao cho $\overrightarrow{AB} = \vec{a}, \overrightarrow{BC} = \vec{b}$. Khi đó, vectơ $\overrightarrow{AC}$ được gọi là tổng của hai vectơ $\vec{a}$ và $\vec{b}$, kí hiệu là $\vec{a} + \vec{b}$.
+* **Định nghĩa phép cộng:** Trong không gian, phép lấy tổng của hai vectơ được gọi là phép cộng vectơ.
+* **Quy tắc ba điểm:** Nếu $A, B, C$ là ba điểm bất kì thì $\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}$.
+
+<GeoGebra 
+  id="q7ccwpzh" 
+/>
+
+* **Quy tắc hình bình hành:** Nếu $ABCD$ là hình bình hành thì $\overrightarrow{AB} + \overrightarrow{AD} = \overrightarrow{AC}$.
+
+<GeoGebra
+  id="xvefb3ry"
+/>
+
+* **Quy tắc hình hộp:** Cho hình hộp $ABCD.A'B'C'D'$. Khi đó, ta có $\overrightarrow{AB} + \overrightarrow{AD} + \overrightarrow{AA'} = \overrightarrow{AC'}$.
+
+#### Tính chất của phép cộng vectơ
+* **Tính chất giao hoán:** Nếu $\vec{a}$ và $\vec{b}$ là hai vectơ bất kì thì $\vec{a} + \vec{b} = \vec{b} + \vec{a}$.
+* **Tính chất kết hợp:** Nếu $\vec{a}, \vec{b}$ và $\vec{c}$ là ba vectơ bất kì thì $(\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c})$.
+* **Tính chất cộng với vectơ $\vec{0}$:** Nếu $\vec{a}$ là một vectơ bất kì thì $\vec{a} + \vec{0} = \vec{0} + \vec{a} = \vec{a}$.
+* **Tổng nhiều vectơ:** Từ tính chất kết hợp của phép cộng vectơ trong không gian, ta có thể viết tổng của ba vectơ $\vec{a}, \vec{b}$ và $\vec{c}$ là $\vec{a} + \vec{b} + \vec{c}$ mà không cần sử dụng các dấu ngoặc. Tương tự đối với tổng của nhiều vectơ trong không gian.
+
+---
+
+### b) Hiệu của hai vectơ trong không gian
+* **Định nghĩa vectơ đối:** Trong không gian, vectơ có cùng độ dài và ngược hướng với vectơ $\vec{a}$ được gọi là vectơ đối của vectơ $\vec{a}$, kí hiệu là $-\vec{a}$.
+* **Tính chất vectơ đối:** Hai vectơ là đối nhau nếu và chỉ nếu tổng của chúng bằng $\vec{0}$.
+* **Chú ý về vectơ đối:**
+  * Vectơ $\overrightarrow{BA}$ là một vectơ đối của vectơ $\overrightarrow{AB}$.
+  * Vectơ $\vec{0}$ được coi là vectơ đối của chính nó.
+* **Định nghĩa hiệu:** Vectơ $\vec{a} + (-\vec{b})$ được gọi là hiệu của hai vectơ $\vec{a}$ và $\vec{b}$ và kí hiệu là $\vec{a} - \vec{b}$.
+* **Định nghĩa phép trừ:** Trong không gian, phép lấy hiệu của hai vectơ được gọi là phép trừ vectơ.
+* **Quy tắc hiệu:** Với ba điểm $O, A, B$ bất kì trong không gian, ta có $\overrightarrow{OB} - \overrightarrow{OA} = \overrightarrow{AB}$.
+
+---
+
+## Tích của một số với một vectơ trong không gian
+
+### Định nghĩa
+* **Định nghĩa:** Trong không gian, tích của một số thực $k \ne 0$ với một vectơ $\vec{a} \ne \vec{0}$ là một vectơ, kí hiệu là $k\vec{a}$, được xác định như sau:
+  * Cùng hướng với vectơ $\vec{a}$ nếu $k > 0$; ngược hướng với vectơ $\vec{a}$ nếu $k < 0$;
+  * Có độ dài bằng $|k| \cdot |\vec{a}|$.
+* **Định nghĩa phép nhân:** Trong không gian, phép lấy tích của một số với một vectơ được gọi là phép nhân một số với một vectơ.
+
+### Chú ý và điều kiện cùng phương
+* **Quy ước:** $0\vec{a} = \vec{0}$ và $k\vec{0} = \vec{0}$.
+* **Điều kiện bằng vectơ $\vec{0}$:** Nếu $k\vec{a} = \vec{0}$ thì $k = 0$ hoặc $\vec{a} = \vec{0}$.
+* **Điều kiện cùng phương:** Trong không gian, điều kiện cần và đủ để hai vectơ $\vec{a}$ và $\vec{b}$ ($\vec{b} \ne \vec{0}$) cùng phương là có một số thực $k$ sao cho $\vec{a} = k\vec{b}$.
+
+### Tính chất của phép nhân một số với một vectơ
+* **Tính chất kết hợp:** Nếu $h, k$ là hai số thực và $\vec{a}$ là một vectơ bất kì thì $h(k\vec{a}) = (hk)\vec{a}$.
+* **Tính chất phân phối đối với phép cộng số:** Nếu $h, k$ là hai số thực và $\vec{a}$ là một vectơ bất kì thì $(h + k)\vec{a} = h\vec{a} + k\vec{a}$.
+* **Tính chất phân phối đối với phép cộng vectơ:** Nếu $k$ là một số thực và $\vec{a}, \vec{b}$ là hai vectơ bất kì thì $k(\vec{a} + \vec{b}) = k\vec{a} + k\vec{b}$.
+* **Tính chất nhân với 1 và -1:** Nếu $\vec{a}$ là một vectơ bất kì thì $1\vec{a} = \vec{a}$ và $(-1)\vec{a} = -\vec{a}$.
+
+---
+
+## Tích vô hướng của hai vectơ trong không gian
+
+### a) Góc giữa hai vectơ trong không gian
+* **Định nghĩa:** Trong không gian, cho hai vectơ $\vec{a}, \vec{b}$ khác $\vec{0}$. Lấy một điểm $O$ bất kì và gọi $A, B$ là hai điểm sao cho $\overrightarrow{OA} = \vec{a}, \overrightarrow{OB} = \vec{b}$. Khi đó, góc $\widehat{AOB}$ ($0^\circ \le \widehat{AOB} \le 180^\circ$) được gọi là góc giữa hai vectơ $\vec{a}$ và $\vec{b}$, kí hiệu là $(\vec{a}, \vec{b})$.
+* **Hai vectơ vuông góc:** Nếu góc giữa hai vectơ $\vec{a}$ và $\vec{b}$ là $90^\circ$ thì ta nói hai vectơ $\vec{a}$ và $\vec{b}$ vuông góc với nhau và kí hiệu là $\vec{a} \perp \vec{b}$.
+* **Cách xác định góc:** Để xác định góc giữa hai vectơ $\overrightarrow{AB}$ và $\overrightarrow{CD}$ trong không gian ta có thể lấy điểm $E$ sao cho $\overrightarrow{AE} = \overrightarrow{CD}$, khi đó $(\overrightarrow{AB}, \overrightarrow{CD}) = \widehat{BAE}$.
+* **Quy ước về góc:** Quy ước góc giữa một vectơ bất kì và $\vec{0}$ có thể nhận một giá trị tuỳ ý từ $0^\circ$ đến $180^\circ$.
+
+---
+
+### b) Tích vô hướng của hai vectơ trong không gian
+* **Định nghĩa và công thức:** Trong không gian, cho hai vectơ $\vec{a}, \vec{b}$ đều khác $\vec{0}$. Tích vô hướng của hai vectơ $\vec{a}$ và $\vec{b}$ là một số, kí hiệu là $\vec{a} \cdot \vec{b}$, được xác định bởi công thức:
+  $$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \cdot \cos(\vec{a}, \vec{b})$$
+* **Quy ước:** Quy ước nếu $\vec{a} = \vec{0}$ hoặc $\vec{b} = \vec{0}$ thì $\vec{a} \cdot \vec{b} = 0$.
+* **Điều kiện vuông góc:** Cho hai vectơ $\vec{a}, \vec{b}$ đều khác $\vec{0}$. Khi đó:
+  $$\vec{a} \perp \vec{b} \Leftrightarrow \vec{a} \cdot \vec{b} = 0$$
+* **Bình phương vô hướng:** Với mọi vectơ $\vec{a}$, ta có:
+  $$\vec{a}^2 = |\vec{a}|^2$$
+* **Công thức cosin góc giữa hai vectơ:** Nếu $\vec{a}, \vec{b}$ là hai vectơ khác $\vec{0}$ thì:
+  $$\cos(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}$$
+
+#### Tính chất của tích vô hướng
+* **Tính chất giao hoán:** $\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}$
+* **Tính chất kết hợp với một số:** $(k\vec{a}) \cdot \vec{b} = k(\vec{a} \cdot \vec{b}) = \vec{a} \cdot (k\vec{b})$
+* **Tính chất phân phối:** $\vec{a} \cdot (\vec{b} + \vec{c}) = \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{c}$
+
+#### Ứng dụng trong Vật lí
+* **Công cơ học:** Nếu có một lực $\vec{F}$ tác động vào một vật tại điểm $M$ và làm cho vật đó di chuyển một quãng đường $MN$ thì công $A$ sinh ra được tính theo công thức:
+  $$A = \vec{F} \cdot \overrightarrow{MN}$$
+  *(trong đó lực $\vec{F}$ có độ lớn tính bằng Newton, quãng đường $MN$ tính bằng mét và công $A$ tính bằng Jun).*
+
+---
+
+## Mở rộng: Trọng tâm tam giác và Trọng tâm tứ diện
+
+* **Tính chất trọng tâm tam giác:** Tương tự như trong mặt phẳng, nếu $G$ là trọng tâm của tam giác $ABC$ thì với điểm $O$ tuỳ ý, ta có:
+  $$\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = 3\overrightarrow{OG}$$
+* **Trọng tâm tứ diện:** Điểm $I$ trong Luyện tập 8 được gọi là trọng tâm của tứ diện $ABCD$ khi thỏa mãn:
+  $$\overrightarrow{IA} + \overrightarrow{IB} + \overrightarrow{IC} + \overrightarrow{ID} = \vec{0}$$
+  *(tương đương với $\overrightarrow{AI} = 3\overrightarrow{IG}$, trong đó $G$ là trọng tâm của tam giác $BCD$).*

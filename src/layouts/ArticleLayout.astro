@@ -1,0 +1,108 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+
+interface Heading {
+    depth: number;
+    slug: string;
+    text: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    tags: string[];
+    headings: Heading[];
+    lang: string;
+}
+
+const { title, description, tags, headings, lang } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} lang={lang}>
+    <div class="article-shell container">
+        <aside class="article-shell__sidebar">
+            <TableOfContents headings={headings} />
+        </aside>
+
+        <article class="article-shell__content">
+            <h1>{title}</h1>
+
+            <slot name="meta-bar" />
+
+            {tags.length > 0 && (
+                <div class="article-tags">
+                    {tags.map((tag) => (
+                        <span class="tag-pill">{tag}</span>
+                    ))}
+                </div>
+            )}
+
+            <div class="article-body">
+                <slot />
+            </div>
+        </article>
+    </div>
+</BaseLayout>
+
+<style>
+    .article-shell {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 2rem;
+        padding-block: 2rem;
+        align-items: start;
+    }
+
+    .article-shell__sidebar {
+        position: sticky;
+        top: calc(var(--header-height) + 1rem);
+        max-height: calc(100vh - var(--header-height) - 2rem);
+        overflow-y: auto;
+    }
+
+    .article-shell__content h1 {
+        font-size: 1.9rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .article-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .article-body {
+        font-size: 0.98rem;
+    }
+    .article-body :global(h2) {
+        margin-top: 2rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .article-body :global(h3) {
+        margin-top: 1.5rem;
+    }
+    .article-body :global(img) {
+        max-width: 100%;
+        border-radius: 6px;
+    }
+    .article-body :global(.katex-display) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-block: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+        .article-shell {
+            grid-template-columns: 1fr;
+        }
+        .article-shell__sidebar {
+            position: static;
+            max-height: none;
+        }
+    }
+</style>

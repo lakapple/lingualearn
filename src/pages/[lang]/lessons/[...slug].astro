@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from "astro:content";
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+import { byLang } from "../../../lib/content-helpers.js";
+import { LANGS } from "../../../lib/i18n.js";
+
+export async function getStaticPaths() {
+    const allLessons = await getCollection("lessons");
+    const paths = [];
+
+    for (const lang of LANGS) {
+        for (const entry of byLang(allLessons, lang)) {
+            paths.push({
+                params: { lang, slug: entry.slug },
+                props: { entry },
+            });
+        }
+    }
+    return paths;
+}
+
+const { lang } = Astro.params as { lang: string };
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+
+<ArticleLayout
+    title={entry.data.title}
+    description={entry.data.description}
+    tags={entry.data.tags}
+    headings={headings}
+    lang={lang}
+>
+    <Content />
+</ArticleLayout>

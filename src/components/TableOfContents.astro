@@ -1,0 +1,249 @@
+---
+import { buildHeadingTree } from "../lib/content-helpers.js";
+
+interface Heading {
+    depth: number;
+    slug: string;
+    text: string;
+}
+
+interface Props {
+    headings: Heading[];
+}
+
+const { headings } = Astro.props;
+const tree = buildHeadingTree(headings);
+---
+
+{tree.length > 0 && (
+    <nav class="toc" id="toc" aria-label="Mục lục bài viết">
+        <div class="toc__header">
+            <span class="toc__title">Mục lục</span>
+            <button
+                type="button"
+                class="toc__toggle-visibility"
+                id="toc-toggle-visibility"
+                aria-expanded="true"
+            >
+                ẩn
+            </button>
+        </div>
+
+        <ol class="toc__list" id="toc-list">
+            {tree.map((h2, index) => (
+                <li class="toc__item">
+                    <div class="toc__row">
+                        {h2.children.length > 0 && (
+                            <button
+                                type="button"
+                                class="toc__caret"
+                                data-toc-caret
+                                aria-expanded="true"
+                                aria-label="Thu gọn/mở rộng mục con"
+                            >
+                                <svg
+                                    width="10"
+                                    height="10"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path d="M8 5l8 7-8 7V5z" />
+                                </svg>
+                            </button>
+                        )}
+                        <a
+                            href={`#${h2.slug}`}
+                            class="toc__link toc__link--h2"
+                            data-toc-link
+                        >
+                            <span class="toc__number">{index + 1}</span>{" "}
+                            {h2.text}
+                        </a>
+                    </div>
+
+                    {h2.children.length > 0 && (
+                        <ol class="toc__sublist">
+                            {h2.children.map((h3, subIndex) => (
+                                <li class="toc__item">
+                                    <a
+                                        href={`#${h3.slug}`}
+                                        class="toc__link toc__link--h3"
+                                        data-toc-link
+                                    >
+                                        <span class="toc__number">
+                                            {index + 1}.{subIndex + 1}
+                                        </span>{" "}
+                                        {h3.text}
+                                    </a>
+                                </li>
+                            ))}
+                        </ol>
+                    )}
+                </li>
+            ))}
+        </ol>
+    </nav>
+)}
+
+<style>
+    .toc {
+        background: var(--color-bg-subtle);
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        padding: 0.85rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .toc__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .toc__title {
+        font-weight: 700;
+    }
+    .toc__toggle-visibility {
+        border: none;
+        background: none;
+        color: var(--color-accent);
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+
+    .toc__list,
+    .toc__sublist {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .toc__sublist {
+        margin-top: 0.25rem;
+        padding-left: 1.35rem;
+    }
+    .toc__item {
+        margin-block: 0.15rem;
+    }
+
+    .toc__row {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .toc__caret {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        padding: 0;
+        transition: transform 0.15s;
+    }
+    .toc__caret[aria-expanded="false"] {
+        transform: rotate(0deg);
+    }
+    .toc__caret[aria-expanded="true"] {
+        transform: rotate(90deg);
+    }
+
+    .toc__link {
+        color: var(--color-text);
+        display: inline-block;
+        padding: 0.1rem 0;
+    }
+    .toc__link:hover {
+        color: var(--color-accent);
+        text-decoration: none;
+    }
+    .toc__link--h3 {
+        font-size: 0.82rem;
+        color: var(--color-text-muted);
+    }
+    .toc__link.is-active {
+        color: var(--color-accent);
+        font-weight: 600;
+    }
+
+    .toc__number {
+        color: var(--color-text-muted);
+        margin-right: 0.15rem;
+    }
+
+    .toc__sublist.is-collapsed {
+        display: none;
+    }
+</style>
+
+<script>
+    // Toggle từng nhánh H2 -> H3
+    document
+        .querySelectorAll<HTMLButtonElement>("[data-toc-caret]")
+        .forEach((caret) => {
+            caret.addEventListener("click", () => {
+                const sublist = caret
+                    .closest(".toc__item")
+                    ?.querySelector(".toc__sublist");
+                if (!sublist) return;
+                const expanded = caret.getAttribute("aria-expanded") === "true";
+                caret.setAttribute("aria-expanded", String(!expanded));
+                sublist.classList.toggle("is-collapsed", expanded);
+            });
+        });
+
+    // Ẩn/hiện toàn bộ mục lục
+    const visibilityBtn = document.getElementById("toc-toggle-visibility");
+    const tocList = document.getElementById("toc-list");
+    visibilityBtn?.addEventListener("click", () => {
+        const expanded = visibilityBtn.getAttribute("aria-expanded") === "true";
+        visibilityBtn.setAttribute("aria-expanded", String(!expanded));
+        tocList?.classList.toggle("is-collapsed", expanded);
+        visibilityBtn.textContent = expanded ? "hiện" : "ẩn";
+    });
+
+    // Smooth scroll + highlight mục đang active theo vị trí cuộn
+    const links =
+        document.querySelectorAll<HTMLAnchorElement>("[data-toc-link]");
+
+    links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            const id = link.getAttribute("href")?.slice(1);
+            const target = id ? document.getElementById(id) : null;
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                history.pushState(null, "", `#${id}`);
+            }
+        });
+    });
+
+    const headingEls = Array.from(links)
+        .map((link) =>
+            document.getElementById(link.getAttribute("href")!.slice(1)),
+        )
+        .filter((el): el is HTMLElement => el !== null);
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                const link = document.querySelector(
+                    `[data-toc-link][href="#${entry.target.id}"]`,
+                );
+                if (entry.isIntersecting) {
+                    links.forEach((l) => l.classList.remove("is-active"));
+                    link?.classList.add("is-active");
+                }
+            });
+        },
+        { rootMargin: "-20% 0px -70% 0px" },
+    );
+
+    headingEls.forEach((el) => observer.observe(el));
+</script>

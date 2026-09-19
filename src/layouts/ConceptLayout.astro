@@ -1,0 +1,38 @@
+---
+import ArticleLayout from "./ArticleLayout.astro";
+import TermAudioBar from "../components/TermAudioBar.astro";
+
+interface Heading {
+    depth: number;
+    slug: string;
+    text: string;
+}
+
+interface LangEntry {
+    title: string;
+    phonetic?: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    tags: string[];
+    headings: Heading[];
+    lang: string;
+    vi: LangEntry | null;
+    en: LangEntry | null;
+}
+
+const { title, description, tags, headings, lang, vi, en } = Astro.props;
+---
+
+<ArticleLayout
+    title={title}
+    description={description}
+    tags={tags}
+    headings={headings}
+    lang={lang}
+>
+    <TermAudioBar slot="meta-bar" vi={vi} en={en} />
+    <slot />
+</ArticleLayout>

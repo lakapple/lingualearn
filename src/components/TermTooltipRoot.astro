@@ -1,0 +1,271 @@
+<div id="term-tooltip" class="term-tooltip" role="tooltip" hidden>
+    <div class="term-tooltip__inner"></div>
+</div>
+
+<style>
+    .term-tooltip {
+        position: fixed;
+        z-index: 100;
+        max-width: 320px;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        padding: 0.85rem 1rem;
+        font-size: 0.85rem;
+    }
+    .term-tooltip[hidden] {
+        display: none;
+    }
+
+    .term-tooltip__langs {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 0.6rem;
+    }
+    .term-tooltip__lang-row {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+    }
+    .term-tooltip__lang-label {
+        font-weight: 700;
+        font-size: 0.65rem;
+        color: var(--color-text-muted);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        padding: 0 0.3rem;
+    }
+    .term-tooltip__title {
+        font-weight: 600;
+    }
+    .term-tooltip__phonetic {
+        color: var(--color-text-muted);
+        font-style: italic;
+    }
+    .term-tooltip__speak-btn {
+        border: none;
+        background: var(--color-bg-subtle);
+        border-radius: 999px;
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--color-accent);
+        flex-shrink: 0;
+    }
+    .term-tooltip__speak-btn:hover {
+        background: var(--color-border);
+    }
+    .term-tooltip__summary {
+        color: var(--color-text);
+        border-top: 1px solid var(--color-border);
+        padding-top: 0.5rem;
+        margin: 0;
+    }
+    .term-tooltip__loading {
+        color: var(--color-text-muted);
+        font-style: italic;
+        margin: 0;
+    }
+</style>
+
+<style is:global>
+    /* Đánh dấu trực quan các wiki-link trỏ tới /concepts/ khác với link thường,
+       áp dụng ngay khi JS gắn class này lúc phát hiện link. */
+    .article-body a.term-wikilink {
+        border-bottom: 1px dotted var(--color-accent);
+        text-decoration: none;
+    }
+    .article-body a.term-wikilink:hover {
+        background: var(--color-bg-subtle);
+    }
+</style>
+
+<script>
+    import { stripParenthetical, speakText } from "../lib/speech.js";
+
+    // Khớp đúng href do remarkWikiLinkI18n sinh ra: /vi/concepts/<slug> hoặc /en/concepts/<slug>
+    // Bắt buộc có ít nhất 1 slug sau "concepts/", nên KHÔNG khớp link menu "/vi/concepts" (không có slug).
+    const WIKI_LINK_RE = /^\/(vi|en)\/concepts\/([^\/?#]+)\/?$/;
+
+    let glossaryPromise: Promise<Record<string, any>> | null = null;
+    function loadGlossary() {
+        if (!glossaryPromise) {
+            glossaryPromise = fetch("/glossary.json").then((r) => r.json());
+        }
+        return glossaryPromise;
+    }
+
+    const tooltip = document.getElementById("term-tooltip")!;
+    const inner = tooltip.querySelector(".term-tooltip__inner")!;
+
+    let showTimer: ReturnType<typeof setTimeout> | null = null;
+    let hideTimer: ReturnType<typeof setTimeout> | null = null;
+    let currentSlug: string | null = null;
+
+    function clearTimers() {
+        if (showTimer) clearTimeout(showTimer);
+        if (hideTimer) clearTimeout(hideTimer);
+        showTimer = null;
+        hideTimer = null;
+    }
+
+    function buildSpeakButton(text: string, langCode: string) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "term-tooltip__speak-btn";
+        btn.setAttribute("aria-label", `Nghe phát âm ${langCode}`);
+        btn.innerHTML =
+            '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>';
+        btn.addEventListener("click", (e) => {
+            e.preventDefault(); // phòng trường hợp nút nằm trong <a> lồng cấu trúc lạ, không cho điều hướng
+            speakText(text, langCode, {
+                onUnsupported: () => {
+                    btn.style.opacity = "0.4";
+                },
+            });
+        });
+        return btn;
+    }
+
+    function buildLangRow(
+        entry: { title: string; phonetic?: string | null },
+        code: string,
+        label: string,
+    ) {
+        const row = document.createElement("div");
+        row.className = "term-tooltip__lang-row";
+
+        const tag = document.createElement("span");
+        tag.className = "term-tooltip__lang-label";
+        tag.textContent = label;
+        row.appendChild(tag);
+
+        const displayTitle = stripParenthetical(entry.title);
+        const title = document.createElement("span");
+        title.className = "term-tooltip__title";
+        title.textContent = displayTitle;
+        row.appendChild(title);
+
+        if (entry.phonetic) {
+            const phon = document.createElement("span");
+            phon.className = "term-tooltip__phonetic";
+            phon.textContent = entry.phonetic;
+            row.appendChild(phon);
+        }
+
+        row.appendChild(buildSpeakButton(displayTitle, code));
+        return row;
+    }
+
+    function renderContent(data: any) {
+        inner.innerHTML = "";
+        const langs = document.createElement("div");
+        langs.className = "term-tooltip__langs";
+        if (data.vi) langs.appendChild(buildLangRow(data.vi, "vi-VN", "VI"));
+        if (data.en) langs.appendChild(buildLangRow(data.en, "en-US", "EN"));
+        inner.appendChild(langs);
+
+        const summaryText = data.vi?.summary || data.en?.summary;
+        if (summaryText) {
+            const summary = document.createElement("p");
+            summary.className = "term-tooltip__summary";
+            summary.textContent = summaryText;
+            inner.appendChild(summary);
+        }
+    }
+
+    function positionTooltip(triggerEl: Element) {
+        const rect = triggerEl.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const margin = 8;
+
+        let top = rect.bottom + margin;
+        if (top + tooltipRect.height > window.innerHeight) {
+            top = rect.top - tooltipRect.height - margin;
+        }
+        top = Math.max(margin, top);
+
+        let left = rect.left;
+        if (left + tooltipRect.width > window.innerWidth - margin) {
+            left = window.innerWidth - tooltipRect.width - margin;
+        }
+        left = Math.max(margin, left);
+
+        tooltip.style.top = `${top}px`;
+        tooltip.style.left = `${left}px`;
+    }
+
+    async function showTooltip(triggerEl: Element, slug: string) {
+        currentSlug = slug;
+
+        inner.innerHTML = '<p class="term-tooltip__loading">Đang tải...</p>';
+        tooltip.hidden = false;
+        positionTooltip(triggerEl);
+
+        const glossary = await loadGlossary();
+        if (currentSlug !== slug) return; // đã rê chuột sang chỗ khác trong lúc chờ fetch
+
+        const data = glossary[slug];
+        if (!data) {
+            inner.innerHTML =
+                '<p class="term-tooltip__loading">Không tìm thấy thuật ngữ.</p>';
+            return;
+        }
+        renderContent(data);
+        positionTooltip(triggerEl);
+    }
+
+    function hideTooltip() {
+        tooltip.hidden = true;
+        currentSlug = null;
+    }
+
+    function scheduleShow(triggerEl: Element, slug: string) {
+        clearTimers();
+        showTimer = setTimeout(() => showTooltip(triggerEl, slug), 300);
+    }
+
+    function scheduleHide() {
+        clearTimers();
+        hideTimer = setTimeout(hideTooltip, 200);
+    }
+
+    function initWikiLinkTriggers() {
+        // Chỉ quét link NẰM TRONG nội dung bài viết, tránh bắt nhầm menu Navbar
+        // (ví dụ "/vi/concepts" không có slug -> không khớp regex -> tự động bỏ qua).
+        document
+            .querySelectorAll<HTMLAnchorElement>(".article-body a[href]")
+            .forEach((el) => {
+                if (el.dataset.tooltipBound === "true") return;
+
+                const href = el.getAttribute("href") || "";
+                const match = href.match(WIKI_LINK_RE);
+                if (!match) return;
+
+                const slug = match[2];
+                el.dataset.tooltipBound = "true";
+                el.classList.add("term-wikilink");
+
+                el.addEventListener("mouseenter", () => scheduleShow(el, slug));
+                el.addEventListener("mouseleave", scheduleHide);
+                el.addEventListener("focus", () => scheduleShow(el, slug));
+                el.addEventListener("blur", scheduleHide);
+            });
+    }
+
+    tooltip.addEventListener("mouseenter", clearTimers);
+    tooltip.addEventListener("mouseleave", scheduleHide);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") hideTooltip();
+    });
+
+    initWikiLinkTriggers();
+    document.addEventListener("astro:page-load", initWikiLinkTriggers);
+</script>

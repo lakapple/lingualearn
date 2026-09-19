@@ -1,0 +1,48 @@
+---
+// src/pages/[lang]/concepts/[...slug].astro
+import { getCollection, render } from "astro:content";
+import ConceptLayout from "../../../layouts/ConceptLayout.astro";
+import { byLang, getPairBySlug } from "../../../lib/content-helpers.js";
+import { LANGS } from "../../../lib/i18n.js";
+
+export async function getStaticPaths() {
+    const allConcepts = await getCollection("concepts");
+    const paths = [];
+
+    for (const lang of LANGS) {
+        for (const entry of byLang(allConcepts, lang)) {
+            paths.push({
+                params: { lang, slug: entry.slug },
+                props: { entry, allConcepts },
+            });
+        }
+    }
+    return paths;
+}
+
+const { lang } = Astro.params as { lang: string };
+const { entry, allConcepts } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const pair = getPairBySlug(allConcepts, entry.slug);
+---
+
+<ConceptLayout
+    title={entry.data.title}
+    description={entry.data.description}
+    tags={entry.data.tags}
+    headings={headings}
+    lang={lang}
+    vi={
+        pair.vi
+            ? { title: pair.vi.data.title, phonetic: pair.vi.data.phonetic }
+            : null
+    }
+    en={
+        pair.en
+            ? { title: pair.en.data.title, phonetic: pair.en.data.phonetic }
+            : null
+    }
+>
+    <Content />
+</ConceptLayout>

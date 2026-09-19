@@ -1,0 +1,155 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+interface Props {
+    lang: string;
+    pathname: string;
+}
+const { lang, pathname } = Astro.props;
+
+const navLinks = [
+    { label: lang === "vi" ? "Toán 10" : "Grade 10", href: `/${lang}/lop-10` },
+    { label: lang === "vi" ? "Toán 11" : "Grade 11", href: `/${lang}/lop-11` },
+    { label: lang === "vi" ? "Toán 12" : "Grade 12", href: `/${lang}/lop-12` },
+    {
+        label: lang === "vi" ? "Thuật ngữ Wiki" : "Wiki Glossary",
+        href: `/${lang}/concepts`,
+    },
+];
+
+const searchPlaceholder =
+    lang === "vi"
+        ? "Tìm kiếm bài học, định lý, tag..."
+        : "Search lessons, theorems, tags...";
+---
+
+<div class="navbar">
+    <div class="container navbar__inner">
+        <a href={`/${lang}`} class="navbar__logo">
+            Lingual<span>earn</span>
+        </a>
+
+        <nav class="navbar__links" aria-label="Điều hướng chính">
+            {navLinks.map((link) => (
+                <a href={link.href}>{link.label}</a>
+            ))}
+        </nav>
+
+        <form
+            class="navbar__search"
+            role="search"
+            action={`/${lang}/search`}
+            method="get"
+        >
+            <input
+                type="search"
+                name="q"
+                placeholder={searchPlaceholder}
+                aria-label="Search"
+            />
+            <button type="submit" aria-label="Search">
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <circle cx="11" cy="11" r="7" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+            </button>
+        </form>
+
+        <LanguageSwitcher lang={lang} pathname={pathname} />
+    </div>
+</div>
+
+<style>
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        height: var(--header-height);
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .navbar__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .navbar__logo {
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: var(--color-text);
+        white-space: nowrap;
+    }
+    .navbar__logo span {
+        color: var(--color-accent);
+    }
+    .navbar__logo:hover {
+        text-decoration: none;
+    }
+
+    .navbar__links {
+        display: flex;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+    .navbar__links a {
+        font-size: 0.9rem;
+        color: var(--color-text);
+        padding: 0.4rem 0.25rem;
+    }
+    .navbar__links a:hover {
+        color: var(--color-accent);
+        text-decoration: none;
+    }
+
+    .navbar__search {
+        flex: 1;
+        max-width: 360px;
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        padding-inline: 0.75rem;
+        background: var(--color-bg-subtle);
+    }
+    .navbar__search input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding-block: 0.45rem;
+        font-size: 0.85rem;
+        outline: none;
+    }
+    .navbar__search button {
+        border: none;
+        background: transparent;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .navbar__search:focus-within {
+        border-color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+        .navbar__links {
+            display: none;
+        }
+        .navbar__search {
+            max-width: none;
+        }
+    }
+</style>

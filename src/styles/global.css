@@ -1,0 +1,40 @@
+:root {
+  --color-accent: #3366cc;       /* xanh Wikipedia link */
+  --color-accent-hover: #2a4b8d;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f8f9fa;    /* nền sidebar/card kiểu Wikipedia */
+  --color-border: #a2a9b1;
+  --color-text: #202122;
+  --color-text-muted: #54595d;
+  --font-sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --header-height: 56px;
+  --max-width: 1200px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
