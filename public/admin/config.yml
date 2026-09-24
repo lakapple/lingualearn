@@ -18,7 +18,7 @@ collections:
   - name: concepts
     label: "Thuật ngữ Wiki"
     folder: src/content/concepts
-    path: "{{slug}}/{{locale}}"
+    path: "{{slug}}/index"
     extension: mdx
     format: frontmatter
     create: true
@@ -36,7 +36,7 @@ collections:
   - name: lessons_10
     label: "Toán 10"
     folder: src/content/subject/math/lessons/lop-10
-    path: "{{slug}}/{{locale}}"
+    path: "{{slug}}/index"
     extension: mdx
     format: frontmatter
     create: true
@@ -54,7 +54,7 @@ collections:
   - name: lessons_11
     label: "Toán 11"
     folder: src/content/subject/math/lessons/lop-11
-    path: "{{slug}}/{{locale}}"
+    path: "{{slug}}/index"
     extension: mdx
     format: frontmatter
     create: true
@@ -72,7 +72,7 @@ collections:
   - name: lessons_12
     label: "Toán 12"
     folder: src/content/subject/math/lessons/lop-12
-    path: "{{slug}}/{{locale}}"
+    path: "{{slug}}/index"
     extension: mdx
     format: frontmatter
     create: true
