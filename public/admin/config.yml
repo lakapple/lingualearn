@@ -18,10 +18,10 @@ collections:
   - name: concepts
     label: "Thuật ngữ Wiki"
     folder: src/content/concepts
+    path: "{{slug}}/{{locale}}"
     extension: mdx
     format: frontmatter
     create: true
-    slug: "{{slug}}"
     i18n: true
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
@@ -31,15 +31,15 @@ collections:
       - { label: "Tags", name: tags, widget: list, i18n: true }
       - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false }
-      - { label: "Nội dung", name: body, widget: markdown }
+      - { label: "Nội dung", name: body, widget: markdown, i18n: true }
 
   - name: lessons_10
     label: "Toán 10"
     folder: src/content/subject/math/lessons/lop-10
+    path: "{{slug}}/{{locale}}"
     extension: mdx
     format: frontmatter
     create: true
-    slug: "{{slug}}"
     i18n: true
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
@@ -49,15 +49,15 @@ collections:
       - { label: "Thứ tự hiển thị", name: order, widget: number, value_type: int, default: 0 }
       - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false }
-      - { label: "Nội dung", name: body, widget: markdown }
+      - { label: "Nội dung", name: body, widget: markdown, i18n: true }
 
   - name: lessons_11
     label: "Toán 11"
     folder: src/content/subject/math/lessons/lop-11
+    path: "{{slug}}/{{locale}}"
     extension: mdx
     format: frontmatter
     create: true
-    slug: "{{slug}}"
     i18n: true
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
@@ -67,15 +67,15 @@ collections:
       - { label: "Thứ tự hiển thị", name: order, widget: number, value_type: int, default: 0 }
       - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false }
-      - { label: "Nội dung", name: body, widget: markdown }
+      - { label: "Nội dung", name: body, widget: markdown, i18n: true }
 
   - name: lessons_12
     label: "Toán 12"
     folder: src/content/subject/math/lessons/lop-12
+    path: "{{slug}}/{{locale}}"
     extension: mdx
     format: frontmatter
     create: true
-    slug: "{{slug}}"
     i18n: true
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
@@ -85,4 +85,4 @@ collections:
       - { label: "Thứ tự hiển thị", name: order, widget: number, value_type: int, default: 0 }
       - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false }
-      - { label: "Nội dung", name: body, widget: markdown }
+      - { label: "Nội dung", name: body, widget: markdown, i18n: true }
