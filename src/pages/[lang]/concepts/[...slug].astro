@@ -4,6 +4,10 @@ import { getCollection, render } from "astro:content";
 import ConceptLayout from "../../../layouts/ConceptLayout.astro";
 import { byLang, getPairBySlug } from "../../../lib/content-helpers.js";
 import { LANGS } from "../../../lib/i18n.js";
+import {
+    getEnglishPhonetic,
+    getVietnamesePhonetic,
+} from "../../../lib/phonetic-generator.js";
 
 export async function getStaticPaths() {
     const allConcepts = await getCollection("concepts");
@@ -25,6 +29,22 @@ const { entry, allConcepts } = Astro.props;
 const { Content, headings } = await render(entry);
 
 const pair = getPairBySlug(allConcepts, entry.slug);
+
+// 1. Xử lý phiên âm Tiếng Việt (nếu CMS có thì dùng, nếu trống tự tạo IPA)
+const viTitle = pair.vi?.data.title ?? "";
+const viPhonetic = pair.vi?.data.phonetic?.trim()
+    ? pair.vi.data.phonetic
+    : viTitle
+      ? getVietnamesePhonetic(viTitle)
+      : null;
+
+// 2. Xử lý phiên âm Tiếng Anh (nếu CMS có thì dùng, nếu trống tự tra từ điển IPA)
+const enTitle = pair.en?.data.title ?? "";
+const enPhonetic = pair.en?.data.phonetic?.trim()
+    ? pair.en.data.phonetic
+    : enTitle
+      ? await getEnglishPhonetic(enTitle)
+      : null;
 ---
 
 <ConceptLayout
@@ -33,16 +53,8 @@ const pair = getPairBySlug(allConcepts, entry.slug);
     tags={entry.data.tags}
     headings={headings}
     lang={lang}
-    vi={
-        pair.vi
-            ? { title: pair.vi.data.title, phonetic: pair.vi.data.phonetic }
-            : null
-    }
-    en={
-        pair.en
-            ? { title: pair.en.data.title, phonetic: pair.en.data.phonetic }
-            : null
-    }
+    vi={pair.vi ? { title: viTitle, phonetic: viPhonetic } : null}
+    en={pair.en ? { title: enTitle, phonetic: enPhonetic } : null}
 >
     <Content />
 </ConceptLayout>

@@ -1,3 +1,24 @@
+import { getEnglishPhonetic, getVietnamesePhonetic } from './phonetic-generator.js';
+
+/**
+ * Lấy phonetic có sẵn từ MDX hoặc tự động sinh nếu bị trống
+ */
+export async function resolvePhonetic(title, lang, existingPhonetic) {
+  // 1. Nếu tác giả đã tự điền trong CMS, giữ nguyên
+  if (existingPhonetic && existingPhonetic.trim() !== '') {
+    return existingPhonetic;
+  }
+
+  // 2. Nếu trống, tự động sinh theo ngôn ngữ
+  if (lang === 'vi') {
+    return getVietnamesePhonetic(title);
+  } else if (lang === 'en') {
+    return await getEnglishPhonetic(title);
+  }
+
+  return '';
+}
+
 export function parseBilingualId(id) {
   // Chuẩn hóa dấu gạch chéo
   const cleanId = id.replace(/\\/g, '/');
