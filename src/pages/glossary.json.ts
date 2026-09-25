@@ -1,14 +1,6 @@
 import { getCollection } from 'astro:content';
-import { byLang, getPairBySlug } from '../../lib/content-helpers.js';
-import { LANGS } from '../../lib/i18n.js';
-import { getEnglishPhonetic, getVietnamesePhonetic } from '../../lib/phonetic-generator.js';
-
-// Bắt buộc phải có getStaticPaths khi đặt file trong thư mục [lang]
-export function getStaticPaths() {
-  return LANGS.map((lang) => ({
-    params: { lang },
-  }));
-}
+import { byLang, getPairBySlug } from '../lib/content-helpers.js';
+import { getEnglishPhonetic, getVietnamesePhonetic } from '../lib/phonetic-generator.js';
 
 export async function GET() {
   const allConcepts = await getCollection('concepts');
