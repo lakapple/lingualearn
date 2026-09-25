@@ -1,0 +1,220 @@
+---
+// src/pages/[lang]/[grade].astro
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { byLang } from "../../lib/content-helpers.js";
+import { LANGS } from "../../lib/i18n.js";
+
+export function getStaticPaths() {
+    const GRADES_DATA = [
+        {
+            grade: "lop-10",
+            number: 10,
+            vi: {
+                name: "Toán 10",
+                intro: "Tổng hợp toàn bộ lý thuyết, công thức và bài học môn Toán lớp 10 (Chương trình GDPT mới).",
+            },
+            en: {
+                name: "Grade 10 Mathematics",
+                intro: "Comprehensive theoretical curriculum and lessons for Grade 10 Mathematics.",
+            },
+        },
+        {
+            grade: "lop-11",
+            number: 11,
+            vi: {
+                name: "Toán 11",
+                intro: "Tổng hợp toàn bộ lý thuyết, công thức và bài học môn Toán lớp 11 (Chương trình GDPT mới).",
+            },
+            en: {
+                name: "Grade 11 Mathematics",
+                intro: "Comprehensive theoretical curriculum and lessons for Grade 11 Mathematics.",
+            },
+        },
+        {
+            grade: "lop-12",
+            number: 12,
+            vi: {
+                name: "Toán 12",
+                intro: "Tổng hợp toàn bộ lý thuyết, công thức và bài học môn Toán lớp 12 (Chương trình GDPT mới).",
+            },
+            en: {
+                name: "Grade 12 Mathematics",
+                intro: "Comprehensive theoretical curriculum and lessons for Grade 12 Mathematics.",
+            },
+        },
+    ];
+
+    const paths = [];
+    for (const lang of LANGS) {
+        for (const item of GRADES_DATA) {
+            paths.push({
+                params: { lang, grade: item.grade },
+                props: { gradeInfo: item },
+            });
+        }
+    }
+    return paths;
+}
+
+const { lang, grade } = Astro.params as { lang: "vi" | "en"; grade: string };
+const { gradeInfo } = Astro.props;
+
+const info = gradeInfo[lang];
+const gradeNumber = gradeInfo.number;
+
+// Lấy danh sách bài học và lọc theo khối lớp
+const allLessons = await getCollection("lessons");
+const lessons = byLang(allLessons, lang)
+    .filter(
+        (lesson) =>
+            lesson.data.grade === gradeNumber || lesson.slug.startsWith(grade),
+    )
+    // Sắp xếp bài học theo thứ tự tăng dần của 'order' (Bài 1, Bài 2, ...)
+    .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+
+const t = {
+    vi: {
+        empty: "Chưa có bài học nào được đăng tải cho khối lớp này.",
+        badge: `Lớp ${gradeNumber}`,
+    },
+    en: {
+        empty: "No lessons published yet for this grade.",
+        badge: `Grade ${gradeNumber}`,
+    },
+}[lang];
+---
+
+<BaseLayout title={info.name} lang={lang}>
+    <section class="container grade-index">
+        <header class="grade-index__header">
+            <span class="grade-index__badge">{t.badge}</span>
+            <h1>{info.name}</h1>
+            <p class="grade-index__intro">{info.intro}</p>
+        </header>
+
+        {lessons.length === 0 ? (
+            <div class="grade-index__empty">
+                <p>{t.empty}</p>
+            </div>
+        ) : (
+            <ul class="lesson-grid">
+                {lessons.map((lesson) => (
+                    <li class="lesson-card">
+                        <a
+                            href={`/${lang}/lessons/${lesson.slug}`}
+                            class="lesson-card__title"
+                        >
+                            {lesson.data.title}
+                        </a>
+                        <p class="lesson-card__desc">
+                            {lesson.data.description}
+                        </p>
+                        <div class="lesson-card__tags">
+                            <span class="tag-pill tag-pill--accent">
+                                {t.badge}
+                            </span>
+                            {lesson.data.tags?.map((tag) => (
+                                <span class="tag-pill">{tag}</span>
+                            ))}
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        )}
+    </section>
+</BaseLayout>
+
+<style>
+    .grade-index {
+        padding-block: 2.5rem;
+    }
+    .grade-index__header {
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+    .grade-index__badge {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-accent);
+        background: rgba(var(--color-accent-rgb, 59, 130, 246), 0.1);
+        padding: 0.2rem 0.6rem;
+        border-radius: 9999px;
+        margin-bottom: 0.5rem;
+    }
+    .grade-index h1 {
+        font-size: 1.8rem;
+        margin: 0.25rem 0 0.5rem 0;
+    }
+    .grade-index__intro {
+        color: var(--color-text-muted);
+        margin: 0;
+        font-size: 1rem;
+    }
+    .grade-index__empty {
+        padding: 3rem 1rem;
+        text-align: center;
+        color: var(--color-text-muted);
+    }
+
+    .lesson-grid {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.25rem;
+    }
+    .lesson-card {
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var(--color-surface, transparent);
+        transition:
+            transform 0.2s ease,
+            border-color 0.2s ease;
+    }
+    .lesson-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--color-accent);
+    }
+    .lesson-card__title {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--color-accent);
+        text-decoration: none;
+    }
+    .lesson-card__title:hover {
+        text-decoration: underline;
+    }
+    .lesson-card__desc {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        margin: 0.65rem 0 1rem 0;
+        flex-grow: 1;
+        line-height: 1.5;
+    }
+    .lesson-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+    .tag-pill {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 6px;
+        background: var(--color-border-subtle, rgba(125, 125, 125, 0.15));
+        color: var(--color-text-muted);
+    }
+    .tag-pill--accent {
+        background: rgba(var(--color-accent-rgb, 59, 130, 246), 0.12);
+        color: var(--color-accent);
+    }
+</style>
