@@ -1,12 +1,162 @@
 ---
-title: 'Bài 2: Tập hợp'
-description: Tập hợp
+title: 'Bài 2: Tập hợp và các phép toán trên tập hợp'
+description: Lý thuyết về tập hợp và các ví dụ minh họa bài học.
 tags:
   - lớp 10
+  - Tập hợp
+  - tập con
+  - hai tập hợp bằng nhau
+  - tập rỗng
+  - Hợp
+  - giao
+  - hiệu
+  - phần bù
 grade: 10
 order: 0
 updatedDate: 2026-09-28T20:28:00
 draft: false
 ---
 
-Đây là tập hợp
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+**Mục tiêu bài học**
+
+**Thuật ngữ:**
+
+Tập hợp, tập con, hai tập hợp bằng nhau, tập rỗng
+
+Hợp, giao, hiệu của hai tập hợp, phần bù của một tập con
+
+Biểu đồ Ven
+
+Các kí hiệu: $\in, \notin, \subset, \supset, \emptyset, n(S), \cap, \cup, \setminus, C_S T$
+
+**Kiến thức, kĩ năng:**
+
+Nhận biết các khái niệm cơ bản về tập hợp: phần tử, tập con, hai tập hợp bằng nhau, tập rỗng.
+
+Mô tả tập hợp bằng cách liệt kê các phần tử hoặc chỉ ra tính chất đặc trưng cho các phần tử.
+
+Nhận biết và sử dụng đúng các kí hiệu khoảng, đoạn, nửa khoảng trong tập hợp số thực $\mathbb{R}$ và biểu diễn chúng trên trục số.
+
+Thực hiện thành thạo các phép toán trên tập hợp: hợp, giao, hiệu của hai tập hợp, phần bù của một tập con.
+
+Sử dụng biểu đồ Ven để biểu diễn tập hợp và các phép toán trên tập hợp; vận dụng giải quyết một số bài toán có nội dung thực tiễn.
+
+**Các khái niệm cơ bản về tập hợp**
+
+<Youtube url="https://www.youtube.com/watch?v=example_tap_hop"/>
+
+**a) Tập hợp**
+
+**Định nghĩa:** Tập hợp (gọi tắt là tập) là một khái niệm cơ bản của toán học, dùng để chỉ một nhóm các đối tượng xác định được gọi là các phần tử của tập hợp.
+
+**Kí hiệu phần tử:** Để chỉ $a$ là một phần tử thuộc tập hợp $S$, ta viết $a \in S$ (đọc là "$a$ thuộc $S$"). Để chỉ $a$ không là phần tử của tập hợp $S$, ta viết $a \notin S$ (đọc là "$a$ không thuộc $S$").
+
+**Cách mô tả tập hợp:** Có thể mô tả một tập hợp bằng một trong hai cách:
+
+• Cách 1: Liệt kê các phần tử của tập hợp (các phần tử viết trong dấu ngoặc nhọn $\\{ \\}$, cách nhau bởi dấu phẩy hoặc chấm phẩy, mỗi phần tử chỉ liệt kê một lần).
+
+• Cách 2: Chỉ ra tính chất đặc trưng cho các phần tử của tập hợp (viết dưới dạng $\\{x \in X \mid P(x)\\}$).
+
+**Số phần tử của tập hợp:** Số phần tử của tập hợp $S$ được kí hiệu là $n(S)$. Ví dụ: Với $A = \\{2; 3; 5; 7\\}$, ta viết $n(A) = 4$.
+
+**Tập rỗng:** Tập hợp không chứa phần tử nào được gọi là tập rỗng, kí hiệu là $\emptyset$.
+
+**Ví dụ về tập rỗng:** Tập hợp các nghiệm thực của phương trình $x^2 + 1 = 0$ là tập rỗng vì phương trình vô nghiệm trên $\mathbb{R}$.
+
+**b) Tập hợp con**
+
+**Định nghĩa:** Nếu mọi phần tử của tập hợp $T$ đều là phần tử của tập hợp $S$ thì ta nói $T$ là một tập hợp con (tập con) của $S$ và viết là $T \subset S$ (đọc là "$T$ chứa trong $S$" hoặc "$T$ là tập con của $S$").
+
+**Kí hiệu tương đương:** $T \subset S \Leftrightarrow (\forall x, x \in T \Rightarrow x \in S)$. Thay cho $T \subset S$, ta còn có thể viết $S \supset T$ (đọc là "$S$ chứa $T$"). Kí hiệu $T \not\subset S$ chỉ $T$ không là tập con của $S$.
+
+**Quy ước tập rỗng:** Tập rỗng $\emptyset$ là tập con của mọi tập hợp, tức là $\emptyset \subset S$ với mọi tập hợp $S$.
+
+**Biểu đồ Ven:** Người ta thường minh hoạ một tập hợp trực quan bằng một hình phẳng được bao quanh bởi một đường kín, gọi là biểu đồ Ven. Nếu $T \subset S$ thì hình biểu diễn $T$ nằm hoàn toàn bên trong hình biểu diễn $S$.
+
+**c) Hai tập hợp bằng nhau**
+
+**Định nghĩa:** Hai tập hợp $S$ và $T$ được gọi là hai tập hợp bằng nhau nếu mỗi phần tử của $T$ cũng là phần tử của tập hợp $S$ và ngược lại. Kí hiệu là $S = T$.
+
+**Điều kiện bằng nhau:** Hai tập hợp $S$ và $T$ bằng nhau khi và chỉ khi $S \subset T$ và $T \subset S$. Tức là: $S = T \Leftrightarrow (S \subset T \text{ và } T \subset S)$.
+
+**Ví dụ:** Cho $C = \\{n \in \mathbb{N} \mid n \text{ là bội chung của 2 và 3}, n < 30\\}$ và $D = \\{n \in \mathbb{N} \mid n \text{ là bội của 6}, n < 30\\}$. Khi đó $C = D = \\{0; 6; 12; 18; 24\\}$.
+
+**Các tập hợp số**
+
+**a) Mối quan hệ giữa các tập hợp số**
+
+**Tập số tự nhiên:** Kí hiệu là $\mathbb{N} = \\{0; 1; 2; 3; 4;...\\}$. Tập số tự nhiên khác 0 kí hiệu là $\mathbb{N}^\* = \\{1; 2; 3; 4;...\\}$.
+
+**Tập số nguyên:** Gồm các số tự nhiên và các số nguyên âm, kí hiệu là $\mathbb{Z} = \\{...; -3; -2; -1; 0; 1; 2; 3;...\\}$.
+
+**Tập số hữu tỉ:** Gồm các số viết được dưới dạng phân số $\frac{a}{b}$ với $a, b \in \mathbb{Z}, b \ne 0$, kí hiệu là $\mathbb{Q}$. Số hữu tỉ được biểu diễn dưới dạng số thập phân hữu hạn hoặc số thập phân vô hạn tuần hoàn.
+
+**Tập số thực:** Gồm tất cả các số hữu tỉ và các số vô tỉ (số thập phân vô hạn không tuần hoàn), kí hiệu là $\mathbb{R}$.
+
+**Mối quan hệ bao hàm:** Mối quan hệ giữa các tập hợp số quen thuộc được biểu diễn bằng chuỗi tập con: $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
+
+**b) Các tập con thường dùng của $\mathbb{R}$**
+
+**Khoảng:** Tập con gồm các số nằm giữa hai đầu mút không kể đầu mút:
+
+• $(a; b) = \\{x \in \mathbb{R} \mid a < x < b\\}$
+
+• $(a; +\infty) = \\{x \in \mathbb{R} \mid x > a\\}$
+
+• $(-\infty; b) = \\{x \in \mathbb{R} \mid x < b\\}$
+
+• $(-\infty; +\infty) = \mathbb{R}$
+
+**Đoạn:** Tập con gồm các số nằm giữa hai đầu mút kể cả hai đầu mút:
+
+• $[a; b] = \\{x \in \mathbb{R} \mid a \le x \le b\\}$
+
+**Nửa khoảng:** Tập con chỉ lấy một trong hai đầu mút:
+
+• $[a; b) = \\{x \in \mathbb{R} \mid a \le x < b\\}$
+
+• $(a; b] = \\{x \in \mathbb{R} \mid a < x \le b\\}$
+
+• $[a; +\infty) = \\{x \in \mathbb{R} \mid x \ge a\\}$
+
+• $(-\infty; b] = \\{x \in \mathbb{R} \mid x \le b\\}$
+
+**Quy ước kí hiệu:** Kí hiệu $+\infty$ đọc là "dương vô cực" (hoặc "dương vô cùng"); kí hiệu $-\infty$ đọc là "âm vô cực" (hoặc "âm vô cùng"). Các số $a, b$ được gọi là các đầu mút của khoảng, đoạn hay nửa khoảng.
+
+**Các phép toán trên tập hợp**
+
+**a) Giao của hai tập hợp**
+
+**Định nghĩa:** Tập hợp gồm các phần tử thuộc cả hai tập hợp $S$ và $T$ gọi là giao của hai tập hợp $S$ và $T$, kí hiệu là $S \cap T$.
+
+**Kí hiệu logic:** $S \cap T = \\{x \mid x \in S \text{ và } x \in T\\}$.
+
+**Tính chất:** Giao của hai tập hợp có các tính chất giao hoán: $S \cap T = T \cap S$; với mọi tập hợp $S$ ta có $S \cap \emptyset = \emptyset$ và $S \cap S = S$.
+
+**Ví dụ:** Cho $C = [1; 5]$ và $D = [-2; 3]$. Khi đó $C \cap D = [1; 3]$.
+
+**b) Hợp của hai tập hợp**
+
+**Định nghĩa:** Tập hợp gồm các phần tử thuộc tập hợp $S$ hoặc thuộc tập hợp $T$ gọi là hợp của hai tập hợp $S$ và $T$, kí hiệu là $S \cup T$.
+
+**Kí hiệu logic:** $S \cup T = \\{x \mid x \in S \text{ hoặc } x \in T\\}$.
+
+**Tính chất:** Hợp của hai tập hợp có tính chất giao hoán: $S \cup T = T \cup S$; với mọi tập hợp $S$ ta có $S \cup \emptyset = S$ và $S \cup S = S$.
+
+**Công thức số phần tử:** Với hai tập hợp hữu hạn bất kì $A$ và $B$, ta luôn có công thức: $n(A \cup B) = n(A) + n(B) - n(A \cap B)$.
+
+**Ví dụ:** Cho $E = (-1; 2]$ và $F = [0; 3]$. Khi đó $E \cup F = (-1; 3]$.
+
+**c) Hiệu của hai tập hợp và phần bù**
+
+**Định nghĩa hiệu:** Hiệu của hai tập hợp $S$ và $T$ là tập hợp gồm các phần tử thuộc $S$ nhưng không thuộc $T$, kí hiệu là $S \setminus T$.
+
+**Kí hiệu logic:** $S \setminus T = \\{x \mid x \in S \text{ và } x \notin T\\}$.
+
+**Định nghĩa phần bù:** Khi $T$ là một tập con của $S$ ($T \subset S$), hiệu $S \setminus T$ được gọi là phần bù của $T$ trong $S$, kí hiệu là $C_S T$.
+
+**Tính chất phần bù:** $C_S T = \\{x \in S \mid x \notin T\\}$. Đặc biệt, $C_S S = \emptyset$ và $C_S \emptyset = S$.
+
+**Ví dụ:** Tìm phần bù của tập hợp $A = [-5; +\infty)$ trong $\mathbb{R}$: ta có $C\_{\mathbb{R}} A = \mathbb{R} \setminus [-5; +\infty) = (-\infty; -5)$.

@@ -1,12 +1,162 @@
 ---
-title: 'Lesson 2: Set'
-description: Set
+title: 'Lesson 2: Sets and set operations'
+description: 'Set Theory: Core Concepts and Worked Examples.'
 tags:
   - grade 10
+  - sets
+  - subsets
+  - equal sets
+  - empty sets
+  - union
+  - intersection
+  - difference of two sets
+  - complement of a subset
 grade: 10
 order: 0
 updatedDate: 2026-09-28T20:28:00
 draft: false
 ---
 
-Đây là tập hợp
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+# Learning Objectives
+
+## Terminology:
+
+Set, subset, equal sets, empty set
+
+Union, intersection, difference of two sets, complement of a subset
+
+Venn diagram
+
+The symbols: $\in, \notin, \subset, \supset, \emptyset, n(S), \cap, \cup, \setminus, C_S T$
+
+## Knowledge and skills:
+
+Recognize fundamental concepts of sets: elements, subsets, equality of sets, empty set.
+
+Describe sets by roster method (listing elements) or set-builder notation (specifying characteristic properties).
+
+Identify and correctly utilize notations for intervals: open, closed, and half-open intervals in the set of real numbers $\mathbb{R}$, and represent them on the real number line.
+
+Proficiently perform set operations: union, intersection, difference of two sets, complement of a subset.
+
+Utilize Venn diagrams to represent sets and set operations; apply set theory to formulate and solve practical real-world problems.
+
+# Fundamental Concepts of Sets
+
+<Youtube url="https://www.youtube.com/watch?v=example_tap_hop"/>
+
+## a) Sets
+
+**Definition:** A set is a foundational concept in mathematics, referring to a well-defined collection of distinct objects known as the elements of the set.
+
+**Element notation:** To denote that $a$ is an element of a set $S$, we write $a \in S$ (read as "$a$ belongs to $S$" or "$a$ is an element of $S$"). To denote that $a$ is not an element of set $S$, we write $a \notin S$ (read as "$a$ does not belong to $S$").
+
+**Methods of describing a set:** A set can be described using either of the following two methods:
+
+• Method 1: Listing the elements (Roster notation) — elements are enclosed in braces $\\{ \\}$, separated by commas or semicolons, with each element listed exactly once.
+
+• Method 2: Stating the defining property (Set-builder notation) — written in the form $\\{x \in X \mid P(x)\\}$.
+
+**Cardinality of a set:** The number of elements in a finite set $S$ is called the cardinality of $S$, denoted by $n(S)$. For example: For $A = \\{2; 3; 5; 7\\}$, we write $n(A) = 4$.
+
+**Empty set:** A set containing no elements is called the empty set (or null set), denoted by the symbol $\emptyset$.
+
+**Example of an empty set:** The set of all real roots of the equation $x^2 + 1 = 0$ is the empty set since the equation has no real solutions.
+
+## b) Subsets
+
+**Definition:** If every element of set $T$ is also an element of set $S$, then $T$ is called a subset of $S$, denoted by $T \subset S$ (read as "$T$ is contained in $S$" or "$T$ is a subset of $S$").
+
+**Logical equivalence:** From the definition, $T \subset S \Leftrightarrow (\forall x, x \in T \Rightarrow x \in S)$. Alternatively, we can write $S \supset T$ (read as "$S$ contains $T$"). The notation $T \not\subset S$ indicates that $T$ is not a subset of $S$.
+
+**Empty set convention:** By convention, the empty set is a subset of every set: $\emptyset \subset S$ for any set $S$.
+
+**Venn diagram:** A set is frequently illustrated geometrically by a region in the plane bounded by a closed curve, known as a Venn diagram. If $T \subset S$, the boundary representing $T$ lies entirely inside the boundary representing $S$.
+
+## c) Equal Sets
+
+**Definition:** Two sets $S$ and $T$ are called equal if every element of $T$ is also an element of $S$ and vice versa. It is denoted by $S = T$.
+
+**Condition for set equality:** Two sets $S$ and $T$ are equal if and only if $S \subset T$ and $T \subset S$. That is: $S = T \Leftrightarrow (S \subset T \text{ and } T \subset S)$.
+
+**Example:** Let $C = \\{n \in \mathbb{N} \mid n \text{ is a common multiple of 2 and 3}, n < 30\\}$ and $D = \\{n \in \mathbb{N} \mid n \text{ is a multiple of 6}, n < 30\\}$. Then $C = D = \\{0; 6; 12; 18; 24\\}$.
+
+# Number Sets
+
+## a) Relationships Between Number Sets
+
+**Set of natural numbers:** Denoted by $\mathbb{N} = \\{0; 1; 2; 3; 4;...\\}$. The set of positive integers is denoted by $\mathbb{N}^\* = \\{1; 2; 3; 4;...\\}$.
+
+**Set of integers:** Consists of natural numbers and negative integers, denoted by $\mathbb{Z} = \\{...; -3; -2; -1; 0; 1; 2; 3;...\\}$.
+
+**Set of rational numbers:** Consists of numbers that can be expressed in the form of a fraction $\frac{a}{b}$, where $a, b \in \mathbb{Z}, b \ne 0$, denoted by $\mathbb{Q}$. Rational numbers can be written as terminating decimals or recurring (repeating) decimals.
+
+**Set of real numbers:** Consists of all rational numbers and irrational numbers (non-terminating, non-repeating decimals), denoted by $\mathbb{R}$.
+
+**Inclusion chain:** The fundamental relationship between these number sets is given by the inclusion chain: $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
+
+## b) Common Subsets of $\mathbb{R}$
+
+**Open intervals:** Subsets consisting of real numbers between two endpoints, excluding the endpoints:
+
+• $(a; b) = \\{x \in \mathbb{R} \mid a < x < b\\}$
+
+• $(a; +\infty) = \\{x \in \mathbb{R} \mid x > a\\}$
+
+• $(-\infty; b) = \\{x \in \mathbb{R} \mid x < b\\}$
+
+• $(-\infty; +\infty) = \mathbb{R}$
+
+**Closed intervals:** Subsets containing both endpoints:
+
+• $[a; b] = \\{x \in \mathbb{R} \mid a \le x \le b\\}$
+
+**Half-open (half-closed) intervals:** Subsets containing only one of the two endpoints:
+
+• $[a; b) = \\{x \in \mathbb{R} \mid a \le x < b\\}$
+
+• $(a; b] = \\{x \in \mathbb{R} \mid a < x \le b\\}$
+
+• $[a; +\infty) = \\{x \in \mathbb{R} \mid x \ge a\\}$
+
+• $(-\infty; b] = \\{x \in \mathbb{R} \mid x \le b\\}$
+
+**Notational conventions:** The symbol $+\infty$ is read as "positive infinity"; the symbol $-\infty$ is read as "negative infinity". The numbers $a, b$ are called the endpoints of the interval.
+
+# Set Operations
+
+## a) Intersection of Two Sets
+
+**Definition:** The set consisting of all elements belonging to both sets $S$ and $T$ is called the intersection of $S$ and $T$, denoted by $S \cap T$.
+
+**Logical formulation:** $S \cap T = \\{x \mid x \in S \text{ and } x \in T\\}$.
+
+**Properties:** The intersection operation is commutative: $S \cap T = T \cap S$. For any set $S$, we have $S \cap \emptyset = \emptyset$ and $S \cap S = S$.
+
+**Example:** Let $C = [1; 5]$ and $D = [-2; 3]$. Then $C \cap D = [1; 3]$.
+
+## b) Union of Two Sets
+
+**Definition:** The set consisting of all elements belonging to set $S$ or set $T$ is called the union of $S$ and $T$, denoted by $S \cup T$.
+
+**Logical formulation:** $S \cup T = \\{x \mid x \in S \text{ or } x \in T\\}$.
+
+**Properties:** The union operation is commutative: $S \cup T = T \cup S$. For any set $S$, we have $S \cup \emptyset = S$ and $S \cup S = S$.
+
+**Inclusion-exclusion principle:** For any two finite sets $A$ and $B$, the cardinality of their union satisfies: $n(A \cup B) = n(A) + n(B) - n(A \cap B)$.
+
+**Example:** Let $E = (-1; 2]$ and $F = [0; 3]$. Then $E \cup F = (-1; 3]$.
+
+## c) Difference of Two Sets and Complement
+
+**Definition of difference:** The difference of two sets $S$ and $T$ (or relative complement of $T$ in $S$) is the set consisting of all elements belonging to $S$ but not belonging to $T$, denoted by $S \setminus T$.
+
+**Logical formulation:** $S \setminus T = \\{x \mid x \in S \text{ and } x \notin T\\}$.
+
+**Definition of complement:** When $T$ is a subset of $S$ ($T \subset S$), the difference $S \setminus T$ is called the complement of $T$ in $S$, denoted by $C_S T$.
+
+**Properties of complement:** $C_S T = \\{x \in S \mid x \notin T\\}$. In particular, $C_S S = \emptyset$ and $C_S \emptyset = S$.
+
+**Example:** Find the complement of set $A = [-5; +\infty)$ in $\mathbb{R}$: we obtain $C\_{\mathbb{R}} A = \mathbb{R} \setminus [-5; +\infty) = (-\infty; -5)$.
