@@ -1,0 +1,120 @@
+---
+title: 'Bài 1: Mệnh đề'
+description: Lý thuyết về mệnh đề và các ví dụ minh họa bài 1 mệnh đề
+tags:
+  - mệnh đề
+  - mệnh đề phủ định
+  - mệnh đề chứa biến
+  - mệnh đề tương đương
+  - mệnh đề kéo theo
+  - mệnh đề toán học
+  - lớp 10
+grade: 10
+order: 0
+updatedDate: 2026-10-24T21:20:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';
+
+import Youtube from '@/components/Youtube.astro';
+
+Mục tiêu bài học
+
+Thuật ngữ:
+
+Mệnh đề
+
+Mệnh đề phủ định
+
+Mệnh đề kéo theo, mệnh đề đảo
+
+Mệnh đề tương đương
+
+Điều kiện cần, điều kiện đủ, điều kiện cần và đủ
+
+Các kí hiệu: $\forall, \exists$
+
+Kiến thức, kĩ năng:
+
+Thiết lập và phát biểu mệnh đề phủ định, mệnh đề đảo, mệnh đề kéo theo, mệnh đề tương đương.
+
+Thiết lập và phát biểu các mệnh đề có chứa kí hiệu $\forall, \exists$.
+
+Xác định tính đúng sai của một mệnh đề trong những trường hợp đơn giản.
+
+Mệnh đề, mệnh đề chứa biến
+
+a) Mệnh đề
+
+Định nghĩa: Mỗi mệnh đề lôgic (gọi tắt là mệnh đề) là một khẳng định đúng hoặc một khẳng định sai.
+
+Tính chất chân lí: Mỗi mệnh đề phải hoặc đúng hoặc sai. Một mệnh đề không thể vừa đúng vừa sai.
+
+Kí hiệu: Người ta thường sử dụng các chữ cái $P, Q, R,...$ để biểu thị các mệnh đề.
+
+Câu không là mệnh đề: Những câu nghi vấn, câu cảm thán, câu cầu khiến không phải là mệnh đề.
+
+Mệnh đề toán học: Những mệnh đề liên quan đến toán học được gọi là mệnh đề toán học.
+
+b) Mệnh đề chứa biến
+
+Định nghĩa: Mệnh đề chứa biến là câu khẳng định chứa một hay nhiều biến số, chưa xác định được tính đúng sai; khi thay các biến bằng những giá trị cụ thể trong tập hợp xác định thì ta nhận được một mệnh đề.
+
+Ví dụ: Câu "$n$ chia hết cho 2" (với $n \in \mathbb{N}$) là một mệnh đề chứa biến:
+
+Với $n = 5$, ta được mệnh đề "5 chia hết cho 2" (mệnh đề sai).
+
+Với $n = 10$, ta được mệnh đề "10 chia hết cho 2" (mệnh đề đúng).
+
+Mệnh đề phủ định
+
+Định nghĩa: Để phủ định một mệnh đề $P$, người ta thường thêm (hoặc bớt) từ "không" hoặc "không phải" vào trước vị ngữ của mệnh đề $P$. Kí hiệu mệnh đề phủ định của mệnh đề $P$ là $\overline{P}$.
+
+Quy luật chân lí: Mệnh đề $P$ và mệnh đề $\overline{P}$ là hai phát biểu trái ngược nhau. Nếu $P$ đúng thì $\overline{P}$ sai, còn nếu $P$ sai thì $\overline{P}$ đúng.
+
+Mệnh đề kéo theo, mệnh đề đảo
+
+a) Mệnh đề kéo theo
+
+Định nghĩa: Cho hai mệnh đề $P$ và $Q$. Mệnh đề "Nếu $P$ thì $Q$" được gọi là một mệnh đề kéo theo và kí hiệu là $P \Rightarrow Q$.
+
+Tính đúng sai: Mệnh đề $P \Rightarrow Q$ chỉ sai khi $P$ đúng và $Q$ sai. Do đó ta chỉ cần xét tính đúng sai của mệnh đề $P \Rightarrow Q$ khi $P$ đúng. Khi đó, nếu $Q$ đúng thì $P \Rightarrow Q$ đúng, nếu $Q$ sai thì $P \Rightarrow Q$ sai.
+
+Định lí toán học: Các định lí toán học là những mệnh đề đúng và thường có dạng $P \Rightarrow Q$. Khi đó:
+
+$P$ là giả thiết của định lí, $Q$ là kết luận của định lí;
+
+$P$ là điều kiện đủ để có $Q$;
+
+$Q$ là điều kiện cần để có $P$.
+
+b) Mệnh đề đảo
+
+Định nghĩa: Mệnh đề $Q \Rightarrow P$ được gọi là mệnh đề đảo của mệnh đề $P \Rightarrow Q$.
+
+Nhận xét: Mệnh đề đảo của một mệnh đề đúng không nhất thiết là đúng.
+
+Mệnh đề tương đương
+
+Định nghĩa: Mệnh đề "$P$ nếu và chỉ nếu $Q$" được gọi là một mệnh đề tương đương và kí hiệu là $P \Leftrightarrow Q$.
+
+Tính đúng sai: Nếu cả hai mệnh đề $P \Rightarrow Q$ và $Q \Rightarrow P$ đều đúng thì mệnh đề tương đương $P \Leftrightarrow Q$ đúng.
+
+Cách phát biểu tương đương: Khi $P \Leftrightarrow Q$ đúng, ta nói "$P$ tương đương với $Q$" hoặc "$P$ là điều kiện cần và đủ để có $Q$" hoặc "$P$ khi và chỉ khi $Q$".
+
+Mệnh đề có chứa kí hiệu $\forall, \exists$
+
+Kí hiệu với mọi ($\forall$): Kí hiệu $\forall$ đọc là "với mọi". Ví dụ: "$P: \forall x \in \mathbb{R}, x^2 \ge 0$".
+
+Kí hiệu tồn tại ($\exists$): Kí hiệu $\exists$ đọc là "tồn tại". Ví dụ: "$Q: \exists x \in \mathbb{Q}, x^2 = 2$".
+
+Phủ định của mệnh đề chứa kí hiệu $\forall$: Mệnh đề phủ định của "$P: \forall x \in X, P(x)$" là "$\overline{P}: \exists x \in X, \overline{P(x)}$".
+
+Phủ định của mệnh đề chứa kí hiệu $\exists$: Mệnh đề phủ định của "$P: \exists x \in X, P(x)$" là "$\overline{P}: \forall x \in X, \overline{P(x)}$".
+
+Lịch sử logic học (Em có biết)
+
+Aristotle: Lôgic mệnh đề lần đầu tiên được phát triển một cách có hệ thống bởi nhà triết học Hy Lạp Aristotle hơn 2 300 năm trước.
+
+George Boole: Được thảo luận và đại số hóa bởi nhà toán học người Anh George Boole vào năm 1854 trong cuốn sách "The Laws of Thought".

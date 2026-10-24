@@ -1,0 +1,126 @@
+---
+title: 'Lesson 1: Propositions'
+description: 'Proposition Theory and Worked Examples - Lesson 1: Propositions'
+tags:
+  - Propositions
+  - Negated proposition
+  - Proposition with variables
+  - Propositional function
+  - conditional proposition
+  - Converse Propositions
+  - grade 10
+grade: 10
+order: 0
+updatedDate: 2026-10-24T21:20:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';
+
+import Youtube from '@/components/Youtube.astro';
+
+Learning Objectives
+
+Terminology:
+
+Proposition (Statement)
+
+Negation of a proposition
+
+Conditional proposition (Implication), converse proposition
+
+Biconditional proposition (Equivalence)
+
+Necessary condition, sufficient condition, necessary and sufficient condition
+
+Quantifier symbols: $\forall, \exists$
+
+Knowledge and Skills:
+
+Formulate and state the negation, converse, conditional, and biconditional of propositions.
+
+State and interpret propositions involving the quantifiers $\forall$ and $\exists$.
+
+Determine the truth values of propositions in fundamental mathematical contexts.
+
+Propositions and Propositional Functions (Predicates)
+
+a) Propositions
+
+Definition: A mathematical statement (or proposition) is an assertion that is either strictly true or strictly false, but not both.
+
+Truth value property: Every proposition must be either true or false. A proposition cannot be simultaneously true and false (Law of the Excluded Middle and Non-Contradiction).
+
+Notation: Capital letters such as $P, Q, R,...$ are conventionally used to denote propositions.
+
+Non-propositions: Questions (interrogative sentences), exclamations, imperative sentences, or statements whose truth value cannot be determined are not propositions.
+
+Mathematical propositions: Propositions asserting properties, relations, or facts about mathematical entities are called mathematical propositions.
+
+b) Propositional Functions (Predicates / Open Sentences)
+
+Definition: A propositional function (or predicate) is a declarative sentence containing one or more variables, whose truth value is indeterminate until specific values from a given domain (universe of discourse) are substituted for the variables.
+
+Example: Consider the sentence "$n$ is divisible by 2" (where $n \in \mathbb{N}$):
+
+For $n = 5$, we obtain the proposition "5 is divisible by 2" (which is false).
+
+For $n = 10$, we obtain the proposition "10 is divisible by 2" (which is true).
+
+Negation of a Proposition
+
+Definition: The negation of a proposition $P$, denoted by $\overline{P}$ (or $\neg P$), is the proposition that asserts the opposite truth value of $P$.
+
+Truth value rule: A proposition $P$ and its negation $\overline{P}$ have complementary truth values. If $P$ is true, then $\overline{P}$ is false; conversely, if $P$ is false, then $\overline{P}$ is true.
+
+Conditional Propositions and Converse Propositions
+
+a) Conditional Propositions (Implications)
+
+Definition: Given two propositions $P$ and $Q$. The compound proposition formed by "If $P$, then $Q$" is called a conditional proposition (or material implication), denoted by $P \Rightarrow Q$ (or $P \rightarrow Q$).
+
+Truth value condition: The conditional proposition $P \Rightarrow Q$ is false only when the antecedent (hypothesis) $P$ is true and the consequent (conclusion) $Q$ is false. It is true in all other cases (in particular, when $P$ is false, $P \Rightarrow Q$ is vacuously true).
+
+Mathematical theorems: Mathematical theorems are typically formulated as conditional statements $P \Rightarrow Q$. In this context:
+
+$P$ is the hypothesis (premise), and $Q$ is the conclusion of the theorem;
+
+$P$ is a sufficient condition for $Q$;
+
+$Q$ is a necessary condition for $P$.
+
+b) Converse of a Proposition
+
+Definition: The proposition $Q \Rightarrow P$ is called the converse of the conditional proposition $P \Rightarrow Q$.
+
+Remark: The converse of a true conditional proposition is not necessarily true.
+
+Biconditional Propositions (Logical Equivalence)
+
+Definition: The compound proposition "P if and only if Q" (often abbreviated as "P iff Q") is called a biconditional proposition (or equivalence), denoted by $P \Leftrightarrow Q$ (or $P \leftrightarrow Q$).
+
+Truth value condition: A biconditional proposition $P \Leftrightarrow Q$ is true if and only if both implications $P \Rightarrow Q$ and $Q \Rightarrow P$ are true (i.e., when $P$ and $Q$ share the identical truth value).
+
+Equivalent formulations: When $P \Leftrightarrow Q$ holds true, it can be stated equivalently as:
+
+"$P$ is equivalent to $Q$";
+
+"$P$ if and only if $Q$" (or "$P$ iff $Q$");
+
+"$P$ is a necessary and sufficient condition for $Q$".
+
+Propositions Involving Quantifiers ($\forall, \exists$)
+
+Universal quantifier ($\forall$): The symbol $\forall$ is read as "for all", "for each", or "for every". For instance: "$P: \forall x \in \mathbb{R}, x^2 \ge 0$".
+
+Existential quantifier ($\exists$): The symbol $\exists$ is read as "there exists" or "there is at least one". For instance: "$Q: \exists x \in \mathbb{Q}, x^2 = 2$".
+
+Negation of universally quantified statements: The negation of "$P: \forall x \in X, P(x)$" is "$\overline{P}: \exists x \in X, \overline{P(x)}$" (or "$\neg P: \exists x \in X, \neg P(x)$").
+
+Negation of existentially quantified statements: The negation of "$P: \exists x \in X, P(x)$" is "$\overline{P}: \forall x \in X, \overline{P(x)}$" (or "$\neg P: \forall x \in X, \neg P(x)$").
+
+History of Logic (Did You Know?)
+
+Aristotle: Propositional and formal logic was first systematically developed by the ancient Greek philosopher Aristotle over 2,300 years ago.
+
+George Boole: Later formalized and algebraicized by the English mathematician George Boole in 1854 in his seminal treatise "The Laws of Thought", laying the mathematical foundation for modern computer science and Boolean algebra.
