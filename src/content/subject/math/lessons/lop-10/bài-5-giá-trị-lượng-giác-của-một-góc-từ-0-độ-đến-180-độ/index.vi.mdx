@@ -1,0 +1,124 @@
+---
+title: 'Bài 5: Giá trị lượng giác của một góc từ 0 độ đến 180 độ'
+description: Xây dựng giá trị lượng giác của một góc từ 0 độ đến 180 độ trên nửa đường tròn đơn vị; mối liên hệ giữa giá trị lượng giác của các gó bù nhau, phụ nhau.
+tags:
+  - lớp 10
+  - Nửa đường tròn đơn vị
+  - Giá trị lượng giác
+  - Hai góc bù nhau
+  - Hai góc phụ nhau
+grade: 10
+order: 0
+updatedDate: 2026-10-26T00:07:00
+draft: true
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Mục tiêu bài học**
+
+### **Thuật ngữ:**
+
+Nửa đường tròn đơn vị
+
+Giá trị lượng giác của một góc từ $0^\circ$ đến $180^\circ$ (sin, côsin, tang, côtang)
+
+Hai góc bù nhau, hai góc phụ nhau
+
+Bảng giá trị lượng giác của các góc đặc biệt
+
+### **Kiến thức, kĩ năng:**
+
+Nhận biết và hiểu định nghĩa giá trị lượng giác của một góc bất kì từ $0^\circ$ đến $180^\circ$ thông qua toạ độ điểm trên nửa đường tròn đơn vị.
+
+Giải thích và vận dụng hệ thức liên hệ giữa các giá trị lượng giác của hai góc bù nhau, hai góc phụ nhau.
+
+Sử dụng bảng giá trị lượng giác của các góc đặc biệt và sử dụng máy tính cầm tay để tính giá trị lượng giác của một góc hoặc tìm góc khi biết giá trị lượng giác.
+
+Vận dụng các hệ thức lượng giác cơ bản vào rút gọn biểu thức, chứng minh đẳng thức và giải quyết một số bài toán có nội dung thực tiễn.
+
+## **Giá trị lượng giác của một góc từ $0^\circ$ đến $180^\circ$**
+
+<Youtube url="https://www.youtube.com/watch?v=example_gtlg_0_180"/>
+
+### **a) Nửa đường tròn đơn vị**
+
+**Định nghĩa nửa đường tròn đơn vị:** Trong mặt phẳng toạ độ $Oxy$, nửa đường tròn tâm $O(0; 0)$ bán kính $R = 1$ nằm phía trên trục hoành (kể cả hai điểm $(-1; 0)$ và $(1; 0)$) được gọi là nửa đường tròn đơn vị.
+
+**Xác định điểm $M$:** Với mỗi góc $\alpha$ ($0^\circ \le \alpha \le 180^\circ$), có duy nhất một điểm $M(x_0; y_0)$ trên nửa đường tròn đơn vị sao cho $\widehat{xOM} = \alpha$.
+
+### **b) Định nghĩa các giá trị lượng giác**
+
+**Định nghĩa sin:** Sin của góc $\alpha$ là tung độ $y_0$ của điểm $M$, kí hiệu là $\sin \alpha = y_0$.
+
+**Định nghĩa côsin:** Côsin của góc $\alpha$ là hoành độ $x_0$ của điểm $M$, kí hiệu là $\cos \alpha = x_0$.
+
+**Định nghĩa tang:** Khi $\alpha \ne 90^\circ$ (tức là $x_0 \ne 0$), tang của góc $\alpha$ là tỉ số $\frac{y_0}{x_0}$, kí hiệu là $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y_0}{x_0}$.
+
+**Định nghĩa côtang:** Khi $\alpha \ne 0^\circ$ và $\alpha \ne 180^\circ$ (tức là $y_0 \ne 0$), côtang của góc $\alpha$ là tỉ số $\frac{x_0}{y_0}$, kí hiệu là $\cot \alpha = \frac{\cos \alpha}{\sin \alpha} = \frac{x_0}{y_0}$.
+
+**Hệ thức nghịch đảo:** Với $\alpha \notin \\{0^\circ; 90^\circ; 180^\circ\\}$, ta có: $\tan \alpha = \frac{1}{\cot \alpha}$.
+
+### **c) Dấu và phạm vi của các giá trị lượng giác**
+
+**Dấu của sin:** Với mọi $0^\circ \le \alpha \le 180^\circ$, ta luôn có $\sin \alpha \ge 0$ ($0 \le \sin \alpha \le 1$).
+
+**Dấu của côsin:** Nếu $\alpha$ là góc nhọn ($0^\circ < \alpha < 90^\circ$) thì $\cos \alpha > 0$. Nếu $\alpha = 90^\circ$ thì $\cos 90^\circ = 0$. Nếu $\alpha$ là góc tù ($90^\circ < \alpha \le 180^\circ$) thì $\cos \alpha < 0$. Ta luôn có $-1 \le \cos \alpha \le 1$.
+
+**Dấu của tang và côtang:** Khi góc $\alpha$ nhọn thì $\tan \alpha > 0, \cot \alpha > 0$. Khi góc $\alpha$ tù thì $\tan \alpha < 0, \cot \alpha < 0$.
+
+### **d) Bảng giá trị lượng giác của một số góc đặc biệt**
+
+**Góc $0^\circ$:** $\sin 0^\circ = 0; \quad \cos 0^\circ = 1; \quad \tan 0^\circ = 0; \quad \cot 0^\circ$ không xác định.
+
+**Góc $30^\circ$:** $\sin 30^\circ = \frac{1}{2}; \quad \cos 30^\circ = \frac{\sqrt{3}}{2}; \quad \tan 30^\circ = \frac{\sqrt{3}}{3}; \quad \cot 30^\circ = \sqrt{3}$.
+
+**Góc $45^\circ$:** $\sin 45^\circ = \frac{\sqrt{2}}{2}; \quad \cos 45^\circ = \frac{\sqrt{2}}{2}; \quad \tan 45^\circ = 1; \quad \cot 45^\circ = 1$.
+
+**Góc $60^\circ$:** $\sin 60^\circ = \frac{\sqrt{3}}{2}; \quad \cos 60^\circ = \frac{1}{2}; \quad \tan 60^\circ = \sqrt{3}; \quad \cot 60^\circ = \frac{\sqrt{3}}{3}$.
+
+**Góc $90^\circ$:** $\sin 90^\circ = 1; \quad \cos 90^\circ = 0; \quad \tan 90^\circ$ không xác định; $\quad \cot 90^\circ = 0$.
+
+**Góc $180^\circ$:** $\sin 180^\circ = 0; \quad \cos 180^\circ = -1; \quad \tan 180^\circ = 0; \quad \cot 180^\circ$ không xác định.
+
+## **Mối quan hệ giữa các giá trị lượng giác của hai góc bù nhau và phụ nhau**
+
+### **a) Hai góc bù nhau (tổng bằng $180^\circ$)**
+
+**Tính chất hình học:** Hai điểm $M(x_0; y_0)$ và $M'(-x_0; y_0)$ trên nửa đường tròn đơn vị tương ứng với hai góc bù nhau $\alpha$ và $180^\circ - \alpha$ đối xứng nhau qua trục tung $Oy$.
+
+**Công thức liên hệ:** Đối với hai góc bù nhau $\alpha$ và $180^\circ - \alpha$, ta có:
+
+• $\sin(180^\circ - \alpha) = \sin \alpha$
+
+• $\cos(180^\circ - \alpha) = -\cos \alpha$
+
+• $\tan(180^\circ - \alpha) = -\tan \alpha \quad (\alpha \ne 90^\circ)$
+
+• $\cot(180^\circ - \alpha) = -\cot \alpha \quad (0^\circ < \alpha < 180^\circ)$
+
+**Quy tắc nhớ nhanh:** "Hai góc bù nhau có sin bằng nhau; có côsin, tang và côtang đối nhau".
+
+### **b) Hai góc phụ nhau (tổng bằng $90^\circ$)**
+
+**Công thức liên hệ:** Đối với hai góc phụ nhau $\alpha$ và $90^\circ - \alpha$ ($0^\circ \le \alpha \le 90^\circ$), ta có:
+
+• $\sin(90^\circ - \alpha) = \cos \alpha$
+
+• $\cos(90^\circ - \alpha) = \sin \alpha$
+
+• $\tan(90^\circ - \alpha) = \cot \alpha \quad (0^\circ < \alpha < 90^\circ)$
+
+• $\cot(90^\circ - \alpha) = \tan \alpha \quad (0^\circ < \alpha < 90^\circ)$
+
+**Quy tắc nhớ nhanh:** "Hai góc phụ nhau có sin góc này bằng côsin góc kia, tang góc này bằng côtang góc kia".
+
+## **Các hệ thức lượng giác cơ bản**
+
+**Hệ thức tổng bình phương sin và côsin:** Với mọi góc $\alpha$ ($0^\circ \le \alpha \le 180^\circ$), ta có: $\sin^2 \alpha + \cos^2 \alpha = 1$.
+
+**Hệ thức liên hệ giữa tang và côsin:** Với mọi góc $\alpha \ne 90^\circ$, ta có: $1 + \tan^2 \alpha = \frac{1}{\cos^2 \alpha}$.
+
+**Hệ thức liên hệ giữa côtang và sin:** Với mọi góc $0^\circ < \alpha < 180^\circ$, ta có: $1 + \cot^2 \alpha = \frac{1}{\sin^2 \alpha}$.
+
+**Hệ thức tích tang và côtang:** Với mọi góc $\alpha \notin \\{0^\circ; 90^\circ; 180^\circ\\}$, ta có: $\tan \alpha \cdot \cot \alpha = 1$.

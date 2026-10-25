@@ -1,0 +1,125 @@
+---
+title: 'Lesson 5: Trigonometric Values of an Angle from 0° to 180°'
+description: Defining trigonometric ratios of angles from 0° to 180° using the unit semicircle; Relationships between the trigonometric ratios of supplementary and complementary angles
+tags:
+  - grade 10
+  - unit semicircle
+  - trigonometric ratios
+  - Trigonometric Values
+  - supplementary angles
+  - complementary angles
+grade: 10
+order: 0
+updatedDate: 2026-10-26T00:07:00
+draft: true
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Learning Objectives**
+
+### **Terminology:**
+
+Unit semicircle
+
+Trigonometric values of an angle from $0^\circ$ to $180^\circ$ (sine, cosine, tangent, cotangent)
+
+Supplementary angles, complementary angles
+
+Table of trigonometric values of special angles
+
+### **Knowledge and skills:**
+
+Recognize and comprehend the definition of trigonometric values of an arbitrary angle from $0^\circ$ to $180^\circ$ via coordinates of a point on the unit semicircle.
+
+Explain and apply the relationships between trigonometric values of supplementary angles and complementary angles.
+
+Utilize the table of trigonometric values of special angles and handheld calculators to evaluate trigonometric values of an angle or determine an angle given its trigonometric value.
+
+Apply fundamental trigonometric identities to simplify expressions, prove identities, and solve practical real-world problems.
+
+## **Trigonometric Values of an Angle from $0^\circ$ to $180^\circ$**
+
+<Youtube url="https://www.youtube.com/watch?v=example_gtlg_0_180"/>
+
+### **a) The Unit Semicircle**
+
+**Definition of the unit semicircle:** In the Cartesian coordinate plane $Oxy$, the semicircle centered at the origin $O(0; 0)$ with radius $R = 1$ located above the $x$-axis (including the two points $(-1; 0)$ and $(1; 0)$) is called the unit semicircle.
+
+**Determination of point $M$:** For each angle $\alpha$ ($0^\circ \le \alpha \le 180^\circ$), there exists a unique point $M(x_0; y_0)$ on the unit semicircle such that $\widehat{xOM} = \alpha$.
+
+### **b) Definitions of Trigonometric Values**
+
+**Definition of sine:** The sine of angle $\alpha$ is the $y$-coordinate (ordinate) $y_0$ of point $M$, denoted by $\sin \alpha = y_0$.
+
+**Definition of cosine:** The cosine of angle $\alpha$ is the $x$-coordinate (abscissa) $x_0$ of point $M$, denoted by $\cos \alpha = x_0$.
+
+**Definition of tangent:** When $\alpha \ne 90^\circ$ (i.e., $x_0 \ne 0$), the tangent of angle $\alpha$ is the ratio $\frac{y_0}{x_0}$, denoted by $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y_0}{x_0}$.
+
+**Definition of cotangent:** When $\alpha \ne 0^\circ$ and $\alpha \ne 180^\circ$ (i.e., $y_0 \ne 0$), the cotangent of angle $\alpha$ is the ratio $\frac{x_0}{y_0}$, denoted by $\cot \alpha = \frac{\cos \alpha}{\sin \alpha} = \frac{x_0}{y_0}$.
+
+**Reciprocal relation:** For $\alpha \notin \\{0^\circ; 90^\circ; 180^\circ\\}$, we have: $\tan \alpha = \frac{1}{\cot \alpha}$.
+
+### **c) Signs and Ranges of Trigonometric Values**
+
+**Sign of sine:** For all $0^\circ \le \alpha \le 180^\circ$, we always have $\sin \alpha \ge 0$ ($0 \le \sin \alpha \le 1$).
+
+**Sign of cosine:** If $\alpha$ is an acute angle ($0^\circ < \alpha < 90^\circ$), then $\cos \alpha > 0$. If $\alpha = 90^\circ$, then $\cos 90^\circ = 0$. If $\alpha$ is an obtuse angle ($90^\circ < \alpha \le 180^\circ$), then $\cos \alpha < 0$. We always have $-1 \le \cos \alpha \le 1$.
+
+**Signs of tangent and cotangent:** When angle $\alpha$ is acute, $\tan \alpha > 0$ and $\cot \alpha > 0$. When angle $\alpha$ is obtuse, $\tan \alpha < 0$ and $\cot \alpha < 0$.
+
+### **d) Table of Trigonometric Values of Special Angles**
+
+**Angle $0^\circ$:** $\sin 0^\circ = 0; \quad \cos 0^\circ = 1; \quad \tan 0^\circ = 0; \quad \cot 0^\circ$ is undefined.
+
+**Angle $30^\circ$:** $\sin 30^\circ = \frac{1}{2}; \quad \cos 30^\circ = \frac{\sqrt{3}}{2}; \quad \tan 30^\circ = \frac{\sqrt{3}}{3}; \quad \cot 30^\circ = \sqrt{3}$.
+
+**Angle $45^\circ$:** $\sin 45^\circ = \frac{\sqrt{2}}{2}; \quad \cos 45^\circ = \frac{\sqrt{2}}{2}; \quad \tan 45^\circ = 1; \quad \cot 45^\circ = 1$.
+
+**Angle $60^\circ$:** $\sin 60^\circ = \frac{\sqrt{3}}{2}; \quad \cos 60^\circ = \frac{1}{2}; \quad \tan 60^\circ = \sqrt{3}; \quad \cot 60^\circ = \frac{\sqrt{3}}{3}$.
+
+**Angle $90^\circ$:** $\sin 90^\circ = 1; \quad \cos 90^\circ = 0; \quad \tan 90^\circ$ is undefined; $\quad \cot 90^\circ = 0$.
+
+**Angle $180^\circ$:** $\sin 180^\circ = 0; \quad \cos 180^\circ = -1; \quad \tan 180^\circ = 0; \quad \cot 180^\circ$ is undefined.
+
+## **Relationships Between Trigonometric Values of Supplementary and Complementary Angles**
+
+### **a) Supplementary Angles (summing to $180^\circ$)**
+
+**Geometric property:** Two points $M(x_0; y_0)$ and $M'(-x_0; y_0)$ on the unit semicircle corresponding to two supplementary angles $\alpha$ and $180^\circ - \alpha$ are symmetric with respect to the $y$-axis $Oy$.
+
+**Reduction formulas:** For two supplementary angles $\alpha$ and $180^\circ - \alpha$, we have:
+
+• $\sin(180^\circ - \alpha) = \sin \alpha$
+
+• $\cos(180^\circ - \alpha) = -\cos \alpha$
+
+• $\tan(180^\circ - \alpha) = -\tan \alpha \quad (\alpha \ne 90^\circ)$
+
+• $\cot(180^\circ - \alpha) = -\cot \alpha \quad (0^\circ < \alpha < 180^\circ)$
+
+**Mnemonic rule:** "Supplementary angles have equal sines; opposite cosines, tangents, and cotangents."
+
+### **b) Complementary Angles (summing to $90^\circ$)**
+
+**Reduction formulas:** For two complementary angles $\alpha$ and $90^\circ - \alpha$ ($0^\circ \le \alpha \le 90^\circ$), we have:
+
+• $\sin(90^\circ - \alpha) = \cos \alpha$
+
+• $\cos(90^\circ - \alpha) = \sin \alpha$
+
+• $\tan(90^\circ - \alpha) = \cot \alpha \quad (0^\circ < \alpha < 90^\circ)$
+
+• $\cot(90^\circ - \alpha) = \tan \alpha \quad (0^\circ < \alpha < 90^\circ)$
+
+**Mnemonic rule:** "Complementary angles: the sine of one equals the cosine of the other, and the tangent of one equals the cotangent of the other (cofunction identities)."
+
+## **Fundamental Trigonometric Identities**
+
+**Pythagorean trigonometric identity:** For any angle $\alpha$ ($0^\circ \le \alpha \le 180^\circ$), we have: $\sin^2 \alpha + \cos^2 \alpha = 1$.
+
+**Identity relating tangent and cosine:** For any angle $\alpha \ne 90^\circ$, we have: $1 + \tan^2 \alpha = \frac{1}{\cos^2 \alpha}$.
+
+**Identity relating cotangent and sine:** For any angle $0^\circ < \alpha < 180^\circ$, we have: $1 + \cot^2 \alpha = \frac{1}{\sin^2 \alpha}$.
+
+**Product of tangent and cotangent:** For any angle $\alpha \notin \\{0^\circ; 90^\circ; 180^\circ\\}$, we have: $\tan \alpha \cdot \cot \alpha = 1$.
