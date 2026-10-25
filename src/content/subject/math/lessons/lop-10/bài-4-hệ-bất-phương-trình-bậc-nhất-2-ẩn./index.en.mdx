@@ -1,0 +1,98 @@
+---
+title: 'Lesson 4: Systems of Linear Inequalities in Two Variables'
+description: Definition of a System of Linear Inequalities in Two Variables; Geometric Representation of the Solution Region of a System of Linear Inequalities in Two Variables; Linear Programming Problem.
+tags:
+  - grade 10
+  - Definition of a System of Linear Inequalities in Two Variables
+  - Geometric Representation of the Solution Region
+  - Polygonal region
+  - Linear Programming Problem
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Learning Objectives**
+
+### **Terminology:**
+
+System of linear inequalities in two variables
+
+Solution of a system of linear inequalities in two variables
+
+Feasible region (solution region / solution set) of a system of linear inequalities in two variables
+
+Polygonal region, vertices of a polygonal region
+
+Maximum value, minimum value of a linear objective function $F(x; y) = ax + by$
+
+### **Knowledge and skills:**
+
+Identify systems of linear inequalities in two variables.
+
+Graph and represent the feasible region of a system of linear inequalities in two variables on the Cartesian coordinate plane.
+
+Apply systems of linear inequalities in two variables to model and solve linear programming problems and real-world optimization problems.
+
+## **Systems of Linear Inequalities in Two Variables**
+
+<Youtube url="https://www.youtube.com/watch?v=example_he_bpt_bac_nhat_hai_an"/>
+
+### **a) Concept of a System of Linear Inequalities in Two Variables**
+
+**Definition:** A system of linear inequalities in two variables is a collection of two or more linear inequalities in two variables $x, y$.
+
+**General form:** A system of linear inequalities in two variables generally has the form:
+
+$$\begin{cases} a_1 x + b_1 y \le c_1 \\\ a_2 x + b_2 y \le c_2 \\\ \vdots \\\ a_m x + b_m y \le c_m \end{cases}$$
+
+(where the inequality symbols $\le$ may be replaced by $\ge, <, >$).
+
+**Example:** The system $\begin{cases} x \ge 0 \\\ y \ge 0 \\\ x + y \le 150 \end{cases}$ is a system of linear inequalities in two variables. In contrast, the system $\begin{cases} x + y^2 < 0 \\\ y - x > 1 \end{cases}$ is not, because it contains the quadratic term $y^2$.
+
+### **b) Solutions of a System of Linear Inequalities in Two Variables**
+
+**Definition of a solution:** An ordered pair $(x_0; y_0)$ is called a solution of a system of linear inequalities in two variables if $(x_0; y_0)$ simultaneously satisfies all inequalities in the system.
+
+**Example:** Given the system $\begin{cases} x \ge 0 \\\ y \ge 0 \\\ x + y \le 150 \end{cases}$. The ordered pair $(0; 0)$ satisfies all three inequalities, and thus $(0; 0)$ is a solution of the system.
+
+## **Graphing the Feasible Region of a System of Linear Inequalities on the Coordinate Plane**
+
+### **a) Concept of Feasible Region**
+
+**Definition of feasible region:** In the Cartesian coordinate plane $Oxy$, the set of all points whose coordinates $(x; y)$ are solutions of a system of linear inequalities in two variables is called the feasible region (or solution set) of that system.
+
+**Geometric property:** The feasible region of a system is the intersection of the solution regions of all individual inequalities in the system.
+
+### **b) Procedure for Graphing the Feasible Region of a System**
+
+**Procedure:** To determine the feasible region of a system of linear inequalities in two variables on the coordinate plane $Oxy$, perform the following steps:
+
+**Step 1:** On the same coordinate plane $Oxy$, draw the boundary lines corresponding to each inequality in the system.
+
+**Step 2:** Determine the solution region of each individual inequality in the system and shade (cross out) the region that does not satisfy it.
+
+**Step 3:** Conclusion: The unshaded (unhatched) region (including or excluding boundaries depending on the inequality signs) is the feasible region of the given system.
+
+**Note on boundary lines:** If an inequality is strict ($<$ or $>$), the corresponding boundary line is drawn as a dashed line, and the points on this line do not belong to the feasible region.
+
+## **Applications of Systems of Linear Inequalities in Optimization Problems**
+
+### **a) Fundamental Theorem of Linear Programming on a Polygonal Region**
+
+**Statement of the theorem:** The maximum (or minimum) value of a linear function $F(x; y) = ax + by$ on a polygonal region $A_1A_2...A_n$ (i.e., the set of points lying inside or on the edges of the polygon) is always attained at one of the vertices of the polygon.
+
+### **b) Solving Linear Programming Problems**
+
+**Optimization procedure:** To find the maximum (or minimum) value of the objective function $F(x; y) = ax + by$ over a bounded polygonal feasible region:
+
+• Step 1: Model the problem by introducing variables $x, y$ and establishing the system of linear inequalities representing the constraints.
+
+• Step 2: Graph the feasible region of the system on the coordinate plane $Oxy$ and determine the coordinates of all its vertices.
+
+• Step 3: Evaluate the objective function $F(x; y)$ at each vertex of the polygon.
+
+• Step 4: Compare the evaluated values to find the maximum (or minimum) value and state the conclusion for the practical problem.

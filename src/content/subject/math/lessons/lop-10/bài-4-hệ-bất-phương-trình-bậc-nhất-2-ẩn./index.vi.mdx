@@ -1,0 +1,98 @@
+---
+title: 'Bài 4: Hệ bất phương trình bậc nhất 2 ẩn.'
+description: Định nghĩa hệ bất phương trình bậc nhất 2 ẩn; Biểu điễn miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn; bài toán tối ưu.
+tags:
+  - lớp 10
+  - hệ bất phương trình bậc nhất 2 ẩn
+  - miền nghiệm
+  - miền đa giác
+  - bài toán tối ưu
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Mục tiêu bài học**
+
+### **Thuật ngữ:**
+
+Hệ bất phương trình bậc nhất hai ẩn
+
+Nghiệm của hệ bất phương trình bậc nhất hai ẩn
+
+Miền nghiệm của hệ bất phương trình bậc nhất hai ẩn
+
+Miền đa giác, các đỉnh của miền đa giác
+
+Giá trị lớn nhất, giá trị nhỏ nhất của biểu thức bậc nhất $F(x; y) = ax + by$
+
+### **Kiến thức, kĩ năng:**
+
+Nhận biết hệ bất phương trình bậc nhất hai ẩn.
+
+Biết biểu diễn miền nghiệm của hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ.
+
+Vận dụng kiến thức hệ bất phương trình bậc nhất hai ẩn vào giải quyết bài toán quy hoạch tuyến tính và các bài toán tối ưu trong thực tiễn.
+
+## **Hệ bất phương trình bậc nhất hai ẩn**
+
+<Youtube url="https://www.youtube.com/watch?v=example_he_bpt_bac_nhat_hai_an"/>
+
+### **a) Khái niệm hệ bất phương trình bậc nhất hai ẩn**
+
+**Định nghĩa:** Hệ bất phương trình bậc nhất hai ẩn là một hệ gồm hai hay nhiều bất phương trình bậc nhất hai ẩn $x, y$.
+
+**Dạng tổng quát:** Hệ bất phương trình bậc nhất hai ẩn thường có dạng:
+
+$$\begin{cases} a_1 x + b_1 y \le c_1 \\\ a_2 x + b_2 y \le c_2 \\\ \vdots \\\ a_m x + b_m y \le c_m \end{cases}$$
+
+(trong đó các dấu $\le$ có thể được thay bởi $\ge, <, >$).
+
+**Ví dụ:** Hệ $\begin{cases} x \ge 0 \\\ y \ge 0 \\\ x + y \le 150 \end{cases}$ là một hệ bất phương trình bậc nhất hai ẩn. Còn hệ $\begin{cases} x + y^2 < 0 \\\ y - x > 1 \end{cases}$ không phải vì có chứa $y^2$.
+
+### **b) Nghiệm của hệ bất phương trình bậc nhất hai ẩn**
+
+**Định nghĩa nghiệm:** Cặp số $(x_0; y_0)$ là nghiệm của một hệ bất phương trình bậc nhất hai ẩn khi $(x_0; y_0)$ đồng thời là nghiệm của tất cả các bất phương trình trong hệ đó.
+
+**Ví dụ:** Cho hệ bất phương trình $\begin{cases} x \ge 0 \\\ y \ge 0 \\\ x + y \le 150 \end{cases}$. Cặp số $(0; 0)$ thoả mãn cả ba bất phương trình nên $(0; 0)$ là một nghiệm của hệ.
+
+## **Biểu diễn miền nghiệm của hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ**
+
+### **a) Khái niệm miền nghiệm**
+
+**Định nghĩa miền nghiệm:** Trong mặt phẳng toạ độ $Oxy$, tập hợp các điểm có toạ độ là nghiệm của hệ bất phương trình bậc nhất hai ẩn là miền nghiệm của hệ bất phương trình đó.
+
+**Bản chất hình học:** Miền nghiệm của hệ là giao các miền nghiệm của các bất phương trình trong hệ.
+
+### **b) Các bước biểu diễn miền nghiệm của hệ**
+
+**Quy trình thực hiện:** Để xác định miền nghiệm của một hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ $Oxy$, ta thực hiện theo các bước sau:
+
+**Bước 1:** Trên cùng một mặt phẳng toạ độ $Oxy$, vẽ các đường thẳng biên tương ứng với từng bất phương trình trong hệ.
+
+**Bước 2:** Xác định miền nghiệm của mỗi bất phương trình bậc nhất hai ẩn trong hệ và gạch bỏ miền không phải là nghiệm của nó.
+
+**Bước 3:** Kết luận: Phần mặt phẳng không bị gạch (kể cả bờ hoặc không kể bờ tuỳ theo dấu của bất phương trình) chính là miền nghiệm của hệ bất phương trình đã cho.
+
+**Lưu ý về đường biên:** Nếu bất phương trình có dấu ngặt ($<$ hoặc $>$), đường thẳng biên tương ứng được vẽ bằng nét đứt và miền nghiệm không chứa các điểm nằm trên đường biên đó.
+
+## **Ứng dụng của hệ bất phương trình bậc nhất hai ẩn trong bài toán tối ưu**
+
+### **a) Định lí tối ưu trên miền đa giác**
+
+**Nội dung định lí:** Giá trị lớn nhất (hay nhỏ nhất) của biểu thức bậc nhất $F(x; y) = ax + by$ với $(x; y)$ là toạ độ các điểm thuộc miền đa giác $A_1A_2...A_n$ (tức là các điểm nằm bên trong hay nằm trên các cạnh của đa giác) luôn đạt được tại một trong các đỉnh của đa giác đó.
+
+### **b) Phương pháp giải bài toán quy hoạch tuyến tính**
+
+**Quy trình giải bài toán tối ưu:** Để tìm giá trị lớn nhất (hoặc nhỏ nhất) của biểu thức $F(x; y) = ax + by$ trên một miền nghiệm đa giác:
+
+• Bước 1: Mô hình hoá bài toán bằng cách đặt ẩn $x, y$, lập hệ bất phương trình bậc nhất hai ẩn biểu thị các điều kiện ràng buộc.
+
+• Bước 2: Biểu diễn miền nghiệm của hệ trên mặt phẳng toạ độ $Oxy$ và xác định toạ độ tất cả các đỉnh của miền đa giác tạo thành.
+
+• Bước 3: Tính giá trị của biểu thức mục tiêu $F(x; y)$ tại từng đỉnh của đa giác.
+
+• Bước 4: So sánh các giá trị vừa tính được để tìm giá trị lớn nhất (hoặc nhỏ nhất) và đưa ra kết luận cho bài toán thực tiễn.
