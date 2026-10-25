@@ -9,4 +9,94 @@ updatedDate: 2026-09-29T22:39:00
 draft: false
 ---
 
-This is lesson 3
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Learning Objectives**
+
+### **Terminology:**
+
+Linear inequality in two variables
+
+Solution of a linear inequality in two variables
+
+Solution set (solution region / feasible region) of a linear inequality in two variables
+
+Half-plane, boundary line
+
+### **Knowledge and skills:**
+
+Identify linear inequalities in two variables and verify their solutions.
+
+Graph and represent the solution set of a linear inequality in two variables on the Cartesian coordinate plane $Oxy$.
+
+Apply linear inequalities in two variables to model and solve practical real-world problems.
+
+## **Linear Inequalities in Two Variables**
+
+<Youtube url="https://www.youtube.com/watch?v=example_bpt_bac_nhat_hai_an"/>
+
+### **a) Concepts and General Form**
+
+**Definition:** A linear inequality in two variables $x, y$ is an inequality expressing a first-degree comparative relationship between two variables.
+
+**General form:** A linear inequality in two variables $x, y$ has the general form:
+
+$$ax + by \le c \quad (ax + by \ge c, \\; ax + by < c, \\; ax + by > c)$$
+
+where $a, b, c$ are given real constants, $a$ and $b$ are not both zero ($a^2 + b^2 \ne 0$), and $x, y$ are the variables.
+
+**Example:** $2x + 3y < 1$ and $x - 2y \ge 0$ are linear inequalities in two variables; whereas $2x^2 + 3y < 1$ is not, because it contains the quadratic term $x^2$.
+
+### **b) Solutions of a Linear Inequality in Two Variables**
+
+**Definition of a solution:** Consider the linear inequality in two variables $ax + by \le c$. An ordered pair $(x_0; y_0)$ is called a solution of the given inequality if the numerical inequality $ax_0 + by_0 \le c$ is a true statement.
+
+**Number of solutions:** Unlike a linear equation in two variables which is often solved in a system, a single linear inequality in two variables always possesses infinitely many solutions.
+
+**Example of solutions:** Consider the inequality $x + 2y > 5$:
+
+• The ordered pair $(3; 4)$ is a solution because $3 + 2 \cdot 4 = 11 > 5$ (true).
+
+• The ordered pair $(0; -1)$ is not a solution because $0 + 2 \cdot (-1) = -2 < 5$ (false).
+
+## **Graphing the Solution Set of a Linear Inequality on the Coordinate Plane**
+
+### **a) Concept of Solution Set and Boundary Line Properties**
+
+**Definition of solution set:** In the Cartesian coordinate plane $Oxy$, the set of all points with coordinates $(x; y)$ that satisfy the inequality $ax + by \le c$ is called the solution set (or solution region / feasible region) of that inequality.
+
+**Plane division property of a line:** The straight line $d: ax + by = c$ divides the coordinate plane $Oxy$ into two opposite open half-planes sharing the boundary $d$:
+
+• One half-plane (excluding the boundary line $d$) consists of points $(x; y)$ satisfying $ax + by > c$.
+
+• The other half-plane (excluding the boundary line $d$) consists of points $(x; y)$ satisfying $ax + by < c$.
+
+• The boundary line $d$ consists of points $(x; y)$ satisfying $ax + by = c$.
+
+### **b) Procedure for Graphing the Solution Set of $ax + by \le c$**
+
+**Procedure:** To graph the solution set of a linear inequality in two variables on the coordinate plane $Oxy$, perform the following two steps:
+
+• Step 1: Draw the boundary line $d: ax + by = c$ on the coordinate plane $Oxy$.
+
+• Step 2: Choose a test point $M_0(x_0; y_0)$ not lying on the line $d$. Calculate the value of $ax_0 + by_0$ and compare it with the constant $c$:
+
+  - If $ax_0 + by_0 < c$, then the half-plane bounded by $d$ containing point $M_0$ is the solution set of the inequality $ax + by \le c$.
+
+  - If $ax_0 + by_0 > c$, then the half-plane bounded by $d$ not containing point $M_0$ is the solution set of the inequality $ax + by \le c$.
+
+**Guideline for choosing the test point:** When $c \ne 0$, it is most convenient to select $M_0$ as the origin $O(0; 0)$ for rapid computation. When $c = 0$ (the boundary line passes through the origin), choose a point such as $(1; 0)$ or $(0; 1)$.
+
+**Convention for the boundary line:** For strict inequalities $ax + by < c$ or $ax + by > c$, the boundary line $d: ax + by = c$ is excluded from the solution set. On the graph, the line $d$ is drawn as a dashed line.
+
+## **Real-World Applications of Linear Inequalities in Two Variables**
+
+**Mathematical modeling of practical problems:** In economics and management, constraints on costs, capital, materials, or labor time are formulated as linear inequalities in two variables:
+
+• Identify the two variable quantities and assign variables $x, y$ (together with domain constraints such as $x \ge 0, y \ge 0$).
+
+• Formulate the algebraic expression for total cost / revenue in terms of $x$ and $y$.
+
+• Establish the corresponding linear inequality based on budget limits or minimum/maximum performance targets.
+
+**Economic example:** A cinema sells Type 1 tickets at 50,000 VND each and Type 2 tickets at 100,000 VND each. To ensure a minimum revenue of 20 million VND (to avoid operating at a loss), the number of tickets sold must satisfy the inequality: $50x + 100y \ge 20\\,000 \Leftrightarrow x + 2y \ge 400$ ($x, y \in \mathbb{N}$).

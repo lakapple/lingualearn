@@ -1,6 +1,6 @@
 ---
-title: 'Bài 3: ABC'
-description: ...
+title: 'Bài 3: Bất phương trình bậc nhất 2 ẩn.'
+description: Định nghĩa và miền nghiệm của bất phương trình bậc nhất 2 ẩn.
 tags:
   - lớp 10
 grade: 10
@@ -9,4 +9,94 @@ updatedDate: 2026-09-29T22:39:00
 draft: false
 ---
 
-Đây là bài 3
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Mục tiêu bài học**
+
+### **Thuật ngữ:**
+
+Bất phương trình bậc nhất hai ẩn
+
+Nghiệm của bất phương trình bậc nhất hai ẩn
+
+Miền nghiệm của bất phương trình bậc nhất hai ẩn
+
+Nửa mặt phẳng bờ, đường bờ
+
+### **Kiến thức, kĩ năng:**
+
+Nhận biết bất phương trình bậc nhất hai ẩn và nghiệm của bất phương trình bậc nhất hai ẩn.
+
+Biết biểu diễn miền nghiệm của bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ $Oxy$.
+
+Vận dụng kiến thức về bất phương trình bậc nhất hai ẩn vào giải quyết một số bài toán có nội dung thực tiễn.
+
+## **Bất phương trình bậc nhất hai ẩn**
+
+<Youtube url="https://www.youtube.com/watch?v=example_bpt_bac_nhat_hai_an"/>
+
+### **a) Khái niệm và dạng tổng quát**
+
+**Định nghĩa:** Bất phương trình bậc nhất hai ẩn $x, y$ là bất phương trình biểu diễn mối quan hệ so sánh bậc nhất giữa hai ẩn số.
+
+**Dạng tổng quát:** Bất phương trình bậc nhất hai ẩn $x, y$ có dạng tổng quát là:
+
+$$ax + by \le c \quad (ax + by \ge c, \\; ax + by < c, \\; ax + by > c)$$
+
+trong đó $a, b, c$ là những số thực đã cho, $a$ và $b$ không đồng thời bằng 0 ($a^2 + b^2 \ne 0$), $x$ và $y$ là các ẩn số.
+
+**Ví dụ:** $2x + 3y < 1$ và $x - 2y \ge 0$ là các bất phương trình bậc nhất hai ẩn; còn $2x^2 + 3y < 1$ không phải vì có chứa $x^2$.
+
+### **b) Nghiệm của bất phương trình bậc nhất hai ẩn**
+
+**Định nghĩa nghiệm:** Cho bất phương trình bậc nhất hai ẩn $ax + by \le c$. Cặp số $(x_0; y_0)$ được gọi là một nghiệm của bất phương trình đã cho nếu bất đẳng thức $ax_0 + by_0 \le c$ là một khẳng định đúng.
+
+**Số lượng nghiệm:** Khác với phương trình bậc nhất hai ẩn thường được xét theo hệ, một bất phương trình bậc nhất hai ẩn luôn có vô số nghiệm.
+
+**Ví dụ về nghiệm:** Xét bất phương trình $x + 2y > 5$:
+
+• Cặp số $(3; 4)$ là một nghiệm vì $3 + 2 \cdot 4 = 11 > 5$ (đúng).
+
+• Cặp số $(0; -1)$ không phải là nghiệm vì $0 + 2 \cdot (-1) = -2 < 5$ (sai).
+
+## **Biểu diễn miền nghiệm của bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ**
+
+### **a) Khái niệm miền nghiệm và tính chất đường bờ**
+
+**Định nghĩa miền nghiệm:** Trong mặt phẳng toạ độ $Oxy$, tập hợp các điểm có toạ độ $(x; y)$ là nghiệm của bất phương trình $ax + by \le c$ được gọi là miền nghiệm của bất phương trình đó.
+
+**Tính chất chia mặt phẳng của đường thẳng:** Đường thẳng $d: ax + by = c$ chia mặt phẳng toạ độ $Oxy$ thành hai nửa mặt phẳng đối nhau có chung bờ $d$:
+
+• Một nửa mặt phẳng (không kể bờ $d$) gồm các điểm $(x; y)$ thoả mãn $ax + by > c$.
+
+• Nửa mặt phẳng còn lại (không kể bờ $d$) gồm các điểm $(x; y)$ thoả mãn $ax + by < c$.
+
+• Đường thẳng bờ $d$ gồm các điểm $(x; y)$ thoả mãn $ax + by = c$.
+
+### **b) Các bước biểu diễn miền nghiệm của bất phương trình $ax + by \le c$**
+
+**Quy trình thực hiện:** Để biểu diễn miền nghiệm của bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ $Oxy$, ta thực hiện theo hai bước:
+
+• Bước 1: Vẽ đường thẳng $d: ax + by = c$ trên mặt phẳng toạ độ $Oxy$.
+
+• Bước 2: Lấy một điểm $M_0(x_0; y_0)$ không thuộc đường thẳng $d$. Tính giá trị của biểu thức $ax_0 + by_0$ rồi so sánh với hằng số $c$:
+
+  - Nếu $ax_0 + by_0 < c$ thì nửa mặt phẳng bờ $d$ chứa điểm $M_0$ là miền nghiệm của bất phương trình $ax + by \le c$.
+
+  - Nếu $ax_0 + by_0 > c$ thì nửa mặt phẳng bờ $d$ không chứa điểm $M_0$ là miền nghiệm của bất phương trình $ax + by \le c$.
+
+**Kinh nghiệm chọn điểm kiểm tra:** Khi $c \ne 0$, ta thường ưu tiên chọn $M_0$ chính là gốc toạ độ $O(0; 0)$ để tính toán nhanh nhất. Khi $c = 0$ (đường thẳng $d$ đi qua gốc toạ độ), ta thường chọn $M_0$ là $(1; 0)$ hoặc $(0; 1)$.
+
+**Quy ước về đường bờ:** Đối với các bất phương trình ngặt $ax + by < c$ hoặc $ax + by > c$, miền nghiệm không bao gồm đường bờ $d: ax + by = c$. Khi đó trên hình vẽ, ta biểu diễn đường thẳng $d$ bằng nét đứt.
+
+## **Ứng dụng thực tiễn của bất phương trình bậc nhất hai ẩn**
+
+**Mô hình hoá bài toán thực tiễn:** Trong kinh tế và đời sống, các điều kiện ràng buộc về chi phí, nguồn vốn, nguyên vật liệu hoặc thời gian sản xuất thường được chuyển đổi về dạng các bất phương trình bậc nhất hai ẩn:
+
+• Xác định hai đại lượng biến đổi cần tìm và gọi ẩn số là $x, y$ (kèm theo điều kiện xác định như $x \ge 0, y \ge 0$).
+
+• Thiết lập biểu thức tổng chi phí/doanh thu theo $x$ và $y$.
+
+• Dựa vào giới hạn ngân sách hoặc yêu cầu tối thiểu/tối đa để thiết lập bất phương trình bậc nhất hai ẩn tương ứng.
+
+**Ví dụ bài toán kinh tế:** Một rạp chiếu phim bán vé loại 1 giá 50 nghìn đồng/vé và vé loại 2 giá 100 nghìn đồng/vé. Để doanh thu tối thiểu 20 triệu đồng (không bị bù lỗ), số vé bán ra thoả mãn bất phương trình: $50x + 100y \ge 20\\,000 \Leftrightarrow x + 2y \ge 400$ ($x, y \in \mathbb{N}$).
