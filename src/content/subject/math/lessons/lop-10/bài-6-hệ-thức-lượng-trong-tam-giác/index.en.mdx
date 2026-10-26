@@ -1,0 +1,131 @@
+---
+title: 'Lesson 6: Trigonometric Relations in Triangles'
+description: Theoretical Foundations and Examples of Trigonometric Relations to Solve Triangles and Calculate Triangle Areas.
+tags:
+  - grade 10
+  - Law of Cosines
+  - Law of Sines
+  - Heron's formula
+  - Solving triangles
+  - the area of a triangle
+grade: 10
+order: 0
+updatedDate: 2026-10-26T14:07:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Learning Objectives**
+
+### **Terminology:**
+
+Law of Cosines
+
+Law of Sines
+
+Formulas for the area of a triangle (Heron's formula, area via circumradius and inradius)
+
+Solving triangles
+
+Circumradius $R$, inradius $r$, semiperimeter $p$
+
+### **Knowledge and skills:**
+
+Understand and proficiently apply the Law of Cosines and the Law of Sines in a triangle.
+
+Master and apply various formulas for computing the area of a triangle.
+
+Perform solving triangles in fundamental cases (given two sides and the included angle, three sides, or one side and two adjacent angles).
+
+Apply trigonometric relations in triangles to model and solve practical problems concerning distance, height measurements, and maritime navigation.
+
+## **The Law of Cosines**
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_cosin"/>
+
+### **a) The Law of Cosines in a Triangle**
+
+**Standard notation:** In a triangle $ABC$, let $a = BC, b = CA, c = AB$; $A, B, C$ denote the interior angle measures at the corresponding vertices; $p = \frac{a+b+c}{2}$ be the semiperimeter; $S$ be the area; and $R, r$ be the circumradius and inradius of the triangle, respectively.
+
+**Statement of the Law of Cosines:** In any triangle $ABC$, the square of a side equals the sum of the squares of the other two sides minus twice the product of those sides and the cosine of the included angle:
+
+$$a^2 = b^2 + c^2 - 2bc \cos A$$
+
+$$b^2 = c^2 + a^2 - 2ca \cos B$$
+
+$$c^2 = a^2 + b^2 - 2ab \cos C$$
+
+**Relationship with the Pythagorean Theorem:** When triangle $ABC$ is right-angled at $A$ (i.e., $\widehat{A} = 90^\circ$), we have $\cos 90^\circ = 0$, reducing the formula to $a^2 = b^2 + c^2$. Hence, the Pythagorean Theorem is a special case of the Law of Cosines.
+
+### **b) Corollaries of the Law of Cosines**
+
+**Formulas for the cosines of the angles:** From the Law of Cosines, we derive the formulas to determine the angles when the lengths of all three sides are known:
+
+$$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$
+
+$$\cos B = \frac{c^2 + a^2 - b^2}{2ca}$$
+
+$$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$
+
+**Classification of angles:** If $b^2 + c^2 - a^2 > 0$, then $\cos A > 0$, so angle $A$ is acute; if $b^2 + c^2 - a^2 = 0$, then angle $A$ is a right angle; if $b^2 + c^2 - a^2 < 0$, then $\cos A < 0$, so angle $A$ is obtuse.
+
+## **The Law of Sines**
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_sin"/>
+
+### **a) Statement of the Law of Sines**
+
+**The Law of Sines:** In any triangle $ABC$, the ratio of each side length to the sine of the opposite angle is equal to twice the circumradius of the triangle:
+
+$$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$$
+
+### **b) Useful Corollaries**
+
+**Side lengths in terms of angles and circumradius $R$:** $a = 2R \sin A; \quad b = 2R \sin B; \quad c = 2R \sin C$.
+
+**Circumradius $R$:** $R = \frac{a}{2\sin A} = \frac{b}{2\sin B} = \frac{c}{2\sin C}$.
+
+**Sines of the angles:** $\sin A = \frac{a}{2R}; \quad \sin B = \frac{b}{2R}; \quad \sin C = \frac{c}{2R}$.
+
+## **Solving Triangles and Practical Applications**
+
+### **a) Concept of Solving Triangles**
+
+**Definition:** Solving a triangle refers to calculating the unknown side lengths and angle measures of a triangle from given known elements (sides and angles).
+
+**Fundamental cases:**
+
+• Case 1: Given two sides and the included angle (use the Law of Cosines to find the third side, then use the corollaries of the Law of Cosines or the Law of Sines to find the remaining angles).
+
+• Case 2: Given three sides (use the corollaries of the Law of Cosines to calculate the angles).
+
+• Case 3: Given one side and two adjacent angles (determine the third angle via the angle sum theorem, then apply the Law of Sines to compute the remaining two sides).
+
+### **b) Applications in Surveying and Measurement**
+
+**Measuring distance to an inaccessible point:** To measure the distance from an observation point $A$ to an inaccessible target $C$ (such as the Turtle Tower across a lake), establish a baseline $AB$ along the shore, measure $AB$ and the angles $\widehat{CAB}$ and $\widehat{CBA}$, then apply the Law of Sines in triangle $ABC$ to compute $AC$.
+
+**Measuring the height of an object:** Measure elevation angles from two distinct observation points separated by a known distance to form a triangle and calculate the height of a building, tower, or mountain.
+
+## **Formulas for the Area of a Triangle**
+
+### **a) Collection of Area Formulas**
+
+**Base-height formula:** $S = \frac{1}{2} a h_a = \frac{1}{2} b h_b = \frac{1}{2} c h_c$ (where $h_a, h_b, h_c$ are the corresponding altitudes).
+
+**Two sides and the included angle formula:** $S = \frac{1}{2} bc \sin A = \frac{1}{2} ca \sin B = \frac{1}{2} ab \sin C$.
+
+**Circumradius formula:** $S = \frac{abc}{4R}$.
+
+**Inradius formula:** $S = pr = \frac{(a+b+c)r}{2}$ (where $p = \frac{a+b+c}{2}$ is the semiperimeter).
+
+**Heron's formula (given three sides):** In a triangle $ABC$ with semiperimeter $p = \frac{a+b+c}{2}$, the area is given by:
+
+$$S = \sqrt{p(p-a)(p-b)(p-c)}$$
+
+### **b) Derived Formulas**
+
+**Inradius $r$:** $r = \frac{S}{p} = \frac{\sqrt{p(p-a)(p-b)(p-c)}}{p}$.
+
+**Circumradius $R$:** $R = \frac{abc}{4S} = \frac{abc}{4\sqrt{p(p-a)(p-b)(p-c)}}$.

@@ -1,0 +1,131 @@
+---
+title: 'Bài 6: Hệ thức lượng trong tam giác'
+description: Hệ thống lý thuyết và ví dụ các hệ thức lượng trong tam giác để giải tam giác và tính diện tích tam giác.
+tags:
+  - lớp 10
+  - Định lí côsin
+  - Định lí sin
+  - công thức Heron
+  - diện tích tam giác
+  - Giải tam giác
+grade: 10
+order: 0
+updatedDate: 2026-10-26T14:07:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Mục tiêu bài học**
+
+### **Thuật ngữ:**
+
+Định lí côsin
+
+Định lí sin
+
+Công thức tính diện tích tam giác (công thức Heron, diện tích qua bán kính đường tròn nội/ngoại tiếp)
+
+Giải tam giác
+
+Bán kính đường tròn ngoại tiếp $R$, nội tiếp $r$, nửa chu vi $p$
+
+### **Kiến thức, kĩ năng:**
+
+Hiểu và vận dụng thành thạo định lí côsin, định lí sin trong tam giác.
+
+Nắm vững và vận dụng các công thức tính diện tích tam giác.
+
+Thực hiện giải tam giác trong các trường hợp cơ bản (biết 2 cạnh và góc xen giữa, biết 3 cạnh, biết 1 cạnh và 2 góc kề).
+
+Vận dụng các hệ thức lượng trong tam giác để giải quyết các bài toán thực tiễn về đo đạc khoảng cách, chiều cao và dẫn đường hàng hải.
+
+## **Định lí côsin**
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_cosin"/>
+
+### **a) Định lí côsin trong tam giác**
+
+**Kí hiệu quy ước:** Trong tam giác $ABC$, ta quy ước $a = BC, b = CA, c = AB$; $A, B, C$ là số đo các góc tại đỉnh tương ứng; $p = \frac{a+b+c}{2}$ là nửa chu vi; $S$ là diện tích; $R, r$ tương ứng là bán kính đường tròn ngoại tiếp và nội tiếp tam giác.
+
+**Nội dung định lí côsin:** Trong tam giác $ABC$, bình phương một cạnh bằng tổng bình phương hai cạnh còn lại trừ đi hai lần tích của hai cạnh đó với côsin của góc xen giữa:
+
+$$a^2 = b^2 + c^2 - 2bc \cos A$$
+
+$$b^2 = c^2 + a^2 - 2ca \cos B$$
+
+$$c^2 = a^2 + b^2 - 2ab \cos C$$
+
+**Mối liên hệ với định lí Pythagore:** Khi tam giác $ABC$ vuông tại $A$ (tức là $\widehat{A} = 90^\circ$), ta có $\cos 90^\circ = 0$, khi đó công thức trở thành $a^2 = b^2 + c^2$. Như vậy, định lí Pythagore là một trường hợp đặc biệt của định lí côsin.
+
+### **b) Hệ quả của định lí côsin**
+
+**Công thức tính côsin các góc:** Từ định lí côsin, ta suy ra công thức tính góc khi biết độ dài ba cạnh của tam giác:
+
+$$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$
+
+$$\cos B = \frac{c^2 + a^2 - b^2}{2ca}$$
+
+$$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$
+
+**Nhận xét tính chất góc:** Nếu $b^2 + c^2 - a^2 > 0$ thì $\cos A > 0$ nên góc $A$ nhọn; nếu $b^2 + c^2 - a^2 = 0$ thì góc $A$ vuông; nếu $b^2 + c^2 - a^2 < 0$ thì góc $A$ tù.
+
+## **Định lí sin**
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_sin"/>
+
+### **a) Nội dung định lí sin**
+
+**Định lí sin:** Trong tam giác $ABC$, tỉ số giữa mỗi cạnh và sin của góc đối diện bằng hai lần bán kính đường tròn ngoại tiếp tam giác đó:
+
+$$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$$
+
+### **b) Các hệ quả thường dùng**
+
+**Tính độ dài cạnh theo góc và bán kính $R$:** $a = 2R \sin A; \quad b = 2R \sin B; \quad c = 2R \sin C$.
+
+**Tính bán kính đường tròn ngoại tiếp $R$:** $R = \frac{a}{2\sin A} = \frac{b}{2\sin B} = \frac{c}{2\sin C}$.
+
+**Tính sin của các góc:** $\sin A = \frac{a}{2R}; \quad \sin B = \frac{b}{2R}; \quad \sin C = \frac{c}{2R}$.
+
+## **Giải tam giác và ứng dụng thực tế**
+
+### **a) Khái niệm giải tam giác**
+
+**Định nghĩa:** Giải tam giác là việc tính độ dài các cạnh và số đo các góc của một tam giác khi biết một số yếu tố định lượng (cạnh, góc) của tam giác đó.
+
+**Các trường hợp cơ bản:**
+
+• Trường hợp 1: Biết hai cạnh và góc xen giữa (dùng định lí côsin để tìm cạnh thứ ba, sau đó dùng hệ quả định lí côsin hoặc định lí sin để tìm các góc còn lại).
+
+• Trường hợp 2: Biết độ dài ba cạnh (dùng hệ quả định lí côsin để tính các góc).
+
+• Trường hợp 3: Biết một cạnh và hai góc kề (tính góc thứ ba bằng định lí tổng ba góc, sau đó dùng định lí sin để tính hai cạnh còn lại).
+
+### **b) Ứng dụng trong thực tiễn đo đạc**
+
+**Đo khoảng cách đến điểm không tới được:** Để đo khoảng cách từ điểm quan sát $A$ đến mục tiêu $C$ (như Tháp Rùa giữa hồ), ta chọn mốc $B$ trên bờ, đo khoảng cách $AB$, đo các góc $\widehat{CAB}$ và $\widehat{CBA}$, sau đó áp dụng định lí sin trong tam giác $ABC$ để tính $AC$.
+
+**Đo chiều cao của vật thể:** Đo góc nâng từ hai vị trí quan sát có khoảng cách xác định để lập tam giác và tính chiều cao của toà nhà, tháp hoặc ngọn núi.
+
+## **Các công thức tính diện tích tam giác**
+
+### **a) Hệ thống các công thức tính diện tích**
+
+**Công thức cơ bản (qua chiều cao):** $S = \frac{1}{2} a h_a = \frac{1}{2} b h_b = \frac{1}{2} c h_c$ (với $h_a, h_b, h_c$ là các đường cao tương ứng).
+
+**Công thức qua hai cạnh và góc xen giữa:** $S = \frac{1}{2} bc \sin A = \frac{1}{2} ca \sin B = \frac{1}{2} ab \sin C$.
+
+**Công thức qua bán kính đường tròn ngoại tiếp $R$:** $S = \frac{abc}{4R}$.
+
+**Công thức qua bán kính đường tròn nội tiếp $r$:** $S = pr = \frac{(a+b+c)r}{2}$ (với $p = \frac{a+b+c}{2}$ là nửa chu vi).
+
+**Công thức Heron (khi biết độ dài ba cạnh):** Trong tam giác $ABC$ có nửa chu vi $p = \frac{a+b+c}{2}$, diện tích được tính bởi công thức:
+
+$$S = \sqrt{p(p-a)(p-b)(p-c)}$$
+
+### **b) Các công thức suy rộng**
+
+**Tính bán kính đường tròn nội tiếp $r$:** $r = \frac{S}{p} = \frac{\sqrt{p(p-a)(p-b)(p-c)}}{p}$.
+
+**Tính bán kính đường tròn ngoại tiếp $R$:** $R = \frac{abc}{4S} = \frac{abc}{4\sqrt{p(p-a)(p-b)(p-c)}}$.
