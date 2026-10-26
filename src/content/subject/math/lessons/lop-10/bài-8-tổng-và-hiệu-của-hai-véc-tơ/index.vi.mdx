@@ -1,0 +1,186 @@
+---
+title: 'Bài 8: Tổng và hiệu của hai véc tơ.'
+description: Các quy tắc để cộng và trừ 2 véc tơ cùng các ví dụ thực tế minh họa.
+tags:
+  - lớp 10
+  - tổng của 2 véc tơ
+  - hiệu của 2 véc tơ
+  - quy tắc 3 điểm
+  - quy tắc hình bình hành
+grade: 10
+order: 0
+updatedDate: 2026-10-27T00:43:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Mục tiêu bài học**
+
+### **Thuật ngữ:**
+
+Tổng của hai vectơ, hiệu của hai vectơ
+
+Vectơ đối
+
+Quy tắc ba điểm, quy tắc hình bình hành, quy tắc hiệu
+
+### **Kiến thức, kĩ năng:**
+
+Thực hiện các phép toán cộng và trừ vectơ.
+
+Mô tả tính chất trung điểm của đoạn thẳng và trọng tâm của tam giác bằng hệ thức vectơ.
+
+Vận dụng các phép toán vectơ vào giải quyết các bài toán vật lí thực tiễn: tổng hợp lực, phân tích lực, tổng hợp vận tốc.
+
+## **Tổng của hai vectơ**
+
+<Youtube url="https://www.youtube.com/watch?v=example_tong_hai_vecto"/>
+
+### **a) Định nghĩa tổng của hai vectơ**
+
+**Định nghĩa:** Cho hai vectơ $\vec{a}$ và $\vec{b}$. Lấy một điểm $A$ tuỳ ý và vẽ $\vec{AB} = \vec{a}, \vec{BC} = \vec{b}$. Khi đó vectơ $\vec{AC}$ được gọi là tổng của hai vectơ $\vec{a}$ và $\vec{b}$, kí hiệu là $\vec{a} + \vec{b}$.
+
+**Phép cộng vectơ:** Phép lấy tổng của hai vectơ được gọi là phép cộng vectơ.
+
+**Tính độc lập đối với điểm gốc:** Vectơ tổng $\vec{a} + \vec{b}$ không phụ thuộc vào việc chọn điểm $A$ ban đầu.
+
+### **b) Các quy tắc cộng vectơ cơ bản**
+
+**Quy tắc ba điểm (quy tắc tam giác):** Với ba điểm bất kì $A, B, C$, ta luôn có: $\vec{AB} + \vec{BC} = \vec{AC}$.
+
+**Quy tắc hình bình hành:** Nếu $ABCD$ là một hình bình hành thì ta có: $\vec{AB} + \vec{AD} = \vec{AC}$.
+
+### **c) Tính chất của phép cộng vectơ**
+
+**Tính chất giao hoán:** Với hai vectơ $\vec{a}, \vec{b}$ bất kì, ta có $\vec{a} + \vec{b} = \vec{b} + \vec{a}$.
+
+**Tính chất kết hợp:** Với ba vectơ $\vec{a}, \vec{b}, \vec{c}$ bất kì, ta có $(\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c})$.
+
+**Tính chất cộng với vectơ-không:** Với mọi vectơ $\vec{a}$, ta có $\vec{a} + \vec{0} = \vec{0} + \vec{a} = \vec{a}$.
+
+**Tổng của nhiều vectơ:** Từ tính chất kết hợp, ta có thể viết tổng của ba hay nhiều vectơ $\vec{a} + \vec{b} + \vec{c}$ mà không cần sử dụng dấu ngoặc.
+
+### **d) Ví dụ minh họa về tổng vectơ**
+
+**Ví dụ 1 (Tính độ dài vectơ tổng trong hình vuông):** Cho hình vuông $ABCD$ có cạnh bằng $1$. Tính độ dài của các vectơ $\vec{u} = \vec{AB} + \vec{AD}$ và $\vec{v} = \vec{AB} + \vec{DC} + \vec{BD}$.
+
+**Lời giải Ví dụ 1:**
+
+• Theo quy tắc hình bình hành, vì $ABCD$ là hình vuông nên $\vec{u} = \vec{AB} + \vec{AD} = \vec{AC}$. Độ dài đường chéo hình vuông cạnh 1 là $AC = \sqrt{1^2 + 1^2} = \sqrt{2}$. Do đó $|\vec{u}| = |\vec{AC}| = \sqrt{2}$.
+
+• Áp dụng tính chất giao hoán và kết hợp: $\vec{v} = (\vec{AB} + \vec{BD}) + \vec{DC} = \vec{AD} + \vec{DC} = \vec{AC}$. Do đó $|\vec{v}| = |\vec{AC}| = \sqrt{2}$.
+
+**Ví dụ 2 (Cộng liên tiếp nhiều vectơ):** Cho 4 điểm bất kì $A, B, C, D$. Chứng minh đẳng thức: $\vec{AB} + \vec{BC} + \\\vec{CD} + \vec{DA} = \vec{0}$.
+
+**Lời giải Ví dụ 2:**
+
+• Áp dụng liên tiếp quy tắc ba điểm:
+
+$$\vec{AB} + \vec{BC} + \vec{CD} + \vec{DA} = (\vec{AB} + \vec{BC}) + (\vec{CD} + \vec{DA}) = \vec{AC} + \vec{CA} = \vec{AA} = \vec{0}$$
+
+## **Hiệu của hai vectơ**
+
+<Youtube url="https://www.youtube.com/watch?v=example_hieu_hai_vecto"/>
+
+### **a) Vectơ đối**
+
+**Định nghĩa:** Vectơ có cùng độ dài và ngược hướng với vectơ $\vec{a}$ được gọi là vectơ đối của vectơ $\vec{a}$, kí hiệu là $-\vec{a}$.
+
+**Tính chất của hai vectơ đối nhau:** Hai vectơ là đối nhau khi và chỉ khi tổng của chúng bằng $\vec{0}$: $\vec{a} + (-\vec{a}) = \vec{0}$.
+
+**Vectơ đối của vectơ-không:** Vectơ $\vec{0}$ được coi là vectơ đối của chính nó, tức là $-\vec{0} = \vec{0}$.
+
+**Vectơ đối của vectơ AB:** Vectơ đối của vectơ $\vec{AB}$ là vectơ $\vec{BA}$, tức là $-\vec{AB} = \vec{BA}$.
+
+### **b) Phép trừ và hiệu của hai vectơ**
+
+**Định nghĩa hiệu:** Vectơ $\vec{a} + (-\vec{b})$ được gọi là hiệu của hai vectơ $\vec{a}$ và $\vec{b}$, kí hiệu là $\vec{a} - \vec{b}$.
+
+**Phép trừ vectơ:** Phép lấy hiệu của hai vectơ được gọi là phép trừ vectơ.
+
+**Quy tắc hiệu (quy tắc trừ ba điểm):** Với ba điểm $O, M, N$ bất kì, ta luôn có: $\vec{MN} = \vec{ON} - \vec{OM}$.
+
+### **c) Ví dụ minh họa về hiệu vectơ**
+
+**Ví dụ 3 (Chứng minh đẳng thức trong hình bình hành):** Cho hình bình hành $ABCD$ và một điểm $O$ bất kì trong mặt phẳng. Chứng minh rằng $\vec{OB} - \vec{OA} = \vec{OC} - \vec{OD}$.
+
+**Lời giải Ví dụ 3:**
+
+• Áp dụng quy tắc hiệu cho vế trái: $\vec{OB} - \vec{OA} = \vec{AB}$.
+
+• Áp dụng quy tắc hiệu cho vế phải: $\vec{OC} - \vec{OD} = \vec{DC}$.
+
+• Vì $ABCD$ là hình bình hành nên hai cạnh đối $AB$ và $DC$ song song, bằng nhau và cùng hướng, do đó $\vec{AB} = \vec{DC}$. Suy ra $\vec{OB} - \vec{OA} = \vec{OC} - \vec{OD}$ (đpcm).
+
+**Ví dụ 4 (Tính độ dài vectơ hiệu trong tam giác đều):** Cho tam giác đều $ABC$ cạnh $a$. Tính độ dài của vectơ $\vec{w} = \vec{AB} - \vec{AC}$.
+
+**Lời giải Ví dụ 4:**
+
+• Áp dụng quy tắc hiệu, ta có: $\vec{w} = \vec{AB} - \vec{AC} = \vec{CB}$.
+
+• Do tam giác $ABC$ đều cạnh $a$ nên độ dài đoạn thẳng $CB = a$. Suy ra $|\vec{w}| = |\vec{CB}| = CB = a$.
+
+## **Hệ thức vectơ liên quan đến trung điểm và trọng tâm**
+
+### **a) Tính chất trung điểm của đoạn thẳng**
+
+**Tính chất cơ bản:** Điểm $I$ là trung điểm của đoạn thẳng $AB$ khi và chỉ khi: $\vec{IA} + \vec{IB} = \vec{0}$.
+
+**Hệ thức điểm bất kì:** Với điểm $O$ bất kì, $I$ là trung điểm của $AB$ khi và chỉ khi $\vec{OA} + \vec{OB} = 2\vec{OI}$.
+
+### **b) Tính chất trọng tâm của tam giác**
+
+**Tính chất cơ bản:** Điểm $G$ là trọng tâm của tam giác $ABC$ khi và chỉ khi: $\vec{GA} + \vec{GB} + \vec{GC} = \vec{0}$.
+
+**Hệ thức điểm bất kì:** Với điểm $O$ bất kì, $G$ là trọng tâm của tam giác $ABC$ khi và chỉ khi $\vec{OA} + \vec{OB} + \vec{OC} = 3\vec{OG}$.
+
+### **c) Ví dụ minh họa về trung điểm và trọng tâm**
+
+**Ví dụ 5 (Hệ thức vectơ cho tứ giác):** Cho tứ giác $ABCD$. Gọi $M, N$ lần lượt là trung điểm của $AB, CD$ và $O$ là trung điểm của $MN$. Chứng minh rằng $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = \vec{0}$.
+
+**Lời giải Ví dụ 5:**
+
+• Vì $M$ là trung điểm của $AB$ nên với điểm $O$ bất kì: $\vec{OA} + \vec{OB} = 2\vec{OM}$.
+
+• Vì $N$ là trung điểm của $CD$ nên với điểm $O$ bất kì: $\vec{OC} + \vec{OD} = 2\vec{ON}$.
+
+• Cộng hai vế lại ta được: $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = 2(\vec{OM} + \vec{ON})$.
+
+• Do $O$ là trung điểm của đoạn thẳng $MN$ nên $\vec{OM} + \vec{ON} = \vec{0}$. Suy ra $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = 2\vec{0} = \vec{0}$ (đpcm).
+
+## **Ứng dụng trong Vật lí**
+
+### **a) Nguyên lí tổng hợp lực và vận tốc**
+
+**Tổng hợp lực:** Nếu hai lực tác động vào một chất điểm tại $A$ và được biểu diễn bởi các vectơ $\vec{F}\_1, \vec{F}\_2$, thì hợp lực $\vec{F}$ tác động vào $A$ được biểu diễn bởi vectơ tổng: $\vec{F} = \vec{F}\_1 + \vec{F}\_2$.
+
+**Hai lực cân bằng:** Hai lực cân bằng là hai lực cùng tác dụng vào một vật, có cùng độ lớn, cùng phương nhưng ngược hướng; tổng hai vectơ lực này bằng $\vec{0}$.
+
+**Tổng hợp vận tốc:** Nếu một con thuyền di chuyển trên sông với vận tốc riêng (vận tốc so với dòng nước) là $\vec{v}\_r$ và vận tốc của dòng nước (so với bờ) là $\vec{v}\_n$, thì vận tốc thực tế của thuyền (so với bờ) là: $\vec{v} = \vec{v}\_r + \vec{v}\_n$.
+
+### **b) Ví dụ minh họa thực tiễn**
+
+**Ví dụ 6 (Tổng hợp hai lực vuông góc):** Hai người cùng kéo một chiếc thuyền tại điểm $O$ bằng hai sợi dây với hai lực $\vec{F}\_1$ và $\vec{F}\_2$ vuông góc với nhau, có độ lớn lần lượt là $|\vec{F}\_1| = 30\text{ N}$ và $|\vec{F}\_2| = 40\text{ N}$. Tính độ lớn của hợp lực $\vec{F} = \vec{F}\_1 + \vec{F}\_2$.
+
+**Lời giải Ví dụ 6:**
+
+• Dựng hình bình hành tạo bởi hai vectơ lực $\vec{F}\_1$ và $\vec{F}\_2$. Vì hai lực vuông góc nhau nên hình bình hành trở thành hình chữ nhật.
+
+• Hợp lực $\vec{F} = \vec{F}\_1 + \vec{F}\_2$ chính là đường chéo của hình chữ nhật này.
+
+• Theo định lí Pythagore, độ lớn của hợp lực là:
+
+$$|\vec{F}| = \sqrt{|\vec{F}\_1|^2 + |\vec{F}\_2|^2} = \sqrt{30^2 + 40^2} = \sqrt{900 + 1600} = 50\text{ N}$$
+
+**Ví dụ 7 (Chuyển động của tàu qua sông):** Một chiếc ca nô di chuyển vuông góc với dòng sông với vận tốc riêng là $v_r = 12\text{ km/h}$. Vận tốc dòng nước chảy xuôi dòng là $v_n = 5\text{ km/h}$. Tính vận tốc thực tế của ca nô đối với bờ sông.
+
+**Lời giải Ví dụ 7:**
+
+• Vận tốc thực tế của ca nô là vectơ tổng $\vec{v} = \vec{v}\_r + \vec{v}\_n$.
+
+• Vì ca nô lái vuông góc với bờ còn dòng nước chảy dọc theo bờ nên hai vectơ vận tốc $\vec{v}\_r \perp \vec{v}\_n$.
+
+• Độ lớn vận tốc thực tế là:
+
+$$|\vec{v}| = \sqrt{v_r^2 + v_n^2} = \sqrt{12^2 + 5^2} = \sqrt{144 + 25} = 13\text{ km/h}$$

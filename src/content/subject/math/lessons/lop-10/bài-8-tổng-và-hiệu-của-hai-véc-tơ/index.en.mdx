@@ -1,0 +1,186 @@
+---
+title: 'Lesson 8: The Sum and Difference of Two Vectors.'
+description: Rules for Vector Addition and Subtraction with Real-World Examples
+tags:
+  - grade 10
+  - Sum of two vectors
+  - difference of two vectors
+  - Triangle rule (three-point rule)
+  - parallelogram rule
+grade: 10
+order: 0
+updatedDate: 2026-10-27T00:43:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## **Learning Objectives**
+
+### **Terminology:**
+
+Sum of two vectors, difference of two vectors
+
+Opposite vector (additive inverse)
+
+Triangle rule (three-point rule), parallelogram rule, difference rule
+
+### **Knowledge and skills:**
+
+Perform vector addition and vector subtraction operations.
+
+Describe the midpoint of a line segment and the centroid of a triangle using vector equations.
+
+Apply vector operations to solve practical physics problems: composition and resolution of forces, addition of velocities.
+
+## **Sum of Two Vectors**
+
+<Youtube url="https://www.youtube.com/watch?v=example_tong_hai_vecto"/>
+
+### **a) Definition of the Sum of Two Vectors**
+
+**Definition:** Given two vectors $\vec{a}$ and $\vec{b}$. Choose an arbitrary point $A$ and construct $\vec{AB} = \\\vec{a}, \vec{BC} = \vec{b}$. The vector $\vec{AC}$ is called the sum of the two vectors $\vec{a}$ and $\vec{b}$, denoted by $\vec{a} + \vec{b}$.
+
+**Vector addition:** The operation of taking the sum of two vectors is called vector addition.
+
+**Independence of initial point:** The sum vector $\vec{a} + \vec{b}$ is independent of the choice of the initial point $A$.
+
+### **b) Fundamental Rules of Vector Addition**
+
+**Triangle rule (three-point rule):** For any three points $A, B, C$, we have: $\vec{AB} + \vec{BC} = \vec{AC}$.
+
+**Parallelogram rule:** If $ABCD$ is a parallelogram, then: $\vec{AB} + \vec{AD} = \vec{AC}$.
+
+### **c) Properties of Vector Addition**
+
+**Commutative property:** For any two vectors $\vec{a}, \vec{b}$, we have $\vec{a} + \vec{b} = \vec{b} + \vec{a}$.
+
+**Associative property:** For any three vectors $\vec{a}, \vec{b}, \vec{c}$, we have $(\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c})$.
+
+**Additive identity property (zero vector):** For any vector $\vec{a}$, we have $\vec{a} + \vec{0} = \vec{0} + \vec{a} = \vec{a}$.
+
+**Sum of multiple vectors:** Due to the associative property, the sum of three or more vectors can be written as $\vec{a} + \vec{b} + \vec{c}$ without parentheses.
+
+### **d) Illustrative Examples on Vector Addition**
+
+**Example 1 (Magnitude of vector sum in a square):** Let $ABCD$ be a square with side length $1$. Compute the magnitudes of the vectors $\vec{u} = \vec{AB} + \vec{AD}$ and $\vec{v} = \vec{AB} + \vec{DC} + \vec{BD}$.
+
+**Solution for Example 1:**
+
+• By the parallelogram rule, since $ABCD$ is a square, $\vec{u} = \vec{AB} + \vec{AD} = \vec{AC}$. The diagonal length of the unit square is $AC = \sqrt{1^2 + 1^2} = \sqrt{2}$. Therefore, $|\vec{u}| = |\vec{AC}| = \sqrt{2}$.
+
+• Applying the commutative and associative properties: $\vec{v} = (\vec{AB} + \vec{BD}) + \vec{DC} = \vec{AD} + \vec{DC} = \vec{AC}$. Therefore, $|\vec{v}| = |\vec{AC}| = \sqrt{2}$.
+
+**Example 2 (Sum of cyclic vectors):** For any four points $A, B, C, D$, prove that $\vec{AB} + \vec{BC} + \vec{CD} + \vec{DA} = \vec{0}$.
+
+**Solution for Example 2:**
+
+• Applying the triangle rule successively:
+
+$$\vec{AB} + \vec{BC} + \vec{CD} + \vec{DA} = (\vec{AB} + \vec{BC}) + (\vec{CD} + \vec{DA}) = \vec{AC} + \vec{CA} = \vec{AA} = \vec{0}$$
+
+## **Difference of Two Vectors**
+
+<Youtube url="https://www.youtube.com/watch?v=example_hieu_hai_vecto"/>
+
+### **a) Opposite Vectors**
+
+**Definition:** The vector having the same magnitude and opposite direction to vector $\vec{a}$ is called the opposite vector (or additive inverse) of $\vec{a}$, denoted by $-\vec{a}$.
+
+**Property of opposite vectors:** Two vectors are opposites of each other if and only if their sum equals the zero vector: $\vec{a} + (-\vec{a}) = \vec{0}$.
+
+**Opposite of the zero vector:** The zero vector $\vec{0}$ is considered the opposite of itself, i.e., $-\vec{0} = \vec{0}$.
+
+**Opposite of vector AB:** The opposite of vector $\vec{AB}$ is vector $\vec{BA}$, that is, $-\vec{AB} = \vec{BA}$.
+
+### **b) Vector Subtraction and Difference**
+
+**Definition of difference:** The vector $\vec{a} + (-\vec{b})$ is called the difference of two vectors $\vec{a}$ and $\vec{b}$, denoted by $\vec{a} - \vec{b}$.
+
+**Vector subtraction:** The operation of taking the difference of two vectors is called vector subtraction.
+
+**Difference rule (subtraction rule):** For any three points $O, M, N$, we have: $\vec{MN} = \vec{ON} - \vec{OM}$.
+
+### **c) Illustrative Examples on Vector Subtraction**
+
+**Example 3 (Identity in a parallelogram):** Let $ABCD$ be a parallelogram and $O$ an arbitrary point in the plane. Prove that $\vec{OB} - \vec{OA} = \vec{OC} - \vec{OD}$.
+
+**Solution for Example 3:**
+
+• By the difference rule, the left-hand side is: $\vec{OB} - \vec{OA} = \vec{AB}$.
+
+• By the difference rule, the right-hand side is: $\vec{OC} - \vec{OD} = \vec{DC}$.
+
+• Since $ABCD$ is a parallelogram, the opposite sides $AB$ and $DC$ are parallel, equal in length, and directed in the same sense; thus $\vec{AB} = \vec{DC}$. Hence $\vec{OB} - \vec{OA} = \vec{OC} - \vec{OD}$ (Q.E.D.).
+
+**Example 4 (Magnitude of vector difference in an equilateral triangle):** Let $ABC$ be an equilateral triangle with side length $a$. Compute the magnitude of the vector $\vec{w} = \vec{AB} - \vec{AC}$.
+
+**Solution for Example 4:**
+
+• Applying the difference rule: $\vec{w} = \vec{AB} - \vec{AC} = \vec{CB}$.
+
+• Since triangle $ABC$ is equilateral with side length $a$, the length of segment $CB$ is $a$. Thus $|\vec{w}| = |\vec{CB}| = CB = a$.
+
+## **Vector Relations Involving Midpoints and Centroids**
+
+### **a) Midpoint Property of a Line Segment**
+
+**Fundamental property:** Point $I$ is the midpoint of segment $AB$ if and only if: $\vec{IA} + \vec{IB} = \vec{0}$.
+
+**Arbitrary point relation:** For any point $O$, $I$ is the midpoint of $AB$ if and only if $\vec{OA} + \vec{OB} = 2\vec{OI}$.
+
+### **b) Centroid Property of a Triangle**
+
+**Fundamental property:** Point $G$ is the centroid of triangle $ABC$ if and only if: $\vec{GA} + \vec{GB} + \vec{GC} = \vec{0}$.
+
+**Arbitrary point relation:** For any point $O$, $G$ is the centroid of triangle $ABC$ if and only if $\vec{OA} + \vec{OB} + \vec{OC} = 3\vec{OG}$.
+
+### **c) Illustrative Examples on Midpoints and Centroids**
+
+**Example 5 (Vector relation in a quadrilateral):** Let $ABCD$ be a quadrilateral. Let $M$ and $N$ be the midpoints of $AB$ and $CD$, respectively, and let $O$ be the midpoint of segment $MN$. Prove that $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = \vec{0}$.
+
+**Solution for Example 5:**
+
+• Since $M$ is the midpoint of $AB$, for any point $O$: $\vec{OA} + \vec{OB} = 2\vec{OM}$.
+
+• Since $N$ is the midpoint of $CD$, for any point $O$: $\vec{OC} + \vec{OD} = 2\vec{ON}$.
+
+• Adding both equations gives: $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = 2(\vec{OM} + \vec{ON})$.
+
+• Since $O$ is the midpoint of segment $MN$, we have $\vec{OM} + \vec{ON} = \vec{0}$. Therefore, $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = 2\vec{0} = \vec{0}$ (Q.E.D.).
+
+## **Applications in Physics**
+
+### **a) Principles of Composition of Forces and Velocities**
+
+**Resultant force (Composition of forces):** If two forces act on a point particle at $A$ and are represented by vectors $\vec{F}\_1, \vec{F}\_2$, then the resultant force $\vec{F}$ acting on $A$ is represented by the vector sum: $\vec{F} = \vec{F}\_1 + \vec{F}\_2$.
+
+**Balanced forces:** Two balanced forces are forces acting on the same object that have equal magnitudes, the same line of action, and opposite directions; the sum of their force vectors equals $\vec{0}$.
+
+**Relative velocity (Addition of velocities):** If a boat travels across a river with velocity relative to the water $\vec{v}\_r$ and the velocity of the river current relative to the riverbank is $\vec{v}\_n$, the actual velocity of the boat relative to the riverbank is: $\vec{v} = \vec{v}\_r + \vec{v}\_n$.
+
+### **b) Practical Physics Examples**
+
+**Example 6 (Resultant of perpendicular forces):** Two people pull a boat at point $O$ using two ropes with perpendicular forces $\vec{F}\_1$ and $\vec{F}\_2$ having magnitudes $|\vec{F}\_1| = 30\text{ N}$ and $|\vec{F}\_2| = 40\text{ N}$, respectively. Determine the magnitude of the resultant force $\vec{F} = \vec{F}\_1 + \vec{F}\_2$.
+
+**Solution for Example 6:**
+
+• Construct the parallelogram determined by the two force vectors $\vec{F}\_1$ and $\vec{F}\_2$. Since the forces are perpendicular, the parallelogram is a rectangle.
+
+• The resultant force $\vec{F} = \vec{F}\_1 + \vec{F}\_2$ corresponds to the diagonal of this rectangle.
+
+• By the Pythagorean Theorem, the magnitude of the resultant force is:
+
+$$|\vec{F}| = \sqrt{|\vec{F}\_1|^2 + |\vec{F}\_2|^2} = \sqrt{30^2 + 40^2} = \sqrt{900 + 1600} = 50\text{ N}$$
+
+**Example 7 (Motion of a boat crossing a river):** A motorboat crosses a river perpendicular to the current with a cruising speed relative to the water of $v_r = 12\text{ km/h}$. The river flows downstream at $v_n = 5\text{ km/h}$. Calculate the boat's actual speed relative to the riverbank.
+
+**Solution for Example 7:**
+
+• The boat's actual velocity is the vector sum $\vec{v} = \vec{v}\_r + \vec{v}\_n$.
+
+• Since the boat steers perpendicular to the bank and the current flows parallel to the bank, the velocity vectors are perpendicular: $\vec{v}\_r \perp \vec{v}\_n$.
+
+• The magnitude of the actual speed is:
+
+$$|\vec{v}| = \sqrt{v_r^2 + v_n^2} = \sqrt{12^2 + 5^2} = \sqrt{144 + 25} = 13\text{ km/h}$$
