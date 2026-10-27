@@ -1,0 +1,243 @@
+---
+title: 'Bài 12: Số gần đúng và sai số.'
+description: Hệ thống lý thuyết về số gần đúng và sai số cùng ví dụ minh họa.
+tags:
+  - lớp 10
+  - Số gần đúng
+  - số đúng
+  - Sai số tuyệt đối
+  - độ chính xác
+  - Số quy tròn
+  - quy tắc làm tròn số
+grade: 10
+order: 0
+updatedDate: 2026-10-27T13:45:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Số gần đúng, số đúng
+
+·       Sai số tuyệt đối, độ chính xác
+
+·       Sai số tương đối
+
+·       Số quy tròn, quy tắc làm tròn số
+
+### **Kiến thức, kĩ năng:**
+
+·       Hiểu khái niệm số gần đúng, số đúng và sai số tuyệt đối.
+
+·       Xác định số gần đúng của một số với độ chính xác cho trước.
+
+·       Xác định sai số tương đối của số gần đúng và so sánh độ chính xác của các phép đo.
+
+·       Xác định số quy tròn của số gần đúng với độ chính xác cho trước.
+
+·       Biết sử dụng máy tính cầm tay để tính toán với các số gần đúng.
+
+## Số gần đúng
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_gan_dung"/>
+
+### a) Khái niệm số gần đúng
+
+Trong thực tế đời sống và khoa học kĩ thuật, nhiều đại lượng ta không thể biết hoặc rất khó biết giá trị đúng (kí hiệu là $\overline{a}$) mà chỉ tìm được giá trị xấp xỉ nó. Giá trị này được gọi là số gần đúng, kí hiệu là $a$.
+
+Ví dụ thực tế: Chiều cao đỉnh Everest được công bố qua các thời kì như $8\\,848\text{ m}$, $8\\,848{,}13\text{ m}$, $8\\,844{,}43\text{ m}$, $8\\,848{,}86\text{ m}$ đều là các số gần đúng.
+
+### b) Ví dụ minh họa về số gần đúng
+
+**Ví dụ 1:** Gọi $d$ là độ dài đường chéo của hình vuông cạnh bằng $1$. Trong hai số $\sqrt{2}$ và $1{,}41$, số nào là số đúng, số nào là số gần đúng của $d$?
+
+Lời giải Ví dụ 1:
+• Hình vuông có cạnh bằng $1$ thì độ dài đường chéo theo định lí Pythagore là $d = \sqrt{1^2 + 1^2} = \sqrt{2}$.
+• Do đó $\sqrt{2}$ là số đúng, còn $1{,}41$ là số gần đúng của $d$.
+
+**Luyện tập 1:** Gọi $P$ là chu vi của đường tròn bán kính $1\text{ cm}$. Hãy tìm một giá trị gần đúng của $P$.
+
+Lời giải Luyện tập 1:
+• Chu vi đúng của đường tròn là $P = 2\pi R = 2\pi \cdot 1 = 2\pi\text{ (cm)}$.
+• Lấy giá trị xấp xỉ của $\pi \approx 3{,}14$, ta được một giá trị gần đúng của $P$ là $P \approx 2 \cdot 3{,}14 = 6{,}28\text{ cm}$ (hoặc dùng máy tính cầm tay lấy $P \approx 6{,}283\text{ cm}$).
+
+## Sai số tuyệt đối và sai số tương đối
+
+<Youtube url="https://www.youtube.com/watch?v=example_sai_so"/>
+
+### a) Sai số tuyệt đối và độ chính xác
+
+Định nghĩa sai số tuyệt đối: Nếu $a$ là số gần đúng của số đúng $\overline{a}$ thì giá trị:
+$$\Delta_a = |\overline{a} - a|$$
+được gọi là sai số tuyệt đối của số gần đúng $a$.
+
+Độ chính xác của số gần đúng:
+• Trong thực tế, ta thường không biết số đúng $\overline{a}$ nên không tính được chính xác $\Delta_a$. Tuy nhiên, ta thường ước lượng được $\Delta_a$ không vượt quá một số dương $d$ cho trước:
+$$\Delta_a = |\overline{a} - a| \le d$$
+• Khi đó ta viết $\overline{a} = a \pm d$ (hoặc $a - d \le \overline{a} \le a + d$). Ta nói $a$ là số gần đúng của $\overline{a}$ với độ chính xác $d$.
+• Số $d$ càng nhỏ thì sai số tuyệt đối càng bé, tức giá trị gần đúng $a$ càng sát với số đúng $\overline{a}$.
+• Chú ý: Trong các phép đo đạc bằng dụng cụ, độ chính xác $d$ thường được lấy bằng một nửa đơn vị của độ chia nhỏ nhất trên thước đo.
+
+**Ví dụ 2:** Một công ty sử dụng dây chuyền A để đóng gạo vào bao với khối lượng mong muốn là $5\text{ kg}$. Trên bao bì ghi thông tin khối lượng là $5 \pm 0{,}2\text{ kg}$. Gọi $\overline{a}$ là khối lượng thực của một bao gạo do dây chuyền A đóng gói.
+a) Xác định số đúng, số gần đúng và độ chính xác.
+b) Giá trị của $\overline{a}$ nằm trong đoạn nào?
+
+Lời giải Ví dụ 2:
+• a) Khối lượng thực $\overline{a}$ của bao gạo là số đúng. Số gần đúng là $a = 5\text{ kg}$. Độ chính xác của phép đo là $d = 0{,}2\text{ kg}$.
+• b) Vì $|\overline{a} - 5| \le 0{,}2$ nên $5 - 0{,}2 \le \overline{a} \le 5 + 0{,}2$, hay $\overline{a} \in [4{,}8; 5{,}2]$.
+
+**Luyện tập 2:** Một phép đo đường kính nhân tế bào cho kết quả là $5 \pm 0{,}3\\,\mu\text{m}$. Đường kính thực của nhân tế bào thuộc đoạn nào?
+
+Lời giải Luyện tập 2:
+• Gọi $\overline{a}$ là đường kính thực của nhân tế bào. Theo kết quả đo, ta có số gần đúng $a = 5\\,\mu\text{m}$ với độ chính xác $d = 0{,}3\\,\mu\text{m}$.
+• Do đó: $5 - 0{,}3 \le \overline{a} \le 5 + 0{,}3 \Leftrightarrow 4{,}7\\,\mu\text{m} \le \overline{a} \le 5{,}3\\,\mu\text{m}$.
+• Vậy đường kính thực của nhân tế bào thuộc đoạn $[4{,}7; 5{,}3]\\,\mu\text{m}$.
+
+### b) Sai số tương đối
+
+Định nghĩa: Sai số tương đối của số gần đúng $a$, kí hiệu là $\delta_a$, là tỉ số giữa sai số tuyệt đối $\Delta_a$ và $|a|$, tức là:
+$$\delta_a = \frac{\Delta_a}{|a|}$$
+
+Đánh giá sai số tương đối:
+• Nếu $\overline{a} = a \pm d$ thì $\Delta_a \le d$, do đó:
+$$\delta_a \le \frac{d}{|a|}$$
+• Sai số tương đối thường được viết dưới dạng phần trăm (%). Tỉ số $\frac{d}{|a|}$ càng nhỏ thì phép đo hay tính toán càng chính xác, chất lượng càng cao.
+
+**Ví dụ 3:** Trong một cuộc điều tra dân số, người ta công bố dân số của một tỉnh là: $3\\,574\\,625 \pm 50\\,000$ người. Hãy đánh giá sai số tương đối của số gần đúng này.
+
+Lời giải Ví dụ 3:
+• Ta có số gần đúng $a = 3\\,574\\,625$ và độ chính xác $d = 50\\,000$.
+• Sai số tương đối của số gần đúng thỏa mãn:
+$$\delta_a \le \frac{d}{|a|} = \frac{50\\,000}{3\\,574\\,625} \approx 0{,}013988 \approx 1{,}4\\%.$$
+
+**Luyện tập 3:** Đánh giá sai số tương đối của khối lượng bao gạo được đóng gói theo hai dây chuyền A ($5 \pm 0{,}2\text{ kg}$) và dây chuyền B ($20 \pm 0{,}5\text{ kg}$). Dựa trên tiêu chí này, dây chuyền nào tốt hơn?
+
+Lời giải Luyện tập 3:
+• Đối với dây chuyền A: $\delta_A \le \frac{d_A}{|a_A|} = \frac{0{,}2}{5} = 0{,}04 = 4\\%$.
+• Đối với dây chuyền B: $\delta_B \le \frac{d_B}{|a_B|} = \frac{0{,}5}{20} = 0{,}025 = 2{,}5\\%$.
+• Vì $2{,}5\\% < 4\\%$ nên sai số tương đối của dây chuyền B nhỏ hơn dây chuyền A. Do đó, dây chuyền B hoạt động tốt hơn và chính xác hơn.
+
+## Quy tròn số gần đúng
+
+<Youtube url="https://www.youtube.com/watch?v=example_quy_tron_so"/>
+
+### a) Quy tắc làm tròn số
+
+Quy tắc làm tròn (quy tròn):
+
+• Đối với chữ số ở hàng làm tròn:
+  + Giữ nguyên nếu chữ số ngay bên phải nó nhỏ hơn $5$ ($0, 1, 2, 3, 4$).
+  + Tăng thêm $1$ đơn vị nếu chữ số ngay bên phải nó lớn hơn hoặc bằng $5$ ($5, 6, 7, 8, 9$).
+
+• Đối với các chữ số sau hàng làm tròn:
+  + Bỏ đi nếu ở phần thập phân.
+  + Thay bởi các chữ số $0$ nếu ở phần số nguyên.
+
+Nhận xét về sai số làm tròn:
+• Khi thay số đúng bởi số quy tròn đến một hàng nào đó thì sai số tuyệt đối của số quy tròn không vượt quá nửa đơn vị của hàng làm tròn.
+• Quy tắc chọn hàng làm tròn theo độ chính xác: Cho số gần đúng $a$ với độ chính xác $d$. Khi được yêu cầu làm tròn số $a$ mà không nói rõ làm tròn đến hàng nào, ta làm tròn số $a$ đến hàng thấp nhất mà $d$ nhỏ hơn một đơn vị của hàng đó (nghĩa là nếu hàng của $d$ là hàng nào thì ta làm tròn số $a$ đến hàng ngay phía trên nó).
+
+### b) Ví dụ và luyện tập quy tròn
+
+**Ví dụ 4:** a) Làm tròn số $2\\,359{,}3$ đến hàng chục, số $18{,}693$ đến hàng phần trăm và số đúng $d \in [5{,}5; 6{,}5)$ đến hàng đơn vị. Đánh giá sai số tuyệt đối của phép làm tròn số đúng $d$.
+b) Cho số gần đúng $a = 2{,}53$ với độ chính xác $d = 0{,}01$. Số đúng $\overline{a}$ thuộc đoạn nào? Nếu làm tròn số $a$ thì nên làm tròn đến hàng nào? Vì sao?
+
+Lời giải Ví dụ 4:
+• a) Làm tròn $2\\,359{,}3$ đến hàng chục: vì chữ số hàng đơn vị là $9 \ge 5$ nên ta được số quy tròn là $2\\,360$.
+  Làm tròn $18{,}693$ đến hàng phần trăm: vì chữ số hàng phần nghìn là $3 < 5$ nên ta được số quy tròn là $18{,}69$.
+  Mọi số đúng $d \in [5{,}5; 6{,}5)$ khi làm tròn đến hàng đơn vị đều thu được số quy tròn là $6$, sai số tuyệt đối thỏa mãn $|d - 6| \le 0{,}5$.
+• b) Số đúng $\overline{a} \in [2{,}53 - 0{,}01; 2{,}53 + 0{,}01] = [2{,}52; 2{,}54]$. Ta thấy chữ số hàng phần trăm dao động từ $2$ đến $4$ (không chắc chắn đúng), còn chữ số hàng phần mười là $5$ (chắc chắn đúng). Do đó ta nên làm tròn số $a$ đến hàng phần mười, thu được số quy tròn là $2{,}5$.
+
+**Ví dụ 5:** Cho số gần đúng $a = 581\\,268$ với độ chính xác $d = 200$. Hãy viết số quy tròn của số $a$.
+
+Lời giải Ví dụ 5:
+• Độ chính xác $d = 200$ ở hàng trăm ($100 < 200 < 1000$). Hàng thấp nhất mà $d$ nhỏ hơn một đơn vị của hàng đó là hàng nghìn ($200 < 1\\,000$).
+• Do đó ta làm tròn số $a$ đến hàng nghìn. Chữ số hàng trăm là $2 < 5$ nên ta giữ nguyên chữ số hàng nghìn là $1$ và thay các chữ số sau đó bằng các số $0$.
+• Vậy số quy tròn của $a$ là $581\\,000$.
+
+**Luyện tập 4:** Hãy viết số quy tròn của số gần đúng trong những trường hợp sau:
+a) $11\\,251\\,900 \pm 300$;
+b) $18{,}2857 \pm 0{,}01$.
+
+Lời giải Luyện tập 4:
+• a) Vì $d = 300$ có hàng trăm, nên ta làm tròn số $11\\,251\\,900$ đến hàng nghìn. Chữ số hàng trăm là $9 \ge 5$ nên tăng hàng nghìn thêm $1$ đơn vị. Số quy tròn là $11\\,252\\,000$.
+• b) Vì $d = 0{,}01$ có hàng phần trăm, nên ta làm tròn số $18{,}2857$ đến hàng phần mười. Chữ số hàng phần trăm là $8 \ge 5$ nên tăng hàng phần mười thêm $1$ đơn vị. Số quy tròn là $18{,}3$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Đo tuổi của vũ trụ):** Các nhà vật lí sử dụng hai phương pháp khác nhau để đo tuổi của vũ trụ (đơn vị: tỉ năm) lần lượt cho hai kết quả là: $13{,}807 \pm 0{,}026$ và $13{,}799 \pm 0{,}021$. Hãy đánh giá sai số tương đối của mỗi phương pháp. Căn cứ trên tiêu chí này, phương pháp nào cho kết quả chính xác hơn?
+
+Lời giải Vận dụng:
+• Phương pháp 1: $a_1 = 13{,}807$; $d_1 = 0{,}026$. Sai số tương đối:
+$$\delta_1 \le \frac{d_1}{|a_1|} = \frac{0{,}026}{13{,}807} \approx 0{,}001883 = 0{,}1883\\%.$$
+• Phương pháp 2: $a_2 = 13{,}799$; $d_2 = 0{,}021$. Sai số tương đối:
+$$\delta_2 \le \frac{d_2}{|a_2|} = \frac{0{,}021}{13{,}799} \approx 0{,}001522 = 0{,}1522\\%.$$
+• So sánh: Vì $0{,}1522\\% < 0{,}1883\\%$ nên sai số tương đối của phương pháp 2 nhỏ hơn phương pháp 1.
+• Kết luận: Phương pháp thứ hai cho kết quả đo chính xác hơn.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 5.1:** Trong các số sau, những số nào là số gần đúng?
+a) Cân một túi gạo cho kết quả là $10{,}2\text{ kg}$.
+b) Bán kính Trái Đất là $6\\,371\text{ km}$.
+c) Trái Đất quay một vòng quanh Mặt Trời mất $365\text{ ngày}$.
+
+Lời giải Bài 5.1:
+• a) $10{,}2\text{ kg}$ là số gần đúng (vì kết quả phụ thuộc vào độ chính xác của cân và quá trình cân).
+• b) $6\\,371\text{ km}$ là số gần đúng (vì Trái Đất không phải là hình cầu hoàn hảo và đây là giá trị bán kính trung bình được đo đạc xấp xỉ).
+• c) $365\text{ ngày}$ là số gần đúng (vì trên thực tế thời gian Trái Đất quay một vòng quanh Mặt Trời là khoảng $365{,}2422\text{ ngày}$).
+
+**Bài 5.2:** Giải thích kết quả "Đo độ cao của một ngọn núi cho kết quả là $1\\,235 \pm 5\text{ m}$" và thực hiện làm tròn số gần đúng.
+
+Lời giải Bài 5.2:
+• Ý nghĩa kết quả đo: Độ cao thực tế $\overline{a}$ của ngọn núi nằm trong đoạn $[1\\,235 - 5; 1\\,235 + 5]$, tức là $1\\,230\text{ m} \le \overline{a} \le 1\\,240\text{ m}$, với độ chính xác của phép đo là $d = 5\text{ m}$.
+• Quy tròn số gần đúng: Vì độ chính xác $d = 5\text{ m}$ ở hàng đơn vị, nên ta quy tròn số $1\\,235$ đến hàng chục (hàng thấp nhất mà $d < 10$). Chữ số hàng đơn vị là $5 \ge 5$ nên ta tăng chữ số hàng chục thêm $1$ đơn vị. Vậy số quy tròn là $1\\,240\text{ m}$.
+
+**Bài 5.3:** Sử dụng máy tính cầm tay tìm số gần đúng cho $\sqrt[3]{7}$ với độ chính xác $0{,}0005$.
+
+Lời giải Bài 5.3:
+• Bấm máy tính cầm tay giá trị $\sqrt[3]{7} \approx 1{,}912931183\dots$
+• Vì độ chính xác $d = 0{,}0005$ ở hàng phần chục nghìn, ta làm tròn kết quả đến hàng phần nghìn (hàng thấp nhất mà $0{,}0005 < 0{,}001$).
+• Chữ số hàng phần chục nghìn là $9 \ge 5$ nên ta cộng thêm $1$ vào hàng phần nghìn: $1{,}912 + 0{,}001 = 1{,}913$.
+• Vậy số gần đúng cần tìm là $1{,}913$.
+
+**Bài 5.4:** Các nhà vật lí sử dụng ba phương pháp đo hằng số Hubble lần lượt cho kết quả như sau: $67{,}31 \pm 0{,}96$; $67{,}90 \pm 0{,}55$; $67{,}74 \pm 0{,}46$. Phương pháp nào chính xác nhất tính theo sai số tương đối?
+
+Lời giải Bài 5.4:
+• Sai số tương đối của phương pháp 1:
+$$\delta_1 \le \frac{0{,}96}{67{,}31} \approx 0{,}01426 = 1{,}43\\%.$$
+• Sai số tương đối của phương pháp 2:
+$$\delta_2 \le \frac{0{,}55}{67{,}90} \approx 0{,}00810 = 0{,}81\\%.$$
+• Sai số tương đối của phương pháp 3:
+$$\delta_3 \le \frac{0{,}46}{67{,}74} \approx 0{,}00679 = 0{,}68\\%.$$
+• Vì $0{,}68\\% < 0{,}81\\% < 1{,}43\\%$ nên phương pháp thứ ba có sai số tương đối nhỏ nhất. Do đó phương pháp 3 cho kết quả chính xác nhất.
+
+**Bài 5.5:** An và Bình cùng tính chu vi của hình tròn bán kính $2\text{ cm}$ với hai kết quả như sau:
+Kết quả của An: $S_1 = 2\pi R \approx 2 \cdot 3{,}14 \cdot 2 = 12{,}56\text{ cm}$;
+Kết quả của Bình: $S_2 = 2\pi R \approx 2 \cdot 3{,}1 \cdot 2 = 12{,}4\text{ cm}$.
+Hỏi:
+a) Hai giá trị tính được có phải là các số gần đúng không?
+b) Giá trị nào chính xác hơn?
+
+Lời giải Bài 5.5:
+• a) Có, cả hai giá trị đều là các số gần đúng vì cả hai bạn đều đã thay số vô tỉ $\pi$ bằng các giá trị xấp xỉ ($3{,}14$ và $3{,}1$).
+• b) Chu vi đúng của hình tròn là $\overline{S} = 4\pi \approx 12{,}56637\text{ cm}$.
+  Sai số tuyệt đối của kết quả bạn An: $\Delta_1 = |12{,}56637 - 12{,}56| \approx 0{,}00637\text{ cm}$.
+  Sai số tuyệt đối của kết quả bạn Bình: $\Delta_2 = |12{,}56637 - 12{,}4| \approx 0{,}16637\text{ cm}$.
+  Vì $\Delta_1 < \Delta_2$ nên kết quả của bạn An chính xác hơn kết quả của bạn Bình.
+
+**Bài 5.6:** Làm tròn số $8\\,316{,}4$ đến hàng chục và $9{,}754$ đến hàng phần trăm rồi tính sai số tuyệt đối của số quy tròn.
+
+Lời giải Bài 5.6:
+• Làm tròn số $8\\,316{,}4$ đến hàng chục: Chữ số hàng đơn vị là $6 \ge 5$ nên ta tăng chữ số hàng chục thêm $1$ đơn vị và thay chữ số hàng đơn vị bằng $0$, bỏ phần thập phân. Ta được số quy tròn là $8\\,320$.
+  Sai số tuyệt đối của số quy tròn là:
+$$\Delta = |8\\,316{,}4 - 8\\,320| = 3{,}6.$$
+• Làm tròn số $9{,}754$ đến hàng phần trăm: Chữ số hàng phần nghìn là $4 < 5$ nên ta giữ nguyên chữ số hàng phần trăm và bỏ chữ số hàng phần nghìn. Ta được số quy tròn là $9{,}75$.
+  Sai số tuyệt đối của số quy tròn là:
+$$\Delta = |9{,}754 - 9{,}75| = 0{,}004.$$

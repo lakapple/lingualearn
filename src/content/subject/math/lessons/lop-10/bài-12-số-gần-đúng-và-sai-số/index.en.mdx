@@ -1,0 +1,244 @@
+---
+title: 'Lesson 12: Approximate Numbers and Errors'
+description: 'Approximate Numbers and Errors: Theoretical Framework and Worked Examples.'
+tags:
+  - grade 10
+  - Approximate number
+  - exact (true) value
+  - Absolute error
+  - precision (degree of accuracy)
+  - Relative error
+  - Rounded number
+  - rounding rules
+grade: 10
+order: 0
+updatedDate: 2026-10-27T13:45:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Approximate number, exact (true) value
+
+·       Absolute error, precision (degree of accuracy)
+
+·       Relative error
+
+·       Rounded number, rounding rules
+
+### **Knowledge and Skills:**
+
+·       Understand the concepts of approximate numbers, exact values, and absolute error.
+
+·       Determine an approximate value of a quantity with a given precision.
+
+·       Determine the relative error of an approximate number and evaluate/compare the accuracy of measurements.
+
+·       Round approximate numbers to an appropriate place value based on a given precision.
+
+·       Use handheld calculators proficiently in computations with approximate numbers.
+
+## Approximate Numbers
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_gan_dung"/>
+
+### a) Concept of Approximate Numbers
+
+In practical life and scientific applications, the true value of many quantities (denoted by $\overline{a}$) is unknown or impossible to obtain precisely; we can only obtain a value close to it. Such a value is called an approximate number (or approximation), denoted by $a$.
+
+Real-world example: The reported elevations of Mount Everest over different historical surveys—such as $8\\,848\text{ m}$, $8\\,848.13\text{ m}$, $8\\,844.43\text{ m}$, and $8\\,848.86\text{ m}$—are all approximate numbers.
+
+### b) Illustrative Examples of Approximate Numbers
+
+**Example 1:** Let $d$ be the length of the diagonal of a square with side length $1$. Between the two numbers $\sqrt{2}$ and $1.41$, which one is the exact value and which one is an approximate value of $d$?
+
+Solution for Example 1:
+• By the Pythagorean theorem, the exact diagonal length of a square with unit side length is $d = \sqrt{1^2 + 1^2} = \sqrt{2}$.
+• Therefore, $\sqrt{2}$ is the exact value, whereas $1.41$ is an approximate value of $d$.
+
+**Practice 1:** Let $P$ be the circumference of a circle with radius $1\text{ cm}$. Find an approximate value of $P$.
+
+Solution for Practice 1:
+• The exact circumference of the circle is $P = 2\pi R = 2\pi \cdot 1 = 2\pi\text{ (cm)}$.
+• Using the approximation $\pi \approx 3.14$, we obtain an approximate value $P \approx 2 \cdot 3.14 = 6.28\text{ cm}$ (or using a calculator, $P \approx 6.283\text{ cm}$).
+
+## Absolute Error and Relative Error
+
+<Youtube url="https://www.youtube.com/watch?v=example_sai_so"/>
+
+### a) Absolute Error and Precision
+
+Definition of Absolute Error: If $a$ is an approximation of the exact value $\overline{a}$, the non-negative difference:
+$$\Delta_a = |\overline{a} - a|$$
+is called the absolute error of the approximate number $a$.
+
+Precision of an Approximation:
+• In practice, the exact value $\overline{a}$ is often unknown, so $\Delta_a$ cannot be calculated exactly. However, we can usually establish an upper bound $d > 0$ such that:
+$$\Delta_a = |\overline{a} - a| \le d$$
+• In this case, we write $\overline{a} = a \pm d$ (or $a - d \le \overline{a} \le a + d$), and we say that $a$ is an approximation of $\overline{a}$ with precision (or degree of accuracy) $d$.
+• A smaller value of $d$ indicates that the approximation $a$ is closer to the true value $\overline{a}$.
+• Note: In instrumental measurements, the precision $d$ is typically taken as half of the smallest graduation unit of the measuring scale.
+
+**Example 2:** A company operates packaging line A to pack rice bags with a target mass of $5\text{ kg}$. The packaging states the mass as $5 \pm 0.2\text{ kg}$. Let $\overline{a}$ denote the true mass of a rice bag packed by line A.
+a) Identify the exact value, the approximate value, and the precision.
+b) Within what closed interval does the true value $\overline{a}$ lie?
+
+Solution for Example 2:
+• a) The true mass $\overline{a}$ of the rice bag is the exact value. The approximate value is $a = 5\text{ kg}$. The precision of the measurement is $d = 0.2\text{ kg}$.
+• b) Since $|\overline{a} - 5| \le 0.2$, we have $5 - 0.2 \le \overline{a} \le 5 + 0.2$, which means $\overline{a} \in [4.8; 5.2]\text{ kg}$.
+
+**Practice 2:** A measurement of a cell nucleus diameter yields $5 \pm 0.3\\,\mu\text{m}$. Within what interval does the true diameter of the cell nucleus lie?
+
+Solution for Practice 2:
+• Let $\overline{a}$ be the true diameter of the cell nucleus. From the measurement, the approximation is $a = 5\\,\mu\text{m}$ with precision $d = 0.3\\,\mu\text{m}$.
+• Hence: $5 - 0.3 \le \overline{a} \le 5 + 0.3 \Leftrightarrow 4.7\\,\mu\text{m} \le \overline{a} \le 5.3\\,\mu\text{m}$.
+• Therefore, the true diameter belongs to the interval $[4.7; 5.3]\\,\mu\text{m}$.
+
+### b) Relative Error
+
+Definition: The relative error of an approximate number $a$, denoted by $\delta_a$, is the ratio of the absolute error $\Delta_a$ to $|a|$, that is:
+$$\delta_a = \frac{\Delta_a}{|a|}$$
+
+Estimation of Relative Error:
+• If $\overline{a} = a \pm d$, then $\Delta_a \le d$, and consequently:
+$$\delta_a \le \frac{d}{|a|}$$
+• The relative error is commonly expressed as a percentage (%). A smaller ratio $\frac{d}{|a|}$ indicates higher measurement quality and higher accuracy.
+
+**Example 3:** In a demographic survey, the population of a province was published as: $3\\,574\\,625 \pm 50\\,000$ people. Estimate the relative error of this approximate value.
+
+Solution for Example 3:
+• We have the approximate value $a = 3\\,574\\,625$ and precision $d = 50\\,000$.
+• The relative error of the approximation satisfies:
+$$\delta_a \le \frac{d}{|a|} = \frac{50\\,000}{3\\,574\\,625} \approx 0.013988 \approx 1.4\\%.$$
+
+**Practice 3:** Evaluate the relative error of the mass of rice bags packaged by packaging line A ($5 \pm 0.2\text{ kg}$) and packaging line B ($20 \pm 0.5\text{ kg}$). Based on this criterion, which packaging line performs better?
+
+Solution for Practice 3:
+• For packaging line A: $\delta_A \le \frac{d_A}{|a_A|} = \frac{0.2}{5} = 0.04 = 4\\%$.
+• For packaging line B: $\delta_B \le \frac{d_B}{|a_B|} = \frac{0.5}{20} = 0.025 = 2.5\\%$.
+• Since $2.5\\% < 4\\%$, packaging line B has a smaller relative error. Thus, packaging line B performs better and provides higher measurement quality.
+
+## Rounding Approximate Numbers
+
+<Youtube url="https://www.youtube.com/watch?v=example_quy_tron_so"/>
+
+### a) Rounding Rules
+
+Standard Rounding Rules:
+
+• For the digit in the rounding place (target place value):
+  + Leave it unchanged if the immediate next digit to its right is strictly less than $5$ ($0, 1, 2, 3, 4$).
+  + Increase it by $1$ unit if the immediate next digit to its right is greater than or equal to $5$ ($5, 6, 7, 8, 9$).
+
+• For the digits following the rounding place:
+  + Drop them entirely if they are in the decimal part.
+  + Replace them with zeros if they are in the integer part.
+
+Remarks on Rounding Error:
+• When an exact value is replaced by a number rounded to a specified place value, the absolute error of the rounded number does not exceed half of the unit of that rounding place.
+• Determining the Rounding Place from Precision: Given an approximation $a$ with precision $d$, when asked to round $a$ without a specified target place value, we round $a$ to the lowest place value whose unit is strictly greater than $d$ (i.e., we round to the place value immediately preceding the highest order of $d$).
+
+### b) Rounding Examples and Practice
+
+**Example 4:** a) Round $2\\,359.3$ to the nearest ten, $18.693$ to the nearest hundredth, and any exact value $d \in [5.5; 6.5)$ to the nearest integer. Estimate the absolute error when rounding the exact value $d$.
+b) Given an approximation $a = 2.53$ with precision $d = 0.01$. Within what interval does the exact value $\overline{a}$ lie? If $a$ is to be rounded, to which place value should it be rounded, and why?
+
+Solution for Example 4:
+• a) Rounding $2\\,359.3$ to the nearest ten: the units digit is $9 \ge 5$, so the rounded number is $2\\,360$.
+  Rounding $18.693$ to the nearest hundredth: the thousandths digit is $3 < 5$, so the rounded number is $18.69$.
+  Any exact value $d \in [5.5; 6.5)$ rounded to the nearest integer gives $6$, with absolute error satisfying $|d - 6| \le 0.5$.
+• b) The exact value lies in $\overline{a} \in [2.53 - 0.01; 2.53 + 0.01] = [2.52; 2.54]$. The hundredths digit varies from $2$ to $4$ (uncertain), while the tenths digit is definitively $5$ (reliable). Therefore, $a$ should be rounded to the nearest tenth, yielding the rounded value $2.5$.
+
+**Example 5:** Given an approximation $a = 581\\,268$ with precision $d = 200$. Write the rounded value of $a$.
+
+Solution for Example 5:
+• The precision $d = 200$ is in the hundreds ($100 < 200 < 1\\,000$). The lowest place value whose unit exceeds $d$ is the thousands place ($200 < 1\\,000$).
+• Therefore, we round $a$ to the nearest thousand. Since the hundreds digit is $2 < 5$, we retain the thousands digit $1$ and replace subsequent digits with zeros.
+• Thus, the rounded value is $581\\,000$.
+
+**Practice 4:** Write the rounded value of each approximation in the following cases:
+a) $11\\,251\\,900 \pm 300$;
+b) $18.2857 \pm 0.01$.
+
+Solution for Practice 4:
+• a) Since $d = 300$ is in the hundreds, we round $11\\,251\\,900$ to the nearest thousand. The hundreds digit is $9 \ge 5$, so we increment the thousands digit by $1$. The rounded value is $11\\,252\\,000$.
+• b) Since $d = 0.01$ is in the hundredths, we round $18.2857$ to the nearest tenth. The hundredths digit is $8 \ge 5$, so we increment the tenths digit by $1$. The rounded value is $18.3$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Measuring the Age of the Universe):** Physicists used two distinct cosmological methods to measure the age of the universe (in billions of years), yielding the respective results: $13.807 \pm 0.026$ and $13.799 \pm 0.021$. Estimate the relative error of each method. Based on this criterion, which method provides a more accurate result?
+
+Solution for Application:
+• Method 1: $a_1 = 13.807$; $d_1 = 0.026$. The relative error satisfies:
+$$\delta_1 \le \frac{d_1}{|a_1|} = \frac{0.026}{13.807} \approx 0.001883 = 0.1883\\%.$$
+• Method 2: $a_2 = 13.799$; $d_2 = 0.021$. The relative error satisfies:
+$$\delta_2 \le \frac{d_2}{|a_2|} = \frac{0.021}{13.799} \approx 0.001522 = 0.1522\\%.$$
+• Comparison: Since $0.1522\\% < 0.1883\\%$, Method 2 has a smaller relative error.
+• Conclusion: The second method provides a more accurate result.
+
+### b) Detailed Section Exercises
+
+**Exercise 5.1:** Among the following quantities, which ones are approximate numbers?
+a) Weighing a bag of rice yields $10.2\text{ kg}$.
+b) The radius of the Earth is $6\\,371\text{ km}$.
+c) The Earth takes $365\text{ days}$ to complete one revolution around the Sun.
+
+Solution for Exercise 5.1:
+• a) $10.2\text{ kg}$ is an approximate number (as it depends on the precision and calibration of the weighing scale).
+• b) $6\\,371\text{ km}$ is an approximate number (Earth is an oblate spheroid, and this value is an estimated mean volumetric radius).
+• c) $365\text{ days}$ is an approximate number (the actual orbital period of the Earth is approximately $365.2422\text{ solar days}$).
+
+**Exercise 5.2:** Explain the measurement statement "Measuring the height of a mountain yields $1\\,235 \pm 5\text{ m}$", and round this approximate number appropriately.
+
+Solution for Exercise 5.2:
+• Physical interpretation: The true elevation $\overline{a}$ of the mountain lies within the closed interval $[1\\,235 - 5; 1\\,235 + 5]$, which means $1\\,230\text{ m} \le \overline{a} \le 1\\,240\text{ m}$, with a measurement precision of $d = 5\text{ m}$.
+• Rounding the approximate value: Because the precision $d = 5\text{ m}$ is in the units place, we round $1\\,235$ to the nearest ten (the lowest place value whose unit exceeds $5\text{ m}$). The units digit is $5 \ge 5$, so we increment the tens digit by $1$. The rounded number is $1\\,240\text{ m}$.
+
+**Exercise 5.3:** Use a scientific calculator to find an approximation of $\sqrt[3]{7}$ with a precision of $0.0005$.
+
+Solution for Exercise 5.3:
+• Using a calculator: $\sqrt[3]{7} \approx 1.912931183\dots$
+• Since precision $d = 0.0005$ is in the ten-thousandths place, we round the result to the nearest thousandth (the lowest place value whose unit $0.001 > 0.0005$).
+• The ten-thousandths digit is $9 \ge 5$, so we round up the thousandths digit: $1.912 + 0.001 = 1.913$.
+• Therefore, the required approximate value is $1.913$.
+
+**Exercise 5.4:** Physicists used three distinct experimental techniques to measure the Hubble constant, obtaining: $67.31 \pm 0.96$, $67.90 \pm 0.55$, and $67.74 \pm 0.46$. Which method is the most accurate in terms of relative error?
+
+Solution for Exercise 5.4:
+• Relative error of Method 1:
+$$\delta_1 \le \frac{0.96}{67.31} \approx 0.01426 = 1.43\\%.$$
+• Relative error of Method 2:
+$$\delta_2 \le \frac{0.55}{67.90} \approx 0.00810 = 0.81\\%.$$
+• Relative error of Method 3:
+$$\delta_3 \le \frac{0.46}{67.74} \approx 0.00679 = 0.68\\%.$$
+• Since $0.68\\% < 0.81\\% < 1.43\\%$, Method 3 yields the smallest relative error. Hence, Method 3 is the most accurate.
+
+**Exercise 5.5:** An and Binh both calculated the circumference of a circle of radius $2\text{ cm}$ with the following results:
+An's result: $S_1 = 2\pi R \approx 2 \cdot 3.14 \cdot 2 = 12.56\text{ cm}$;
+Binh's result: $S_2 = 2\pi R \approx 2 \cdot 3.1 \cdot 2 = 12.4\text{ cm}$.
+Questions:
+a) Are both computed values approximate numbers?
+b) Which result is more accurate?
+
+Solution for Exercise 5.5:
+• a) Yes, both computed values are approximate numbers because both students approximated the irrational number $\pi$ with finite decimal approximations ($3.14$ and $3.1$).
+• b) The exact circumference is $\overline{S} = 4\pi \approx 12.56637\text{ cm}$.
+  The absolute error of An's result: $\Delta_1 = |12.56637 - 12.56| \approx 0.00637\text{ cm}$.
+  The absolute error of Binh's result: $\Delta_2 = |12.56637 - 12.4| \approx 0.16637\text{ cm}$.
+  Since $\Delta_1 < \Delta_2$, An's result is significantly more accurate than Binh's result.
+
+**Exercise 5.6:** Round $8\\,316.4$ to the nearest ten and $9.754$ to the nearest hundredth, then compute the absolute error of each rounded number.
+
+Solution for Exercise 5.6:
+• Rounding $8\\,316.4$ to the nearest ten: The units digit is $6 \ge 5$, so we round up to get $8\\,320$.
+  The absolute error of the rounded number is:
+$$\Delta = |8\\,316.4 - 8\\,320| = 3.6.$$
+• Rounding $9.754$ to the nearest hundredth: The thousandths digit is $4 < 5$, so we keep the hundredths digit unchanged to get $9.75$.
+  The absolute error of the rounded number is:
+$$\Delta = |9.754 - 9.75| = 0.004.$$
