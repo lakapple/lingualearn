@@ -1,0 +1,267 @@
+---
+title: 'Bài 14: Các số đặc trưng đo độ phân tán.'
+description: Hệ thống lý thuyết về số đặc trưng đo độ phân tán (Khoảng biến thiên; Khoảng tứ phân vị; Phương sai, độ lệch chuẩn; Giá trị bất thường, biểu đồ hộp) cùng với ví dụ minh họa.
+tags:
+  - lớp 10
+  - Khoảng biến thiên
+  - Khoảng tứ phân vị
+  - Phương sai
+  - độ lệch chuẩn
+  - Giá trị bất thường
+  - biểu đồ hộp
+grade: 10
+order: 0
+updatedDate: 2026-10-27T18:35:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Khoảng biến thiên (biên độ)
+
+·       Khoảng tứ phân vị (độ trải giữa)
+
+·       Phương sai, độ lệch chuẩn
+
+·       Giá trị bất thường, biểu đồ hộp
+
+### **Kiến thức, kĩ năng:**
+
+·       Tính các số đặc trưng đo độ phân tán của mẫu số liệu: khoảng biến thiên, khoảng tứ phân vị, phương sai và độ lệch chuẩn.
+
+·       Hiểu và giải thích được ý nghĩa thực tiễn của các số đặc trưng đo độ phân tán trong việc đánh giá tính ổn định, mức độ phân tán hay độ đồng đều của dữ liệu.
+
+·       Phát hiện và xử lí các giá trị bất thường (outliers) trong mẫu số liệu sử dụng công cụ toán học và biểu đồ hộp.
+
+## Khoảng biến thiên và khoảng tứ phân vị
+
+<Youtube url="https://www.youtube.com/watch?v=example_khoang_bien_thien_tu_phan_vi"/>
+
+### a) Khoảng biến thiên
+
+Định nghĩa: Khoảng biến thiên, kí hiệu là $R$, là hiệu số giữa giá trị lớn nhất ($x\_{\max}$) và giá trị nhỏ nhất ($x\_{\min}$) trong mẫu số liệu:
+$$R = x\_{\max} - x\_{\min}$$
+
+Ý nghĩa: Khoảng biến thiên dùng để đo độ phân tán của mẫu số liệu. Khoảng biến thiên càng lớn thì dữ liệu càng phân tán (kém ổn định, kém đồng đều).
+
+Nhận xét: Khoảng biến thiên có ưu điểm là đơn giản, trực quan và dễ tính toán; tuy nhiên nó chỉ sử dụng thông tin của hai giá trị biên (lớn nhất và nhỏ nhất) mà bỏ qua toàn bộ thông tin của các giá trị còn lại, do đó rất dễ bị ảnh hưởng bởi các giá trị bất thường.
+
+**Ví dụ 1:** Điểm kiểm tra học kì môn Toán của các bạn Tổ 1 và Tổ 2 lớp 10A được ghi lại như sau:
+Tổ 1: 7, 8, 8, 9, 8, 8, 8.
+Tổ 2: 10, 6, 8, 9, 9, 7, 8, 7.
+a) Điểm kiểm tra trung bình của hai tổ có bằng nhau không?
+b) Tính khoảng biến thiên của mỗi tổ và cho biết tổ nào học đồng đều hơn?
+
+Lời giải Ví dụ 1:
+• a) Điểm trung bình của Tổ 1: $\overline{x}\_1 = \frac{7 + 8 \cdot 5 + 9}{7} = \frac{56}{7} = 8$.
+  Điểm trung bình của Tổ 2: $\overline{x}\_2 = \frac{10 + 6 + 8 \cdot 2 + 9 \cdot 2 + 7 \cdot 2}{8} = \frac{64}{8} = 8$.
+  Vậy điểm kiểm tra trung bình của hai tổ là như nhau (đều bằng 8).
+• b) Khoảng biến thiên của Tổ 1: $R_1 = 9 - 7 = 2$.
+  Khoảng biến thiên của Tổ 2: $R_2 = 10 - 6 = 4$.
+  Vì $R_1 < R_2$ nên các bạn Tổ 1 có mức độ học tập đồng đều hơn các bạn Tổ 2.
+
+**Luyện tập 1:** Mẫu số liệu sau cho biết chiều cao (đơn vị: cm) của các bạn trong tổ: 163, 159, 172, 167, 165, 168, 170, 161. Tính khoảng biến thiên của mẫu số liệu.
+
+Lời giải Luyện tập 1:
+• Giá trị lớn nhất là $x\_{\max} = 172\text{ cm}$, giá trị nhỏ nhất là $x\_{\min} = 159\text{ cm}$.
+• Khoảng biến thiên là:
+$$R = x\_{\max} - x\_{\min} = 172 - 159 = 13\text{ (cm)}.$$
+
+### b) Khoảng tứ phân vị
+
+Định nghĩa: Khoảng tứ phân vị, kí hiệu là $\Delta_Q$, là hiệu số giữa tứ phân vị thứ ba ($Q_3$) và tứ phân vị thứ nhất ($Q_1$):
+$$\Delta_Q = Q_3 - Q_1$$
+
+Bản chất & Ý nghĩa:
+• Khoảng tứ phân vị chính là khoảng biến thiên của $50\\%$ số liệu chính giữa của mẫu số liệu đã sắp xếp.
+• Khoảng tứ phân vị dùng để đo mức độ phân tán của nửa giữa dữ liệu, không bị ảnh hưởng bởi các giá trị bất thường (outliers) ở hai đầu mút.
+• $\Delta_Q$ càng lớn thì dữ liệu càng phân tán ở phần giữa.
+
+**Ví dụ 2:** Mẫu số liệu sau cho biết số ghế trống tại một rạp chiếu phim trong 9 ngày: 7, 8, 22, 20, 15, 18, 19, 13, 11. Tìm khoảng tứ phân vị cho mẫu số liệu.
+
+Lời giải Ví dụ 2:
+• Sắp xếp dãy số liệu theo thứ tự không giảm ($n = 9$): 7, 8, 11, 13, 15, 18, 19, 20, 22.
+• Trung vị là phần tử thứ 5: $Q_2 = 15$.
+• Nửa bên trái gồm 4 số: 7, 8, 11, 13. Tứ phân vị thứ nhất là $Q_1 = \frac{8 + 11}{2} = 9{,}5$.
+• Nửa bên phải gồm 4 số: 18, 19, 20, 22. Tứ phân vị thứ ba là $Q_3 = \frac{19 + 20}{2} = 19{,}5$.
+• Khoảng tứ phân vị là:
+$$\Delta_Q = Q_3 - Q_1 = 19{,}5 - 9{,}5 = 10.$$
+
+**Luyện tập 2:** Mẫu số liệu sau cho biết số bài hát ở mỗi album trong bộ sưu tập của An: 12, 7, 10, 9, 12, 9, 10, 11, 10, 14. Hãy tìm khoảng tứ phân vị cho mẫu số liệu này.
+
+Lời giải Luyện tập 2:
+• Sắp xếp dãy số liệu ($n = 10$): 7, 9, 9, 10, 10, 10, 11, 12, 12, 14.
+• Trung vị là trung bình của phần tử thứ 5 và 6: $Q_2 = \frac{10 + 10}{2} = 10$.
+• Nửa bên trái gồm 5 số (7, 9, 9, 10, 10), phần tử chính giữa là 9, do đó $Q_1 = 9$.
+• Nửa bên phải gồm 5 số (10, 11, 12, 12, 14), phần tử chính giữa là 12, do đó $Q_3 = 12$.
+• Khoảng tứ phân vị là:
+$$\Delta_Q = Q_3 - Q_1 = 12 - 9 = 3.$$
+
+## Phương sai và độ lệch chuẩn
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_sai_do_lech_chuan"/>
+
+### a) Công thức tính phương sai và độ lệch chuẩn
+
+Khái niệm: Với mẫu số liệu $x_1, x_2, \dots, x_n$ có số trung bình $\overline{x}$:
+• Hiệu số $(x_i - \overline{x})$ được gọi là độ lệch của giá trị $x_i$ so với số trung bình.
+• Phương sai mẫu, kí hiệu là $s^2$, là trung bình cộng của các bình phương độ lệch:
+$$s^2 = \frac{(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \dots + (x_n - \overline{x})^2}{n}$$
+Nếu số liệu cho dưới dạng bảng tần số:
+$$s^2 = \frac{m_1(x_1 - \overline{x})^2 + m_2(x_2 - \overline{x})^2 + \dots + m_k(x_k - \overline{x})^2}{n}$$
+• Độ lệch chuẩn, kí hiệu là $s$, là căn bậc hai số học của phương sai:
+$$s = \sqrt{s^2}$$
+
+Ý nghĩa: Phương sai và độ lệch chuẩn đo mức độ phân tán của toàn bộ các số liệu xung quanh số trung bình. Phương sai hoặc độ lệch chuẩn càng nhỏ chứng tỏ các số liệu càng tập trung quanh giá trị trung bình (tính đồng đều, độ ổn định càng cao). Độ lệch chuẩn có cùng đơn vị đo với đại lượng được quan sát nên mang ý nghĩa thực tiễn rõ ràng hơn.
+
+### b) Ví dụ và luyện tập tính phương sai, độ lệch chuẩn
+
+**Ví dụ 3:** Mẫu số liệu sau cho biết sĩ số của 5 lớp khối 10 tại một trường: 43, 45, 46, 41, 40. Tìm phương sai và độ lệch chuẩn.
+
+Lời giải Ví dụ 3:
+• Số trung bình: $\overline{x} = \frac{43 + 45 + 46 + 41 + 40}{5} = 43$.
+• Bảng tính bình phương độ lệch:
+  + $(43 - 43)^2 = 0^2 = 0$
+  + $(45 - 43)^2 = 2^2 = 4$
+  + $(46 - 43)^2 = 3^2 = 9$
+  + $(41 - 43)^2 = (-2)^2 = 4$
+  + $(40 - 43)^2 = (-3)^2 = 9$
+  Tổng các bình phương độ lệch: $0 + 4 + 9 + 4 + 9 = 26$.
+• Phương sai: $s^2 = \frac{26}{5} = 5{,}2$.
+• Độ lệch chuẩn: $s = \sqrt{5{,}2} \approx 2{,}28$.
+
+**Luyện tập 3:** Dùng đồng hồ đo thời gian có độ chia nhỏ nhất đến 0,001 giây để đo 7 lần thời gian rơi tự do của một vật: 0,398; 0,399; 0,408; 0,410; 0,406; 0,405; 0,402 (giây). Hãy tính phương sai và độ lệch chuẩn. Nhận xét về độ chính xác của phép đo.
+
+Lời giải Luyện tập 3:
+• Số trung bình:
+$$\overline{x} = \frac{0{,}398 + 0{,}399 + 0{,}408 + 0{,}410 + 0{,}406 + 0{,}405 + 0{,}402}{7} = \frac{2{,}828}{7} = 0{,}404\text{ (giây)}.$$
+• Tổng các bình phương độ lệch:
+$$\sum (x_i - \overline{x})^2 = (0{,}398 - 0{,}404)^2 + (0{,}399 - 0{,}404)^2 + (0{,}408 - 0{,}404)^2 + (0{,}410 - 0{,}404)^2 + (0{,}406 - 0{,}404)^2 + (0{,}405 - 0{,}404)^2 + (0{,}402 - 0{,}404)^2$$
+$$= (-0{,}006)^2 + (-0{,}005)^2 + (0{,}004)^2 + (0{,}006)^2 + (0{,}002)^2 + (0{,}001)^2 + (-0{,}002)^2$$
+$$= 0{,}000036 + 0{,}000025 + 0{,}000016 + 0{,}000036 + 0{,}000004 + 0{,}000001 + 0{,}000004 = 0{,}000122.$$
+• Phương sai: $s^2 = \frac{0{,}000122}{7} \approx 0{,}00001743\text{ (s}^2)$.
+• Độ lệch chuẩn: $s = \sqrt{s^2} \approx 0{,}00417\text{ (giây)}$.
+• Nhận xét: Độ lệch chuẩn rất nhỏ ($s \approx 0{,}004\text{ s}$), chứng tỏ các lần đo có độ phân tán rất bé quanh giá trị trung bình, phép đo có độ chụm và độ chính xác rất cao.
+
+## Phát hiện số liệu bất thường bằng biểu đồ hộp
+
+<Youtube url="https://www.youtube.com/watch?v=example_bieu_do_hop_outliers"/>
+
+### a) Tiêu chuẩn phát hiện giá trị bất thường
+
+Quy tắc xác định giá trị bất thường (outliers) dựa trên khoảng tứ phân vị:
+Trong một mẫu số liệu, giá trị $x$ được xem là giá trị bất thường nếu thoả mãn một trong hai điều kiện sau:
+• $x < Q_1 - 1{,}5 \cdot \Delta_Q$ (nhỏ bất thường)
+• $x > Q_3 + 1{,}5 \cdot \Delta_Q$ (lớn bất thường)
+trong đó $\Delta_Q = Q_3 - Q_1$ là khoảng tứ phân vị.
+
+Ý nghĩa: Biểu đồ hộp (Box-plot) trực quan hoá 5 giá trị đặc trưng (Giá trị nhỏ nhất, $Q_1, Q_2, Q_3$, Giá trị lớn nhất) và giúp nhận diện nhanh chóng các sai số thô, nhầm lẫn trong quá trình ghi chép số liệu hoặc những đột biến thực tế.
+
+### b) Ví dụ và luyện tập phát hiện giá trị bất thường
+
+**Ví dụ 4:** Hàm lượng Natri (mg/100 g ngũ cốc) trong mẫu số liệu: 0, 340, 70, 140, 200, 180, 210, 150, 100, 130, 140, 180, 190, 160, 290, 50, 220, 180, 200, 210. Tìm giá trị bất thường bằng biểu đồ hộp.
+
+Lời giải Ví dụ 4:
+• Mẫu số liệu gồm 20 giá trị đã sắp xếp cho ta: $Q_1 = 135$ và $Q_3 = 205$.
+• Khoảng tứ phân vị: $\Delta_Q = Q_3 - Q_1 = 205 - 135 = 70$.
+• Các ranh giới bất thường:
+  + Ranh giới dưới: $Q_1 - 1{,}5 \cdot \Delta_Q = 135 - 1{,}5 \cdot 70 = 135 - 105 = 30$.
+  + Ranh giới trên: $Q_3 + 1{,}5 \cdot \Delta_Q = 205 + 1{,}5 \cdot 70 = 205 + 105 = 310$.
+• Kết luận: Trong mẫu số liệu có hai giá trị bất thường là $0\text{ mg}$ (vì $0 < 30$) và $340\text{ mg}$ (vì $340 > 310$).
+
+**Luyện tập 4:** Một mẫu số liệu có tứ phân vị thứ nhất là $56$ và tứ phân vị thứ ba là $84$. Hãy kiểm tra xem trong hai giá trị $10$ và $100$, giá trị nào được xem là giá trị bất thường.
+
+Lời giải Luyện tập 4:
+• Ta có: $Q_1 = 56$, $Q_3 = 84$.
+• Khoảng tứ phân vị: $\Delta_Q = Q_3 - Q_1 = 84 - 56 = 28$.
+• Ranh giới dưới: $Q_1 - 1{,}5 \cdot \Delta_Q = 56 - 1{,}5 \cdot 28 = 56 - 42 = 14$.
+• Ranh giới trên: $Q_3 + 1{,}5 \cdot \Delta_Q = 84 + 1{,}5 \cdot 28 = 84 + 42 = 126$.
+• So sánh: Giá trị $10 < 14$ nên $10$ là giá trị bất thường. Giá trị $100$ nằm trong đoạn $[14; 126]$ nên không phải là giá trị bất thường.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập trắc nghiệm và định tính lý thuyết
+
+**Bài 5.11:** Mỗi khẳng định sau đúng hay sai?
+(1) Nếu các giá trị của mẫu số liệu càng tập trung quanh giá trị trung bình thì độ lệch chuẩn càng lớn.
+(2) Khoảng biến thiên chỉ sử dụng thông tin của giá trị lớn nhất và bé nhất, bỏ qua thông tin của các giá trị còn lại.
+(3) Khoảng tứ phân vị có sử dụng thông tin của giá trị lớn nhất, giá trị bé nhất.
+(4) Khoảng tứ phân vị chính là khoảng biến thiên của nửa dưới mẫu số liệu đã sắp xếp.
+(5) Các số đo độ phân tán đều không âm.
+
+Lời giải Bài 5.11:
+• (1) SAI. Vì dữ liệu càng tập trung quanh số trung bình thì các độ lệch $(x_i - \overline{x})$ càng nhỏ, do đó độ lệch chuẩn càng nhỏ.
+• (2) ĐÚNG. Theo định nghĩa $R = x\_{\max} - x\_{\min}$, khoảng biến thiên chỉ phụ thuộc vào hai giá trị cực biên.
+• (3) SAI. Khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ không phụ thuộc vào $x\_{\max}$ và $x\_{\min}$.
+• (4) SAI. Khoảng tứ phân vị là khoảng biến thiên của $50\\%$ số liệu chính giữa của mẫu số liệu.
+• (5) ĐÚNG. Khoảng biến thiên $R \ge 0$, khoảng tứ phân vị $\Delta_Q \ge 0$, phương sai $s^2 \ge 0$ và độ lệch chuẩn $s \ge 0$.
+
+**Bài 5.12:** Cho hai biểu đồ chấm điểm biểu diễn hai mẫu số liệu A và B trên trục số từ 3 đến 9 (mỗi chấm biểu diễn một tần số). Không tính toán, hãy cho biết:
+a) Hai mẫu số liệu này có cùng khoảng biến thiên và số trung bình không?
+b) Mẫu số liệu nào có phương sai lớn hơn?
+
+Lời giải Bài 5.12:
+• a) CÓ. Cả hai mẫu số liệu đều có $x\_{\min} = 3$ và $x\_{\max} = 9$ nên có cùng khoảng biến thiên $R = 9 - 3 = 6$. Hai phân bố đều đối xứng qua điểm 6 nên đều có số trung bình là $\overline{x} = 6$.
+• b) Mẫu số liệu B có phương sai lớn hơn. Vì ở mẫu B, các chấm tập trung nhiều hơn ở hai đầu (3 và 9) xa giá trị trung bình 6, trong khi ở mẫu A các chấm tập trung chủ yếu quanh giá trị trung bình 6.
+
+**Bài 5.13:** Cho mẫu số liệu gồm 10 số dương không hoàn toàn giống nhau. Các số đo độ phân tán (khoảng biến thiên, khoảng tứ phân vị, độ lệch chuẩn) sẽ thay đổi như thế nào nếu:
+a) Nhân mỗi giá trị của mẫu số liệu với 2?
+b) Cộng mỗi giá trị của mẫu số liệu với 2?
+
+Lời giải Bài 5.13:
+• a) Khi nhân mỗi giá trị với 2 ($y_i = 2x_i$):
+  + Khoảng biến thiên tăng gấp 2 lần: $R_y = 2R_x$.
+  + Khoảng tứ phân vị tăng gấp 2 lần: $\Delta\_{Q(y)} = 2\Delta\_{Q(x)}$.
+  + Độ lệch chuẩn tăng gấp 2 lần: $s_y = 2s_x$ (phương sai tăng gấp $2^2 = 4$ lần).
+• b) Khi cộng mỗi giá trị với 2 ($y_i = x_i + 2$):
+  + Khoảng biến thiên không đổi: $R_y = (x\_{\max} + 2) - (x\_{\min} + 2) = R_x$.
+  + Khoảng tứ phân vị không đổi: $\Delta\_{Q(y)} = (Q_3 + 2) - (Q_1 + 2) = \Delta\_{Q(x)}$.
+  + Độ lệch chuẩn không đổi: $s_y = s_x$ (vì độ lệch $y_i - \overline{y} = x_i - \overline{x}$).
+
+### b) Bài tập tính toán và phát hiện bất thường
+
+**Bài 5.14:** Từ mẫu số liệu về thuế thuốc lá của 51 thành phố tại một quốc gia, người ta tính được: Giá trị nhỏ nhất bằng 2,5; $Q_1 = 36$; $Q_2 = 60$; $Q_3 = 100$; giá trị lớn nhất bằng 205.
+a) Tỉ lệ thành phố có thuế thuốc lá lớn hơn 36 là bao nhiêu?
+b) Chỉ ra hai giá trị sao cho có $50\\%$ giá trị của mẫu số liệu nằm giữa hai giá trị này.
+c) Tìm khoảng tứ phân vị của mẫu số liệu.
+
+Lời giải Bài 5.14:
+• a) Vì $Q_1 = 36$ là tứ phân vị thứ nhất (mốc $25\\%$ giá trị nhỏ hơn hoặc bằng 36), nên tỉ lệ thành phố có mức thuế lớn hơn 36 là khoảng $100\\% - 25\\% = 75\\%$.
+• b) Có khoảng $50\\%$ giá trị của mẫu số liệu nằm giữa tứ phân vị thứ nhất $Q_1 = 36$ và tứ phân vị thứ ba $Q_3 = 100$.
+• c) Khoảng tứ phân vị của mẫu số liệu: $\Delta_Q = Q_3 - Q_1 = 100 - 36 = 64$.
+
+**Bài 5.15:** Mẫu số liệu sau đây cho biết cân nặng của 10 trẻ sơ sinh (đơn vị: kg): 2,977; 3,155; 3,920; 3,412; 4,236; 2,593; 3,270; 3,813; 4,042; 3,387. Hãy tính khoảng biến thiên, khoảng tứ phân vị và độ lệch chuẩn cho mẫu số liệu này.
+
+Lời giải Bài 5.15:
+• Sắp xếp dãy số liệu ($n = 10$): 2,593; 2,977; 3,155; 3,270; 3,387; 3,412; 3,813; 3,920; 4,042; 4,236.
+• Khoảng biến thiên:
+$$R = x\_{\max} - x\_{\min} = 4{,}236 - 2{,}593 = 1{,}643\text{ (kg)}.$$
+• Tứ phân vị:
+  + Trung vị $Q_2 = \frac{3{,}387 + 3{,}412}{2} = 3{,}3995$.
+  + Nửa bên trái gồm 5 giá trị, phần tử chính giữa là $Q_1 = 3{,}155$.
+  + Nửa bên phải gồm 5 giá trị, phần tử chính giữa là $Q_3 = 3{,}920$.
+  + Khoảng tứ phân vị: $\Delta_Q = Q_3 - Q_1 = 3{,}920 - 3{,}155 = 0{,}765\text{ (kg)}$.
+• Số trung bình:
+$$\overline{x} = \frac{2{,}593 + 2{,}977 + 3{,}155 + 3{,}270 + 3{,}387 + 3{,}412 + 3{,}813 + 3{,}920 + 4{,}042 + 4{,}236}{10} = \frac{34{,}805}{10} = 3{,}4805\text{ (kg)}.$$
+• Phương sai:
+$$s^2 = \frac{\sum (x_i - \overline{x})^2}{10} = \frac{2{,}4537}{10} \approx 0{,}24537\text{ (kg}^2).$$
+• Độ lệch chuẩn: $s = \sqrt{0{,}24537} \approx 0{,}495\text{ (kg)}$.
+
+**Bài 5.16:** Tỉ lệ thất nghiệp ở một số quốc gia vào năm 2007 (đơn vị: %) được cho như sau: 7,8; 3,2; 7,7; 8,7; 8,6; 8,4; 7,2; 3,6; 5,0; 4,4; 6,7; 7,0; 4,5; 6,0; 5,4. Hãy tìm các giá trị bất thường (nếu có) của mẫu số liệu.
+
+Lời giải Bài 5.16:
+• Sắp xếp mẫu số liệu gồm $n = 15$ giá trị theo thứ tự không giảm:
+  3,2; 3,6; 4,4; 4,5; 5,0; 5,4; 6,0; 6,7; 7,0; 7,2; 7,7; 7,8; 8,4; 8,6; 8,7.
+• Tứ phân vị thứ hai (phần tử thứ 8): $Q_2 = 6{,}7$.
+• Nửa bên trái gồm 7 giá trị đầu (3,2 đến 6,0), phần tử chính giữa (vị trí 4) là $Q_1 = 4{,}5$.
+• Nửa bên phải gồm 7 giá trị cuối (7,0 đến 8,7), phần tử chính giữa (vị trí 12) là $Q_3 = 7{,}8$.
+• Khoảng tứ phân vị: $\Delta_Q = Q_3 - Q_1 = 7{,}8 - 4{,}5 = 3{,}3$.
+• Ranh giới xác định giá trị bất thường:
+  + Ranh giới dưới: $Q_1 - 1{,}5 \cdot \Delta_Q = 4{,}5 - 1{,}5 \cdot 3{,}3 = 4{,}5 - 4{,}95 = -0{,}45$.
+  + Ranh giới trên: $Q_3 + 1{,}5 \cdot \Delta_Q = 7{,}8 + 1{,}5 \cdot 3{,}3 = 7{,}8 + 4{,}95 = 12{,}75$.
+• So sánh: Tất cả các giá trị trong mẫu số liệu đều thuộc đoạn $[-0{,}45; 12{,}75]$ (giá trị nhỏ nhất là 3,2 > -0,45 và giá trị lớn nhất là 8,7 < 12,75).
+• Kết luận: Mẫu số liệu không có giá trị bất thường.
