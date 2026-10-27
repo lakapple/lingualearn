@@ -1,0 +1,261 @@
+---
+title: 'Bài 17: Dấu của tam thức bậc hai.'
+description: Lý thuyết về bài dấu của tam thức bậc hai và ví dụ minh họa.
+tags:
+  - lớp 10
+  - Tam thức bậc hai
+  - nghiệm của tam thức bậc hai
+  - Dấu của tam thức bậc hai
+  - quy tắc "trong trái, ngoài cùng"
+  - Bất phương trình bậc hai một ẩn
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Tam thức bậc hai, hệ số, nghiệm của tam thức bậc hai
+
+·       Biệt thức $\Delta$ và biệt thức thu gọn $\Delta'$
+
+·       Dấu của tam thức bậc hai, quy tắc "trong trái, ngoài cùng"
+
+·       Bất phương trình bậc hai một ẩn, tập nghiệm
+
+### **Kiến thức, kĩ năng:**
+
+·       Giải thích và vận dụng thành thạo định lí về dấu của tam thức bậc hai từ việc quan sát đồ thị hàm số bậc hai.
+
+·       Lập bảng xét dấu của tam thức bậc hai trong các trường hợp $\Delta < 0$, $\Delta = 0$, $\Delta > 0$.
+
+·       Giải thành thạo bất phương trình bậc hai một ẩn.
+
+·       Vận dụng bất phương trình bậc hai và dấu tam thức bậc hai vào giải quyết các bài toán chứa tham số và bài toán thực tiễn.
+
+## Dấu của tam thức bậc hai
+
+<Youtube url="https://www.youtube.com/watch?v=example_dau_tam_thuc_bac_hai"/>
+
+### a) Định nghĩa tam thức bậc hai và biệt thức
+
+Định nghĩa: Tam thức bậc hai (đối với $x$) là biểu thức có dạng:
+$$f(x) = ax^2 + bx + c$$
+trong đó $x$ là biến số, $a, b, c$ là những số thực cho trước với $a \ne 0$, được gọi là các hệ số của tam thức bậc hai.
+
+Nghiệm và biệt thức của tam thức bậc hai:
+• Nghiệm của phương trình bậc hai $ax^2 + bx + c = 0$ được gọi là nghiệm của tam thức bậc hai $f(x) = ax^2 + bx + c$.
+• Biệt thức: $\Delta = b^2 - 4ac$.
+• Biệt thức thu gọn: $\Delta' = (b')^2 - ac$ (với $b = 2b'$).
+
+**Luyện tập 1:** Trong các biểu thức sau, biểu thức nào là tam thức bậc hai?
+$A = 3x + 2\sqrt{x} + 1$; $B = -5x^4 + 3x^2 + 4$; $C = -\frac{2}{3}x^2 + 7x - 4$; $D = \left(\frac{1}{x}\right)^2 + 2\frac{1}{x} + 3$.
+
+Lời giải Luyện tập 1:
+• Chỉ có $C = -\frac{2}{3}x^2 + 7x - 4$ là tam thức bậc hai vì nó có dạng $ax^2 + bx + c$ với $a = -\frac{2}{3} \ne 0$, $b = 7$, $c = -4$.
+• Các biểu thức $A, B, D$ không phải là tam thức bậc hai vì chứa căn thức của biến, bậc 4 hoặc biến ở mẫu.
+
+### b) Định lí về dấu của tam thức bậc hai
+
+Định lí: Cho tam thức bậc hai $f(x) = ax^2 + bx + c$ ($a \ne 0$):
+• Nếu $\Delta < 0$ thì $f(x)$ luôn cùng dấu với hệ số $a$ với mọi $x \in \mathbb{R}$:
+$$a \cdot f(x) > 0, \quad \forall x \in \mathbb{R}$$
+• Nếu $\Delta = 0$ thì $f(x)$ luôn cùng dấu với hệ số $a$ với mọi $x \ne -\frac{b}{2a}$, và $f\left(-\frac{b}{2a}\right) = 0$:
+$$a \cdot f(x) > 0, \quad \forall x \ne -\frac{b}{2a}$$
+• Nếu $\Delta > 0$ thì tam thức $f(x)$ có hai nghiệm phân biệt $x_1, x_2$ (giả sử $x_1 < x_2$). Khi đó:
+  + $f(x)$ trái dấu với hệ số $a$ khi $x \in (x_1; x_2)$ (khoảng trong hai nghiệm);
+  + $f(x)$ cùng dấu với hệ số $a$ khi $x \in (-\infty; x_1) \cup (x_2; +\infty)$ (khoảng ngoài hai nghiệm).
+(Quy tắc ghi nhớ: "Trong trái, ngoài cùng").
+
+Mối liên hệ hình học với đồ thị parabol:
+• $\Delta < 0$: Parabol không cắt trục hoành, nằm hoàn toàn về một phía so với trục $Ox$ (nằm trên $Ox$ nếu $a > 0$, nằm dưới $Ox$ nếu $a < 0$).
+• $\Delta = 0$: Parabol tiếp xúc với trục hoành tại đỉnh có hoành độ $x = -\frac{b}{2a}$ và phần còn lại nằm về một phía so với $Ox$.
+• $\Delta > 0$: Parabol cắt trục hoành tại hai điểm phân biệt $(x_1; 0)$ và $(x_2; 0)$.
+
+**Ví dụ 1:** Xét dấu các tam thức bậc hai sau:
+a) $f(x) = x^2 + x + 1$;
+b) $f(x) = -\frac{3}{2}x^2 + 9x - \frac{27}{2}$;
+c) $f(x) = 2x^2 + 6x - 8$.
+
+Lời giải Ví dụ 1:
+• a) $f(x) = x^2 + x + 1$ có $\Delta = 1^2 - 4(1)(1) = -3 < 0$ và hệ số $a = 1 > 0$. Do đó $f(x) > 0$ với mọi $x \in \mathbb{R}$.
+• b) $f(x) = -\frac{3}{2}x^2 + 9x - \frac{27}{2}$ có $\Delta = 9^2 - 4\left(-\frac{3}{2}\right)\left(-\frac{27}{2}\right) = 81 - 81 = 0$ và hệ số $a = -\frac{3}{2} < 0$. Do đó $f(x)$ có nghiệm kép $x = -\frac{9}{2(-3/2)} = 3$, suy ra $f(x) < 0$ với mọi $x \ne 3$ và $f(3) = 0$.
+• c) $f(x) = 2x^2 + 6x - 8$ có $\Delta' = 3^2 - 2(-8) = 25 > 0$, hệ số $a = 2 > 0$ và có hai nghiệm phân biệt $x_1 = -4, x_2 = 1$.
+  Áp dụng quy tắc "trong trái, ngoài cùng":
+  + $f(x) < 0$ với mọi $x \in (-4; 1)$;
+  + $f(x) > 0$ với mọi $x \in (-\infty; -4) \cup (1; +\infty)$;
+  + $f(x) = 0$ khi $x \in \\{-4; 1\\}$.
+
+**Luyện tập 2:** Xét dấu các tam thức bậc hai sau:
+a) $f(x) = -3x^2 + x - \sqrt{2}$;
+b) $f(x) = x^2 + 8x + 16$;
+c) $f(x) = -2x^2 + 7x - 3$.
+
+Lời giải Luyện tập 2:
+• a) Tam thức có $\Delta = 1^2 - 4(-3)(-\sqrt{2}) = 1 - 12\sqrt{2} < 0$ và hệ số $a = -3 < 0$. Do đó $f(x) < 0$ với mọi $x \in \mathbb{R}$.
+• b) Tam thức $f(x) = (x + 4)^2$ có $\Delta' = 4^2 - 16 = 0$ và $a = 1 > 0$. Do đó $f(x) > 0$ với mọi $x \ne -4$ và $f(-4) = 0$.
+• c) Tam thức có $\Delta = 7^2 - 4(-2)(-3) = 49 - 24 = 25 > 0$, hệ số $a = -2 < 0$, hai nghiệm $x_1 = \frac{1}{2}, x_2 = 3$.
+  Theo quy tắc "trong trái, ngoài cùng":
+  + $f(x) > 0$ với mọi $x \in \left(\frac{1}{2}; 3\right)$;
+  + $f(x) < 0$ với mọi $x \in \left(-\infty; \frac{1}{2}\right) \cup (3; +\infty)$;
+  + $f(x) = 0$ khi $x \in \left\\{\frac{1}{2}; 3\right\\}$.
+
+## Bất phương trình bậc hai
+
+<Youtube url="https://www.youtube.com/watch?v=example_bat_phuong_trinh_bac_hai"/>
+
+### a) Định nghĩa và phương pháp giải bất phương trình bậc hai
+
+Định nghĩa: Bất phương trình bậc hai ẩn $x$ là bất phương trình có một trong các dạng:
+$$ax^2 + bx + c > 0, \quad ax^2 + bx + c \ge 0, \quad ax^2 + bx + c < 0, \quad ax^2 + bx + c \le 0$$
+trong đó $a, b, c$ là những số thực đã cho và $a \ne 0$.
+
+Nghiệm và tập nghiệm: Số thực $x_0$ gọi là một nghiệm của bất phương trình bậc hai $ax^2 + bx + c > 0$ nếu $ax_0^2 + bx_0 + c > 0$. Tập hợp tất cả các nghiệm gọi là tập nghiệm của bất phương trình.
+
+Các bước giải bất phương trình bậc hai $f(x) = ax^2 + bx + c \gtrless 0$:
+• Bước 1: Tính biệt thức $\Delta = b^2 - 4ac$ (hoặc $\Delta'$) và tìm các nghiệm của tam thức $f(x)$ (nếu có).
+• Bước 2: Xác định dấu của hệ số $a$.
+• Bước 3: Áp dụng định lí về dấu của tam thức bậc hai để lập bảng xét dấu $f(x)$.
+• Bước 4: Kết luận tập nghiệm của bất phương trình tương ứng với chiều so sánh.
+
+### b) Các ví dụ minh họa giải bất phương trình
+
+**Ví dụ 2:** Giải các bất phương trình bậc hai sau:
+a) $3x^2 + x + 5 \le 0$;
+b) $-3x^2 + 2\sqrt{3}x - 1 \ge 0$;
+c) $-x^2 + 2x + 1 > 0$.
+
+Lời giải Ví dụ 2:
+• a) Xét $f(x) = 3x^2 + x + 5$: có $\Delta = 1^2 - 4(3)(5) = -59 < 0$ và hệ số $a = 3 > 0$. Do đó $f(x) > 0, \forall x \in \mathbb{R}$.
+  Vậy bất phương trình $3x^2 + x + 5 \le 0$ vô nghiệm ($S = \emptyset$).
+• b) Xét $f(x) = -3x^2 + 2\sqrt{3}x - 1$: có $\Delta' = (\sqrt{3})^2 - (-3)(-1) = 3 - 3 = 0$ và $a = -3 < 0$. Do đó $f(x) < 0, \forall x \ne \frac{\sqrt{3}}{3}$ và $f\left(\frac{\sqrt{3}}{3}\right) = 0$.
+  Vậy bất phương trình $-3x^2 + 2\sqrt{3}x - 1 \ge 0$ có nghiệm duy nhất $x = \frac{\sqrt{3}}{3}$ (tập nghiệm $S = \left\\{\frac{\sqrt{3}}{3}\right\\}$).
+• c) Xét $f(x) = -x^2 + 2x + 1$: có $\Delta' = 1^2 - (-1)(1) = 2 > 0$ và $a = -1 < 0$. Tam thức có hai nghiệm phân biệt $x_1 = 1 - \sqrt{2}$, $x_2 = 1 + \sqrt{2}$.
+  Vì $a < 0$ nên $f(x) > 0$ (trái dấu với $a$) ở khoảng trong hai nghiệm.
+  Vậy tập nghiệm của bất phương trình là khoảng $S = (1 - \sqrt{2}; 1 + \sqrt{2})$.
+
+**Ví dụ 3:** Giải bài toán rào vườn ở tình huống mở đầu: Tìm khoảng cách $x$ từ điểm cắm cọc đến bờ tường sao cho diện tích mảnh đất $S(x) = -2x^2 + 20x$ không nhỏ hơn $48\text{ m}^2$.
+
+Lời giải Ví dụ 3:
+• Điều kiện diện tích không nhỏ hơn $48\text{ m}^2$ dẫn đến bất phương trình:
+$$-2x^2 + 20x \ge 48 \Leftrightarrow 2x^2 - 20x + 48 \le 0$$
+• Xét tam thức bậc hai $f(x) = 2x^2 - 20x + 48$: có hai nghiệm là $x_1 = 4$ và $x_2 = 6$, hệ số $a = 2 > 0$.
+• Bất phương trình lấy dấu $\le 0$ (trái dấu với $a$) nên nghiệm nằm trong đoạn hai nghiệm: $4 \le x \le 6$.
+• Kết luận: Hai cột góc hàng rào cần cắm cách bờ tường một khoảng từ $4\text{ m}$ đến $6\text{ m}$.
+
+**Luyện tập 3:** Giải các bất phương trình bậc hai sau:
+a) $-5x^2 + x - 1 \le 0$;
+b) $x^2 - 8x + 16 \le 0$;
+c) $x^2 - x - 6 > 0$.
+
+Lời giải Luyện tập 3:
+• a) Tam thức $-5x^2 + x - 1$ có $\Delta = 1 - 20 = -19 < 0$ và $a = -5 < 0$. Suy ra $-5x^2 + x - 1 < 0, \forall x \in \mathbb{R}$.
+  Vậy bất phương trình nghiệm đúng với mọi $x \in \mathbb{R}$ ($S = \mathbb{R}$).
+• b) Ta có $x^2 - 8x + 16 = (x - 4)^2$. Bất phương trình $(x - 4)^2 \le 0$ chỉ xảy ra khi $x - 4 = 0 \Leftrightarrow x = 4$. Tập nghiệm $S = \\{4\\}$.
+• c) Tam thức $x^2 - x - 6$ có $a = 1 > 0$ và hai nghiệm $x_1 = -2, x_2 = 3$.
+  Bất phương trình lấy dấu $> 0$ (cùng dấu với $a$) nên nghiệm nằm ngoài khoảng hai nghiệm.
+  Vậy tập nghiệm là $S = (-\infty; -2) \cup (3; +\infty)$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế và bài toán chứa tham số
+
+**Vận dụng (Độ cao quả bóng):** Độ cao so với mặt đất của một quả bóng ném thẳng đứng lên trên được mô tả bởi hàm số: $h(t) = -4{,}9t^2 + 20t + 1$ ($h$ tính bằng mét, $t$ tính bằng giây). Trong khoảng thời gian nào quả bóng ở độ cao trên 5 m so với mặt đất?
+
+Lời giải Vận dụng:
+• Yêu cầu bài toán dẫn đến bất phương trình: $h(t) > 5$
+$$\Leftrightarrow -4{,}9t^2 + 20t + 1 > 5 \Leftrightarrow -4{,}9t^2 + 20t - 4 > 0 \Leftrightarrow 4{,}9t^2 - 20t + 4 < 0$$
+• Xét tam thức $f(t) = 4{,}9t^2 - 20t + 4$: có $a = 4{,}9 > 0$ và hai nghiệm phân biệt:
+$$t_1 = \frac{20 - \sqrt{20^2 - 4(4{,}9)(4)}}{2(4{,}9)} = \frac{20 - \sqrt{321{,}6}}{9{,}8} \approx 0{,}21\text{ (giây)}$$
+$$t_2 = \frac{20 + \sqrt{321{,}6}}{9{,}8} \approx 3{,}87\text{ (giây)}$$
+• Bất phương trình lấy dấu $< 0$ nên nghiệm là khoảng trong hai nghiệm: $0{,}21 < t < 3{,}87$.
+• Kết luận: Trong khoảng thời gian từ khoảng $0{,}21\text{ s}$ đến $3{,}87\text{ s}$, quả bóng ở độ cao trên 5 m.
+
+**Bài 6.17 (Bài toán chứa tham số $m$):** Tìm các giá trị của tham số $m$ để tam thức bậc hai sau luôn dương với mọi $x \in \mathbb{R}$:
+$$f(x) = x^2 + (m + 1)x + 2m + 3$$
+
+Lời giải Bài 6.17:
+• Tam thức $f(x) = x^2 + (m + 1)x + 2m + 3$ có hệ số $a = 1 > 0$.
+• Để $f(x) > 0, \forall x \in \mathbb{R}$ thì điều kiện cần và đủ là:
+$$\begin{cases} a > 0 \\\ \Delta < 0 \end{cases} \Leftrightarrow \begin{cases} 1 > 0 \text{ (luôn đúng)} \\\ (m + 1)^2 - 4(1)(2m + 3) < 0 \end{cases}$$
+• Khai triển bất phương trình theo $m$:
+$$m^2 + 2m + 1 - 8m - 12 < 0 \Leftrightarrow m^2 - 6m - 11 < 0$$
+• Tam thức bậc hai $g(m) = m^2 - 6m - 11$ có hai nghiệm phân biệt $m_1 = 3 - 2\sqrt{5}$, $m_2 = 3 + 2\sqrt{5}$.
+• Lấy dấu âm (trong khoảng hai nghiệm): $3 - 2\sqrt{5} < m < 3 + 2\sqrt{5}$.
+• Vậy các giá trị cần tìm của $m$ là $m \in (3 - 2\sqrt{5}; 3 + 2\sqrt{5})$.
+
+**Bài 6.18 (Vật ném thẳng đứng xuống dưới):** Một vật được ném thẳng đứng xuống dưới từ độ cao 320 m với vận tốc ban đầu $v_0 = 20\text{ m/s}$. Bỏ qua sức cản không khí, lấy gia tốc trọng trường $g = 9{,}8\text{ m/s}^2$ (hoặc $g = 10\text{ m/s}^2$). Sau ít nhất bao nhiêu giây thì vật cách mặt đất không quá 100 m?
+
+Lời giải Bài 6.18:
+• Độ cao của vật tại thời điểm $t$ ($t \ge 0$) là: $y(t) = y_0 - v_0 t - \frac{1}{2}gt^2 = 320 - 20t - 4{,}9t^2$ (lấy $g = 9{,}8\text{ m/s}^2$).
+• Khoảng cách của vật đến mặt đất không quá 100 m khi:
+$$y(t) \le 100 \Leftrightarrow 320 - 20t - 4{,}9t^2 \le 100 \Leftrightarrow 4{,}9t^2 + 20t - 220 \ge 0$$
+• Xét phương trình $4{,}9t^2 + 20t - 220 = 0$ có nghiệm dương:
+$$t = \frac{-20 + \sqrt{20^2 - 4(4{,}9)(-220)}}{2(4{,}9)} = \frac{-20 + \sqrt{400 + 4312}}{9{,}8} = \frac{-20 + \sqrt{4712}}{9{,}8} \approx \frac{-20 + 68{,}64}{9{,}8} \approx 4{,}96\text{ (s)}$$
+  (Nếu lấy quy ước $g = 10\text{ m/s}^2$, ta có $5t^2 + 20t - 220 \ge 0 \Leftrightarrow t^2 + 4t - 44 \ge 0 \Rightarrow t \ge -2 + 4\sqrt{3} \approx 4{,}93\text{ s}$).
+• Vậy sau ít nhất khoảng 4,96 giây (hoặc xấp xỉ 5 giây), vật sẽ cách mặt đất không quá 100 m.
+
+**Bài 6.19 (Hình học tối ưu - Ba hình tròn):** Cho đường tròn đường kính $AB = 4$. Điểm $M$ thuộc đoạn $AB$ với $AM = x$ ($0 < x < 4$). Dựng hai đường tròn đường kính $AM$ và $MB$. Kí hiệu $S(x)$ là diện tích phần nằm trong hình tròn lớn và nằm ngoài hai hình tròn nhỏ. Xác định $x$ để $S(x)$ không vượt quá một nửa tổng diện tích hai hình tròn nhỏ.
+
+Lời giải Bài 6.19:
+• Bán kính hình tròn lớn là $R = 2$, diện tích là: $S_0 = \pi R^2 = 4\pi$.
+• Đoạn $AM = x$ nên bán kính hình tròn nhỏ thứ nhất là $r_1 = \frac{x}{2}$; diện tích $S_1 = \pi r_1^2 = \pi \frac{x^2}{4}$.
+• Đoạn $MB = 4 - x$ nên bán kính hình tròn nhỏ thứ hai là $r_2 = \frac{4 - x}{2}$; diện tích $S_2 = \pi r_2^2 = \pi \frac{(4 - x)^2}{4}$.
+• Tổng diện tích hai hình tròn nhỏ:
+$$S\_{12} = S_1 + S_2 = \frac{\pi}{4} [x^2 + (4 - x)^2] = \frac{\pi}{4} (2x^2 - 8x + 16) = \frac{\pi}{2}(x^2 - 4x + 8)$$
+• Diện tích phần hình phẳng $S(x)$ là:
+$$S(x) = S_0 - S\_{12} = 4\pi - \frac{\pi}{2}(x^2 - 4x + 8) = \frac{\pi}{2} [8 - (x^2 - 4x + 8)] = \frac{\pi}{2}(4x - x^2)$$
+• Điều kiện $S(x) \le \frac{1}{2} S\_{12}$:
+$$\frac{\pi}{2}(4x - x^2) \le \frac{1}{2} \cdot \frac{\pi}{2}(x^2 - 4x + 8) \Leftrightarrow 2(4x - x^2) \le x^2 - 4x + 8$$
+$$\Leftrightarrow 8x - 2x^2 \le x^2 - 4x + 8 \Leftrightarrow 3x^2 - 12x + 8 \ge 0$$
+• Tam thức bậc hai $3x^2 - 12x + 8 = 0$ có hai nghiệm:
+$$x_1 = \frac{6 - 2\sqrt{3}}{3} = 2 - \frac{2\sqrt{3}}{3} \approx 0{,}85; \quad x_2 = \frac{6 + 2\sqrt{3}}{3} = 2 + \frac{2\sqrt{3}}{3} \approx 3{,}15$$
+• Vì $a = 3 > 0$ và bất phương trình lấy dấu $\ge 0$ kết hợp với điều kiện $0 < x < 4$:
+$$x \in \left(0; 2 - \frac{2\sqrt{3}}{3}\right] \cup \left[2 + \frac{2\sqrt{3}}{3}; 4\right).$$
+• Vậy các giá trị của $x$ cần tìm là $0 < x \le 2 - \frac{2\sqrt{3}}{3}$ hoặc $2 + \frac{2\sqrt{3}}{3} \le x < 4$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.15:** Xét dấu các tam thức bậc hai sau:
+a) $f(x) = 3x^2 - 4x + 1$;
+b) $f(x) = x^2 + 2x + 1$;
+c) $f(x) = -x^2 + 3x - 2$;
+d) $f(x) = -x^2 + x - 1$.
+
+Lời giải Bài 6.15:
+• a) $f(x) = 3x^2 - 4x + 1$: $a = 3 > 0$, có hai nghiệm $x_1 = \frac{1}{3}, x_2 = 1$.
+  + $f(x) < 0$ khi $x \in \left(\frac{1}{3}; 1\right)$;
+  + $f(x) > 0$ khi $x \in \left(-\infty; \frac{1}{3}\right) \cup (1; +\infty)$;
+  + $f(x) = 0$ khi $x \in \left\\{\frac{1}{3}; 1\right\\}$.
+• b) $f(x) = x^2 + 2x + 1 = (x + 1)^2$: $a = 1 > 0$, có nghiệm kép $x = -1$.
+  + $f(x) > 0$ với mọi $x \ne -1$ và $f(-1) = 0$.
+• c) $f(x) = -x^2 + 3x - 2$: $a = -1 < 0$, có hai nghiệm $x_1 = 1, x_2 = 2$.
+  + $f(x) > 0$ khi $x \in (1; 2)$;
+  + $f(x) < 0$ khi $x \in (-\infty; 1) \cup (2; +\infty)$;
+  + $f(x) = 0$ khi $x \in \\{1; 2\\}$.
+• d) $f(x) = -x^2 + x - 1$: $\Delta = 1 - 4 = -3 < 0$, $a = -1 < 0$.
+  + $f(x) < 0$ với mọi $x \in \mathbb{R}$.
+
+**Bài 6.16:** Giải các bất phương trình bậc hai sau:
+a) $x^2 - 1 \ge 0$;
+b) $x^2 - 2x - 1 < 0$;
+c) $-3x^2 + 12x + 1 \le 0$;
+d) $5x^2 + x + 1 \ge 0$.
+
+Lời giải Bài 6.16:
+• a) $x^2 - 1 \ge 0$: tam thức có hai nghiệm $x = \pm 1$, hệ số $a = 1 > 0$.
+  Tập nghiệm: $S = (-\infty; -1] \cup [1; +\infty)$.
+• b) $x^2 - 2x - 1 < 0$: có $a = 1 > 0$, hai nghiệm $x_1 = 1 - \sqrt{2}$, $x_2 = 1 + \sqrt{2}$.
+  Bất phương trình lấy dấu âm (trái dấu với $a$):
+  Tập nghiệm: $S = (1 - \sqrt{2}; 1 + \sqrt{2})$.
+• c) $-3x^2 + 12x + 1 \le 0$: có $a = -3 < 0$, $\Delta' = 6^2 - (-3)(1) = 39 > 0$, hai nghiệm $x\_{1,2} = \frac{6 \pm \sqrt{39}}{3}$.
+  Bất phương trình lấy dấu $\le 0$ (cùng dấu với $a$):
+  Tập nghiệm: $S = \left(-\infty; \frac{6 - \sqrt{39}}{3}\right] \cup \left[\frac{6 + \sqrt{39}}{3}; +\infty\right)$.
+• d) $5x^2 + x + 1 \ge 0$: có $\Delta = 1 - 20 = -19 < 0$, hệ số $a = 5 > 0$.
+  Tam thức luôn dương với mọi $x \in \mathbb{R}$.
+  Tập nghiệm: $S = \mathbb{R}$.

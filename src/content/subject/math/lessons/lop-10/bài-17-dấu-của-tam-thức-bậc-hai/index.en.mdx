@@ -1,0 +1,260 @@
+---
+title: 'Lesson 17: Sign of a Quadratic Trinomial.'
+description: 'Theoretical Framework: Sign of a Quadratic Trinomial with Illustrative Examples.'
+tags:
+  - grade 10
+  - Quadratic trinomial (quadratic expression)
+  - roots (zeros) of a quadratic trinomial
+  - Sign of a quadratic trinomial
+  - Quadratic inequality in one variable
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Quadratic trinomial (quadratic expression), coefficients, roots (zeros) of a quadratic trinomial
+
+·       Discriminant $\Delta$ and reduced discriminant $\Delta'$
+
+·       Sign of a quadratic trinomial, sign rules ("opposite inside, same outside")
+
+·       Quadratic inequality in one variable, solution set
+
+### **Knowledge and Skills:**
+
+·       Explain and apply the theorem on the sign of a quadratic trinomial through the graphical analysis of parabolas.
+
+·       Construct sign charts for quadratic trinomials in all cases: $\Delta < 0$, $\Delta = 0$, and $\Delta > 0$.
+
+·       Solve quadratic inequalities in one variable proficiently.
+
+·       Apply quadratic inequalities and the sign theorem to parametric problems and real-world modeling.
+
+## Sign of a Quadratic Trinomial
+
+<Youtube url="https://www.youtube.com/watch?v=example_dau_tam_thuc_bac_hai"/>
+
+### a) Definition of a Quadratic Trinomial and Discriminants
+
+Definition: A quadratic trinomial in $x$ is an algebraic expression of the form:
+$$f(x) = ax^2 + bx + c$$
+where $x$ is the variable, and $a, b, c$ are given real constants with $a \ne 0$, known as the coefficients of the quadratic trinomial.
+
+Roots and Discriminants:
+• The roots (zeros) of the quadratic equation $ax^2 + bx + c = 0$ are called the roots (zeros) of the quadratic trinomial $f(x) = ax^2 + bx + c$.
+• The discriminant is defined as: $\Delta = b^2 - 4ac$.
+• The reduced discriminant (when $b = 2b'$) is: $\Delta' = (b')^2 - ac$.
+
+**Practice 1:** Which of the following expressions are quadratic trinomials?
+$A = 3x + 2\sqrt{x} + 1$; $B = -5x^4 + 3x^2 + 4$; $C = -\frac{2}{3}x^2 + 7x - 4$; $D = \left(\frac{1}{x}\right)^2 + 2\frac{1}{x} + 3$.
+
+Solution for Practice 1:
+• Only $C = -\frac{2}{3}x^2 + 7x - 4$ is a quadratic trinomial because it matches the standard form $ax^2 + bx + c$ with $a = -\frac{2}{3} \ne 0$, $b = 7$, and $c = -4$.
+• Expressions $A, B$, and $D$ are not quadratic trinomials because they involve fractional powers (radicals), degree 4 terms, or variables in the denominator.
+
+### b) Theorem on the Sign of a Quadratic Trinomial
+
+Theorem (Sign of a Quadratic Trinomial): Let $f(x) = ax^2 + bx + c$ ($a \ne 0$):
+• If $\Delta < 0$, then $f(x)$ has the same sign as the leading coefficient $a$ for all real numbers $x \in \mathbb{R}$:
+$$a \cdot f(x) > 0, \quad \forall x \in \mathbb{R}$$
+• If $\Delta = 0$, then $f(x)$ has the same sign as the leading coefficient $a$ for all $x \ne -\frac{b}{2a}$, and $f\left(-\frac{b}{2a}\right) = 0$:
+$$a \cdot f(x) > 0, \quad \forall x \ne -\frac{b}{2a}$$
+• If $\Delta > 0$, then $f(x)$ has two distinct real roots $x_1$ and $x_2$ (assume $x_1 < x_2$). Then:
+  + $f(x)$ has the opposite sign to $a$ for $x \in (x_1; x_2)$ (between the roots);
+  + $f(x)$ has the same sign as $a$ for $x \in (-\infty; x_1) \cup (x_2; +\infty)$ (outside the roots).
+(Rule of thumb: "Opposite sign inside, same sign outside").
+
+Geometric Connection with the Parabola:
+• $\Delta < 0$: The parabola does not intersect the $x$-axis and lies entirely on one side of $Ox$ (entirely above if $a > 0$, entirely below if $a < 0$).
+• $\Delta = 0$: The parabola is tangent to the $x$-axis at its vertex $x = -\frac{b}{2a}$ and lies on one side of $Ox$ elsewhere.
+• $\Delta > 0$: The parabola intersects the $x$-axis at two distinct points $(x_1; 0)$ and $(x_2; 0)$.
+
+**Example 1:** Determine the sign of each of the following quadratic trinomials:
+a) $f(x) = x^2 + x + 1$;
+b) $f(x) = -\frac{3}{2}x^2 + 9x - \frac{27}{2}$;
+c) $f(x) = 2x^2 + 6x - 8$.
+
+Solution for Example 1:
+• a) For $f(x) = x^2 + x + 1$: $\Delta = 1^2 - 4(1)(1) = -3 < 0$ and $a = 1 > 0$. Hence, $f(x) > 0$ for all $x \in \mathbb{R}$.
+• b) For $f(x) = -\frac{3}{2}x^2 + 9x - \frac{27}{2}$: $\Delta = 9^2 - 4\left(-\frac{3}{2}\right)\left(-\frac{27}{2}\right) = 81 - 81 = 0$ and $a = -\frac{3}{2} < 0$. The trinomial has a double root $x = -\frac{9}{2(-3/2)} = 3$. Hence, $f(x) < 0$ for all $x \ne 3$, and $f(3) = 0$.
+• c) For $f(x) = 2x^2 + 6x - 8$: $\Delta' = 3^2 - 2(-8) = 25 > 0$, $a = 2 > 0$, and the roots are $x_1 = -4, x_2 = 1$.
+  Applying the sign rule ("opposite inside, same outside"):
+  + $f(x) < 0$ for all $x \in (-4; 1)$;
+  + $f(x) > 0$ for all $x \in (-\infty; -4) \cup (1; +\infty)$;
+  + $f(x) = 0$ for $x \in \\{-4; 1\\}$.
+
+**Practice 2:** Determine the sign of the following quadratic trinomials:
+a) $f(x) = -3x^2 + x - \sqrt{2}$;
+b) $f(x) = x^2 + 8x + 16$;
+c) $f(x) = -2x^2 + 7x - 3$.
+
+Solution for Practice 2:
+• a) $\Delta = 1^2 - 4(-3)(-\sqrt{2}) = 1 - 12\sqrt{2} < 0$ and $a = -3 < 0$. Therefore, $f(x) < 0$ for all $x \in \mathbb{R}$.
+• b) We have $f(x) = (x + 4)^2$ with $\Delta' = 4^2 - 16 = 0$ and $a = 1 > 0$. Therefore, $f(x) > 0$ for all $x \ne -4$, and $f(-4) = 0$.
+• c) $\Delta = 7^2 - 4(-2)(-3) = 49 - 24 = 25 > 0$, $a = -2 < 0$, and roots are $x_1 = \frac{1}{2}, x_2 = 3$.
+  By the sign rule:
+  + $f(x) > 0$ for all $x \in \left(\frac{1}{2}; 3\right)$;
+  + $f(x) < 0$ for all $x \in \left(-\infty; \frac{1}{2}\right) \cup (3; +\infty)$;
+  + $f(x) = 0$ for $x \in \left\\{\frac{1}{2}; 3\right\\}$.
+
+## Quadratic Inequalities
+
+<Youtube url="https://www.youtube.com/watch?v=example_bat_phuong_trinh_bac_hai"/>
+
+### a) Definition and Solution Method for Quadratic Inequalities
+
+Definition: A quadratic inequality in the variable $x$ is an inequality that can be written in one of the standard forms:
+$$ax^2 + bx + c > 0, \quad ax^2 + bx + c \ge 0, \quad ax^2 + bx + c < 0, \quad ax^2 + bx + c \le 0$$
+where $a, b, c$ are given real numbers and $a \ne 0$.
+
+Solutions and Solution Set: A real number $x_0$ is called a solution of the quadratic inequality $ax^2 + bx + c > 0$ if $ax_0^2 + bx_0 + c > 0$. The set of all such solutions is called the solution set of the inequality.
+
+Steps to Solve a Quadratic Inequality $f(x) = ax^2 + bx + c \gtrless 0$:
+• Step 1: Calculate the discriminant $\Delta = b^2 - 4ac$ (or $\Delta'$) and find the real roots of $f(x)$, if any.
+• Step 2: Determine the sign of the leading coefficient $a$.
+• Step 3: Apply the theorem on the sign of a quadratic trinomial to establish a sign chart for $f(x)$.
+• Step 4: Conclude the solution set according to the inequality sign.
+
+### b) Illustrative Examples of Solving Quadratic Inequalities
+
+**Example 2:** Solve the following quadratic inequalities:
+a) $3x^2 + x + 5 \le 0$;
+b) $-3x^2 + 2\sqrt{3}x - 1 \ge 0$;
+c) $-x^2 + 2x + 1 > 0$.
+
+Solution for Example 2:
+• a) For $f(x) = 3x^2 + x + 5$: $\Delta = 1^2 - 4(3)(5) = -59 < 0$ and $a = 3 > 0$. Hence, $f(x) > 0$ for all $x \in \mathbb{R}$.
+  Therefore, the inequality $3x^2 + x + 5 \le 0$ has no solution ($S = \emptyset$).
+• b) For $f(x) = -3x^2 + 2\sqrt{3}x - 1$: $\Delta' = (\sqrt{3})^2 - (-3)(-1) = 0$ and $a = -3 < 0$. Hence, $f(x) < 0$ for all $x \ne \frac{\sqrt{3}}{3}$, and $f\left(\frac{\sqrt{3}}{3}\right) = 0$.
+  Therefore, the inequality $-3x^2 + 2\sqrt{3}x - 1 \ge 0$ has a unique solution: $x = \frac{\sqrt{3}}{3}$ (solution set $S = \left\\{\frac{\sqrt{3}}{3}\right\\}$).
+• c) For $f(x) = -x^2 + 2x + 1$: $\Delta' = 1^2 - (-1)(1) = 2 > 0$ and $a = -1 < 0$. The roots are $x_1 = 1 - \sqrt{2}$ and $x_2 = 1 + \sqrt{2}$.
+  Since $a < 0$, $f(x) > 0$ (opposite sign to $a$) strictly inside the roots.
+  Therefore, the solution set is the open interval $S = (1 - \sqrt{2}; 1 + \sqrt{2})$.
+
+**Example 3:** Solve the garden enclosure problem from the opening scenario: Find the distance $x$ from the fence posts to the wall such that the enclosed area $S(x) = -2x^2 + 20x$ is at least $48\text{ m}^2$.
+
+Solution for Example 3:
+• The condition that the area is not less than $48\text{ m}^2$ leads to the inequality:
+$$-2x^2 + 20x \ge 48 \Leftrightarrow 2x^2 - 20x + 48 \le 0$$
+• The quadratic trinomial $f(x) = 2x^2 - 20x + 48$ has roots $x_1 = 4$ and $x_2 = 6$, and leading coefficient $a = 2 > 0$.
+• Since the inequality requires $f(x) \le 0$ (opposite sign to $a$), the solution lies in the closed interval between the roots: $4 \le x \le 6$.
+• Conclusion: The two corner fence posts must be placed at a distance between $4\text{ m}$ and $6\text{ m}$ from the wall.
+
+**Practice 3:** Solve the following quadratic inequalities:
+a) $-5x^2 + x - 1 \le 0$;
+b) $x^2 - 8x + 16 \le 0$;
+c) $x^2 - x - 6 > 0$.
+
+Solution for Practice 3:
+• a) The trinomial $-5x^2 + x - 1$ has $\Delta = 1 - 20 = -19 < 0$ and $a = -5 < 0$. Hence, $-5x^2 + x - 1 < 0$ for all $x \in \mathbb{R}$.
+  Thus, the inequality holds for all real numbers ($S = \mathbb{R}$).
+• b) We can write $x^2 - 8x + 16 = (x - 4)^2$. The inequality $(x - 4)^2 \le 0$ holds only when $x - 4 = 0 \Leftrightarrow x = 4$. Solution set $S = \\{4\\}$.
+• c) The trinomial $x^2 - x - 6$ has $a = 1 > 0$ and roots $x_1 = -2, x_2 = 3$.
+  Since the inequality requires $> 0$ (same sign as $a$), the solutions lie outside the roots.
+  Therefore, the solution set is $S = (-\infty; -2) \cup (3; +\infty)$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Parametric Problems
+
+**Application (Height of a Ball):** The height above the ground of a ball thrown vertically upward is given by the quadratic function: $h(t) = -4.9t^2 + 20t + 1$, where $h$ is in meters and time $t$ is in seconds. During what time interval is the ball at a height greater than 5 m above the ground?
+
+Solution for Application:
+• The condition $h(t) > 5$ yields the inequality:
+$$-4.9t^2 + 20t + 1 > 5 \Leftrightarrow -4.9t^2 + 20t - 4 > 0 \Leftrightarrow 4.9t^2 - 20t + 4 < 0$$
+• The quadratic trinomial $f(t) = 4.9t^2 - 20t + 4$ has $a = 4.9 > 0$ and two distinct real roots:
+$$t_1 = \frac{20 - \sqrt{20^2 - 4(4.9)(4)}}{2(4.9)} = \frac{20 - \sqrt{321.6}}{9.8} \approx 0.21\text{ (seconds)}$$
+$$t_2 = \frac{20 + \sqrt{321.6}}{9.8} \approx 3.87\text{ (seconds)}$$
+• Since the inequality has the sign $< 0$ (opposite sign to $a$), the solution is the open interval between the roots: $0.21 < t < 3.87$.
+• Conclusion: The ball is higher than 5 m above the ground between approximately $0.21\text{ s}$ and $3.87\text{ s}$ after launch.
+
+**Exercise 6.17 (Parametric Problem with Parameter $m$):** Find all values of the real parameter $m$ such that the following quadratic trinomial is strictly positive for all $x \in \mathbb{R}$:
+$$f(x) = x^2 + (m + 1)x + 2m + 3$$
+
+Solution for Exercise 6.17:
+• The quadratic trinomial $f(x) = x^2 + (m + 1)x + 2m + 3$ has leading coefficient $a = 1 > 0$.
+• By the sign theorem, $f(x) > 0$ for all $x \in \mathbb{R}$ if and only if:
+$$\begin{cases} a > 0 \\\ \Delta < 0 \end{cases} \Leftrightarrow \begin{cases} 1 > 0 \text{ (always true)} \\\ (m + 1)^2 - 4(1)(2m + 3) < 0 \end{cases}$$
+• Expand and simplify the discriminant inequality:
+$$m^2 + 2m + 1 - 8m - 12 < 0 \Leftrightarrow m^2 - 6m - 11 < 0$$
+• The auxiliary quadratic equation $m^2 - 6m - 11 = 0$ has roots $m_1 = 3 - 2\sqrt{5}$ and $m_2 = 3 + 2\sqrt{5}$.
+• Taking the interval between the roots: $3 - 2\sqrt{5} < m < 3 + 2\sqrt{5}$.
+• Conclusion: The required values are $m \in (3 - 2\sqrt{5}; 3 + 2\sqrt{5})$.
+
+**Exercise 6.18 (Downward Vertical Throw):** An object is thrown vertically downward from a height of 320 m with an initial velocity $v_0 = 20\text{ m/s}$. Neglecting air resistance and using $g = 9.8\text{ m/s}^2$, after at least how many seconds will the object be within 100 m of the ground?
+
+Solution for Exercise 6.18:
+• The height of the object at time $t$ ($t \ge 0$) is: $y(t) = y_0 - v_0 t - \frac{1}{2}gt^2 = 320 - 20t - 4.9t^2$.
+• The object is within 100 m of the ground when its height does not exceed 100 m:
+$$y(t) \le 100 \Leftrightarrow 320 - 20t - 4.9t^2 \le 100 \Leftrightarrow 4.9t^2 + 20t - 220 \ge 0$$
+• The positive root of $4.9t^2 + 20t - 220 = 0$ is:
+$$t = \frac{-20 + \sqrt{20^2 - 4(4.9)(-220)}}{2(4.9)} = \frac{-20 + \sqrt{4712}}{9.8} \approx \frac{-20 + 68.64}{9.8} \approx 4.96\text{ (seconds)}$$
+  (Note: If approximating $g = 10\text{ m/s}^2$, the inequality is $5t^2 + 20t - 220 \ge 0 \Leftrightarrow t^2 + 4t - 44 \ge 0 \Rightarrow t \ge -2 + 4\sqrt{3} \approx 4.93\text{ s}$).
+• Conclusion: After at least approximately 4.96 seconds (or about 5 seconds), the object will be within 100 m of the ground.
+
+**Exercise 6.19 (Geometric Optimization with Three Circles):** Let $AB = 4$ be the diameter of a large circle. A point $M$ moves along the segment $AB$, with $AM = x$ ($0 < x < 4$). Two smaller circles are constructed with diameters $AM$ and $MB$. Let $S(x)$ denote the area of the region inside the large circle and outside the two smaller circles. Determine the values of $x$ such that $S(x)$ does not exceed half the sum of the areas of the two smaller circles.
+
+Solution for Exercise 6.19:
+• The radius of the large circle is $R = 2$, so its area is: $S_0 = \pi R^2 = 4\pi$.
+• For the first small circle of diameter $AM = x$, radius $r_1 = \frac{x}{2}$ and area $S_1 = \pi r_1^2 = \frac{\pi x^2}{4}$.
+• For the second small circle of diameter $MB = 4 - x$, radius $r_2 = \frac{4 - x}{2}$ and area $S_2 = \pi r_2^2 = \frac{\pi (4 - x)^2}{4}$.
+• The combined area of the two small circles is:
+$$S\_{12} = S_1 + S_2 = \frac{\pi}{4} [x^2 + (4 - x)^2] = \frac{\pi}{4} (2x^2 - 8x + 16) = \frac{\pi}{2}(x^2 - 4x + 8)$$
+• The area of the target region is:
+$$S(x) = S_0 - S\_{12} = 4\pi - \frac{\pi}{2}(x^2 - 4x + 8) = \frac{\pi}{2}[8 - (x^2 - 4x + 8)] = \frac{\pi}{2}(4x - x^2)$$
+• The condition $S(x) \le \frac{1}{2}S\_{12}$ gives:
+$$\frac{\pi}{2}(4x - x^2) \le \frac{1}{2} \cdot \frac{\pi}{2}(x^2 - 4x + 8) \Leftrightarrow 2(4x - x^2) \le x^2 - 4x + 8$$
+$$\Leftrightarrow 8x - 2x^2 \le x^2 - 4x + 8 \Leftrightarrow 3x^2 - 12x + 8 \ge 0$$
+• The roots of the quadratic equation $3x^2 - 12x + 8 = 0$ are:
+$$x_1 = 2 - \frac{2\sqrt{3}}{3} \approx 0.85; \quad x_2 = 2 + \frac{2\sqrt{3}}{3} \approx 3.15$$
+• Since $a = 3 > 0$ and the inequality has sign $\ge 0$, combined with the physical restriction $0 < x < 4$:
+$$x \in \left(0; 2 - \frac{2\sqrt{3}}{3}\right] \cup \left[2 + \frac{2\sqrt{3}}{3}; 4\right).$$
+• Conclusion: The valid values of $x$ are $0 < x \le 2 - \frac{2\sqrt{3}}{3}$ or $2 + \frac{2\sqrt{3}}{3} \le x < 4$.
+
+### b) Detailed Section Exercises
+
+**Exercise 6.15:** Determine the sign of the following quadratic trinomials:
+a) $f(x) = 3x^2 - 4x + 1$;
+b) $f(x) = x^2 + 2x + 1$;
+c) $f(x) = -x^2 + 3x - 2$;
+d) $f(x) = -x^2 + x - 1$.
+
+Solution for Exercise 6.15:
+• a) $f(x) = 3x^2 - 4x + 1$: $a = 3 > 0$, roots are $x_1 = \frac{1}{3}, x_2 = 1$.
+  + $f(x) < 0$ for $x \in \left(\frac{1}{3}; 1\right)$;
+  + $f(x) > 0$ for $x \in \left(-\infty; \frac{1}{3}\right) \cup (1; +\infty)$;
+  + $f(x) = 0$ for $x \in \left\\{\frac{1}{3}; 1\right\\}$.
+• b) $f(x) = x^2 + 2x + 1 = (x + 1)^2$: $a = 1 > 0$, double root $x = -1$.
+  + $f(x) > 0$ for all $x \ne -1$, and $f(-1) = 0$.
+• c) $f(x) = -x^2 + 3x - 2$: $a = -1 < 0$, roots are $x_1 = 1, x_2 = 2$.
+  + $f(x) > 0$ for $x \in (1; 2)$;
+  + $f(x) < 0$ for $x \in (-\infty; 1) \cup (2; +\infty)$;
+  + $f(x) = 0$ for $x \in \\{1; 2\\}$.
+• d) $f(x) = -x^2 + x - 1$: $\Delta = 1 - 4 = -3 < 0$, $a = -1 < 0$.
+  + $f(x) < 0$ for all $x \in \mathbb{R}$.
+
+**Exercise 6.16:** Solve the following quadratic inequalities:
+a) $x^2 - 1 \ge 0$;
+b) $x^2 - 2x - 1 < 0$;
+c) $-3x^2 + 12x + 1 \le 0$;
+d) $5x^2 + x + 1 \ge 0$.
+
+Solution for Exercise 6.16:
+• a) $x^2 - 1 \ge 0$: roots are $x = \pm 1$, $a = 1 > 0$.
+  Solution set: $S = (-\infty; -1] \cup [1; +\infty)$.
+• b) $x^2 - 2x - 1 < 0$: $a = 1 > 0$, roots are $x_1 = 1 - \sqrt{2}$, $x_2 = 1 + \sqrt{2}$.
+  Taking the negative interval (opposite sign to $a$):
+  Solution set: $S = (1 - \sqrt{2}; 1 + \sqrt{2})$.
+• c) $-3x^2 + 12x + 1 \le 0$: $a = -3 < 0$, $\Delta' = 6^2 - (-3)(1) = 39 > 0$, roots are $x\_{1,2} = \frac{6 \pm \sqrt{39}}{3}$.
+  Taking the region where the trinomial has the same sign as $a$ ($\le 0$):
+  Solution set: $S = \left(-\infty; \frac{6 - \sqrt{39}}{3}\right] \cup \left[\frac{6 + \sqrt{39}}{3}; +\infty\right)$.
+• d) $5x^2 + x + 1 \ge 0$: $\Delta = 1 - 20 = -19 < 0$, $a = 5 > 0$.
+  The trinomial is strictly positive for all $x \in \mathbb{R}$.
+  Solution set: $S = \mathbb{R}$.
