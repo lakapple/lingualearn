@@ -1,0 +1,244 @@
+---
+title: 'Lesson 19: Equations of a Line'
+description: 'Theoretical Framework: Equations of a Straight Line with Illustrative Examples.'
+tags:
+  - grade 10
+  - Direction vector
+  - slope (gradient)
+  - General equation of a line
+  - Parametric equations of a line
+  - normal vector
+  - Intercept form
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Direction vector, normal vector
+
+·       General equation of a line
+
+·       Parametric equations of a line
+
+·       Intercept form, slope (gradient)
+
+### **Knowledge and Skills:**
+
+·       Describe and formulate the general equation and parametric equations of a straight line in the Cartesian coordinate plane.
+
+·       Determine the equation of a straight line given: a point and a normal vector; a point and a direction vector; or two distinct points.
+
+·       Explain the geometric and algebraic correspondence between a linear function graph and a straight line.
+
+·       Apply line equations to geometric problems and practical real-world modeling (aircraft navigation, temperature scale conversion).
+
+## General Equation of a Line
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_tong_quat"/>
+
+### a) Normal Vector and the General Equation
+
+Definition of a Normal Vector:
+A non-zero vector $\vec{n} \ne \vec{0}$ is called a normal vector of a line $\Delta$ if its line of action is perpendicular to $\Delta$.
+• Remark 1: If $\vec{n}$ is a normal vector of line $\Delta$, then $k\vec{n}$ ($k \ne 0$) is also a normal vector of $\Delta$.
+• Remark 2: A straight line is uniquely determined by a point it passes through and a normal vector.
+
+General Equation of a Line:
+• In the Cartesian plane $Oxy$, the line $\Delta$ passing through point $A(x_0; y_0)$ with normal vector $\vec{n}(a; b)$ is defined by:
+$$a(x - x_0) + b(y - y_0) = 0 \Leftrightarrow ax + by + c = 0 \quad (\text{where } c = -ax_0 - by_0)$$
+• Conversely, every linear equation of the form $ax + by + c = 0$ ($a^2 + b^2 \ne 0$) represents a straight line with normal vector $\vec{n}(a; b)$.
+
+Special Cases of $ax + by + c = 0$:
+• If $b = 0$ ($a \ne 0$): The line equation reduces to $x = -\frac{c}{a}$, which is perpendicular to the $x$-axis (parallel to or coinciding with $Oy$).
+• If $a = 0$ ($b \ne 0$): The line equation reduces to $y = -\frac{c}{b}$, which is perpendicular to the $y$-axis (parallel to or coinciding with $Ox$).
+• If $c = 0$: The line $ax + by = 0$ passes through the origin $O(0; 0)$.
+• If $b \ne 0$: The equation can be expressed in slope-intercept form $y = kx + m$ (with slope $k = -\frac{a}{b}$).
+
+### b) Examples and Practice on the General Equation
+
+**Example 1:** In the coordinate plane, given $\triangle ABC$ with vertices $A(3; 1)$, $B(4; 0)$, and $C(5; 3)$. Specify a normal vector of the perpendicular bisector of segment $AB$ and a normal vector of the altitude from $A$.
+
+Solution for Example 1:
+• The perpendicular bisector of segment $AB$ is orthogonal to segment $AB$, so it admits $\vec{AB} = (4 - 3; 0 - 1) = (1; -1)$ as a normal vector.
+• The altitude through vertex $A$ is orthogonal to the opposite side $BC$, so it admits $\vec{BC} = (5 - 4; 3 - 0) = (1; 3)$ as a normal vector.
+
+**Example 2:** Write the general equation of the line $\Delta$ passing through point $A(2; 1)$ with normal vector $\vec{n}(3; 4)$.
+
+Solution for Example 2:
+• The general equation of line $\Delta$ is:
+$$3(x - 2) + 4(y - 1) = 0 \Leftrightarrow 3x - 6 + 4y - 4 = 0 \Leftrightarrow 3x + 4y - 10 = 0.$$
+
+**Practice 1:** In the coordinate plane, given $\triangle ABC$ with vertices $A(-1; 5)$, $B(2; 3)$, and $C(6; 1)$. Write the general equation of the altitude drawn from vertex $A$.
+
+Solution for Practice 1:
+• The altitude from $A$ passes through $A(-1; 5)$ and is perpendicular to $BC$, so it takes $\vec{BC} = (6 - 2; 1 - 3) = (4; -2)$ as a normal vector. Choosing the collinear vector $\vec{n} = (2; -1)$:
+• The general equation of the altitude is:
+$$2(x + 1) - 1(y - 5) = 0 \Leftrightarrow 2x - y + 7 = 0.$$
+
+**Example 3:** Determine the equation of the line $\Delta$ passing through $A(0; b)$ with normal vector $\vec{n}(a; -1)$. Explain its connection to the graph of the linear function $y = ax + b$.
+
+Solution for Example 3:
+• The equation of line $\Delta$ is: $a(x - 0) - 1(y - b) = 0 \Leftrightarrow ax - y + b = 0 \Leftrightarrow y = ax + b$.
+• Line $\Delta$ is precisely the graph of the linear function $y = ax + b$.
+
+**Practice 2:** Identify a normal vector of the line $\Delta: y = 3x + 4$.
+
+Solution for Practice 2:
+• Rewriting the equation in general form: $3x - y + 4 = 0$.
+• A normal vector of $\Delta$ is $\vec{n} = (3; -1)$ (or $\vec{n} = (-3; 1)$).
+
+## Parametric Equations of a Line
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_tham_so"/>
+
+### a) Direction Vector and Parametric Equations
+
+Definition of a Direction Vector:
+A non-zero vector $\vec{u} \ne \vec{0}$ is called a direction vector of a line $\Delta$ if its line of action is parallel to or lies on $\Delta$.
+• Remark 1: If $\vec{u}$ is a direction vector of $\Delta$, then $k\vec{u}$ ($k \ne 0$) is also a direction vector of $\Delta$.
+• Remark 2: A straight line is uniquely determined by a point it passes through and a direction vector.
+• Duality between Direction and Normal Vectors: If a line has normal vector $\vec{n}(a; b)$, then $\vec{u}(-b; a)$ (or $\vec{u}(b; -a)$) serves as a direction vector because $\vec{n} \cdot \vec{u} = a(-b) + b(a) = 0$.
+
+Parametric Equations of a Line:
+Let line $\Delta$ pass through point $A(x_0; y_0)$ with direction vector $\vec{u}(u_1; u_2)$. A point $M(x; y)$ belongs to $\Delta$ if and only if $\vec{AM} = t\vec{u}$ for some scalar $t \in \mathbb{R}$:
+$$\begin{cases} x = x_0 + u_1 t \\\ y = y_0 + u_2 t \end{cases} \quad (t \in \mathbb{R})$$
+This system is called the parametric equations of the straight line $\Delta$ ($t$ is the real parameter).
+
+### b) Examples and Practice on Parametric Equations
+
+**Example 4:** In the coordinate plane, given $A(3; 2)$ and $B(1; -4)$. Specify two direction vectors of the line $AB$.
+
+Solution for Example 4:
+• The line $AB$ admits $\vec{AB} = (1 - 3; -4 - 2) = (-2; -6)$ as a direction vector.
+• Selecting $\vec{u} = -\frac{1}{2}\vec{AB} = (1; 3)$, the vector $\vec{u}$ is also a direction vector of the line $AB$.
+
+**Practice 3:** Specify a direction vector of the line $\Delta: 2x - y + 1 = 0$.
+
+Solution for Practice 3:
+• The line has normal vector $\vec{n} = (2; -1)$, and therefore a direction vector is $\vec{u} = (1; 2)$.
+
+**Example 5:** Write the parametric equations of the line $\Delta$ passing through point $A(2; -3)$ with direction vector $\vec{u}(4; -1)$.
+
+Solution for Example 5:
+• The parametric equations of $\Delta$ are:
+$$\begin{cases} x = 2 + 4t \\\ y = -3 - t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Practice 4:** Write the parametric equations of the line $\Delta$ passing through point $M(-1; 2)$ and parallel to the line $d: 3x - 4y - 1 = 0$.
+
+Solution for Practice 4:
+• Line $d$ has normal vector $\vec{n}\_d = (3; -4)$, so its direction vector is $\vec{u}\_d = (4; 3)$.
+• Since $\Delta \parallel d$, line $\Delta$ takes $\vec{u} = \vec{u}\_d = (4; 3)$ as a direction vector.
+• The parametric equations of $\Delta$ are:
+$$\begin{cases} x = -1 + 4t \\\ y = 2 + 3t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Example 6:** Write the parametric equations of the line passing through the two points $A(2; 3)$ and $B(1; 5)$.
+
+Solution for Example 6:
+• Line $AB$ passes through $A(2; 3)$ and has direction vector $\vec{AB} = (1 - 2; 5 - 3) = (-1; 2)$.
+• Its parametric equations are:
+$$\begin{cases} x = 2 - t \\\ y = 3 + 2t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Practice 5:** Formulate the parametric and general equations of a line passing through two distinct given points $A(x_1; y_1)$ and $B(x_2; y_2)$.
+
+Solution for Practice 5:
+• Line $AB$ has direction vector $\vec{AB} = (x_2 - x_1; y_2 - y_1)$.
+  + Parametric equations:
+$$\begin{cases} x = x_1 + (x_2 - x_1)t \\\ y = y_1 + (y_2 - y_1)t \end{cases} \quad (t \in \mathbb{R})$$
+  + Symmetric form (if $x_2 \ne x_1$ and $y_2 \ne y_1$): $\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}$.
+  + General equation: Using normal vector $\vec{n} = (y_1 - y_2; x_2 - x_1)$:
+$$(y_2 - y_1)(x - x_1) - (x_2 - x_1)(y - y_1) = 0.$$
+
+## Applications and Exercises
+
+### a) Real-World Problems and Modeling
+
+**Application (Temperature Scale Conversion between Celsius and Fahrenheit):** Temperature conversion between degrees Celsius ($a^\circ\text{C}$) and degrees Fahrenheit ($b^\circ\text{F}$) is calibrated by two reference benchmarks: Water freezes at $0^\circ\text{C}$, corresponding to $32^\circ\text{F}$; Water boils at $100^\circ\text{C}$, corresponding to $212^\circ\text{F}$. In the Cartesian plane $Oxy$, the point $M(a; b)$ lies on the straight line passing through $A(0; 32)$ and $B(100; 212)$. What Celsius temperatures correspond to $0^\circ\text{F}$ and $100^\circ\text{F}$?
+
+Solution for Application:
+• The equation of the line passing through $A(0; 32)$ and $B(100; 212)$:
+  Slope: $k = \frac{212 - 32}{100 - 0} = \frac{180}{100} = \frac{9}{5} = 1.8$.
+  Linear relation: $b = 1.8a + 32$ (or $b = \frac{9}{5}a + 32$).
+  Expressing $a$ in terms of $b$: $a = \frac{b - 32}{1.8} = \frac{5}{9}(b - 32)$.
+• When $b = 0^\circ\text{F}$: $a = \frac{5}{9}(0 - 32) = -\frac{160}{9} \approx -17.78^\circ\text{C}$.
+• When $b = 100^\circ\text{F}$: $a = \frac{5}{9}(100 - 32) = \frac{5 \cdot 68}{9} = \frac{340}{9} \approx 37.78^\circ\text{C}$.
+
+**Exercise 7.5 (Intercept Form of a Line Equation):** Prove that the straight line passing through the two intercept points $A(a; 0)$ and $B(0; b)$ with $ab \ne 0$ has the equation:
+$$\frac{x}{a} + \frac{y}{b} = 1$$
+
+Solution for Exercise 7.5:
+• The vector $\vec{AB} = (0 - a; b - 0) = (-a; b)$ is a direction vector of line $AB$.
+• Thus, a normal vector of line $AB$ is $\vec{n} = (b; a)$.
+• Since the line passes through $B(0; b)$, its general equation is:
+$$b(x - 0) + a(y - b) = 0 \Leftrightarrow bx + ay - ab = 0 \Leftrightarrow bx + ay = ab$$
+• Dividing both sides by $ab \ne 0$ yields:
+$$\frac{bx}{ab} + \frac{ay}{ab} = \frac{ab}{ab} \Leftrightarrow \frac{x}{a} + \frac{y}{b} = 1 \quad (\text{Q.E.D.}).$$
+
+**Exercise 7.6 (Flight Trajectory from Noi Bai to Da Nang):** Noi Bai International Airport is located at ($21.2^\circ\text{N}$, $105.8^\circ\text{E}$), and Da Nang International Airport is at ($16.1^\circ\text{N}$, $108.2^\circ\text{E}$). At time $t$ (in hours) after takeoff, the aircraft coordinates are modeled by the parametric equations:
+$$\begin{cases} x = 21.2 - \frac{153}{40}t \\\ y = 105.8 + \frac{9}{5}t \end{cases}$$
+a) How many hours does the flight from Hanoi to Da Nang take?
+b) At 1 hour after departure, has the flight crossed the 17th parallel ($17^\circ\text{N}$)?
+
+Solution for Exercise 7.6:
+• a) Upon arrival at Da Nang Airport, the aircraft latitude is $x = 16.1^\circ\text{N}$.
+  Substituting into the latitude equation:
+$$16.1 = 21.2 - \frac{153}{40}t \Leftrightarrow \frac{153}{40}t = 21.2 - 16.1 = 5.1 \Leftrightarrow t = \frac{5.1 \cdot 40}{153} = \frac{204}{153} = \frac{4}{3}\text{ (hours)} = 1\text{ hour } 20\text{ minutes}.$$
+  (Verification for longitude: $y = 105.8 + \frac{9}{5} \cdot \frac{4}{3} = 105.8 + 2.4 = 108.2^\circ\text{E}$, which matches exactly).
+  Thus, the flight duration is $\frac{4}{3}$ hours (1 hour 20 minutes).
+• b) At time $t = 1\text{ hour after takeoff}$:
+  The aircraft latitude is: $x(1) = 21.2 - \frac{153}{40}(1) = 21.2 - 3.825 = 17.375^\circ\text{N}$.
+  Since $17.375^\circ > 17^\circ$ (the aircraft travels southbound, decreasing its latitude from $21.2^\circ$ to $16.1^\circ$), at 1 hour the plane has not yet crossed the 17th parallel.
+
+### b) Detailed Section Exercises
+
+**Exercise 7.1:** In the coordinate plane, given $\vec{n} = (2; 1)$, $\vec{v} = (3; 2)$, $A(1; 3)$, $B(-2; 1)$.
+a) Write the general equation of line $\Delta_1$ passing through $A$ with normal vector $\vec{n}$.
+b) Write the parametric equations of line $\Delta_2$ passing through $B$ with direction vector $\vec{v}$.
+c) Write the parametric equations of line $AB$.
+
+Solution for Exercise 7.1:
+• a) General equation of $\Delta_1$: $2(x - 1) + 1(y - 3) = 0 \Leftrightarrow 2x + y - 5 = 0$.
+• b) Parametric equations of $\Delta_2$ passing through $B(-2; 1)$ with direction vector $\vec{v}(3; 2)$:
+$$\begin{cases} x = -2 + 3t \\\ y = 1 + 2t \end{cases} \quad (t \in \mathbb{R}).$$
+• c) Line $AB$ passes through $A(1; 3)$ with direction vector $\vec{AB} = (-2 - 1; 1 - 3) = (-3; -2)$ (choosing collinear vector $\vec{u} = (3; 2)$):
+$$\begin{cases} x = 1 + 3t \\\ y = 3 + 2t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Exercise 7.2:** Write the general equations of the coordinate axes $Ox$ and $Oy$.
+
+Solution for Exercise 7.2:
+• The $x$-axis ($Ox$): Passes through $O(0; 0)$ and is perpendicular to $Oy$, taking unit vector $\vec{j}(0; 1)$ as normal vector. General equation: $0(x - 0) + 1(y - 0) = 0 \Leftrightarrow y = 0$.
+• The $y$-axis ($Oy$): Passes through $O(0; 0)$ and is perpendicular to $Ox$, taking unit vector $\vec{i}(1; 0)$ as normal vector. General equation: $1(x - 0) + 0(y - 0) = 0 \Leftrightarrow x = 0$.
+
+**Exercise 7.3:** Given two lines $\Delta_1: \begin{cases} x = 1 + 2t \\\ y = 3 + 5t \end{cases}$ and $\Delta_2: 2x + 3y - 5 = 0$.
+a) Find the general equation of $\Delta_1$.
+b) Find the parametric equations of $\Delta_2$.
+
+Solution for Exercise 7.3:
+• a) Line $\Delta_1$ passes through $M(1; 3)$ with direction vector $\vec{u} = (2; 5)$, hence normal vector $\vec{n} = (5; -2)$.
+  General equation of $\Delta_1$: $5(x - 1) - 2(y - 3) = 0 \Leftrightarrow 5x - 2y + 1 = 0$.
+• b) Line $\Delta_2$ has normal vector $\vec{n} = (2; 3)$, so a direction vector is $\vec{u} = (3; -2)$ (or $(-3; 2)$).
+  Finding a point on $\Delta_2$: set $y = 1 \Rightarrow 2x + 3(1) - 5 = 0 \Rightarrow x = 1$, giving $P(1; 1) \in \Delta_2$.
+  Parametric equations of $\Delta_2$:
+$$\begin{cases} x = 1 + 3t \\\ y = 1 - 2t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Exercise 7.4:** In the coordinate plane, given $\triangle ABC$ with $A(1; 2)$, $B(3; 0)$, and $C(-2; -1)$.
+a) Write the equation of the altitude from $A$.
+b) Write the equation of the median from $B$.
+
+Solution for Exercise 7.4:
+• a) The altitude through $A$ passes through $A(1; 2)$ and is perpendicular to $BC$, so it takes $\vec{BC} = (-2 - 3; -1 - 0) = (-5; -1)$ as a normal vector (choosing $\vec{n} = (5; 1)$).
+  General equation of the altitude through $A$:
+$$5(x - 1) + 1(y - 2) = 0 \Leftrightarrow 5x + y - 7 = 0.$$
+• b) Let $M$ be the midpoint of side $AC$:
+  $x_M = \frac{x_A + x_C}{2} = \frac{1 + (-2)}{2} = -\frac{1}{2}$; $y_M = \frac{y_A + y_C}{2} = \frac{2 + (-1)}{2} = \frac{1}{2} \Rightarrow M\left(-\frac{1}{2}; \frac{1}{2}\right)$.
+  The median line $BM$ passes through $B(3; 0)$ with direction vector $\vec{BM} = \left(-\frac{1}{2} - 3; \frac{1}{2} - 0\right) = \left(-\frac{7}{2}; \frac{1}{2}\right)$.
+  Selecting direction vector $\vec{u} = (-7; 1)$ or $\vec{u} = (7; -1)$.
+  Hence, a normal vector of line $BM$ is $\vec{n} = (1; 7)$.
+  The general equation of median $BM$ is:
+$$1(x - 3) + 7(y - 0) = 0 \Leftrightarrow x + 7y - 3 = 0.$$

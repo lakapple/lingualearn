@@ -1,0 +1,244 @@
+---
+title: 'Bài 19: Phương trình của đường thẳng.'
+description: Hệ thống kiến thức về phương trình đường thắng và các ví dụ minh họa.
+tags:
+  - lớp 10
+  - Vectơ chỉ phương
+  - hệ số góc
+  - vectơ pháp tuyến
+  - Phương trình tổng quát của đường thẳng
+  - Phương trình tham số của đường thẳng
+  - Phương trình đoạn chắn
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Vectơ chỉ phương, vectơ pháp tuyến
+
+·       Phương trình tổng quát của đường thẳng
+
+·       Phương trình tham số của đường thẳng
+
+·       Phương trình đoạn chắn, hệ số góc
+
+### **Kiến thức, kĩ năng:**
+
+·       Mô tả và thiết lập phương trình tổng quát, phương trình tham số của đường thẳng trong mặt phẳng toạ độ.
+
+·       Lập phương trình đường thẳng khi biết: một điểm và một vectơ pháp tuyến; một điểm và một vectơ chỉ phương; đi qua hai điểm phân biệt.
+
+·       Giải thích mối liên hệ giữa đồ thị hàm số bậc nhất và đường thẳng.
+
+·       Vận dụng kiến thức về phương trình đường thẳng để giải quyết các bài toán hình học và các bài toán thực tiễn (chuyển động máy bay, quy đổi nhiệt độ).
+
+## Phương trình tổng quát của đường thẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_tong_quat"/>
+
+### a) Vectơ pháp tuyến và phương trình tổng quát
+
+Định nghĩa vectơ pháp tuyến:
+Vectơ $\vec{n} \ne \vec{0}$ được gọi là vectơ pháp tuyến (VTPT) của đường thẳng $\Delta$ nếu giá của nó vuông góc với $\Delta$.
+• Nhận xét 1: Nếu $\vec{n}$ là một vectơ pháp tuyến của $\Delta$ thì $k\vec{n}$ ($k \ne 0$) cũng là một vectơ pháp tuyến của $\Delta$.
+• Nhận xét 2: Một đường thẳng hoàn toàn xác định nếu biết một điểm nó đi qua và một vectơ pháp tuyến của nó.
+
+Phương trình tổng quát của đường thẳng:
+• Trong mặt phẳng toạ độ $Oxy$, đường thẳng $\Delta$ đi qua điểm $A(x_0; y_0)$ và nhận vectơ $\vec{n}(a; b)$ làm vectơ pháp tuyến có phương trình là:
+$$a(x - x_0) + b(y - y_0) = 0 \Leftrightarrow ax + by + c = 0 \quad (\text{với } c = -ax_0 - by_0)$$
+• Ngược lại, mỗi phương trình dạng $ax + by + c = 0$ ($a^2 + b^2 \ne 0$) đều là phương trình tổng quát của một đường thẳng, nhận $\vec{n}(a; b)$ làm một vectơ pháp tuyến.
+
+Các trường hợp đặc biệt của đường thẳng $ax + by + c = 0$:
+• Nếu $b = 0$ ($a \ne 0$): Đường thẳng có dạng $x = -\frac{c}{a}$ vuông góc với trục $Ox$ (song song hoặc trùng với $Oy$).
+• Nếu $a = 0$ ($b \ne 0$): Đường thẳng có dạng $y = -\frac{c}{b}$ vuông góc với trục $Oy$ (song song hoặc trùng với $Ox$).
+• Nếu $c = 0$: Đường thẳng $ax + by = 0$ đi qua gốc toạ độ $O(0; 0)$.
+• Nếu $b \ne 0$: Đường thẳng đưa về dạng hàm số bậc nhất $y = kx + m$ (với hệ số góc $k = -\frac{a}{b}$).
+
+### b) Ví dụ và luyện tập về phương trình tổng quát
+
+**Ví dụ 1:** Trong mặt phẳng toạ độ, cho tam giác $ABC$ có $A(3; 1)$, $B(4; 0)$, $C(5; 3)$. Hãy chỉ ra một vectơ pháp tuyến của đường trung trực của đoạn thẳng $AB$ và một vectơ pháp tuyến của đường cao kẻ từ $A$.
+
+Lời giải Ví dụ 1:
+• Đường trung trực của đoạn thẳng $AB$ vuông góc với đoạn $AB$ nên nhận $\vec{AB} = (4 - 3; 0 - 1) = (1; -1)$ làm một vectơ pháp tuyến.
+• Đường cao kẻ từ đỉnh $A$ vuông góc với cạnh $BC$ nên nhận $\vec{BC} = (5 - 4; 3 - 0) = (1; 3)$ làm một vectơ pháp tuyến.
+
+**Ví dụ 2:** Lập phương trình tổng quát của đường thẳng $\Delta$ đi qua điểm $A(2; 1)$ và nhận $\vec{n}(3; 4)$ làm vectơ pháp tuyến.
+
+Lời giải Ví dụ 2:
+• Đường thẳng $\Delta$ có phương trình là:
+$$3(x - 2) + 4(y - 1) = 0 \Leftrightarrow 3x - 6 + 4y - 4 = 0 \Leftrightarrow 3x + 4y - 10 = 0.$$
+
+**Luyện tập 1:** Trong mặt phẳng toạ độ, cho tam giác $ABC$ có $A(-1; 5)$, $B(2; 3)$, $C(6; 1)$. Lập phương trình tổng quát của đường cao kẻ từ $A$ của tam giác $ABC$.
+
+Lời giải Luyện tập 1:
+• Đường cao kẻ từ đỉnh $A$ đi qua $A(-1; 5)$ và vuông góc với $BC$, nên nhận $\vec{BC} = (6 - 2; 1 - 3) = (4; -2)$ làm một vectơ pháp tuyến (chọn $\vec{n} = (2; -1)$ cùng phương với $\vec{BC}$).
+• Phương trình tổng quát của đường cao kẻ từ $A$ là:
+$$2(x + 1) - 1(y - 5) = 0 \Leftrightarrow 2x - y + 7 = 0.$$
+
+**Ví dụ 3:** Lập phương trình đường thẳng $\Delta$ đi qua $A(0; b)$ và có vectơ pháp tuyến $\vec{n}(a; -1)$. Chỉ ra mối liên hệ giữa $\Delta$ với đồ thị hàm số $y = ax + b$.
+
+Lời giải Ví dụ 3:
+• Phương trình đường thẳng $\Delta$: $a(x - 0) - 1(y - b) = 0 \Leftrightarrow ax - y + b = 0 \Leftrightarrow y = ax + b$.
+• Đường thẳng $\Delta$ chính là đồ thị của hàm số bậc nhất $y = ax + b$.
+
+**Luyện tập 2:** Hãy chỉ ra một vectơ pháp tuyến của đường thẳng $\Delta: y = 3x + 4$.
+
+Lời giải Luyện tập 2:
+• Viết lại phương trình $\Delta$ dưới dạng tổng quát: $3x - y + 4 = 0$.
+• Một vectơ pháp tuyến của $\Delta$ là $\vec{n} = (3; -1)$ (hoặc $\vec{n} = (-3; 1)$).
+
+## Phương trình tham số của đường thẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_tham_so"/>
+
+### a) Vectơ chỉ phương và phương trình tham số
+
+Định nghĩa vectơ chỉ phương:
+Vectơ $\vec{u} \ne \vec{0}$ được gọi là vectơ chỉ phương (VTCP) của đường thẳng $\Delta$ nếu giá của nó song song hoặc trùng với $\Delta$.
+• Nhận xét 1: Nếu $\vec{u}$ là VTCP của $\Delta$ thì $k\vec{u}$ ($k \ne 0$) cũng là VTCP của $\Delta$.
+• Nhận xét 2: Đường thẳng hoàn toàn xác định nếu biết một điểm nó đi qua và một vectơ chỉ phương.
+• Mối quan hệ giữa VTCP và VTPT: Nếu đường thẳng có VTPT là $\vec{n}(a; b)$ thì có một VTCP là $\vec{u}(-b; a)$ (hoặc $\vec{u}(b; -a)$) vì $\vec{n} \cdot \vec{u} = a(-b) + ba = 0$.
+
+Phương trình tham số của đường thẳng:
+Cho đường thẳng $\Delta$ đi qua điểm $A(x_0; y_0)$ và có vectơ chỉ phương $\vec{u}(u_1; u_2)$. Điểm $M(x; y) \in \Delta \Leftrightarrow \vec{AM} = t\vec{u}$ ($t \in \mathbb{R}$):
+$$\begin{cases} x = x_0 + u_1 t \\\ y = y_0 + u_2 t \end{cases} \quad (t \in \mathbb{R})$$
+Hệ phương trình trên được gọi là phương trình tham số của đường thẳng $\Delta$ ($t$ là tham số).
+
+### b) Ví dụ và luyện tập về phương trình tham số
+
+**Ví dụ 4:** Trong mặt phẳng toạ độ, cho $A(3; 2)$ và $B(1; -4)$. Chỉ ra hai vectơ chỉ phương của đường thẳng $AB$.
+
+Lời giải Ví dụ 4:
+• Đường thẳng $AB$ nhận $\vec{AB} = (1 - 3; -4 - 2) = (-2; -6)$ làm một vectơ chỉ phương.
+• Chọn $\vec{u} = -\frac{1}{2}\vec{AB} = (1; 3)$, khi đó $\vec{u}$ cũng là một vectơ chỉ phương của đường thẳng $AB$.
+
+**Luyện tập 3:** Hãy chỉ ra một vectơ chỉ phương của đường thẳng $\Delta: 2x - y + 1 = 0$.
+
+Lời giải Luyện tập 3:
+• Đường thẳng có vectơ pháp tuyến $\vec{n} = (2; -1)$, do đó một vectơ chỉ phương của $\Delta$ là $\vec{u} = (1; 2)$.
+
+**Ví dụ 5:** Lập phương trình tham số của đường thẳng $\Delta$ đi qua điểm $A(2; -3)$ và có vectơ chỉ phương $\vec{u}(4; -1)$.
+
+Lời giải Ví dụ 5:
+• Phương trình tham số của $\Delta$ là:
+$$\begin{cases} x = 2 + 4t \\\ y = -3 - t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Luyện tập 4:** Lập phương trình tham số của đường thẳng $\Delta$ đi qua điểm $M(-1; 2)$ và song song với đường thẳng $d: 3x - 4y - 1 = 0$.
+
+Lời giải Luyện tập 4:
+• Đường thẳng $d$ có VTPT $\vec{n}\_d = (3; -4)$ nên có VTCP là $\vec{u}\_d = (4; 3)$.
+• Vì $\Delta \parallel d$ nên $\Delta$ nhận $\vec{u} = \vec{u}\_d = (4; 3)$ làm một vectơ chỉ phương.
+• Phương trình tham số của $\Delta$ là:
+$$\begin{cases} x = -1 + 4t \\\ y = 2 + 3t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Ví dụ 6:** Lập phương trình tham số của đường thẳng đi qua hai điểm $A(2; 3)$ và $B(1; 5)$.
+
+Lời giải Ví dụ 6:
+• Đường thẳng $AB$ đi qua $A(2; 3)$ và nhận $\vec{AB} = (1 - 2; 5 - 3) = (-1; 2)$ làm VTCP.
+• Phương trình tham số của $AB$ là:
+$$\begin{cases} x = 2 - t \\\ y = 3 + 2t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Luyện tập 5:** Lập phương trình tham số và phương trình tổng quát của đường thẳng đi qua hai điểm phân biệt $A(x_1; y_1)$ và $B(x_2; y_2)$ cho trước.
+
+Lời giải Luyện tập 5:
+• Đường thẳng $AB$ nhận $\vec{AB} = (x_2 - x_1; y_2 - y_1)$ làm vectơ chỉ phương.
+  + Phương trình tham số:
+$$\begin{cases} x = x_1 + (x_2 - x_1)t \\\ y = y_1 + (y_2 - y_1)t \end{cases} \quad (t \in \mathbb{R})$$
+  + Nếu $x_2 \ne x_1$ và $y_2 \ne y_1$, phương trình chính tắc là $\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}$.
+  + Phương trình tổng quát: VTPT là $\vec{n} = (y_1 - y_2; x_2 - x_1)$, phương trình là:
+$$(y_2 - y_1)(x - x_1) - (x_2 - x_1)(y - y_1) = 0.$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng (Quy đổi nhiệt độ độ C và độ F):** Nhiệt độ giữa thang Celsius ($a^\circ\text{C}$) và thang Fahrenheit ($b^\circ\text{F}$) được xác định bởi hai mốc: Nước đóng băng ở $0^\circ\text{C}$ ứng với $32^\circ\text{F}$; Nước sôi ở $100^\circ\text{C}$ ứng với $212^\circ\text{F}$. Trên mặt phẳng toạ độ $Oxy$, điểm $M(a; b)$ thuộc đường thẳng đi qua $A(0; 32)$ và $B(100; 212)$. Hỏi $0^\circ\text{F}$ và $100^\circ\text{F}$ tương ứng với bao nhiêu độ C?
+
+Lời giải Vận dụng:
+• Phương trình đường thẳng đi qua $A(0; 32)$ và $B(100; 212)$:
+  Hệ số góc: $k = \frac{212 - 32}{100 - 0} = \frac{180}{100} = \frac{9}{5} = 1{,}8$.
+  Phương trình liên hệ: $b = 1{,}8a + 32$ (hay $b = \frac{9}{5}a + 32$).
+  Suy ra công thức tính $a$ theo $b$: $a = \frac{b - 32}{1{,}8} = \frac{5}{9}(b - 32)$.
+• Khi $b = 0^\circ\text{F}$: $a = \frac{5}{9}(0 - 32) = -\frac{160}{9} \approx -17{,}78^\circ\text{C}$.
+• Khi $b = 100^\circ\text{F}$: $a = \frac{5}{9}(100 - 32) = \frac{5 \cdot 68}{9} = \frac{340}{9} \approx 37{,}78^\circ\text{C}$.
+
+**Bài 7.5 (Phương trình đoạn chắn của đường thẳng):** Chứng minh rằng đường thẳng đi qua hai điểm $A(a; 0)$ và $B(0; b)$ với $ab \ne 0$ có phương trình là:
+$$\frac{x}{a} + \frac{y}{b} = 1$$
+
+Lời giải Bài 7.5:
+• Ta có $\vec{AB} = (0 - a; b - 0) = (-a; b)$ là một vectơ chỉ phương của đường thẳng $AB$.
+• Suy ra một vectơ pháp tuyến của $AB$ là $\vec{n} = (b; a)$.
+• Đường thẳng $AB$ đi qua điểm $B(0; b)$ nên có phương trình tổng quát là:
+$$b(x - 0) + a(y - b) = 0 \Leftrightarrow bx + ay - ab = 0 \Leftrightarrow bx + ay = ab$$
+• Vì $ab \ne 0$, chia cả hai vế cho $ab$ ta được:
+$$\frac{bx}{ab} + \frac{ay}{ab} = \frac{ab}{ab} \Leftrightarrow \frac{x}{a} + \frac{y}{b} = 1 \quad (\text{đpcm}).$$
+
+**Bài 7.6 (Chuyển động máy bay Nội Bài - Đà Nẵng):** Sân bay Nội Bài có toạ độ ($21{,}2^\circ\text{B}$, $105{,}8^\circ\text{Đ}$), sân bay Đà Nẵng có toạ độ ($16{,}1^\circ\text{B}$, $108{,}2^\circ\text{Đ}$). Tại thời điểm $t$ giờ kể từ lúc cất cánh, toạ độ máy bay được mô tả bởi phương trình tham số:
+$$\begin{cases} x = 21{,}2 - \frac{153}{40}t \\\ y = 105{,}8 + \frac{9}{5}t \end{cases}$$
+a) Chuyến bay từ Hà Nội đến Đà Nẵng mất mấy giờ?
+b) Sau 1 giờ cất cánh, máy bay đã bay qua vĩ tuyến 17 ($17^\circ\text{B}$) chưa?
+
+Lời giải Bài 7.6:
+• a) Khi máy bay hạ cánh tại sân bay Đà Nẵng, vĩ độ của máy bay là $x = 16{,}1^\circ\text{B}$.
+  Thay vào phương trình toạ độ $x$:
+$$16{,}1 = 21{,}2 - \frac{153}{40}t \Leftrightarrow \frac{153}{40}t = 21{,}2 - 16{,}1 = 5{,}1 \Leftrightarrow t = \frac{5{,}1 \cdot 40}{153} = \frac{204}{153} = \frac{4}{3}\text{ (giờ)} = 1\text{ giờ } 20\text{ phút}.$$
+  (Kiểm tra lại toạ độ kinh độ: $y = 105{,}8 + \frac{9}{5} \cdot \frac{4}{3} = 105{,}8 + 2{,}4 = 108{,}2^\circ\text{Đ}$, hoàn toàn khớp).
+  Vậy chuyến bay mất $\frac{4}{3}$ giờ (tức 1 giờ 20 phút).
+• b) Tại thời điểm $t = 1\text{ giờ kể từ lúc cất cánh}$:
+  Vĩ độ của máy bay là: $x(1) = 21{,}2 - \frac{153}{40}(1) = 21{,}2 - 3{,}825 = 17{,}375^\circ\text{B}$.
+  Vì $17{,}375^\circ > 17^\circ$ (máy bay bay từ Bắc vào Nam, vĩ độ giảm dần từ $21{,}2^\circ$ xuống $16{,}1^\circ$) nên tại thời điểm 1 giờ, máy bay chưa bay qua vĩ tuyến 17.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 7.1:** Trong mặt phẳng toạ độ, cho $\vec{n} = (2; 1)$, $\vec{v} = (3; 2)$, $A(1; 3)$, $B(-2; 1)$.
+a) Lập phương trình tổng quát của đường thẳng $\Delta_1$ đi qua $A$ và có VTPT $\vec{n}$.
+b) Lập phương trình tham số của đường thẳng $\Delta_2$ đi qua $B$ và có VTCP $\vec{v}$.
+c) Lập phương trình tham số của đường thẳng $AB$.
+
+Lời giải Bài 7.1:
+• a) Phương trình tổng quát của $\Delta_1$: $2(x - 1) + 1(y - 3) = 0 \Leftrightarrow 2x + y - 5 = 0$.
+• b) Phương trình tham số của $\Delta_2$ đi qua $B(-2; 1)$ có VTCP $\vec{v}(3; 2)$:
+$$\begin{cases} x = -2 + 3t \\\ y = 1 + 2t \end{cases} \quad (t \in \mathbb{R}).$$
+• c) Đường thẳng $AB$ đi qua $A(1; 3)$ và có VTCP $\vec{AB} = (-2 - 1; 1 - 3) = (-3; -2)$ (chọn $\vec{u} = (3; 2)$):
+$$\begin{cases} x = 1 + 3t \\\ y = 3 + 2t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Bài 7.2:** Lập phương trình tổng quát của các trục toạ độ $Ox$ và $Oy$.
+
+Lời giải Bài 7.2:
+• Trục hoành $Ox$: Đi qua gốc toạ độ $O(0; 0)$ và vuông góc với trục tung $Oy$ nên nhận $\vec{j}(0; 1)$ làm VTPT. Phương trình tổng quát của $Ox$ là $0(x - 0) + 1(y - 0) = 0 \Leftrightarrow y = 0$.
+• Trục tung $Oy$: Đi qua $O(0; 0)$ và vuông góc với trục hoành $Ox$ nên nhận $\vec{i}(1; 0)$ làm VTPT. Phương trình tổng quát của $Oy$ là $1(x - 0) + 0(y - 0) = 0 \Leftrightarrow x = 0$.
+
+**Bài 7.3:** Cho hai đường thẳng $\Delta_1: \begin{cases} x = 1 + 2t \\\ y = 3 + 5t \end{cases}$ và $\Delta_2: 2x + 3y - 5 = 0$.
+a) Lập phương trình tổng quát của $\Delta_1$.
+b) Lập phương trình tham số của $\Delta_2$.
+
+Lời giải Bài 7.3:
+• a) Đường thẳng $\Delta_1$ đi qua $M(1; 3)$ và có VTCP $\vec{u} = (2; 5)$ nên có VTPT $\vec{n} = (5; -2)$.
+  Phương trình tổng quát của $\Delta_1$: $5(x - 1) - 2(y - 3) = 0 \Leftrightarrow 5x - 2y + 1 = 0$.
+• b) Đường thẳng $\Delta_2$ có VTPT $\vec{n} = (2; 3)$ nên nhận VTCP $\vec{u} = (3; -2)$ (hoặc $(-3; 2)$).
+  Chọn một điểm thuộc $\Delta_2$: cho $y = 1 \Rightarrow 2x + 3(1) - 5 = 0 \Rightarrow x = 1$, ta được $P(1; 1) \in \Delta_2$.
+  Phương trình tham số của $\Delta_2$ là:
+$$\begin{cases} x = 1 + 3t \\\ y = 1 - 2t \end{cases} \quad (t \in \mathbb{R}).$$
+
+**Bài 7.4:** Trong mặt phẳng toạ độ, cho tam giác $ABC$ có $A(1; 2)$, $B(3; 0)$ và $C(-2; -1)$.
+a) Lập phương trình đường cao kẻ từ $A$.
+b) Lập phương trình đường trung tuyến kẻ từ $B$.
+
+Lời giải Bài 7.4:
+• a) Đường cao kẻ từ $A$ đi qua $A(1; 2)$ và vuông góc với $BC$ nên nhận $\vec{BC} = (-2 - 3; -1 - 0) = (-5; -1)$ làm VTPT (chọn $\vec{n} = (5; 1)$).
+  Phương trình tổng quát của đường cao kẻ từ $A$ là:
+$$5(x - 1) + 1(y - 2) = 0 \Leftrightarrow 5x + y - 7 = 0.$$
+• b) Gọi $M$ là trung điểm của cạnh $AC$:
+  $x_M = \frac{x_A + x_C}{2} = \frac{1 + (-2)}{2} = -\frac{1}{2}$; $y_M = \frac{y_A + y_C}{2} = \frac{2 + (-1)}{2} = \frac{1}{2} \Rightarrow M\left(-\frac{1}{2}; \frac{1}{2}\right)$.
+  Đường trung tuyến $BM$ đi qua $B(3; 0)$ và nhận $\vec{BM} = \left(-\frac{1}{2} - 3; \frac{1}{2} - 0\right) = \left(-\frac{7}{2}; \frac{1}{2}\right)$ làm VTCP.
+  Chọn VTCP $\vec{u} = (-7; 1)$ hay $\vec{u} = (7; -1)$.
+  Suy ra VTPT của $BM$ là $\vec{n} = (1; 7)$.
+  Phương trình tổng quát của đường trung tuyến $BM$ là:
+$$1(x - 3) + 7(y - 0) = 0 \Leftrightarrow x + 7y - 3 = 0.$$
