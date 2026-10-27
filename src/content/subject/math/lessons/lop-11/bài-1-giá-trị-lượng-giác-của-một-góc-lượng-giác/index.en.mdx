@@ -1,0 +1,236 @@
+---
+title: 'Lesson 1: Trigonometric values of a trigonometric angle.'
+description: hệ thống ký thuyết bài 1 và ví dụ minh họa.
+tags:
+  - grade 11
+  - Trigonometric angle
+  - Fundamental trigonometric identities
+  - Trigonometric values of a trigonometric angle
+  - Trigonometric circle (unit circle)
+  - Measure of a trigonometric angle
+grade: 11
+order: 1
+updatedDate: 2026-10-27T22:30:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Trigonometric angle
+
+·       Measure of a trigonometric angle
+
+·       Trigonometric circle (unit circle)
+
+·       Trigonometric values of a trigonometric angle
+
+·       Fundamental trigonometric identities
+
+### **Knowledge and Skills:**
+
+·       Recognize basic concepts regarding trigonometric angles.
+
+·       Recognize the concept of trigonometric values of a trigonometric angle.
+
+·       Describe the table of trigonometric values for common trigonometric angles; fundamental relations among trigonometric values of a trigonometric angle; relationships between trigonometric values of special related angles: supplementary, complementary, opposite angles, and angles differing by $\pi$.
+
+·       Use a scientific calculator to compute trigonometric values of a trigonometric angle given its measure.
+
+·       Solve practical problems associated with trigonometric values of trigonometric angles.
+
+## Trigonometric Angles
+
+<Youtube url="https://www.youtube.com/watch?v=example_gia_tri_luong_giac"/>
+
+### a) Concept of Trigonometric Angle and Its Measure
+
+In the plane, consider two rays $Ou, Ov$. Let $Om$ be a ray lying in the same plane. If ray $Om$ rotates around point $O$, in a specific direction from $Ou$ to $Ov$, we say it sweeps out a trigonometric angle with initial ray $Ou$ and terminal ray $Ov$, denoted by $(Ou, Ov)$.
+The trigonometric angle $(Ou, Ov)$ is uniquely determined only when the rotational motion of ray $Om$ from initial ray $Ou$ to terminal ray $Ov$ is known. Convention: Counterclockwise rotation is positive, and clockwise rotation is negative.
+Thus, if ray $Om$ rotates in the positive direction by exactly one full revolution, we say ray $Om$ rotates by $360^{\circ}$; by 2 revolutions, $720^{\circ}$; in the negative direction by half a revolution, $-180^{\circ}$; and by 1.5 revolutions, $-1{,}5 \cdot 360^{\circ} = -540^{\circ}$.
+When ray $Om$ rotates by $\alpha^{\circ}$, the trigonometric angle swept out has measure $\alpha^{\circ}$. The measure of the trigonometric angle with initial ray $Ou$ and terminal ray $Ov$ is denoted by $\text{sd}(Ou, Ov)$.
+Each trigonometric angle with vertex $O$ is determined by its initial ray $Ou$, terminal ray $Ov$, and its measure.
+Note: For any two rays $Ou, Ov$, there are infinitely many trigonometric angles with initial ray $Ou$ and terminal ray $Ov$. Each such angle is denoted by $(Ou, Ov)$. Their measures differ by an integer multiple of $360^{\circ}$ (or $2\pi$ radians).
+
+**Example 1:** Given a geometric angle $uOv$ with measure $60^{\circ}$. Determine the measures of the trigonometric angles $(Ou, Ov)$ and $(Ov, Ou)$.
+
+Solution to Example 1:
+• The trigonometric angles with initial ray $Ou$ and terminal ray $Ov$ have measures:
+$$\text{sd}(Ou, Ov) = 60^{\circ} + k360^{\circ} \quad (k \in \mathbb{Z})$$
+• The trigonometric angles with initial ray $Ov$ and terminal ray $Ou$ have measures:
+$$\text{sd}(Ov, Ou) = -60^{\circ} + k360^{\circ} \quad (k \in \mathbb{Z})$$
+
+### b) Chasles' Relation
+
+Chasles' Relation: For any three rays $Ou, Ov, Ow$, we have:
+$$\text{sd}(Ou, Ov) + \text{sd}(Ov, Ow) = \text{sd}(Ou, Ow) + k360^{\circ} \quad (k \in \mathbb{Z})$$
+Remark: From Chasles' relation, we deduce:
+For any three arbitrary rays $Ox, Ou, Ov$, we have:
+$$\text{sd}(Ou, Ov) = \text{sd}(Ox, Ov) - \text{sd}(Ox, Ou) + k360^{\circ} \quad (k \in \mathbb{Z})$$
+This relation plays an important role in calculating the measures of trigonometric angles.
+
+**Example 2:** Given a trigonometric angle $(Ox, Ou)$ with measure $-270^{\circ}$ and a trigonometric angle $(Ox, Ov)$ with measure $135^{\circ}$. Calculate the measure of the trigonometric angle $(Ou, Ov)$.
+
+Solution to Example 2:
+• The measure of the trigonometric angle with initial ray $Ou$ and terminal ray $Ov$ is:
+$$\text{sd}(Ou, Ov) = \text{sd}(Ox, Ov) - \text{sd}(Ox, Ou) + k360^{\circ}$$
+$$= 135^{\circ} - (-270^{\circ}) + k360^{\circ} = 405^{\circ} + k360^{\circ} = 45^{\circ} + (k + 1)360^{\circ} = 45^{\circ} + m360^{\circ} \quad (m \in \mathbb{Z})$$
+• Thus, the trigonometric angles $(Ou, Ov)$ have measure $45^{\circ} + m360^{\circ} \quad (m \in \mathbb{Z})$.
+
+## Angle Units and Arc Length
+
+### a) Angle Units and Arcs
+
+• Degree unit: An angle of $1^{\circ}$ equals $\frac{1}{180}$ of a straight angle. Degrees are subdivided into smaller units: $1^{\circ} = 60'$, $1' = 60''$.
+• Radian unit: Consider a circle $(O)$ centered at $O$ with radius $R$, and an arc $AB$ on $(O)$. We say arc $AB$ has a measure of 1 radian if its length is exactly equal to the radius $R$. In this case, angle $AOB$ has a measure of 1 radian, written $\widehat{AOB} = 1\text{ rad}$.
+• Relationship between degrees and radians: Since a circle has a circumference of $2\pi R$, its measure in radians is $2\pi\text{ rad}$. On the other hand, a circle measures $360^{\circ}$, so $360^{\circ} = 2\pi\text{ rad}$.
+$$\implies 1^{\circ} = \frac{\pi}{180}\text{ rad} \quad \text{and} \quad 1\text{ rad} = \left(\frac{180}{\pi}\right)^{\circ}$$
+Note: When writing the measure of an angle in radians, the unit "rad" is often omitted. For example, the angle $\frac{\pi}{2}$ means $\frac{\pi}{2}\text{ rad}$.
+
+**Example 3:** a) Convert the following degree measures to radians: $45^{\circ}$; $150^{\circ}$.
+b) Convert the following radian measures to degrees: $\frac{\pi}{3}$; $\frac{5\pi}{4}$.
+
+Solution to Example 3:
+• a) $45^{\circ} = 45 \cdot \frac{\pi}{180} = \frac{\pi}{4}$; $150^{\circ} = 150 \cdot \frac{\pi}{180} = \frac{5\pi}{6}$.
+• b) $\frac{\pi}{3} = \frac{\pi}{3} \cdot \left(\frac{180}{\pi}\right)^{\circ} = 60^{\circ}$; $\frac{5\pi}{4} = \frac{5\pi}{4} \cdot \left(\frac{180}{\pi}\right)^{\circ} = 225^{\circ}$.
+
+### b) Arc Length
+
+An arc of a circle of radius $R$ with measure $\alpha$ rad has length:
+$$l = R\alpha$$
+
+**Example 4:** Given a circle of radius $2\text{ cm}$. Calculate the length of an arc of measure $\frac{2\pi}{3}$ on this circle.
+
+Solution to Example 4:
+• The length of the arc is:
+$$l = R\alpha = 2 \cdot \frac{2\pi}{3} = \frac{4\pi}{3}\text{ (cm)}$$
+
+## Trigonometric Values of a Trigonometric Angle
+
+### a) Trigonometric Circle (Unit Circle)
+
+A trigonometric circle is a circle centered at the origin with radius $R = 1$, oriented counterclockwise, and having point $A(1; 0)$ as its origin point.
+The point on the trigonometric circle representing a trigonometric angle of measure $\alpha$ (in degrees or radians) is the point $M$ on the trigonometric circle such that $\text{sd}(OA, OM) = \alpha$.
+
+**Example 5:** Determine points $M$ and $N$ on the trigonometric circle representing trigonometric angles with measures $\frac{13\pi}{4}$ and $-150^{\circ}$, respectively.
+
+Solution to Example 5:
+• $\frac{13\pi}{4} = 2\pi + \frac{5\pi}{4}$, point $M$ lies in the third quadrant.
+• $-150^{\circ} = -180^{\circ} + 30^{\circ}$, point $N$ lies in the third quadrant.
+
+### b) Trigonometric Values of a Trigonometric Angle
+
+Let $M(x; y)$ be a point on the trigonometric circle representing a trigonometric angle of measure $\alpha$:
+• The x-coordinate $x$ of point $M$ is called the cosine of $\alpha$, denoted by $\cos \alpha$:
+$$\cos \alpha = x$$
+• The y-coordinate $y$ of point $M$ is called the sine of $\alpha$, denoted by $\sin \alpha$:
+$$\sin \alpha = y$$
+• If $\cos \alpha \ne 0$, the ratio $\frac{\sin \alpha}{\cos \alpha}$ is called the tangent of $\alpha$, denoted by $\tan \alpha$:
+$$\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x} \quad (x \ne 0)$$
+• If $\sin \alpha \ne 0$, the ratio $\frac{\cos \alpha}{\sin \alpha}$ is called the cotangent of $\alpha$, denoted by $\cot \alpha$:
+$$\cot \alpha = \frac{\cos \alpha}{\sin \alpha} = \frac{x}{y} \quad (y \ne 0)$$
+The values $\cos \alpha, \sin \alpha, \tan \alpha, \cot \alpha$ are called the trigonometric values of $\alpha$.
+Notes:
+• The y-axis is called the sine axis, and the x-axis is called the cosine axis.
+• $\sin \alpha, \cos \alpha$ are defined for all $\alpha$, and $-1 \le \sin \alpha \le 1$, $-1 \le \cos \alpha \le 1$.
+• $\sin(\alpha + k2\pi) = \sin \alpha$, $\cos(\alpha + k2\pi) = \cos \alpha$ ($k \in \mathbb{Z}$).n• $\tan \alpha$ is defined when $\alpha \ne \frac{\pi}{2} + k\pi \quad (k \in \mathbb{Z})$.
+• $\cot \alpha$ is defined when $\alpha \ne k\pi \quad (k \in \mathbb{Z})$.
+
+**Example 6:** Given a trigonometric angle with measure $-\frac{\pi}{3}$.
+a) Determine point $M$ on the trigonometric circle representing this angle.
+b) Calculate the trigonometric values of this angle.
+
+Solution to Example 6:
+• a) Point $M$ lies in the fourth quadrant with x-coordinate $\frac{1}{2}$ and y-coordinate $-\frac{\sqrt{3}}{2}$.
+• b) We have:
+  $$\cos\left(-\frac{\pi}{3}\right) = \frac{1}{2}, \quad \sin\left(-\frac{\pi}{3}\right) = -\frac{\sqrt{3}}{2}$$
+  $$\tan\left(-\frac{\pi}{3}\right) = \frac{\sin(-\pi/3)}{\cos(-\pi/3)} = -\sqrt{3}, \quad \cot\left(-\frac{\pi}{3}\right) = \frac{\cos(-\pi/3)}{\sin(-\pi/3)} = -\frac{1}{\sqrt{3}}.$$.
+
+## Relationships Among Trigonometric Values
+
+### a) Fundamental Trigonometric Identities
+
+For trigonometric values, we have the following fundamental identities:
+• $\sin^{2}\alpha + \cos^{2}\alpha = 1$
+• $1 + \tan^{2}\alpha = \frac{1}{\cos^{2}\alpha} \quad \left(\alpha \ne \frac{\pi}{2} + k\pi, k \in \mathbb{Z}\right)$
+• $1 + \cot^{2}\alpha = \frac{1}{\sin^{2}\alpha} \quad (\alpha \ne k\pi, k \in \mathbb{Z})$
+• $\tan \alpha \cdot \cot \alpha = 1 \quad \left(\alpha \ne \frac{k\pi}{2}, k \in \mathbb{Z}\right)$
+
+**Example 9:** Calculate the trigonometric values of angle $\alpha$, given: $\sin \alpha = \frac{3}{5}$ and $90^{\circ} < \alpha < 180^{\circ}$.
+
+Solution to Example 9:
+• Since $90^{\circ} < \alpha < 180^{\circ}$, $\cos \alpha < 0$. From $\sin^{2}\alpha + \cos^{2}\alpha = 1$, we get:
+$$\cos \alpha = -\sqrt{1 - \sin^{2}\alpha} = -\sqrt{1 - \frac{9}{25}} = -\frac{4}{5}$$
+• Thus: $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{3/5}{-4/5} = -\frac{3}{4}$ and $\cot \alpha = \frac{1}{\tan \alpha} = -\frac{4}{3}$.
+
+### b) Trigonometric Values of Special Related Angles
+
+• Opposite angles ($\alpha$ and $-\alpha$):
+$$\cos(-\alpha) = \cos \alpha, \quad \sin(-\alpha) = -\sin \alpha, \quad \tan(-\alpha) = -\tan \alpha, \quad \cot(-\alpha) = -\cot \alpha$$
+• Supplementary angles ($\alpha$ and $\pi - \alpha$):
+$$\sin(\pi - \alpha) = \sin \alpha, \quad \cos(\pi - \alpha) = -\cos \alpha, \quad \tan(\pi - \alpha) = -\tan \alpha, \quad \cot(\pi - \alpha) = -\cot \alpha$$
+• Complementary angles ($\alpha$ and $\frac{\pi}{2} - \alpha$):
+$$\sin\left(\frac{\pi}{2} - \alpha\right) = \cos \alpha, \quad \cos\left(\frac{\pi}{2} - \alpha\right) = \sin \alpha, \quad \tan\left(\frac{\pi}{2} - \alpha\right) = \cot \alpha, \quad \cot\left(\frac{\pi}{2} - \alpha\right) = \tan \alpha$$
+• Angles differing by $\pi$ ($\alpha$ and $\pi + \alpha$):
+$$\sin(\pi + \alpha) = -\sin \alpha, \quad \cos(\pi + \alpha) = -\cos \alpha, \quad \tan(\pi + \alpha) = \tan \alpha, \quad \cot(\pi + \alpha) = \cot \alpha$$
+
+**Example 10:** Calculate:
+a) $\cos\left(-\frac{11\pi}{4}\right)$;
+b) $\cot(-675^{\circ})$.
+
+Solution to Example 10:
+• a) $\cos\left(-\frac{11\pi}{4}\right) = \cos\left(\frac{11\pi}{4}\right) = \cos\left(\frac{3\pi}{4} + 2\pi\right) = \cos\left(\frac{3\pi}{4}\right) = -\cos\left(\pi - \frac{3\pi}{4}\right) = -\cos\left(\frac{\pi}{4}\right) = -\frac{\sqrt{2}}{2}$.
+• b) $\cot(-675^{\circ}) = \cot(45^{\circ} - 2 \cdot 360^{\circ}) = \cot(45^{\circ}) = 1$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (International Space Station ISS):** The International Space Station ISS orbits in a circular path approximately $400\text{ km}$ above the Earth's surface (Figure 1.1). If a ground station tracks the ISS when it is within a $45^{\circ}$ central angle of this circular orbit directly above the tracking antenna, how many kilometers has the ISS traveled while being tracked by the ground station? Assume the Earth's radius is $6\\,400\text{ km}$. Round the result to the nearest integer.
+
+Solution to Application:
+• The orbital radius of the ISS is: $R = 6\\,400 + 400 = 6\\,800\text{ km}$.
+• The central angle of the orbit is $\alpha = 45^{\circ} = \frac{\pi}{4}\text{ rad}$.
+• The distance traveled by the ISS during tracking is the arc length:
+$$l = R\alpha = 6\\,800 \cdot \frac{\pi}{4} = 1\\,700\pi \approx 5\\,341\text{ (km)}$$
+• Conclusion: The ISS traveled approximately $5\\,341\text{ km}$.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 1.1:** Complete the degree-to-radian conversion table for special angles.
+
+Solution to Exercise 1.1:
+• $15^{\circ} = \frac{\pi}{12}$; $67{,}5^{\circ} = \frac{3\pi}{8}$; $0^{\circ} = 0$; $900^{\circ} = 5\pi$; $-315^{\circ} = -\frac{7\pi}{12}$; $-247{,}5^{\circ} = -\frac{11\pi}{8}$.
+
+**Exercise 1.2:** A circle has a radius of $20\text{ cm}$. Find the lengths of the arcs on this circle with the following measures:
+a) $\frac{\pi}{12}$;
+b) $1{,}5$;
+c) $35^{\circ}$;
+d) $315^{\circ}$.
+
+Solution to Exercise 1.2:
+• a) $l = 20 \cdot \frac{\pi}{12} = \frac{5\pi}{3}\text{ cm} \approx 5{,}24\text{ cm}$.
+• b) $l = 20 \cdot 1{,}5 = 30\text{ cm}$.
+• c) $\alpha = 35^{\circ} = \frac{35\pi}{180}\text{ rad} \Rightarrow l = 20 \cdot \frac{7\pi}{36} = \frac{35\pi}{9}\text{ cm} \approx 12{,}22\text{ cm}$.
+• d) $\alpha = 315^{\circ} = \frac{7\pi}{4}\text{ rad} \Rightarrow l = 20 \cdot \frac{7\pi}{4} = 35\pi\text{ cm} \approx 109{,}96\text{ cm}$.
+
+**Exercise 1.4:** Calculate the trigonometric values of angle $\alpha$, given:
+a) $\cos \alpha = \frac{1}{5}$ and $0 < \alpha < \frac{\pi}{2}$;
+b) $\sin \alpha = \frac{2}{3}$ and $\frac{\pi}{2} < \alpha < \pi$;
+c) $\tan \alpha = \sqrt{5}$ and $\pi < \alpha < \frac{3\pi}{2}$;
+d) $\cot \alpha = -\frac{1}{\sqrt{2}}$ and $\frac{3\pi}{2} < \alpha < 2\pi$.
+
+Solution to Exercise 1.4:
+• a) $\sin \alpha = \sqrt{1 - \frac{1}{25}} = \frac{2\sqrt{6}}{5}$; $\tan \alpha = 2\sqrt{6}$; $\cot \alpha = \frac{1}{2\sqrt{6}}$.
+• b) $\cos \alpha = -\sqrt{1 - \frac{4}{9}} = -\frac{\sqrt{5}}{3}$; $\tan \alpha = -\frac{2\sqrt{5}}{5}$; $\cot \alpha = -\frac{\sqrt{5}}{2}$.
+• c) $\cos \alpha = -\frac{\sqrt{6}}{6}$; $\sin \alpha = -\frac{\sqrt{30}}{6}$; $\cot \alpha = \frac{\sqrt{5}}{5}$.
+• d) $\sin \alpha = -\frac{\sqrt{3}}{3}$; $\cos \alpha = \frac{\sqrt{6}}{3}$; $\tan \alpha = -\sqrt{2}$.
+
+**Exercise 1.5:** Prove fundamental trigonometric identities.
+
+Lời giải Bài 1.5:
+• a) $\cos^{4}\alpha - \sin^{4}\alpha = (\cos^{2}\alpha - \sin^{2}\alpha)(\cos^{2}\alpha + \sin^{2}\alpha) = \cos^{2}\alpha - (1 - \cos^{2}\alpha) = 2\cos^{2}\alpha - 1$.
+• b) $\frac{\cos^{2}\alpha + \tan^{2}\alpha - 1}{\sin^{2}\alpha} = \frac{\cos^{2}\alpha - \cos^{2}\alpha + \tan^{2}\alpha}{\sin^{2}\alpha} = \frac{\tan^{2}\alpha}{\sin^{2}\alpha} = \frac{1}{\cos^{2}\alpha} = 1 + \tan^{2}\alpha$.

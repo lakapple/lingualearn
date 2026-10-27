@@ -1,0 +1,237 @@
+---
+title: 'Bài 1: Giá trị lượng giác của một góc lượng giác.'
+description: hệ thống ký thuyết bài 1 và ví dụ minh họa.
+tags:
+  - lớp 11
+  - Góc lượng giác
+  - Hệ thức cơ bản giữa các giá trị lượng giác
+  - Giá trị lượng giác của góc lượng giác
+  - Đường tròn lượng giác
+  - Số đo của góc lượng giác
+grade: 11
+order: 1
+updatedDate: 2026-10-27T22:30:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Góc lượng giác
+
+·       Số đo của góc lượng giác
+
+·       Đường tròn lượng giác
+
+·       Giá trị lượng giác của góc lượng giác
+
+·       Hệ thức cơ bản giữa các giá trị lượng giác
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết các khái niệm cơ bản về góc lượng giác.
+
+·       Nhận biết khái niệm giá trị lượng giác của một góc lượng giác.
+
+·       Mô tả bảng giá trị lượng giác của một số góc lượng giác thường gặp; hệ thức cơ bản giữa các giá trị lượng giác của một góc lượng giác; quan hệ giữa các giá trị lượng giác của các góc lượng giác có liên quan đặc biệt: bù nhau, phụ nhau, đối nhau, hơn kém nhau $\pi$.
+
+·       Sử dụng máy tính cầm tay để tính giá trị lượng giác của một góc lượng giác khi biết số đo của góc đó.
+
+·       Giải quyết một số vấn đề thực tiễn gắn với giá trị lượng giác của góc lượng giác.
+
+## Góc lượng giác
+
+<Youtube url="https://www.youtube.com/watch?v=example_gia_tri_luong_giac"/>
+
+### a) Khái niệm góc lượng giác và số đo của góc lượng giác
+
+Trong mặt phẳng, cho hai tia $Ou, Ov$. Xét tia $Om$ cùng nằm trong mặt phẳng này. Nếu tia $Om$ quay quanh điểm $O$, theo một chiều nhất định từ $Ou$ đến $Ov$, thì ta nói nó quét một góc lượng giác với tia đầu $Ou$, tia cuối $Ov$ và kí hiệu là $(Ou, Ov)$.
+Góc lượng giác $(Ou, Ov)$ chỉ được xác định khi ta biết được chuyển động quay của tia $Om$ từ tia đầu $Ou$ đến tia cuối $Ov$. Ta quy ước: Chiều quay ngược với chiều quay của kim đồng hồ là chiều dương, chiều quay cùng chiều kim đồng hồ là chiều âm.
+Khi đó, nếu tia $Om$ quay theo chiều dương đúng một vòng ta nói tia Om quay góc $360^{\circ}$, quay đúng 2 vòng ta nói nó quay góc $720^{\circ}$, quay theo chiều âm nửa vòng ta nói nó quay góc $-180^{\circ}$, quay theo chiều âm 1,5 vòng ta nói nó quay góc $-1{,}5 \cdot 360^{\circ} = -540^{\circ}$.
+Khi tia $Om$ quay góc $\alpha^{\circ}$ thì ta nói góc lượng giác mà tia đó quét nên có số đo $\alpha^{\circ}$. Số đo của góc lượng giác có tia đầu $Ou$, tia cuối $Ov$ được kí hiệu là $\text{sd}(Ou, Ov)$.
+Mỗi góc lượng giác gốc $O$ được xác định bởi tia đầu $Ou$, tia cuối $Ov$ và số đo của nó.
+Chú ý: Cho hai tia $Ou, Ov$ thì có vô số góc lượng giác tia đầu $Ou$, tia cuối $Ov$. Mỗi góc lượng giác như thế đều kí hiệu là $(Ou, Ov)$. Số đo của các góc lượng giác này sai khác nhau một bội nguyên của $360^{\circ}$ (hoặc $2\pi$ rađian).
+
+**Ví dụ 1:** Cho góc hình học $uOv$ có số đo $60^{\circ}$. Xác định số đo của các góc lượng giác $(Ou, Ov)$ và $(Ov, Ou)$.
+
+Lời giải Ví dụ 1:
+• Các góc lượng giác tia đầu $Ou$, tia cuối $Ov$ có số đo là:
+$$\text{sd}(Ou, Ov) = 60^{\circ} + k360^{\circ} \quad (k \in \mathbb{Z})$$
+• Các góc lượng giác tia đầu $Ov$, tia cuối $Ou$ có số đo là:
+$$\text{sd}(Ov, Ou) = -60^{\circ} + k360^{\circ} \quad (k \in \mathbb{Z})$$
+
+### b) Hệ thức Chasles
+
+Hệ thức Chasles: Với ba tia $Ou, Ov, Ow$ bất kì, ta có:
+$$\text{sd}(Ou, Ov) + \text{sd}(Ov, Ow) = \text{sd}(Ou, Ow) + k360^{\circ} \quad (k \in \mathbb{Z})$$
+Nhận xét: Từ hệ thức Chasles, ta suy ra:
+Với ba tia tuỳ ý $Ox, Ou, Ov$, ta có:
+$$\text{sd}(Ou, Ov) = \text{sd}(Ox, Ov) - \text{sd}(Ox, Ou) + k360^{\circ} \quad (k \in \mathbb{Z})$$
+Hệ thức này đóng vai trò quan trọng trong việc tính toán số đo của góc lượng giác.
+
+**Ví dụ 2:** Cho một góc lượng giác $(Ox, Ou)$ có số đo $-270^{\circ}$ và một góc lượng giác $(Ox, Ov)$ có số đo $135^{\circ}$. Tính số đo của các góc lượng giác $(Ou, Ov)$.
+
+Lời giải Ví dụ 2:
+• Số đo của các góc lượng giác tia đầu $Ou$, tia cuối $Ov$ là:
+$$\text{sd}(Ou, Ov) = \text{sd}(Ox, Ov) - \text{sd}(Ox, Ou) + k360^{\circ}$$
+$$= 135^{\circ} - (-270^{\circ}) + k360^{\circ} = 405^{\circ} + k360^{\circ} = 45^{\circ} + (k + 1)360^{\circ} = 45^{\circ} + m360^{\circ} \quad (m \in \mathbb{Z})$$
+• Vậy các góc lượng giác $(Ou, Ov)$ có số đo là $45^{\circ} + m360^{\circ} \quad (m \in \mathbb{Z})$.
+
+## Đơn vị đo góc và độ dài cung tròn
+
+### a) Đơn vị đo góc và cung tròn
+
+• Đơn vị độ: Góc $1^{\circ}$ bằng $\frac{1}{180}$ góc bẹt. Đơn vị độ được chia thành các đơn vị nhỏ hơn: $1^{\circ} = 60'$, $1' = 60''$.
+• Đơn vị radian: Cho đường tròn $(O)$ tâm $O$, bán kính $R$ và một cung $AB$ trên $(O)$. Ta nói cung tròn $AB$ có số đo bằng 1 radian nếu độ dài của nó đúng bằng bán kính $R$. Khi đó góc $AOB$ có số đo bằng 1 radian và viết $\widehat{AOB} = 1\text{ rad}$.
+• Quan hệ giữa độ và radian: Do đường tròn có độ dài là $2\pi R$ nên nó có số đo $2\pi\text{ rad}$. Mặt khác, đường tròn có số đo bằng $360^{\circ}$ nên $360^{\circ} = 2\pi\text{ rad}$.
+$$\implies 1^{\circ} = \frac{\pi}{180}\text{ rad} \quad \text{và} \quad 1\text{ rad} = \left(\frac{180}{\pi}\right)^{\circ}$$
+Chú ý: Khi viết số đo của một góc theo đơn vị rađian, người ta thường không viết chữ rad sau số đo. Chẳng hạn góc $\frac{\pi}{2}$ được hiểu là góc $\frac{\pi}{2}\text{ rad}$.
+
+**Ví dụ 3:** a) Đổi từ độ sang rađian các số đo sau: $45^{\circ}$; $150^{\circ}$.
+b) Đổi từ rađian sang độ các số đo sau: $\frac{\pi}{3}$; $\frac{5\pi}{4}$.
+
+Lời giải Ví dụ 3:
+• a) $45^{\circ} = 45 \cdot \frac{\pi}{180} = \frac{\pi}{4}$; $150^{\circ} = 150 \cdot \frac{\pi}{180} = \frac{5\pi}{6}$.
+• b) $\frac{\pi}{3} = \frac{\pi}{3} \cdot \left(\frac{180}{\pi}\right)^{\circ} = 60^{\circ}$; $\frac{5\pi}{4} = \frac{5\pi}{4} \cdot \left(\frac{180}{\pi}\right)^{\circ} = 225^{\circ}$.
+
+### b) Độ dài cung tròn
+
+Một cung của đường tròn bán kính $R$ và có số đo $\alpha$ rad thì có độ dài:
+$$l = R\alpha$$
+
+**Ví dụ 4:** Cho đường tròn bán kính $2\text{ cm}$. Tính độ dài cung tròn có số đo $\frac{2\pi}{3}$ của đường tròn đó.
+
+Lời giải Ví dụ 4:
+• Độ dài của cung tròn đó là:
+$$l = R\alpha = 2 \cdot \frac{2\pi}{3} = \frac{4\pi}{3}\text{ (cm)}$$
+
+## Giá trị lượng giác của góc lượng giác
+
+### a) Đường tròn lượng giác
+
+Đường tròn lượng giác là đường tròn có tâm tại gốc toạ độ, bán kính bằng 1, được định hướng và lấy điểm $A(1; 0)$ làm điểm gốc của đường tròn.
+Điểm trên đường tròn lượng giác biểu diễn góc lượng giác có số đo $\alpha$ (độ hoặc rađian) là điểm $M$ trên đường tròn lượng giác sao cho $\text{sd}(OA, OM) = \alpha$.
+
+**Ví dụ 5:** Xác định các điểm $M$ và $N$ trên đường tròn lượng giác lần lượt biểu diễn các góc lượng giác có số đo bằng $\frac{13\pi}{4}$ và $-150^{\circ}$.
+
+Lời giải Ví dụ 5:
+• $\frac{13\pi}{4} = 2\pi + \frac{5\pi}{4}$, điểm $M$ biểu diễn nằm ở góc phần tư thứ III.
+• $-150^{\circ} = -180^{\circ} + 30^{\circ}$, điểm $N$ biểu diễn nằm ở góc phần tư thứ III.
+
+### b) Các giá trị lượng giác của góc lượng giác
+
+Giả sử $M(x; y)$ là điểm trên đường tròn lượng giác, biểu diễn góc lượng giác có số đo $\alpha$:
+• Hoành độ $x$ của điểm $M$ được gọi là côsin của $\alpha$, kí hiệu là $\cos \alpha$:
+$$\cos \alpha = x$$
+• Tung độ $y$ của điểm $M$ được gọi là sin của $\alpha$, kí hiệu là $\sin \alpha$:
+$$\sin \alpha = y$$
+• Nếu $\cos \alpha \ne 0$, tỉ số $\frac{\sin \alpha}{\cos \alpha}$ được gọi là tang của $\alpha$, kí hiệu là $\tan \alpha$:
+$$\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x} \quad (x \ne 0)$$
+• Nếu $\sin \alpha \ne 0$, tỉ số $\frac{\cos \alpha}{\sin \alpha}$ được gọi là côtang của $\alpha$, kí hiệu là $\cot \alpha$:
+$$\cot \alpha = \frac{\cos \alpha}{\sin \alpha} = \frac{x}{y} \quad (y \ne 0)$$
+Các giá trị $\cos \alpha, \sin \alpha, \tan \alpha, \cot \alpha$ được gọi là các giá trị lượng giác của $\alpha$.
+Chú ý:
+• Trục tung gọi là trục sin, trục hoành gọi là trục côsin.
+• $\sin \alpha, \cos \alpha$ xác định với mọi $\alpha$ và $-1 \le \sin \alpha \le 1$, $-1 \le \cos \alpha \le 1$.
+• $\sin(\alpha + k2\pi) = \sin \alpha$, $\cos(\alpha + k2\pi) = \cos \alpha$ ($k \in \mathbb{Z}$). cruelty
+• $\tan \alpha$ xác định khi $\alpha \ne \frac{\pi}{2} + k\pi \quad (k \in \mathbb{Z})$.
+• $\cot \alpha$ xác định khi $\alpha \ne k\pi \quad (k \in \mathbb{Z})$.
+
+**Ví dụ 6:** Cho góc lượng giác có số đo bằng $-\frac{\pi}{3}$.
+a) Xác định điểm $M$ trên đường tròn lượng giác biểu diễn góc lượng giác đã cho.
+b) Tính các giá trị lượng giác của góc lượng giác đã cho.
+
+Lời giải Ví dụ 6:
+• a) Điểm $M$ nằm ở góc phần tư thứ IV với hoành độ $\frac{1}{2}$ và tung độ $-\frac{\sqrt{3}}{2}$.
+• b) Ta có:
+  $$\cos\left(-\frac{\pi}{3}\right) = \frac{1}{2}, \quad \sin\left(-\frac{\pi}{3}\right) = -\frac{\sqrt{3}}{2}$$
+  $$\tan\left(-\frac{\pi}{3}\right) = \frac{\sin(-\pi/3)}{\cos(-\pi/3)} = -\sqrt{3}, \quad \cot\left(-\frac{\pi}{3}\right) = \frac{\cos(-\pi/3)}{\sin(-\pi/3)} = -\frac{1}{\sqrt{3}}.$$.
+
+## Quan hệ giữa các giá trị lượng giác
+
+### a) Các công thức lượng giác cơ bản
+
+Đối với các giá trị lượng giác, ta có các hệ thức cơ bản sau:
+• $\sin^{2}\alpha + \cos^{2}\alpha = 1$
+• $1 + \tan^{2}\alpha = \frac{1}{\cos^{2}\alpha} \quad \left(\alpha \ne \frac{\pi}{2} + k\pi, k \in \mathbb{Z}\right)$
+• $1 + \cot^{2}\alpha = \frac{1}{\sin^{2}\alpha} \quad (\alpha \ne k\pi, k \in \mathbb{Z})$
+• $\tan \alpha \cdot \cot \alpha = 1 \quad \left(\alpha \ne \frac{k\pi}{2}, k \in \mathbb{Z}\right)$
+
+**Ví dụ 9:** Tính các giá trị lượng giác của góc $\alpha$, biết: $\sin \alpha = \frac{3}{5}$ và $90^{\circ} < \alpha < 180^{\circ}$.
+
+Lời giải Ví dụ 9:
+• Vì $90^{\circ} < \alpha < 180^{\circ}$ nên $\cos \alpha < 0$. Từ $\sin^{2}\alpha + \cos^{2}\alpha = 1$, ta có:
+$$\cos \alpha = -\sqrt{1 - \sin^{2}\alpha} = -\sqrt{1 - \frac{9}{25}} = -\frac{4}{5}$$
+• Do đó: $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{3/5}{-4/5} = -\frac{3}{4}$ và $\cot \alpha = \frac{1}{\tan \alpha} = -\frac{4}{3}$.
+
+### b) Giá trị lượng giác của các góc có liên quan đặc biệt
+
+• Góc đối nhau ($\alpha$ và $-\alpha$):
+$$\cos(-\alpha) = \cos \alpha, \quad \sin(-\alpha) = -\sin \alpha, \quad \tan(-\alpha) = -\tan \alpha, \quad \cot(-\alpha) = -\cot \alpha$$
+• Góc bù nhau ($\alpha$ và $\pi - \alpha$):
+$$\sin(\pi - \alpha) = \sin \alpha, \quad \cos(\pi - \alpha) = -\cos \alpha, \quad \tan(\pi - \alpha) = -\tan \alpha, \quad \cot(\pi - \alpha) = -\cot \alpha$$
+• Góc phụ nhau ($\alpha$ và $\frac{\pi}{2} - \alpha$):
+$$\sin\left(\frac{\pi}{2} - \alpha\right) = \cos \alpha, \quad \cos\left(\frac{\pi}{2} - \alpha\right) = \sin \alpha, \quad \tan\left(\frac{\pi}{2} - \alpha\right) = \cot \alpha, \quad \cot\left(\frac{\pi}{2} - \alpha\right) = \tan \alpha$$
+• Góc hơn kém $\pi$ ($\alpha$ và $\pi + \alpha$):
+$$\sin(\pi + \alpha) = -\sin \alpha, \quad \cos(\pi + \alpha) = -\cos \alpha, \quad \tan(\pi + \alpha) = \tan \alpha, \quad \cot(\pi + \alpha) = \cot \alpha$$
+
+**Ví dụ 10:** Tính:
+a) $\cos\left(-\frac{11\pi}{4}\right)$;
+b) $\cot(-675^{\circ})$.
+
+Lời giải Ví dụ 10:
+• a) $\cos\left(-\frac{11\pi}{4}\right) = \cos\left(\frac{11\pi}{4}\right) = \cos\left(\frac{3\pi}{4} + 2\pi\right) = \cos\left(\frac{3\pi}{4}\right) = -\cos\left(\pi - \frac{3\pi}{4}\right) = -\cos\left(\frac{\pi}{4}\right) = -\frac{\sqrt{2}}{2}$.
+• b) $\cot(-675^{\circ}) = \cot(45^{\circ} - 2 \cdot 360^{\circ}) = \cot(45^{\circ}) = 1$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Trạm vũ trụ Quốc tế ISS):** Trạm vũ trụ Quốc tế ISS nằm trong quỹ đạo tròn cách bề mặt Trái Đất khoảng $400\text{ km}$ (Hình 1.1). Nếu trạm mặt đất theo dõi được trạm vũ trụ ISS khi nó nằm trong góc $45^{\circ}$ ở tâm của quỹ đạo tròn này phía trên ăng-ten theo dõi, thì trạm vũ trụ ISS đã di chuyển được bao nhiêu kilômét trong khi nó đang được trạm mặt đất theo dõi? Giả sử rằng bán kính của Trái Đất là $6\\,400\text{ km}$. Làm tròn kết quả đến hàng đơn vị.
+
+Lời giải Vận dụng:
+• Bán kính quỹ đạo của trạm ISS là: $R = 6\\,400 + 400 = 6\\,800\text{ km}$.
+• Góc ở tâm của quỹ đạo tròn là $\alpha = 45^{\circ} = \frac{\pi}{4}\text{ rad}$.
+• Quãng đường trạm ISS di chuyển trong góc theo dõi là độ dài cung tròn:
+$$l = R\alpha = 6\\,800 \cdot \frac{\pi}{4} = 1\\,700\pi \approx 5\\,341\text{ (km)}$$
+• Kết luận: Trạm vũ trụ ISS đã di chuyển được khoảng $5\\,341\text{ km}$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 1.1:** Hoàn thành bảng đổi số đo độ và radian cho các góc đặc biệt.
+
+Lời giải Bài 1.1:
+• $15^{\circ} = \frac{\pi}{12}$; $67{,}5^{\circ} = \frac{3\pi}{8}$; $0^{\circ} = 0$; $900^{\circ} = 5\pi$; $-315^{\circ} = -\frac{7\pi}{12}$; $-247{,}5^{\circ} = -\frac{11\pi}{8}$.
+
+**Bài 1.2:** Một đường tròn có bán kính $20\text{ cm}$. Tìm độ dài của các cung trên đường tròn đó có số đo sau:
+a) $\frac{\pi}{12}$;
+b) $1{,}5$;
+c) $35^{\circ}$;
+d) $315^{\circ}$.
+
+Lời giải Bài 1.2:
+• a) $l = 20 \cdot \frac{\pi}{12} = \frac{5\pi}{3}\text{ cm} \approx 5{,}24\text{ cm}$.
+• b) $l = 20 \cdot 1{,}5 = 30\text{ cm}$.
+• c) $\alpha = 35^{\circ} = \frac{35\pi}{180}\text{ rad} \Rightarrow l = 20 \cdot \frac{7\pi}{36} = \frac{35\pi}{9}\text{ cm} \approx 12{,}22\text{ cm}$.
+• d) $\alpha = 315^{\circ} = \frac{7\pi}{4}\text{ rad} \Rightarrow l = 20 \cdot \frac{7\pi}{4} = 35\pi\text{ cm} \approx 109{,}96\text{ cm}$.
+
+**Bài 1.4:** Tính các giá trị lượng giác của góc $\alpha$, biết:
+a) $\cos \alpha = \frac{1}{5}$ và $0 < \alpha < \frac{\pi}{2}$;
+b) $\sin \alpha = \frac{2}{3}$ và $\frac{\pi}{2} < \alpha < \pi$;
+c) $\tan \alpha = \sqrt{5}$ và $\pi < \alpha < \frac{3\pi}{2}$;
+d) $\cot \alpha = -\frac{1}{\sqrt{2}}$ và $\frac{3\pi}{2} < \alpha < 2\pi$.
+
+Lời giải Bài 1.4:
+• a) $\sin \alpha = \sqrt{1 - \frac{1}{25}} = \frac{2\sqrt{6}}{5}$; $\tan \alpha = 2\sqrt{6}$; $\cot \alpha = \frac{1}{2\sqrt{6}}$.
+• b) $\cos \alpha = -\sqrt{1 - \frac{4}{9}} = -\frac{\sqrt{5}}{3}$; $\tan \alpha = -\frac{2\sqrt{5}}{5}$; $\cot \alpha = -\frac{\sqrt{5}}{2}$.
+• c) $\cos \alpha = -\frac{\sqrt{6}}{6}$; $\sin \alpha = -\frac{\sqrt{30}}{6}$; $\cot \alpha = \frac{\sqrt{5}}{5}$.
+• d) $\sin \alpha = -\frac{\sqrt{3}}{3}$; $\cos \alpha = \frac{\sqrt{6}}{3}$; $\tan \alpha = -\sqrt{2}$.
+
+**Bài 1.5:** Chứng minh các đẳng thức lượng giác cơ bản.
+
+Lời giải Bài 1.5:
+• a) $\cos^{4}\alpha - \sin^{4}\alpha = (\cos^{2}\alpha - \sin^{2}\alpha)(\cos^{2}\alpha + \sin^{2}\alpha) = \cos^{2}\alpha - (1 - \cos^{2}\alpha) = 2\cos^{2}\alpha - 1$.
+• b) $\frac{\cos^{2}\alpha + \tan^{2}\alpha - 1}{\sin^{2}\alpha} = \frac{\cos^{2}\alpha - \cos^{2}\alpha + \tan^{2}\alpha}{\sin^{2}\alpha} = \frac{\tan^{2}\alpha}{\sin^{2}\alpha} = \frac{1}{\cos^{2}\alpha} = 1 + \tan^{2}\alpha$ (hoặc biến đổi vế trái trực tiếp ra $\tan^{2}\alpha$).
