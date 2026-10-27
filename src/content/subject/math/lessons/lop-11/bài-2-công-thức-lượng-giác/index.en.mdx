@@ -15,13 +15,13 @@ draft: false
 
 import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
 
-## Lesson Objectives
+## Learning Objectives
 
 ### **Terminology:**
 
-·       Addition formulas
+·       Addition formulas (addition identities)
 
-·       Double-angle formulas
+·       Double-angle formulas and half-angle / power-reducing formulas
 
 ·       Product-to-sum formulas
 
@@ -29,173 +29,192 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 ### **Knowledge and Skills:**
 
-·       Describe basic trigonometric transformations: addition formulas, double-angle formulas, product-to-sum formulas, and sum-to-product formulas.
+·       Master foundational trigonometric transformations: addition formulas, double-angle formulas, power-reducing formulas, product-to-sum formulas, and sum-to-product formulas.
 
-·       Solve practical problems associated with trigonometric values and trigonometric transformations.
+·       Apply trigonometric formulas flexibly to simplify expressions, evaluate trigonometric expressions without a calculator, and prove identities.
+
+·       Solve real-world problems connected to trigonometric values and transformations (combined sound waves, touch-screen frequencies, simple harmonic motion).
 
 ## Addition Formulas
 
-<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_luong_giac"/>
+<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_cong"/>
 
-### a) Development and Content of Addition Formulas
+### a) Statement of Addition Formulas
 
-Basic trigonometric addition formulas:
-$$\begin{aligned}
-\cos(a - b) &= \cos a \cos b + \sin a \sin b \\\\
-\cos(a + b) &= \cos a \cos b - \sin a \sin b \\\\
-\sin(a - b) &= \sin a \cos b - \cos a \sin b \\\\
-\sin(a + b) &= \sin a \cos b + \cos a \sin b \\\\
-\tan(a - b) &= \frac{\tan a - \tan b}{1 + \tan a \tan b} \\\\
-\tan(a + b) &= \frac{\tan a + \tan b}{1 - \tan a \tan b}
-\end{aligned}$$
-(assuming all expressions are well-defined).
+Basic Addition Identities:
+• $\cos(a - b) = \cos a \cos b + \sin a \sin b$
+• $\cos(a + b) = \cos a \cos b - \sin a \sin b$
+• $\sin(a - b) = \sin a \cos b - \cos a \sin b$
+• $\sin(a + b) = \sin a \cos b + \cos a \sin b$
+• $\tan(a - b) = \frac{\tan a - \tan b}{1 + \tan a \tan b} \quad \left(a, b, a - b \ne \frac{\pi}{2} + k\pi\right)$
+• $\tan(a + b) = \frac{\tan a + \tan b}{1 - \tan a \tan b} \quad \left(a, b, a + b \ne \frac{\pi}{2} + k\pi\right)$
 
-**Example 1:** Without using a calculator, calculate:
+### b) Illustrative Examples and Practice on Addition Formulas
+
+**Example 1:** Without using a calculator, evaluate:
 a) $\cos 75^{\circ}$;
-b) $\tan \frac{\pi}{12}$.
+b) $\tan\frac{\pi}{12}$.
 
-Solution to Example 1:
+Solution for Example 1:
 • a) $\cos 75^{\circ} = \cos(45^{\circ} + 30^{\circ}) = \cos 45^{\circ}\cos 30^{\circ} - \sin 45^{\circ}\sin 30^{\circ} = \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \cdot \frac{1}{2} = \frac{\sqrt{6} - \sqrt{2}}{4}$.
-• b) $\tan \frac{\pi}{12} = \tan\left(\frac{\pi}{3} - \frac{\pi}{4}\right) = \frac{\tan \frac{\pi}{3} - \tan \frac{\pi}{4}}{1 + \tan \frac{\pi}{3} \cdot \tan \frac{\pi}{4}} = \frac{\sqrt{3} - 1}{1 + \sqrt{3}} = \frac{(\sqrt{3} - 1)^{2}}{3 - 1} = 2 - \sqrt{3}$.
+• b) $\tan\frac{\pi}{12} = \tan\left(\frac{\pi}{3} - \frac{\pi}{4}\right) = \frac{\tan\frac{\pi}{3} - \tan\frac{\pi}{4}}{1 + \tan\frac{\pi}{3}\tan\frac{\pi}{4}} = \frac{\sqrt{3} - 1}{1 + \sqrt{3}} = (\sqrt{3} - 1)^2 = 2 - \sqrt{3}$.
 
 **Example 2:** Prove that $\sin x + \cos x = \sqrt{2}\sin\left(x + \frac{\pi}{4}\right)$.
 
-Solution to Example 2:
-• We have:
-$$\sqrt{2}\sin\left(x + \frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cos \frac{\pi}{4} + \cos x \sin \frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cdot \frac{\sqrt{2}}{2} + \cos x \cdot \frac{\sqrt{2}}{2}\right) = \sin x + \cos x.$$
-• The identity is proven.
-
-### b) Practice on Addition Formulas
+Solution for Example 2:
+• We have $\sqrt{2}\sin\left(x + \frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cos\frac{\pi}{4} + \cos x \sin\frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cdot \frac{\sqrt{2}}{2} + \cos x \cdot \frac{\sqrt{2}}{2}\right) = \sin x + \cos x$.
+The identity is proven.
 
 **Practice 1:** Prove that:
 a) $\sin x - \cos x = \sqrt{2}\sin\left(x - \frac{\pi}{4}\right)$;
-b) $\tan\left(\frac{\pi}{4} - x\right) = \frac{1 - \tan x}{1 + \tan x} \quad \left(x \ne \frac{\pi}{2} + k\pi, x \ne \frac{3\pi}{4} + k\pi, k \in \mathbb{Z}\right)$.
+b) $\tan\left(\frac{\pi}{4} - x\right) = \frac{1 - \tan x}{1 + \tan x} \quad \left(x \ne \frac{\pi}{2} + k\pi, x \ne \frac{3\pi}{4} + k\pi\right)$.
 
-Solution to Practice 1:
-• a) $\sqrt{2}\sin\left(x - \frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cos \frac{\pi}{4} - \cos x \sin \frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cdot \frac{\sqrt{2}}{2} - \cos x \cdot \frac{\sqrt{2}}{2}\right) = \sin x - \cos x$.
-• b) $\tan\left(\frac{\pi}{4} - x\right) = \frac{\tan \frac{\pi}{4} - \tan x}{1 + \tan \frac{\pi}{4} \tan x} = \frac{1 - \tan x}{1 + \tan x}$.
+Solution for Practice 1:
+• a) $\sqrt{2}\sin\left(x - \frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cos\frac{\pi}{4} - \cos x \sin\frac{\pi}{4}\right) = \sqrt{2}\left(\sin x \cdot \frac{\sqrt{2}}{2} - \cos x \cdot \frac{\sqrt{2}}{2}\right) = \sin x - \cos x$.
+• b) $\tan\left(\frac{\pi}{4} - x\right) = \frac{\tan\frac{\pi}{4} - \tan x}{1 + \tan\frac{\pi}{4}\tan x} = \frac{1 - \tan x}{1 + \tan x}$.
 
-## Double-Angle Formulas
+## Double-Angle and Power-Reducing Formulas
 
-### a) Development and Content of Double-Angle Formulas
+<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_nhan_doi"/>
 
-Setting $b = a$ in the addition formulas, we obtain the double-angle formulas:
-$$\begin{aligned}
-\sin 2a &= 2 \sin a \cos a \\\\
-\cos 2a &= \cos^{2}a - \sin^{2}a = 2\cos^{2}a - 1 = 1 - 2\sin^{2}a \\\\
-\tan 2a &= \frac{2\tan a}{1 - \tan^{2}a}
-\end{aligned}$$
-Power-reduction formulas:
-$$\cos^{2}a = \frac{1 + \cos 2a}{2}, \quad \sin^{2}a = \frac{1 - \cos 2a}{2}$$
+### a) Double-Angle Formulas
 
-**Example 3:** Given $\cos a = -\frac{1}{3}$ with $\frac{\pi}{2} < a < \pi$. Calculate $\sin 2a$.
+Double-Angle Identities (obtained by setting $b = a$ in the addition formulas):
+• $\sin 2a = 2\sin a \cos a$
+• $\cos 2a = \cos^2 a - \sin^2 a = 2\cos^2 a - 1 = 1 - 2\sin^2 a$
+• $\tan 2a = \frac{2\tan a}{1 - \tan^2 a} \quad \left(a \ne \frac{\pi}{4} + \frac{k\pi}{2}, a \ne \frac{\pi}{2} + k\pi\right)$
+Power-Reducing Formulas:
+• $\cos^2 a = \frac{1 + \cos 2a}{2}$
+• $\sin^2 a = \frac{1 - \cos 2a}{2}$
 
-Solution to Example 3:
-• Since $\frac{\pi}{2} < a < \pi$, $\sin a > 0$. We have:
-$$\sin a = \sqrt{1 - \cos^{2}a} = \sqrt{1 - \left(-\frac{1}{3}\right)^{2}} = \sqrt{1 - \frac{1}{9}} = \frac{2\sqrt{2}}{3}$$
-• Thus:
-$$\sin 2a = 2 \sin a \cos a = 2 \cdot \frac{2\sqrt{2}}{3} \cdot \left(-\frac{1}{3}\right) = -\frac{4\sqrt{2}}{9}$$
+### b) Illustrative Examples and Practice on Double-Angle Formulas
 
-### b) Practice on Double-Angle Formulas
+**Example 3:** Given $\cos a = -\frac{1}{3}$ where $\frac{\pi}{2} < a < \pi$. Find $\sin 2a$.
 
-**Practice 2:** Without using a calculator, calculate $\cos \frac{\pi}{8}$.
+Solution for Example 3:
+• Since $\frac{\pi}{2} < a < \pi$, we have $\sin a > 0$ and $\cos a < 0$.
+• We have $\sin a = \sqrt{1 - \cos^2 a} = \sqrt{1 - \left(-\frac{1}{3}\right)^2} = \sqrt{1 - \frac{1}{9}} = \frac{2\sqrt{2}}{3}$.
+• Therefore, $\sin 2a = 2\sin a \cos a = 2 \cdot \frac{2\sqrt{2}}{3} \cdot \left(-\frac{1}{3}\right) = -\frac{4\sqrt{2}}{9}$.
 
-Solution to Practice 2:
-• Applying the power-reduction formula with $a = \frac{\pi}{8}$, we have $2a = \frac{\pi}{4}$:
-$$\cos^{2}\frac{\pi}{8} = \frac{1 + \cos\frac{\pi}{4}}{2} = \frac{1 + \frac{\sqrt{2}}{2}}{2} = \frac{2 + \sqrt{2}}{4}$$
-• Since $\frac{\pi}{8}$ lies in the first quadrant, $\cos \frac{\pi}{8} > 0$, yielding:
-$$\cos \frac{\pi}{8} = \frac{\sqrt{2 + \sqrt{2}}}{2}$$
+**Practice 2:** Without using a calculator, evaluate $\cos\frac{\pi}{8}$.
+
+Solution for Practice 2:
+• Applying the power-reducing formula with $a = \frac{\pi}{8} \Rightarrow 2a = \frac{\pi}{4}$:
+$$\cos^2\frac{\pi}{8} = \frac{1 + \cos\frac{\pi}{4}}{2} = \frac{1 + \frac{\sqrt{2}}{2}}{2} = \frac{2 + \sqrt{2}}{4}$$
+• Since $\frac{\pi}{8}$ lies in the first quadrant, $\cos\frac{\pi}{8} > 0$, yielding $\cos\frac{\pi}{8} = \frac{\sqrt{2 + \sqrt{2}}}{2}$.
 
 ## Product-to-Sum Formulas
 
-### a) Content of Product-to-Sum Formulas
+<Youtube url="https://www.youtube.com/watch?v=example_tich_thanh_tong"/>
 
-The product-to-sum formulas are:
-$$\begin{aligned}
-\cos a \cos b &= \frac{1}{2}[\cos(a - b) + \cos(a + b)] \\\\
-\sin a \sin b &= \frac{1}{2}[\cos(a - b) - \cos(a + b)] \\\\
-\sin a \cos b &= \frac{1}{2}[\sin(a - b) + \sin(a + b)]
-\end{aligned}$$
+### a) Statement of Product-to-Sum Formulas
 
-**Example 4:** Calculate the values of the expressions:
-a) $A = \cos \frac{5\pi}{12} \cos \frac{7\pi}{12}$;
+Product-to-Sum Identities:
+• $\cos a \cos b = \frac{1}{2}[\cos(a - b) + \cos(a + b)]$
+• $\sin a \sin b = \frac{1}{2}[\cos(a - b) - \cos(a + b)]$
+• $\sin a \cos b = \frac{1}{2}[\sin(a - b) + \sin(a + b)]
+$
+
+### b) Illustrative Examples and Practice on Product-to-Sum Formulas
+
+**Example 4:** Evaluate the following expressions:
+a) $A = \cos\frac{5\pi}{12} \cos\frac{7\pi}{12}$;
 b) $B = \cos 75^{\circ} \sin 15^{\circ}$.
 
-Solution to Example 4:
-• a) $A = \cos \frac{5\pi}{12} \cos \frac{7\pi}{12} = \frac{1}{2}\left[\cos\left(\frac{5\pi}{12} - \frac{7\pi}{12}\right) + \cos\left(\frac{5\pi}{12} + \frac{7\pi}{12}\right)\right] = \frac{1}{2}\left[\cos\left(-\frac{\pi}{6}\right) + \cos \pi\right] = \frac{1}{2}\left(\frac{\sqrt{3}}{2} - 1\right) = \frac{\sqrt{3} - 2}{4}$.
-• b) $B = \sin 15^{\circ} \cos 75^{\circ} = \frac{1}{2}[\sin(15^{\circ} - 75^{\circ}) + \sin(15^{\circ} + 75^{\circ})] = \frac{1}{2}[\sin(-60^{\circ}) + \sin 90^{\circ}] = \frac{1}{2}\left(-\frac{\sqrt{3}}{2} + 1\right) = \frac{2 - \sqrt{3}}{4}$.
+Solution for Example 4:
+• a) $A = \cos\frac{5\pi}{12}\cos\frac{7\pi}{12} = \frac{1}{2}\left[\cos\left(\frac{5\pi}{12} - \frac{7\pi}{12}\right) + \cos\left(\frac{5\pi}{12} + \frac{7\pi}{12}\right)\right] = \frac{1}{2}[\cos(-\frac{\pi}{6}) + \cos\pi] = \frac{1}{2}\left(\frac{\sqrt{3}}{2} - 1\right) = \frac{\sqrt{3} - 2}{4}$.
+• b) $B = \sin 15^{\circ}\cos 75^{\circ} = \frac{1}{2}[\sin(15^{\circ} - 75^{\circ}) + \sin(15^{\circ} + 75^{\circ})] = \frac{1}{2}[\sin(-60^{\circ}) + \sin 90^{\circ}] = \frac{1}{2}\left(-\frac{\sqrt{3}}{2} + 1\right) = \frac{2 - \sqrt{3}}{4}$.
 
-### b) Practice on Product-to-Sum Formulas
-
-**Practice 3:** Without using a calculator, calculate the values of:
+**Practice 3:** Without using a calculator, evaluate:
 a) $A = \cos 75^{\circ} \cos 15^{\circ}$;
-b) $B = \sin \frac{5\pi}{12} \cos \frac{7\pi}{12}$.
+b) $B = \sin\frac{5\pi}{12} \cos\frac{7\pi}{12}$.
 
-Solution to Practice 3:
-• a) $A = \cos 75^{\circ} \cos 15^{\circ} = \frac{1}{2}[\cos(75^{\circ} - 15^{\circ}) + \cos(75^{\circ} + 15^{\circ})] = \frac{1}{2}(\cos 60^{\circ} + \cos 90^{\circ}) = \frac{1}{2}\left(\frac{1}{2} + 0\right) = \frac{1}{4}$.
-• b) $B = \sin \frac{5\pi}{12} \cos \frac{7\pi}{12} = \frac{1}{2}\left[\sin\left(\frac{5\pi}{12} - \frac{7\pi}{12}\right) + \sin\left(\frac{5\pi}{12} + \frac{7\pi}{12}\right)\right] = \frac{1}{2}[\sin(-\frac{\pi}{6}) + \sin \pi] = \frac{1}{2}\left(-\frac{1}{2} + 0\right) = -\frac{1}{4}$.
+Solution for Practice 3:
+• a) $A = \cos 75^{\circ}\cos 15^{\circ} = \frac{1}{2}[\cos(75^{\circ} - 15^{\circ}) + \cos(75^{\circ} + 15^{\circ})] = \frac{1}{2}(\cos 60^{\circ} + \cos 90^{\circ}) = \frac{1}{2}\left(\frac{1}{2} + 0\right) = \frac{1}{4}$.
+• b) $B = \sin\frac{5\pi}{12}\cos\frac{7\pi}{12} = \frac{1}{2}\left[\sin\left(\frac{5\pi}{12} - \frac{7\pi}{12}\right) + \sin\left(\frac{5\pi}{12} + \frac{7\pi}{12}\right)\right] = \frac{1}{2}[\sin(-\frac{\pi}{6}) + \sin\pi] = \frac{1}{2}\left(-\frac{1}{2} + 0\right) = -\frac{1}{4}$.
 
 ## Sum-to-Product Formulas
 
-### a) Content of Sum-to-Product Formulas
+<Youtube url="https://www.youtube.com/watch?v=example_tong_thanh_tich"/>
 
-Setting $u = a - b, v = a + b$, we obtain the sum-to-product formulas:
-$$\begin{aligned}
-\cos u + \cos v &= 2 \cos \frac{u + v}{2} \cos \frac{u - v}{2} \\\\
-\cos u - \cos v &= -2 \sin \frac{u + v}{2} \sin \frac{u - v}{2} \\\\
-\sin u + \sin v &= 2 \sin \frac{u + v}{2} \cos \frac{u - v}{2} \\\\
-\sin u - \sin v &= 2 \cos \frac{u + v}{2} \sin \frac{u - v}{2}
-\end{aligned}$$
+### a) Statement of Sum-to-Product Formulas
 
-**Example 5:** Without using a calculator, calculate the value of $A = \sin \frac{\pi}{9} - \sin \frac{4\pi}{9} + \sin \frac{7\pi}{9}$.
+Sum-to-Product Identities (substituting $u = a - b, v = a + b$ or vice versa):
+• $\cos u + \cos v = 2\cos\frac{u + v}{2} \cos\frac{u - v}{2}$
+• $\cos u - \cos v = -2\sin\frac{u + v}{2} \sin\frac{u - v}{2}$
+• $\sin u + \sin v = 2\sin\frac{u + v}{2} \cos\frac{u - v}{2}$
+• $\sin u - \sin v = 2\cos\frac{u + v}{2} \sin\frac{u - v}{2}$
 
-Solution to Example 5:
-• $A = \left(\sin \frac{\pi}{9} + \sin \frac{7\pi}{9}\right) - \sin \frac{4\pi}{9} = 2 \sin \frac{4\pi}{9} \cos \left(-\frac{\pi}{3}
-ight) - \sin \frac{4\pi}{9} = 2 \sin \frac{4\pi}{9} \cdot \frac{1}{2} - \sin \frac{4\pi}{9} = \sin \frac{4\pi}{9} - \sin \frac{4\pi}{9} = 0$.
+### b) Illustrative Examples and Practice on Sum-to-Product Formulas
 
-### b) Practice on Sum-to-Product Formulas
+**Example 5:** Without using a calculator, evaluate the expression $A = \sin\frac{\pi}{9} - \sin\frac{4\pi}{9} + \sin\frac{7\pi}{9}$.
 
-**Practice 4:** Without using a calculator, calculate the value of $B = \cos \frac{\pi}{9} + \cos \frac{5\pi}{9} + \cos \frac{11\pi}{9}$.
+Solution for Example 5:
+• $A = \left(\sin\frac{\pi}{9} + \sin\frac{7\pi}{9}\right) - \sin\frac{4\pi}{9} = 2\sin\frac{\frac{\pi}{9} + \frac{7\pi}{9}}{2}\cos\frac{\frac{\pi}{9} - \frac{7\pi}{9}}{2} - \sin\frac{4\pi}{9} = 2\sin\frac{4\pi}{9}\cos\left(-\frac{\pi}{3}\right) - \sin\frac{4\pi}{9} = 2\sin\frac{4\pi}{9} \cdot \frac{1}{2} - \sin\frac{4\pi}{9} = \sin\frac{4\pi}{9} - \sin\frac{4\pi}{9} = 0$.
 
-Solution to Practice 4:
-• We have $\cos \frac{11\pi}{9} = \cos\left(\pi + \frac{2\pi}{9}\right) = -\cos \frac{2\pi}{9}$.
-• Thus $B = \cos \frac{\pi}{9} + \cos \frac{5\pi}{9} - \cos \frac{2\pi}{9} = \left(\cos \frac{\pi}{9} - \cos \frac{2\pi}{9}\right) + \cos \frac{5\pi}{9} = -2 \sin \frac{3\pi}{2} \sin \left(-\frac{\pi}{18}\right) + \cos \frac{5\pi}{9} = -2(-1) \left(-\sin \frac{\pi}{18}\right) + \cos \frac{5\pi}{9} = -2 \sin \frac{\pi}{18} + \cos\left(\frac{\pi}{2} + \frac{\pi}{18}\right) = -2 \sin \frac{\pi}{18} - \sin \frac{\pi}{18} = -3 \sin \frac{\pi}{18}$.
+**Practice 4:** Without using a calculator, evaluate the expression $B = \cos\frac{\pi}{9} + \cos\frac{5\pi}{9} + \cos\frac{11\pi}{9}$.
+
+Solution for Practice 4:
+• We note that $\cos\frac{11\pi}{9} = \cos\left(2\pi - \frac{7\pi}{9}\right) = \cos\frac{7\pi}{9}$.
+• Then $B = \left(\cos\frac{\pi}{9} + \cos\frac{7\pi}{9}\right) + \cos\frac{5\pi}{9} = 2\cos\frac{4\pi}{9}\cos\left(-\frac{\pi}{3}\right) + \cos\frac{5\pi}{9} = 2\cos\frac{4\pi}{9} \cdot \frac{1}{2} + \cos\frac{5\pi}{9} = \cos\frac{4\pi}{9} + \cos\left(\pi - \frac{4\pi}{9}\right) = \cos\frac{4\pi}{9} - \cos\frac{4\pi}{9} = 0$.
 
 ## Applications and Exercises
 
-### a) Real-World Applications
+### a) Real-World Applications and Modeling
 
-**Application (Phone Keypad Signals):** When pressing a key on a touchscreen phone, the keypad generates two pure tones combined together. Pressing a key produces a sound wave $y = \sin(2\pi f\_{1}t) + \sin(2\pi f\_{2}t)$, where $t$ is time (seconds).
-a) Find the function modeling the sound generated when pressing key 4 (frequencies $f\_{1} = 770\text{ Hz}, f\_{2} = 1209\text{ Hz}$). dak
-b) Transform the formula obtained in part a into a product of a sine function and a cosine function.
+**Application 1 (Combined Sound Wave in Digital Delay):** A digital delay device repeats an input signal $f_1(t) = 5\sin t$ and plays back $f_2(t) = 5\cos t$. The combined sound is $f(t) = f_1(t) + f_2(t)$. Express $f(t)$ in the sinusoidal form $f(t) = k\sin(t + \varphi)$ and determine the amplitude $k$ and initial phase $\varphi$.
 
-Solution to Application:
-• a) The sound wave function when pressing key 4 is: $y = \sin(1540\pi t) + \sin(2418\pi t)$.
-• b) Applying the sum-to-product formula $\sin u + \sin v = 2 \sin \frac{u+v}{2} \cos \frac{u-v}{2}$, we obtain:
-  $$y = 2 \sin\left(\frac{1540\pi t + 2418\pi t}{2}\right) \cos\left(\frac{1540\pi t - 2418\pi t}{2}\right) = 2 \sin(1979\pi t) \cos(-439\pi t) = 2 \sin(1979\pi t) \cos(439\pi t)$$.
+Solution for Application 1:
+• We have $f(t) = 5\sin t + 5\cos t = 5(\sin t + \cos t) = 5\sqrt{2}\left(\sin t \cdot \frac{\sqrt{2}}{2} + \cos t \cdot \frac{\sqrt{2}}{2}\right) = 5\sqrt{2}\left(\sin t \cos\frac{\pi}{4} + \cos t \sin\frac{\pi}{4}\right) = 5\sqrt{2}\sin\left(t + \frac{\pi}{4}\right)$.
+• The sound wave amplitude is $k = 5\sqrt{2}$, and the initial phase is $\varphi = \frac{\pi}{4}$.
 
-### b) End-of-Lesson Exercises
+**Exercise 1.13 (Combined Simple Harmonic Motion):** Given two simple harmonic motions: $x_1(t) = 2\cos\left(\frac{\pi}{3}t + \frac{\pi}{6}\right)$ (cm) and $x_2(t) = 2\cos\left(\frac{\pi}{3}t - \frac{\pi}{3}\right)$ (cm). Find the combined oscillation $x(t) = x_1(t) + x_2(t)$ and use the sum-to-product formula to find its amplitude and initial phase.
 
-**Exercise 1.7:** Using $15^{\circ} = 45^{\circ} - 30^{\circ}$, calculate the trigonometric values of $15^{\circ}$.
+Solution for Exercise 1.13:
+• Applying the sum-to-product formula $\cos u + \cos v = 2\cos\frac{u+v}{2}\cos\frac{u-v}{2}$:
+$$x(t) = 2\left[\cos\left(\frac{\pi}{3}t + \frac{\pi}{6}\right) + \cos\left(\frac{\pi}{3}t - \frac{\pi}{3}\right)\right]$$
+$$\text{Sum of angles: } \left(\frac{\pi}{3}t + \frac{\pi}{6}\right) + \left(\frac{\pi}{3}t - \frac{\pi}{3}\right) = \frac{2\pi}{3}t - \frac{\pi}{6} \Rightarrow \text{half-sum} = \frac{\pi}{3}t - \frac{\pi}{12}.$$
+$$\text{Difference of angles: } \left(\frac{\pi}{3}t + \frac{\pi}{6}\right) - \left(\frac{\pi}{3}t - \frac{\pi}{3}\right) = \frac{\pi}{2} \Rightarrow \text{half-difference} = \frac{\pi}{4}.$$
+$$x(t) = 2 \cdot 2 \cos\left(\frac{\pi}{3}t - \frac{\pi}{12}\right) \cos\frac{\pi}{4} = 4 \cos\left(\frac{\pi}{3}t - \frac{\pi}{12}\right) \cdot \frac{\sqrt{2}}{2} = 2\sqrt{2}\cos\left(\frac{\pi}{3}t - \frac{\pi}{12}\right).$$
+• The combined amplitude is $A = 2\sqrt{2}\text{ cm}$, and the initial phase is $\varphi = -\frac{\pi}{12}$.
 
-Solution to Exercise 1.7:
-• $\sin 15^{\circ} = \sin(45^{\circ} - 30^{\circ}) = \sin 45^{\circ}\cos 30^{\circ} - \cos 45^{\circ}\sin 30^{\circ} = \frac{\sqrt{6} - \sqrt{2}}{4}$.
-• $\cos 15^{\circ} = \cos(45^{\circ} - 30^{\circ}) = \frac{\sqrt{6} + \sqrt{2}}{4}$.
-• $\tan 15^{\circ} = 2 - \sqrt{3}$, $\cot 15^{\circ} = 2 + \sqrt{3}$.
+### b) Detailed Section Exercises
 
-**Exercise 1.12:** Given triangle $ABC$ with $B = 75^{\circ}, C = 45^{\circ}$ and $a = BC = 12\text{ cm}$.
-a) Prove that the area of triangle $ABC$ is given by $S = \frac{a^{2}\sin B \sin C}{2\sin A}$.
-b) Using the result from part a and product-to-sum formulas, compute the area $S$.
+**Exercise 1.7:** Using $15^{\circ} = 45^{\circ} - 30^{\circ}$, compute the trigonometric values of $15^{\circ}$.
 
-Solution to Exercise 1.12:
-• a) By the Law of Sines: $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \Rightarrow b = \frac{a \sin B}{\sin A}, c = \frac{a \sin C}{\sin A}$. The area $S = \frac{1}{2}bc \sin A = \frac{1}{2} \cdot \frac{a \sin B}{\sin A} \cdot \frac{a \sin C}{\sin A} \cdot \sin A = \frac{a^{2}\sin B \sin C}{2\sin A}$ (proven).
-• b) Angle $A = 180^{\circ} - (75^{\circ} + 45^{\circ}) = 60^{\circ}$.
-  $$S = \frac{12^{2} \sin 75^{\circ} \sin 45^{\circ}}{2 \sin 60^{\circ}} = \frac{144 \cdot \frac{\sqrt{6}+\sqrt{2}}{4} \cdot \frac{\sqrt{2}}{2}}{2 \cdot \frac{\sqrt{3}}{2}} = \frac{36(\sqrt{3} + 1)}{\sqrt{3}} = 36(1 + \sqrt{3})\text{ (cm}^{2}\text{)}.$$
+Solution for Exercise 1.7:
+• $\sin 15^{\circ} = \sin(45^{\circ} - 30^{\circ}) = \sin 45^{\circ}\cos 30^{\circ} - \cos 45^{\circ}\sin 30^{\circ} = \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \cdot \frac{1}{2} = \frac{\sqrt{6} - \sqrt{2}}{4}$.
+• $\cos 15^{\circ} = \cos(45^{\circ} - 30^{\circ}) = \cos 45^{\circ}\cos 30^{\circ} + \sin 45^{\circ}\sin 30^{\circ} = \frac{\sqrt{6} + \sqrt{2}}{4}$.
+• $\tan 15^{\circ} = \frac{\sin 15^{\circ}}{\cos 15^{\circ}} = 2 - \sqrt{3}$, and $\cot 15^{\circ} = 2 + \sqrt{3}$.
 
-**Exercise 1.13:** Consider two harmonic oscillations: $x\_{1}(t) = 2\cos\left(\frac{\pi}{3}t + \frac{\pi}{6}\right)$ and $x\_{2}(t) = 2\cos\left(\frac{\pi}{3}t - \frac{\pi}{3}\right)$. Find the combined oscillation $x(t) = x\_{1}(t) + x\_{2}(t)$ and determine its amplitude and initial phase.
+**Exercise 1.8:** Compute:
+a) $\cos\left(a + \frac{\pi}{6}\right)$ given $\sin a = \frac{1}{\sqrt{3}}$ and $\frac{\pi}{2} < a < \pi$;
+b) $\tan\left(a - \frac{\pi}{4}\right)$ given $\cos a = -\frac{1}{3}$ and $\pi < a < \frac{3\pi}{2}$.
 
-Solution to Exercise 1.13:
-• $x(t) = 2\left[\cos\left(\frac{\pi}{3}t + \frac{\pi}{6}\right) + \cos\left(\frac{\pi}{3}t - \frac{\pi}{3}\right)\right]$.
-• Applying the sum-to-product formula $\cos u + \cos v = 2 \cos \frac{u+v}{2} \cos \frac{u-v}{2}$:
-  $$x(t) = 2 \cdot 2 \cos\left(\frac{\pi}{3}t - \frac{\pi}{12}\right) \cos\left(\frac{\pi}{4}\right) = 4 \cos\left(\frac{\pi}{4}\right) \cos\left(\frac{\pi}{3}t - \frac{\pi}{12}\right) = 2\sqrt{2} \cos\left(\frac{\pi}{3}t - \frac{\pi}{12}\right)$$
-• The amplitude of the combined oscillation is $A = 2\sqrt{2}\text{ cm}$, and its initial phase is $\varphi = -\frac{\pi}{12}\text{ rad}$.
+Solution for Exercise 1.8:
+• a) Since $\frac{\pi}{2} < a < \pi$, we have $\cos a = -\sqrt{1 - \sin^2 a} = -\sqrt{1 - \frac{1}{3}} = -\sqrt{\frac{2}{3}} = -\frac{\sqrt{6}}{3}$.
+  $$\cos\left(a + \frac{\pi}{6}\right) = \cos a \cos\frac{\pi}{6} - \sin a \sin\frac{\pi}{6} = \left(-\frac{\sqrt{6}}{3}\right)\frac{\sqrt{3}}{2} - \left(\frac{1}{\sqrt{3}}\right)\frac{1}{2} = -\frac{3\sqrt{2}}{6} - \frac{\sqrt{3}}{6} = -\frac{3\sqrt{2} + \sqrt{3}}{6}.$$
+• b) Since $\pi < a < \frac{3\pi}{2}$, we have $\sin a = -\sqrt{1 - \cos^2 a} = -\sqrt{1 - \frac{1}{9}} = -\frac{2\sqrt{2}}{3}$, so $\tan a = \frac{\sin a}{\cos a} = 2\sqrt{2}$.
+  $$\tan\left(a - \frac{\pi}{4}\right) = \frac{\tan a - 1}{1 + \tan a} = \frac{2\sqrt{2} - 1}{2\sqrt{2} + 1} = \frac{(2\sqrt{2} - 1)^2}{8 - 1} = \frac{9 - 4\sqrt{2}}{7}.$$
+
+**Exercise 1.9:** Compute $\sin 2a, \cos 2a, \tan 2a$ given:
+a) $\sin a = \frac{1}{3}$ and $\frac{\pi}{2} < a < \pi$;
+b) $\sin a + \cos a = \frac{1}{2}$ and $\frac{\pi}{2} < a < \frac{3\pi}{4}$.
+
+Solution for Exercise 1.9:
+• a) $\cos a = -\sqrt{1 - \frac{1}{9}} = -\frac{2\sqrt{2}}{3}$.
+  $\sin 2a = 2\sin a \cos a = 2\left(\frac{1}{3}\right)\left(-\frac{2\sqrt{2}}{3}\right) = -\frac{4\sqrt{2}}{9}$.
+  $\cos 2a = 1 - 2\sin^2 a = 1 - 2\left(\frac{1}{9}\right) = \frac{7}{9}$.
+  $\tan 2a = \frac{\sin 2a}{\cos 2a} = -\frac{4\sqrt{2}}{7}$.
+• b) From $\sin a + \cos a = \frac{1}{2} \Rightarrow (\sin a + \cos a)^2 = \frac{1}{4} \Rightarrow 1 + \sin 2a = \frac{1}{4} \Rightarrow \sin 2a = -\frac{3}{4}$.
+  Since $\frac{\pi}{2} < a < \frac{3\pi}{4} \Rightarrow \pi < 2a < \frac{3\pi}{2} \Rightarrow \cos 2a = -\sqrt{1 - \sin^2(2a)} = -\sqrt{1 - \frac{9}{16}} = -\frac{\sqrt{7}}{4}$.
+  $\tan 2a = \frac{\sin 2a}{\cos 2a} = \frac{3\sqrt{7}}{7}$.
+
+**Exercise 1.10:** Evaluate the expressions:
+a) $A = \frac{\sin\frac{\pi}{15}\cos\frac{\pi}{10} + \sin\frac{\pi}{10}\cos\frac{\pi}{15}}{\cos\frac{2\pi}{15}\cos\frac{\pi}{5} - \sin\frac{2\pi}{15}\sin\frac{\pi}{5}}$;
+b) $B = \sin\frac{\pi}{32}\cos\frac{\pi}{32}\cos\frac{\pi}{16}\cos\frac{\pi}{8}$.
+
+Solution for Exercise 1.10:
+• a) $A = \frac{\sin\left(\frac{\pi}{15} + \frac{\pi}{10}\right)}{\cos\left(\frac{2\pi}{15} + \frac{\pi}{5}\right)} = \frac{\sin\frac{5\pi}{30}}{\cos\frac{5\pi}{15}} = \frac{\sin\frac{\pi}{6}}{\cos\frac{\pi}{3}} = \frac{1/2}{1/2} = 1$.
+• b) Applying repeated double-angle formulas $2\sin x \cos x = \sin 2x$:
+  $B = \frac{1}{2} \cdot \left(2\sin\frac{\pi}{32}\cos\frac{\pi}{32}\right)\cos\frac{\pi}{16}\cos\frac{\pi}{8} = \frac{1}{2}\sin\frac{\pi}{16}\cos\frac{\pi}{16}\cos\frac{\pi}{8} = \frac{1}{4}\sin\frac{\pi}{8}\cos\frac{\pi}{8} = \frac{1}{8}\sin\frac{\pi}{4} = \frac{1}{8} \cdot \frac{\sqrt{2}}{2} = \frac{\sqrt{2}}{16}$.
