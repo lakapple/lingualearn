@@ -1,0 +1,269 @@
+---
+title: 'Bài 16: Hàm số bậc hai.'
+description: Hệ thống lý thuyết về hàm số bậc 2 cùng ví dụ minh họa.
+tags:
+  - lớp 10
+  - Hàm số bậc hai
+  - Bảng giá trị
+  - Parabol (đỉnh, trục đối xứng, bề lõm)
+grade: 10
+order: 0
+updatedDate: 2026-10-27T19:27:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hàm số bậc hai
+
+·       Bảng giá trị
+
+·       Parabol (đỉnh, trục đối xứng, bề lõm)
+
+·       Khoảng đồng biến, khoảng nghịch biến, giá trị lớn nhất, giá trị nhỏ nhất
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết định nghĩa hàm số bậc hai $y = ax^2 + bx + c$ ($a \ne 0$).
+
+·       Thiết lập bảng giá trị của hàm số bậc hai tại một số điểm.
+
+·       Vẽ đường parabol là đồ thị của hàm số bậc hai; xác định toạ độ đỉnh $I\left(-\frac{b}{2a}; -\frac{\Delta}{4a}\right)$ và trục đối xứng $x = -\frac{b}{2a}$.
+
+·       Nhận biết và giải thích các tính chất đơn điệu (đồng biến, nghịch biến), cực trị (GTLN, GTNN) của hàm số bậc hai thông qua đồ thị và hệ số $a$.
+
+·       Vận dụng kiến thức về hàm số bậc hai vào giải quyết các bài toán tối ưu và mô hình hoá thực tiễn (rào vườn, cổng vòm, trụ tháp cầu, quỹ đạo vật ném).
+
+## Khái niệm hàm số bậc hai
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_ham_so_bac_hai"/>
+
+### a) Định nghĩa hàm số bậc hai
+
+Định nghĩa: Hàm số bậc hai là hàm số được cho bởi công thức:
+$$y = ax^2 + bx + c$$
+trong đó $x$ là biến số, $a, b, c$ là các hằng số và $a \ne 0$.
+
+Tập xác định: Tập xác định của hàm số bậc hai là $\mathbb{R}$ ($D = \mathbb{R}$).
+
+Nhận xét: Hàm số $y = ax^2$ ($a \ne 0$) đã học ở lớp 9 là một trường hợp đặc biệt của hàm số bậc hai khi $b = 0$ và $c = 0$.
+
+### b) Bảng giá trị và ví dụ mở đầu
+
+Bài toán mở đầu (Rào vườn): Bác Việt có một tấm lưới hình chữ nhật dài 20 m dùng để rào chắn ba mặt áp bên bờ tường thành một mảnh đất hình chữ nhật trồng rau. Gọi $x\text{ (m)}$ ($0 < x < 10$) là khoảng cách từ điểm cắm cọc đến bờ tường (chiều rộng). Khi đó chiều dài mảnh đất là $20 - 2x\text{ (m)}$. Diện tích mảnh đất là:
+$$S(x) = x(20 - 2x) = -2x^2 + 20x\text{ (m}^2)$$
+
+**Ví dụ 1:** Lập bảng giá trị của hàm số bậc hai $y = -2x^2 + 20x$ tại các điểm $x \in \\{0; 2; 4; 5; 6; 8; 10\\}$.
+
+Lời giải Ví dụ 1:
+• Thay lần lượt các giá trị của $x$ vào công thức $y = -2x^2 + 20x$:
+  + $x = 0 \Rightarrow y = 0$;
+  + $x = 2 \Rightarrow y = -2(2)^2 + 20(2) = 32$;
+  + $x = 4 \Rightarrow y = -2(4)^2 + 20(4) = 48$;
+  + $x = 5 \Rightarrow y = -2(5)^2 + 20(5) = 50$;
+  + $x = 6 \Rightarrow y = -2(6)^2 + 20(6) = 48$;
+  + $x = 8 \Rightarrow y = -2(8)^2 + 20(8) = 32$;
+  + $x = 10 \Rightarrow y = -2(10)^2 + 20(10) = 0$.
+• Bảng giá trị hoàn chỉnh: $(0; 0), (2; 32), (4; 48), (5; 50), (6; 48), (8; 32), (10; 0)$.
+
+**Luyện tập 1:** Cho hàm số $y = (x - 1)(2 - 3x)$.
+a) Hàm số đã cho có phải là hàm số bậc hai không? Xác định các hệ số $a, b, c$.
+b) Tính giá trị của hàm số tại $x \in \\{-2; -1; 0; 1\\}$.
+
+Lời giải Luyện tập 1:
+• a) Khai triển biểu thức:
+$$y = (x - 1)(2 - 3x) = 2x - 3x^2 - 2 + 3x = -3x^2 + 5x - 2$$
+  Đây là hàm số bậc hai với các hệ số: $a = -3 \ne 0$, $b = 5$, $c = -2$.
+• b) Tính giá trị tương ứng:
+  + Với $x = -2$: $y = -3(-2)^2 + 5(-2) - 2 = -12 - 10 - 2 = -24$.
+  + Với $x = -1$: $y = -3(-1)^2 + 5(-1) - 2 = -3 - 5 - 2 = -10$.
+  + Với $x = 0$: $y = -3(0)^2 + 5(0) - 2 = -2$.
+  + Với $x = 1$: $y = -3(1)^2 + 5(1) - 2 = 0$.
+
+**Vận dụng 1:** Một viên bi rơi tự do từ độ cao 19,6 m xuống đất. Độ cao $h$ (m) so với mặt đất phụ thuộc vào thời gian $t$ (s) theo công thức: $h = 19{,}6 - 4{,}9t^2$ ($h \ge 0, t \ge 0$).
+a) Sau bao nhiêu giây kể từ khi rơi thì viên bi chạm đất?
+b) Tìm tập xác định và tập giá trị của hàm số $h(t)$.
+
+Lời giải Vận dụng 1:
+• a) Viên bi chạm đất khi độ cao $h = 0$:
+$$19{,}6 - 4{,}9t^2 = 0 \Leftrightarrow 4{,}9t^2 = 19{,}6 \Leftrightarrow t^2 = 4 \Rightarrow t = 2\text{ (giây) (do } t \ge 0).$$  Vậy sau 2 giây kể từ khi rơi thì viên bi chạm đất.
+• b) Tập xác định của biến thời gian $t$ từ lúc thả đến khi chạm đất là: $D = [0; 2]$.
+  Vì $0 \le t \le 2$ nên $0 \le 4{,}9t^2 \le 19{,}6 \Rightarrow 0 \le h(t) = 19{,}6 - 4{,}9t^2 \le 19{,}6$. Vậy tập giá trị là $T = [0; 19{,}6]$.
+
+## Đồ thị của hàm số bậc hai
+
+<Youtube url="https://www.youtube.com/watch?v=example_do_thi_ham_so_bac_hai"/>
+
+### a) Cấu trúc hình học của parabol
+
+Dạng chính tắc của tam thức bậc hai:
+$$y = ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a} \quad (\text{với } \Delta = b^2 - 4ac)$$
+
+Các yếu tố cơ bản của Parabol $(P)$:
+• Đỉnh của parabol là điểm $I\left(-\frac{b}{2a}; -\frac{\Delta}{4a}\right)$.
+• Trục đối xứng là đường thẳng $x = -\frac{b}{2a}$ (đường thẳng đi qua đỉnh $I$ và song song hoặc trùng với trục tung $Oy$).
+• Bề lõm của parabol:
+  + Quay lên trên nếu $a > 0$ (khi đó đỉnh $I$ là điểm thấp nhất của đồ thị, hàm số đạt giá trị nhỏ nhất tại đỉnh);
+  + Quay xuống dưới nếu $a < 0$ (khi đó đỉnh $I$ là điểm cao nhất của đồ thị, hàm số đạt giá trị lớn nhất tại đỉnh).
+
+Các bước vẽ đường parabol $y = ax^2 + bx + c$ ($a \ne 0$):
+• Bước 1: Xác định toạ độ đỉnh $I\left(-\frac{b}{2a}; -\frac{\Delta}{4a}\right)$.
+• Bước 2: Xác định trục đối xứng $x = -\frac{b}{2a}$ và hướng bề lõm (dựa vào dấu của $a$).
+• Bước 3: Tìm toạ độ giao điểm với trục tung $Oy$ là điểm $(0; c)$ và giao điểm với trục hoành $Ox$ (nghiệm của phương trình $ax^2 + bx + c = 0$, nếu có); lấy thêm một vài điểm đối xứng qua trục đối xứng để vẽ chính xác.
+• Bước 4: Vẽ đường cong parabol đi qua các điểm đã xác định.
+
+### b) Tính đơn điệu và cực trị của hàm số bậc hai
+
+Bảng biến thiên và tính chất hàm số bậc hai:
+• Trường hợp $a > 0$:
+  + Hàm số nghịch biến trên khoảng $\left(-\infty; -\frac{b}{2a}\right)$ (đồ thị đi xuống từ trái sang phải).
+  + Hàm số đồng biến trên khoảng $\left(-\frac{b}{2a}; +\infty\right)$ (đồ thị đi lên từ trái sang phải).
+  + Giá trị nhỏ nhất của hàm số là $y\_{\min} = -\frac{\Delta}{4a}$ tại $x = -\frac{b}{2a}$. Tập giá trị là $T = \left[-\frac{\Delta}{4a}; +\infty\right)$.
+• Trường hợp $a < 0$:
+  + Hàm số đồng biến trên khoảng $\left(-\infty; -\frac{b}{2a}\right)$ (đồ thị đi lên từ trái sang phải).
+  + Hàm số nghịch biến trên khoảng $\left(-\frac{b}{2a}; +\infty\right)$ (đồ thị đi xuống từ trái sang phải).
+  + Giá trị lớn nhất của hàm số là $y\_{\max} = -\frac{\Delta}{4a}$ tại $x = -\frac{b}{2a}$. Tập giá trị là $T = \left(-\infty; -\frac{\Delta}{4a}\right]$.
+
+**Ví dụ 2:** Cho hàm số bậc hai $y = -2x^2 - 2x + 4$.
+a) Vẽ đồ thị parabol của hàm số.
+b) Tìm các khoảng đồng biến, nghịch biến và giá trị lớn nhất của hàm số.
+
+Lời giải Ví dụ 2:
+• a) Các bước vẽ parabol:
+  + Hệ số $a = -2 < 0$, bề lõm quay xuống dưới.
+  + Đỉnh: $x_I = -\frac{b}{2a} = -\frac{-2}{2(-2)} = -\frac{1}{2}$; $y_I = -2\left(-\frac{1}{2}\right)^2 - 2\left(-\frac{1}{2}\right) + 4 = \frac{9}{2}$. Vậy đỉnh $I\left(-\frac{1}{2}; \frac{9}{2}\right)$.
+  + Trục đối xứng: đường thẳng $x = -\frac{1}{2}$.
+  + Giao điểm với trục tung $Oy$: điểm $A(0; 4)$. Điểm đối xứng với $A$ qua trục đối xứng là $B(-1; 4)$.
+  + Giao điểm với trục hoành $Ox$: giải phương trình $-2x^2 - 2x + 4 = 0 \Leftrightarrow x^2 + x - 2 = 0 \Leftrightarrow x = 1$ hoặc $x = -2$. Parabol cắt $Ox$ tại $(1; 0)$ và $(-2; 0)$.
+• b) Tính chất từ đồ thị:
+  + Hàm số đồng biến trên khoảng $\left(-\infty; -\frac{1}{2}\right)$.
+  + Hàm số nghịch biến trên khoảng $\left(-\frac{1}{2}; +\infty\right)$.
+  + Giá trị lớn nhất của hàm số là $y\_{\max} = \frac{9}{2}$ đạt được khi $x = -\frac{1}{2}$.
+
+**Luyện tập 2:** Vẽ parabol $y = 3x^2 - 10x + 7$. Từ đó tìm khoảng đồng biến, nghịch biến và giá trị nhỏ nhất của hàm số.
+
+Lời giải Luyện tập 2:
+• Hệ số $a = 3 > 0$, bề lõm parabol quay lên trên.
+• Đỉnh $I$: $x_I = -\frac{b}{2a} = -\frac{-10}{2 \cdot 3} = \frac{5}{3}$; $y_I = 3\left(\frac{5}{3}\right)^2 - 10\left(\frac{5}{3}\right) + 7 = -\frac{4}{3}$. Vậy $I\left(\frac{5}{3}; -\frac{4}{3}\right)$.
+• Trục đối xứng: $x = \frac{5}{3}$.
+• Giao điểm với $Oy$: $(0; 7)$. Giao điểm với $Ox$: $3x^2 - 10x + 7 = 0 \Leftrightarrow x = 1$ hoặc $x = \frac{7}{3}$.
+• Kết luận:
+  + Hàm số nghịch biến trên khoảng $\left(-\infty; \frac{5}{3}\right)$.
+  + Hàm số đồng biến trên khoảng $\left(\frac{5}{3}; +\infty\right)$.
+  + Giá trị nhỏ nhất là $y\_{\min} = -\frac{4}{3}$ tại $x = \frac{5}{3}$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 2 (Trụ tháp cầu vượt ngã ba Huế):** Trụ tháp cầu vượt có dạng hình parabol, khoảng cách giữa hai chân trụ tháp khoảng 27 m, chiều cao của trụ tháp tính từ điểm trên mặt đất cách chân trụ tháp 2,26 m là 20 m. Ước lượng độ cao của đỉnh trụ tháp cầu (so với mặt đất).
+
+Lời giải Vận dụng 2:
+• Chọn hệ trục toạ độ $Oxy$ sao cho gốc $O(0; 0)$ tại một chân trụ tháp, chân tháp còn lại nằm tại điểm $(27; 0)$ trên trục hoành $Ox$. Khi đó phương trình parabol có dạng:
+$$y = ax(x - 27) = ax^2 - 27ax$$
+• Điểm cách chân trụ tháp $2{,}26\text{ m}$ có toạ độ $(2{,}26; 20)$ thuộc parabol. Thay toạ độ vào phương trình:
+$$20 = a \cdot 2{,}26 \cdot (2{,}26 - 27) = a \cdot 2{,}26 \cdot (-24{,}74) = -55{,}9124a \Rightarrow a = \frac{20}{-55{,}9124} \approx -0{,}3577$$
+• Đỉnh của parabol nằm tại điểm có hoành độ chính giữa: $x_I = \frac{27}{2} = 13{,}5\text{ m}$.
+• Độ cao đỉnh trụ tháp cầu so với mặt đất:
+$$y_I = a \cdot 13{,}5 \cdot (13{,}5 - 27) = a \cdot 13{,}5 \cdot (-13{,}5) = -182{,}25a \approx -182{,}25 \cdot (-0{,}3577) \approx 65{,}19\text{ (m)}.$$
+• Vậy độ cao của đỉnh trụ tháp cầu vượt khoảng $65{,}2\text{ m}$.
+
+**Bài 6.12 (Cổng parabol Đại học Bách khoa Hà Nội):** Cổng trường có dạng parabol, khoảng cách giữa hai chân cổng là 8 m và chiều cao của cổng tính từ điểm trên mặt đất cách chân cổng 0,5 m là 2,93 m. Bạn An tính ra chiều cao cổng là 12 m. Kết quả của bạn An có chính xác không?
+
+Lời giải Bài 6.12:
+• Chọn hệ trục toạ độ $Oxy$ sao cho gốc $O(0; 0)$ tại một chân cổng, chân cổng còn lại tại $(8; 0)$. Parabol có dạng $y = ax(x - 8)$.
+• Điểm cách chân cổng 0,5 m có độ cao 2,93 m, tức điểm $(0{,}5; 2{,}93)$ thuộc parabol:
+$$2{,}93 = a \cdot 0{,}5 \cdot (0{,}5 - 8) = -3{,}75a \Rightarrow a = -\frac{2{,}93}{3{,}75} \approx -0{,}7813$$
+• Chiều cao của cổng parabol là tung độ đỉnh tại hoành độ chính giữa $x_I = \frac{8}{2} = 4\text{ m}$:
+$$h = y(4) = a \cdot 4 \cdot (4 - 8) = -16a = -16 \cdot \left(-\frac{2{,}93}{3{,}75}\right) = \frac{46{,}88}{3{,}75} \approx 12{,}5\text{ (m)}$$
+• Kết luận: Chiều cao thực tế xấp xỉ $12{,}5\text{ m}$, do đó kết quả 12 m của bạn An là chưa thật sự chính xác (sai lệch khoảng 0,5 m). Nhận xét của Bình là hoàn toàn đúng.
+
+**Bài 6.13 (Rào vườn hình chữ nhật diện tích lớn nhất):** Bác Hùng dùng 40 m lưới thép gai rào thành một mảnh vườn hình chữ nhật để trồng rau.
+a) Tính diện tích $S(x)$ của mảnh vườn theo chiều rộng $x$ (mét).
+b) Tìm kích thước của mảnh vườn có diện tích lớn nhất.
+
+Lời giải Bài 6.13:
+• a) Chu vi mảnh vườn bằng 40 m nên nửa chu vi là $\frac{40}{2} = 20\text{ m}$.
+  Chiều rộng là $x$ ($0 < x < 10$), chiều dài là $20 - x\text{ (m)}$. Diện tích mảnh vườn là:
+$$S(x) = x(20 - x) = -x^2 + 20x\text{ (m}^2)$$
+• b) Hàm số bậc hai $S(x) = -x^2 + 20x$ có hệ số $a = -1 < 0$ nên đạt giá trị lớn nhất tại đỉnh:
+$$x = -\frac{b}{2a} = -\frac{20}{2(-1)} = 10\text{ (m)}$$
+  Khi đó chiều rộng là 10 m và chiều dài là $20 - 10 = 10\text{ m}$ (mảnh vườn là hình vuông).
+  Diện tích lớn nhất đạt được là $S\_{\max} = 10 \cdot 10 = 100\text{ m}^2$.
+
+**Bài 6.14 (Quỹ đạo vật ném):** Quỹ đạo của một vật ném lên từ gốc toạ độ $O$ là parabol: $y = -\frac{3}{1\\,000}x^2 + x$, trong đó $x$ (m) là khoảng cách theo phương ngang, $y$ (m) là độ cao của vật.
+a) Tìm độ cao lớn nhất của vật trong quá trình bay.
+b) Tính khoảng cách từ điểm chạm đất đến gốc $O$ (tầm xa của quỹ đạo).
+
+Lời giải Bài 6.14:
+• a) Hàm số bậc hai có hệ số $a = -\frac{3}{1\\,000} < 0$, $b = 1$, $c = 0$.
+  Độ cao lớn nhất đạt được tại đỉnh của parabol có hoành độ:
+$$x_I = -\frac{b}{2a} = -\frac{1}{2 \cdot \left(-\frac{3}{1\\,000}\right)} = \frac{1\\,000}{6} = \frac{500}{3}\text{ (m)}$$
+  Độ cao lớn nhất là tung độ đỉnh:
+$$y\_{\max} = y\left(\frac{500}{3}\right) = -\frac{3}{1\\,000} \cdot \left(\frac{500}{3}\right)^2 + \frac{500}{3} = -\frac{3}{1\\,000} \cdot \frac{250\\,000}{9} + \frac{500}{3} = -\frac{250}{3} + \frac{500}{3} = \frac{250}{3} \approx 83{,}33\text{ (m)}$$
+• b) Vật chạm đất khi độ cao $y = 0$:
+$$-\frac{3}{1\\,000}x^2 + x = 0 \Leftrightarrow x\left(-\frac{3}{1\\,000}x + 1\right) = 0 \Leftrightarrow x = 0 \text{ hoặc } x = \frac{1\\,000}{3} \approx 333{,}33\text{ (m)}$$
+  Vì $x = 0$ là vị trí ném ban đầu nên điểm chạm đất cách gốc $O$ một khoảng là tầm xa $L = \frac{1\\,000}{3} \approx 333{,}33\text{ m}$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.7 & Bài 6.8:** Khảo sát toạ độ đỉnh, trục đối xứng, bảng biến thiên và các khoảng đồng biến, nghịch biến của các parabol sau:
+a) $y = x^2 - 3x + 2$;
+b) $y = -2x^2 + 2x + 3$;
+c) $y = x^2 + 2x + 1$;
+d) $y = -x^2 + x - 1$.
+
+Lời giải Bài 6.7 & Bài 6.8:
+• a) $y = x^2 - 3x + 2$: Hệ số $a = 1 > 0$, đỉnh $I\left(\frac{3}{2}; -\frac{1}{4}\right)$, trục đối xứng $x = \frac{3}{2}$.
+  Hàm số nghịch biến trên khoảng $\left(-\infty; \frac{3}{2}\right)$ và đồng biến trên khoảng $\left(\frac{3}{2}; +\infty\right)$.
+• b) $y = -2x^2 + 2x + 3$: Hệ số $a = -2 < 0$, đỉnh $I\left(\frac{1}{2}; \frac{7}{2}\right)$, trục đối xứng $x = \frac{1}{2}$.
+  Hàm số đồng biến trên khoảng $\left(-\infty; \frac{1}{2}\right)$ và nghịch biến trên khoảng $\left(\frac{1}{2}; +\infty\right)$.
+• c) $y = x^2 + 2x + 1$: Hệ số $a = 1 > 0$, đỉnh $I(-1; 0)$, trục đối xứng $x = -1$.
+  Hàm số nghịch biến trên khoảng $(-\infty; -1)$ và đồng biến trên khoảng $(-1; +\infty)$.
+• d) $y = -x^2 + x - 1$: Hệ số $a = -1 < 0$, đỉnh $I\left(\frac{1}{2}; -\frac{3}{4}\right)$, trục đối xứng $x = \frac{1}{2}$.
+  Hàm số đồng biến trên khoảng $\left(-\infty; \frac{1}{2}\right)$ và nghịch biến trên khoảng $\left(\frac{1}{2}; +\infty\right)$.
+
+**Bài 6.9:** Xác định parabol $y = ax^2 + bx + 1$ ($a \ne 0$) trong mỗi trường hợp sau:
+a) Đi qua hai điểm $A(1; 0)$ và $B(2; 4)$;
+b) Đi qua điểm $A(1; 0)$ và có trục đối xứng $x = 1$;
+c) Có đỉnh là $I(1; 2)$;
+d) Đi qua điểm $C(-1; 1)$ và có tung độ đỉnh bằng $-0{,}25$.
+
+Lời giải Bài 6.9:
+• a) Thay toạ độ $A, B$ vào phương trình:
+$$\begin{cases} a(1)^2 + b(1) + 1 = 0 \\\ a(2)^2 + b(2) + 1 = 4 \end{cases} \Leftrightarrow \begin{cases} a + b = -1 \\\ 4a + 2b = 3 \end{cases} \Leftrightarrow \begin{cases} a = \frac{5}{2} \\\ b = -\frac{7}{2} \end{cases}$$
+  Vậy parabol là: $y = \frac{5}{2}x^2 - \frac{7}{2}x + 1$.
+• b) Trục đối xứng $x = 1 \Rightarrow -\frac{b}{2a} = 1 \Rightarrow b = -2a$. Parabol qua $A(1; 0) \Rightarrow a + b + 1 = 0$.
+  Hệ phương trình: $a - 2a + 1 = 0 \Rightarrow a = 1 \Rightarrow b = -2$. Parabol là: $y = x^2 - 2x + 1$.
+• c) Đỉnh $I(1; 2) \Rightarrow -\frac{b}{2a} = 1 \Rightarrow b = -2a$. Thay $I(1; 2)$ vào hàm số: $a(1)^2 + b(1) + 1 = 2 \Rightarrow a + b = 1$.
+  Thay $b = -2a$ vào: $a - 2a = 1 \Rightarrow a = -1 \Rightarrow b = 2$. Parabol là: $y = -x^2 + 2x + 1$.
+• d) Parabol qua $C(-1; 1) \Rightarrow a(-1)^2 + b(-1) + 1 = 1 \Leftrightarrow a - b = 0 \Leftrightarrow b = a$.
+  Tung độ đỉnh $y_I = -\frac{\Delta}{4a} = -\frac{b^2 - 4a(1)}{4a} = -\frac{a^2 - 4a}{4a} = -\frac{a - 4}{4} = -0{,}25 \Rightarrow a - 4 = 1 \Rightarrow a = 5 \Rightarrow b = 5$.
+  Vậy parabol là: $y = 5x^2 + 5x + 1$.
+
+**Bài 6.10:** Xác định parabol $y = ax^2 + bx + c$, biết rằng parabol đi qua điểm $A(8; 0)$ và có đỉnh là $I(6; -12)$.
+
+Lời giải Bài 6.10:
+• Viết phương trình parabol dưới dạng chính tắc qua toạ độ đỉnh $I(h; k) = (6; -12)$:
+$$y = a(x - h)^2 + k = a(x - 6)^2 - 12$$
+• Parabol đi qua điểm $A(8; 0)$ nên:
+$$0 = a(8 - 6)^2 - 12 \Leftrightarrow 4a = 12 \Leftrightarrow a = 3$$
+• Khai triển tìm công thức hàm số:
+$$y = 3(x - 6)^2 - 12 = 3(x^2 - 12x + 36) - 12 = 3x^2 - 36x + 96$$
+  Vậy parabol cần tìm là: $y = 3x^2 - 36x + 96$.
+
+**Bài 6.11:** Xác định dấu của hệ số $a$ và biệt thức $\Delta$ của parabol $(P): y = ax^2 + bx + c$ trong mỗi trường hợp sau:
+a) $(P)$ nằm hoàn toàn phía trên trục hoành;
+b) $(P)$ nằm hoàn toàn phía dưới trục hoành;
+c) $(P)$ cắt trục hoành tại hai điểm phân biệt và có đỉnh nằm phía dưới trục hoành;
+d) $(P)$ tiếp xúc với trục hoành và nằm phía trên trục hoành.
+
+Lời giải Bài 6.11:
+• a) $(P)$ nằm hoàn toàn phía trên $Ox \Leftrightarrow y > 0, \forall x \in \mathbb{R} \Rightarrow a > 0$ và $\Delta < 0$.
+• b) $(P)$ nằm hoàn toàn phía dưới $Ox \Leftrightarrow y < 0, \forall x \in \mathbb{R} \Rightarrow a < 0$ và $\Delta < 0$.
+• c) $(P)$ cắt trục hoành tại hai điểm phân biệt $\Rightarrow \Delta > 0$. Đỉnh nằm phía dưới trục hoành nên bề lõm quay lên trên $\Rightarrow a > 0$.
+• d) $(P)$ tiếp xúc với trục hoành $\Rightarrow \Delta = 0$. Parabol nằm phía trên trục hoành nên bề lõm quay lên trên $\Rightarrow a > 0$.

@@ -1,0 +1,270 @@
+---
+title: 'Lesson 16: Quadratic Functions.'
+description: Theoretical Framework of Quadratic Functions with Illustrative Examples.
+tags:
+  - grade 10
+  - Quadratic function
+  - Table of values
+  - Parabola (vertex, axis of symmetry, concavity / opening direction)
+grade: 10
+order: 0
+updatedDate: 2026-10-27T19:27:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Quadratic function
+
+·       Table of values
+
+·       Parabola (vertex, axis of symmetry, concavity / opening direction)
+
+·       Intervals of increase and decrease, maximum value, minimum value
+
+### **Knowledge and Skills:**
+
+·       Recognize the formal algebraic definition of a quadratic function $y = ax^2 + bx + c$ ($a \ne 0$).
+
+·       Construct a table of values for a quadratic function across specific points.
+
+·       Graph a parabola representing a quadratic function; determine its vertex $I\left(-\frac{b}{2a}; -\frac{\Delta}{4a}\right)$ and axis of symmetry $x = -\frac{b}{2a}$.
+
+·       Analyze and explain the monotonic properties (intervals of increase and decrease) and extrema (maximum/minimum values) of a quadratic function using its graph and leading coefficient $a$.
+
+·       Apply quadratic functions to optimization and real-world mathematical modeling (fencing enclosures, arched gateways, bridge pylons, projectile trajectories).
+
+## Concept of a Quadratic Function
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_ham_so_bac_hai"/>
+
+### a) Definition of a Quadratic Function
+
+Definition: A quadratic function is a function defined by an algebraic formula of the form:
+$$y = ax^2 + bx + c$$
+where $x$ is the independent variable, $a, b, c$ are real constants, and $a \ne 0$.
+
+Domain: The natural domain of a quadratic function is the entire set of real numbers $\mathbb{R}$ ($D = \mathbb{R}$).
+
+Remark: The function $y = ax^2$ ($a \ne 0$) studied in earlier grades is a particular case of a quadratic function where $b = 0$ and $c = 0$.
+
+### b) Table of Values and Introductory Problem
+
+Introductory Problem (Garden Fencing): Mr. Viet uses a 20-meter wire mesh fence to enclose three sides of a rectangular vegetable garden adjacent to an existing brick wall. Letting $x\text{ (m)}$ ($0 < x < 10$) denote the width of the garden (the distance from the fence corners to the wall), the length of the enclosure is $20 - 2x\text{ (m)}$. The enclosed area is given by:
+$$S(x) = x(20 - 2x) = -2x^2 + 20x\text{ (m}^2)$$
+
+**Example 1:** Construct a table of values for the quadratic function $y = -2x^2 + 20x$ at the points $x \in \\{0; 2; 4; 5; 6; 8; 10\\}$.
+
+Solution for Example 1:
+• Substituting each value of $x$ into the equation $y = -2x^2 + 20x$:
+  + $x = 0 \Rightarrow y = 0$;
+  + $x = 2 \Rightarrow y = -2(2)^2 + 20(2) = 32$;
+  + $x = 4 \Rightarrow y = -2(4)^2 + 20(4) = 48$;
+  + $x = 5 \Rightarrow y = -2(5)^2 + 20(5) = 50$;
+  + $x = 6 \Rightarrow y = -2(6)^2 + 20(6) = 48$;
+  + $x = 8 \Rightarrow y = -2(8)^2 + 20(8) = 32$;
+  + $x = 10 \Rightarrow y = -2(10)^2 + 20(10) = 0$.
+• Completed table of values: $(0; 0), (2; 32), (4; 48), (5; 50), (6; 48), (8; 32), (10; 0)$.
+
+**Practice 1:** Consider the function $y = (x - 1)(2 - 3x)$.
+a) Is this a quadratic function? If so, identify the coefficients $a, b, c$.
+b) Compute the function values at $x \in \\{-2; -1; 0; 1\\}$.
+
+Solution for Practice 1:
+• a) Expanding the algebraic expression:
+$$y = (x - 1)(2 - 3x) = 2x - 3x^2 - 2 + 3x = -3x^2 + 5x - 2$$
+  This is indeed a quadratic function with coefficients: $a = -3 \ne 0$, $b = 5$, and $c = -2$.
+• b) Evaluating the function at the given points:
+  + For $x = -2$: $y = -3(-2)^2 + 5(-2) - 2 = -12 - 10 - 2 = -24$.
+  + For $x = -1$: $y = -3(-1)^2 + 5(-1) - 2 = -3 - 5 - 2 = -10$.
+  + For $x = 0$: $y = -3(0)^2 + 5(0) - 2 = -2$.
+  + For $x = 1$: $y = -3(1)^2 + 5(1) - 2 = 0$.
+
+**Application 1:** A marble falls freely from a height of 19.6 m above the ground. Its height $h$ (m) above the ground as a function of elapsed time $t$ (s) is modeled by: $h = 19.6 - 4.9t^2$ ($h \ge 0, t \ge 0$).
+a) After how many seconds does the marble hit the ground?
+b) Find the domain and range of the function $h(t)$.
+
+Solution for Application 1:
+• a) The marble strikes the ground when its height is zero ($h = 0$):
+$$19.6 - 4.9t^2 = 0 \Leftrightarrow 4.9t^2 = 19.6 \Leftrightarrow t^2 = 4 \Rightarrow t = 2\text{ (seconds) (since } t \ge 0).$$
+  Thus, the marble reaches the ground after 2 seconds.
+• b) The physical domain of the elapsed time $t$ from release until impact is $D = [0; 2]$.
+  For $0 \le t \le 2$, we have $0 \le 4.9t^2 \le 19.6 \Rightarrow 0 \le h(t) = 19.6 - 4.9t^2 \le 19.6$. Hence, the range is $T = [0; 19.6]$.
+
+## Graph of a Quadratic Function
+
+<Youtube url="https://www.youtube.com/watch?v=example_do_thi_ham_so_bac_hai"/>
+
+### a) Geometric Structure of a Parabola
+
+Standard / Vertex Form of a Quadratic Function:
+$$y = ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a} \quad (\text{where } \Delta = b^2 - 4ac)$$
+
+Fundamental Geometric Elements of the Parabola $(P)$:
+• Vertex: The vertex is the point $I\left(-\frac{b}{2a}; -\frac{\Delta}{4a}\right)$.
+• Axis of symmetry: The vertical line $x = -\frac{b}{2a}$ passing through the vertex $I$.
+• Concavity and Direction of Opening:
+  + If $a > 0$, the parabola opens upward (concave up). The vertex $I$ is the lowest point on the graph, and the function attains its minimum value at $I$.
+  + If $a < 0$, the parabola opens downward (concave down). The vertex $I$ is the highest point on the graph, and the function attains its maximum value at $I$.
+
+Steps for Graphing the Parabola $y = ax^2 + bx + c$ ($a \ne 0$):
+• Step 1: Determine the coordinates of the vertex $I\left(-\frac{b}{2a}; -\frac{\Delta}{4a}\right)$.
+• Step 2: Identify the axis of symmetry $x = -\frac{b}{2a}$ and the direction of opening (determined by the sign of $a$).
+• Step 3: Find the $y$-intercept $(0; c)$ and any $x$-intercepts (by solving $ax^2 + bx + c = 0$, if real roots exist); plot additional symmetric points across the axis of symmetry.
+• Step 4: Draw a smooth parabolic curve passing through the plotted points.
+
+### b) Monotonicity and Extrema of Quadratic Functions
+
+Variation Table and Monotonic Properties:
+• Case $a > 0$:
+  + Strictly decreasing on the interval $\left(-\infty; -\frac{b}{2a}\right)$ (the graph falls from left to right).
+  + Strictly increasing on the interval $\left(-\frac{b}{2a}; +\infty\right)$ (the graph rises from left to right).
+  + Global minimum: $y\_{\min} = -\frac{\Delta}{4a}$ attained at $x = -\frac{b}{2a}$. The range is $T = \left[-\frac{\Delta}{4a}; +\infty\right)$.
+• Case $a < 0$:
+  + Strictly increasing on the interval $\left(-\infty; -\frac{b}{2a}\right)$ (the graph rises from left to right).
+  + Strictly decreasing on the interval $\left(-\frac{b}{2a}; +\infty\right)$ (the graph falls from left to right).
+  + Global maximum: $y\_{\max} = -\frac{\Delta}{4a}$ attained at $x = -\frac{b}{2a}$. The range is $T = \left(-\infty; -\frac{\Delta}{4a}\right]$.
+
+**Example 2:** Given the quadratic function $y = -2x^2 - 2x + 4$.
+a) Sketch the parabola.
+b) Determine its intervals of increase and decrease, and find its maximum value.
+
+Solution for Example 2:
+• a) Graphing the parabola:
+  + Leading coefficient $a = -2 < 0$, so the parabola opens downward.
+  + Vertex: $x_I = -\frac{b}{2a} = -\frac{-2}{2(-2)} = -\frac{1}{2}$; $y_I = -2\left(-\frac{1}{2}\right)^2 - 2\left(-\frac{1}{2}\right) + 4 = \frac{9}{2}$. Thus, vertex $I\left(-\frac{1}{2}; \frac{9}{2}\right)$.
+  + Axis of symmetry: the vertical line $x = -\frac{1}{2}$.
+  + $y$-intercept: point $A(0; 4)$. The symmetric point across the axis is $B(-1; 4)$.
+  + $x$-intercepts: solving $-2x^2 - 2x + 4 = 0 \Leftrightarrow x^2 + x - 2 = 0 \Leftrightarrow x = 1$ or $x = -2$. The parabola intersects the $x$-axis at $(1; 0)$ and $(-2; 0)$.
+• b) Functional properties:
+  + The function is strictly increasing on $\left(-\infty; -\frac{1}{2}\right)$.
+  + The function is strictly decreasing on $\left(-\frac{1}{2}; +\infty\right)$.
+  + The maximum value is $y\_{\max} = \frac{9}{2}$, attained at $x = -\frac{1}{2}$.
+
+**Practice 2:** Sketch the parabola $y = 3x^2 - 10x + 7$. Determine its intervals of increase and decrease, and find its minimum value.
+
+Solution for Practice 2:
+• Leading coefficient $a = 3 > 0$, so the parabola opens upward.
+• Vertex $I$: $x_I = -\frac{b}{2a} = -\frac{-10}{2 \cdot 3} = \frac{5}{3}$; $y_I = 3\left(\frac{5}{3}\right)^2 - 10\left(\frac{5}{3}\right) + 7 = -\frac{4}{3}$. Thus, $I\left(\frac{5}{3}; -\frac{4}{3}\right)$.
+• Axis of symmetry: line $x = \frac{5}{3}$.
+• Intercepts: $y$-intercept at $(0; 7)$; $x$-intercepts obtained from $3x^2 - 10x + 7 = 0 \Leftrightarrow x = 1$ or $x = \frac{7}{3}$.
+• Conclusion:
+  + Strictly decreasing on $\left(-\infty; \frac{5}{3}\right)$.
+  + Strictly increasing on $\left(\frac{5}{3}; +\infty\right)$.
+  + The minimum value is $y\_{\min} = -\frac{4}{3}$, attained at $x = \frac{5}{3}$.
+
+## Applications and Exercises
+
+### a) Real-World Problems and Modeling
+
+**Application 2 (Hue Junction Overpass Tower):** The pylon tower of a three-level overpass is parabolic in shape. The distance between the two base footings is 27 m. At a point on the ground 2.26 m from one footing, the height of the pylon is 20 m. Estimate the maximum height of the pylon apex above the ground.
+
+Solution for Application 2:
+• Set up a Cartesian coordinate system $Oxy$ with the origin $O(0; 0)$ at one base footing, and the second footing at $(27; 0)$ on the $x$-axis. The parabola takes the form:
+$$y = ax(x - 27) = ax^2 - 27ax$$
+• The point $(2.26; 20)$ lies on the parabola:
+$$20 = a \cdot 2.26 \cdot (2.26 - 27) = -55.9124a \Rightarrow a = -\frac{20}{55.9124} \approx -0.3577$$
+• The apex corresponds to the midpoint abscissa: $x_I = \frac{27}{2} = 13.5\text{ m}$.
+• Maximum height of the pylon apex above ground:
+$$y_I = a \cdot 13.5 \cdot (13.5 - 27) = -182.25a \approx -182.25 \cdot (-0.3577) \approx 65.19\text{ (m)}.$$
+• Therefore, the estimated height of the overpass tower is approximately $65.2\text{ m}$.
+
+**Exercise 6.12 (Parabolic Gate of Hanoi University of Science and Technology):** The university entrance gate is shaped as a parabola. The span between its two base pillars is 8 m, and at a horizontal distance of 0.5 m from a pillar, the gate height is 2.93 m. An calculates the total height of the gate to be 12 m. Is An's calculation accurate?
+
+Solution for Exercise 6.12:
+• Place origin $O(0; 0)$ at one pillar base and the other at $(8; 0)$. The parabola is modeled by $y = ax(x - 8)$.
+• The point $(0.5; 2.93)$ lies on the gate:
+$$2.93 = a \cdot 0.5 \cdot (0.5 - 8) = -3.75a \Rightarrow a = -\frac{2.93}{3.75} \approx -0.7813$$
+• The apex height occurs at the line of symmetry $x_I = \frac{8}{2} = 4\text{ m}$:
+$$h = y(4) = a \cdot 4 \cdot (4 - 8) = -16a = -16 \cdot \left(-\frac{2.93}{3.75}\right) = \frac{46.88}{3.75} \approx 12.5\text{ (m)}$$
+• Conclusion: The actual height is approximately $12.5\text{ m}$. Therefore, An's estimate of 12 m is inaccurate (underestimating by about 0.5 m). Binh's skepticism is completely justified.
+
+**Exercise 6.13 (Maximizing Enclosed Rectangular Garden Area):** Mr. Hung has 40 m of wire mesh to enclose a rectangular vegetable plot.
+a) Express the area $S(x)$ of the garden in terms of its width $x$ (meters).
+b) Find the dimensions of the garden that maximize the enclosed area.
+
+Solution for Exercise 6.13:
+• a) The perimeter is 40 m, so the semi-perimeter is $\frac{40}{2} = 20\text{ m}$.
+  With width $x$ ($0 < x < 10$), the length is $20 - x\text{ (m)}$. The area function is:
+$$S(x) = x(20 - x) = -x^2 + 20x\text{ (m}^2)$$
+• b) The quadratic function $S(x) = -x^2 + 20x$ has $a = -1 < 0$ and attains its maximum at its vertex:
+$$x = -\frac{b}{2a} = -\frac{20}{2(-1)} = 10\text{ (m)}$$
+  Then the width is 10 m and the length is $20 - 10 = 10\text{ m}$ (a square configuration).
+  The maximum enclosed area is $S\_{\max} = 10 \cdot 10 = 100\text{ m}^2$.
+
+**Exercise 6.14 (Trajectory of a Projectile):** The trajectory of a projectile launched from origin $O$ is modeled by the parabola: $y = -\frac{3}{1\\,000}x^2 + x$, where $x$ (m) is horizontal distance and $y$ (m) is height.
+a) Determine the maximum height reached by the projectile.
+b) Calculate the horizontal range (distance from origin $O$ to landing point).
+
+Solution for Exercise 6.14:
+• a) For the quadratic trajectory, $a = -\frac{3}{1\\,000} < 0$, $b = 1$, and $c = 0$.
+  Maximum height is achieved at the vertex abscissa:
+$$x_I = -\frac{b}{2a} = -\frac{1}{2 \cdot \left(-\frac{3}{1\\,000}\right)} = \frac{1\\,000}{6} = \frac{500}{3}\text{ (m)}$$
+  The maximum altitude is the vertex ordinate:
+$$y\_{\max} = y\left(\frac{500}{3}\right) = -\frac{3}{1\\,000}\left(\frac{500}{3}\right)^2 + \frac{500}{3} = -\frac{250}{3} + \frac{500}{3} = \frac{250}{3} \approx 83.33\text{ (m)}$$
+• b) The projectile strikes the ground when $y = 0$:
+$$-\frac{3}{1\\,000}x^2 + x = 0 \Leftrightarrow x\left(-\frac{3}{1\\,000}x + 1\right) = 0 \Leftrightarrow x = 0 \text{ or } x = \frac{1\\,000}{3} \approx 333.33\text{ (m)}$$
+  Since $x = 0$ represents the launch site, the horizontal range is $L = \frac{1\\,000}{3} \approx 333.33\text{ m}$.
+
+### b) Detailed Section Exercises
+
+**Exercises 6.7 & 6.8:** Analyze the vertex, axis of symmetry, variation, and intervals of increase and decrease for the following parabolas:
+a) $y = x^2 - 3x + 2$;
+b) $y = -2x^2 + 2x + 3$;
+c) $y = x^2 + 2x + 1$;
+d) $y = -x^2 + x - 1$.
+
+Solution for Exercises 6.7 & 6.8:
+• a) $y = x^2 - 3x + 2$: Leading coefficient $a = 1 > 0$, vertex $I\left(\frac{3}{2}; -\frac{1}{4}\right)$, axis of symmetry $x = \frac{3}{2}$.
+  Strictly decreasing on $\left(-\infty; \frac{3}{2}\right)$ and strictly increasing on $\left(\frac{3}{2}; +\infty\right)$.
+• b) $y = -2x^2 + 2x + 3$: Leading coefficient $a = -2 < 0$, vertex $I\left(\frac{1}{2}; \frac{7}{2}\right)$, axis of symmetry $x = \frac{1}{2}$.
+  Strictly increasing on $\left(-\infty; \frac{1}{2}\right)$ and strictly decreasing on $\left(\frac{1}{2}; +\infty\right)$.
+• c) $y = x^2 + 2x + 1$: Leading coefficient $a = 1 > 0$, vertex $I(-1; 0)$, axis of symmetry $x = -1$.
+  Strictly decreasing on $(-\infty; -1)$ and strictly increasing on $(-1; +\infty)$.
+• d) $y = -x^2 + x - 1$: Leading coefficient $a = -1 < 0$, vertex $I\left(\frac{1}{2}; -\frac{3}{4}\right)$, axis of symmetry $x = \frac{1}{2}$.
+  Strictly increasing on $\left(-\infty; \frac{1}{2}\right)$ and strictly decreasing on $\left(\frac{1}{2}; +\infty\right)$.
+
+**Exercise 6.9:** Determine the parabola $y = ax^2 + bx + 1$ ($a \ne 0$) in each of the following cases:
+a) Passes through points $A(1; 0)$ and $B(2; 4)$;
+b) Passes through point $A(1; 0)$ and has axis of symmetry $x = 1$;
+c) Has vertex $I(1; 2)$;
+d) Passes through point $C(-1; 1)$ and has vertex ordinate $-0.25$.
+
+Solution for Exercise 6.9:
+• a) Substitute coordinates of $A$ and $B$:
+$$\begin{cases} a(1)^2 + b(1) + 1 = 0 \\\ a(2)^2 + b(2) + 1 = 4 \end{cases} \Leftrightarrow \begin{cases} a + b = -1 \\\ 4a + 2b = 3 \end{cases} \Leftrightarrow \begin{cases} a = \frac{5}{2} \\\ b = -\frac{7}{2} \end{cases}$$
+  Hence, the parabola is: $y = \frac{5}{2}x^2 - \frac{7}{2}x + 1$.
+• b) Axis of symmetry $x = 1 \Rightarrow -\frac{b}{2a} = 1 \Rightarrow b = -2a$. Passes through $A(1; 0) \Rightarrow a + b + 1 = 0$.
+  System: $a - 2a + 1 = 0 \Rightarrow a = 1 \Rightarrow b = -2$. Hence, the parabola is: $y = x^2 - 2x + 1$.
+• c) Vertex $I(1; 2) \Rightarrow -\frac{b}{2a} = 1 \Rightarrow b = -2a$. Passing through $I(1; 2) \Rightarrow a(1)^2 + b(1) + 1 = 2 \Rightarrow a + b = 1$.
+  Substituting $b = -2a$: $a - 2a = 1 \Rightarrow a = -1 \Rightarrow b = 2$. Hence, the parabola is: $y = -x^2 + 2x + 1$.
+• d) Passes through $C(-1; 1) \Rightarrow a(-1)^2 + b(-1) + 1 = 1 \Leftrightarrow a - b = 0 \Leftrightarrow b = a$.
+  Vertex ordinate $y_I = -\frac{\Delta}{4a} = -\frac{b^2 - 4a(1)}{4a} = -\frac{a^2 - 4a}{4a} = -\frac{a - 4}{4} = -0.25 \Rightarrow a - 4 = 1 \Rightarrow a = 5 \Rightarrow b = 5$.
+  Hence, the parabola is: $y = 5x^2 + 5x + 1$.
+
+**Exercise 6.10:** Determine the parabola $y = ax^2 + bx + c$, given that it passes through point $A(8; 0)$ and has vertex $I(6; -12)$.
+
+Solution for Exercise 6.10:
+• Using vertex form with $(h; k) = (6; -12)$:
+$$y = a(x - h)^2 + k = a(x - 6)^2 - 12$$
+• The curve passes through $A(8; 0)$:
+$$0 = a(8 - 6)^2 - 12 \Leftrightarrow 4a = 12 \Leftrightarrow a = 3$$
+• Expanding to standard form:
+$$y = 3(x - 6)^2 - 12 = 3(x^2 - 12x + 36) - 12 = 3x^2 - 36x + 96$$
+  Therefore, the required parabola is: $y = 3x^2 - 36x + 96$.
+
+**Exercise 6.11:** Determine the signs of the leading coefficient $a$ and the discriminant $\Delta$ for the parabola $(P): y = ax^2 + bx + c$ in each scenario:
+a) $(P)$ lies entirely strictly above the $x$-axis;
+b) $(P)$ lies entirely strictly below the $x$-axis;
+c) $(P)$ intersects the $x$-axis at two distinct points and has its vertex below the $x$-axis;
+d) $(P)$ is tangent to the $x$-axis and lies above the $x$-axis.
+
+Solution for Exercise 6.11:
+• a) $(P)$ lies entirely above $Ox \Leftrightarrow y > 0, \forall x \in \mathbb{R} \Rightarrow a > 0$ and $\Delta < 0$.
+• b) $(P)$ lies entirely below $Ox \Leftrightarrow y < 0, \forall x \in \mathbb{R} \Rightarrow a < 0$ and $\Delta < 0$.
+• c) $(P)$ intersects $Ox$ at two distinct points $\Rightarrow \Delta > 0$. Since its vertex is below $Ox$, it opens upward $\Rightarrow a > 0$.
+• d) $(P)$ is tangent to $Ox \Rightarrow \Delta = 0$. Since it lies above $Ox$, it opens upward $\Rightarrow a > 0$.
