@@ -1,0 +1,233 @@
+---
+title: 'Bài 23: Phép đếm.'
+description: Quy tắc cộng và quy tắc nhân cùng ví dụ minh họa.
+tags:
+  - lớp 10
+  - Quy tắc cộng
+  - quy tắc nhân
+  - Sơ đồ hình cây
+grade: 10
+order: 23
+updatedDate: 2026-10-27T21:29:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Quy tắc cộng, quy tắc nhân
+
+·       Sơ đồ hình cây
+
+·       Phương án thực hiện, công đoạn liên tiếp
+
+### **Kiến thức, kĩ năng:**
+
+·       Vận dụng quy tắc cộng và quy tắc nhân để tính toán số cách thực hiện một công việc hoặc đếm số phần tử của một tập hợp.
+
+·       Sử dụng thành thạo sơ đồ hình cây trong các bài toán đếm đơn giản để tránh bỏ sót trường hợp.
+
+·       Kết hợp linh hoạt giữa quy tắc cộng và quy tắc nhân để giải quyết các bài toán tổ hợp thực tiễn phức tạp (lập số, thiết kế thực đơn, tạo mật khẩu).
+
+## Quy tắc cộng và sơ đồ hình cây
+
+<Youtube url="https://www.youtube.com/watch?v=example_quy_tac_cong"/>
+
+### a) Quy tắc cộng
+
+Định nghĩa và nội dung quy tắc cộng:
+Giả sử một công việc có thể thực hiện theo một trong hai phương án khác nhau (phương án độc lập, rời nhau):
+• Phương án một có $n_1$ cách thực hiện;
+• Phương án hai có $n_2$ cách thực hiện (không trùng với bất kì cách thực hiện nào của phương án một).
+Khi đó số cách thực hiện công việc sẽ là:
+$$n_1 + n_2\text{ (cách)}$$
+
+Mở rộng: Quy tắc cộng được áp dụng cho một công việc có nhiều phương án phân biệt (thực hiện một trong các phương án để hoàn thành công việc).
+
+### b) Sơ đồ hình cây
+
+Khái niệm và ứng dụng:
+• Sơ đồ hình cây là sơ đồ minh hoạ các nhánh lựa chọn theo từng trường hợp hoặc từng công đoạn.
+• Trong các bài toán đếm, việc sử dụng sơ đồ hình cây giúp mô tả trực quan, rõ ràng các khả năng xảy ra, từ đó đếm thuận tiện và không bị bỏ sót trường hợp.
+
+### c) Ví dụ minh họa và luyện tập về quy tắc cộng
+
+**Ví dụ 1:** Một quán ăn sáng có bán phở và bún. Phở có 2 loại (phở bò, phở gà). Bún có 3 loại (bún bò, bún riêu cua, bún cá). Một khách hàng muốn chọn một món để ăn sáng. Hỏi khách hàng đó có bao nhiêu cách lựa chọn?
+
+Lời giải Ví dụ 1:
+• Việc chọn món ăn sáng được chia thành 2 phương án rời nhau:
+  + Phương án chọn phở: có 2 cách.
+  + Phương án chọn bún: có 3 cách.
+• Theo quy tắc cộng, tổng số cách chọn một món ăn sáng là:
+$$2 + 3 = 5\text{ (cách).}$$
+
+**Ví dụ 2:** Một bộ cờ vua có 32 quân cờ.
+a) Lấy ra tất cả các quân tốt, hỏi có bao nhiêu quân cờ?
+b) Lấy ra tất cả các quân trắng và tất cả các quân tốt, hỏi có bao nhiêu quân cờ được lấy ra?
+
+Lời giải Ví dụ 2:
+• a) Quân tốt gồm 2 loại: tốt trắng (8 quân) và tốt đen (8 quân). Số quân tốt lấy ra là: $8 + 8 = 16$ (quân).
+• b) Tập hợp các quân trắng có 16 quân, tập hợp các quân tốt có 16 quân, nhưng có giao nhau là 8 quân tốt trắng. Áp dụng công thức tập hợp:
+$$n(A \cup B) = n(A) + n(B) - n(A \cap B) = 16 + 16 - 8 = 24\text{ (quân cờ).}$$
+
+**Luyện tập 1:** Có bao nhiêu số tự nhiên từ 1 đến 30 mà không nguyên tố cùng nhau với 35?
+
+Lời giải Luyện tập 1:
+• Phân tích số 35 ra thừa số nguyên tố: $35 = 5 \cdot 7$.
+• Số tự nhiên từ 1 đến 30 không nguyên tố cùng nhau với 35 khi và chỉ khi chúng chia hết cho 5 hoặc chia hết cho 7 (vì các ước nguyên tố của 35 chỉ là 5 và 7).
+• Gọi $A$ là tập hợp các số từ 1 đến 30 chia hết cho 5: $A = \\{5; 10; 15; 20; 25; 30\\}$ (có 6 số).
+• Gọi $B$ là tập hợp các số từ 1 đến 30 chia hết cho 7: $B = \\{7; 14; 21; 28\\}$ (có 4 số).
+• Tập giao $A \cap B$ gồm các số chia hết cho cả 5 và 7 (tức chia hết cho 35), từ 1 đến 30 không có số nào thuộc $A \cap B$.
+• Theo quy tắc cộng, số các số không nguyên tố cùng nhau với 35 là: $6 + 4 = 10$ số.
+
+## Quy tắc nhân
+
+<Youtube url="https://www.youtube.com/watch?v=example_quy_tac_nhan"/>
+
+### a) Nội dung quy tắc nhân
+
+Định nghĩa và nội dung quy tắc nhân:
+Giả sử một công việc phải được hoàn thành qua hai công đoạn liên tiếp nhau:
+• Công đoạn một có $m_1$ cách thực hiện;
+• Với mỗi cách thực hiện công đoạn một, có $m_2$ cách thực hiện công đoạn hai.
+Khi đó số cách thực hiện công việc là:
+$$m_1 \cdot m_2\text{ (cách).}}$$
+Chú ý: Quy tắc nhân áp dụng cho công việc có nhiều công đoạn nối tiếp nhau và độc lập với nhau trong cách chọn.
+
+### b) Ví dụ và luyện tập về quy tắc nhân
+
+**Ví dụ 3:** Một người muốn mua vé tàu ngồi đi từ ga Hà Nội vào ga Vinh. Có 3 chuyến tàu là SE5, SE7 và SE35. Trên mỗi tàu có 2 loại vé ngồi: ngồi cứng hoặc ngồi mềm. Hỏi có bao nhiêu loại vé ngồi khác nhau để người đó lựa chọn?
+
+Lời giải Ví dụ 3:
+• Việc mua vé gồm 2 công đoạn liên tiếp:
+  + Công đoạn 1: Chọn chuyến tàu (có 3 cách).
+  + Công đoạn 2: Chọn loại vé ngồi trên tàu đó (có 2 cách).
+• Theo quy tắc nhân, số loại vé ngồi khác nhau là: $3 \cdot 2 = 6$ (loại vé).
+
+**Luyện tập 2:** Tại kì World Cup 2018, vòng bảng gồm 32 đội tham gia, chia vào 8 bảng, mỗi bảng 4 đội thi đấu vòng tròn 1 lượt (mỗi đội chơi một trận với từng đội khác trong cùng bảng). Tổng cộng vòng bảng có bao nhiêu trận đấu?
+
+Lời giải Luyện tập 2:
+• Mỗi bảng có 4 đội thi đấu vòng tròn 1 lượt.
+• Số trận đấu của mỗi bảng là số cách chọn ra 2 đội từ 4 đội để thi đấu: $C_4^2 = \frac{4 \cdot 3}{2} = 6$ trận.
+• Vì có 8 bảng đấu hoàn toàn độc lập, tổng số trận đấu ở vòng bảng là: $8 \cdot 6 = 48$ trận.
+
+## Kết hợp quy tắc cộng và quy tắc nhân
+
+<Youtube url="https://www.youtube.com/watch?v=example_ket_hop_quy_tac"/>
+
+### a) Nguyên lý kết hợp
+
+Phương pháp phối hợp:
+Trong thực tế, các bài toán đếm thường phức tạp và đòi hỏi phải kết hợp linh hoạt cả quy tắc cộng và quy tắc nhân:
+• Sử dụng Quy tắc cộng khi công việc được chia thành các trường hợp (phương án) rời nhau.
+• Sử dụng Quy tắc nhân khi một trường hợp được chia thành các công đoạn liên tiếp nhau.
+
+### b) Ví dụ và luyện tập kết hợp quy tắc
+
+**Ví dụ 4:** Chọn thực đơn gồm một món khai vị, một món chính và một món tráng miệng. Danh sách nhà hàng gồm: khai vị có 2 súp, 3 sa lát; món chính có 4 thịt, 3 cá, 3 tôm; tráng miệng có 5 kem, 3 bánh. Hỏi có bao nhiêu thực đơn khác nhau?
+
+Lời giải Ví dụ 4:
+• Công đoạn 1 (Chọn khai vị): Có $2 + 3 = 5$ cách (quy tắc cộng).
+• Công đoạn 2 (Chọn món chính): Có $4 + 3 + 3 = 10$ cách (quy tắc cộng).
+• Công đoạn 3 (Chọn tráng miệng): Có $5 + 3 = 8$ cách (quy tắc cộng).
+• Theo quy tắc nhân, tổng số thực đơn khác nhau là: $5 \cdot 10 \cdot 8 = 400$ (thực đơn).
+
+**Luyện tập 3:** Từ các chữ số $0, 1, 2, 3$, có thể lập được bao nhiêu số tự nhiên:
+a) Có 3 chữ số khác nhau?
+b) Là số chẵn có 3 chữ số khác nhau?
+
+Lời giải Luyện tập 3:
+• a) Gọi số cần lập là $\overline{abc}$ với $a, b, c \in \\{0; 1; 2; 3\\}$, $a \ne 0$ và đôi một khác nhau.
+  + Chọn chữ số $a$: có 3 cách chọn (vì $a \in \\{1; 2; 3\\}$). ứng với mỗi cách chọn $a$, ta có:
+  + Chọn chữ số $b$: có 3 cách chọn (khác $a$).
+  + Chọn chữ số $c$: có 2 cách chọn (khác $a$ và $b$).
+  Theo quy tắc nhân, số các số tự nhiên có 3 chữ số khác nhau là: $3 \cdot 3 \cdot 2 = 18$ số.
+• b) Số cần lập là số chẵn $\overline{abc}$ nên chữ số tận cùng $c$ phải chẵn ($c \in \\{0; 2\\}$). Ta chia thành 2 trường hợp:
+  + Trường hợp 1: $c = 0$.
+    - Chọn $a$: có 3 cách chọn (1, 2, 3).
+    - Chọn $b$: có 2 cách chọn.
+    Số các số dạng này: $3 \cdot 2 \cdot 1 = 6$ số.
+  + Trường hợp 2: $c = 2$.
+    - Chọn $a$: có 2 cách chọn (1, 3 vì $a \ne 0$ và $a \ne 2$).
+    - Chọn $b$: có 2 cách chọn.
+    Số các số dạng này: $2 \cdot 2 \cdot 1 = 4$ số.
+  Theo quy tắc cộng, tổng số số chẵn có 3 chữ số khác nhau là: $6 + 4 = 10$ số.
+
+**Ví dụ 5 (Bài toán mật khẩu mở đầu):** Mật khẩu trang web là dãy từ 2 đến 3 kí tự, kí tự đầu là chữ cái in thường từ a đến z, các kí tự sau là chữ số từ 0 đến 9. Hỏi có bao nhiêu mật khẩu khác nhau?
+
+Lời giải Ví dụ 5:
+• Trường hợp 1: Mật khẩu có 2 kí tự ($x_1 x_2$).
+  + Kí tự $x_1$ có 26 cách chọn; kí tự $x_2$ có 10 cách chọn. Số cách: $26 \cdot 10 = 260$ mật khẩu.
+• Trường hợp 2: Mật khẩu có 3 kí tự ($x_1 x_2 x_3$).
+  + Kí tự $x_1$ có 26 cách chọn; $x_2$ có 10 cách; $x_3$ có 10 cách. Số cách: $26 \cdot 10^2 = 2\\,600$ mật khẩu.
+• Theo quy tắc cộng, tổng số mật khẩu khác nhau có thể tạo là: $260 + 2\\,600 = 2\\,860$ mật khẩu.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Thành lập đội cờ đỏ):** Khối 10 có 3 lớp: 10A (30 bạn), 10B (35 bạn), 10C (32 bạn). Nhà trường muốn chọn 4 bạn thành lập đội cờ đỏ sao cho có đủ đại diện của cả 3 lớp. Hỏi có bao nhiêu cách lựa chọn?
+
+Lời giải Vận dụng:
+• Vì chọn 4 bạn từ 3 lớp mà có đủ đại diện cả 3 lớp, nên sẽ có đúng một lớp có 2 đại diện được chọn, và hai lớp còn lại mỗi lớp có đúng 1 đại diện được chọn.
+• Ta chia thành 3 trường hợp phân biệt:
+  + Trường hợp 1: Lớp 10A có 2 bạn, 10B có 1 bạn, 10C có 1 bạn.
+    Số cách chọn: $C\_{30}^2 \cdot C\_{35}^1 \cdot C\_{32}^1 = 435 \cdot 35 \cdot 32 = 487\\,200$.
+  + Trường hợp 2: Lớp 10B có 2 bạn, 10A có 1 bạn, 10C có 1 bạn.
+    Số cách chọn: $C\_{35}^2 \cdot C\_{30}^1 \cdot C\_{32}^1 = 595 \cdot 30 \cdot 32 = 571\\,200$.
+  + Trường hợp 3: Lớp 10C có 2 bạn, 10A có 1 bạn, 10B có 1 bạn.
+    Số cách chọn: $C\_{32}^2 \cdot C\_{30}^1 \cdot C\_{35}^1 = 496 \cdot 30 \cdot 35 = 520\\,800$.
+• Theo quy tắc cộng, tổng số cách lựa chọn đội cờ đỏ là:
+$$487\\,200 + 571\\,200 + 520\\,800 = 1\\,579\\,200\text{ (cách).}$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 8.1:** Trên giá sách có 8 truyện ngắn, 7 tiểu thuyết và 5 tập thơ (đôi một khác nhau). Bạn Phong có bao nhiêu cách chọn một cuốn để đọc vào ngày cuối tuần?
+
+Lời giải Bài 8.1:
+• Việc chọn 1 cuốn sách có thể thực hiện theo 3 phương án rời nhau:
+  + Chọn truyện ngắn: 8 cách.
+  + Chọn tiểu thuyết: 7 cách.
+  + Chọn tập thơ: 5 cách.
+• Theo quy tắc cộng, tổng số cách chọn là: $8 + 7 + 5 = 20$ cách.
+
+**Bài 8.2:** Một người gieo đồng xu hai mặt 3 lần liên tiếp và ghi lại kết quả sấp hay ngửa. Có bao nhiêu khả năng kết quả có thể xảy ra?
+
+Lời giải Bài 8.2:
+• Mỗi lần gieo có 2 kết quả có thể xảy ra (Sấp hoặc Ngửa).
+• Gieo 3 lần liên tiếp là quá trình gồm 3 công đoạn nối tiếp nhau. Theo quy tắc nhân, tổng số khả năng xảy ra là:
+$$2 \cdot 2 \cdot 2 = 2^3 = 8\text{ (khả năng).}$$
+
+**Bài 8.3:** Ở một loài thực vật, $A$ quy định hoa kép, $a$ quy định hoa đơn.
+a) Sự tổ hợp giữa hai gene trên tạo ra mấy kiểu gene? Viết các kiểu gene đó.
+b) Khi giao phối ngẫu nhiên, có bao nhiêu kiểu giao phối khác nhau từ các kiểu gene đó?
+
+Lời giải Bài 8.3:
+• a) Sự tổ hợp giữa hai gene $A$ và $a$ tạo ra 3 kiểu gene: $AA, Aa, aa$.
+• b) Một kiểu giao phối là sự kết hợp giữa 1 kiểu gene đực và 1 kiểu gene cái. Theo quy tắc nhân, số kiểu giao phối khác nhau là: $3 \cdot 3 = 9$ kiểu.
+
+**Bài 8.4:** Có bao nhiêu số tự nhiên có 3 chữ số thoả mãn:
+a) Có 3 chữ số khác nhau?
+b) Là số lẻ có 3 chữ số khác nhau?
+c) Là số có 3 chữ số chia hết cho 5?
+d) Là số có 3 chữ số khác nhau và chia hết cho 5?
+
+Lời giải Bài 8.4:
+• a) Số $\overline{abc}$ ($a \ne 0$, đôi một khác nhau): $a$ có 9 cách chọn ($1-9$); $b$ có 9 cách; $c$ có 8 cách. Tổng số số: $9 \cdot 9 \cdot 8 = 648$ số.
+• b) Số lẻ có 3 chữ số khác nhau $\overline{abc}$: $c \in \\{1; 3; 5; 7; 9\\}$ (5 cách); $a$ có 8 cách ($a \ne 0, a \ne c$); $b$ có 8 cách. Tổng số số: $8 \cdot 8 \cdot 5 = 320$ số.
+• c) Số có 3 chữ số chia hết cho 5 ($\overline{abc}$): $c \in \\{0; 5\\}$ (2 cách); $a$ có 9 cách ($1-9$); $b$ có 10 cách ($0-9$). Tổng số số: $9 \cdot 10 \cdot 2 = 180$ số.
+• d) Số có 3 chữ số khác nhau chia hết cho 5 ($\overline{abc}$): Chia 2 trường hợp cho $c$:
+  + TH1: $c = 0 \Rightarrow a$ có 9 cách, $b$ có 8 cách. Số số: $9 \cdot 8 \cdot 1 = 72$.
+  + TH2: $c = 5 \Rightarrow a$ có 8 cách ($a \ne 0, a \ne 5$), $b$ có 8 cách. Số số: $8 \cdot 8 \cdot 1 = 64$.
+  Tổng số số: $72 + 64 = 136$ số.
+
+**Bài 8.5:** a) Mật khẩu máy tính gồm 3 kí tự là chữ số. Có bao nhiêu mật khẩu khác nhau?
+b) Nếu quy định mới: 3 kí tự gồm kí tự đầu là chữ cái in hoa (26 chữ) và 2 kí tự sau là chữ số. Quy định mới tạo ra nhiều hơn quy định cũ bao nhiêu mật khẩu?
+
+Lời giải Bài 8.5:
+• a) Mỗi kí tự có 10 cách chọn ($0-9$). Tổng số mật khẩu cũ: $10^3 = 1\\,000$ mật khẩu.
+• b) Theo quy định mới: Kí tự đầu có 26 cách; 2 kí tự sau mỗi kí tự có 10 cách. Tổng số mật khẩu mới: $26 \cdot 10^2 = 2\\,600$ mật khẩu.
+• Số mật khẩu mới nhiều hơn quy định cũ là: $2\\,600 - 1\\,000 = 1\\,600$ mật khẩu.

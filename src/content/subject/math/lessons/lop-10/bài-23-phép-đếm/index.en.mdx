@@ -1,0 +1,233 @@
+---
+title: 'Lesson 23: Counting rules.'
+description: Addition rule and multiplication rule with illustrative examples.
+tags:
+  - grade 10
+  - Addition rule
+  - Decision tree (tree diagram)
+  - multiplication rule
+grade: 10
+order: 23
+updatedDate: 2026-10-27T21:29:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Addition rule, multiplication rule
+
+·       Decision tree (tree diagram)
+
+·       Mutually exclusive options, sequential stages
+
+### **Knowledge and Skills:**
+
+·       Apply the addition rule and multiplication rule to compute the number of ways to perform a task or count the elements of a set.
+
+·       Use tree diagrams proficiently in basic counting problems to avoid omitting cases.
+
+·       Combine the addition and multiplication rules flexibly to solve complex real-world combinatorial problems (number formation, menu design, password generation).
+
+## Addition Rule and Tree Diagrams
+
+<Youtube url="https://www.youtube.com/watch?v=example_quy_tac_cong"/>
+
+### a) Addition Rule
+
+Definition and Statement of the Addition Rule:
+Suppose a task can be performed via one of two mutually exclusive (disjoint) options:
+• Option one can be performed in $n_1$ ways;
+• Option two can be performed in $n_2$ ways (with no overlap with any method from option one).
+Then the total number of ways to perform the task is:
+$$n_1 + n_2\text{ (ways)}$$
+
+Extension: The addition rule naturally extends to any task that can be partitioned into multiple pairwise disjoint options (performing exactly one of these options completes the task).
+
+### b) Tree Diagrams
+
+Concept and Application:
+• A tree diagram is a graphical tool illustrating branching choices across distinct cases or sequential stages.
+• In combinatorial counting problems, tree diagrams provide a clear, visual representation of all possible outcomes, ensuring systematic counting without omissions.
+
+### c) Illustrative Examples and Practice on the Addition Rule
+
+**Example 1:** A breakfast diner sells pho and bun. Pho has 2 varieties (beef pho, chicken pho). Bun has 3 varieties (beef bun, crab vermicelli, fish vermicelli). A customer wishes to choose one breakfast dish. How many choices does the customer have?
+
+Solution for Example 1:
+• Choosing a breakfast dish is partitioned into 2 mutually exclusive options:
+  + Option 1 (Choosing pho): has 2 ways.
+  + Option 2 (Choosing bun): has 3 ways.
+• By the addition rule, the total number of ways to choose a breakfast dish is:
+$$2 + 3 = 5\text{ (ways).}$$
+
+**Example 2:** A standard chess set contains 32 pieces.
+a) If all pawn pieces are removed, how many pieces are taken out?
+b) If all white pieces and all pawn pieces are removed, how many total unique pieces are removed?
+
+Solution for Example 2:
+• a) Pawns consist of 2 subsets: white pawns (8 pieces) and black pawns (8 pieces). The number of pawns removed is: $8 + 8 = 16$ (pieces).
+• b) The set of white pieces contains 16 pieces, and the set of pawns contains 16 pieces, overlapping by the 8 white pawns. Applying the set-theoretic union formula:
+$$n(A \cup B) = n(A) + n(B) - n(A \cap B) = 16 + 16 - 8 = 24\text{ (pieces).}$$
+
+**Practice 1:** How many integers from 1 to 30 are not relatively prime to 35?
+
+Solution for Practice 1:
+• Prime factorization of 35: $35 = 5 \cdot 7$.
+• An integer from 1 to 30 is not relatively prime to 35 if and only if it is divisible by 5 or 7 (since the prime factors of 35 are only 5 and 7).
+• Let $A$ be the subset of integers from 1 to 30 divisible by 5: $A = \\{5; 10; 15; 20; 25; 30\\}$ (6 numbers).
+• Let $B$ be the subset of integers from 1 to 30 divisible by 7: $B = \\{7; 14; 21; 28\\}$ (4 numbers).
+• The intersection $A \cap B$ contains numbers divisible by both 5 and 7 (i.e., multiples of 35), of which none exist between 1 and 30.
+• By the addition rule, the number of integers not relatively prime to 35 is: $6 + 4 = 10$ numbers.
+
+## Multiplication Rule
+
+<Youtube url="https://www.youtube.com/watch?v=example_quy_tac_nhan"/>
+
+### a) Statement of the Multiplication Rule
+
+Definition and Statement:
+Suppose a task must be completed through two consecutive stages:
+• Stage one can be performed in $m_1$ ways;
+• For each way of performing stage one, there are $m_2$ ways to perform stage two.
+Then the total number of ways to complete the task is:
+$$m_1 \cdot m_2\text{ (ways).}$$
+Remark: The multiplication rule applies to tasks consisting of sequential, independent stages.
+
+### b) Illustrative Examples and Practice on the Multiplication Rule
+
+**Example 3:** A passenger wants to buy a train ticket from Hanoi to Vinh. There are 3 trains: SE5, SE7, and SE35. On each train, there are 2 seating classes: hard seat or soft seat. How many different ticket options are available?
+
+Solution for Example 3:
+• Purchasing a ticket consists of 2 consecutive stages:
+  + Stage 1: Choose the train (3 ways).
+  + Stage 2: Choose the seating class on that train (2 ways).
+• By the multiplication rule, the total number of ticket options is: $3 \cdot 2 = 6$ (options).
+
+**Practice 2:** At the 2018 World Cup, the group stage involved 32 teams divided into 8 groups of 4 teams, where each team plays every other team in its group once (single round-robin). What is the total number of group-stage matches?
+
+Solution for Practice 2:
+• Each group consists of 4 teams playing a single round-robin.
+• The number of matches per group is the number of ways to select 2 teams out of 4: $C_4^2 = \frac{4 \cdot 3}{2} = 6$ matches.
+• Since there are 8 completely independent groups, the total number of group-stage matches is: $8 \cdot 6 = 48$ matches.
+
+## Combining Addition and Multiplication Rules
+
+<Youtube url="https://www.youtube.com/watch?v=example_ket_hop_quy_tac"/>
+
+### a) Combined Principles
+
+Collaborative Strategy:
+In practical combinatorial problems, counting often requires flexible combination of both addition and multiplication rules:
+• Use the Addition Rule when a task is partitioned into disjoint cases (options).
+• Use the Multiplication Rule when a single case is broken down into sequential stages.
+
+### b) Illustrative Examples and Practice on Combined Rules
+
+**Example 4:** Design a menu consisting of one appetizer, one main course, and one dessert. The restaurant offers: 2 soups and 3 salads for appetizers; 4 poultry/meat, 3 fish, and 3 seafood dishes for mains; 5 ice creams and 3 cakes for desserts. How many distinct menus can be formed?
+
+Solution for Example 4:
+• Stage 1 (Appetizer): $2 + 3 = 5$ ways (addition rule).
+• Stage 2 (Main course): $4 + 3 + 3 = 10$ ways (addition rule).
+• Stage 3 (Dessert): $5 + 3 = 8$ ways (addition rule).
+• By the multiplication rule, the total number of distinct menus is: $5 \cdot 10 \cdot 8 = 400$ (menus).
+
+**Practice 3:** Using the digits $0, 1, 2, 3$, how many natural numbers can be formed such that:
+a) They are 3-digit numbers with distinct digits?
+b) They are even 3-digit numbers with distinct digits?
+
+Solution for Practice 3:
+• a) Let the number be denoted as $\overline{abc}$ where $a, b, c \in \\{0; 1; 2; 3\\}$, $a \ne 0$, and all digits are distinct.
+  + Digit $a$: 3 choices ($a \in \\{1; 2; 3\\}$). For each choice of $a$:
+  + Digit $b$: 3 choices (distinct from $a$).
+  + Digit $c$: 2 choices (distinct from $a$ and $b$).
+  By the multiplication rule, the number of 3-digit numbers with distinct digits is: $3 \cdot 3 \cdot 2 = 18$ numbers.
+• b) The number must be even ($\overline{abc}$), so its last digit $c$ must be even ($c \in \\{0; 2\\}$). We examine two cases:
+  + Case 1: $c = 0$.
+    - Digit $a$: 3 choices ($1, 2, 3$).
+    - Digit $b$: 2 choices.
+    Number of such numbers: $3 \cdot 2 \cdot 1 = 6$.
+  + Case 2: $c = 2$.
+    - Digit $a$: 2 choices ($1, 3$, since $a \ne 0$ and $a \ne 2$).
+    - Digit $b$: 2 choices.
+    Number of such numbers: $2 \cdot 2 \cdot 1 = 4$.
+  By the addition rule, the total number of even 3-digit numbers with distinct digits is: $6 + 4 = 10$ numbers.
+
+**Example 5 (Password Generation Problem):** A website password consists of a sequence of 2 to 3 characters, where the first character is a lowercase English letter (from a to z) and each subsequent character is a digit from 0 to 9. How many different passwords can be created?
+
+Solution for Example 5:
+• Case 1: Passwords of length 2 ($x_1 x_2$).
+  + Character $x_1$ has 26 choices; character $x_2$ has 10 choices. Number of passwords: $26 \cdot 10 = 260$.
+• Case 2: Passwords of length 3 ($x_1 x_2 x_3$).
+  + Character $x_1$ has 26 choices; $x_2$ has 10 choices; $x_3$ has 10 choices. Number of passwords: $26 \cdot 10^2 = 2\\,600$.
+• By the addition rule, the total number of distinct passwords that can be created is: $260 + 2\\,600 = 2\\,860$ passwords.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Forming a School Safety Team):** Grade 10 has three classes: 10A (30 students), 10B (35 students), and 10C (32 students). The school wishes to select 4 students to form a safety patrol team such that representatives from all three classes are included. How many selection ways are possible?
+
+Solution for Application:
+• Selecting 4 students from 3 classes with representation from all classes implies that exactly one class contributes 2 representatives, while the other two classes each contribute 1 representative.
+• We partition into 3 disjoint cases:
+  + Case 1: Class 10A contributes 2 students, 10B contributes 1, 10C contributes 1.
+    Number of ways: $C\_{30}^2 \cdot C\_{35}^1 \cdot C\_{32}^1 = 435 \cdot 35 \cdot 32 = 487\\,200$.
+  + Case 2: Class 10B contributes 2 students, 10A contributes 1, 10C contributes 1.
+    Number of ways: $C\_{35}^2 \cdot C\_{30}^1 \cdot C\_{32}^1 = 595 \cdot 30 \cdot 32 = 571\\,200$.
+  + Case 3: Class 10C contributes 2 students, 10A contributes 1, 10B contributes 1.
+    Number of ways: $C\_{32}^2 \cdot C\_{30}^1 \cdot C\_{35}^1 = 496 \cdot 30 \cdot 35 = 520\\,800$.
+• By the addition rule, the total number of valid team selections is:
+$$487\\,200 + 571\\,200 + 520\\,800 = 1\\,579\\,200\text{ (ways).}$$
+
+### b) Detailed Section Exercises
+
+**Exercise 8.1:** A bookshelf holds 8 short story collections, 7 novels, and 5 poetry books (all distinct). How many ways does Phong have to choose one book to read over the weekend?
+
+Solution for Exercise 8.1:
+• Choosing 1 book can be done via 3 disjoint options:
+  + Short story: 8 ways.
+  + Novel: 7 ways.
+  + Poetry book: 5 ways.
+• By the addition rule, the total number of choices is: $8 + 7 + 5 = 20$ ways.
+
+**Exercise 8.2:** A person tosses a two-sided coin 3 consecutive times and records each outcome as heads or tails. How many possible outcome sequences can occur?
+
+Solution for Exercise 8.2:
+• Each toss has 2 possible outcomes (Heads or Tails).
+• Tossing 3 consecutive times consists of 3 sequential stages. By the multiplication rule, the total number of possible outcome sequences is:
+$$2 \cdot 2 \cdot 2 = 2^3 = 8\text{ (possibilities).}$$
+
+**Exercise 8.3:** In a plant species, allele $A$ determines double flowers and allele $a$ determines single flowers.
+a) How many genotypes are formed by the combination of these two alleles? List them.
+b) During random fertilization, how many different cross-fertilization pairings can be formed from these genotypes?
+
+Solution for Exercise 8.3:
+• a) The combination of alleles $A$ and $a$ yields 3 distinct genotypes: $AA, Aa, aa$.
+• b) A cross-fertilization mating involves pairing 1 male genotype with 1 female genotype. By the multiplication rule, the number of different mating pairings is: $3 \cdot 3 = 9$ pairings.
+
+**Exercise 8.4:** How many 3-digit natural numbers satisfy each of the following conditions:
+a) All 3 digits are distinct?
+b) They are odd 3-digit numbers with distinct digits?
+c) They are 3-digit numbers divisible by 5?
+d) They are 3-digit numbers with distinct digits that are divisible by 5?
+
+Solution for Exercise 8.4:
+• a) Number $\overline{abc}$ ($a \ne 0$, distinct digits): $a$ has 9 choices ($1-9$); $b$ has 9 choices; $c$ has 8 choices. Total: $9 \cdot 9 \cdot 8 = 648$ numbers.
+• b) Odd 3-digit number with distinct digits $\overline{abc}$: $c \in \\{1; 3; 5; 7; 9\\}$ (5 choices); $a$ has 8 choices ($a \ne 0, a \ne c$); $b$ has 8 choices. Total: $8 \cdot 8 \cdot 5 = 320$ numbers.
+• c) 3-digit numbers divisible by 5 ($\overline{abc}$): $c \in \\{0; 5\\}$ (2 choices); $a$ has 9 choices ($1-9$); $b$ has 10 choices ($0-9$). Total: $9 \cdot 10 \cdot 2 = 180$ numbers.
+• d) 3-digit numbers with distinct digits divisible by 5 ($\overline{abc}$): Split into 2 cases for $c$:
+  + Case 1: $c = 0 \Rightarrow a$ has 9 choices, $b$ has 8 choices. Count: $9 \cdot 8 \cdot 1 = 72$.
+  + Case 2: $c = 5 \Rightarrow a$ has 8 choices ($a \ne 0, a \ne 5$), $b$ has 8 choices. Count: $8 \cdot 8 \cdot 1 = 64$.
+  Total: $72 + 64 = 136$ numbers.
+
+**Exercise 8.5:** a) A computer password consists of 3 numeric digits. How many different passwords can be created?
+b) Under a new rule, a password still consists of 3 characters, but the first character must be an uppercase English letter (26 letters) and the subsequent 2 characters are numeric digits. How many more passwords can the new rule create compared to the old rule?
+
+Solution for Exercise 8.5:
+• a) Each digit has 10 choices ($0-9$). Total old passwords: $10^3 = 1\\,000$ passwords.
+• b) Under the new rule: First character has 26 choices; each of the next 2 characters has 10 choices. Total new passwords: $26 \cdot 10^2 = 2\\,600$ passwords.
+• The new rule creates: $2\\,600 - 1\\,000 = 1\\,600$ more passwords than the old rule.
