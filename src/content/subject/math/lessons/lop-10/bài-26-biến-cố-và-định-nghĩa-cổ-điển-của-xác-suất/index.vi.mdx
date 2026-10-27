@@ -1,0 +1,203 @@
+---
+title: 'Bài 26: Biến cố và định nghĩa cổ điển của xác suất.'
+description: Định nghĩa Biến cố và xác suât cổ điển cùng ví dụ minh họa.
+tags:
+  - lớp 10
+  - Biến cố đối
+  - Định nghĩa cổ điển của xác suất
+  - Nguyên lí xác suất bé
+grade: 10
+order: 26
+updatedDate: 2026-10-27T22:18:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Biến cố đối
+
+·       Định nghĩa cổ điển của xác suất
+
+·       Nguyên lí xác suất bé
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết một số khái niệm: Phép thử ngẫu nhiên, không gian mẫu, biến cố là tập con của không gian mẫu, biến cố đối, định nghĩa cổ điển của xác suất, nguyên lí xác suất bé.
+
+·       Mô tả không gian mẫu, biến cố trong một số phép thử đơn giản.
+
+·       Mô tả tính chất cơ bản của xác suất.
+
+## Biến cố
+
+### a) Phép thử ngẫu nhiên và không gian mẫu
+
+Ở lớp 9 ta đã biết những khái niệm quan trọng sau:
+• Phép thử ngẫu nhiên (gọi tắt là phép thử) là một thí nghiệm hay một hành động mà kết quả của nó không thể biết được trước khi phép thử được thực hiện.
+• Không gian mẫu của phép thử là tập hợp tất cả các kết quả có thể xảy ra khi thực hiện phép thử. Không gian mẫu của phép thử được kí hiệu là $\Omega$.
+• Kết quả thuận lợi cho một biến cố $E$ liên quan tới phép thử $T$ là kết quả của phép thử $T$ làm cho biến cố đó xảy ra.
+Chú ý: Ta chỉ xét các phép thử mà không gian mẫu gồm hữu hạn kết quả.
+
+**Ví dụ 1:** Một tổ trong lớp 10A có ba học sinh nữ là Hương, Hồng, Dung và bốn học sinh nam là Sơn, Tùng, Hoàng, Tiến. Giáo viên chọn ngẫu nhiên một học sinh trong tổ đó để kiểm tra vở bài tập. Phép thử ngẫu nhiên là gì? Mô tả không gian mẫu.
+
+Lời giải Ví dụ 1:
+• Phép thử ngẫu nhiên là chọn ngẫu nhiên một học sinh trong tổ để kiểm tra vở bài tập.
+• Không gian mẫu là tập hợp tất cả các học sinh trong tổ.
+• Ta có $\Omega = \\{\text{Hương, Hồng, Dung, Sơn, Tùng, Hoàng, Tiến}\\}$.
+
+### b) Biến cố là tập con của không gian mẫu
+
+Theo định nghĩa, ta thấy mỗi kết quả thuận lợi cho biến cố $E$ chính là một phần tử thuộc không gian mẫu $\Omega$. Do đó về mặt toán học, ta có:
+Mỗi biến cố là một tập con của không gian mẫu $\Omega$.
+Tập con này là tập tất cả các kết quả thuận lợi cho biến cố đó.
+Nhận xét: Biến cố chắc chắn là tập $\Omega$, biến cố không thể là tập $\emptyset$.
+
+**Ví dụ 2:** Trở lại tình huống mở đầu về trò chơi bốc thăm trúng thưởng (chọn 6 số trong 45 số: $1; 2; 3; \dots; 45$):
+a) Phép thử là gì? Mô tả không gian mẫu $\Omega$.
+b) Gọi $F$ là biến cố: “Bạn An trúng giải độc đắc”. Hỏi $F$ là tập con nào của không gian mẫu?
+c) Gọi $G$ là biến cố: “Bạn An trúng giải nhất”. Hãy chỉ ra ba phần tử của tập $G$. Từ đó, hãy mô tả tập hợp $G$ bằng cách chỉ ra tính chất đặc trưng cho các phần tử của tập $G$.
+
+Lời giải Ví dụ 2:
+• a) Phép thử là chọn ngẫu nhiên 6 số trong 45 số: $1; 2; 3; \dots; 45$. Không gian mẫu $\Omega$ là tập hợp tất cả các tập con có 6 phần tử của tập $\\{1; 2; 3; \dots; 45\\}$.
+• b) $F = \\{5; 13; 20; 31; 32; 35\\}$.
+• c) Ba phần tử thuộc $G$ chẳng hạn là:
+$$\\{6; 13; 20; 31; 32; 35\\}; \\{5; 7; 20; 31; 32; 35\\}; \\{5; 13; 8; 31; 32; 35\\}$$
+$G$ là tập hợp tất cả các tập con gồm sáu phần tử của tập $\\{1; 2; 3; \dots; 45\\}$ có tính chất: năm phần tử của nó thuộc tập $\\{5; 13; 20; 31; 32; 35\\}$ và một phần tử còn lại không thuộc tập $\\{5; 13; 20; 31; 32; 35\\}$.
+
+### c) Biến cố đối
+
+Xét biến cố $C$: “Học sinh được chọn là một bạn nam”. Ta thấy biến cố $C$ xảy ra khi và chỉ khi biến cố $A$ (“Học sinh được chọn là một bạn nữ”) không xảy ra.
+Ta nói biến cố $C$ là biến cố đối của $A$.
+Biến cố đối của biến cố $E$ là biến cố: “$E$ không xảy ra”.
+Biến cố đối của $E$ được kí hiệu là $\overline{E}$.
+Nhận xét: Nếu biến cố $E$ là tập con của không gian mẫu $\Omega$ thì biến cố đối $\overline{E}$ là tập tất cả các phần tử của $\Omega$ mà không là phần tử của $E$. Vậy biến cố $\overline{E}$ là phần bù của $E$ trong $\Omega$: $\overline{E} = C\_{\Omega}E$.
+
+**Ví dụ 3:** Gieo một con xúc xắc 6 mặt và quan sát số chấm xuất hiện trên con xúc xắc.
+a) Mô tả không gian mẫu.
+b) Gọi $M$ là biến cố: “Số chấm xuất hiện trên con xúc xắc là một số chẵn”. Nội dung biến cố đối $\overline{M}$ của $M$ là gì?
+c) Các biến cố $M$ và $\overline{M}$ là tập con nào của không gian mẫu?
+
+Lời giải Ví dụ 3:
+• a) Không gian mẫu $\Omega = \\{1; 2; 3; 4; 5; 6\\}$.
+• b) Biến cố đối $\overline{M}$ của $M$ là biến cố: “Số chấm xuất hiện trên con xúc xắc là một số lẻ”.
+• c) Ta có $M = \\{2; 4; 6\\} \subset \Omega$; $\overline{M} = C\_{\Omega}M = \\{1; 3; 5\\} \subset \Omega$.
+
+## Định nghĩa cổ điển của xác suất
+
+### a) Định nghĩa và công thức tính xác suất
+
+Các kết quả có thể của phép thử $T$ gọi là đồng khả năng nếu chúng có khả năng xuất hiện như nhau.
+Giả sử các kết quả có thể của phép thử $T$ là đồng khả năng. Khi đó xác suất của biến cố $E$ bằng tỉ số giữa số kết quả thuận lợi của $E$ và số kết quả có thể.
+Định nghĩa cổ điển của xác suất:
+Cho phép thử $T$ có không gian mẫu là $\Omega$. Giả thiết rằng các kết quả có thể của $T$ là đồng khả năng. Khi đó nếu $E$ là một biến cố liên quan đến phép thử $T$ thì xác suất của $E$ được cho bởi công thức:
+$$P(E) = \frac{n(E)}{n(\Omega)}$$
+trong đó $n(\Omega)$ và $n(E)$ tương ứng là số phần tử của tập $\Omega$ và tập $E$.
+Nhận xét:
+• Với mỗi biến cố $E$, ta có $0 \le P(E) \le 1$.
+• Với biến cố chắc chắn (là tập $\Omega$), ta có $P(\Omega) = 1$.
+• Với biến cố không thể (là tập $\emptyset$), ta có $P(\emptyset) = 0$.
+
+### b) Ví dụ và tính toán xác suất
+
+**Ví dụ 4:** Gieo một đồng xu cân đối liên tiếp ba lần. Gọi $E$ là biến cố: “Có hai lần xuất hiện mặt sấp và một lần xuất hiện mặt ngửa”. Tính xác suất của biến cố $E$.
+
+Lời giải Ví dụ 4:
+• Kí hiệu $S$ và $N$ tương ứng là đồng xu ra mặt sấp và đồng xu ra mặt ngửa.
+• Không gian mẫu $\Omega = \\{SSN, SNS, SNN, SSS, NSN, NNS, NNN, NSS\\}$.
+• $E = \\{SSN, SNS, NSS\\}$.
+• Ta có $n(\Omega) = 8$; $n(E) = 3$. Do đồng xu cân đối nên các kết quả có thể là đồng khả năng.
+• Vậy $P(E) = \frac{n(E)}{n(\Omega)} = \frac{3}{8}$.
+
+**Ví dụ 5:** Hai túi I và II chứa các tấm thẻ được đánh số. Túi I: $\\{1; 2; 3; 4; 5\\}$, túi II: $\\{1; 2; 3; 4\\}$. Rút ngẫu nhiên một tấm thẻ từ mỗi túi I và II. Tính xác suất để tổng hai số trên hai tấm thẻ lớn hơn 6.
+
+Lời giải Ví dụ 5:
+• Mô tả không gian mẫu $\Omega$ bằng cách lập bảng:
+  - Hàng: Túi I ($1, 2, 3, 4, 5$)
+  - Cột: Túi II ($1, 2, 3, 4$)
+  Mỗi ô là một kết quả có thể. Có 20 ô, vậy $n(\Omega) = 20$.
+• Biến cố $E$: “Tổng hai số trên hai tấm thẻ lớn hơn 6” xảy ra khi tổng là một trong ba trường hợp:
+  - Tổng bằng 7 gồm các kết quả: $(3, 4); (4, 3); (5, 2)$.
+  - Tổng bằng 8 gồm các kết quả: $(4, 4); (5, 3)$.
+  - Tổng bằng 9 có một kết quả: $(5, 4)$.
+• Vậy biến cố $E = \\{(3, 4); (4, 3); (5, 2); (4, 4); (5, 3); (5, 4)\\}$. Từ đó $n(E) = 6$ và:
+  $$P(E) = \frac{6}{20} = \frac{3}{10} = 0{,}3$$
+
+## Nguyên lí xác suất bé và ứng dụng
+
+### a) Nguyên lí xác suất bé
+
+Qua thực tế người ta thấy rằng một biến cố có xác suất rất bé thì sẽ không xảy ra khi ta thực hiện một phép thử hay một vài phép thử. Từ đó người ta đã thừa nhận nguyên lí sau đây gọi là nguyên lí xác suất bé:
+Nếu một biến cố có xác suất rất bé thì trong một phép thử biến cố đó sẽ không xảy ra.
+Ví dụ: Xác suất một chiếc máy bay rơi là rất bé, khoảng $0{,}00000027$. Mỗi hành khách khi đi máy bay đều tin rằng biến cố: “Máy bay rơi” sẽ không xảy ra trong chuyến bay của mình, do đó người ta vẫn không ngần ngại đi máy bay.
+Chú ý: Trong thực tế, xác suất của một biến cố được coi là bé phụ thuộc vào từng trường hợp cụ thể. Chẳng hạn, xác suất một chiếc điện thoại bị lỗi kĩ thuật là $0{,}001$ được coi là rất bé, nhưng nếu xác suất cháy nổ động cơ của một máy bay là $0{,}001$ thì xác suất này không được coi là rất bé.
+
+### b) Ý nghĩa thực tế của xác suất
+
+**Vận dụng:** Giả sử biến cố $A$ có xác suất $P(A)$. Khi thực hiện phép thử $n$ lần ($n \ge 30$) thì số lần xuất hiện biến cố $A$ sẽ xấp xỉ bằng $n \cdot P(A)$ (nói chung khi $n$ càng lớn thì sai số tương đối càng bé).
+Giả thiết rằng xác suất sinh con trai là $0{,}512$ và xác suất sinh con gái là $0{,}488$. Vận dụng ý nghĩa thực tế của xác suất, hãy ước tính trong số $10\\,000$ trẻ mới sinh (hoặc giữa trẻ em) có bao nhiêu bé trai.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập cuối bài
+
+**Bài 9.1:** Chọn ngẫu nhiên một số nguyên dương không lớn hơn 30.
+a) Mô tả không gian mẫu.
+b) Gọi $A$ là biến cố: “Số được chọn là số nguyên tố”. Các biến cố $A$ và $\overline{A}$ là tập con nào của không gian mẫu?
+
+Lời giải Bài 9.1:
+• a) Không gian mẫu $\Omega = \\{1; 2; 3; \dots; 30\\}$, với $n(\Omega) = 30$.
+• b) $A = \\{2; 3; 5; 7; 11; 13; 17; 19; 23; 29\\}$.
+  Biến cố đối $\overline{A}$ là tập hợp các hợp số và số 1: $\overline{A} = \\{1; 4; 6; 8; 9; 10; 12; 14; 15; 16; 18; 20; 21; 22; 24; 25; 26; 27; 28; 30\\$.
+
+**Bài 9.2:** Chọn ngẫu nhiên một số nguyên dương không lớn hơn 22.
+a) Mô tả không gian mẫu.
+b) Gọi $B$ là biến cố: “Số được chọn chia hết cho 3”. Các biến cố $B$ và $\overline{B}$ là các tập con nào của không gian mẫu?
+
+Lời giải Bài 9.2:
+• a) Không gian mẫu $\Omega = \\{1; 2; 3; \dots; 22\\}$, với $n(\Omega) = 22$.
+• b) $B = \\{3; 6; 9; 12; 15; 18; 21\\}$.
+  $\overline{B} = \\{1; 2; 4; 5; 7; 8; 10; 11; 13; 14; 16; 17; 19; 20; 22\\$.
+
+**Bài 9.3:** Gieo đồng thời một con xúc xắc và một đồng xu.
+a) Mô tả không gian mẫu.
+b) Xét các biến cố sau:
+$C$: “Đồng xu xuất hiện mặt sấp”;
+$D$: “Đồng xu xuất hiện mặt ngửa hoặc số chấm xuất hiện trên con xúc xắc là 5”.
+Các biến cố $C$, $\overline{C}$, $D$ và $\overline{D}$ là các tập con nào của không gian mẫu?
+
+Lời giải Bài 9.3:
+• a) Không gian mẫu $\Omega = \\{(H, 1), (H, 2), \dots, (H, 6), (T, 1), (T, 2), \dots, (T, 6)\\}$ với $n(\Omega) = 12$.
+• b) $C = \\{(H, 1), (H, 2), (H, 3), (H, 4), (H, 5), (H, 6)\\}$.
+  $\overline{C} = \\{(T, 1), (T, 2), (T, 3), (T, 4), (T, 5), (T, 6)\\}$.
+  $D = \\{(T, 1), (T, 2), (T, 3), (T, 4), (T, 6), (H, 5), (T, 5\\}$.
+  $\overline{D}$ là biến cố đồng xu xuất hiện mặt sấp và số chấm trên xúc xắc khác 5: $\overline{D} = \\{(H, 1), (H, 2), (H, 3), (H, 4), (H, 6)\\}$.
+
+**Bài 9.4:** Một túi có chứa một số bi xanh, bi đỏ, bi đen và bi trắng. Lấy ngẫu nhiên một viên bi từ trong túi.
+a) Gọi $H$ là biến cố: “Bi lấy ra có màu đỏ”. Biến cố: “Bi lấy ra có màu xanh hoặc màu đen hoặc trắng” có phải là biến cố $\overline{H}$ hay không?
+b) Gọi $K$ là biến cố: “Bi lấy ra có màu xanh hoặc màu trắng”. Biến cố: “Bi lấy ra màu đen” có phải là biến cố $\overline{K}$ hay không?
+
+Lời giải Bài 9.4:
+• a) Có, vì tập hợp màu bi được chia thành màu đỏ và không phải màu đỏ (xanh, đen, trắng).
+• b) Không, vì biến cố đối $\overline{K}$ (“không phải xanh hoặc trắng”) bao gồm màu đỏ, màu đen và các màu khác nếu có, trong khi “màu đen” chỉ là một trong số đó.
+
+**Bài 9.5:** Hai bạn An và Bình mỗi người gieo một con xúc xắc cân đối. Tính xác suất để:
+a) Số chấm xuất hiện trên mỗi con xúc xắc bé hơn 3;
+b) Số chấm xuất hiện trên con xúc xắc mà An gieo lớn hơn hoặc bằng 5;
+c) Tích hai số chấm xuất hiện trên hai con xúc xắc bé hơn 6;
+d) Tổng hai số chấm xuất hiện trên hai con xúc xắc là một số nguyên tố.
+
+Lời giải Bài 9.5:
+• a) Tổng số kết quả $n(\Omega) = 36$. An gieo $< 3$ ($1, 2$), Bình gieo $< 3$ ($1, 2$). Kết quả thuận lợi: $(1,1), (1,2), (2,1), (2,2)$ ($4$ kết quả). Xác suất $\frac{4}{36} = \frac{1}{9}$.
+• b) An gieo $\ge 5$ ($5, 6$), Bình gieo tuỳ ý ($1-6$). Kết quả thuận lợi: $2 \times 6 = 12$. Xác suất $\frac{12}{36} = \frac{1}{3}$.
+• c) Tích $< 6$: Các cặp $(a, b)$ sao cho $ab < 6$. Liệt kê có 16 kết quả thuận lợi. Xác suất $\frac{16}{36} = \frac{4}{9}$.
+• d) Tổng là số nguyên tố ($2, 3, 5, 7, 11$). Các tổng thuận lợi:
+  - Tổng 2: $(1,1)$ (1)
+  - Tổng 3: $(1,2), (2,1)$ (2)
+  - Tổng 5: $(1,4), (2,3), (3,2), (4,1)$ (4)
+  - Tổng 7: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ (6)
+  - Tổng 11: $(5,6), (6,5)$ (2)
+  Tổng số kết quả thuận lợi = $1 + 2 + 4 + 6 + 2 = 15$. Xác suất $\frac{15}{36} = \frac{5}{12}$.
