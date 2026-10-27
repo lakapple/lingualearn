@@ -1,0 +1,275 @@
+---
+title: 'Lesson 15: Functions.'
+description: Theory of functions and illustrative examples.
+tags:
+  - grade 10
+  - Function
+  - domain
+  - range (image)
+  - independent variable
+  - Increasing function (strictly increasing)
+  - decreasing function (strictly decreasing)
+grade: 10
+order: 0
+updatedDate: 2026-10-27T19:15:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Function, independent variable, domain, range (image)
+
+·       Graph of a function
+
+·       Increasing function (strictly increasing), decreasing function (strictly decreasing)
+
+·       Mathematical modeling with functions
+
+### **Knowledge and Skills:**
+
+·       Identify real-world scenarios and models that give rise to the concept of a function.
+
+·       Understand and describe core functional concepts: formal definition of a function, domain, range, graph of a function, increasing and decreasing behavior.
+
+·       Recognize the graphical characteristics of increasing functions (rising from left to right) and decreasing functions (falling from left to right).
+
+·       Apply functions to mathematical modeling and real-world problem solving (tiered electricity tariffs, taxi fares, geometric optimization problems).
+
+## Concept of a Function
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_ham_so"/>
+
+### a) Definition of a Function, Domain, and Range
+
+Definition: Suppose a quantity $y$ depends on a variable quantity $x$, where $x$ takes values from a non-empty subset of real numbers $D$.
+If to each value of $x \in D$ there corresponds one and only one value of $y \in \mathbb{R}$, then this correspondence is called a function.
+• The quantity $x$ is called the independent variable (or argument), and $y$ is called the dependent variable (or function of $x$).
+• The set $D$ is called the domain of definition (or simply domain) of the function.
+• The set of all obtained values of $y$ is called the range (or image) of the function, denoted by $T = \\{f(x) \mid x \in D\\}$.
+• When $y$ is a function of $x$, we write: $y = f(x)$, $y = g(x)$,...
+
+Ways to Represent a Function: A function can be represented by:
+• A numerical table;
+• A chart or graphical representation;
+• An algebraic formula;
+• A verbal description.
+
+Natural Domain Convention (for functions given by formulas):
+When a function is defined by a formula $y = f(x)$ without an explicitly stated domain, its domain is understood to be the set of all real numbers $x$ for which the expression $f(x)$ is mathematically well-defined:
+• A rational expression $\frac{P(x)}{Q(x)}$ is defined if and only if $Q(x) \ne 0$.
+• A square root expression $\sqrt{P(x)}$ is defined if and only if $P(x) \ge 0$.
+• An expression $\frac{1}{\sqrt{P(x)}}$ is defined if and only if $P(x) > 0$.
+
+### b) Illustrative Examples of Functions
+
+**Example 1:** Given a table recording particulate matter PM 2.5 concentrations ($y$, in $\mu\text{g/m}^3$) over time ($x$, in hours): $(0; 74.27)$, $(4; 64.58)$, $(8; 57.9)$, $(12; 69.07)$, $(16; 81.78)$. Determine the domain and range of this function.
+
+Solution for Example 1:
+• The domain of the function is the set of observation times: $D = \\{0; 4; 8; 12; 16\\}$.
+• The range of the function is the set of concentration values: $T = \\{74.27; 64.58; 57.9; 69.07; 81.78\\}$.
+
+**Example 2:** An object moves in uniform rectilinear motion at a constant velocity $v = 2\text{ m/s}$. Write the function expressing distance traveled $S$ (m) in terms of elapsed time $t$ (s). Find its domain, and compute the distance traveled after $5\text{ s}$ and $10\text{ s}$.
+
+Solution for Example 2:
+• The distance traveled as a function of time $t$ is: $S(t) = v \cdot t = 2t$.
+• Since elapsed time satisfies $t \ge 0$, the domain of the function is $D = [0; +\infty)$.
+• Distance traveled after $5\text{ s}$: $S(5) = 2 \cdot 5 = 10\text{ (m)}$.
+• Distance traveled after $10\text{ s}$: $S(10) = 2 \cdot 10 = 20\text{ (m)}$.
+
+**Example 3:** Find the natural domain of each of the following functions:
+a) $y = \sqrt{2x - 4}$;
+b) $y = \frac{1}{x - 1}$.
+
+Solution for Example 3:
+• a) The radical $\sqrt{2x - 4}$ is defined if and only if $2x - 4 \ge 0 \Leftrightarrow 2x \ge 4 \Leftrightarrow x \ge 2$.
+  Hence, the domain is $D = [2; +\infty)$.
+• b) The fraction $\frac{1}{x - 1}$ is defined if and only if $x - 1 \ne 0 \Leftrightarrow x \ne 1$.
+  Hence, the domain is $D = \mathbb{R} \setminus \\{1\\}$.
+
+**Practice 1:** a) Does the following table define a function: $(2013; 73.1)$, $(2014; 73.2)$, $(2015; 73.3)$, $(2016; 73.4)$, $(2017; 73.5)$, $(2018; 73.5)$? If so, find its domain and range.
+b) Given the function $y = f(x) = -2x^2$. Compute $f(1), f(2)$ and determine its domain and range.
+
+Solution for Practice 1:
+• a) Yes, because to each calendar year (time input) there corresponds exactly one value of average life expectancy.
+  Domain: $D = \\{2013; 2014; 2015; 2016; 2017; 2018\\}$.
+  Range: $T = \\{73.1; 73.2; 73.3; 73.4; 73.5\\}$.
+• b) For the quadratic function $y = f(x) = -2x^2$:
+  + $f(1) = -2(1)^2 = -2$; $f(2) = -2(2)^2 = -8$.
+  + Domain: $D = \mathbb{R}$.
+  + Since $x^2 \ge 0, \forall x \in \mathbb{R} \Rightarrow -2x^2 \le 0, \forall x \in \mathbb{R}$, the range of the function is $T = (-\infty; 0]$.
+
+## Graph of a Function
+
+<Youtube url="https://www.youtube.com/watch?v=example_do_thi_ham_so"/>
+
+### a) Definition of the Graph of a Function
+
+Definition: The graph of a function $y = f(x)$ defined on a domain $D$ is the set of all points $M(x; f(x))$ in the Cartesian coordinate plane $Oxy$ for all $x \in D$:
+$$\mathcal{C} = \\{M(x; y) \mid x \in D, y = f(x)\\}$$
+
+Criterion: A point $M(x_0; y_0)$ lies on the graph of $y = f(x)$ if and only if $x_0 \in D$ and $y_0 = f(x_0)$.
+
+### b) Examples and Applications of Function Graphs
+
+**Example 4:** Consider the Tier 1 electricity tariff function: $y = 1.678x$ for consumption $0 \le x \le 50\text{ (kWh)}$. Find its domain, range, and describe its graph.
+
+Solution for Example 4:
+• Domain: $D = [0; 50]$.
+• When $0 \le x \le 50$, we have $0 \le y \le 1.678 \cdot 50 = 83.9\text{ (thousand VND)}$. Thus, the range is $T = [0; 83.9]$.
+• The graph is a line segment connecting the origin $O(0; 0)$ to point $A(50; 83.9)$.
+
+**Practice 2:** a) Using the graph of $y = \frac{1}{2}x^2$, find the values of $x$ such that $y = 8$.
+b) Sketch the graphs of $y = 2x + 1$ and $y = 2x^2$ on the same coordinate plane.
+
+Solution for Practice 2:
+• a) For $y = 8$, we set $\frac{1}{2}x^2 = 8 \Leftrightarrow x^2 = 16 \Leftrightarrow x = 4$ or $x = -4$. Graphically, the horizontal line $y = 8$ intersects the parabola at two points: $(-4; 8)$ and $(4; 8)$.
+• b) Graphing:
+  + The linear function $y = 2x + 1$ has a straight-line graph passing through $(0; 1)$ and $(1; 3)$.
+  + The quadratic function $y = 2x^2$ is a parabola opening upward with vertex at $O(0; 0)$, axis of symmetry $Oy$, passing through $(\pm 1; 2)$ and $(\pm 2; 8)$.
+
+**Application 1 (Piecewise Function - Tiered Tariff):** When electricity consumption falls within Tier 2 ($50 < x \le 100\text{ kWh}$), the bill is given by:
+$$y = 1.678 \cdot 50 + 1.734(x - 50) = 1.734x - 2.8\text{ (thousand VND)}.$$
+Find the domain and range of the function on this interval.
+
+Solution for Application 1:
+• Domain: $D = (50; 100]$.
+• When $x = 50$, $y = 1.734(50) - 2.8 = 83.9\text{ (thousand VND)}$.
+  When $x = 100$, $y = 1.734(100) - 2.8 = 170.6\text{ (thousand VND)}$.
+• Since this linear function has a positive slope ($a = 1.734 > 0$), it is strictly increasing, so its range is $T = (83.9; 170.6]$.
+
+## Monotonicity of Functions: Increasing and Decreasing Functions
+
+<Youtube url="https://www.youtube.com/watch?v=example_dong_bien_nghich_bien"/>
+
+### a) Definition of Increasing and Decreasing Functions
+
+Definition:
+Let a function $y = f(x)$ be defined on an open interval $(a; b)$:
+• The function $y = f(x)$ is said to be strictly increasing (or simply increasing) on $(a; b)$ if:
+$$\forall x_1, x_2 \in (a; b), x_1 < x_2 \Rightarrow f(x_1) < f(x_2)$$
+• The function $y = f(x)$ is said to be strictly decreasing (or simply decreasing) on $(a; b)$ if:
+$$\forall x_1, x_2 \in (a; b), x_1 < x_2 \Rightarrow f(x_1) > f(x_2)$$
+
+Geometric Interpretation:
+• The graph of an increasing function on $(a; b)$ is a curve that rises from left to right.
+• The graph of a decreasing function on $(a; b)$ is a curve that falls from left to right.
+
+### b) Examples and Practice on Determining Monotonicity
+
+**Example 5:** Determine whether the function $y = x^2$ is increasing or decreasing on each of the intervals $(-\infty; 0)$ and $(0; +\infty)$.
+
+Solution for Example 5:
+• On $(-\infty; 0)$: Let $x_1, x_2 \in (-\infty; 0)$ such that $x_1 < x_2 < 0$.
+  Consider the difference: $f(x_1) - f(x_2) = x_1^2 - x_2^2 = (x_1 - x_2)(x_1 + x_2)$.
+  Since $x_1 < x_2 \Rightarrow x_1 - x_2 < 0$, and both $x_1, x_2 < 0 \Rightarrow x_1 + x_2 < 0$.
+  The product of two negative quantities is positive: $(x_1 - x_2)(x_1 + x_2) > 0 \Rightarrow f(x_1) > f(x_2)$.
+  Thus, $y = x^2$ is strictly decreasing on $(-\infty; 0)$ (the graph falls from left to right).
+• On $(0; +\infty)$: Let $x_1, x_2 \in (0; +\infty)$ such that $0 < x_1 < x_2$.
+  Here $x_1 - x_2 < 0$ and $x_1 + x_2 > 0 \Rightarrow f(x_1) - f(x_2) = (x_1 - x_2)(x_1 + x_2) < 0 \Rightarrow f(x_1) < f(x_2)$.
+  Thus, $y = x^2$ is strictly increasing on $(0; +\infty)$ (the graph rises from left to right).
+
+**Practice 3:** Consider the functions $y = 3x + 1$ and $y = -2x^2$:
+a) Is $y = 3x + 1$ increasing or decreasing on $\mathbb{R}$?
+b) Is $y = -2x^2$ increasing or decreasing on each of the intervals $(-\infty; 0)$ and $(0; +\infty)$?
+
+Solution for Practice 3:
+• a) For any $x_1, x_2 \in \mathbb{R}$ with $x_1 < x_2$, multiplying by $3 > 0$ yields $3x_1 < 3x_2 \Rightarrow 3x_1 + 1 < 3x_2 + 1 \Rightarrow f(x_1) < f(x_2)$. Therefore, $y = 3x + 1$ is strictly increasing on $\mathbb{R}$.
+• b) For $y = f(x) = -2x^2$:
+  + On $(-\infty; 0)$: with $x_1 < x_2 < 0 \Rightarrow x_1^2 > x_2^2 \Rightarrow -2x_1^2 < -2x_2^2 \Rightarrow f(x_1) < f(x_2)$. Hence, the function is strictly increasing on $(-\infty; 0)$.
+  + On $(0; +\infty)$: with $0 < x_1 < x_2 \Rightarrow x_1^2 < x_2^2 \Rightarrow -2x_1^2 > -2x_2^2 \Rightarrow f(x_1) > f(x_2)$. Hence, the function is strictly decreasing on $(0; +\infty)$.
+
+## Applications and Exercises
+
+### a) Mathematical Modeling in Real-World Contexts
+
+**Application 2 (Modeling Taxi Fares):** A taxi fare structure is given as follows:
+• Base fare (for the first 0.6 km): 10,000 VND.
+• Next distance (from above 0.6 km up to 25 km): 13,000 VND/km.
+• From the 25th km onward: 11,000 VND/km.
+a) Compute the total fare for a trip of 25 km.
+b) Express the total fare $y = f(x)$ (in thousand VND) as a function of distance $x$ (in km).
+c) Determine the intervals where the function is increasing or constant.
+
+Solution for Application 2:
+• a) For a 25 km trip, the journey consists of the initial 0.6 km plus 24.4 km at 13,000 VND/km. The fare is:
+$$y(25) = 10 + 13 \cdot (25 - 0.6) = 10 + 13 \cdot 24.4 = 10 + 317.2 = 327.2\text{ (thousand VND)} = 327\\,200\text{ VND}.$$
+• b) The piecewise-defined function $y = f(x)$ (in thousand VND) for distance $x > 0$ is:
+$$y = \begin{cases} 10 & \text{if } 0 < x \le 0.6 \\\ 10 + 13(x - 0.6) = 13x + 2.2 & \text{if } 0.6 < x \le 25 \\\ 327.2 + 11(x - 25) = 11x + 52.2 & \text{if } x > 25 \end{cases}$$
+• c) The function is constant on $(0; 0.6]$ and strictly increasing on $(0.6; 25)$ and $(25; +\infty)$, reflecting the fact that greater travel distance invariably incurs higher costs.
+
+**Exercise 6.6 (Self-Drive Car Rental):** The rental rate for a self-drive car is 1.2 million VND per day for the first two days and 900 thousand VND for each subsequent day. The total cost $T$ (in thousand VND) is a function of the number of rental days $x$ ($x \in \mathbb{N}^\*$).
+a) Write the formula for $T = T(x)$.
+b) Compute $T(2), T(3), T(5)$ and explain their practical meaning.
+
+Solution for Exercise 6.6:
+• a) Formulating the function $T(x)$ (in thousand VND):
+$$T(x) = \begin{cases} 1\\,200x & \text{if } x \in \\{1; 2\\} \\\ 1\\,200 \cdot 2 + 900(x - 2) = 900x + 600 & \text{if } x \ge 3, x \in \mathbb{N} \end{cases}$$
+• b) Computing the values:
+  + $T(2) = 1\\,200 \cdot 2 = 2\\,400\text{ (thousand VND)} = 2.4\text{ million VND}$ (cost to rent the car for 2 days).
+  + $T(3) = 900 \cdot 3 + 600 = 3\\,300\text{ (thousand VND)} = 3.3\text{ million VND}$ (cost to rent the car for 3 days).
+  + $T(5) = 900 \cdot 5 + 600 = 5\\,100\text{ (thousand VND)} = 5.1\text{ million VND}$ (cost to rent the car for 5 days).
+
+### b) Detailed Section Exercises
+
+**Exercise 6.1:** Consider two interdependent variables $x$ and $y$ related by each of the following equations. In which cases is $y$ a function of $x$?
+a) $x + y = 1$;
+b) $y = x^2$;
+c) $y^2 = x$;
+d) $x^2 - y^2 = 0$.
+
+Solution for Exercise 6.1:
+• a) $x + y = 1 \Leftrightarrow y = 1 - x$. For each real number $x$, there exists a unique value $y = 1 - x$. Thus, $y$ is a function of $x$.
+• b) $y = x^2$. For each real number $x$, there exists a unique square $y = x^2$. Thus, $y$ is a function of $x$.
+• c) $y^2 = x$. For $x = 4 > 0$, we have $y^2 = 4 \Rightarrow y = 2$ or $y = -2$. Since one input $x$ yields two distinct outputs $y$, $y$ is NOT a function of $x$.
+• d) $x^2 - y^2 = 0 \Leftrightarrow y^2 = x^2 \Leftrightarrow y = x$ or $y = -x$. For $x = 1$, we obtain $y = 1$ and $y = -1$. Hence, $y$ is NOT a function of $x$.
+
+**Exercise 6.2:** Provide an example of a function represented by a table or chart. Specify its domain and range.
+
+Solution for Exercise 6.2:
+• Example: Final math examination grades of 4 students: An (8), Binh (9), Chi (8), Dung (7).
+• Independent variable $x$ is the student's name; dependent variable $y = f(x)$ is the mathematics grade.
+  Domain: $D = \\{\text{An}, \text{Binh}, \text{Chi}, \text{Dung}\\}$.
+  Range: $T = \\{7; 8; 9\\}$.
+
+**Exercise 6.3:** Find the natural domain of each of the following functions:
+a) $y = 2x^3 + 3x + 1$;
+b) $y = \frac{x - 1}{x^2 - 3x + 2}$;
+c) $y = \sqrt{x + 1} + \sqrt{1 - x}$.
+
+Solution for Exercise 6.3:
+• a) The polynomial $2x^3 + 3x + 1$ is defined for all $x \in \mathbb{R}$. Therefore, $D = \mathbb{R}$.
+• b) The rational function is defined if and only if its denominator is non-zero:
+$$x^2 - 3x + 2 \ne 0 \Leftrightarrow (x - 1)(x - 2) \ne 0 \Leftrightarrow \begin{cases} x \ne 1 \\\ x \ne 2 \end{cases}$$
+  Hence, the domain is $D = \mathbb{R} \setminus \\{1; 2\\}$.
+• c) The expression is defined if and only if both radicands are simultaneously non-negative:
+$$\begin{cases} x + 1 \ge 0 \\\ 1 - x \ge 0 \end{cases} \Leftrightarrow \begin{cases} x \ge -1 \\\ x \le 1 \end{cases} \Leftrightarrow -1 \le x \le 1.$$
+  Hence, the domain is the closed interval $D = [-1; 1]$.
+
+**Exercise 6.4:** Find the domain and range of each of the following functions:
+a) $y = 2x + 3$;
+b) $y = 2x^2$.
+
+Solution for Exercise 6.4:
+• a) For the linear function $y = 2x + 3$:
+  + Domain: $D = \mathbb{R}$.
+  + For any real number $y_0$, the equation $2x + 3 = y_0 \Leftrightarrow x = \frac{y_0 - 3}{2}$ always possesses a unique real solution. Hence, the range is $T = \mathbb{R}$.
+• b) For the quadratic function $y = 2x^2$:
+  + Domain: $D = \mathbb{R}$.
+  + Since $x^2 \ge 0, \forall x \in \mathbb{R} \Rightarrow 2x^2 \ge 0, \forall x \in \mathbb{R}$. Conversely, for any $y_0 \ge 0$, the equation $2x^2 = y_0 \Leftrightarrow x = \pm \sqrt{\frac{y_0}{2}}$ has at least one real solution. Thus, the range is $T = [0; +\infty)$.
+
+**Exercise 6.5:** Sketch the graphs of the following functions and identify their intervals of increase and decrease:
+a) $y = -2x + 1$;
+b) $y = -\frac{1}{2}x^2$.
+
+Solution for Exercise 6.5:
+• a) The linear function $y = -2x + 1$:
+  + Its graph is a straight line passing through $(0; 1)$ and $(1; -1)$.
+  + Since the slope $a = -2 < 0$, the line slopes downward from left to right. Hence, the function is strictly decreasing on the entire real line $\mathbb{R}$.
+• b) The quadratic function $y = -\frac{1}{2}x^2$:
+  + Its graph is a downward-opening parabola with vertex at $O(0; 0)$ and axis of symmetry along $Oy$, passing through $(\pm 2; -2)$ and $(\pm 4; -8)$.
+  + On $(-\infty; 0)$: the graph rises from left to right, so the function is strictly increasing on $(-\infty; 0)$.
+  + On $(0; +\infty)$: the graph falls from left to right, so the function is strictly decreasing on $(0; +\infty)$.

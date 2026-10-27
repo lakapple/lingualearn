@@ -1,0 +1,276 @@
+---
+title: 'Bài 15: Hàm số.'
+description: Hệ thống lý thuyết về hàm số và ví dụ minh họa.
+tags:
+  - lớp 10
+  - Hàm số
+  - biến số
+  - Hàm số đồng biến (tăng)
+  - hàm số nghịch biến (giảm)
+  - Đồ thị của hàm số
+  - tập giá trị
+  - tập xác định
+grade: 10
+order: 0
+updatedDate: 2026-10-27T19:15:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hàm số, biến số, tập xác định, tập giá trị
+
+·       Đồ thị của hàm số
+
+·       Hàm số đồng biến (tăng), hàm số nghịch biến (giảm)
+
+·       Mô hình hoá toán học bằng hàm số
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết các mô hình thực tế dẫn đến khái niệm hàm số.
+
+·       Nắm vững và mô tả các khái niệm cơ bản về hàm số: định nghĩa hàm số, tập xác định, tập giá trị, đồ thị của hàm số, tính đồng biến, nghịch biến.
+
+·       Nhận biết dạng đồ thị của hàm số đồng biến (đường đi lên từ trái sang phải) và nghịch biến (đường đi xuống từ trái sang phải).
+
+·       Vận dụng kiến thức hàm số vào mô hình hoá và giải quyết các bài toán thực tiễn (tính tiền điện, cước taxi, bài toán tối ưu hình học).
+
+## Khái niệm hàm số
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_ham_so"/>
+
+### a) Định nghĩa hàm số, tập xác định và tập giá trị
+
+Định nghĩa: Giả sử có đại lượng $y$ phụ thuộc vào đại lượng thay đổi $x$, trong đó $x$ nhận giá trị thuộc tập hợp số $D$.
+Nếu với mỗi giá trị của $x$ thuộc tập hợp số $D$ có một và chỉ một giá trị tương ứng của $y$ thuộc tập số thực $\mathbb{R}$ thì ta có một hàm số.
+• Ta gọi $x$ là biến số và $y$ là hàm số của $x$.
+• Tập hợp $D$ gọi là tập xác định của hàm số.
+• Tập hợp tất cả các giá trị $y$ nhận được gọi là tập giá trị của hàm số, thường kí hiệu là $T = \\{f(x) \mid x \in D\\}$.
+• Khi $y$ là hàm số của $x$, ta viết: $y = f(x)$, $y = g(x)$,...
+
+Cách cho một hàm số: Một hàm số có thể được cho bằng:
+• Bảng số liệu;
+• Biểu đồ / Đồ thị;
+• Công thức toán học;
+• Mô tả bằng lời.
+
+Quy ước tìm tập xác định của hàm số cho bằng công thức:
+Khi hàm số được cho bằng công thức $y = f(x)$ mà không chỉ rõ tập xác định thì tập xác định của hàm số là tập hợp tất cả các số thực $x$ sao cho biểu thức $f(x)$ có nghĩa:
+• Phân thức $\frac{P(x)}{Q(x)}$ có nghĩa khi $Q(x) \ne 0$.
+• Biểu thức căn bậc hai $\sqrt{P(x)}$ có nghĩa khi $P(x) \ge 0$.
+• Biểu thức $\frac{1}{\sqrt{P(x)}}$ có nghĩa khi $P(x) > 0$.
+
+### b) Ví dụ minh họa về khái niệm hàm số
+
+**Ví dụ 1:** Cho bảng nồng độ bụi PM 2.5 ($y$, đơn vị $\mu\text{g/m}^3$) theo thời điểm ($x$, giờ): $(0; 74{,}27)$, $(4; 64{,}58)$, $(8; 57{,}9)$, $(12; 69{,}07)$, $(16; 81{,}78)$. Xác định tập xác định và tập giá trị của hàm số.
+
+Lời giải Ví dụ 1:
+• Tập xác định của hàm số: $D = \\{0; 4; 8; 12; 16\\}$.
+• Tập giá trị của hàm số: $T = \\{74{,}27; 64{,}58; 57{,}9; 69{,}07; 81{,}78\\}$.
+
+**Ví dụ 2:** Một vật chuyển động thẳng đều với vận tốc $v = 2\text{ m/s}$. Viết hàm số mô tả quãng đường $S$ (m) theo thời gian $t$ (s). Tìm tập xác định và tính quãng đường vật đi được sau $5\text{ s}$, $10\text{ s}$.
+
+Lời giải Ví dụ 2:
+• Quãng đường vật đi được sau thời gian $t$ là: $S(t) = v \cdot t = 2t$.
+• Vì thời gian $t \ge 0$ nên tập xác định của hàm số là $D = [0; +\infty)$.
+• Quãng đường vật đi được sau $5\text{ s}$: $S(5) = 2 \cdot 5 = 10\text{ (m)}$.
+• Quãng đường vật đi được sau $10\text{ s}$: $S(10) = 2 \cdot 10 = 20\text{ (m)}$.
+
+**Ví dụ 3:** Tìm tập xác định của các hàm số sau:
+a) $y = \sqrt{2x - 4}$;
+b) $y = \frac{1}{x - 1}$.
+
+Lời giải Ví dụ 3:
+• a) Biểu thức $\sqrt{2x - 4}$ có nghĩa khi và chỉ khi $2x - 4 \ge 0 \Leftrightarrow 2x \ge 4 \Leftrightarrow x \ge 2$.
+  Vậy tập xác định là $D = [2; +\infty)$.
+• b) Biểu thức $\frac{1}{x - 1}$ có nghĩa khi và chỉ khi $x - 1 \ne 0 \Leftrightarrow x \ne 1$.
+  Vậy tập xác định là $D = \mathbb{R} \setminus \\{1\\}$.
+
+**Luyện tập 1:** a) Bảng sau có cho ta một hàm số không: $(2013; 73{,}1)$, $(2014; 73{,}2)$, $(2015; 73{,}3)$, $(2016; 73{,}4)$, $(2017; 73{,}5)$, $(2018; 73{,}5)$? Tìm tập xác định và tập giá trị.
+b) Cho hàm số $y = f(x) = -2x^2$. Tính $f(1), f(2)$ và tìm tập xác định, tập giá trị của hàm số.
+
+Lời giải Luyện tập 1:
+• a) Có, vì ứng với mỗi năm (thời điểm) chỉ có duy nhất một giá trị tuổi thọ trung bình.
+  Tập xác định: $D = \\{2013; 2014; 2015; 2016; 2017; 2018\\}$.
+  Tập giá trị: $T = \\{73{,}1; 73{,}2; 73{,}3; 73{,}4; 73{,}5\\}$.
+• b) Với hàm số $y = f(x) = -2x^2$:
+  + $f(1) = -2(1)^2 = -2$; $f(2) = -2(2)^2 = -8$.
+  + Tập xác định: $D = \mathbb{R}$.
+  + Vì $x^2 \ge 0, \forall x \in \mathbb{R} \Rightarrow -2x^2 \le 0, \forall x \in \mathbb{R}$. Do đó tập giá trị là $T = (-\infty; 0]$.
+
+## Đồ thị của hàm số
+
+<Youtube url="https://www.youtube.com/watch?v=example_do_thi_ham_so"/>
+
+### a) Định nghĩa đồ thị hàm số
+
+Định nghĩa: Đồ thị của hàm số $y = f(x)$ xác định trên tập hợp $D$ là tập hợp tất cả các điểm $M(x; f(x))$ trên mặt phẳng toạ độ $Oxy$ với mọi $x \in D$:
+$$\mathcal{C} = \\{M(x; y) \mid x \in D, y = f(x)\\}$$
+
+Nhận xét: Điểm $M(x_0; y_0)$ thuộc đồ thị hàm số $y = f(x)$ khi và chỉ khi $x_0 \in D$ và $y_0 = f(x_0)$.
+
+### b) Ví dụ và vận dụng về đồ thị hàm số
+
+**Ví dụ 4:** Xét hàm số tính tiền điện sinh hoạt bậc 1: $y = 1{,}678x$ với lượng điện tiêu thụ $0 \le x \le 50\text{ (kWh)}$. Tìm tập xác định, tập giá trị và mô tả đồ thị.
+
+Lời giải Ví dụ 4:
+• Tập xác định: $D = [0; 50]$.
+• Khi $0 \le x \le 50$, ta có $0 \le y \le 1{,}678 \cdot 50 = 83{,}9\text{ (nghìn đồng)}$. Vậy tập giá trị là $T = [0; 83{,}9]$.
+• Đồ thị hàm số là đoạn thẳng nối gốc toạ độ $O(0; 0)$ với điểm $A(50; 83{,}9)$.
+
+**Luyện tập 2:** a) Dựa vào đồ thị hàm số $y = \frac{1}{2}x^2$, tìm $x$ sao cho $y = 8$.
+b) Vẽ đồ thị của hai hàm số $y = 2x + 1$ và $y = 2x^2$ trên cùng một hệ trục toạ độ.
+
+Lời giải Luyện tập 2:
+• a) Với $y = 8$, ta có $\frac{1}{2}x^2 = 8 \Leftrightarrow x^2 = 16 \Leftrightarrow x = 4$ hoặc $x = -4$. Trên đồ thị, đường thẳng nằm ngang $y = 8$ cắt parabol tại hai điểm $(-4; 8)$ và $(4; 8)$.
+• b) Vẽ đồ thị:
+  + Đường thẳng $y = 2x + 1$ đi qua hai điểm $(0; 1)$ và $(1; 3)$.
+  + Parabol $y = 2x^2$ có đỉnh là gốc toạ độ $O(0; 0)$, trục đối xứng là trục tung $Oy$, đi qua các điểm $(\pm 1; 2)$ và $(\pm 2; 8)$.
+
+**Vận dụng 1 (Hàm số từng phần - Biểu giá điện bậc thang):** Nếu lượng điện tiêu thụ từ trên 50 đến 100 kWh ($50 < x \le 100$), số tiền phải trả được tính theo công thức:
+$$y = 1{,}678 \cdot 50 + 1{,}734(x - 50) = 1{,}734x - 2{,}8\text{ (nghìn đồng)}.$$
+Tìm tập xác định và tập giá trị của hàm số trên khoảng này.
+
+Lời giải Vận dụng 1:
+• Tập xác định: $D = (50; 100]$.
+• Khi $x = 50$, $y = 1{,}734(50) - 2{,}8 = 83{,}9\text{ (nghìn đồng)}$.
+  Khi $x = 100$, $y = 1{,}734(100) - 2{,}8 = 170{,}6\text{ (nghìn đồng)}$.
+• Vì hàm số bậc nhất đồng biến trên khoảng này nên tập giá trị là $T = (83{,}9; 170{,}6]$.
+
+## Sự đồng biến, nghịch biến của hàm số
+
+<Youtube url="https://www.youtube.com/watch?v=example_dong_bien_nghich_bien"/>
+
+### a) Định nghĩa hàm số đồng biến, nghịch biến
+
+Định nghĩa:
+Cho hàm số $y = f(x)$ xác định trên khoảng $(a; b)$:
+• Hàm số $y = f(x)$ được gọi là đồng biến (tăng) trên khoảng $(a; b)$ nếu:
+$$\forall x_1, x_2 \in (a; b), x_1 < x_2 \Rightarrow f(x_1) < f(x_2)$$
+• Hàm số $y = f(x)$ được gọi là nghịch biến (giảm) trên khoảng $(a; b)$ nếu:
+$$\forall x_1, x_2 \in (a; b), x_1 < x_2 \Rightarrow f(x_1) > f(x_2)$$
+
+Mô tả hình học qua đồ thị:
+• Đồ thị của một hàm số đồng biến trên khoảng $(a; b)$ là một đường đi lên từ trái sang phải.
+• Đồ thị của một hàm số nghịch biến trên khoảng $(a; b)$ là một đường đi xuống từ trái sang phải.
+
+### b) Ví dụ và luyện tập xét tính đơn điệu
+
+**Ví dụ 5:** Xét sự đồng biến, nghịch biến của hàm số $y = x^2$ trên mỗi khoảng $(-\infty; 0)$ và $(0; +\infty)$.
+
+Lời giải Ví dụ 5:
+• Trên khoảng $(-\infty; 0)$: Lấy $x_1, x_2 \in (-\infty; 0)$ với $x_1 < x_2 < 0$.
+  Ta có: $f(x_1) - f(x_2) = x_1^2 - x_2^2 = (x_1 - x_2)(x_1 + x_2)$.
+  Vì $x_1 < x_2 \Rightarrow x_1 - x_2 < 0$, và $x_1 < 0, x_2 < 0 \Rightarrow x_1 + x_2 < 0$.
+  Tích hai số âm là số dương: $(x_1 - x_2)(x_1 + x_2) > 0 \Rightarrow f(x_1) > f(x_2)$.
+  Vậy hàm số $y = x^2$ nghịch biến trên khoảng $(-\infty; 0)$ (đồ thị đi xuống từ trái sang phải).
+• Trên khoảng $(0; +\infty)$: Lấy $x_1, x_2 \in (0; +\infty)$ với $0 < x_1 < x_2$.
+  Ta có: $x_1 - x_2 < 0$ và $x_1 + x_2 > 0 \Rightarrow f(x_1) - f(x_2) = (x_1 - x_2)(x_1 + x_2) < 0 \Rightarrow f(x_1) < f(x_2)$.
+  Vậy hàm số $y = x^2$ đồng biến trên khoảng $(0; +\infty)$ (đồ thị đi lên từ trái sang phải).
+
+**Luyện tập 3:** Cho hai hàm số $y = 3x + 1$ và $y = -2x^2$. Hãy cho biết:
+a) Hàm số $y = 3x + 1$ đồng biến hay nghịch biến trên $\mathbb{R}$?
+b) Hàm số $y = -2x^2$ đồng biến hay nghịch biến trên mỗi khoảng $(-\infty; 0)$ và $(0; +\infty)$?
+
+Lời giải Luyện tập 3:
+• a) Với mọi $x_1, x_2 \in \mathbb{R}$ thoả mãn $x_1 < x_2$, ta có $3x_1 < 3x_2 \Rightarrow 3x_1 + 1 < 3x_2 + 1 \Rightarrow f(x_1) < f(x_2)$. Do đó hàm số $y = 3x + 1$ đồng biến trên $\mathbb{R}$.
+• b) Với hàm số $y = f(x) = -2x^2$:
+  + Trên khoảng $(-\infty; 0)$: với $x_1 < x_2 < 0 \Rightarrow x_1^2 > x_2^2 \Rightarrow -2x_1^2 < -2x_2^2 \Rightarrow f(x_1) < f(x_2)$. Vậy hàm số đồng biến trên khoảng $(-\infty; 0)$.
+  + Trên khoảng $(0; +\infty)$: với $0 < x_1 < x_2 \Rightarrow x_1^2 < x_2^2 \Rightarrow -2x_1^2 > -2x_2^2 \Rightarrow f(x_1) > f(x_2)$. Vậy hàm số nghịch biến trên khoảng $(0; +\infty)$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập mô hình hoá thực tiễn
+
+**Vận dụng 2 (Mô hình hoá cước taxi):** Biểu giá cước taxi 4 chỗ như sau:
+• Giá mở cửa (cho 0,6 km đầu): 10 000 đồng.
+• Giá các km tiếp theo (từ trên 0,6 km đến 25 km): 13 000 đồng/km.
+• Từ km thứ 25 trở đi: 11 000 đồng/km.
+a) Tính số tiền phải trả khi di chuyển 25 km.
+b) Lập công thức hàm số $y = f(x)$ tính số tiền cước (nghìn đồng) theo quãng đường $x$ (km).
+c) Xét tính đồng biến, nghịch biến của hàm số thu được.
+
+Lời giải Vận dụng 2:
+• a) Khi di chuyển 25 km, quãng đường chia làm 0,6 km mở cửa và 24,4 km tiếp theo. Số tiền cước là:
+$$y(25) = 10 + 13 \cdot (25 - 0{,}6) = 10 + 13 \cdot 24{,}4 = 10 + 317{,}2 = 327{,}2\text{ (nghìn đồng)} = 327\\,200\text{ đồng}.$$
+• b) Công thức hàm số từng phần $y = f(x)$ (đơn vị: nghìn đồng) với quãng đường $x > 0$:
+$$y = \begin{cases} 10 & \text{nếu } 0 < x \le 0{,}6 \\\ 10 + 13(x - 0{,}6) = 13x + 2{,}2 & \text{nếu } 0{,}6 < x \le 25 \\\ 327{,}2 + 11(x - 25) = 11x + 52{,}2 & \text{nếu } x > 25 \end{cases}$$
+• c) Hàm số là hàm hằng (không đổi) trên khoảng $(0; 0{,}6]$ và đồng biến trên các khoảng $(0{,}6; 25)$ và $(25; +\infty)$ vì khi quãng đường di chuyển tăng thì số tiền phải trả luôn tăng.
+
+**Bài 6.6 (Thuê xe tự lái):** Giá thuê xe ô tô tự lái là 1,2 triệu đồng/ngày cho hai ngày đầu tiên và 900 nghìn đồng cho mỗi ngày tiếp theo. Tổng số tiền $T$ (nghìn đồng) phải trả là một hàm số của số ngày thuê xe $x$ ($x \in \mathbb{N}^\*$).
+a) Viết công thức của hàm số $T = T(x)$.
+b) Tính $T(2), T(3), T(5)$ và nêu ý nghĩa thực tế.
+
+Lời giải Bài 6.6:
+• a) Biểu diễn hàm số $T(x)$ (đơn vị: nghìn đồng):
+$$T(x) = \begin{cases} 1\\,200x & \text{nếu } x \in \\{1; 2\\} \\\ 1\\,200 \cdot 2 + 900(x - 2) = 900x + 600 & \text{nếu } x \ge 3, x \in \mathbb{N} \end{cases}$$
+• b) Tính các giá trị:
+  + $T(2) = 1\\,200 \cdot 2 = 2\\,400\text{ (nghìn đồng)} = 2{,}4\text{ triệu đồng}$ (chi phí thuê xe trong 2 ngày).
+  + $T(3) = 900 \cdot 3 + 600 = 3\\,300\text{ (nghìn đồng)} = 3{,}3\text{ triệu đồng}$ (chi phí thuê xe trong 3 ngày).
+  + $T(5) = 900 \cdot 5 + 600 = 5\\,100\text{ (nghìn đồng)} = 5{,}1\text{ triệu đồng}$ (chi phí thuê xe trong 5 ngày).
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.1:** Xét hai đại lượng $x, y$ phụ thuộc vào nhau theo các hệ thức dưới đây. Những trường hợp nào thì $y$ là hàm số của $x$?
+a) $x + y = 1$;
+b) $y = x^2$;
+c) $y^2 = x$;
+d) $x^2 - y^2 = 0$.
+
+Lời giải Bài 6.1:
+• a) $x + y = 1 \Leftrightarrow y = 1 - x$. Với mỗi giá trị của $x$, xác định được duy nhất một giá trị $y = 1 - x$. Do đó $y$ là hàm số của $x$.
+• b) $y = x^2$. Với mỗi số thực $x$, xác định được duy nhất một giá trị bình phương $y = x^2$. Do đó $y$ là hàm số của $x$.
+• c) $y^2 = x$. Với $x = 4 > 0$, ta có $y^2 = 4 \Rightarrow y = 2$ hoặc $y = -2$. Có 1 giá trị của $x$ ứng với 2 giá trị của $y$, nên $y$ KHÔNG phải là hàm số của $x$.
+• d) $x^2 - y^2 = 0 \Leftrightarrow y^2 = x^2 \Leftrightarrow y = x$ hoặc $y = -x$. Với $x = 1$, ta có $y = 1$ hoặc $y = -1$. Do đó $y$ KHÔNG phải là hàm số của $x$.
+
+**Bài 6.2:** Cho một ví dụ về hàm số được cho bằng bảng hoặc biểu đồ. Chỉ ra tập xác định và tập giá trị.
+
+Lời giải Bài 6.2:
+• Ví dụ: Bảng điểm học kì môn Toán của một nhóm 4 học sinh: An (8), Bình (9), Chi (8), Dũng (7).
+• Biến số $x$ là tên học sinh, hàm số $y = f(x)$ là điểm thi môn Toán.
+  Tập xác định: $D = \\{\text{An}, \text{Bình}, \text{Chi}, \text{Dũng}\\}$.
+  Tập giá trị: $T = \\{7; 8; 9\\}$.
+
+**Bài 6.3:** Tìm tập xác định của các hàm số sau:
+a) $y = 2x^3 + 3x + 1$;
+b) $y = \frac{x - 1}{x^2 - 3x + 2}$;
+c) $y = \sqrt{x + 1} + \sqrt{1 - x}$.
+
+Lời giải Bài 6.3:
+• a) Đa thức $2x^3 + 3x + 1$ xác định với mọi $x \in \mathbb{R}$. Vậy $D = \mathbb{R}$.
+• b) Phân thức có nghĩa khi và chỉ khi mẫu số khác 0:
+$$x^2 - 3x + 2 \ne 0 \Leftrightarrow (x - 1)(x - 2) \ne 0 \Leftrightarrow \begin{cases} x \ne 1 \\\ x \ne 2 \end{cases}$$
+  Vậy tập xác định là $D = \mathbb{R} \setminus \\{1; 2\\}$.
+• c) Biểu thức có nghĩa khi và chỉ khi cả hai căn thức có nghĩa đồng thời:
+$$\begin{cases} x + 1 \ge 0 \\\ 1 - x \ge 0 \end{cases} \Leftrightarrow \begin{cases} x \ge -1 \\\ x \le 1 \end{cases} \Leftrightarrow -1 \le x \le 1.$$
+  Vậy tập xác định là đoạn $D = [-1; 1]$.
+
+**Bài 6.4:** Tìm tập xác định và tập giá trị của mỗi hàm số sau:
+a) $y = 2x + 3$;
+b) $y = 2x^2$.
+
+Lời giải Bài 6.4:
+• a) Với hàm số $y = 2x + 3$:
+  + Tập xác định: $D = \mathbb{R}$.
+  + Với mọi số thực $y_0$, phương trình $2x + 3 = y_0 \Leftrightarrow x = \frac{y_0 - 3}{2}$ luôn có nghiệm duy nhất thuộc $\mathbb{R}$. Do đó tập giá trị là $T = \mathbb{R}$.
+• b) Với hàm số $y = 2x^2$:
+  + Tập xác định: $D = \mathbb{R}$.
+  + Vì $x^2 \ge 0, \forall x \in \mathbb{R} \Rightarrow 2x^2 \ge 0, \forall x \in \mathbb{R}$. Mặt khác với mọi $y_0 \ge 0$, phương trình $2x^2 = y_0 \Leftrightarrow x = \pm \sqrt{\frac{y_0}{2}}$ luôn có nghiệm. Vậy tập giá trị là $T = [0; +\infty)$.
+
+**Bài 6.5:** Vẽ đồ thị các hàm số sau và chỉ ra các khoảng đồng biến, nghịch biến của chúng:
+a) $y = -2x + 1$;
+b) $y = -\frac{1}{2}x^2$.
+
+Lời giải Bài 6.5:
+• a) Hàm số bậc nhất $y = -2x + 1$:
+  + Đồ thị là đường thẳng đi qua các điểm $(0; 1)$ và $(1; -1)$.
+  + Vì hệ số góc $a = -2 < 0$, đồ thị đi xuống từ trái sang phải, do đó hàm số nghịch biến trên toàn bộ $\mathbb{R}$.
+• b) Hàm số bậc hai $y = -\frac{1}{2}x^2$:
+  + Đồ thị là parabol có đỉnh $O(0; 0)$, bề lõm quay xuống dưới, trục đối xứng là $Oy$, đi qua các điểm $(\pm 2; -2)$ và $(\pm 4; -8)$.
+  + Trên khoảng $(-\infty; 0)$: đồ thị đi lên từ trái sang phải, do đó hàm số đồng biến trên $(-\infty; 0)$.
+  + Trên khoảng $(0; +\infty)$: đồ thị đi xuống từ trái sang phải, do đó hàm số nghịch biến trên $(0; +\infty)$.
