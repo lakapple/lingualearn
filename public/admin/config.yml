@@ -29,7 +29,7 @@ collections:
       - { label: "Phiên âm IPA", name: phonetic, widget: string, required: false, i18n: true, hint: "Ví dụ: /ɗiəm/ hoặc /pɔɪnt/" }
       - { label: "Tóm tắt (dùng cho tooltip)", name: summary, widget: text, required: false, i18n: true }
       - { label: "Tags", name: tags, widget: list, i18n: true }
-      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false, i18n: duplicate }
+      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, default: "{{now}}", required: false, i18n: duplicate }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: "Nội dung", name: body, widget: markdown, i18n: true }
 
@@ -47,7 +47,7 @@ collections:
       - { label: "Tags", name: tags, widget: list, i18n: true }
       - { label: "Khối lớp", name: grade, widget: number, value_type: int, default: 10, i18n: duplicate }
       - { label: "Thứ tự hiển thị", name: order, widget: number, value_type: int, default: 0, i18n: duplicate }
-      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false, i18n: duplicate }
+      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, default: "{{now}}", required: false, i18n: duplicate }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: "Nội dung", name: body, widget: markdown, i18n: true }
 
@@ -65,7 +65,7 @@ collections:
       - { label: "Tags", name: tags, widget: list, i18n: true }
       - { label: "Khối lớp", name: grade, widget: number, value_type: int, default: 11, i18n: duplicate }
       - { label: "Thứ tự hiển thị", name: order, widget: number, value_type: int, default: 0, i18n: duplicate }
-      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false, i18n: duplicate }
+      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, default: "{{now}}", required: false, i18n: duplicate }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: "Nội dung", name: body, widget: markdown, i18n: true }
 
@@ -83,6 +83,6 @@ collections:
       - { label: "Tags", name: tags, widget: list, i18n: true }
       - { label: "Khối lớp", name: grade, widget: number, value_type: int, default: 12, i18n: duplicate }
       - { label: "Thứ tự hiển thị", name: order, widget: number, value_type: int, default: 0, i18n: duplicate }
-      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, required: false, i18n: duplicate }
+      - { label: "Ngày cập nhật", name: updatedDate, widget: datetime, default: "{{now}}", required: false, i18n: duplicate }
       - { label: "Nháp (chưa đăng)", name: draft, widget: boolean, default: false, i18n: duplicate }
       - { label: "Nội dung", name: body, widget: markdown, i18n: true }
