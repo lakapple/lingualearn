@@ -1,0 +1,242 @@
+---
+title: 'Lesson 18: Equations Reducible to Quadratic Equations.'
+description: 'Theoretical Framework: Equations Reducible to Quadratic Equations (Radical Equations) with Illustrative Examples'
+tags:
+  - grade 10
+  - Equations reducible to quadratic equations
+  - Radical equations
+  - Extraneous solutions
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Equations reducible to quadratic equations
+
+·       Radical equations
+
+·       Extraneous solutions, squaring both sides
+
+### **Knowledge and Skills:**
+
+·       Solve radical equations of the form $\sqrt{ax^2+bx+c}=\sqrt{dx^2+ex+f}$ proficiently.
+
+·       Solve radical equations of the form $\sqrt{ax^2+bx+c}=dx+e$ proficiently.
+
+·       Apply equations reducible to quadratic equations to solve real-world problems and interdisciplinary geometric problems.
+
+## Equations of the form $\sqrt{ax^2+bx+c}=\sqrt{dx^2+ex+f}$
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_quy_ve_bac_hai_1"/>
+
+### a) Definition and Solution Method
+
+To solve an equation of the form $\sqrt{ax^2+bx+c}=\sqrt{dx^2+ex+f}$, we proceed as follows:
+• Square both sides and solve the resulting equation:
+$$ax^2+bx+c=dx^2+ex+f \Leftrightarrow (a-d)x^2+(b-e)x+(c-f)=0$$
+• Substitute the values of $x$ obtained above back into the original equation to check for validity and state the solution set.
+
+**Activity 1:** Given the equation $\sqrt{x^2-3x+2}=\sqrt{-x^2-2x+2}$.
+a) Square both sides of the equation to eliminate radicals and solve the resulting equation.
+b) Check whether the values of $x$ obtained in part a satisfy the given equation.
+
+Solution to Activity 1:
+• a) Squaring both sides of the equation, we obtain:
+$$x^2-3x+2 = -x^2-2x+2 \Leftrightarrow 2x^2-x=0 \Leftrightarrow x(2x-1)=0$$
+From this, we find $x=0$ or $x=\frac{1}{2}$.
+• b) Check: Substitute each value into the original equation:
+  + For $x=0$: Substituting into both sides yields $\sqrt{2}=\sqrt{2}$ (valid).
+  + For $x=\frac{1}{2}$: Substituting into both sides yields $\sqrt{\frac{3}{4}}=\sqrt{\frac{3}{4}}$ (valid).
+Thus, the solution set of the given equation is $S = \left\\{0; \frac{1}{2}\right\\}$.
+
+### b) Examples and Practice
+
+**Example 1:** Solve the equation $\sqrt{2x^2-4x-2}=\sqrt{x^2-x-2}$.
+
+Solution to Example 1:
+• Squaring both sides of the equation, we obtain:
+$$2x^2-4x-2=x^2-x-2$$
+• Simplifying, we get $x^2-3x=0$. From this, we find $x=0$ or $x=3$.
+• Substituting each of these values of $x$ into the given equation, we find that only $x=3$ satisfies the equation (for $x=0$, the radicand is $-2 < 0$, so the radical is undefined).
+• Thus, the solution of the given equation is $x=3$.
+
+**Practice 1:** Solve the following equations:
+a) $\sqrt{3x^2-6x+1}=\sqrt{-2x^2-9x+1}$;
+b) $\sqrt{2x^2-3x-5}=\sqrt{x^2-7}$.
+
+Solution to Practice 1:
+• a) Squaring both sides:
+$$3x^2-6x+1 = -2x^2-9x+1 \Leftrightarrow 5x^2+3x=0 \Leftrightarrow x(5x+3)=0 \Leftrightarrow \left[\begin{matrix} x=0 \\\ x=-\frac{3}{5} \end{matrix}\right.$$
+Check:
+  + For $x=0$: Both sides equal $\sqrt{1}=1$ (valid).
+  + For $x=-\frac{3}{5}$: $3\left(-\frac{3}{5}\right)^2 - 6\left(-\frac{3}{5}\right) + 1 = \frac{142}{25} > 0$ and both sides are equal (valid).
+Thus, the solutions of the equation are $x=0$ and $x=-\frac{3}{5}$.
+• b) Squaring both sides:
+$$2x^2-3x-5=x^2-7 \Leftrightarrow x^2-3x+2=0 \Leftrightarrow \left[\begin{matrix} x=1 \\\ x=2 \end{matrix}\right.$$
+Check:
+  + For $x=1$: The right-hand side becomes $\sqrt{1^2-7}=\sqrt{-6}$ (undefined).
+  + For $x=2$: The right-hand side becomes $\sqrt{2^2-7}=\sqrt{-3}$ (undefined).
+Thus, the given equation has no solution ($S = \emptyset$).
+
+## Equations of the form $\sqrt{ax^2+bx+c}=dx+e$
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_quy_ve_bac_hai_2"/>
+
+### a) Definition and Solution Method
+
+To solve an equation of the form $\sqrt{ax^2+bx+c}=dx+e$, we proceed as follows:
+• Square both sides and solve the resulting equation:
+$$ax^2+bx+c=(dx+e)^2 \Leftrightarrow ax^2+bx+c=d^2x^2+2dex+e^2$$
+• Substitute the values of $x$ obtained above back into the original equation to check for validity and state the solution.
+Note: For any value of $x$ that makes the right-hand side $dx+e < 0$, the right-hand side is negative while the left-hand side is non-negative; therefore, we can immediately conclude that such a value is not a solution of the given equation without checking.
+
+**Activity 2:** Given the equation $\sqrt{26x^2-63x+38}=5x-6$.
+a) Square both sides and solve the resulting equation.
+b) Check whether the values of $x$ obtained in part a satisfy the given equation.
+
+Solution to Activity 2:
+• a) Squaring both sides of the equation:
+$$26x^2-63x+38 = (5x-6)^2 \Leftrightarrow 26x^2-63x+38 = 25x^2-60x+36 \Leftrightarrow x^2-3x+2=0$$
+From this, we find $x=1$ or $x=2$.
+• b) Check:
+  + For $x=1$: The left-hand side equals $\sqrt{26(1)^2-63(1)+38} = 1$, and the right-hand side equals $5(1)-6 = -1$. Since $1 \ne -1$, we discard $x=1$.
+  + For $x=2$: The left-hand side equals $\sqrt{26(4)-63(2)+38} = 4$, and the right-hand side equals $5(2)-6 = 4$. Satisfied.
+Thus, the solution of the given equation is $x=2$.
+
+### b) Examples and Practice
+
+**Example 2:** Solve the equation $\sqrt{2x^2-5x-9}=x-1$.
+
+Solution to Example 2:
+• Squaring both sides of the equation, we obtain:
+$$2x^2-5x-9=(x-1)^2 \Leftrightarrow 2x^2-5x-9=x^2-2x+1$$
+• Simplifying, we get $x^2-3x-10=0$. From this, we find $x=-2$ or $x=5$.
+• Substituting each of these values of $x$ into the given equation, we find that only $x=5$ satisfies the equation (for $x=-2$, the right-hand side is negative while the left-hand side is non-negative, so $x=-2$ is rejected).
+• Thus, the solution of the given equation is $x=5$.
+
+**Practice 2:** Solve the following equations:
+a) $\sqrt{2x^2+x+3}=1-x$;
+b) $\sqrt{3x^2-13x+14}=x-3$.
+
+Solution to Practice 2:
+• a) Squaring both sides:
+$$2x^2+x+3=(1-x)^2 \Leftrightarrow 2x^2+x+3=x^2-2x+1 \Leftrightarrow x^2+3x+2=0 \Leftrightarrow \left[\begin{matrix} x=-1 \\\ x=-2 \end{matrix}\right.$$
+Check:
+  + For $x=-1$: The left-hand side equals $\sqrt{2(-1)^2+(-1)+3}=2$, and the right-hand side equals $1-(-1)=2$ (valid).
+  + For $x=-2$: The left-hand side equals $\sqrt{2(-2)^2+(-2)+3}=3$, and the right-hand side equals $1-(-2)=3$ (valid).
+Thus, the solution set of the equation is $S = \\{-2; -1\\}$.
+• b) Squaring both sides:
+$$3x^2-13x+14=(x-3)^2 \Leftrightarrow 3x^2-13x+14=x^2-6x+9 \Leftrightarrow 2x^2-7x+5=0 \Leftrightarrow \left[\begin{matrix} x=1 \\\ x=\frac{5}{2} \end{matrix}\right.$$
+Check:
+  + For $x=1$: The right-hand side $x-3=1-3=-2 < 0$ (discarded).
+  + For $x=\frac{5}{2}$: The right-hand side $x-3=\frac{5}{2}-3=-\frac{1}{2} < 0$ (discarded).
+Thus, the given equation has no solution ($S = \emptyset$).
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Lighthouse Station):** Mr. Viet lives and works at a lighthouse located 4 km off the coast. Every week, he rows a boat to the nearest point on the shore, Binh Wharf, to receive supplies provided by his agency. This week, due to a transport problem, all supplies are still at Hoanh Village, situated along the coast 9.25 km from Binh Wharf, and will be transported by Mr. Nam along the coastal road to Binh Wharf using a handcart. Mr. Viet called and agreed with Mr. Nam that they would meet at a certain point between Binh Wharf and Hoanh Village so that both arrive at the same time without waiting for each other. Assume that the coastal road is straight and Mr. Viet also travels in a straight line to the meeting point. Find the meeting point, given that Mr. Nam's speed is $5\text{ km/h}$ and Mr. Viet's speed is $4\text{ km/h}$.
+
+Solution to Application:
+• Model the problem as in Figure 6.20: The lighthouse is at position $A$; Binh Wharf is at $B$, and Hoanh Village is at $C$. Suppose Mr. Viet lands the boat at position $M$, and let $BM = x\text{ (km)}$ with $0 < x < 9{,}25$.
+• The distance Mr. Viet rows is $AM = \sqrt{AB^2+BM^2} = \sqrt{x^2+16}\text{ (km)}$, and the rowing time is: $t_1 = \frac{\sqrt{x^2+16}}{4}\text{ (h)}$.
+• The distance Mr. Nam pulls the handcart is $MC = BC - BM = 9{,}25 - x\text{ (km)}$, and the carting time is: $t_2 = \frac{9{,}25-x}{5}\text{ (h)}$.
+• For neither person to wait, the rowing time must equal the carting time, yielding the equation:
+$$\frac{\sqrt{x^2+16}}{4} = \frac{9{,}25-x}{5} \Leftrightarrow 5\sqrt{x^2+16} = 37 - 4x$$
+• Squaring both sides ($37 - 4x > 0 \Leftrightarrow x < 9{,}25$):
+$$25(x^2+16) = (37-4x)^2 \Leftrightarrow 25x^2 + 400 = 1369 - 296x + 16x^2 \Leftrightarrow 9x^2 + 296x - 969 = 0$$
+• Solving the quadratic equation gives two roots: $x = 3$ or $x = -\frac{323}{9}$.
+• Since $0 < x < 9{,}25$, we accept $x = 3$.
+• Conclusion: The two people meet at point $M$ on the shore, $3\text{ km}$ from Binh Wharf (and $6{,}25\text{ km}$ from Hoanh Village).
+
+**Exercise 6.22 (Plane Geometry):** Given a quadrilateral $ABCD$ with $AB \perp CD$; $AB=2$; $BC=13$; $CD=8$; $DA=5$ (Figure 6.21). Let $H$ be the intersection of $AB$ and $CD$, and set $x=AH$. Set up an equation to find the length $x$, and hence compute the area of quadrilateral $ABCD$.
+
+Solution to Exercise 6.22:
+• In the right triangle $HAD$ with right angle at $H$, we have: $HD = \sqrt{AD^2 - AH^2} = \sqrt{25 - x^2}$ (with condition $0 < x < 5$).
+• Then: $HB = HA + AB = x + 2$; and $HC = HD + CD = \sqrt{25-x^2} + 8$.
+• Consider the right triangle $HBC$ with right angle at $H$. By the Pythagorean theorem:
+$$HB^2 + HC^2 = BC^2 \Leftrightarrow (x+2)^2 + \left(\sqrt{25-x^2}+8\right)^2 = 13^2 = 169$$
+$$\Leftrightarrow x^2+4x+4 + 25 - x^2 + 16\sqrt{25-x^2} + 64 = 169 \Leftrightarrow 16\sqrt{25-x^2} = 76 - 4x \Leftrightarrow 4\sqrt{25-x^2} = 19 - x$$
+• Squaring both sides ($0 < x < 5 \Rightarrow 19 - x > 0$):
+$$16(25-x^2) = (19-x)^2 \Leftrightarrow 400 - 16x^2 = 361 - 38x + x^2 \Leftrightarrow 17x^2 - 38x - 39 = 0$$
+• The equation has two roots: $x = 3$ or $x = -\frac{13}{17}$ (discarded since $x > 0$).
+• For $x = 3$, we have $AH = 3$, $HD = 4$, $HB = 5$, $HC = 12$.
+• The area of quadrilateral $ABCD$ is:
+$$S\_{ABCD} = S\_{\Delta HBC} - S\_{\Delta HAD} = \frac{1}{2}HB \cdot HC - \frac{1}{2}HA \cdot HD = \frac{1}{2}(5)(12) - \frac{1}{2}(3)(4) = 30 - 6 = 24$$
+• Conclusion: The established equation is $4\sqrt{25-x^2} = 19-x$; the length is $x = 3$ and the area of quadrilateral $ABCD$ is $24$.
+
+**Exercise 6.23 (Meeting on the Way to School):** Every day, Hung picks up Minh for school at a location on a straight roadside on the route to school. Minh stands at position $A$, 50 m from the road, waiting for Hung. Upon seeing Hung cycling to position $B$, which is 200 m from Minh, Minh starts walking toward the road to catch the bicycle. Minh's walking speed is $5\text{ km/h}$, and Hung's cycling speed is $15\text{ km/h}$. Determine position $C$ on the roadside (Figure 6.22) so that the two meet without either having to wait for the other (round the result to one decimal place).
+
+Solution to Exercise 6.23:
+• Unit conversion: $AH = 50\text{ m} = 0{,}05\text{ km}$; $AB = 200\text{ m} = 0{,}2\text{ km}$.
+• Triangle $ABH$ is right-angled at $H$, so: $BH = \sqrt{AB^2 - AH^2} = \sqrt{0{,}2^2 - 0{,}05^2} = \sqrt{0{,}0375} = \frac{\sqrt{15}}{20}\text{ km} \approx 193{,}65\text{ m}$.
+• Let $C$ be the meeting point on segment $BH$. Set $CH = x\text{ (km)}$ ($0 \le x \le BH$).
+  + Distance Minh walks: $AC = \sqrt{AH^2+CH^2} = \sqrt{x^2+0{,}0025}\text{ (km)}$, walking time: $t_M = \frac{\sqrt{x^2+0{,}0025}}{5}\text{ (h)}$.
+  + Distance Hung cycles: $BC = BH - CH = \sqrt{0{,}0375} - x\text{ (km)}$, cycling time: $t_H = \frac{\sqrt{0{,}0375}-x}{15}\text{ (h)}$.
+• For them to meet simultaneously: $t_M = t_H \Leftrightarrow \frac{\sqrt{x^2+0{,}0025}}{5} = \frac{\sqrt{0{,}0375}-x}{15} \Leftrightarrow 3\sqrt{x^2+0{,}0025} = \sqrt{0{,}0375}-x$.
+• Squaring both sides:
+$$9(x^2+0{,}0025) = (\sqrt{0{,}0375}-x)^2 \Leftrightarrow 8x^2 + 2\sqrt{0{,}0375}x - 0{,}015 = 0$$
+• Solving the quadratic equation for the positive root:
+$$x = \frac{-\sqrt{0{,}0375} + \sqrt{0{,}1575}}{8} \approx 0{,}0254\text{ km} = 25{,}4\text{ m}$$
+• The distance from pickup point $C$ to Hung's initial position $B$:
+$$BC = BH - x \approx 193{,}65 - 25{,}4 = 168{,}25 \approx 168{,}3\text{ m}$$
+• Conclusion: Position $C$ on the roadside is approximately $168{,}3\text{ m}$ from Hung's initial position $B$ (or approximately $25{,}4\text{ m}$ from the projection point $H$).
+
+### b) End-of-Lesson Exercises
+
+**Exercise 6.20:** Solve the following equations:
+a) $\sqrt{3x^2-4x-1}=\sqrt{2x^2-4x+3}$;
+b) $\sqrt{x^2+2x-3}=\sqrt{-2x^2+5}$;
+c) $\sqrt{2x^2+3x-3}=\sqrt{-x^2-x+1}$;
+d) $\sqrt{-x^2+5x-4}=\sqrt{-2x^2+4x+2}$.
+
+Solution to Exercise 6.20:
+• a) Squaring both sides: $3x^2-4x-1 = 2x^2-4x+3 \Leftrightarrow x^2 = 4 \Leftrightarrow x = \pm 2$.
+  + Check for $x = 2$: Both sides equal $\sqrt{3} > 0$ (valid).
+  + Check for $x = -2$: Both sides equal $\sqrt{19} > 0$ (valid).
+  Thus, the solutions of the equation are $x = 2$ and $x = -2$.
+• b) Squaring both sides: $x^2+2x-3 = -2x^2+5 \Leftrightarrow 3x^2+2x-8 = 0 \Leftrightarrow x = \frac{4}{3}$ or $x = -2$.
+  + Check for $x = \frac{4}{3}$: The radicand equals $\frac{13}{9} > 0$ (valid).
+  + Check for $x = -2$: The radicand equals $-3 < 0$ (discarded).
+  Thus, the solution of the equation is $x = \frac{4}{3}$.
+• c) Squaring both sides: $2x^2+3x-3 = -x^2-x+1 \Leftrightarrow 3x^2+4x-4 = 0 \Leftrightarrow x = \frac{2}{3}$ or $x = -2$.
+  + Check for $x = \frac{2}{3}$: The radicand $-x^2-x+1 = -\frac{1}{9} < 0$ (discarded).
+  + Check for $x = -2$: The radicand $-x^2-x+1 = -1 < 0$ (discarded).
+  Thus, the given equation has no solution ($S = \emptyset$).
+• d) Squaring both sides: $-x^2+5x-4 = -2x^2+4x+2 \Leftrightarrow x^2+x-6 = 0 \Leftrightarrow x = 2$ or $x = -3$.
+  + Check for $x = 2$: The radicand equals $2 > 0$ (valid).
+  + Check for $x = -3$: The radicand equals $-28 < 0$ (discarded).
+  Thus, the solution of the equation is $x = 2$.
+
+**Exercise 6.21:** Solve the following equations:
+a) $\sqrt{6x^2+13x+13}=2x+4$;
+b) $\sqrt{2x^2+5x+3}=-3-x$;
+c) $\sqrt{3x^2-17x+23}=x-3$;
+d) $\sqrt{-x^2+2x+4}=x-2$.
+
+Solution to Exercise 6.21:
+• a) Squaring both sides: $6x^2+13x+13 = (2x+4)^2 = 4x^2+16x+16 \Leftrightarrow 2x^2-3x-3=0$.
+  The quadratic equation has two roots: $x = \frac{3 \pm \sqrt{33}}{4}$.
+  + Check for $x = \frac{3+\sqrt{33}}{4}$: The right-hand side $2x+4 > 0$ (valid).
+  + Check for $x = \frac{3-\sqrt{33}}{4}$: The right-hand side $2x+4 > 0$ (valid).
+  Thus, the solutions of the equation are $x = \frac{3 - \sqrt{33}}{4}$ and $x = \frac{3 + \sqrt{33}}{4}$.
+• b) Squaring both sides: $2x^2+5x+3 = (-3-x)^2 = x^2+6x+9 \Leftrightarrow x^2-x-6=0 \Leftrightarrow x = 3$ or $x = -2$.
+  + For $x = 3$: The right-hand side $-3-x = -6 < 0$ (discarded).
+  + For $x = -2$: The right-hand side $-3-x = -1 < 0$ (discarded).
+  Thus, the given equation has no solution ($S = \emptyset$).
+• c) Squaring both sides: $3x^2-17x+23 = (x-3)^2 = x^2-6x+9 \Leftrightarrow 2x^2-11x+14=0 \Leftrightarrow x = 2$ or $x = \frac{7}{2}$.
+  + For $x = 2$: The right-hand side $x-3 = 2-3 = -1 < 0$ (discarded).
+  + For $x = \frac{7}{2}$: The right-hand side $x-3 = \frac{7}{2}-3 = \frac{1}{2} > 0$ (valid).
+  Thus, the solution of the equation is $x = \frac{7}{2}$.
+• d) Squaring both sides: $-x^2+2x+4 = (x-2)^2 = x^2-4x+4 \Leftrightarrow 2x^2-6x=0 \Leftrightarrow x = 0$ or $x = 3$.
+  + For $x = 0$: The right-hand side $x-2 = -2 < 0$ (discarded).
+  + For $x = 3$: The right-hand side $x-2 = 1 > 0$ (valid).
+  Thus, the solution of the equation is $x = 3$.

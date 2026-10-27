@@ -1,0 +1,242 @@
+---
+title: 'Bài 18: Phương trình quy về phương trình bậc hai.'
+description: Lý thuyết về phương trình quy về phương trình bậc hai (phương trình chứa căn thức) và ví dụ minh họa.
+tags:
+  - lớp 10
+  - Phương trình quy về phương trình bậc hai
+  - Phương trình chứa căn thức
+  - Nghiệm ngoại lai
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Phương trình quy về phương trình bậc hai
+
+·       Phương trình chứa căn thức
+
+·       Nghiệm ngoại lai, phép bình phương hai vế
+
+### **Kiến thức, kĩ năng:**
+
+·       Giải thành thạo phương trình chứa căn thức dạng $\sqrt{ax^2+bx+c}=\sqrt{dx^2+ex+f}$.
+
+·       Giải thành thạo phương trình chứa căn thức dạng $\sqrt{ax^2+bx+c}=dx+e$.
+
+·       Vận dụng giải phương trình quy về phương trình bậc hai vào các bài toán thực tiễn và bài toán hình học liên môn.
+
+## Phương trình dạng $\sqrt{ax^2+bx+c}=\sqrt{dx^2+ex+f}$
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_quy_ve_bac_hai_1"/>
+
+### a) Định nghĩa và phương pháp giải
+
+Để giải phương trình $\sqrt{ax^2+bx+c}=\sqrt{dx^2+ex+f}$, ta thực hiện như sau:
+• Bình phương hai vế và giải phương trình nhận được:
+$$ax^2+bx+c=dx^2+ex+f \Leftrightarrow (a-d)x^2+(b-e)x+(c-f)=0$$
+• Thử lại các giá trị $x$ tìm được ở trên có thoả mãn phương trình đã cho hay không và kết luận nghiệm.
+
+**HĐ1:** Cho phương trình $\sqrt{x^2-3x+2}=\sqrt{-x^2-2x+2}$.
+a) Bình phương hai vế phương trình để khử căn và giải phương trình nhận được.
+b) Thử lại các giá trị $x$ tìm được ở câu a có thoả mãn phương trình đã cho hay không.
+
+Lời giải HĐ1:
+• a) Bình phương hai vế của phương trình, ta được:
+$$x^2-3x+2 = -x^2-2x+2 \Leftrightarrow 2x^2-x=0 \Leftrightarrow x(2x-1)=0$$
+Từ đó ta tìm được $x=0$ hoặc $x=\frac{1}{2}$.
+• b) Thử lại: Thay lần lượt hai giá trị vào phương trình ban đầu:
+  + Với $x=0$: Thay vào hai vế ta được $\sqrt{2}=\sqrt{2}$ (thoả mãn).
+  + Với $x=\frac{1}{2}$: Thay vào hai vế ta được $\sqrt{\frac{3}{4}}=\sqrt{\frac{3}{4}}$ (thoả mãn).
+Vậy tập nghiệm của phương trình đã cho là $S = \left\\{0; \frac{1}{2}\right\\}$.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 1:** Giải phương trình $\sqrt{2x^2-4x-2}=\sqrt{x^2-x-2}$.
+
+Lời giải Ví dụ 1:
+• Bình phương hai vế của phương trình, ta được:
+$$2x^2-4x-2=x^2-x-2$$
+• Sau khi thu gọn ta được $x^2-3x=0$. Từ đó tìm được $x=0$ hoặc $x=3$.
+• Thay lần lượt hai giá trị này của $x$ vào phương trình đã cho, ta thấy chỉ có $x=3$ thoả mãn (với $x=0$, biểu thức dưới căn bằng $-2 < 0$, căn thức không xác định).
+• Vậy nghiệm của phương trình đã cho là $x=3$.
+
+**Luyện tập 1:** Giải các phương trình sau:
+a) $\sqrt{3x^2-6x+1}=\sqrt{-2x^2-9x+1}$;
+b) $\sqrt{2x^2-3x-5}=\sqrt{x^2-7}$.
+
+Lời giải Luyện tập 1:
+• a) Bình phương hai vế:
+$$3x^2-6x+1 = -2x^2-9x+1 \Leftrightarrow 5x^2+3x=0 \Leftrightarrow x(5x+3)=0 \Leftrightarrow \left[\begin{matrix} x=0 \\\ x=-\frac{3}{5} \end{matrix}\right.$$
+Thử lại:
+  + Với $x=0$: Hai vế bằng $\sqrt{1}=1$ (thoả mãn).
+  + Với $x=-\frac{3}{5}$: $3\left(-\frac{3}{5}\right)^2 - 6\left(-\frac{3}{5}\right) + 1 = \frac{142}{25} > 0$ và hai vế bằng nhau (thoả mãn).
+Vậy nghiệm của phương trình là $x=0$ và $x=-\frac{3}{5}$.
+• b) Bình phương hai vế:
+$$2x^2-3x-5=x^2-7 \Leftrightarrow x^2-3x+2=0 \Leftrightarrow \left[\begin{matrix} x=1 \\\ x=2 \end{matrix}\right.$$
+Thử lại:
+  + Với $x=1$: Vế phải bằng $\sqrt{1^2-7}=\sqrt{-6}$ (không xác định).
+  + Với $x=2$: Vế phải bằng $\sqrt{2^2-7}=\sqrt{-3}$ (không xác định).
+Vậy phương trình đã cho vô nghiệm ($S = \emptyset$).
+
+## Phương trình dạng $\sqrt{ax^2+bx+c}=dx+e$
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_quy_ve_bac_hai_2"/>
+
+### a) Định nghĩa và phương pháp giải
+
+Để giải phương trình $\sqrt{ax^2+bx+c}=dx+e$, ta thực hiện như sau:
+• Bình phương hai vế và giải phương trình nhận được:
+$$ax^2+bx+c=(dx+e)^2 \Leftrightarrow ax^2+bx+c=d^2x^2+2dex+e^2$$
+• Thử lại các giá trị $x$ tìm được ở trên có thoả mãn phương trình đã cho hay không và kết luận nghiệm.
+Chú ý: Với những giá trị $x$ làm cho vế phải $dx+e < 0$ thì vế phải âm, vế trái không âm, do đó ta có thể kết luận ngay giá trị đó không phải là nghiệm của phương trình đã cho mà không cần thử lại.
+
+**HĐ2:** Cho phương trình $\sqrt{26x^2-63x+38}=5x-6$.
+a) Bình phương hai vế và giải phương trình nhận được.
+b) Thử lại các giá trị $x$ tìm được ở câu a có thoả mãn phương trình đã cho hay không.
+
+Lời giải HĐ2:
+• a) Bình phương hai vế của phương trình:
+$$26x^2-63x+38 = (5x-6)^2 \Leftrightarrow 26x^2-63x+38 = 25x^2-60x+36 \Leftrightarrow x^2-3x+2=0$$
+Từ đó ta tìm được $x=1$ hoặc $x=2$.
+• b) Thử lại:
+  + Với $x=1$: Vế trái bằng $\sqrt{26(1)^2-63(1)+38} = 1$, vế phải bằng $5(1)-6 = -1$. Vì $1 \ne -1$ nên loại $x=1$.
+  + Với $x=2$: Vế trái bằng $\sqrt{26(4)-63(2)+38} = 4$, vế phải bằng $5(2)-6 = 4$. Thoả mãn.
+Vậy nghiệm của phương trình đã cho là $x=2$.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 2:** Giải phương trình $\sqrt{2x^2-5x-9}=x-1$.
+
+Lời giải Ví dụ 2:
+• Bình phương hai vế của phương trình, ta được:
+$$2x^2-5x-9=(x-1)^2 \Leftrightarrow 2x^2-5x-9=x^2-2x+1$$
+• Sau khi thu gọn ta được $x^2-3x-10=0$. Từ đó tìm được $x=-2$ hoặc $x=5$.
+• Thay lần lượt hai giá trị này của $x$ vào phương trình đã cho, ta thấy chỉ có $x=5$ thoả mãn (với $x=-2$ thì vế phải âm, vế trái không âm, loại $x=-2$).
+• Vậy nghiệm của phương trình đã cho là $x=5$.
+
+**Luyện tập 2:** Giải các phương trình sau:
+a) $\sqrt{2x^2+x+3}=1-x$;
+b) $\sqrt{3x^2-13x+14}=x-3$.
+
+Lời giải Luyện tập 2:
+• a) Bình phương hai vế:
+$$2x^2+x+3=(1-x)^2 \Leftrightarrow 2x^2+x+3=x^2-2x+1 \Leftrightarrow x^2+3x+2=0 \Leftrightarrow \left[\begin{matrix} x=-1 \\\ x=-2 \end{matrix}\right.$$
+Thử lại:
+  + Với $x=-1$: Vế trái bằng $\sqrt{2(-1)^2+(-1)+3}=2$, vế phải bằng $1-(-1)=2$ (thoả mãn).
+  + Với $x=-2$: Vế trái bằng $\sqrt{2(-2)^2+(-2)+3}=3$, vế phải bằng $1-(-2)=3$ (thoả mãn).
+Vậy tập nghiệm của phương trình là $S = \\{-2; -1\\}$.
+• b) Bình phương hai vế:
+$$3x^2-13x+14=(x-3)^2 \Leftrightarrow 3x^2-13x+14=x^2-6x+9 \Leftrightarrow 2x^2-7x+5=0 \Leftrightarrow \left[\begin{matrix} x=1 \\\ x=\frac{5}{2} \end{matrix}\right.$$
+Thử lại:
+  + Với $x=1$: Vế phải $x-3=1-3=-2 < 0$ (loại).
+  + Với $x=\frac{5}{2}$: Vế phải $x-3=\frac{5}{2}-3=-\frac{1}{2} < 0$ (loại).
+Vậy phương trình đã cho vô nghiệm ($S = \emptyset$).
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Trạm hải đăng):** Bác Việt sống và làm việc tại trạm hải đăng cách bờ biển 4 km. Hằng tuần bác chèo thuyền vào vị trí gần nhất trên bờ biển là bến Bính để nhận hàng hoá do cơ quan cung cấp. Tuần này, do trục trặc về vận chuyển nên toàn bộ số hàng vẫn đang nằm ở thôn Hoành, bên bờ biển cách bến Bính 9,25 km và sẽ được anh Nam vận chuyển trên con đường dọc bờ biển tới bến Bính bằng xe kéo. Bác Việt đã gọi điện thống nhất với anh Nam là họ sẽ gặp nhau ở vị trí nào đó giữa bến Bính và thôn Hoành để hai người có mặt tại đó cùng lúc, không mất thời gian chờ nhau. Giả thiết rằng đường dọc bờ biển là thẳng và bác Việt cũng di chuyển theo một đường thẳng để tới điểm hẹn. Tìm vị trí hai người hẹn gặp, biết rằng vận tốc của anh Nam là $5\text{ km/h}$ và của bác Việt là $4\text{ km/h}$.
+
+Lời giải Vận dụng:
+• Ta mô hình hoá bài toán như trong Hình 6.20: Trạm hải đăng ở vị trí $A$; bến Bính ở $B$ và thôn Hoành ở $C$. Giả sử bác Việt chèo thuyền cập bến ở vị trí $M$ và đặt $BM = x\text{ (km)}$ với $0 < x < 9{,}25$.
+• Quãng đường bác Việt chèo thuyền là $AM = \sqrt{AB^2+BM^2} = \sqrt{x^2+16}\text{ (km)}$, thời gian chèo thuyền là: $t_1 = \frac{\sqrt{x^2+16}}{4}\text{ (h)}$.
+• Quãng đường anh Nam kéo xe là $MC = BC - BM = 9{,}25 - x\text{ (km)}$, thời gian kéo xe là: $t_2 = \frac{9{,}25-x}{5}\text{ (h)}$.
+• Để hai người không phải chờ nhau thì thời gian chèo thuyền bằng thời gian kéo xe nên ta có phương trình:
+$$\frac{\sqrt{x^2+16}}{4} = \frac{9{,}25-x}{5} \Leftrightarrow 5\sqrt{x^2+16} = 37 - 4x$$
+• Bình phương hai vế ($37 - 4x > 0 \Leftrightarrow x < 9{,}25$):
+$$25(x^2+16) = (37-4x)^2 \Leftrightarrow 25x^2 + 400 = 1369 - 296x + 16x^2 \Leftrightarrow 9x^2 + 296x - 969 = 0$$
+• Giải phương trình bậc hai nhận được hai nghiệm: $x = 3$ hoặc $x = -\frac{323}{9}$.
+• Vì $0 < x < 9{,}25$ nên ta chọn $x = 3$.
+• Kết luận: Vị trí hai người hẹn gặp nhau tại điểm $M$ trên bờ biển cách bến Bính $3\text{ km}$ (và cách thôn Hoành $6{,}25\text{ km}$).
+
+**Bài 6.22 (Hình học phẳng):** Cho tứ giác $ABCD$ có $AB \perp CD$; $AB=2$; $BC=13$; $CD=8$; $DA=5$ (Hình 6.21). Gọi $H$ là giao điểm của $AB$ và $CD$ và đặt $x=AH$. Hãy thiết lập một phương trình để tính độ dài $x$, từ đó tính diện tích tứ giác $ABCD$.
+
+Lời giải Bài 6.22:
+• Trong tam giác vuông $HAD$ vuông tại $H$, ta có: $HD = \sqrt{AD^2 - AH^2} = \sqrt{25 - x^2}$ (điều kiện $0 < x < 5$).
+• Khi đó: $HB = HA + AB = x + 2$; và $HC = HD + CD = \sqrt{25-x^2} + 8$.
+• Xét tam giác vuông $HBC$ vuông tại $H$, theo định lí Pythagore:
+$$HB^2 + HC^2 = BC^2 \Leftrightarrow (x+2)^2 + \left(\sqrt{25-x^2}+8\right)^2 = 13^2 = 169$$
+$$\Leftrightarrow x^2+4x+4 + 25 - x^2 + 16\sqrt{25-x^2} + 64 = 169 \Leftrightarrow 16\sqrt{25-x^2} = 76 - 4x \Leftrightarrow 4\sqrt{25-x^2} = 19 - x$$
+• Bình phương hai vế ($0 < x < 5 \Rightarrow 19 - x > 0$):
+$$16(25-x^2) = (19-x)^2 \Leftrightarrow 400 - 16x^2 = 361 - 38x + x^2 \Leftrightarrow 17x^2 - 38x - 39 = 0$$
+• Phương trình có hai nghiệm: $x = 3$ hoặc $x = -\frac{13}{17}$ (loại vì $x > 0$).
+• Với $x = 3$, ta có $AH = 3$, $HD = 4$, $HB = 5$, $HC = 12$.
+• Diện tích tứ giác $ABCD$ là:
+$$S\_{ABCD} = S\_{\Delta HBC} - S\_{\Delta HAD} = \frac{1}{2}HB \cdot HC - \frac{1}{2}HA \cdot HD = \frac{1}{2}(5)(12) - \frac{1}{2}(3)(4) = 30 - 6 = 24$$
+• Kết luận: Phương trình thiết lập là $4\sqrt{25-x^2} = 19-x$; độ dài $x = 3$ và diện tích tứ giác $ABCD$ là $24$.
+
+**Bài 6.23 (Gặp nhau trên đường đến trường):** Hằng ngày bạn Hùng đều đón bạn Minh đi học tại một vị trí trên lề đường thẳng đến trường. Minh đứng tại vị trí $A$ cách lề đường một khoảng $50\text{ m}$ để chờ Hùng. Khi nhìn thấy Hùng đạp xe đến địa điểm $B$ cách mình một đoạn $200\text{ m}$ thì Minh bắt đầu đi bộ ra lề đường để bắt kịp xe. Vận tốc đi bộ của Minh là $5\text{ km/h}$, vận tốc xe đạp của Hùng là $15\text{ km/h}$. Hãy xác định vị trí $C$ trên lề đường (Hình 6.22) để hai bạn gặp nhau mà không bạn nào phải chờ người kia (làm tròn kết quả đến hàng phần mười).
+
+Lời giải Bài 6.23:
+• Đổi đơn vị: $AH = 50\text{ m} = 0{,}05\text{ km}$; $AB = 200\text{ m} = 0{,}2\text{ km}$.
+• Tam giác $ABH$ vuông tại $H$ nên: $BH = \sqrt{AB^2 - AH^2} = \sqrt{0{,}2^2 - 0{,}05^2} = \sqrt{0{,}0375} = \frac{\sqrt{15}}{20}\text{ km} \approx 193{,}65\text{ m}$.
+• Gọi $C$ là vị trí trên đoạn $BH$ mà hai bạn gặp nhau. Đặt $CH = x\text{ (km)}$ ($0 \le x \le BH$).
+  + Quãng đường Minh đi bộ: $AC = \sqrt{AH^2+CH^2} = \sqrt{x^2+0{,}0025}\text{ (km)}$, thời gian đi: $t_M = \frac{\sqrt{x^2+0{,}0025}}{5}\text{ (h)}$.
+  + Quãng đường Hùng đi xe đạp: $BC = BH - CH = \sqrt{0{,}0375} - x\text{ (km)}$, thời gian đi: $t_H = \frac{\sqrt{0{,}0375}-x}{15}\text{ (h)}$.
+• Để hai bạn gặp nhau cùng lúc: $t_M = t_H \Leftrightarrow \frac{\sqrt{x^2+0{,}0025}}{5} = \frac{\sqrt{0{,}0375}-x}{15} \Leftrightarrow 3\sqrt{x^2+0{,}0025} = \sqrt{0{,}0375}-x$.
+• Bình phương hai vế:
+$$9(x^2+0{,}0025) = (\sqrt{0{,}0375}-x)^2 \Leftrightarrow 8x^2 + 2\sqrt{0{,}0375}x - 0{,}015 = 0$$
+• Giải phương trình bậc hai tìm được nghiệm dương:
+$$x = \frac{-\sqrt{0{,}0375} + \sqrt{0{,}1575}}{8} \approx 0{,}0254\text{ km} = 25{,}4\text{ m}$$
+• Khoảng cách từ vị trí đón $C$ đến vị trí ban đầu $B$ của Hùng:
+$$BC = BH - x \approx 193{,}65 - 25{,}4 = 168{,}25 \approx 168{,}3\text{ m}$$
+• Kết luận: Vị trí $C$ trên lề đường cách vị trí ban đầu $B$ của Hùng khoảng $168{,}3\text{ m}$ (hoặc cách chân đường vuông góc $H$ khoảng $25{,}4\text{ m}$).
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.20:** Giải các phương trình sau:
+a) $\sqrt{3x^2-4x-1}=\sqrt{2x^2-4x+3}$;
+b) $\sqrt{x^2+2x-3}=\sqrt{-2x^2+5}$;
+c) $\sqrt{2x^2+3x-3}=\sqrt{-x^2-x+1}$;
+d) $\sqrt{-x^2+5x-4}=\sqrt{-2x^2+4x+2}$.
+
+Lời giải Bài 6.20:
+• a) Bình phương hai vế: $3x^2-4x-1 = 2x^2-4x+3 \Leftrightarrow x^2 = 4 \Leftrightarrow x = \pm 2$.
+  + Thử lại với $x = 2$: Hai vế bằng $\sqrt{3} > 0$ (thoả mãn).
+  + Thử lại với $x = -2$: Hai vế bằng $\sqrt{19} > 0$ (thoả mãn).
+  Vậy nghiệm của phương trình là $x = 2$ và $x = -2$.
+• b) Bình phương hai vế: $x^2+2x-3 = -2x^2+5 \Leftrightarrow 3x^2+2x-8 = 0 \Leftrightarrow x = \frac{4}{3}$ hoặc $x = -2$.
+  + Thử lại với $x = \frac{4}{3}$: Biểu thức dưới căn bằng $\frac{13}{9} > 0$ (thoả mãn).
+  + Thử lại với $x = -2$: Biểu thức dưới căn bằng $-3 < 0$ (loại).
+  Vậy nghiệm của phương trình là $x = \frac{4}{3}$.
+• c) Bình phương hai vế: $2x^2+3x-3 = -x^2-x+1 \Leftrightarrow 3x^2+4x-4 = 0 \Leftrightarrow x = \frac{2}{3}$ hoặc $x = -2$.
+  + Thử lại với $x = \frac{2}{3}$: Biểu thức dưới căn $-x^2-x+1 = -\frac{1}{9} < 0$ (loại).
+  + Thử lại với $x = -2$: Biểu thức dưới căn $-x^2-x+1 = -1 < 0$ (loại).
+  Vậy phương trình đã cho vô nghiệm ($S = \emptyset$).
+• d) Bình phương hai vế: $-x^2+5x-4 = -2x^2+4x+2 \Leftrightarrow x^2+x-6 = 0 \Leftrightarrow x = 2$ hoặc $x = -3$.
+  + Thử lại với $x = 2$: Biểu thức dưới căn bằng $2 > 0$ (thoả mãn).
+  + Thử lại với $x = -3$: Biểu thức dưới căn bằng $-28 < 0$ (loại).
+  Vậy nghiệm của phương trình là $x = 2$.
+
+**Bài 6.21:** Giải các phương trình sau:
+a) $\sqrt{6x^2+13x+13}=2x+4$;
+b) $\sqrt{2x^2+5x+3}=-3-x$;
+c) $\sqrt{3x^2-17x+23}=x-3$;
+d) $\sqrt{-x^2+2x+4}=x-2$.
+
+Lời giải Bài 6.21:
+• a) Bình phương hai vế: $6x^2+13x+13 = (2x+4)^2 = 4x^2+16x+16 \Leftrightarrow 2x^2-3x-3=0$.
+  Phương trình bậc hai có hai nghiệm: $x = \frac{3 \pm \sqrt{33}}{4}$.
+  + Thử lại với $x = \frac{3+\sqrt{33}}{4}$: Vế phải $2x+4 > 0$ (thoả mãn).
+  + Thử lại với $x = \frac{3-\sqrt{33}}{4}$: Vế phải $2x+4 > 0$ (thoả mãn).
+  Vậy nghiệm của phương trình là $x = \frac{3 - \sqrt{33}}{4}$ và $x = \frac{3 + \sqrt{33}}{4}$.
+• b) Bình phương hai vế: $2x^2+5x+3 = (-3-x)^2 = x^2+6x+9 \Leftrightarrow x^2-x-6=0 \Leftrightarrow x = 3$ hoặc $x = -2$.
+  + Với $x = 3$: Vế phải $-3-x = -6 < 0$ (loại).
+  + Với $x = -2$: Vế phải $-3-x = -1 < 0$ (loại).
+  Vậy phương trình đã cho vô nghiệm ($S = \emptyset$).
+• c) Bình phương hai vế: $3x^2-17x+23 = (x-3)^2 = x^2-6x+9 \Leftrightarrow 2x^2-11x+14=0 \Leftrightarrow x = 2$ hoặc $x = \frac{7}{2}$.
+  + Với $x = 2$: Vế phải $x-3 = 2-3 = -1 < 0$ (loại).
+  + Với $x = \frac{7}{2}$: Vế phải $x-3 = \frac{7}{2}-3 = \frac{1}{2} > 0$ (thoả mãn).
+  Vậy nghiệm của phương trình là $x = \frac{7}{2}$.
+• d) Bình phương hai vế: $-x^2+2x+4 = (x-2)^2 = x^2-4x+4 \Leftrightarrow 2x^2-6x=0 \Leftrightarrow x = 0$ hoặc $x = 3$.
+  + Với $x = 0$: Vế phải $x-2 = -2 < 0$ (loại).
+  + Với $x = 3$: Vế phải $x-2 = 1 > 0$ (thoả mãn).
+  Vậy nghiệm của phương trình là $x = 3$.
