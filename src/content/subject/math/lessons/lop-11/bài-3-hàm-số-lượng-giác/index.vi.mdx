@@ -1,0 +1,172 @@
+---
+title: 'Bài 3: Hàm số lượng giác.'
+description: các tính chất cơ bản của hàm số lượng giác cùng với ví dụ minh họa.
+tags:
+  - lớp 11
+  - Hàm số lượng giác
+  - Đồ thị của hàm số lượng giác
+  - Hàm số chẵn, hàm số lẻ
+  - Hàm số tuần hoàn, chu kì
+grade: 11
+order: 0
+updatedDate: 2026-10-28T00:22:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hàm số lượng giác
+
+·       Hàm số chẵn, hàm số lẻ
+
+·       Hàm số tuần hoàn, chu kì
+
+·       Đồ thị của hàm số lượng giác
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết các khái niệm về hàm số chẵn, hàm số lẻ, hàm số tuần hoàn và các đặc trưng hình học của đồ thị.
+
+·       Nhận biết các hàm số lượng giác $y = \sin x$, $y = \cos x$, $y = \tan x$, $y = \cot x$ thông qua đường tròn lượng giác.
+
+·       Vẽ và giải thích tập xác định, tập giá trị, tính chẵn lẻ, tính tuần hoàn, chu kì, khoảng đồng biến, nghịch biến của các hàm số lượng giác dựa vào đồ thị.
+
+·       Giải quyết một số vấn đề thực tiễn gắn với hàm số lượng giác.
+
+## Định nghĩa hàm số lượng giác
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_luong_giac"/>
+
+### a) Định nghĩa các hàm số lượng giác
+
+Với mỗi số thực $x$, ta xác định được duy nhất một điểm $M$ trên đường tròn lượng giác sao cho số đo của góc lượng giác $(OA, OM)$ bằng $x$. Do đó, ta luôn xác định được các giá trị lượng giác $\sin x$ và $\cos x$ của $x$ lần lượt là tung độ và hoành độ của điểm $M$.
+• Quy tắc đặt tương ứng mỗi số thực $x$ với số thực $\sin x$ được gọi là hàm số sin, kí hiệu là $y = \sin x$. Tập xác định là $\mathbb{R}$.
+• Quy tắc đặt tương ứng mỗi số thực $x$ với số thực $\cos x$ được gọi là hàm số côsin, kí hiệu là $y = \cos x$. Tập xác định là $\mathbb{R}$.
+• Hàm số tang, kí hiệu là $y = \tan x$, được xác định bởi công thức $\tan x = \frac{\sin x}{\cos x}$. Tập xác định là $\mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \middle| k \in \mathbb{Z}\right\\}$.
+• Hàm số côtang, kí hiệu là $y = \cot x$, được xác định bởi công thức $\cot x = \frac{\cos x}{\sin x}$. Tập xác định là $\mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$.
+
+**Ví dụ 1:** Tìm tập xác định của hàm số $y = \frac{1}{\cos x}$.
+
+Lời giải Ví dụ 1:
+• Biểu thức $\frac{1}{\cos x}$ có nghĩa khi $\cos x \ne 0 \Leftrightarrow x \ne \frac{\pi}{2} + k\pi \quad (k \in \mathbb{Z})$.
+• Vậy tập xác định của hàm số là $D = \mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \middle| k \in \mathbb{Z}\right\\}$.
+
+### b) Luyện tập tìm tập xác định
+
+**Luyện tập 1:** Tìm tập xác định của hàm số $y = \frac{1}{\sin x}$.
+
+Lời giải Luyện tập 1:
+• Điều kiện xác định: $\sin x \ne 0 \Leftrightarrow x \ne k\pi \quad (k \in \mathbb{Z})$.
+• Tập xác định của hàm số là $D = \mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\is$).
+
+## Hàm số chẵn, hàm số lẻ, hàm số tuần hoàn
+
+### a) Hàm số chẵn, hàm số lẻ
+
+Cho hàm số $y = f(x)$ có tập xác định $D$:
+• Hàm số $f(x)$ được gọi là hàm số chẵn nếu $\forall x \in D$ thì $-x \in D$ và $f(-x) = f(x)$. Đồ thị hàm số chẵn nhận trục tung làm trục đối xứng.
+• Hàm số $f(x)$ được gọi là hàm số lẻ nếu $\forall x \in D$ thì $-x \in D$ và $f(-x) = -f(x)$. Đồ thị hàm số lẻ nhận gốc toạ độ làm tâm đối xứng.
+
+**Ví dụ 2:** Xét tính chẵn, lẻ của hàm số $f(x) = x \sin x$.
+
+Lời giải Ví dụ 2:
+• Tập xác định $D = \mathbb{R}$ (thỏa mãn $\forall x \in D \Rightarrow -x \in D$).
+• Ta có: $f(-x) = (-x)\sin(-x) = (-x)(-\sin x) = x \sin x = f(x)$, $\forall x \in D$.
+• Vậy $f(x) = x \sin x$ là hàm số chẵn.
+
+### b) Hàm số tuần hoàn
+
+Hàm số $y = f(x)$ có tập xác định $D$ được gọi là hàm số tuần hoàn nếu tồn tại số $T \ne 0$ sao cho với mọi $x \in D$ ta có:
+i) $x + T \in D$ và $x - T \in D$;
+ii) $f(x + T) = f(x)$.
+Số dương nhỏ nhất $T$ thoả mãn các điều kiện trên (nếu có) được gọi là chu kì của hàm số tuần hoàn đó.
+Nhận xét:
+• Các hàm số $y = \sin x$ và $y = \cos x$ tuần hoàn với chu kì $2\pi$.
+• Các hàm số $y = \tan x$ và $y = \cot x$ tuần hoàn với chu kì $\pi$.
+
+**Ví dụ 3:** Xét tính tuần hoàn của hàm số $y = \sin 2x$.
+
+Lời giải Ví dụ 3:
+• Tập xác định $D = \mathbb{R}$. Với mọi $x \in \mathbb{R}$, ta có $x - \pi \in \mathbb{R}, x + \pi \in \mathbb{R}$.
+• $\sin 2(x + \pi) = \sin(2x + 2\pi) = \sin 2x$.
+• Vậy $y = \sin 2x$ là hàm số tuần hoàn với chu kì $T = \frac{2\pi}{2} = \pi$.
+
+## Đồ thị và tính chất của các hàm số lượng giác
+
+### a) Hàm số y = sin x
+
+Tính chất của hàm số $y = \sin x$:
+• Tập xác định: $\mathbb{R}$, tập giá trị: $[-1; 1]$.
+• Tính chất: Là hàm số lẻ, tuần hoàn với chu kì $2\pi$.
+• Sự biến thiên: Đồng biến trên mỗi khoảng $\left(-\frac{\pi}{2} + k2\pi; \frac{\pi}{2} + k2\pi\right)$ và nghịch biến trên mỗi khoảng $\left(\frac{\pi}{2} + k2\pi; \frac{3\pi}{2} + k2\pi\right)$ ($k \in \mathbb{Z}$).n• Đồ thị: Nhận gốc toạ độ làm tâm đối xứng, gọi là đường hình sin (sinusoid).
+
+### b) Hàm số y = cos x
+
+Tính chất của hàm số $y = \cos x$:
+• Tập xác định: $\mathbb{R}$, tập giá trị: $[-1; 1]$.
+• Tính chất: Là hàm số chẵn, tuần hoàn với chu kì $2\pi$.
+• Sự biến thiên: Đồng biến trên mỗi khoảng $(-\pi + k2\pi; k2\pi)$ và nghịch biến trên mỗi khoảng $(k2\pi; \pi + k2\pi)$ ($k \in \mathbb{Z}$).n• Đồ thị: Nhận trục tung làm trục đối xứng.
+
+### c) Hàm số y = tan x và y = cot x
+
+• Hàm số $y = \tan x$:
+  - Tập xác định: $\mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \middle| k \in \mathbb{Z}\right\\}$, tập giá trị: $\mathbb{R}$.
+  - Tính chất: Là hàm số lẻ, tuần hoàn với chu kì $\pi$.
+  - Sự biến thiên: Đồng biến trên mỗi khoảng $\left(-\frac{\pi}{2} + k\pi; \frac{\pi}{2} + k\pi\right)$ ($k \in \mathbb{Z}$).n• Hàm số $y = \cot x$:
+  - Tập xác định: $\mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$, tập giá trị: $\mathbb{R}$.
+  - Tính chất: Là hàm số lẻ, tuần hoàn với chu kì $\pi$.
+  - Sự biến thiên: Nghịch biến trên mỗi khoảng $(k\pi; \pi + k\pi)$ ($k \in \mathbb{Z}$).
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Hô hấp):** Giả sử vận tốc $v$ (lít/giây) của luồng khí trong một chu kì hô hấp được cho bởi công thức $v = 0{,}85 \sin\left(\frac{\pi t}{3}\right)$, trong đó $t$ là thời gian (giây). Hãy tìm thời gian của một chu kì hô hấp đầy đủ và số chu kì hô hấp trong một phút của người đó.
+
+Lời giải Vận dụng:
+• Chu kì của hàm số $v = 0{,}85 \sin\left(\frac{\pi t}{3}\right)$ là: $T = \frac{2\pi}{\pi/3} = 6$ (giây).
+• Thời gian của một chu kì hô hấp đầy đủ là 6 giây.
+• Số chu kì hô hấp trong một phút (60 giây) là: $\frac{60}{6} = 10$ (chu kì/phút).
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 1.14:** Tìm tập xác định của các hàm số sau:
+a) $y = \frac{1 - \cos x}{\sin x}$;
+b) $y = \sqrt{\frac{1 + \cos x}{2 - \cos x}}$.
+
+Lời giải Bài 1.14:
+• a) $\sin x \ne 0 \Leftrightarrow x \ne k\pi \quad (k \in \mathbb{Z})$. Tập xác định $D = \mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$.
+• b) Do $\cos x \ge -1 \Rightarrow 2 - \cos x \ge 3 > 0$ luôn đúng với mọi $x$. Biểu thức dưới căn $\frac{1 + \cos x}{2 - \cos x} \ge 0$ luôn đúng với mọi $x$. Vậy tập xác định của hàm số là $D = \mathbb{R}$.
+
+**Bài 1.15:** Xét tính chẵn, lẻ của các hàm số sau:
+a) $y = \sin 2x + \tan 2x$;
+b) $y = \sqrt{1 + \cos x} - 2$;
+c) $y = \sin x \cos 2x$.
+
+Lời giải Bài 1.15:
+• a) Tập xác định đối xứng. $f(-x) = \sin(-2x) + \tan(-2x) = -\sin 2x - \tan 2x = -f(x)$. Hàm số lẻ.
+• b) Tập xác định đối xứng. $g(-x) = \sqrt{1 + \cos(-x)} - 2 = \sqrt{1 + \cos x} - 2 = g(x)$. Hàm số chẵn.
+• c) Tập xác định đối xứng. $h(-x) = \sin(-x)\cos(-2x) = -\sin x \cos 2x = -h(x)$. Hàm số lẻ.
+
+**Bài 1.16:** Tìm tập giá trị của các hàm số sau:
+a) $y = 2\sin\left(x - \frac{\pi}{4}\right) - 1$;
+b) $y = \cos x + \sin^{2}x$;
+c) $y = \sin x + \cos x$.
+
+Lời giải Bài 1.16:
+• a) Vì $-1 \le \sin\left(x - \frac{\pi}{4}\right) \le 1 \Rightarrow -2 \le 2\sin\left(x - \frac{\pi}{4}\right) \le 2 \Rightarrow -3 \le y \le 1$. Tập giá trị là $[-3; 1]$.
+• b) $y = \cos x + 1 - \cos^{2}x$. Đặt $t = \cos x \in [-1; 1]$, xét hàm số $f(t) = -t^{2} + t + 1$ trên $[-1; 1]$. Giá trị lớn nhất là $\frac{5}{4}$ (tại $t = 1/2$), nhỏ nhất là $-1$ (tại $t = -1$). Tập giá trị $[-1; \frac{5}{4}]$.
+• c) $y = \sqrt{2}\sin\left(x + \frac{\pi}{4}\right)$. Do $-1 \le \sin\left(x + \frac{\pi}{4}\right) \le 1$ nên $-\sqrt{2} \le y \le \sqrt{2}$. Tập giá trị $[-\sqrt{2}; \sqrt{2}]$.
+
+**Bài 1.18:** Giả sử khi một cơn sóng biển đi qua một cái cọc ở ngoài khơi, chiều cao của nước được mô hình hoá bởi hàm số $h(t) = 90\cos\left(\frac{\pi}{10}t
+ight)$, trong đó $h(t)$ là độ cao tính bằng centimét trên mực nước biển trung bình tại thời điểm $t$ (giây).
+a) Tìm chu kì của sóng.
+b) Tìm chiều cao của sóng, tức là khoảng cách theo phương thẳng đứng giữa đáy và đỉnh của sóng.
+
+Lời giải Bài 1.18:
+• a) Chu kì của sóng là: $T = \frac{2\pi}{\pi/10} = 20$ (giây).
+• b) Giá trị lớn nhất của $h(t)$ là $90\text{ cm}$ (đỉnh sóng), giá trị nhỏ nhất là $-90\text{ cm}$ (đáy sóng). Khoảng cách theo phương thẳng đứng giữa đáy và đỉnh sóng là: $90 - (-90) = 180\text{ cm}$.

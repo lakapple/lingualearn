@@ -1,0 +1,171 @@
+---
+title: 'Lesson 3: Trigonometric functions.'
+description: Basic properties of trigonometric functions with illustrative examples
+tags:
+  - grade 11
+  - Trigonometric functions
+  - Graphs of trigonometric functions
+  - Even functions, odd functions
+  - Periodic functions, period
+grade: 11
+order: 0
+updatedDate: 2026-10-28T00:22:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Trigonometric functions
+
+·       Even functions, odd functions
+
+·       Periodic functions, period
+
+·       Graphs of trigonometric functions
+
+### **Knowledge and Skills:**
+
+·       Recognize concepts of even functions, odd functions, periodic functions, and the geometric characteristics of their graphs.
+
+·       Recognize trigonometric functions $y = \sin x$, $y = \cos x$, $y = \tan x$, $y = \cot x$ via the trigonometric circle.
+
+·       Explain and determine domain, range, parity, periodicity, period, intervals of increase and decrease of trigonometric functions based on their graphs.
+
+·       Solve practical problems associated with trigonometric functions.
+
+## Definition of Trigonometric Functions
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_luong_giac"/>
+
+### a) Definition of Trigonometric Functions
+
+For each real number $x$, there is a unique point $M$ on the trigonometric circle such that the measure of the trigonometric angle $(OA, OM)$ equals $x$. Thus, we can always determine the trigonometric values $\sin x$ and $\cos x$ of $x$ as the y-coordinate and x-coordinate of point $M$, respectively.
+• The rule assigning each real number $x$ to the real number $\sin x$ is called the sine function, denoted by $y = \sin x$. Its domain is $\mathbb{R}$.
+• The rule assigning each real number $x$ to the real number $\cos x$ is called the cosine function, denoted by $y = \cos x$. Its domain is $\mathbb{R}$.
+• The tangent function, denoted by $y = \tan x$, is defined by the formula $\tan x = \frac{\sin x}{\cos x}$. Its domain is $\mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \middle| k \in \mathbb{Z}\right\\}$.
+• The cotangent function, denoted by $y = \cot x$, is defined by the formula $\cot x = \frac{\cos x}{\sin x}$. Its domain is $\mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$.
+
+**Example 1:** Find the domain of the function $y = \frac{1}{\cos x}$.
+
+Solution to Example 1:
+• The expression $\frac{1}{\cos x}$ is well-defined when $\cos x \ne 0 \Leftrightarrow x \ne \frac{\pi}{2} + k\pi \quad (k \in \mathbb{Z})$.
+• Thus, the domain of the given function is $D = \mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \middle| k \in \mathbb{Z}\right\\}$.
+
+### b) Practice on Domain Determination
+
+**Practice 1:** Find the domain of the function $y = \frac{1}{\sin x}$.
+
+Solution to Practice 1:
+• Condition for existence: $\sin x \ne 0 \Leftrightarrow x \ne k\pi \quad (k \in \mathbb{Z})$.
+• The domain of the function is $D = \mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$.
+
+## Even, Odd, and Periodic Functions
+
+### a) Even and Odd Functions
+
+Given a function $y = f(x)$ with domain $D$:
+• Function $f(x)$ is called an even function if $\forall x \in D$, we have $-x \in D$ and $f(-x) = f(x)$. The graph of an even function is symmetric with respect to the y-axis.
+• Function $f(x)$ is called an odd function if $\forall x \in D$, we have $-x \in D$ and $f(-x) = -f(x)$. The graph of an odd function is symmetric with respect to the origin.
+
+**Example 2:** Determine the parity of the function $f(x) = x \sin x$.
+
+Solution to Example 2:
+• Domain $D = \mathbb{R}$ (symmetric with respect to the origin).
+• We have: $f(-x) = (-x)\sin(-x) = (-x)(-\sin x) = x \sin x = f(x)$, $\forall x \in D$.
+• Thus, $f(x) = x \sin x$ is an even function.
+
+### b) Periodic Functions
+
+A function $y = f(x)$ with domain $D$ is called a periodic function if there exists a non-zero number $T$ such that for all $x \in D$:
+i) $x + T \in D$ and $x - T \in D$;
+ii) $f(x + T) = f(x)$.
+The smallest positive number $T$ satisfying these conditions (if it exists) is called the period of that periodic function.
+Remarks:
+• The functions $y = \sin x$ and $y = \cos x$ are periodic with period $2\pi$.
+• The functions $y = \tan x$ and $y = \cot x$ are periodic with period $\pi$.
+
+**Example 3:** Determine the periodicity of the function $y = \sin 2x$.
+
+Solution to Example 3:
+• Domain $D = \mathbb{R}$. For every $x \in \mathbb{R}$, we have $x - \pi \in \mathbb{R}, x + \pi \in \mathbb{R}$.
+• $\sin 2(x + \pi) = \sin(2x + 2\pi) = \sin 2x$.
+• Thus, $y = \sin 2x$ is a periodic function with period $T = \frac{2\pi}{2} = \pi$.
+
+## Graphs and Properties of Trigonometric Functions
+
+### a) The Function y = sin x
+
+Properties of $y = \sin x$:
+• Domain: $\mathbb{R}$, Range: $[-1; 1]$.
+• Parity and Periodicity: Odd function, periodic with period $2\pi$.
+• Variation: Increasing on each interval $\left(-\frac{\pi}{2} + k2\pi; \frac{\pi}{2} + k2\pi\right)$ and decreasing on each interval $\left(\frac{\pi}{2} + k2\pi; \frac{3\pi}{2} + k2\pi\right)$ ($k \in \mathbb{Z}$).n• Graph: Symmetric with respect to the origin, called a sinusoid.
+
+### b) The Function y = cos x
+
+Properties of $y = \cos x$:
+• Domain: $\mathbb{R}$, Range: $[-1; 1]$.
+• Parity and Periodicity: Even function, periodic with period $2\pi$.
+• Variation: Increasing on each interval $(-\pi + k2\pi; k2\pi)$ and decreasing on each interval $(k2\pi; \pi + k2\pi)$ ($k \in \mathbb{Z}$).n• Graph: Symmetric with respect to the y-axis.
+
+### c) The Functions y = tan x and y = cot x
+
+• Function $y = \tan x$:
+  - Domain: $\mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \middle| k \in \mathbb{Z}\right\\}$, Range: $\mathbb{R}$.
+  - Parity and Periodicity: Odd function, periodic with period $\pi$.
+  - Variation: Increasing on each interval $\left(-\frac{\pi}{2} + k\pi; \frac{\pi}{2} + k\pi\right)$ ($k \in \mathbb{Z}$).n• Function $y = \cot x$:
+  - Domain: $\mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$, Range: $\mathbb{R}$.
+  - Parity and Periodicity: Odd function, periodic with period $\pi$.
+  - Variation: Decreasing on each interval $(k\pi; \pi + k\pi)$ ($k \in \mathbb{Z}$).
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Respiration):** Suppose the velocity $v$ (liters/second) of airflow during a respiratory cycle is given by $v = 0{,}85 \sin\left(\frac{\pi t}{3}\right)$, where $t$ is time (seconds). Find the duration of a complete respiratory cycle and the number of respiratory cycles per minute.
+
+Solution to Application:
+• The period of the function $v = 0{,}85 \sin\left(\frac{\pi t}{3}\right)$ is: $T = \frac{2\pi}{\pi/3} = 6$ (seconds).
+• The duration of a complete respiratory cycle is 6 seconds.
+• The number of respiratory cycles in one minute (60 seconds) is: $\frac{60}{6} = 10$ (cycles/minute).
+
+### b) End-of-Lesson Exercises
+
+**Exercise 1.14:** Find the domain of the following functions:
+a) $y = \frac{1 - \cos x}{\sin x}$;
+b) $y = \sqrt{\frac{1 + \cos x}{2 - \cos x}}$.
+
+Solution to Exercise 1.14:
+• a) $\sin x \ne 0 \Leftrightarrow x \ne k\pi \quad (k \in \mathbb{Z})$. Domain $D = \mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$.
+• b) Since $\cos x \ge -1 \Rightarrow 2 - \cos x \ge 3 > 0$ for all $x$. The radicand $\frac{1 + \cos x}{2 - \cos x} \ge 0$ holds for all $x$. Thus, the domain is $D = \mathbb{R}$.
+
+**Exercise 1.15:** Determine the parity of the following functions:
+a) $y = \sin 2x + \tan 2x$;
+b) $y = \sqrt{1 + \cos x} - 2$;
+c) $y = \sin x \cos 2x$.
+
+Solution to Exercise 1.15:
+• a) Symmetric domain. $f(-x) = \sin(-2x) + \tan(-2x) = -\sin 2x - \tan 2x = -f(x)$. Odd function.
+• b) Symmetric domain. $g(-x) = \sqrt{1 + \cos(-x)} - 2 = \sqrt{1 + \cos x} - 2 = g(x)$. Even function.
+• c) Symmetric domain. $h(-x) = \sin(-x)\cos(-2x) = -\sin x \cos 2x = -h(x)$. Odd function.
+
+**Exercise 1.16:** Find the range of the following functions:
+a) $y = 2\sin\left(x - \frac{\pi}{4}\right) - 1$;
+b) $y = \cos x + \sin^{2}x$;
+c) $y = \sin x + \cos x$.
+
+Solution to Exercise 1.16:
+• a) Since $-1 \le \sin\left(x - \frac{\pi}{4}\right) \le 1 \Rightarrow -2 \le 2\sin\left(x - \frac{\pi}{4}\right) \le 2 \Rightarrow -3 \le y \le 1$. Range is $[-3; 1]$.
+• b) $y = \cos x + 1 - \cos^{2}x$. Let $t = \cos x \in [-1; 1]$, consider $f(t) = -t^{2} + t + 1$ on $[-1; 1]$. Maximum is $\frac{5}{4}$ (at $t = 1/2$), minimum is $-1$ (at $t = -1$). Range $[-1; \frac{5}{4}]$.
+• c) $y = \sqrt{2}\sin\left(x + \frac{\pi}{4}\right)$. Since $-1 \le \sin\left(x + \frac{\pi}{4}\right) \le 1$, $-\sqrt{2} \le y \le \sqrt{2}$. Range $[-\sqrt{2}; \sqrt{2}]$.
+
+**Exercise 1.18:** Suppose when an ocean wave passes an offshore piling, the water height is modeled by $h(t) = 90\cos\left(\frac{\pi}{10}t\right)$, where $h(t)$ is the height in centimeters above mean sea level at time $t$ (seconds).
+a) Find the period of the wave.
+b) Find the wave height, i.e., the vertical distance between the trough and the crest of the wave.
+
+Solution to Exercise 1.18:
+• a) The period of the wave is: $T = \frac{2\pi}{\pi/10} = 20$ (seconds).
+• b) The maximum value of $h(t)$ is $90\text{ cm}$ (crest), and the minimum value is $-90\text{ cm}$ (trough). The vertical distance between trough and crest is: $90 - (-90) = 180\text{ cm}$.
