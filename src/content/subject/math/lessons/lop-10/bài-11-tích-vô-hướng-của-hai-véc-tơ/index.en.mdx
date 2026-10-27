@@ -1,0 +1,307 @@
+---
+title: 'Lesson 11: The Dot Product of Two Vectors.'
+description: 'The Dot Product of Two Vectors in the Coordinate Plane: Theoretical Framework and Worked Examples.'
+tags:
+  - grade 10
+  - Angle between two vectors
+  - dot product (scalar product) of two vectors
+  - Scalar square
+  - Coordinate representation of the dot product
+grade: 10
+order: 0
+updatedDate: 2026-10-27T13:08:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Angle between two vectors, dot product (scalar product) of two vectors
+
+·       Scalar square
+
+·       Coordinate representation of the dot product
+
+### **Knowledge and Skills:**
+
+·       Understand the concept of the angle between two vectors and determine the angle between two vectors in specific cases.
+
+·       Master the definition, geometric meaning, properties, and formulas for the dot product of two vectors.
+
+·       Apply coordinate formulas of the dot product proficiently to calculate lengths, angles, and establish orthogonality between two vectors.
+
+·       Relate and solve practical physical problems (calculating work done by a constant force).
+
+## Angle between Two Vectors
+
+<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_vecto"/>
+
+### a) Definition of the Angle between Two Vectors
+
+Concept: Given two non-zero vectors $\vec{u}$ and $\vec{v}$. From an arbitrary point $A$, draw vectors $\vec{AB} = \vec{u}$ and $\vec{AC} = \vec{v}$. Then, the measure of angle $\widehat{BAC}$ is called the measure of the angle between two vectors $\vec{u}$ and $\vec{v}$, or simply the angle between two vectors $\vec{u}$ and $\vec{v}$, denoted by $(\vec{u}, \vec{v})$.
+
+Conventions and Properties:
+
+• The angle between two vectors takes a value in the range from $0^\circ$ to $180^\circ$: $0^\circ \le (\vec{u}, \vec{v}) \le 180^\circ$.
+
+• If $(\vec{u}, \vec{v}) = 90^\circ$, we say that $\vec{u}$ and $\vec{v}$ are perpendicular (orthogonal) to each other, denoted by $\vec{u} \perp \vec{v}$ or $\vec{v} \perp \vec{u}$.
+
+• If $\vec{u}$ and $\vec{v}$ have the same direction, then $(\vec{u}, \vec{v}) = 0^\circ$.
+
+• If $\vec{u}$ and $\vec{v}$ have opposite directions, then $(\vec{u}, \vec{v}) = 180^\circ$.
+
+• By convention, the angle between the zero vector $\vec{0}$ and any vector can take an arbitrary value from $0^\circ$ to $180^\circ$.
+
+### b) Illustrative Examples on Angles between Vectors
+
+**Example 1:** Let $\triangle ABC$ be a right-angled triangle at $A$ with $\widehat{B} = 30^\circ$. Calculate: a) $(\vec{AB}, \vec{AC})$; b) $(\vec{CA}, \vec{CB})$; c) $(\vec{AB}, \vec{BC})$.
+
+Solution for Example 1:
+• a) Since $\triangle ABC$ is right-angled at $A$, $(\vec{AB}, \vec{AC}) = \widehat{BAC} = 90^\circ$.
+• b) In the right-angled triangle $\triangle ABC$, $\widehat{C} = 90^\circ - \widehat{B} = 90^\circ - 30^\circ = 60^\circ$. Therefore, $(\vec{CA}, \vec{CB}) = \widehat{ACB} = 60^\circ$.
+• c) Choose point $D$ such that $\vec{BD} = \vec{AB}$ (i.e., $B$ is the midpoint of $AD$). Then:
+$$(\vec{AB}, \vec{BC}) = (\vec{BD}, \vec{BC}) = \widehat{DBC} = 180^\circ - \widehat{ABC} = 180^\circ - 30^\circ = 150^\circ.$$
+
+**Practice 1:** Let $ABC$ be an equilateral triangle. Calculate $(\vec{AB}, \vec{BC})$.
+
+Solution for Practice 1:
+• Choose point $D$ such that $\vec{BD} = \vec{AB}$. Then:
+$$(\vec{AB}, \vec{BC}) = (\vec{BD}, \vec{BC}) = \widehat{DBC} = 180^\circ - \widehat{ABC} = 180^\circ - 60^\circ = 120^\circ.$$
+
+## Dot Product of Two Vectors
+
+<Youtube url="https://www.youtube.com/watch?v=example_tich_vo_huong"/>
+
+### a) Definition of the Dot Product
+
+Definition: The dot product (or scalar product) of two vectors $\vec{u}$ and $\vec{v}$ is a real number, denoted by $\vec{u} \cdot \vec{v}$, defined by the formula:
+$$\vec{u} \cdot \vec{v} = |\vec{u}| \cdot |\vec{v}| \cdot \cos(\vec{u}, \vec{v})$$
+
+Remarks:
+• $\vec{u} \perp \vec{v} \Leftrightarrow \vec{u} \cdot \vec{v} = 0$.
+• The dot product $\vec{u} \cdot \vec{u}$ is also written as $\vec{u}^2$ and is called the scalar square of vector $\vec{u}$. We have:
+$$\vec{u}^2 = |\vec{u}| \cdot |\vec{u}| \cdot \cos 0^\circ = |\vec{u}|^2$$
+(The scalar square of a vector equals the square of its magnitude/length).
+• When $\vec{u} \ne \vec{0}$ and $\vec{v} \ne \vec{0}$:
+  + $\vec{u} \cdot \vec{v} > 0 \Leftrightarrow \cos(\vec{u}, \vec{v}) > 0 \Leftrightarrow 0^\circ \le (\vec{u}, \vec{v}) < 90^\circ$ (acute angle).
+  + $\vec{u} \cdot \vec{v} < 0 \Leftrightarrow \cos(\vec{u}, \vec{v}) < 0 \Leftrightarrow 90^\circ < (\vec{u}, \vec{v}) \le 180^\circ$ (obtuse angle).
+• $(\vec{u} \cdot \vec{v})^2 = \vec{u}^2 \cdot \vec{v}^2$ if and only if $\vec{u}$ and $\vec{v}$ are collinear.
+
+### b) Illustrative Examples on Calculating Dot Products
+
+**Example 2:** Let $ABCD$ be a square with side length $a$. Compute the following dot products: $\vec{AB} \cdot \vec{AD}$, $\vec{AB} \cdot \vec{AC}$, $\vec{AB} \cdot \vec{BD}$.
+
+Solution for Example 2:
+• Since $AB \perp AD$, $(\vec{AB}, \vec{AD}) = 90^\circ \Rightarrow \vec{AB} \cdot \vec{AD} = 0$.
+• The square has side length $a$, so the diagonal length is $AC = BD = a\sqrt{2}$.
+  Since $AC$ is the angle bisector of angle $\widehat{A}$, $(\vec{AB}, \vec{AC}) = 45^\circ$. Therefore:
+$$\vec{AB} \cdot \vec{AC} = |\vec{AB}| \cdot |\vec{AC}| \cdot \cos 45^\circ = a \cdot a\sqrt{2} \cdot \frac{\sqrt{2}}{2} = a^2.$$
+• Angle between $\vec{AB}$ and $\vec{BD}$: Let $E$ be a point such that $\vec{BE} = \vec{AB}$, then $(\vec{AB}, \vec{BD}) = (\vec{BE}, \vec{BD}) = 180^\circ - 45^\circ = 135^\circ$. Therefore:
+$$\vec{AB} \cdot \vec{BD} = |\vec{AB}| \cdot |\vec{BD}| \cdot \cos 135^\circ = a \cdot a\sqrt{2} \cdot \left(-\frac{\sqrt{2}}{2}\right) = -a^2.$$
+
+**Practice 2:** Let $\triangle ABC$ have side lengths $BC = a, CA = b, AB = c$. Calculate $\vec{AB} \cdot \vec{AC}$ in terms of $a, b, c$.
+
+Solution for Practice 2:
+• By definition of the dot product: $\vec{AB} \cdot \vec{AC} = |\vec{AB}| \cdot |\vec{AC}| \cdot \cos A = c \cdot b \cdot \cos A$.
+• By the Law of Cosines in $\triangle ABC$: $a^2 = b^2 + c^2 - 2bc \cdot \cos A \Rightarrow bc \cdot \cos A = \frac{b^2 + c^2 - a^2}{2}$.
+• Therefore: $$\vec{AB} \cdot \vec{AC} = \frac{b^2 + c^2 - a^2}{2}.$$
+
+## Coordinate Representation and Properties of the Dot Product
+
+<Youtube url="https://www.youtube.com/watch?v=example_bieu_thuc_toa_do_tich_vo_huong"/>
+
+### a) Coordinate Representation of the Dot Product
+
+Coordinate formula: In the Cartesian coordinate plane $Oxy$, let $\vec{u} = (x; y)$ and $\vec{v} = (x'; y')$. Then:
+$$\vec{u} \cdot \vec{v} = x x' + y y'$$
+
+Important consequences:
+• Two vectors $\vec{u}$ and $\vec{v}$ are perpendicular if and only if:
+$$\vec{u} \perp \vec{v} \Leftrightarrow x x' + y y' = 0$$
+• The scalar square of vector $\vec{u}(x; y)$ is:
+$$\vec{u}^2 = x^2 + y^2 \Rightarrow |\vec{u}| = \sqrt{x^2 + y^2}$$
+• The cosine of the angle between two non-zero vectors $\vec{u} \ne \vec{0}$ and $\vec{v} \ne \vec{0}$ is:
+$$\cos(\vec{u}, \vec{v}) = \frac{\vec{u} \cdot \vec{v}}{|\vec{u}| \cdot |\vec{v}|} = \frac{x x' + y y'}{\sqrt{x^2 + y^2} \cdot \sqrt{x'^2 + y'^2}}$$
+
+**Example 3:** In the coordinate plane $Oxy$, compute the dot product of each pair of vectors:
+a) $\vec{u} = (2; -3)$ and $\vec{v} = (5; 3)$;
+b) The unit vectors $\vec{i}$ and $\vec{j}$ corresponding to axes $Ox$ and $Oy$.
+
+Solution for Example 3:
+• a) We have: $\vec{u} \cdot \vec{v} = 2 \cdot 5 + (-3) \cdot 3 = 10 - 9 = 1$.
+• b) Since $\vec{i} = (1; 0)$ and $\vec{j} = (0; 1)$, $\vec{i} \cdot \vec{j} = 1 \cdot 0 + 0 \cdot 1 = 0$.
+
+**Practice 3:** Compute the dot product and the angle between the two vectors $\vec{u} = (0; -5)$ and $\vec{v} = (\sqrt{3}; 1)$.
+
+Solution for Practice 3:
+• Dot product: $\vec{u} \cdot \vec{v} = 0 \cdot \sqrt{3} + (-5) \cdot 1 = -5$.
+• Magnitudes: $|\vec{u}| = \sqrt{0^2 + (-5)^2} = 5$; $|\vec{v}| = \sqrt{(\sqrt{3})^2 + 1^2} = 2$.
+• Angle between vectors:
+$$\cos(\vec{u}, \vec{v}) = \frac{-5}{5 \cdot 2} = -\frac{1}{2} \Rightarrow (\vec{u}, \vec{v}) = 120^\circ.$$
+
+### b) Properties of the Dot Product
+
+For any vectors $\vec{u}, \vec{v}, \vec{w}$ and any real scalar $k$:
+• $\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$ (Commutative property);
+• $\vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w}$ (Distributive property over addition);
+• $(k\vec{u}) \cdot \vec{v} = k(\vec{u} \cdot \vec{v}) = \vec{u} \cdot (k\vec{v})$.
+
+Extended vector identities:
+• $\vec{u} \cdot (\vec{v} - \vec{w}) = \vec{u} \cdot \vec{v} - \vec{u} \cdot \vec{w}$
+• $(\vec{u} + \vec{v})^2 = \vec{u}^2 + 2\vec{u} \cdot \vec{v} + \vec{v}^2$
+• $(\vec{u} - \vec{v})^2 = \vec{u}^2 - 2\vec{u} \cdot \vec{v} + \vec{v}^2$
+• $(\vec{u} + \vec{v}) \cdot (\vec{u} - \vec{v}) = \vec{u}^2 - \vec{v}^2$
+
+**Example 4:** Let $\triangle ABC$ be right-angled at $A$ with $\widehat{B} = 60^\circ$. Let $M$ be the midpoint of $BC$. Points $P$ and $Q$ are taken on segments $AB$ and $AC$ respectively. Prove that $\widehat{PMQ} = 90^\circ$ if and only if $BP + \sqrt{3}CQ = BC$.
+
+Solution for Example 4:
+• Let $MB = MC = a \Rightarrow BC = 2a$.
+• We have $\widehat{PMQ} = 90^\circ \Leftrightarrow \vec{MP} \cdot \vec{MQ} = 0 \Leftrightarrow (\vec{MB} + \vec{BP}) \cdot (\vec{MC} + \vec{CQ}) = 0$.
+• Expanding the product:
+$$\vec{MB} \cdot \vec{MC} + \vec{MB} \cdot \vec{CQ} + \vec{BP} \cdot \vec{MC} + \vec{BP} \cdot \vec{CQ} = 0 \quad (1)$$
+• Evaluating each term:
+  + $\vec{MB} \cdot \vec{MC} = MB \cdot MC \cdot \cos 180^\circ = -a^2$.
+  + Since $(\vec{MB}, \vec{CQ}) = 30^\circ$, $\vec{MB} \cdot \vec{CQ} = MB \cdot CQ \cdot \cos 30^\circ = \frac{\sqrt{3}}{2}a \cdot CQ$.
+  + Since $(\vec{BP}, \vec{MC}) = 60^\circ$, $\vec{BP} \cdot \vec{MC} = BP \cdot MC \cdot \cos 60^\circ = \frac{1}{2}a \cdot BP$.
+  + Since $AB \perp AC$, $\vec{BP} \perp \vec{CQ} \Rightarrow \vec{BP} \cdot \vec{CQ} = 0$.
+• Substituting into $(1)$:
+$$-a^2 + \frac{\sqrt{3}}{2}a \cdot CQ + \frac{1}{2}a \cdot BP = 0 \Leftrightarrow \frac{\sqrt{3}}{2}CQ + \frac{1}{2}BP = a \Leftrightarrow \sqrt{3}CQ + BP = 2a = BC.$$
+Thus, the equivalence is established.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Applied Exercises
+
+**Application (Work Done by a Force in Physics):** A constant force $\vec{F}$ acts on an object causing its point of application to move linearly from $A$ to $B$. The force $\vec{F}$ is resolved into two component forces $\vec{F}\_1$ and $\vec{F}\_2$ (such that $\vec{F} = \vec{F}\_1 + \vec{F}\_2$).
+a) Using the properties of the dot product, explain why the work done by force $\vec{F}$ equals the sum of the work done by component forces $\vec{F}\_1$ and $\vec{F}\_2$.
+b) Suppose the component forces $\vec{F}\_1, \vec{F}\_2$ are respectively parallel (collinear) and perpendicular to the direction of motion. Find the relation between the work done by $\vec{F}$ and by $\vec{F}\_1$.
+
+Solution for Application:
+• a) The work $A$ done by force $\vec{F}$ over displacement $\vec{AB}$ is given by:
+$$A = \vec{F} \cdot \vec{AB} = (\vec{F}\_1 + \vec{F}\_2) \cdot \vec{AB} = \vec{F}\_1 \cdot \vec{AB} + \vec{F}\_2 \cdot \vec{AB} = A_1 + A_2$$
+where $A_1 = \vec{F}\_1 \cdot \vec{AB}$ and $A_2 = \vec{F}\_2 \cdot \vec{AB}$ represent the work done by forces $\vec{F}\_1$ and $\vec{F}\_2$, respectively. Hence, the total work done equals the sum of the work done by each component force.
+• b) When $\vec{F}\_2 \perp \vec{AB}$, we have $A_2 = \vec{F}\_2 \cdot \vec{AB} = 0$. Consequently:
+$$A = A_1 + 0 = A_1$$
+This means the total work done by $\vec{F}$ is completely equal to the work done by the component $\vec{F}\_1$ acting along the line of displacement.
+
+**Practice 4:** Given $\triangle ABC$ with vertices $A(-1; 2)$, $B(8; -1)$, $C(8; 8)$. Let $H$ be the orthocenter of the triangle.
+a) Prove that $\vec{AH} \cdot \vec{BC} = 0$ and $\vec{BH} \cdot \vec{CA} = 0$.
+b) Determine the coordinates of orthocenter $H$.
+c) Solve the triangle $\triangle ABC$.
+
+Solution for Practice 4:
+• a) Since $H$ is the orthocenter of $\triangle ABC$, the altitudes satisfy $AH \perp BC$ and $BH \perp AC$. Hence, $\vec{AH} \cdot \vec{BC} = 0$ and $\vec{BH} \cdot \vec{CA} = 0$.
+• b) Let $H(x; y)$. We compute the vector components:
+  + $\vec{BC} = (8 - 8; 8 - (-1)) = (0; 9)$;
+  + $\vec{CA} = (-1 - 8; 2 - 8) = (-9; -6)$;
+  + $\vec{AH} = (x + 1; y - 2)$;
+  + $\vec{BH} = (x - 8; y + 1)$.
+  Set up the system of linear equations:
+$$\begin{cases} \vec{AH} \cdot \vec{BC} = 0 \\\ \vec{BH} \cdot \vec{CA} = 0 \end{cases} \Leftrightarrow \begin{cases} (x + 1) \cdot 0 + (y - 2) \cdot 9 = 0 \\\ (x - 8) \cdot (-9) + (y + 1) \cdot (-6) = 0 \end{cases}$$
+  From the first equation: $9(y - 2) = 0 \Rightarrow y = 2$.
+  Substitute $y = 2$ into the second equation:
+  $$-9(x - 8) - 6(2 + 1) = 0 \Leftrightarrow -9x + 72 - 18 = 0 \Leftrightarrow -9x + 54 = 0 \Leftrightarrow x = 6.$$
+  Thus, the coordinates of the orthocenter are $H(6; 2)$.
+• c) Solving the triangle $\triangle ABC$:
+  + Side lengths:
+    $AB = \sqrt{(8 - (-1))^2 + (-1 - 2)^2} = \sqrt{9^2 + (-3)^2} = \sqrt{90} = 3\sqrt{10}$.
+    $BC = \sqrt{(8 - 8)^2 + (8 - (-1))^2} = \sqrt{0^2 + 9^2} = 9$.
+    $CA = \sqrt{(-1 - 8)^2 + (2 - 8)^2} = \sqrt{(-9)^2 + (-6)^2} = \sqrt{117} = 3\sqrt{13}$.
+  + Interior angles:
+    $$\cos B = \frac{AB^2 + BC^2 - AC^2}{2 \cdot AB \cdot BC} = \frac{90 + 81 - 117}{2 \cdot 3\sqrt{10} \cdot 9} = \frac{54}{54\sqrt{10}} = \frac{1}{\sqrt{10}} \Rightarrow \widehat{B} \approx 71^\circ 34'$$
+    $$\cos C = \frac{AC^2 + BC^2 - AB^2}{2 \cdot AC \cdot BC} = \frac{117 + 81 - 90}{2 \cdot 3\sqrt{13} \cdot 9} = \frac{108}{54\sqrt{13}} = \frac{2}{\sqrt{13}} \Rightarrow \widehat{C} \approx 56^\circ 19'$$
+    $$\widehat{A} = 180^\circ - (\widehat{B} + \widehat{C}) \approx 180^\circ - (71^\circ 34' + 56^\circ 19') = 52^\circ 07'.$$
+
+### b) Detailed Section Exercises
+
+**Exercise 4.21:** In the Cartesian coordinate plane $Oxy$, find the angle between two vectors $\vec{a}$ and $\vec{b}$ in each of the following cases:
+a) $\vec{a} = (-3; 1)$, $\vec{b} = (2; 6)$;
+b) $\vec{a} = (3; 1)$, $\vec{b} = (2; 4)$;
+c) $\vec{a} = (-\sqrt{2}; 1)$, $\vec{b} = (2; -\sqrt{2})$.
+
+Solution for Exercise 4.21:
+• a) $\vec{a} \cdot \vec{b} = (-3) \cdot 2 + 1 \cdot 6 = 0$. Since their dot product is zero, $(\vec{a}, \vec{b}) = 90^\circ$.
+• b) $\vec{a} \cdot \vec{b} = 3 \cdot 2 + 1 \cdot 4 = 10$.
+  $|\vec{a}| = \sqrt{3^2 + 1^2} = \sqrt{10}$; $|\vec{b}| = \sqrt{2^2 + 4^2} = \sqrt{20} = 2\sqrt{5}$.
+  $$\cos(\vec{a}, \vec{b}) = \frac{10}{\sqrt{10} \cdot 2\sqrt{5}} = \frac{10}{10\sqrt{2}} = \frac{1}{\sqrt{2}} \Rightarrow (\vec{a}, \vec{b}) = 45^\circ.$$
+• c) $\vec{a} \cdot \vec{b} = (-\sqrt{2}) \cdot 2 + 1 \cdot (-\sqrt{2}) = -3\sqrt{2}$.
+  $|\vec{a}| = \sqrt{(-\sqrt{2})^2 + 1^2} = \sqrt{3}$; $|\vec{b}| = \sqrt{2^2 + (-\sqrt{2})^2} = \sqrt{6}$.
+  $$\cos(\vec{a}, \vec{b}) = \frac{-3\sqrt{2}}{\sqrt{3} \cdot \sqrt{6}} = \frac{-3\sqrt{2}}{3\sqrt{2}} = -1 \Rightarrow (\vec{a}, \vec{b}) = 180^\circ.$$
+
+**Exercise 4.22:** Find the necessary and sufficient conditions for vectors $\vec{u}, \vec{v}$ such that:
+a) $\vec{u} \cdot \vec{v} = |\vec{u}| \cdot |\vec{v}|$;
+b) $\vec{u} \cdot \vec{v} = -|\vec{u}| \cdot |\vec{v}|$.
+
+Solution for Exercise 4.22:
+• a) We have $\vec{u} \cdot \vec{v} = |\vec{u}| \cdot |\vec{v}| \cdot \cos(\vec{u}, \vec{v})$. Hence:
+$$\vec{u} \cdot \vec{v} = |\vec{u}| \cdot |\vec{v}| \Leftrightarrow |\vec{u}| \cdot |\vec{v}| \cdot (1 - \cos(\vec{u}, \vec{v})) = 0$$
+This occurs if and only if at least one of the two vectors is the zero vector ($\vec{u} = \vec{0}$ or $\vec{v} = \vec{0}$) or $\cos(\vec{u}, \vec{v}) = 1 \Leftrightarrow (\vec{u}, \vec{v}) = 0^\circ$ (i.e., non-zero vectors $\vec{u}$ and $\vec{v}$ have the same direction).
+• b) Similarly:
+$$\vec{u} \cdot \vec{v} = -|\vec{u}| \cdot |\vec{v}| \Leftrightarrow |\vec{u}| \cdot |\vec{v}| \cdot (1 + \cos(\vec{u}, \vec{v})) = 0$$
+This occurs if and only if at least one of the two vectors is the zero vector or $\cos(\vec{u}, \vec{v}) = -1 \Leftrightarrow (\vec{u}, \vec{v}) = 180^\circ$ (i.e., non-zero vectors $\vec{u}$ and $\vec{v}$ have opposite directions).
+
+**Exercise 4.23:** In the Cartesian coordinate plane $Oxy$, given two points $A(1; 2)$ and $B(-4; 3)$. Let $M(t; 0)$ be a point on the x-axis ($Ox$).
+a) Compute $\vec{AM} \cdot \vec{BM}$ in terms of $t$.
+b) Find $t$ such that $\widehat{AMB} = 90^\circ$.
+
+Solution for Exercise 4.23:
+• a) We have $\vec{AM} = (t - 1; -2)$ and $\vec{BM} = (t + 4; -3)$. By the coordinate formula of the dot product:
+$$\vec{AM} \cdot \vec{BM} = (t - 1)(t + 4) + (-2)(-3) = t^2 + 3t - 4 + 6 = t^2 + 3t + 2.$$
+• b) $\widehat{AMB} = 90^\circ \Leftrightarrow \vec{AM} \perp \vec{BM} \Leftrightarrow \vec{AM} \cdot \vec{BM} = 0$.
+$$\Leftrightarrow t^2 + 3t + 2 = 0 \Leftrightarrow (t + 1)(t + 2) = 0 \Leftrightarrow \begin{bmatrix} t = -1 \\\ t = -2 \end{bmatrix}.$$
+Thus, $t = -1$ or $t = -2$ (corresponding to points $M(-1; 0)$ or $M(-2; 0)$).
+
+**Exercise 4.24:** In the coordinate plane $Oxy$, given three non-collinear points $A(-4; 1), B(2; 4), C(2; -2)$.
+a) Solve the triangle $\triangle ABC$.
+b) Find the coordinates of the orthocenter $H$ of $\triangle ABC$.
+
+Solution for Exercise 4.24:
+• a) We have: $\vec{AB} = (6; 3) \Rightarrow AB = \sqrt{6^2 + 3^2} = \sqrt{45} = 3\sqrt{5}$;
+  $\vec{AC} = (6; -3) \Rightarrow AC = \sqrt{6^2 + (-3)^2} = \sqrt{45} = 3\sqrt{5}$;
+  $\vec{BC} = (0; -6) \Rightarrow BC = 6$.
+  Since $AB = AC = 3\sqrt{5}$, $\triangle ABC$ is isosceles at vertex $A$.
+  $$\cos A = \frac{\vec{AB} \cdot \vec{AC}}{|\vec{AB}| \cdot |\vec{AC}|} = \frac{6 \cdot 6 + 3 \cdot (-3)}{3\sqrt{5} \cdot 3\sqrt{5}} = \frac{27}{45} = \frac{3}{5} \Rightarrow \widehat{A} \approx 53^\circ 08'$$
+  Since the triangle is isosceles at $A$, $\widehat{B} = \widehat{C} = \frac{180^\circ - 53^\circ 08'}{2} = 63^\circ 26'$.
+• b) Let $H(x; y)$ be the orthocenter. We have:
+  $\vec{AH} = (x + 4; y - 1)$, $\vec{BC} = (0; -6)$;
+  $\vec{BH} = (x - 2; y - 4)$, $\vec{AC} = (6; -3)$.
+  The orthogonality conditions give:
+$$\begin{cases} \vec{AH} \cdot \vec{BC} = 0 \\\ \vec{BH} \cdot \vec{AC} = 0 \end{cases} \Leftrightarrow \begin{cases} (x + 4) \cdot 0 + (y - 1) \cdot (-6) = 0 \\\ 6(x - 2) - 3(y - 4) = 0 \end{cases}$$
+  From the first equation: $-6(y - 1) = 0 \Rightarrow y = 1$.
+  Substituting $y = 1$ into the second equation: $6(x - 2) - 3(1 - 4) = 0 \Leftrightarrow 6x - 12 + 9 = 0 \Leftrightarrow 6x = 3 \Leftrightarrow x = \frac{1}{2}$.
+  Therefore, the coordinates of the orthocenter are $H\left(\frac{1}{2}; 1\right)$.
+
+**Exercise 4.25:** Prove that for any triangle $ABC$:
+$$S\_{ABC} = \frac{1}{2} \sqrt{\vec{AB}^2 \cdot \vec{AC}^2 - (\vec{AB} \cdot \vec{AC})^2}$$
+
+Solution for Exercise 4.25:
+• By definition of the dot product: $\vec{AB} \cdot \vec{AC} = AB \cdot AC \cdot \cos A$.
+  Squaring both sides: $(\vec{AB} \cdot \vec{AC})^2 = AB^2 \cdot AC^2 \cdot \cos^2 A$.
+• Transform the expression under the square root:
+$$\vec{AB}^2 \cdot \vec{AC}^2 - (\vec{AB} \cdot \vec{AC})^2 = AB^2 \cdot AC^2 - AB^2 \cdot AC^2 \cdot \cos^2 A = AB^2 \cdot AC^2 \cdot (1 - \cos^2 A) = AB^2 \cdot AC^2 \cdot \sin^2 A$$
+• Since angle $A$ of $\triangle ABC$ satisfies $0^\circ < \widehat{A} < 180^\circ$, we have $\sin A > 0$. Taking the principal square root of both sides gives:
+$$\sqrt{\vec{AB}^2 \cdot \vec{AC}^2 - (\vec{AB} \cdot \vec{AC})^2} = AB \cdot AC \cdot \sin A$$
+• On the other hand, the area of $\triangle ABC$ is given by $S\_{ABC} = \frac{1}{2} AB \cdot AC \cdot \sin A$.
+  Hence:
+$$S\_{ABC} = \frac{1}{2} \sqrt{\vec{AB}^2 \cdot \vec{AC}^2 - (\vec{AB} \cdot \vec{AC})^2} \quad (\text{Q.E.D.}).$$
+
+**Exercise 4.26:** Let $G$ be the centroid of triangle $ABC$. Prove that for any arbitrary point $M$:
+$$MA^2 + MB^2 + MC^2 = 3MG^2 + GA^2 + GB^2 + GC^2$$
+
+Solution for Exercise 4.26:
+• Express vector $\vec{MA}$ through centroid $G$: $\vec{MA} = \vec{MG} + \vec{GA}$.
+  Taking the scalar square of both sides:
+$$MA^2 = \vec{MA}^2 = (\vec{MG} + \vec{GA})^2 = MG^2 + 2\vec{MG} \cdot \vec{GA} + GA^2$$
+• Similarly for vertices $B$ and $C$:
+$$MB^2 = MG^2 + 2\vec{MG} \cdot \vec{GB} + GB^2$$
+$$MC^2 = MG^2 + 2\vec{MG} \cdot \vec{GC} + GC^2$$
+• Summing these three equations side by side:
+$$MA^2 + MB^2 + MC^2 = 3MG^2 + GA^2 + GB^2 + GC^2 + 2\vec{MG} \cdot (\vec{GA} + \vec{GB} + \vec{GC})$$
+• Since $G$ is the centroid of $\triangle ABC$, by the characteristic centroid property we have:
+$$\vec{GA} + \vec{GB} + \vec{GC} = \vec{0}$$
+  Therefore: $2\vec{MG} \cdot (\vec{GA} + \vec{GB} + \vec{GC}) = 2\vec{MG} \cdot \vec{0} = 0$.
+• Thus, we obtain the required identity:
+$$MA^2 + MB^2 + MC^2 = 3MG^2 + GA^2 + GB^2 + GC^2 \quad (\text{Q.E.D.}).$$
