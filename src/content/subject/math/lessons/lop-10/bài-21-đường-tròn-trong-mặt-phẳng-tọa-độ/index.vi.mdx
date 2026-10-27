@@ -1,0 +1,258 @@
+---
+title: 'Bài 21: Đường tròn trong mặt phẳng tọa độ.'
+description: hệ thống kiến thức bài Đường tròn trong mặt phẳng tọa độ cùng ví dụ minh họa.
+tags:
+  - lớp 10
+  - Đường tròn
+  - tâm
+  - bán kính
+  - Phương trình chính tắc của đường tròn
+  - Phương trình tổng quát của đường tròn
+  - Phương trình tiếp tuyến của đường tròn
+grade: 10
+order: 0
+updatedDate: ''
+draft: true
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Đường tròn, tâm, bán kính
+
+·       Phương trình chính tắc của đường tròn
+
+·       Phương trình tổng quát của đường tròn
+
+·       Phương trình tiếp tuyến của đường tròn
+
+### **Kiến thức, kĩ năng:**
+
+·       Lập phương trình đường tròn khi biết toạ độ tâm và bán kính, hoặc biết toạ độ ba điểm thuộc đường tròn (đường tròn ngoại tiếp tam giác).
+
+·       Xác định tâm và bán kính của đường tròn khi biết phương trình của nó.
+
+·       Lập phương trình tiếp tuyến của đường tròn khi biết toạ độ của tiếp điểm.
+
+·       Vận dụng kiến thức về phương trình đường tròn và tiếp tuyến để giải quyết một số bài toán có liên quan đến thực tiễn.
+
+## Phương trình đường tròn
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_duong_tron"/>
+
+### a) Phương trình chính tắc của đường tròn
+
+Định nghĩa và phương trình:
+Trong mặt phẳng toạ độ $Oxy$, đường tròn $(C)$ có tâm $I(a; b)$ và bán kính $R$ là tập hợp các điểm $M(x; y)$ thoả mãn $IM = R$.
+Ta có: $IM = \sqrt{(x - a)^2 + (y - b)^2} = R \Leftrightarrow (x - a)^2 + (y - b)^2 = R^2$.
+Phương trình:
+$$(x - a)^2 + (y - b)^2 = R^2 \quad (1)$$
+được gọi là phương trình chính tắc của đường tròn $(C)$ tâm $I(a; b)$, bán kính $R$.
+
+Trường hợp đặc biệt: Đường tròn $(C)$ có tâm là gốc toạ độ $O(0; 0)$ và bán kính $R$ có phương trình là:
+$$x^2 + y^2 = R^2$$
+
+### b) Phương trình tổng quát của đường tròn
+
+Khai triển phương trình $(1)$, ta được:
+$$x^2 + y^2 - 2ax - 2by + (a^2 + b^2 - R^2) = 0$$
+Đặt $c = a^2 + b^2 - R^2$, phương trình trở thành:
+$$x^2 + y^2 - 2ax - 2by + c = 0 \quad (2)$$
+
+Điều kiện để phương trình $(2)$ là phương trình đường tròn:
+Phương trình $x^2 + y^2 - 2ax - 2by + c = 0$ là phương trình của một đường tròn $(C)$ khi và chỉ khi:
+$$a^2 + b^2 - c > 0$$
+Khi đó, đường tròn $(C)$ có:
+• Toạ độ tâm: $I(a; b)$;
+• Bán kính: $R = \sqrt{a^2 + b^2 - c}$.
+
+### c) Ví dụ và luyện tập về phương trình đường tròn
+
+**Ví dụ 1:** Tìm tâm và bán kính của đường tròn $(C): (x - 2)^2 + (y + 3)^2 = 16$. Viết phương trình đường tròn $(C')$ có tâm $J(2; -1)$ và bán kính gấp đôi bán kính đường tròn $(C)$.
+
+Lời giải Ví dụ 1:
+• Viết phương trình $(C)$ dưới dạng: $(x - 2)^2 + [y - (-3)]^2 = 4^2$. Suy ra $(C)$ có tâm $I(2; -3)$ và bán kính $R = 4$.
+• Đường tròn $(C')$ có tâm $J(2; -1)$ và bán kính $R' = 2R = 2 \cdot 4 = 8$, nên có phương trình là:
+$$(x - 2)^2 + (y + 1)^2 = 8^2 \Leftrightarrow (x - 2)^2 + (y + 1)^2 = 64.$$
+
+**Luyện tập 1:** Tìm tâm và bán kính của đường tròn $(C): (x + 2)^2 + (y - 4)^2 = 7$.
+
+Lời giải Luyện tập 1:
+• Viết lại phương trình: $[x - (-2)]^2 + (y - 4)^2 = (\sqrt{7})^2$.
+• Đường tròn $(C)$ có tâm $I(-2; 4)$ và bán kính $R = \sqrt{7}$.
+
+**Luyện tập 2:** Hãy cho biết phương trình nào dưới đây là phương trình của một đường tròn. Tìm tâm và bán kính của đường tròn đó:
+a) $x^2 - y^2 - 2x + 4y - 1 = 0$;
+b) $x^2 + y^2 - 2x + 4y + 6 = 0$;
+c) $x^2 + y^2 + 6x - 4y + 2 = 0$.
+
+Lời giải Luyện tập 2:
+• a) Phương trình chứa $-y^2$ (hệ số của $x^2$ và $y^2$ không bằng nhau) nên không phải là phương trình đường tròn.
+• b) Ta có $a = 1$, $b = -2$, $c = 6$. Xét $a^2 + b^2 - c = 1^2 + (-2)^2 - 6 = 5 - 6 = -1 < 0$. Do đó phương trình này không phải là phương trình đường tròn.
+• c) Ta có $a = -3$, $b = 2$, $c = 2$. Xét $a^2 + b^2 - c = (-3)^2 + 2^2 - 2 = 9 + 4 - 2 = 11 > 0$. Do đó đây là phương trình đường tròn có tâm $I(-3; 2)$ và bán kính $R = \sqrt{11}$.
+
+**Ví dụ 3:** Viết phương trình đường tròn $(C)$ đi qua ba điểm $A(2; 0)$, $B(0; 4)$, $C(-7; 3)$.
+
+Lời giải Ví dụ 3:
+• Cách 1 (Dùng giao điểm hai đường trung trực):
+  + Trung điểm của $AB$ là $M(1; 2)$, $\vec{AB} = (-2; 4) = -2(1; -2)$. Đường trung trực $\Delta_1$ của $AB$ đi qua $M(1; 2)$ và có VTPT $\vec{n}\_1 = (1; -2)$, phương trình là: $1(x - 1) - 2(y - 2) = 0 \Leftrightarrow x - 2y + 3 = 0$.
+  + Trung điểm của $AC$ là $N\left(-\frac{5}{2}; \frac{3}{2}\right)$, $\vec{AC} = (-9; 3) = -3(3; -1)$. Đường trung trực $\Delta_2$ của $AC$ đi qua $N$ và có VTPT $\vec{n}\_2 = (3; -1)$, phương trình là: $3\left(x + \frac{5}{2}\right) - 1\left(y - \frac{3}{2}\right) = 0 \Leftrightarrow 3x - y + 9 = 0$.
+  + Tâm $I$ là giao điểm của $\Delta_1$ và $\Delta_2$, toạ độ $I$ thoả mãn hệ: $\begin{cases} x - 2y + 3 = 0 \\\ 3x - y + 9 = 0 \end{cases} \Leftrightarrow \begin{cases} x = -3 \\\ y = 0 \end{cases} \Rightarrow I(-3; 0)$.
+  + Bán kính: $R = IA = \sqrt{(2 - (-3))^2 + (0 - 0)^2} = 5$.
+  + Vậy phương trình đường tròn $(C)$ là: $(x + 3)^2 + y^2 = 25$.
+• Cách 2 (Dùng phương trình tổng quát):
+  + Giả sử phương trình đường tròn có dạng: $x^2 + y^2 - 2ax - 2by + c = 0$.
+  + Thay toạ độ ba điểm $A(2; 0)$, $B(0; 4)$, $C(-7; 3)$ vào phương trình, ta được hệ:
+$$\begin{cases} 4 - 4a + c = 0 \\\ 16 - 8b + c = 0 \\\ 58 + 14a - 6b + c = 0 \end{cases} \Leftrightarrow \begin{cases} 4a - c = 4 \\\ 8b - c = 16 \\\ 14a - 6b + c = -58 \end{cases} \Leftrightarrow \begin{cases} a = -3 \\\ b = 0 \\\ c = -16 \end{cases}$$
+  + Phương trình đường tròn là: $x^2 + y^2 + 6x - 16 = 0 \Leftrightarrow (x + 3)^2 + y^2 = 25$.
+
+**Luyện tập 3:** Viết phương trình đường tròn $(C)$ đi qua ba điểm $M(4; -5)$, $N(2; -1)$, $P(3; -8)$.
+
+Lời giải Luyện tập 3:
+• Giả sử phương trình đường tròn $(C)$ có dạng: $x^2 + y^2 - 2ax - 2by + c = 0$.
+• Vì $M, N, P \in (C)$ nên toạ độ của chúng thoả mãn phương trình:
+$$\begin{cases} 4^2 + (-5)^2 - 8a + 10b + c = 0 \\\ 2^2 + (-1)^2 - 4a + 2b + c = 0 \\\ 3^2 + (-8)^2 - 6a + 16b + c = 0 \end{cases} \Leftrightarrow \begin{cases} -8a + 10b + c = -41 \\\ -4a + 2b + c = -5 \\\ -6a + 16b + c = -73 \end{cases} \Leftrightarrow \begin{cases} a = 7 \\\ b = -5 \\\ c = 33 \end{cases}$$
+• Kiểm tra điều kiện: $a^2 + b^2 - c = 7^2 + (-5)^2 - 33 = 49 + 25 - 33 = 41 > 0$.
+• Vậy phương trình đường tròn $(C)$ là: $x^2 + y^2 - 14x + 10y + 33 = 0$ hay $(x - 7)^2 + (y + 5)^2 = 41$.
+
+## Phương trình tiếp tuyến của đường tròn
+
+<Youtube url="https://www.youtube.com/watch?v=example_tiep_tuyen_duong_tron"/>
+
+### a) Công thức phương trình tiếp tuyến tại một điểm
+
+Định lí: Cho điểm $M(x_0; y_0)$ thuộc đường tròn $(C): (x - a)^2 + (y - b)^2 = R^2$ có tâm $I(a; b)$ và bán kính $R$.
+Tiếp tuyến $\Delta$ của đường tròn $(C)$ tại tiếp điểm $M$ vuông góc với bán kính $IM$, do đó nhận vectơ $\vec{MI} = (a - x_0; b - y_0)$ (hoặc $\vec{IM} = (x_0 - a; y_0 - b)$) làm vectơ pháp tuyến.
+Phương trình tiếp tuyến $\Delta$ tại $M(x_0; y_0)$ có dạng:
+$$(x_0 - a)(x - x_0) + (y_0 - b)(y - y_0) = 0$$
+hoặc viết dưới dạng:
+$$(a - x_0)(x - x_0) + (b - y_0)(y - y_0) = 0$$
+
+### b) Ví dụ và luyện tập về phương trình tiếp tuyến
+
+**Ví dụ 4:** Cho đường tròn $(C): (x + 1)^2 + (y - 3)^2 = 5$. Điểm $M(0; 1)$ có thuộc đường tròn $(C)$ hay không? Nếu có, hãy viết phương trình tiếp tuyến tại $M$ của $(C)$.
+
+Lời giải Ví dụ 4:
+• Thay toạ độ $M(0; 1)$ vào vế trái của phương trình $(C)$: $(0 + 1)^2 + (1 - 3)^2 = 1^2 + (-2)^2 = 1 + 4 = 5$ (bằng vế phải). Do đó điểm $M(0; 1)$ thuộc đường tròn $(C)$.
+• Đường tròn $(C)$ có tâm $I(-1; 3)$. Vectơ pháp tuyến của tiếp tuyến tại $M$ là $\vec{MI} = (-1 - 0; 3 - 1) = (-1; 2)$.
+• Phương trình tiếp tuyến của $(C)$ tại $M(0; 1)$ là:
+$$-1(x - 0) + 2(y - 1) = 0 \Leftrightarrow -x + 2y - 2 = 0 \Leftrightarrow x - 2y + 2 = 0.$$
+
+**Luyện tập 4:** Cho đường tròn $(C): x^2 + y^2 - 2x + 4y + 1 = 0$. Viết phương trình tiếp tuyến $\Delta$ của $(C)$ tại điểm $N(1; 0)$.
+
+Lời giải Luyện tập 4:
+• Thay toạ độ $N(1; 0)$ vào phương trình: $1^2 + 0^2 - 2(1) + 4(0) + 1 = 0$ (thoả mãn), vậy $N \in (C)$.
+• Đường tròn có $a = 1, b = -2$, suy ra tâm $I(1; -2)$.
+• Vectơ pháp tuyến của tiếp tuyến tại $N$ là $\vec{IN} = (1 - 1; 0 - (-2)) = (0; 2)$ (chọn $\vec{n} = (0; 1)$).
+• Phương trình tiếp tuyến $\Delta$ tại $N(1; 0)$ là:
+$$0(x - 1) + 1(y - 0) = 0 \Leftrightarrow y = 0$$(Tiếp tuyến chính là trục hoành $Ox$).
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng 1 (Thiết kế bể sục trong hồ bơi):** Bên trong một hồ bơi, người ta dự định thiết kế hai bể sục nửa hình tròn bằng nhau và một bể sục hình tròn để thư giãn. Hãy tìm bán kính của các bể sục để tổng chu vi của ba bể là $32\text{ m}$ mà tổng diện tích chiếm hồ bơi là nhỏ nhất (lấy $\pi \approx 3{,}14$, làm tròn đến chữ số thập phân thứ hai).
+
+Lời giải Vận dụng 1:
+• Gọi bán kính của bể hình tròn là $x\text{ (m)}$ ($x > 0$) và bán kính của mỗi bể nửa hình tròn là $y\text{ (m)}$ ($y > 0$).
+  + Chu vi của bể hình tròn là: $C_1 = 2\pi x$.
+  + Chu vi của mỗi bể nửa hình tròn gồm cung nửa đường tròn và đường kính: $C_2 = \pi y + 2y = (\pi + 2)y$.
+  + Tổng chu vi của 1 bể tròn và 2 bể nửa tròn là:
+$$C = 2\pi x + 2(\pi + 2)y = 32 \Leftrightarrow \pi x + (\pi + 2)y = 16$$
+  Thay $\pi = 3{,}14$: $3{,}14x + 5{,}14y = 16 \Leftrightarrow 1{,}57x + 2{,}57y - 8 = 0$ (đây là phương trình đường thẳng $\Delta$).
+• Tổng diện tích của ba bể sục chiếm hồ bơi:
+$$S = \pi x^2 + 2\left(\frac{1}{2}\pi y^2\right) = \pi x^2 + \pi y^2 = \pi(x^2 + y^2) \Rightarrow x^2 + y^2 = \frac{S}{\pi} = \frac{S}{3{,}14}$$
+• Trong mặt phẳng toạ độ $Oxy$, điểm $M(x; y)$ với $x > 0, y > 0$ là giao điểm của đường thẳng $\Delta: 1{,}57x + 2{,}57y - 8 = 0$ và đường tròn $(C): x^2 + y^2 = R^2$ với bán kính $R = \sqrt{\frac{S}{3{,}14}}$.
+• Diện tích $S$ đạt giá trị nhỏ nhất khi và chỉ khi bán kính $R$ nhỏ nhất, tức đường tròn $(C)$ tiếp xúc với đường thẳng $\Delta$ tại điểm có toạ độ dương. Khi đó bán kính $R$ bằng khoảng cách từ gốc toạ độ $O(0; 0)$ đến đường thẳng $\Delta$:
+$$R\_{\min} = d(O, \Delta) = \frac{|-8|}{\sqrt{1{,}57^2 + 2{,}57^2}} = \frac{8}{\sqrt{2{,}4649 + 6{,}6049}} = \frac{8}{\sqrt{9{,}0698}} \approx \frac{8}{3{,}0116} \approx 2{,}66\text{ (m)}$$
+• Toạ độ tiếp điểm $M(x; y)$ là hình chiếu vuông góc của $O$ trên $\Delta$, thoả mãn hệ:
+$$\begin{cases} 1{,}57x + 2{,}57y - 8 = 0 \\\ 2{,}57x - 1{,}57y = 0 \end{cases} \Leftrightarrow \begin{cases} x \approx 1{,}38\text{ (m)} \\\ y \approx 2{,}27\text{ (m)} \end{cases}$$
+• Kết luận: Bán kính bể sục hình tròn khoảng $1{,}38\text{ m}$ và bán kính hai bể sục nửa hình tròn khoảng $2{,}27\text{ m}$.
+
+**Vận dụng 2 (Vật văng khỏi quỹ đạo tròn):** Trên mặt phẳng toạ độ $Oxy$, một vật chuyển động trên quỹ đạo đường tròn $x^2 + y^2 = 25$. Khi tới vị trí $M(3; 4)$, vật bị văng khỏi quỹ đạo và chuyển động theo hướng tiếp tuyến của đường tròn. Hỏi ngay sau khi văng, vật chuyển động trên đường thẳng nào?
+
+Lời giải Vận dụng 2:
+• Đường tròn $(C): x^2 + y^2 = 25$ có tâm $O(0; 0)$ và bán kính $R = 5$.
+• Điểm $M(3; 4)$ thuộc $(C)$ vì $3^2 + 4^2 = 25$. Khi bị văng khỏi quỹ đạo, vật chuyển động theo hướng tiếp tuyến của $(C)$ tại $M$.
+• Tiếp tuyến tại $M(3; 4)$ nhận vectơ $\vec{OM} = (3; 4)$ làm vectơ pháp tuyến.
+• Phương trình đường thẳng quỹ đạo tiếp tuyến là:
+$$3(x - 3) + 4(y - 4) = 0 \Leftrightarrow 3x - 9 + 4y - 16 = 0 \Leftrightarrow 3x + 4y - 25 = 0.$$
+• Vậy ngay sau khi văng, vật chuyển động trên đường thẳng $3x + 4y - 25 = 0$.
+
+**Bài 7.18 (Chuyển động có quỹ đạo đường tròn):** Chuyển động của một vật thể trong 180 phút được thể hiện trên mặt phẳng toạ độ: tại thời điểm $t$ ($0 \le t \le 180$), vị trí của vật có toạ độ $(x; y) = (2 + \sin t^\circ; 4 + \cos t^\circ)$.
+a) Tìm vị trí ban đầu và vị trí kết thúc của vật thể.
+b) Tìm quỹ đạo chuyển động của vật thể.
+
+Lời giải Bài 7.18:
+• a) Vị trí ban đầu tại thời điểm $t = 0$:
+  $x(0) = 2 + \sin 0^\circ = 2$; $y(0) = 4 + \cos 0^\circ = 4 + 1 = 5$. Vậy điểm xuất phát là $A(2; 5)$.
+  Vị trí kết thúc tại thời điểm $t = 180$:
+  $x(180) = 2 + \sin 180^\circ = 2$; $y(180) = 4 + \cos 180^\circ = 4 - 1 = 3$. Vậy điểm kết thúc là $B(2; 3)$.
+• b) Từ biểu thức toạ độ, ta có:
+$$\begin{cases} x - 2 = \sin t^\circ \\\ y - 4 = \cos t^\circ \end{cases}$$
+  Bình phương hai vế rồi cộng lại, áp dụng hệ thức lượng giác cơ bản $\sin^2 t^\circ + \cos^2 t^\circ = 1$:
+$$(x - 2)^2 + (y - 4)^2 = \sin^2 t^\circ + \cos^2 t^\circ = 1$$
+  Vì $0 \le t \le 180$ nên $\sin t^\circ \ge 0 \Rightarrow x - 2 \ge 0 \Leftrightarrow x \ge 2$.
+  Kết luận: Quỹ đạo của vật thể là nửa đường tròn tâm $I(2; 4)$, bán kính $R = 1$ nằm về phía bên phải đường thẳng $x = 2$, đi từ điểm $A(2; 5)$ đến điểm $B(2; 3)$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 7.13:** Tìm tâm và bán kính của đường tròn $(x + 3)^2 + (y - 3)^2 = 36$.
+
+Lời giải Bài 7.13:
+• Phương trình có dạng $(x - a)^2 + (y - b)^2 = R^2$ với $a = -3$, $b = 3$, $R^2 = 36$.
+• Vậy đường tròn có tâm $I(-3; 3)$ và bán kính $R = \sqrt{36} = 6$.
+
+**Bài 7.14:** Hãy cho biết phương trình nào dưới đây là phương trình của một đường tròn và tìm tâm, bán kính của đường tròn tương ứng:
+a) $x^2 + y^2 + xy + 4x - 2 = 0$;
+b) $x^2 + y^2 - 2x - 4y + 5 = 0$;
+c) $x^2 + y^2 + 6x - 8y + 1 = 0$.
+
+Lời giải Bài 7.14:
+• a) Phương trình chứa số hạng $xy$ nên không phải là phương trình đường tròn.
+• b) Ta có $a = 1, b = 2, c = 5$. Xét $a^2 + b^2 - c = 1^2 + 2^2 - 5 = 5 - 5 = 0$. Điều kiện $a^2 + b^2 - c > 0$ không thoả mãn (tập nghiệm chỉ là điểm $(1; 2)$). Do đó không phải là phương trình đường tròn.
+• c) Ta có $a = -3, b = 4, c = 1$. Xét $a^2 + b^2 - c = (-3)^2 + 4^2 - 1 = 9 + 16 - 1 = 24 > 0$. Do đó đây là phương trình đường tròn có tâm $I(-3; 4)$ và bán kính $R = \sqrt{24} = 2\sqrt{6}$.
+
+**Bài 7.15:** Viết phương trình đường tròn trong mỗi trường hợp sau:
+a) Có tâm $I(-2; 5)$ và bán kính $R = 7$;
+b) Có tâm $I(1; -2)$ và đi qua điểm $A(-2; 2)$;
+c) Có đường kính $AB$, với $A(-1; -3)$ và $B(-3; 5)$;
+d) Có tâm $I(1; 3)$ và tiếp xúc với đường thẳng $\Delta: x + 2y + 3 = 0$.
+
+Lời giải Bài 7.15:
+• a) Đường tròn tâm $I(-2; 5)$, bán kính $R = 7$ có phương trình:
+$$(x + 2)^2 + (y - 5)^2 = 7^2 \Leftrightarrow (x + 2)^2 + (y - 5)^2 = 49.$$
+• b) Bán kính đường tròn là khoảng cách $IA$:
+$$R = IA = \sqrt{(-2 - 1)^2 + (2 - (-2))^2} = \sqrt{(-3)^2 + 4^2} = \sqrt{25} = 5$$
+  Phương trình đường tròn: $(x - 1)^2 + (y + 2)^2 = 25$.
+• c) Tâm $I$ là trung điểm của đoạn thẳng $AB$:
+  $x_I = \frac{-1 + (-3)}{2} = -2$; $y_I = \frac{-3 + 5}{2} = 1 \Rightarrow I(-2; 1)$.
+  Bán kính $R = \frac{AB}{2} = \frac{\sqrt{(-3 - (-1))^2 + (5 - (-3))^2}}{2} = \frac{\sqrt{(-2)^2 + 8^2}}{2} = \frac{\sqrt{68}}{2} = \sqrt{17}$.
+  Phương trình đường tròn: $(x + 2)^2 + (y - 1)^2 = 17$.
+• d) Vì đường tròn tiếp xúc với đường thẳng $\Delta$ nên bán kính bằng khoảng cách từ tâm $I$ đến $\Delta$:
+$$R = d(I, \Delta) = \frac{|1 + 2(3) + 3|}{\sqrt{1^2 + 2^2}} = \frac{|10|}{\sqrt{5}} = 2\sqrt{5}$$
+  Phương trình đường tròn: $(x - 1)^2 + (y - 3)^2 = (2\sqrt{5})^2 = 20$.
+
+**Bài 7.16:** Trong mặt phẳng toạ độ, cho tam giác $ABC$ với $A(6; -2)$, $B(4; 2)$, $C(5; -5)$. Viết phương trình đường tròn ngoại tiếp tam giác đó.
+
+Lời giải Bài 7.16:
+• Giả sử phương trình đường tròn ngoại tiếp tam giác $ABC$ có dạng:
+$$x^2 + y^2 - 2ax - 2by + c = 0$$
+• Đường tròn đi qua $A, B, C$ nên toạ độ của chúng thoả mãn phương trình:
+$$\begin{cases} 6^2 + (-2)^2 - 12a + 4b + c = 0 \\\ 4^2 + 2^2 - 8a - 4b + c = 0 \\\ 5^2 + (-5)^2 - 10a + 10b + c = 0 \end{cases} \Leftrightarrow \begin{cases} -12a + 4b + c = -40 \\\ -8a - 4b + c = -20 \\\ -10a + 10b + c = -50 \end{cases}$$
+• Giải hệ phương trình bậc nhất 3 ẩn, ta được: $a = 1$, $b = -2$, $c = -20$.
+• Kiểm tra: $a^2 + b^2 - c = 1^2 + (-2)^2 - (-20) = 25 > 0$ (tâm $I(1; -2)$, bán kính $R = 5$).
+• Phương trình đường tròn ngoại tiếp tam giác $ABC$ là:
+$$x^2 + y^2 - 2x + 4y - 20 = 0 \Leftrightarrow (x - 1)^2 + (y + 2)^2 = 25.$$
+
+**Bài 7.17:** Cho đường tròn $(C): x^2 + y^2 + 2x - 4y + 4 = 0$. Viết phương trình tiếp tuyến $d$ của $(C)$ tại điểm $M(0; 2)$.
+
+Lời giải Bài 7.17:
+• Thay toạ độ $M(0; 2)$ vào phương trình: $0^2 + 2^2 + 2(0) - 4(2) + 4 = 4 - 8 + 4 = 0$ (thoả mãn), vậy $M \in (C)$.
+• Đường tròn có hệ số $a = -1, b = 2$, suy ra tâm $I(-1; 2)$.
+• Vectơ pháp tuyến của tiếp tuyến tại $M$ là $\vec{IM} = (0 - (-1); 2 - 2) = (1; 0)$.
+• Phương trình tiếp tuyến $d$ của $(C)$ tại $M(0; 2)$ là:
+$$1(x - 0) + 0(y - 2) = 0 \Leftrightarrow x = 0$$(Tiếp tuyến chính là trục tung $Oy$).
