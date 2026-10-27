@@ -1,0 +1,180 @@
+---
+title: 'Lesson 9: Multiplication of a Vector by a Scalar'
+description: Theoretical Framework of Scalar Multiplication of Vectors and Illustrative Examples.
+tags:
+  - grade 10
+grade: 10
+order: 0
+updatedDate: 2026-10-27T11:48:00
+draft: true
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+**Learning Objectives**
+
+**Terminology:**
+
+Scalar multiplication of a vector (product of a vector with a scalar)
+
+Collinearity condition of two vectors
+
+Linear combination (decomposition) of a vector in terms of two non-collinear vectors
+
+Center of mass (barycenter) of a system of particles
+
+**Knowledge and skills:**
+
+Comprehend and proficiently perform scalar multiplication of a vector.
+
+Apply the collinearity condition of two vectors to prove that three points are collinear or two lines are parallel.
+
+Master the theorem of decomposing a vector into two non-collinear vectors and apply it to geometric problems.
+
+Utilize vector relations involving midpoints, centroids, and centers of mass to solve physical problems involving force equilibrium and lever balance.
+
+**Multiplication of a Vector by a Scalar**
+
+<Youtube url="https://www.youtube.com/watch?v=example_tich_vecto_voi_mot_so"/>
+
+**a) Definition of Scalar Multiplication**
+
+**Definition:** Given a real number $k \ne 0$ and a vector $\vec{a} \ne \vec{0}$. The product of vector $\vec{a}$ with the scalar $k$ is a vector, denoted by $k\vec{a}$, determined as follows:
+
+• In the same direction as $\vec{a}$ if $k > 0$; in the opposite direction to $\vec{a}$ if $k < 0$.
+
+• Having magnitude equal to $|k| \cdot |\vec{a}|$.
+
+**Zero conventions:** By convention, $0\vec{a} = \vec{0}$ and $k\vec{0} = \vec{0}$.
+
+**Operation name:** The operation of multiplying a vector by a scalar is called scalar multiplication.
+
+**b) Collinearity Condition of Two Vectors**
+
+**Collinearity theorem:** Two vectors $\vec{a}$ and $\vec{b}$ ($\vec{b} \ne \vec{0}$) are collinear if and only if there exists a real number $k$ such that:
+
+$$\vec{a} = k\vec{b}$$
+
+**Determination of scalar $k$:** If $\vec{a}$ and $\vec{b}$ have the same direction, then $k = \frac{|\vec{a}|}{|\vec{b}|}$; if $\vec{a}$ and $\vec{b}$ have opposite directions, then $k = -\frac{|\vec{a}|}{|\vec{b}|}$.
+
+**Condition for collinear points:** Three distinct points $A, B, C$ are collinear if and only if there exists a non-zero scalar $k$ such that $\vec{AB} = k\vec{AC}$.
+
+**c) Illustrative Examples on Scalar Multiplication**
+
+**Example 1 (Finding scalar coefficients on a line segment):** Let $AB$ be a line segment of length $6\text{ cm}$. Let $M$ be a point on $AB$ such that $AM = 2\text{ cm}$. Find the real number $k$ in each of the following equations: a) $\vec{AM} = k\vec{AB}$; b) $\vec{MB} = k\vec{MA}$.
+
+**Solution for Example 1:**
+
+• a) Since $M$ lies between $A$ and $B$, the vectors $\vec{AM}$ and $\vec{AB}$ have the same direction. The ratio of magnitudes is $\frac{AM}{AB} = \frac{2}{6} = \frac{1}{3}$. Thus $k = \frac{1}{3}$, meaning $\vec{AM} = \frac{1}{3}\vec{AB}$.
+
+• b) The length of $MB$ is $MB = AB - AM = 6 - 2 = 4\text{ cm}$. The vectors $\vec{MB}$ and $\vec{MA}$ have opposite directions. The ratio of magnitudes is $\frac{MB}{MA} = \frac{4}{2} = 2$. Thus $k = -2$, meaning $\vec{MB} = -2\vec{MA}$.
+
+**Example 2 (Proving three points are collinear):** In triangle $ABC$, let $M$ be a point on side $BC$ such that $MB = 2MC$. Prove that points $A, M, N$ are collinear, given that point $N$ satisfies $\vec{AN} = \frac{1}{3}\vec{AB} + \frac{2}{3}\vec{AC}$.
+
+**Solution for Example 2:**
+
+• Since $M$ belongs to segment $BC$ and $MB = 2MC$, we have $\vec{MB} = -2\vec{MC} \Leftrightarrow \vec{MB} + 2\vec{MC} = \vec{0}$.
+
+• With initial point $A$, substitute: $(\vec{AB} - \vec{AM}) + 2(\vec{AC} - \vec{AM}) = \vec{0} \Leftrightarrow 3\vec{AM} = \vec{AB} + 2\vec{AC} \Leftrightarrow \vec{AM} = \frac{1}{3}\vec{AB} + \frac{2}{3}\vec{AC}$.
+
+• Therefore, $\vec{AN} = \vec{AM}$, which implies that $N$ coincides with $M$. Hence, points $A, M, N$ are collinear.
+
+**Properties of Scalar Multiplication**
+
+**a) Fundamental Algebraic Properties**
+
+**For any vectors $\vec{a}, \vec{b}$ and any real scalars $k, t$, the following hold:**
+
+• Associative property: $k(t\vec{a}) = (kt)\vec{a}$
+
+• Distributive over scalar addition: $(k + t)\vec{a} = k\vec{a} + t\vec{a}$
+
+• Distributive over vector addition: $k(\vec{a} + \vec{b}) = k\vec{a} + k\vec{b}$
+
+• Distributive over vector subtraction: $k(\vec{a} - \vec{b}) = k\vec{a} - k\vec{b}$
+
+• Identity properties: $1\vec{a} = \vec{a}; \quad (-1)\vec{a} = -\vec{a}$
+
+**b) Key Extended Vector Formulas**
+
+**Midpoint formula with arbitrary origin:** If $I$ is the midpoint of segment $AB$, then for any arbitrary point $O$: $\vec{OA} + \vec{OB} = 2\vec{OI} \Leftrightarrow \vec{OI} = \frac{1}{2}(\vec{OA} + \vec{OB})$.
+
+**Centroid formula with arbitrary origin:** If $G$ is the centroid of triangle $ABC$, then for any arbitrary point $O$: $\vec{OA} + \vec{OB} + \vec{OC} = 3\vec{OG} \Leftrightarrow \vec{OG} = \frac{1}{3}(\vec{OA} + \vec{OB} + \vec{OC})$.
+
+**Median vector formula:** If $AM$ is the median of triangle $ABC$, then $\vec{AM} = \frac{1}{2}(\vec{AB} + \vec{AC})$.
+
+**c) Illustrative Examples on Algebraic Properties**
+
+**Example 3 (Simplification in a quadrilateral):** Let $ABCD$ be a quadrilateral. Let $M$ and $N$ be the midpoints of $AB$ and $CD$, respectively. Prove that $\vec{AC} + \vec{BD} = 2\vec{MN}$.
+
+**Solution for Example 3:**
+
+• By the triangle rule, express vectors via segment $MN$:
+
+$$\vec{AC} = \vec{AM} + \vec{MN} + \vec{NC}$$
+
+$$\vec{BD} = \vec{BM} + \vec{MN} + \vec{ND}$$
+
+• Adding both equations term by term:
+
+$$\vec{AC} + \vec{BD} = (\vec{AM} + \vec{BM}) + 2\vec{MN} + (\vec{NC} + \vec{ND})$$
+
+• Since $M$ is the midpoint of $AB$, $\vec{AM} + \vec{BM} = \vec{0}$; since $N$ is the midpoint of $CD$, $\vec{NC} + \vec{ND} = \vec{0}$.
+
+• It follows that $\vec{AC} + \vec{BD} = 2\vec{MN}$ (Q.E.D.).
+
+**Decomposing a Vector in Terms of Two Non-Collinear Vectors**
+
+**a) Vector Decomposition Theorem**
+
+**Statement of the theorem:** Let $\vec{a}$ and $\vec{b}$ be two non-collinear vectors. Then any arbitrary vector $\vec{u}$ in the plane can be uniquely expressed (decomposed) as a linear combination of $\vec{a}$ and $\vec{b}$, meaning that there exists a unique pair of real numbers $(x; y)$ such that:
+
+$$\vec{u} = x\vec{a} + y\vec{b}$$
+
+**Geometric significance:** This theorem establishes that any two non-collinear vectors form a basis for the 2D plane, bridging geometric configurations with coordinate-free algebraic manipulations.
+
+**b) Illustrative Examples on Vector Decomposition**
+
+**Example 4 (Expressing a vector in a triangle):** In triangle $ABC$, let $M$ be the midpoint of side $BC$, and let $N$ be a point on side $AC$ such that $NC = 2NA$. Decompose vector $\vec{MN}$ in terms of the side vectors $\vec{AB}$ and $\vec{AC}$.
+
+**Solution for Example 4:**
+
+• Applying the subtraction rule with origin $A$: $\vec{MN} = \vec{AN} - \vec{AM}$.
+
+• Since $NC = 2NA$ and $N$ lies on $AC$, we have $AN = \frac{1}{3}AC$, which gives $\vec{AN} = \frac{1}{3}\vec{AC}$.
+
+• Since $M$ is the midpoint of $BC$, we have $\vec{AM} = \frac{1}{2}(\vec{AB} + \vec{AC})$.
+
+• Substituting into the expression:
+
+$$\vec{MN} = \frac{1}{3}\vec{AC} - \frac{1}{2}(\vec{AB} + \vec{AC}) = -\frac{1}{2}\vec{AB} + \left(\frac{1}{3} - \frac{1}{2}\right)\vec{AC} = -\frac{1}{2}\vec{AB} - \frac{1}{6}\vec{AC}$$
+
+**Physical Applications: Center of Mass of a System of Particles**
+
+**a) Concept of Center of Mass**
+
+**Definition in physics:** In mechanics, the center of mass (or barycenter) of a system of particles $A_1, A_2, \dots, A_n$ with masses $m_1, m_2, \dots, m_n$, respectively, is the unique point $M$ satisfying the vector equation:
+
+$$m_1\vec{MA_1} + m_2\vec{MA_2} + \dots + m_n\vec{MA_n} = \vec{0}$$
+
+**Position vector of center of mass:** With respect to any arbitrary reference origin $O$, the position vector of the center of mass $M$ is given by:
+
+$$\vec{OM} = \frac{m_1\vec{OA_1} + m_2\vec{OA_2} + \dots + m_n\vec{OA_n}}{m_1 + m_2 + \dots + m_n}$$
+
+**b) Illustrative Examples in Physics**
+
+**Example 5 (Lever balance point):** A lightweight lever bar $AB$ of length $120\text{ cm}$ carries two loads at its ends: mass $m_1 = 3\text{ kg}$ at $A$, and mass $m_2 = 1\text{ kg}$ at $B$. Find the location of the fulcrum $M$ on the bar so that the lever remains balanced in equilibrium.
+
+**Solution for Example 5:**
+
+• For equilibrium, the fulcrum $M$ must be the center of mass of the two particles $(A, m_1)$ and $(B, m_2)$, which satisfies:
+
+$$3\vec{MA} + 1\vec{MB} = \vec{0} \Leftrightarrow \vec{MB} = -3\vec{MA}$$
+
+• This equation indicates that $\vec{MB}$ and $\vec{MA}$ are oppositely directed, so $M$ lies strictly between $A$ and $B$.
+
+• Equating magnitudes yields: $MB = 3MA$. Since $MA + MB = AB = 120\text{ cm}$:
+
+$$MA + 3MA = 120 \Leftrightarrow 4MA = 120 \Leftrightarrow MA = 30\text{ cm} \text{ and } MB = 90\text{ cm}$$
+
+• Conclusion: The fulcrum $M$ must be placed $30\text{ cm}$ from end $A$.
