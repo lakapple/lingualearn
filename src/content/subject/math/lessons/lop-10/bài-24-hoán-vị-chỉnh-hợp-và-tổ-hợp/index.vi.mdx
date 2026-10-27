@@ -1,0 +1,247 @@
+---
+title: 'Bài 24: Hoán vị, chỉnh hợp và tổ hợp.'
+description: định nghĩa, công thức hoán vị, chỉnh hợp và tổ hợp với ví dụ minh họa.
+tags:
+  - lớp 10
+  - Hoán vị
+  - tổ hợp
+  - chỉnh hợp
+  - giai thừa
+grade: 10
+order: 24
+updatedDate: 2026-10-27T21:44:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hoán vị (permutation), giai thừa ($n!$)
+
+·       Chỉnh hợp chập $k$ của $n$ phần tử ($A_n^k$)
+
+·       Tổ hợp chập $k$ của $n$ phần tử ($C_n^k$)
+
+·       Sử dụng máy tính cầm tay tính toán tổ hợp
+
+### **Kiến thức, kĩ năng:**
+
+·       Hiểu bản chất của các khái niệm hoán vị, chỉnh hợp, tổ hợp và phân biệt rõ sự khác nhau giữa chúng (có hay không sắp xếp thứ tự).
+
+·       Tính số hoán vị $P_n = n!$, số chỉnh hợp $A_n^k = \frac{n!}{(n-k)!}$, và số tổ hợp $C_n^k = \frac{n!}{(n-k)!k!}$.
+
+·       Sử dụng thành thạo máy tính cầm tay để tính toán số các hoán vị, chỉnh hợp, tổ hợp.
+
+·       Vận dụng hoán vị, chỉnh hợp và tổ hợp vào giải quyết các bài toán đếm thực tiễn (xếp hàng, chọn nhóm, thành lập đội hình bóng đá).
+
+## Hoán vị
+
+<Youtube url="https://www.youtube.com/watch?v=example_hoan_vi"/>
+
+### a) Khái niệm hoán vị
+
+Định nghĩa:
+Cho tập hợp $A$ gồm $n$ phần tử ($n \ge 1$). Mỗi cách sắp xếp có thứ tự $n$ phần tử của tập hợp $A$ được gọi là một hoán vị của $n$ phần tử đó.
+
+### b) Công thức tính số hoán vị và giai thừa
+
+Công thức tính số hoán vị:
+Số các hoán vị của tập hợp có $n$ phần tử, kí hiệu là $P_n$, được tính bằng tích của $n$ số nguyên dương đầu tiên:
+$$P_n = n(n - 1)(n - 2) \dots 2 \cdot 1 = n!$$
+trong đó $n!$ đọc là "$n$ giai thừa".
+Quy ước: $0! = 1$.
+
+### c) Ví dụ và luyện tập về hoán vị
+
+**Ví dụ 1:** Từ các chữ số $6, 7, 8$ và $9$, có thể lập được bao nhiêu số tự nhiên có bốn chữ số khác nhau?
+
+Lời giải Ví dụ 1:
+• Mỗi cách sắp xếp bốn chữ số đã cho để lập thành một số có bốn chữ số khác nhau chính là một hoán vị của 4 phần tử.
+• Vậy số các số có bốn chữ số khác nhau lập được là:
+$$P_4 = 4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24\text{ (số).}$$
+
+**Luyện tập 1:** Trong một cuộc thi điền kinh gồm 6 vận động viên chạy trên 6 đường chạy. Hỏi có bao nhiêu cách xếp các vận động viên vào các đường chạy đó?
+
+Lời giải Luyện tập 1:
+• Mỗi cách xếp 6 vận động viên vào 6 đường chạy khác nhau (mỗi người một đường) là một hoán vị của 6 phần tử.
+• Số cách xếp là: $P_6 = 6! = 720$ (cách).
+
+## Chỉnh hợp
+
+<Youtube url="https://www.youtube.com/watch?v=example_chinh_hop"/>
+
+### a) Khái niệm chỉnh hợp
+
+Định nghĩa:
+Cho tập hợp $A$ gồm $n$ phần tử và một số nguyên $k$ với $1 \le k \le n$. Mỗi cách sắp xếp có thứ tự $k$ phần tử từ $n$ phần tử của tập hợp $A$ được gọi là một chỉnh hợp chập $k$ của $n$ phần tử đó.
+
+### b) Công thức tính số các chỉnh hợp
+
+Công thức tính:
+Số các chỉnh hợp chập $k$ của $n$ phần tử ($1 \le k \le n$), kí hiệu là $A_n^k$, được tính bởi công thức:
+$$A_n^k = n(n - 1)(n - 2) \dots (n - k + 1) = \frac{n!}{(n - k)!}$$
+Chú ý: Mỗi hoán vị của $n$ phần tử cũng chính là một chỉnh hợp chập $n$ của $n$ phần tử đó, do đó $P_n = A_n^n$.
+
+### c) Ví dụ và luyện tập về chỉnh hợp
+
+**Ví dụ 2:** Một lớp có 30 học sinh, giáo viên cần chọn lần lượt 4 học sinh để trồng 4 cây khác nhau. Hỏi giáo viên có bao nhiêu cách chọn?
+
+Lời giải Ví dụ 2:
+• Mỗi cách chọn lần lượt 4 học sinh từ 30 học sinh để trồng 4 cây khác nhau (có tính thứ tự phân công cây) là một chỉnh hợp chập 4 của 30 phần tử.
+• Số cách chọn là:
+$$A\_{30}^4 = \frac{30!}{(30 - 4)!} = \frac{30!}{26!} = 30 \cdot 29 \cdot 28 \cdot 27 = 657\\,720\text{ (cách).}$$
+
+**Luyện tập 2:** Trong một giải đua ngựa gồm 12 con ngựa, người ta quan tâm đến 3 vị trí dẫn đầu: nhất, nhì và ba. Hỏi có bao nhiêu kết quả có thể xảy ra?
+
+Lời giải Luyện tập 2:
+• Mỗi kết quả xếp hạng nhất, nhì, ba từ 12 con ngựa là một chỉnh hợp chập 3 của 12 phần tử.
+• Số kết quả có thể xảy ra là:
+$$A\_{12}^3 = \frac{12!}{9!} = 12 \cdot 11 \cdot 10 = 1\\,320\text{ (kết quả).}$$
+
+## Tổ hợp
+
+<Youtube url="https://www.youtube.com/watch?v=example_to_hop"/>
+
+### a) Khái niệm tổ hợp
+
+Định nghĩa:
+Cho tập hợp $A$ gồm $n$ phần tử và một số nguyên $k$ với $0 \le k \le n$. Mỗi tập con gồm $k$ phần tử của $A$ được gọi là một tổ hợp chập $k$ của $n$ phần tử đó.
+Phân biệt chỉnh hợp và tổ hợp: Chỉnh hợp là chọn có sắp xếp thứ tự, còn tổ hợp là chọn không quan tâm đến thứ tự các phần tử.
+
+### b) Công thức tính số các tổ hợp
+
+Công thức tính:
+Số các tổ hợp chập $k$ của $n$ phần tử ($0 \le k \le n$), kí hiệu là $C_n^k$, được tính bởi công thức:
+$$C_n^k = \frac{A_n^k}{k!} = \frac{n!}{(n - k)! k!}$$
+Quy ước: $C_n^0 = 1$, $C_n^n = 1$.
+
+### c) Ví dụ và luyện tập về tổ hợp
+
+**Ví dụ 3:** Có 7 bạn học sinh muốn chơi cờ cá ngựa, nhưng mỗi ván chỉ có 4 người chơi. Hỏi có bao nhiêu cách chọn 4 bạn từ 7 bạn để tham gia một ván cờ?
+
+Lời giải Ví dụ 3:
+• Mỗi cách chọn ra 4 bạn từ 7 bạn (không phân biệt vị trí) là một tổ hợp chập 4 của 7 phần tử.
+• Số cách chọn là:
+$$C_7^4 = \frac{7!}{(7 - 4)!4!} = \frac{7!}{3!4!} = \frac{7 \cdot 6 \cdot 5}{3 \cdot 2 \cdot 1} = 35\text{ (cách).}$$
+
+**Luyện tập 3:** Trong ngân hàng đề thi môn Vật lí có 20 câu lí thuyết và 40 câu bài tập. Người ta chọn ra 2 câu lí thuyết và 3 câu bài tập để tạo thành một đề thi. Hỏi có bao nhiêu cách lập đề thi gồm 5 câu hỏi theo cách chọn như trên?
+
+Lời giải Luyện tập 3:
+• Công đoạn 1 (Chọn 2 câu lí thuyết từ 20 câu): Có $C\_{20}^2$ cách.
+• Công đoạn 2 (Chọn 3 câu bài tập từ 40 câu): Có $C\_{40}^3$ cách.
+• Theo quy tắc nhân, tổng số cách lập đề thi là:
+$$C\_{20}^2 \cdot C\_{40}^3 = \frac{20 \cdot 19}{2} \cdot \frac{40 \cdot 39 \cdot 38}{3 \cdot 2 \cdot 1} = 190 \cdot 9\\,880 = 1\\,877\\,200\text{ (đề thi).}$$
+
+## Ứng dụng hoán vị, chỉnh hợp, tổ hợp vào các bài toán đếm
+
+<Youtube url="https://www.youtube.com/watch?v=example_ung_dung_hoan_vi_chinh_hop_to_hop"/>
+
+### a) Bài toán thực tế tổng hợp
+
+**Ví dụ 4:** Anh Hưng dự định từ Hà Nội tham quan Đền Hùng, Ninh Bình, Hạ Long, Sơn Tây và Bát Tràng (tổng cộng 5 địa điểm), mỗi ngày đi đúng một địa điểm rồi quay về Hà Nội.
+a) Có bao nhiêu lịch trình đi tham quan tất cả 5 địa điểm (có tính thứ tự tham quan)?
+b) Nếu anh Hưng chỉ có 3 ngày để tham quan 3 trong 5 địa điểm trên, có bao nhiêu cách sắp xếp lịch trình?
+
+Lời giải Ví dụ 4:
+• a) Mỗi lịch trình tham quan cả 5 địa điểm là một hoán vị của 5 phần tử. Số cách sắp xếp lịch trình là:
+$$P_5 = 5! = 120\text{ (cách).}$$
+• b) Mỗi lịch trình tham quan 3 địa điểm từ 5 địa điểm (có tính thứ tự ngày đi) là một chỉnh hợp chập 3 của 5 phần tử. Số cách sắp xếp là:
+$$A_5^3 = \frac{5!}{(5 - 3)!} = \frac{5!}{2!} = 60\text{ (cách).}$$
+
+**Ví dụ 5 (Đội hình đội tuyển bóng đá quốc gia):** Danh sách dự trận đấu có 23 cầu thủ (3 thủ môn, 7 hậu vệ, 8 tiền vệ, 5 tiền đạo). Huấn luyện viên chọn sơ đồ 3-4-3 (3 hậu vệ, 4 tiền vệ, 3 tiền đạo và 1 thủ môn). Nếu đã biết trước vị trí thủ môn, đối thủ dự đoán đội hình bằng cách xét mọi khả năng, hỏi họ phải xét bao nhiêu đội hình khác nhau?
+
+Lời giải Ví dụ 5:
+• Vì vị trí thủ môn đã cố định, việc chọn 10 cầu thủ còn lại cho các tuyến gồm 3 công đoạn độc lập:
+  1. Chọn 3 hậu vệ từ 7 hậu vệ: $C_7^3 = 35$ cách.
+  2. Chọn 4 tiền vệ từ 8 tiền vệ: $C_8^4 = 70$ cách.
+  3. Chọn 3 tiền đạo từ 5 tiền đạo: $C_5^3 = 10$ cách.
+• Theo quy tắc nhân, tổng số đội hình khả dĩ cần xét là:
+$$C_7^3 \cdot C_8^4 \cdot C_5^3 = 35 \cdot 70 \cdot 10 = 24\\,500\text{ (đội hình).}$$
+
+### b) Sử dụng máy tính cầm tay
+
+Hướng dẫn sử dụng máy tính cầm tay (CASIO / VINACAS):
+• Tính giai thừa ($n!$): Nhập số $n$, bấm tổ hợp phím \`SHIFT\` rồi bấm nút \`x!\` (hoặc phím tương ứng trên dòng lệnh).
+• Tính chỉnh hợp chập $k$ của $n$ ($A_n^k$): Nhập số $n$, bấm \`SHIFT\` và nút \`nPr\`, sau đó nhập số $k$ rồi bấm dấu \`=\`. (Ví dụ tính $A\_{15}^2$, bấm: \`15\` \`SHIFT\` \`nPr\` \`2\` \`=\`).
+• Tính tổ hợp chập $k$ của $n$ ($C_n^k$): Nhập số $n$, bấm \`SHIFT\` và nút \`nCr\`, sau đó nhập số $k$ rồi bấm dấu \`=\`. (Ví dụ tính $C\_{20}^5$, bấm: \`20\` \`SHIFT\` \`nCr\` \`5\` \`=\`).
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Lựa chọn thành viên câu lạc bộ):** Một câu lạc bộ có 20 học sinh.
+a) Có bao nhiêu cách chọn 6 thành viên vào Ban quản lí?
+b) Có bao nhiêu cách chọn 1 Trưởng ban, 1 Phó ban và 4 thành viên khác vào Ban quản lí?
+
+Lời giải Vận dụng:
+• a) Mỗi cách chọn 6 học sinh từ 20 học sinh vào Ban quản lí (không phân biệt chức vụ) là một tổ hợp chập 6 của 20 phần tử:
+$$C\_{20}^6 = \frac{20!}{14! \cdot 6!} = 38\\,760\text{ (cách).}$$
+• b) Việc phân công Ban quản lí gồm các công đoạn liên tiếp:
+  + Công đoạn 1 (Chọn 1 Trưởng ban từ 20 học sinh): $C\_{20}^1 = 20$ cách.
+  + Công đoạn 2 (Chọn 1 Phó ban từ 19 học sinh còn lại): $C\_{19}^1 = 19$ cách.
+  + Công đoạn 3 (Chọn 4 thành viên khác từ 18 học sinh còn lại): $C\_{18}^4 = 3\\,060$ cách.
+  Theo quy tắc nhân, tổng số cách chọn là: $20 \cdot 19 \cdot 3\\,060 = 1\\,162\\,800$ cách (hoặc tính nhanh bằng $A\_{20}^2 \cdot C\_{18}^4 = 380 \cdot 3\\,060 = 1\\,162\\,800$).
+
+### b) Hệ thống bài tập cuối bài
+
+**Exercise 8.6:** An artist needs to display 10 distinct art paintings in a horizontal row. How many ways can the artist arrange the paintings?
+
+Solution for Exercise 8.6:
+• Arranging 10 distinct paintings in a row is a permutation of 10 items.
+• The number of arrangement ways is: $P\_{10} = 10! = 3\\,628\\,800$ ways.
+
+**Exercise 8.7:** Using the digits $0, 1, 2, 3, 4$, how many 3-digit natural numbers with distinct digits can be formed?
+
+Solution for Exercise 8.7:
+• Let the number be $\overline{abc}$ with $a, b, c \in \\{0; 1; 2; 3; 4\\}$, $a \ne 0$, and all digits distinct.
+  + Digit $a$: 4 choices ($1, 2, 3, 4$).
+  + Digit $b$: 4 choices (any digit except $a$).
+  + Digit $c$: 3 choices (any digit except $a$ and $b$).
+• By the multiplication rule, the total number of such 3-digit numbers is: $4 \cdot 4 \cdot 3 = 48$ numbers.
+
+**Exercise 8.8:** How many ways are there to choose a subset of two positive integers less than 100? How about a subset of three positive integers less than 100?
+
+Solution for Exercise 8.8:
+• The set of positive integers less than 100 is $\\{1, 2, \dots, 99\\}$, containing 99 elements ($n = 99$).
+• Number of ways to choose a subset of 2 numbers: $C\_{99}^2 = \frac{99 \cdot 98}{2} = 4\text{,}851$ ways.
+• Number of ways to choose a subset of 3 numbers: $C\_{99}^3 = \frac{99 \cdot 98 \cdot 97}{6} = 156\text{,}849$ ways.
+
+**Exercise 8.9:** Ha has 5 blue marbles and 7 red marbles. How many ways can Ha choose exactly 2 marbles of different colors?
+
+Solution for Exercise 8.9:
+• Choosing 2 marbles of different colors means choosing 1 blue marble and 1 red marble.
+• Number of ways to choose 1 blue marble from 5: $C_5^1 = 5$.
+• Number of ways to choose 1 red marble from 7: $C_7^1 = 7$.
+• By the multiplication rule, the total number of ways to choose 2 differently colored marbles is: $5 \cdot 7 = 35$ ways.
+
+**Exercise 8.10:** A chess club has 10 male members and 7 female members. The coach wishes to select 4 members to compete in a chess tournament.
+a) How many ways can 4 male members be chosen?
+b) How many ways can 4 members be chosen without gender restriction?
+c) How many ways can 4 members be chosen such that exactly 2 are male and 2 are female?
+
+Solution for Exercise 8.10:
+• a) Selecting 4 male members out of 10: $C\_{10}^4 = \frac{10 \cdot 9 \cdot 8 \cdot 7}{24} = 210$ ways.
+• b) Selecting 4 members out of the total 17 members without restriction: $C\_{17}^4 = \frac{17 \cdot 16 \cdot 15 \cdot 14}{24} = 2\text{,}380$ ways.
+• c) Selecting 2 male members from 10 ($C\_{10}^2 = 45$) and 2 female members from 7 ($C_7^2 = 21$):
+  Total ways: $C\_{10}^2 \cdot C_7^2 = 45 \cdot 21 = 945$ ways.
+
+**Exercise 8.11:** How many natural numbers divisible by 5 are there such that each number has four distinct digits?
+
+Solution for Exercise 8.11:
+• Let the 4-digit number be $\overline{abcd}$ with $a \ne 0$, and all four digits distinct, with $\overline{abcd} \vdots 5$.
+• Since the number is divisible by 5, the last digit $d$ must be either 0 or 5. We examine 2 cases:
+  + Case 1: $d = 0$.
+    - Digit $a$: 9 choices ($1-9$).
+    - Digit $b$: 8 choices (any digit except $a$ and 0).
+    - Digit $c$: 7 choices.
+    Number of such numbers: $9 \cdot 8 \cdot 7 \cdot 1 = 504$.
+  + Case 2: $d = 5$.
+    - Digit $a$: 8 choices ($1-9$ except 5).
+    - Digit $b$: 8 choices ($0-9$ except $a$ and 5).
+    - Digit $c$: 7 choices.
+    Number of such numbers: $8 \cdot 8 \cdot 7 \cdot 1 = 448$.
+• By the addition rule, the total number of 4-digit numbers with distinct digits divisible by 5 is:
+$$504 + 448 = 952\text{ numbers.}$$.

@@ -1,0 +1,247 @@
+---
+title: 'Lesson 24: Permutations, Combinations, and Variations'
+description: Definitions and formulas for permutations, variations, and combinations, with illustrative examples.
+tags:
+  - grade 10
+  - Permutation
+  - variation
+  - combination
+  - factorial
+grade: 10
+order: 24
+updatedDate: 2026-10-27T21:44:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Permutation, factorial ($n!$)
+
+·       $k$-permutation of $n$ elements ($A_n^k$)
+
+·       $k$-combination of $n$ elements ($C_n^k$)
+
+·       Handheld calculator computation of combinatorics
+
+### **Knowledge and Skills:**
+
+·       Understand the essence of permutations, arrangements, and combinations, and distinguish clearly between them (with or without order).
+
+·       Compute the number of permutations $P_n = n!$, arrangements $A_n^k = \frac{n!}{(n-k)!}$, and combinations $C_n^k = \frac{n!}{(n-k)!k!}$.
+
+·       Use handheld calculators proficiently to compute permutations, arrangements, and combinations.
+
+·       Apply permutations, arrangements, and combinations to solve real-world combinatorial counting problems (lining up, selecting groups, forming soccer squads).
+
+## Permutations
+
+<Youtube url="https://www.youtube.com/watch?v=example_hoan_vi"/>
+
+### a) Definition of a Permutation
+
+Definition:
+Let $A$ be a set consisting of $n$ elements ($n \ge 1$). Each ordered arrangement of all $n$ elements of $A$ is called a permutation of these $n$ elements.
+
+### b) Formula for Permutations and Factorials
+
+Formula for the Number of Permutations:
+The number of permutations of a set of $n$ elements, denoted by $P_n$, is given by the product of the first $n$ positive integers:
+$$P_n = n(n - 1)(n - 2) \dots 2 \cdot 1 = n!$$
+where $n!$ is read as "$n$ factorial".
+Convention: $0! = 1$.
+
+### c) Illustrative Examples and Practice on Permutations
+
+**Example 1:** Using the digits $6, 7, 8$, and $9$, how many 4-digit natural numbers with distinct digits can be formed?
+
+Solution for Example 1:
+• Each ordered arrangement of the four given digits to form a 4-digit number with distinct digits is a permutation of 4 elements.
+• Thus, the number of such 4-digit numbers is:
+$$P_4 = 4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24\text{ (numbers).}$$
+
+**Practice 1:** In an athletic competition involving 6 runners across 6 running lanes, how many ways can the athletes be assigned to the lanes?
+
+Solution for Practice 1:
+• Each assignment of 6 runners to 6 distinct lanes (one person per lane) is a permutation of 6 elements.
+• The number of arrangement ways is: $P_6 = 6! = 720$ ways.
+
+## Arrangements
+
+<Youtube url="https://www.youtube.com/watch?v=example_chinh_hop"/>
+
+### a) Definition of an Arrangement
+
+Definition:
+Let $A$ be a set of $n$ elements and let $k$ be an integer such that $1 \le k \le n$. Each ordered arrangement of $k$ elements chosen from the $n$ elements of $A$ is called an arrangement of $n$ elements taken $k$ at a time (or a $k$-permutation of $n$ elements).
+
+### b) Formula for the Number of Arrangements
+
+Computation Formula:
+The number of $k$-permutations of $n$ elements ($1 \le k \le n$), denoted by $A_n^k$, is computed by the formula:
+$$A_n^k = n(n - 1)(n - 2) \dots (n - k + 1) = \frac{n!}{(n - k)!}$$
+Remark: Every permutation of $n$ elements is also an arrangement of $n$ elements taken $n$ at a time, hence $P_n = A_n^n$.
+
+### c) Illustrative Examples and Practice on Arrangements
+
+**Example 2:** A class has 30 students. The teacher needs to sequentially select 4 students to plant 4 different trees. How many selection ways are available?
+
+Solution for Example 2:
+• Each sequential selection of 4 students out of 30 to plant 4 distinct trees (accounting for assigned tree order) is a $4$-permutation of $30$ elements.
+• The number of ways is:
+$$A\_{30}^4 = \frac{30!}{(30 - 4)!} = \frac{30!}{26!} = 30 \cdot 29 \cdot 28 \cdot 27 = 657\\,720\text{ (ways).}$$
+
+**Practice 2:** In a horse race with 12 competing horses, interest lies only in the top three finishing positions: 1st, 2nd, and 3rd place. How many possible outcomes can occur?
+
+Solution for Practice 2:
+• Each outcome specifying 1st, 2nd, and 3rd place winners among 12 horses is a $3$-permutation of $12$ elements.
+• The number of possible outcomes is:
+$$A\_{12}^3 = \frac{12!}{9!} = 12 \cdot 11 \cdot 10 = 1\\,320\text{ (outcomes).}$$
+
+## Combinations
+
+<Youtube url="https://www.youtube.com/watch?v=example_to_hop"/>
+
+### a) Definition of a Combination
+
+Definition:
+Let $A$ be a set of $n$ elements and let $k$ be an integer such that $0 \le k \le n$. Each subset consisting of $k$ elements chosen from $A$ is called a combination of $n$ elements taken $k$ at a time (or a $k$-combination).
+Distinction between Arrangements and Combinations: An arrangement involves ordered selection, whereas a combination involves selection without regard to order.
+
+### b) Formula for the Number of Combinations
+
+Computation Formula:
+The number of $k$-combinations of $n$ elements ($0 \le k \le n$), denoted by $C_n^k$, is computed by the formula:
+$$C_n^k = \frac{A_n^k}{k!} = \frac{n!}{(n - k)! k!}$$
+Conventions: $C_n^0 = 1$, $C_n^n = 1$.
+
+### c) Illustrative Examples and Practice on Combinations
+
+**Example 3:** Seven students want to play Ludo (Parchisi), but each game accommodates only 4 players. How many ways can 4 students be chosen from the 7 students to participate in a game?
+
+Solution for Example 3:
+• Each selection of 4 students out of 7 (without positional distinction) is a $4$-combination of $7$ elements.
+• The number of ways is:
+$$C_7^4 = \frac{7!}{(7 - 4)!4!} = \frac{7!}{3!4!} = \frac{7 \cdot 6 \cdot 5}{3 \cdot 2 \cdot 1} = 35\text{ (ways).}$$
+
+**Practice 3:** A physics exam question bank contains 20 theoretical questions and 40 numerical exercises. An exam is compiled by selecting 2 theoretical questions and 3 numerical exercises. How many ways can an exam paper of 5 questions be formed according to this rule?
+
+Solution for Practice 3:
+• Stage 1 (Selecting 2 theoretical questions from 20): There are $C\_{20}^2$ ways.
+• Stage 2 (Selecting 3 numerical exercises from 40): There are $C\_{40}^3$ ways.
+• By the multiplication rule, the total number of ways to compile the exam paper is:
+$$C\_{20}^2 \cdot C\_{40}^3 = \frac{20 \cdot 19}{2} \cdot \frac{40 \cdot 39 \cdot 38}{3 \cdot 2 \cdot 1} = 190 \cdot 9\\,880 = 1\\,877\\,200\text{ (exam papers).}$$
+
+## Applications of Permutations, Arrangements, and Combinations in Counting Problems
+
+<Youtube url="https://www.youtube.com/watch?v=example_ung_dung_hoan_vi_chinh_hop_to_hop"/>
+
+### a) Comprehensive Real-World Problems
+
+**Example 4:** Hung plans to visit Hung Temple, Ninh Binh, Ha Long, Son Tay, and Bat Trang from Hanoi (total 5 locations), visiting exactly one location per day and returning to Hanoi each night.
+a) How many travel itineraries are there to visit all 5 locations in sequence?
+b) If Hung has only 3 days to visit 3 out of the 5 locations, how many itinerary arrangements can he make?
+
+Solution for Example 4:
+• a) Visiting all 5 locations in sequence is a permutation of 5 elements. The number of itinerary arrangements is:
+$$P_5 = 5! = 120\text{ (ways).}$$
+• b) Visiting 3 locations out of 5 with daily chronological order is a $3$-permutation of $5$ elements. The number of arrangements is:
+$$A_5^3 = \frac{5!}{(5 - 3)!} = \frac{5!}{2!} = 60\text{ (ways).}$$
+
+**Example 5 (National Football Team Lineup):** The match roster contains 23 players (3 goalkeepers, 7 defenders, 8 midfielders, and 5 forwards). The coach selects a 3-4-3 formation (3 defenders, 4 midfielders, 3 forwards, and 1 goalkeeper). Assuming the goalkeeper position is predetermined, how many distinct team lineups must an opponent analyze by considering all possibilities?
+
+Solution for Example 5:
+• Since the goalkeeper position is fixed, selecting the remaining 10 outfield players across positions consists of 3 independent stages:
+  1. Selecting 3 defenders out of 7: $C_7^3 = 35$ ways.
+  2. Selecting 4 midfielders out of 8: $C_8^4 = 70$ ways.
+  3. Selecting 3 forwards out of 5: $C_5^3 = 10$ ways.
+• By the multiplication rule, the total number of possible lineups to analyze is:
+$$C_7^3 \cdot C_8^4 \cdot C_5^3 = 35 \cdot 70 \cdot 10 = 24\\,500\text{ (lineups).}$$
+
+### b) Handheld Calculator Usage
+
+Handheld Calculator Guide (CASIO / VINACAS):
+• Calculating Factorial ($n!$): Enter number $n$, press \`SHIFT\`, then press the key corresponding to \`x!\`.
+• Calculating Arrangements ($A_n^k$): Enter number $n$, press \`SHIFT\` and \`nPr\`, enter $k$, then press \`=\`. (Example for $A\_{15}^2$: press \`15\` \`SHIFT\` \`nPr\` \`2\` \`=\`).
+• Calculating Combinations ($C_n^k$): Enter number $n$, press \`SHIFT\` and \`nCr\`, enter $k$, then press \`=\`. (Example for $C\_{20}^5$: press \`20\` \`SHIFT\` \`nCr\` \`5\` \`=\`).
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Club Board Selection):** A student club has 20 members.
+a) How many ways can 6 members be chosen to form the executive board?
+b) How many ways can a President, a Vice President, and 4 other members be chosen to form the executive board?
+
+Solution for Application:
+• a) Choosing 6 members out of 20 without positional distinction is a $6$-combination of $20$ elements:
+$$C\_{20}^6 = \frac{20!}{14! \cdot 6!} = 38\\,760\text{ (ways).}$$
+• b) Assigning executive roles consists of sequential stages:
+  + Stage 1 (Select 1 President from 20 students): $C\_{20}^1 = 20$ ways.
+  + Stage 2 (Select 1 Vice President from 19 remaining students): $C\_{19}^1 = 19$ ways.
+  + Stage 3 (Select 4 other members from 18 remaining students): $C\_{18}^4 = 3\\,060$ ways.
+  By the multiplication rule, the total number of ways is: $20 \cdot 19 \cdot 3\\,060 = 1\\,162\\,800$ ways (alternatively computed as $A\_{20}^2 \cdot C\_{18}^4 = 380 \cdot 3\\,060 = 1\\,162\\,800$).
+
+### b) Detailed Section Exercises
+
+**Exercise 8.6:** An artist needs to display 10 distinct art paintings in a horizontal row. How many ways can the artist arrange the paintings?
+
+Solution for Exercise 8.6:
+• Arranging 10 distinct paintings in a row is a permutation of 10 items.
+• The number of arrangement ways is: $P\_{10} = 10! = 3\\,628\\,800$ ways.
+
+**Exercise 8.7:** Using the digits $0, 1, 2, 3, 4$, how many 3-digit natural numbers with distinct digits can be formed?
+
+Solution for Exercise 8.7:
+• Let the number be $\overline{abc}$ with $a, b, c \in \\{0; 1; 2; 3; 4\\}$, $a \ne 0$, and all digits distinct.
+  + Digit $a$: 4 choices ($1, 2, 3, 4$).
+  + Digit $b$: 4 choices (any digit except $a$).
+  + Digit $c$: 3 choices (any digit except $a$ and $b$).
+• By the multiplication rule, the total number of such 3-digit numbers is: $4 \cdot 4 \cdot 3 = 48$ numbers.
+
+**Exercise 8.8:** How many ways are there to choose a subset of two positive integers less than 100? How about a subset of three positive integers less than 100?
+
+Solution for Exercise 8.8:
+• The set of positive integers less than 100 is $\\{1, 2, \dots, 99\\}$, containing 99 elements ($n = 99$).
+• Number of ways to choose a subset of 2 numbers: $C\_{99}^2 = \frac{99 \cdot 98}{2} = 4\text{,}851$ ways.
+• Number of ways to choose a subset of 3 numbers: $C\_{99}^3 = \frac{99 \cdot 98 \cdot 97}{6} = 156\text{,}849$ ways.
+
+**Exercise 8.9:** Ha has 5 blue marbles and 7 red marbles. How many ways can Ha choose exactly 2 marbles of different colors?
+
+Solution for Exercise 8.9:
+• Choosing 2 marbles of different colors means choosing 1 blue marble and 1 red marble.
+• Number of ways to choose 1 blue marble from 5: $C_5^1 = 5$.
+• Number of ways to choose 1 red marble from 7: $C_7^1 = 7$.
+• By the multiplication rule, the total number of ways to choose 2 differently colored marbles is: $5 \cdot 7 = 35$ ways.
+
+**Exercise 8.10:** A chess club has 10 male members and 7 female members. The coach wishes to select 4 members to compete in a chess tournament.
+a) How many ways can 4 male members be chosen?
+b) How many ways can 4 members be chosen without gender restriction?
+c) How many ways can 4 members be chosen such that exactly 2 are male and 2 are female?
+
+Solution for Exercise 8.10:
+• a) Selecting 4 male members out of 10: $C\_{10}^4 = \frac{10 \cdot 9 \cdot 8 \cdot 7}{24} = 210$ ways.
+• b) Selecting 4 members out of the total 17 members without restriction: $C\_{17}^4 = \frac{17 \cdot 16 \cdot 15 \cdot 14}{24} = 2\text{,}380$ ways.
+• c) Selecting 2 male members from 10 ($C\_{10}^2 = 45$) and 2 female members from 7 ($C_7^2 = 21$):
+  Total ways: $C\_{10}^2 \cdot C_7^2 = 45 \cdot 21 = 945$ ways.
+
+**Exercise 8.11:** How many natural numbers divisible by 5 are there such that each number has four distinct digits?
+
+Solution for Exercise 8.11:
+• Let the 4-digit number be $\overline{abcd}$ with $a \ne 0$, and all four digits distinct, with $\overline{abcd} \vdots 5$.
+• Since the number is divisible by 5, the last digit $d$ must be either 0 or 5. We examine 2 cases:
+  + Case 1: $d = 0$.
+    - Digit $a$: 9 choices ($1-9$).
+    - Digit $b$: 8 choices (any digit except $a$ and 0).
+    - Digit $c$: 7 choices.
+    Number of such numbers: $9 \cdot 8 \cdot 7 \cdot 1 = 504$.
+  + Case 2: $d = 5$.
+    - Digit $a$: 8 choices ($1-9$ except 5).
+    - Digit $b$: 8 choices ($0-9$ except $a$ and 5).
+    - Digit $c$: 7 choices.
+    Number of such numbers: $8 \cdot 8 \cdot 7 \cdot 1 = 448$.
+• By the addition rule, the total number of 4-digit numbers with distinct digits divisible by 5 is:
+$$504 + 448 = 952\text{ numbers.}$$.
