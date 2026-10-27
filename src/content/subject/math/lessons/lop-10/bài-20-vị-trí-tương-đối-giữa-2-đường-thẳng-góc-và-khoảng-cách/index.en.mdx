@@ -1,0 +1,265 @@
+---
+title: 'Lesson 20: Relative Positions of Two Straight Lines; Angles and Distances.'
+description: 'Theoretical Framework: Relative Positions of Two Straight Lines, Angles, and Distances with Illustrative Examples'
+tags:
+  - grade 10
+  - Relative positions of two straight lines
+  - Distance from a point to a line
+  - Angle between two lines
+  - perpendicular lines
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Relative positions of two straight lines
+
+·       Angle between two lines, perpendicular lines
+
+·       Distance from a point to a line
+
+### **Knowledge and Skills:**
+
+·       Identify intersecting, parallel, coincident, and perpendicular lines.
+
+·       Derive and proficiently apply the formula for the angle between two straight lines.
+
+·       Derive and proficiently compute the distance from a point to a straight line.
+
+·       Apply angle and distance formulas to solve real-world problems.
+
+## Relative Positions of Two Straight Lines
+
+<Youtube url="https://www.youtube.com/watch?v=example_vi_tri_tuong_doi_hai_duong_thang"/>
+
+### a) Method for Determining Relative Positions
+
+In the coordinate plane, consider two lines $\Delta\_{1}: a\_{1}x + b\_{1}y + c\_{1} = 0$ and $\Delta\_{2}: a\_{2}x + b\_{2}y + c\_{2} = 0$.
+The coordinates of the intersection point of $\Delta\_{1}$ and $\Delta\_{2}$ are the solutions to the system of equations:
+$$\begin{cases} a\_{1}x + b\_{1}y + c\_{1} = 0 \\\ a\_{2}x + b\_{2}y + c\_{2} = 0 \end{cases} \quad (\*)$$
+• $\Delta\_{1}$ intersects $\Delta\_{2}$ at $M(x\_{0}; y\_{0}) \Leftrightarrow$ system $(\*)$ has a unique solution $(x\_{0}; y\_{0})$.
+• $\Delta\_{1}$ is parallel to $\Delta\_{2} \Leftrightarrow$ system $(\*)$ has no solution.
+• $\Delta\_{1}$ is coincident with $\Delta\_{2} \Leftrightarrow$ system $(\*)$ has infinitely many solutions.
+Note (Based on normal vectors $\vec{n}\_{1}, \vec{n}\_{2}$ or direction vectors $\vec{u}\_{1}, \vec{u}\_{2}$):
+• $\Delta\_{1}$ is parallel to or coincident with $\Delta\_{2} \Leftrightarrow \vec{n}\_{1}, \vec{n}\_{2}$ are collinear (or $\vec{u}\_{1}, \vec{u}\_{2}$ are collinear).
+  + If $\Delta\_{1}$ and $\Delta\_{2}$ have at least one common point, they are coincident.
+  + If there exists a point belonging to $\Delta\_{1}$ but not to $\Delta\_{2}$, then $\Delta\_{1}$ is parallel to $\Delta\_{2}$.
+• $\Delta\_{1}$ intersects $\Delta\_{2} \Leftrightarrow \vec{n}\_{1}, \vec{n}\_{2}$ are non-collinear (or $\vec{u}\_{1}, \vec{u}\_{2}$ are non-collinear).
+
+**Activity 1:** In the coordinate plane, consider two lines $\Delta\_{1}: x - 2y + 3 = 0$ and $\Delta\_{2}: 3x - y - 1 = 0$.
+a) Does the point $M(1; 2)$ belong to both lines?
+b) Solve the system of equations: $\begin{cases} x - 2y + 3 = 0 \\\ 3x - y - 1 = 0 \end{cases}$.
+c) State the relationship between the coordinates of the intersection point of $\Delta\_{1}$ and $\Delta\_{2}$ and the solution to the system above.
+
+Solution to Activity 1:
+• a) Substituting $M(1; 2)$ into $\Delta\_{1}$: $1 - 2(2) + 3 = 0$ (true), so $M \in \Delta\_{1}$. Substituting into $\Delta\_{2}$: $3(1) - 2 - 1 = 0$ (true), so $M \in \Delta\_{2}$. Thus, $M(1; 2)$ belongs to both lines $\Delta\_{1}$ and $\Delta\_{2}$.
+• b) From the second equation, $y = 3x - 1$. Substituting into the first: $x - 2(3x - 1) + 3 = 0 \Leftrightarrow -5x + 5 = 0 \Leftrightarrow x = 1 \Rightarrow y = 2$. The system has a unique solution $(1; 2)$.
+• c) The coordinates of the intersection point of $\Delta\_{1}$ and $\Delta\_{2}$ are precisely the solution to the system of equations.
+
+### b) Examples and Practice
+
+**Example 1:** Determine the relative position between the line $\Delta: x - \sqrt{2}y + 4\sqrt{3} = 0$ and each of the following lines:
+$\Delta\_{1}: \sqrt{3}x - \sqrt{6}y + 12 = 0$;
+$\Delta\_{2}: \sqrt{2}x - 2y = 0$.
+
+Solution to Example 1:
+• Considering $\Delta$ and $\Delta\_{1}$: Multiplying both sides of the equation of $\Delta$ by $\sqrt{3}$, we obtain: $\sqrt{3}(x - \sqrt{2}y + 4\sqrt{3}) = 0 \Leftrightarrow \sqrt{3}x - \sqrt{6}y + 12 = 0$, which is identical to the equation of $\Delta\_{1}$. Thus, $\Delta$ and $\Delta\_{1}$ are coincident.
+• Considering $\Delta$ and $\Delta\_{2}$: Line $\Delta$ has normal vector $\vec{n} = (1; -\sqrt{2})$, line $\Delta\_{2}$ has normal vector $\vec{n}\_{2} = (\sqrt{2}; -2) = \sqrt{2}(1; -\sqrt{2}) = \sqrt{2}\vec{n}$. Therefore, $\vec{n}$ and $\vec{n}\_{2}$ are collinear, implying $\Delta$ is parallel to or coincident with $\Delta\_{2}$. Moreover, the origin $O(0; 0) \in \Delta\_{2}$ but substituting into $\Delta$ yields $0 - 0 + 4\sqrt{3} = 4\sqrt{3} \ne 0$, so $O \notin \Delta$. Hence, $\Delta$ is parallel to $\Delta\_{2}$.
+
+**Practice 1:** Determine the relative position between each pair of lines:
+a) $\Delta\_{1}: x + 4y - 3 = 0$ and $\Delta\_{2}: x - 4y - 3 = 0$;
+b) $\Delta\_{1}: x + 2y - \sqrt{5} = 0$ and $\Delta\_{2}: 2x + 4y - 3\sqrt{5} = 0$.
+
+Solution to Practice 1:
+• a) The two lines have normal vectors $\vec{n}\_{1} = (1; 4)$ and $\vec{n}\_{2} = (1; -4)$. Since $\frac{1}{1} \ne \frac{4}{-4}$, $\vec{n}\_{1}$ and $\vec{n}\_{2}$ are non-collinear. Thus, $\Delta\_{1}$ intersects $\Delta\_{2}$. The intersection point is the solution to: $\begin{cases} x + 4y - 3 = 0 \\\ x - 4y - 3 = 0 \end{cases} \Leftrightarrow \begin{cases} x = 3 \\\ y = 0 \end{cases}$, giving intersection $M(3; 0)$.
+• b) $\Delta\_{1}$ has normal vector $\vec{n}\_{1} = (1; 2)$ and $\Delta\_{2}$ has normal vector $\vec{n}\_{2} = (2; 4) = 2\vec{n}\_{1}$, so $\vec{n}\_{1}$ and $\vec{n}\_{2}$ are collinear. Taking point $A(\sqrt{5}; 0) \in \Delta\_{1}$, substituting into $\Delta\_{2}$: $2\sqrt{5} + 4(0) - 3\sqrt{5} = -\sqrt{5} \ne 0$, so $A \notin \Delta\_{2}$. Hence, $\Delta\_{1}$ is parallel to $\Delta\_{2}$.
+
+## Angle Between Two Straight Lines
+
+<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_duong_thang"/>
+
+### a) Definition and Angle Formula
+
+Definition: Two intersecting lines form four angles; the measure of the non-obtuse angle is called the angle between the two lines.
+The angle between two parallel or coincident lines is defined to be $0^{\circ}$.
+Denoting the angle between two lines $\Delta\_{1}$ and $\Delta\_{2}$ by $\varphi$ or $(\Delta\_{1}, \Delta\_{2})$, we have $0^{\circ} \le \varphi \le 90^{\circ}$.
+Formula: Let $\Delta\_{1}: a\_{1}x + b\_{1}y + c\_{1} = 0$ and $\Delta\_{2}: a\_{2}x + b\_{2}y + c\_{2} = 0$ have normal vectors $\vec{n}\_{1} = (a\_{1}; b\_{1})$ and $\vec{n}\_{2} = (a\_{2}; b\_{2})$, respectively. Then:
+$$\cos \varphi = |\cos(\vec{n}\_{1}, \vec{n}\_{2})| = \frac{|\vec{n}\_{1} \cdot \vec{n}\_{2}|}{|\vec{n}\_{1}| \cdot |\vec{n}\_{2}|} = \frac{|a\_{1}a\_{2} + b\_{1}b\_{2}|}{\sqrt{a\_{1}^{2} + b\_{1}^{2}} \cdot \sqrt{a\_{2}^{2} + b\_{2}^{2}}}$$
+Notes:
+• $\Delta\_{1} \perp \Delta\_{2} \Leftrightarrow \vec{n}\_{1} \perp \vec{n}\_{2} \Leftrightarrow a\_{1}a\_{2} + b\_{1}b\_{2} = 0$.
+• If $\Delta\_{1}, \Delta\_{2}$ have direction vectors $\vec{u}\_{1}, \vec{u}\_{2}$, then $\cos \varphi = |\cos(\vec{u}\_{1}, \vec{u}\_{2})| = \frac{|\vec{u}\_{1} \cdot \vec{u}\_{2}|}{|\vec{u}\_{1}| \cdot |\vec{u}\_{2}|}$.
+
+### b) Examples and Practice
+
+**Example 2:** Calculate the angle between the two lines $\Delta\_{1}: \sqrt{3}x - y + 2 = 0$ and $\Delta\_{2}: x - \sqrt{3}y - 2 = 0$.
+
+Solution to Example 2:
+• The normal vector of $\Delta\_{1}$ is $\vec{n}\_{1} = (\sqrt{3}; -1)$, and of $\Delta\_{2}$ is $\vec{n}\_{2} = (1; -\sqrt{3})$.
+• Let $\varphi$ be the angle between $\Delta\_{1}$ and $\Delta\_{2}$. We have:
+$$\cos \varphi = \frac{|\vec{n}\_{1} \cdot \vec{n}\_{2}|}{|\vec{n}\_{1}| \cdot |\vec{n}\_{2}|} = \frac{|\sqrt{3} \cdot 1 + (-1)(-\sqrt{3})|}{\sqrt{(\sqrt{3})^{2} + (-1)^{2}} \cdot \sqrt{1^{2} + (-\sqrt{3})^{2}}} = \frac{|2\sqrt{3}|}{2 \cdot 2} = \frac{\sqrt{3}}{2}$$
+• Therefore, the angle between $\Delta\_{1}$ and $\Delta\_{2}$ is $\varphi = 30^{\circ}$.
+
+**Practice 2:** Calculate the angle between the two lines $\Delta\_{1}: x + 3y + 2 = 0$ and $\Delta\_{2}: y = 3x + 1$.
+
+Solution to Practice 2:
+• Rewrite $\Delta\_{2}: 3x - y + 1 = 0$. Normal vectors are $\vec{n}\_{1} = (1; 3)$ and $\vec{n}\_{2} = (3; -1)$.
+• We have: $\vec{n}\_{1} \cdot \vec{n}\_{2} = 1(3) + 3(-1) = 0 \Rightarrow \vec{n}\_{1} \perp \vec{n}\_{2}$.
+• Thus, the angle between $\Delta\_{1}$ and $\Delta\_{2}$ is $\varphi = 90^{\circ}$ (the lines are perpendicular).
+
+**Example 3:** Calculate the angle between the two lines $\Delta\_{1}: x = 3$ and $\Delta\_{2}: \begin{cases} x = 2 - t \\\ y = 3 + t \end{cases}$.
+
+Solution to Example 3:
+• Line $\Delta\_{1}$ has equation $x - 3 = 0$, giving normal vector $\vec{n}\_{1} = (1; 0)$. Line $\Delta\_{2}$ has direction vector $\vec{u}\_{2} = (-1; 1)$, giving normal vector $\vec{n}\_{2} = (1; 1)$.
+• Let $\varphi$ be the angle between $\Delta\_{1}$ and $\Delta\_{2}$:
+$$\cos \varphi = \frac{|\vec{n}\_{1} \cdot \vec{n}\_{2}|}{|\vec{n}\_{1}| \cdot |\vec{n}\_{2}|} = \frac{|1(1) + 0(1)|}{\sqrt{1^{2} + 0^{2}} \cdot \sqrt{1^{2} + 1^{2}}} = \frac{1}{1 \cdot \sqrt{2}} = \frac{1}{\sqrt{2}}$$
+• Therefore, the angle between $\Delta\_{1}$ and $\Delta\_{2}$ is $\varphi = 45^{\circ}$.
+
+**Practice 3:** Calculate the angle between the two lines $\Delta\_{1}: \begin{cases} x = 2 + t \\\ y = 1 - 2t \end{cases}$ and $\Delta\_{2}: \begin{cases} x = 1 + t' \\\ y = 5 + 3t' \end{cases}$.
+
+Solution to Practice 3:
+• $\Delta\_{1}$ has direction vector $\vec{u}\_{1} = (1; -2)$, and $\Delta\_{2}$ has direction vector $\vec{u}\_{2} = (1; 3)$.
+• Let $\varphi$ be the angle between the two lines:
+$$\cos \varphi = \frac{|\vec{u}\_{1} \cdot \vec{u}\_{2}|}{|\vec{u}\_{1}| \cdot |\vec{u}\_{2}|} = \frac{|1(1) + (-2)(3)|}{\sqrt{1^{2} + (-2)^{2}} \cdot \sqrt{1^{2} + 3^{2}}} = \frac{|-5|}{\sqrt{5} \cdot \sqrt{10}} = \frac{5}{5\sqrt{2}} = \frac{1}{\sqrt{2}}$$
+• Thus, the angle between the two lines is $\varphi = 45^{\circ}$.
+
+**Practice 4 (Geometric Meaning of Slope):** Consider the line $\Delta: y = ax + b$ with $a \ne 0$.
+a) Prove that $\Delta$ intersects the x-axis.
+b) Write the equation of line $\Delta\_{0}$ passing through $O(0; 0)$ and parallel to (or coincident with) $\Delta$.
+c) Indicate the relationship between $\alpha\_{\Delta}$ and $\alpha\_{\Delta\_{0}}$.
+d) Let $M$ be the intersection of $\Delta\_{0}$ with the upper unit semicircle, and let $x\_{0}$ be the x-coordinate of $M$. Express the y-coordinate of $M$ in terms of $x\_{0}$ and $a$. Hence, prove that $\tan \alpha = a$.
+
+Solution to Practice 4:
+• a) The x-coordinate of the intersection of $\Delta$ with the x-axis ($y = 0$) satisfies: $ax + b = 0 \Leftrightarrow x = -\frac{b}{a}$ (since $a \ne 0$). Thus, $\Delta$ always intersects the x-axis at $A\left(-\frac{b}{a}; 0\right)$.
+• b) Line $\Delta\_{0}$ is parallel to or coincident with $\Delta$ and passes through $O(0; 0)$, so it has slope $a$ and y-intercept $0$, giving $\Delta\_{0}: y = ax$.
+• c) Since $\Delta\_{0} \parallel \Delta$ (or coincident), the angle formed by the ray above the x-axis with the positive x-axis is identical (corresponding angles): $\alpha\_{\Delta} = \alpha\_{\Delta\_{0}}$.
+• d) Point $M(x\_{0}; y\_{0}) \in \Delta\_{0} \Rightarrow y\_{0} = ax\_{0}$. Since $M$ lies on the unit semicircle, by definition of trigonometric ratios: $\cos \alpha = x\_{0}$ and $\sin \alpha = y\_{0} = ax\_{0}$. Therefore: $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{ax\_{0}}{x\_{0}} = a$.
+
+## Distance from a Point to a Straight Line
+
+<Youtube url="https://www.youtube.com/watch?v=example_khoang_cach_tu_diem_den_duong_thang"/>
+
+### a) Definition and Distance Formula
+
+Given a point $M(x\_{0}; y\_{0})$ and a line $\Delta: ax + by + c = 0$ ($a^{2} + b^{2} > 0$).
+The distance from point $M$ to line $\Delta$, denoted by $d(M, \Delta)$, is the length of the perpendicular segment $MH$ from $M$ to $\Delta$, given by the formula:
+$$d(M, \Delta) = \frac{|ax\_{0} + by\_{0} + c|}{\sqrt{a^{2} + b^{2}}}$$
+Proof of Formula (Activity 4):
+• Let $H(x\_{1}; y\_{1}) \in \Delta \Rightarrow ax\_{1} + by\_{1} + c = 0 \Rightarrow c = -ax\_{1} - by\_{1}$.
+• The vector $\vec{HM} = (x\_{0} - x\_{1}; y\_{0} - y\_{1})$ is collinear with the normal vector $\vec{n} = (a; b)$ of $\Delta$.
+• Thus: $|\vec{n} \cdot \vec{HM}| = |\vec{n}| \cdot |\vec{HM}| = \sqrt{a^{2} + b^{2}} \cdot HM$.
+• On the other hand: $\vec{n} \cdot \vec{HM} = a(x\_{0} - x\_{1}) + b(y\_{0} - y\_{1}) = ax\_{0} + by\_{0} - (ax\_{1} + by\_{1}) = ax\_{0} + by\_{0} + c$.
+• Therefore: $HM = \frac{|ax\_{0} + by\_{0} + c|}{\sqrt{a^{2} + b^{2}}}$.
+
+### b) Examples and Practice
+
+**Example 4:** Calculate the distance from point $M(2; 4)$ to the line $\Delta: 3x + 4y - 12 = 0$.
+
+Solution to Example 4:
+• Applying the distance formula from point $M$ to line $\Delta$, we have:
+$$d(M, \Delta) = \frac{|3(2) + 4(4) - 12|}{\sqrt{3^{2} + 4^{2}}} = \frac{|6 + 16 - 12|}{\sqrt{25}} = \frac{10}{5} = 2$$
+• Thus, the distance from point $M$ to line $\Delta$ is 2.
+
+**Practice 5:** Calculate the distance from point $M(1; 2)$ to the line $\Delta: \begin{cases} x = 5 + 3t \\\ y = -5 - 4t \end{cases}$.
+
+Solution to Practice 5:
+• Line $\Delta$ passes through $A(5; -5)$ with direction vector $\vec{u} = (3; -4)$, yielding normal vector $\vec{n} = (4; 3)$.
+• The general equation of $\Delta$ is: $4(x - 5) + 3(y + 5) = 0 \Leftrightarrow 4x + 3y - 5 = 0$.
+• The distance from point $M(1; 2)$ to line $\Delta$ is:
+$$d(M, \Delta) = \frac{|4(1) + 3(2) - 5|}{\sqrt{4^{2} + 3^{2}}} = \frac{|4 + 6 - 5|}{\sqrt{25}} = \frac{5}{5} = 1$$
+• Thus, the required distance is 1.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Rectangular Fish Pond):** Nam's grandparents have a rectangular fish pond $ABCD$ with length $AD = 15\text{ m}$ and width $AB = 12\text{ m}$. The triangular region $DEF$ is reserved for duck farming, with $AE = 5\text{ m}$ and $CF = 6\text{ m}$ (Figure 7.11).
+a) Set up a coordinate system $Oxy$ with origin $O$ at $B$, rays $Ox, Oy$ along $BC, BA$ respectively. Determine coordinates of points $A, B, C, D, E, F$ and write the equation of line $EF$.
+b) Nam stands at position $B$ fishing and can cast his line up to $10{,}7\text{ m}$. Can the fishing hook land in the duck farming area?
+
+Solution to Application:
+• a) In the chosen coordinate system (origin $B(0; 0)$):
+  + $B(0; 0)$;
+  + Since $AB = 12\text{ m}$ lies along the y-axis, $A(0; 12)$;
+  + Since $BC = AD = 15\text{ m}$ lies along the x-axis, $C(15; 0)$;
+  + $D(15; 12)$;
+  + Point $E$ on segment $AD$ with $AE = 5\text{ m} \Rightarrow E(5; 12)$;
+  + Point $F$ on segment $CD$ with $CF = 6\text{ m} \Rightarrow F(15; 6)$.
+  Segment $EF$ connecting $E(5; 12)$ and $F(15; 6)$ has direction vector $\vec{EF} = (10; -6) = 2(5; -3)$, giving normal vector $\vec{n}\_{EF} = (3; 5)$. The equation of line $EF$ is:
+  $$3(x - 5) + 5(y - 12) = 0 \Leftrightarrow 3x + 5y - 75 = 0$$
+• b) The shortest distance from $B$ to the duck farming area $\Delta DEF$ is the perpendicular distance from $B(0; 0)$ to line $EF$:
+  $$d(B, EF) = \frac{|3(0) + 5(0) - 75|}{\sqrt{3^{2} + 5^{2}}} = \frac{75}{\sqrt{34}} \approx 12{,}86\text{ m}$$
+  Since the minimum distance from $B$ to the duck farming area is approximately $12{,}86\text{ m} > 10{,}7\text{ m}$ (Nam's maximum casting distance), the hook cannot land in the duck farming area.
+
+**Exercise 7.12 (Acoustic Source Localization):** In the coordinate plane, an acoustic signal is emitted from a single location and is detected at the exact same instant by three recording devices located at $O(0; 0)$, $A(1; 0)$, and $B(1; 3)$. Determine the emission position of the acoustic signal.
+
+Solution to Exercise 7.12:
+• Since sound propagates omnidirectionally at a constant speed and reaches the three devices at $O, A, B$ simultaneously, the distances from the emission point $M(x; y)$ to $O, A, B$ are equal: $MO = MA = MB$.
+• Thus, $M$ is the circumcenter of triangle $OAB$.
+• We obtain the system:
+  $$\begin{cases} MO^{2} = MA^{2} \\\ MO^{2} = MB^{2} \end{cases} \Leftrightarrow \begin{cases} x^{2} + y^{2} = (x - 1)^{2} + y^{2} \\\ x^{2} + y^{2} = (x - 1)^{2} + (y - 3)^{2} \end{cases}$$
+  $$\Leftrightarrow \begin{cases} x^{2} + y^{2} = x^{2} - 2x + 1 + y^{2} \\\ x^{2} + y^{2} = x^{2} - 2x + 1 + y^{2} - 6y + 9 \end{cases} \Leftrightarrow \begin{cases} 2x = 1 \\\ 2x + 6y = 10 \end{cases} \Leftrightarrow \begin{cases} x = \frac{1}{2} \\\ y = \frac{3}{2} \end{cases}$$
+• Conclusion: The acoustic signal was emitted from $M\left(\frac{1}{2}; \frac{3}{2}\right)$.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 7.7:** Determine the relative position between each pair of lines:
+a) $\Delta\_{1}: 3\sqrt{2}x + \sqrt{2}y - \sqrt{3} = 0$ and $\Delta\_{2}: 6x + 2y - \sqrt{6} = 0$;
+b) $d\_{1}: x - \sqrt{3}y + 2 = 0$ and $d\_{2}: \sqrt{3}x - 3y + 2 = 0$;
+c) $m\_{1}: x - 2y + 1 = 0$ and $m\_{2}: 3x + y - 2 = 0$.
+
+Solution to Exercise 7.7:
+• a) We have $\frac{3\sqrt{2}}{6} = \frac{\sqrt{2}}{2} = \frac{-\sqrt{3}}{-\sqrt{6}} = \frac{\sqrt{2}}{2}$. The coefficients are proportional, so lines $\Delta\_{1}$ and $\Delta\_{2}$ are coincident.
+• b) Normal vector of $d\_{1}$ is $\vec{n}\_{1} = (1; -\sqrt{3})$, and of $d\_{2}$ is $\vec{n}\_{2} = (\sqrt{3}; -3) = \sqrt{3}\vec{n}\_{1}$. Thus, $\vec{n}\_{1}$ and $\vec{n}\_{2}$ are collinear. Moreover, $\frac{1}{\sqrt{3}} = \frac{-\sqrt{3}}{-3} \ne \frac{2}{2}$, so $d\_{1}$ is parallel to $d\_{2}$.
+• c) Normal vector of $m\_{1}$ is $\vec{n}\_{1} = (1; -2)$, and of $m\_{2}$ is $\vec{n}\_{2} = (3; 1)$. Since $\frac{1}{3} \ne \frac{-2}{1}$, $\vec{n}\_{1}$ and $\vec{n}\_{2}$ are non-collinear. Thus, $m\_{1}$ intersects $m\_{2}$. Solving $\begin{cases} x - 2y + 1 = 0 \\\ 3x + y - 2 = 0 \end{cases} \Leftrightarrow \begin{cases} x = \frac{3}{7} \\\ y = \frac{5}{7} \end{cases}$, the intersection point is $\left(\frac{3}{7}; \frac{5}{7}\right)$.
+
+**Exercise 7.8:** Calculate the angle between each pair of lines:
+a) $\Delta\_{1}: \sqrt{3}x + y - 4 = 0$ and $\Delta\_{2}: x + \sqrt{3}y + 3 = 0$;
+b) $d\_{1}: \begin{cases} x = -1 + 2t \\\ y = 3 + 4t \end{cases}$ and $d\_{2}: \begin{cases} x = 3 + s \\\ y = 1 - 3s \end{cases}$.
+
+Solution to Exercise 7.8:
+• a) Normal vector of $\Delta\_{1}$ is $\vec{n}\_{1} = (\sqrt{3}; 1)$, and of $\Delta\_{2}$ is $\vec{n}\_{2} = (1; \sqrt{3})$. Let $\varphi$ be the angle between the two lines:
+$$\cos \varphi = \frac{|\sqrt{3}(1) + 1(\sqrt{3})|}{\sqrt{(\sqrt{3})^{2} + 1^{2}} \cdot \sqrt{1^{2} + (\sqrt{3})^{2}}} = \frac{2\sqrt{3}}{2 \cdot 2} = \frac{\sqrt{3}}{2} \Rightarrow \varphi = 30^{\circ}$$
+• b) Direction vector of $d\_{1}$ is $\vec{u}\_{1} = (2; 4) = 2(1; 2)$, and of $d\_{2}$ is $\vec{u}\_{2} = (1; -3)$. Let $\varphi$ be the angle between the two lines:
+$$\cos \varphi = \frac{|1(1) + 2(-3)|}{\sqrt{1^{2} + 2^{2}} \cdot \sqrt{1^{2} + (-3)^{2}}} = \frac{|-5|}{\sqrt{5} \cdot \sqrt{10}} = \frac{5}{5\sqrt{2}} = \frac{1}{\sqrt{2}} \Rightarrow \varphi = 45^{\circ}$$
+
+**Exercise 7.9:** In the coordinate plane $Oxy$, given point $A(0; -2)$ and line $\Delta: x + y - 4 = 0$.
+a) Calculate the distance from point $A$ to line $\Delta$.
+b) Write the equation of line $a$ passing through $M(-1; 0)$ and parallel to $\Delta$.
+c) Write the equation of line $b$ passing through $N(0; 3)$ and perpendicular to $\Delta$.
+
+Solution to Exercise 7.9:
+• a) Applying the distance formula:
+$$d(A, \Delta) = \frac{|0 + (-2) - 4|}{\sqrt{1^{2} + 1^{2}}} = \frac{|-6|}{\sqrt{2}} = 3\sqrt{2}$$
+• b) Line $a$ is parallel to $\Delta$, so it shares normal vector $\vec{n} = (1; 1)$. Passing through $M(-1; 0)$:
+$$1(x + 1) + 1(y - 0) = 0 \Leftrightarrow x + y + 1 = 0$$
+• c) Line $b$ is perpendicular to $\Delta$, so it takes the direction vector $\vec{u}\_{\Delta} = (1; -1)$ as its normal vector. Passing through $N(0; 3)$:
+$$1(x - 0) - 1(y - 3) = 0 \Leftrightarrow x - y + 3 = 0$$
+
+**Exercise 7.10:** In the coordinate plane, consider triangle $ABC$ with $A(1; 0)$, $B(3; 2)$, and $C(-2; -1)$.
+a) Compute the length of the altitude from vertex $A$ of triangle $ABC$.
+b) Compute the area of triangle $ABC$.
+
+Solution to Exercise 7.10:
+• a) Line $BC$ passes through $B(3; 2)$ with direction vector $\vec{BC} = (-5; -3) = -(5; 3)$, giving normal vector $\vec{n}\_{BC} = (3; -5)$. The general equation of line $BC$ is:
+$$3(x - 3) - 5(y - 2) = 0 \Leftrightarrow 3x - 5y + 1 = 0$$
+The altitude $h\_{a}$ from $A$ is the distance from $A(1; 0)$ to line $BC$:
+$$h\_{a} = d(A, BC) = \frac{|3(1) - 5(0) + 1|}{\sqrt{3^{2} + (-5)^{2}}} = \frac{4}{\sqrt{34}}$$
+• b) Base length $BC = \sqrt{(-5)^{2} + (-3)^{2}} = \sqrt{34}$.
+The area of triangle $ABC$ is:
+$$S\_{ABC} = \frac{1}{2} BC \cdot h\_{a} = \frac{1}{2} \cdot \sqrt{34} \cdot \frac{4}{\sqrt{34}} = 2$$
+
+**Exercise 7.11:** Prove that two lines $d: y = ax + b$ ($a \ne 0$) and $d': y = a'x + b'$ ($a' \ne 0$) are perpendicular if and only if $a \cdot a' = -1$.
+
+Solution to Exercise 7.11:
+• Express both equations in general form: $d: ax - y + b = 0$ and $d': a'x - y + b' = 0$.
+• Normal vector of $d$ is $\vec{n} = (a; -1)$, and of $d'$ is $\vec{n}' = (a'; -1)$.
+• The perpendicularity condition gives:
+$$d \perp d' \Leftrightarrow \vec{n} \perp \vec{n}' \Leftrightarrow \vec{n} \cdot \vec{n}' = 0 \Leftrightarrow a \cdot a' + (-1)(-1) = 0 \Leftrightarrow a \cdot a' + 1 = 0 \Leftrightarrow a \cdot a' = -1$$
+• This completes the proof.

@@ -1,0 +1,265 @@
+---
+title: 'Bài 20: Vị trí tương đối giữa 2 đường thẳng; Góc và khoảng cách.'
+description: hệ thống kiến thức bài Vị trí tương đối giữa 2 đường thẳng; Góc và khoảng cách cũng ví dụ minh họa.
+tags:
+  - lớp 10
+  - Vị trí tương đối giữa hai đường thẳng
+  - Khoảng cách từ một điểm đến một đường thẳng
+  - Góc giữa hai đường thẳng
+  - hai đường thẳng vuông góc
+grade: 10
+order: 0
+updatedDate: ''
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Vị trí tương đối giữa hai đường thẳng
+
+·       Góc giữa hai đường thẳng, hai đường thẳng vuông góc
+
+·       Khoảng cách từ một điểm đến một đường thẳng
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết hai đường thẳng cắt nhau, song song, trùng nhau, vuông góc.
+
+·       Thiết lập và vận dụng thành thạo công thức tính góc giữa hai đường thẳng.
+
+·       Thiết lập và tính thành thạo khoảng cách từ một điểm đến một đường thẳng.
+
+·       Vận dụng các công thức tính góc và khoảng cách để giải một số bài toán có liên quan đến thực tiễn.
+
+## Vị trí tương đối giữa hai đường thẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_vi_tri_tuong_doi_hai_duong_thang"/>
+
+### a) Phương pháp xét vị trí tương đối
+
+Trên mặt phẳng toạ độ, xét hai đường thẳng $\Delta\_{1}: a\_{1}x + b\_{1}y + c\_{1} = 0$ và $\Delta\_{2}: a\_{2}x + b\_{2}y + c\_{2} = 0$.
+Toạ độ giao điểm của $\Delta\_{1}$ và $\Delta\_{2}$ là nghiệm của hệ phương trình:
+$$\begin{cases} a\_{1}x + b\_{1}y + c\_{1} = 0 \\\ a\_{2}x + b\_{2}y + c\_{2} = 0 \end{cases} \quad (\*)$$
+• $\Delta\_{1}$ cắt $\Delta\_{2}$ tại $M(x\_{0}; y\_{0}) \Leftrightarrow$ hệ $(\*)$ có nghiệm duy nhất $(x\_{0}; y\_{0})$.
+• $\Delta\_{1}$ song song với $\Delta\_{2} \Leftrightarrow$ hệ $(\*)$ vô nghiệm.
+• $\Delta\_{1}$ trùng $\Delta\_{2} \Leftrightarrow$ hệ $(\*)$ có vô số nghiệm.
+Chú ý (Dựa vào vectơ pháp tuyến $\vec{n}\_{1}, \vec{n}\_{2}$ hoặc vectơ chỉ phương $\vec{u}\_{1}, \vec{u}\_{2}$):
+• $\Delta\_{1}$ song song hoặc trùng $\Delta\_{2} \Leftrightarrow \vec{n}\_{1}, \vec{n}\_{2}$ cùng phương (hoặc $\vec{u}\_{1}, \vec{u}\_{2}$ cùng phương).
+  + Nếu $\Delta\_{1}$ và $\Delta\_{2}$ có ít nhất một điểm chung thì chúng trùng nhau.
+  + Nếu tồn tại điểm thuộc $\Delta\_{1}$ nhưng không thuộc $\Delta\_{2}$ thì $\Delta\_{1}$ song song với $\Delta\_{2}$.
+• $\Delta\_{1}$ cắt $\Delta\_{2} \Leftrightarrow \vec{n}\_{1}, \vec{n}\_{2}$ không cùng phương (hoặc $\vec{u}\_{1}, \vec{u}\_{2}$ không cùng phương).
+
+**HĐ1:** Trong mặt phẳng toạ độ, cho hai đường thẳng $\Delta\_{1}: x - 2y + 3 = 0$ và $\Delta\_{2}: 3x - y - 1 = 0$.
+a) Điểm $M(1; 2)$ có thuộc cả hai đường thẳng nói trên hay không?
+b) Giải hệ phương trình: $\begin{cases} x - 2y + 3 = 0 \\\ 3x - y - 1 = 0 \end{cases}$.
+c) Chỉ ra mối quan hệ giữa toạ độ giao điểm của $\Delta\_{1}$ và $\Delta\_{2}$ với nghiệm của hệ phương trình trên.
+
+Lời giải HĐ1:
+• a) Thay toạ độ $M(1; 2)$ vào phương trình $\Delta\_{1}$: $1 - 2(2) + 3 = 0$ (đúng), do đó $M \in \Delta\_{1}$. Thay vào $\Delta\_{2}$: $3(1) - 2 - 1 = 0$ (đúng), do đó $M \in \Delta\_{2}$. Vậy $M(1; 2)$ thuộc cả hai đường thẳng $\Delta\_{1}$ và $\Delta\_{2}$.
+• b) Từ phương trình thứ hai ta có $y = 3x - 1$. Thế vào phương trình thứ nhất: $x - 2(3x - 1) + 3 = 0 \Leftrightarrow -5x + 5 = 0 \Leftrightarrow x = 1 \Rightarrow y = 2$. Hệ có nghiệm duy nhất $(1; 2)$.
+• c) Toạ độ giao điểm của $\Delta\_{1}$ và $\Delta\_{2}$ chính là nghiệm của hệ phương trình đã cho.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 1:** Xét vị trí tương đối giữa đường thẳng $\Delta: x - \sqrt{2}y + 4\sqrt{3} = 0$ và mỗi đường thẳng sau:
+$\Delta\_{1}: \sqrt{3}x - \sqrt{6}y + 12 = 0$;
+$\Delta\_{2}: \sqrt{2}x - 2y = 0$.
+
+Lời giải Ví dụ 1:
+• Xét $\Delta$ và $\Delta\_{1}$: Nhân hai vế của phương trình $\Delta$ với $\sqrt{3}$, ta được: $\sqrt{3}(x - \sqrt{2}y + 4\sqrt{3}) = 0 \Leftrightarrow \sqrt{3}x - \sqrt{6}y + 12 = 0$, trùng với phương trình của $\Delta\_{1}$. Vậy $\Delta$ và $\Delta\_{1}$ trùng nhau.
+• Xét $\Delta$ và $\Delta\_{2}$: Đường thẳng $\Delta$ có VTPT $\vec{n} = (1; -\sqrt{2})$, đường thẳng $\Delta\_{2}$ có VTPT $\vec{n}\_{2} = (\sqrt{2}; -2) = \sqrt{2}(1; -\sqrt{2}) = \sqrt{2}\vec{n}$. Do đó $\vec{n}$ và $\vec{n}\_{2}$ cùng phương, suy ra $\Delta$ song song hoặc trùng $\Delta\_{2}$. Mặt khác, điểm $O(0; 0) \in \Delta\_{2}$ nhưng thay vào $\Delta$ ta có $0 - 0 + 4\sqrt{3} = 4\sqrt{3} \ne 0$ nên $O \notin \Delta$. Vậy $\Delta$ song song với $\Delta\_{2}$.
+
+**Luyện tập 1:** Xét vị trí tương đối giữa các cặp đường thẳng sau:
+a) $\Delta\_{1}: x + 4y - 3 = 0$ và $\Delta\_{2}: x - 4y - 3 = 0$;
+b) $\Delta\_{1}: x + 2y - \sqrt{5} = 0$ và $\Delta\_{2}: 2x + 4y - 3\sqrt{5} = 0$.
+
+Lời giải Luyện tập 1:
+• a) Hai đường thẳng có các VTPT là $\vec{n}\_{1} = (1; 4)$ và $\vec{n}\_{2} = (1; -4)$. Vì $\frac{1}{1} \ne \frac{4}{-4}$ nên $\vec{n}\_{1}$ và $\vec{n}\_{2}$ không cùng phương. Do đó $\Delta\_{1}$ cắt $\Delta\_{2}$. Giao điểm là nghiệm của hệ: $\begin{cases} x + 4y - 3 = 0 \\\ x - 4y - 3 = 0 \end{cases} \Leftrightarrow \begin{cases} x = 3 \\\ y = 0 \end{cases}$, tức là giao điểm $M(3; 0)$.
+• b) $\Delta\_{1}$ có VTPT $\vec{n}\_{1} = (1; 2)$ và $\Delta\_{2}$ có VTPT $\vec{n}\_{2} = (2; 4) = 2\vec{n}\_{1}$, do đó $\vec{n}\_{1}$ và $\vec{n}\_{2}$ cùng phương. Lấy điểm $A(\sqrt{5}; 0) \in \Delta\_{1}$, thay vào phương trình $\Delta\_{2}$: $2\sqrt{5} + 4(0) - 3\sqrt{5} = -\sqrt{5} \ne 0$, suy ra $A \notin \Delta\_{2}$. Vậy $\Delta\_{1}$ song song với $\Delta\_{2}$.
+
+## Góc giữa hai đường thẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_duong_thang"/>
+
+### a) Định nghĩa và công thức tính góc
+
+Định nghĩa: Hai đường thẳng cắt nhau tạo thành bốn góc, số đo của góc không tù được gọi là số đo góc (hay đơn giản là góc) giữa hai đường thẳng.
+Góc giữa hai đường thẳng song song hoặc trùng nhau được quy ước bằng $0^{\circ}$.
+Kí hiệu góc giữa hai đường thẳng $\Delta\_{1}$ và $\Delta\_{2}$ là $\varphi$ hay $(\Delta\_{1}, \Delta\_{2})$, ta có $0^{\circ} \le \varphi \le 90^{\circ}$.
+Công thức tính góc: Cho hai đường thẳng $\Delta\_{1}: a\_{1}x + b\_{1}y + c\_{1} = 0$ và $\Delta\_{2}: a\_{2}x + b\_{2}y + c\_{2} = 0$ có VTPT lần lượt là $\vec{n}\_{1} = (a\_{1}; b\_{1})$ và $\vec{n}\_{2} = (a\_{2}; b\_{2})$. Khi đó:
+$$\cos \varphi = |\cos(\vec{n}\_{1}, \vec{n}\_{2})| = \frac{|\vec{n}\_{1} \cdot \vec{n}\_{2}|}{|\vec{n}\_{1}| \cdot |\vec{n}\_{2}|} = \frac{|a\_{1}a\_{2} + b\_{1}b\_{2}|}{\sqrt{a\_{1}^{2} + b\_{1}^{2}} \cdot \sqrt{a\_{2}^{2} + b\_{2}^{2}}}$$
+Chú ý:
+• $\Delta\_{1} \perp \Delta\_{2} \Leftrightarrow \vec{n}\_{1} \perp \vec{n}\_{2} \Leftrightarrow a\_{1}a\_{2} + b\_{1}b\_{2} = 0$.
+• Nếu $\Delta\_{1}, \Delta\_{2}$ có các VTCP là $\vec{u}\_{1}, \vec{u}\_{2}$ thì $\cos \varphi = |\cos(\vec{u}\_{1}, \vec{u}\_{2})| = \frac{|\vec{u}\_{1} \cdot \vec{u}\_{2}|}{|\vec{u}\_{1}| \cdot |\vec{u}\_{2}|}$.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 2:** Tính góc giữa hai đường thẳng $\Delta\_{1}: \sqrt{3}x - y + 2 = 0$ và $\Delta\_{2}: x - \sqrt{3}y - 2 = 0$.
+
+Lời giải Ví dụ 2:
+• Vectơ pháp tuyến của $\Delta\_{1}$ là $\vec{n}\_{1} = (\sqrt{3}; -1)$, của $\Delta\_{2}$ là $\vec{n}\_{2} = (1; -\sqrt{3})$.
+• Gọi $\varphi$ là góc giữa hai đường thẳng $\Delta\_{1}$ và $\Delta\_{2}$. Ta có:
+$$\cos \varphi = \frac{|\vec{n}\_{1} \cdot \vec{n}\_{2}|}{|\vec{n}\_{1}| \cdot |\vec{n}\_{2}|} = \frac{|\sqrt{3} \cdot 1 + (-1)(-\sqrt{3})|}{\sqrt{(\sqrt{3})^{2} + (-1)^{2}} \cdot \sqrt{1^{2} + (-\sqrt{3})^{2}}} = \frac{|2\sqrt{3}|}{2 \cdot 2} = \frac{\sqrt{3}}{2}$$
+• Do đó, góc giữa $\Delta\_{1}$ và $\Delta\_{2}$ là $\varphi = 30^{\circ}$.
+
+**Luyện tập 2:** Tính góc giữa hai đường thẳng $\Delta\_{1}: x + 3y + 2 = 0$ và $\Delta\_{2}: y = 3x + 1$.
+
+Lời giải Luyện tập 2:
+• Viết lại $\Delta\_{2}: 3x - y + 1 = 0$. VTPT của $\Delta\_{1}$ là $\vec{n}\_{1} = (1; 3)$, của $\Delta\_{2}$ là $\vec{n}\_{2} = (3; -1)$.
+• Ta có: $\vec{n}\_{1} \cdot \vec{n}\_{2} = 1(3) + 3(-1) = 0 \Rightarrow \vec{n}\_{1} \perp \vec{n}\_{2}$.
+• Vậy góc giữa hai đường thẳng $\Delta\_{1}$ và $\Delta\_{2}$ là $\varphi = 90^{\circ}$ (hai đường thẳng vuông góc với nhau).
+
+**Ví dụ 3:** Tính góc giữa hai đường thẳng $\Delta\_{1}: x = 3$ và $\Delta\_{2}: \begin{cases} x = 2 - t \\\ y = 3 + t \end{cases}$.
+
+Lời giải Ví dụ 3:
+• Đường thẳng $\Delta\_{1}$ có phương trình $x - 3 = 0$ nên có VTPT $\vec{n}\_{1} = (1; 0)$. Đường thẳng $\Delta\_{2}$ có VTCP $\vec{u}\_{2} = (-1; 1)$ nên có VTPT $\vec{n}\_{2} = (1; 1)$.
+• Gọi $\varphi$ là góc giữa $\Delta\_{1}$ và $\Delta\_{2}$, ta có:
+$$\cos \varphi = \frac{|\vec{n}\_{1} \cdot \vec{n}\_{2}|}{|\vec{n}\_{1}| \cdot |\vec{n}\_{2}|} = \frac{|1(1) + 0(1)|}{\sqrt{1^{2} + 0^{2}} \cdot \sqrt{1^{2} + 1^{2}}} = \frac{1}{1 \cdot \sqrt{2}} = \frac{1}{\sqrt{2}}$$
+• Do đó, góc giữa $\Delta\_{1}$ và $\Delta\_{2}$ là $\varphi = 45^{\circ}$.
+
+**Luyện tập 3:** Tính góc giữa hai đường thẳng $\Delta\_{1}: \begin{cases} x = 2 + t \\\ y = 1 - 2t \end{cases}$ và $\Delta\_{2}: \begin{cases} x = 1 + t' \\\ y = 5 + 3t' \end{cases}$.
+
+Lời giải Luyện tập 3:
+• $\Delta\_{1}$ có VTCP $\vec{u}\_{1} = (1; -2)$, $\Delta\_{2}$ có VTCP $\vec{u}\_{2} = (1; 3)$.
+• Gọi $\varphi$ là góc giữa hai đường thẳng, ta có:
+$$\cos \varphi = \frac{|\vec{u}\_{1} \cdot \vec{u}\_{2}|}{|\vec{u}\_{1}| \cdot |\vec{u}\_{2}|} = \frac{|1(1) + (-2)(3)|}{\sqrt{1^{2} + (-2)^{2}} \cdot \sqrt{1^{2} + 3^{2}}} = \frac{|-5|}{\sqrt{5} \cdot \sqrt{10}} = \frac{5}{5\sqrt{2}} = \frac{1}{\sqrt{2}}$$
+• Vậy góc giữa hai đường thẳng là $\varphi = 45^{\circ}$.
+
+**Luyện tập 4 (Ý nghĩa hình học của hệ số góc):** Cho đường thẳng $\Delta: y = ax + b$ với $a \ne 0$.
+a) Chứng minh rằng $\Delta$ cắt trục hoành.
+b) Lập phương trình đường thẳng $\Delta\_{0}$ đi qua $O(0; 0)$ và song song (hoặc trùng) với $\Delta$.
+c) Hãy chỉ ra mối quan hệ giữa $\alpha\_{\Delta}$ và $\alpha\_{\Delta\_{0}}$.
+d) Gọi $M$ là giao điểm của $\Delta\_{0}$ với nửa đường tròn đơn vị và $x\_{0}$ là hoành độ của $M$. Tính tung độ của $M$ theo $x\_{0}$ và $a$. Từ đó, chứng minh rằng $\tan \alpha = a$.
+
+Lời giải Luyện tập 4:
+• a) Phương trình hoành độ giao điểm của $\Delta$ với trục hoành ($y = 0$) là: $ax + b = 0 \Leftrightarrow x = -\frac{b}{a}$ (do $a \ne 0$). Vậy $\Delta$ luôn cắt trục hoành tại điểm $A\left(-\frac{b}{a}; 0\right)$.
+• b) Đường thẳng $\Delta\_{0}$ song song hoặc trùng với $\Delta$ và đi qua $O(0; 0)$ nên có hệ số góc bằng $a$ và tung độ gốc bằng 0, tức là phương trình $\Delta\_{0}: y = ax$.
+• c) Vì $\Delta\_{0} \parallel \Delta$ (hoặc trùng nhau) nên góc tạo bởi tia phía trên trục hoành với tia $Ox$ của hai đường thẳng là bằng nhau (hai góc đồng vị): $\alpha\_{\Delta} = \alpha\_{\Delta\_{0}}$.
+• d) Điểm $M(x\_{0}; y\_{0}) \in \Delta\_{0} \Rightarrow y\_{0} = ax\_{0}$. Do $M$ thuộc nửa đường tròn đơn vị nên theo định nghĩa tỉ số lượng giác của góc $\alpha$ ta có: $\cos \alpha = x\_{0}$ và $\sin \alpha = y\_{0} = ax\_{0}$. Từ đó suy ra: $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{ax\_{0}}{x\_{0}} = a$.
+
+## Khoảng cách từ một điểm đến một đường thẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_khoang_cach_tu_diem_den_duong_thang"/>
+
+### a) Định nghĩa và công thức tính khoảng cách
+
+Cho điểm $M(x\_{0}; y\_{0})$ và đường thẳng $\Delta: ax + by + c = 0$ ($a^{2} + b^{2} > 0$).
+Khoảng cách từ điểm $M$ đến đường thẳng $\Delta$, kí hiệu là $d(M, \Delta)$, là độ dài đoạn vuông góc $MH$ kẻ từ $M$ đến $\Delta$, được tính bởi công thức:
+$$d(M, \Delta) = \frac{|ax\_{0} + by\_{0} + c|}{\sqrt{a^{2} + b^{2}}}$$
+Chứng minh công thức (HĐ4):
+• Gọi $H(x\_{1}; y\_{1}) \in \Delta \Rightarrow ax\_{1} + by\_{1} + c = 0 \Rightarrow c = -ax\_{1} - by\_{1}$.
+• Vectơ $\vec{HM} = (x\_{0} - x\_{1}; y\_{0} - y\_{1})$ cùng phương với VTPT $\vec{n} = (a; b)$ của $\Delta$.
+• Khi đó: $|\vec{n} \cdot \vec{HM}| = |\vec{n}| \cdot |\vec{HM}| = \sqrt{a^{2} + b^{2}} \cdot HM$.
+• Mặt khác: $\vec{n} \cdot \vec{HM} = a(x\_{0} - x\_{1}) + b(y\_{0} - y\_{1}) = ax\_{0} + by\_{0} - (ax\_{1} + by\_{1}) = ax\_{0} + by\_{0} + c$.
+• Suy ra: $HM = \frac{|ax\_{0} + by\_{0} + c|}{\sqrt{a^{2} + b^{2}}}$.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 4:** Tính khoảng cách từ điểm $M(2; 4)$ đến đường thẳng $\Delta: 3x + 4y - 12 = 0$.
+
+Lời giải Ví dụ 4:
+• Áp dụng công thức tính khoảng cách từ điểm $M$ đến đường thẳng $\Delta$, ta có:
+$$d(M, \Delta) = \frac{|3(2) + 4(4) - 12|}{\sqrt{3^{2} + 4^{2}}} = \frac{|6 + 16 - 12|}{\sqrt{25}} = \frac{10}{5} = 2$$
+• Vậy khoảng cách từ điểm $M$ đến đường thẳng $\Delta$ là 2.
+
+**Luyện tập 5:** Tính khoảng cách từ điểm $M(1; 2)$ đến đường thẳng $\Delta: \begin{cases} x = 5 + 3t \\\ y = -5 - 4t \end{cases}$.
+
+Lời giải Luyện tập 5:
+• Đường thẳng $\Delta$ đi qua điểm $A(5; -5)$ và có VTCP $\vec{u} = (3; -4)$, suy ra VTPT $\vec{n} = (4; 3)$.
+• Phương trình tổng quát của $\Delta$ là: $4(x - 5) + 3(y + 5) = 0 \Leftrightarrow 4x + 3y - 5 = 0$.
+• Khoảng cách từ điểm $M(1; 2)$ đến đường thẳng $\Delta$ là:
+$$d(M, \Delta) = \frac{|4(1) + 3(2) - 5|}{\sqrt{4^{2} + 3^{2}}} = \frac{|4 + 6 - 5|}{\sqrt{25}} = \frac{5}{5} = 1$$
+• Vậy khoảng cách cần tìm là 1.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập vận dụng thực tế
+
+**Vận dụng (Ao cá hình chữ nhật):** Nhà ông bà nội có một ao cá hình chữ nhật $ABCD$ với chiều dài $AD = 15\text{ m}$, chiều rộng $AB = 12\text{ m}$. Phần tam giác $DEF$ là nơi nuôi vịt, $AE = 5\text{ m}$, $CF = 6\text{ m}$ (Hình 7.11).
+a) Chọn hệ trục toạ độ $Oxy$ có gốc $O$ trùng $B$, tia $Ox$ trùng $BC$, tia $Oy$ trùng $BA$. Xác định toạ độ các điểm $A, B, C, D, E, F$ và viết phương trình đường thẳng $EF$.
+b) Nam đứng ở vị trí $B$ câu cá và có thể quăng lưỡi câu xa $10{,}7\text{ m}$. Hỏi lưỡi câu có thể rơi vào nơi nuôi vịt hay không?
+
+Lời giải Vận dụng:
+• a) Với hệ trục toạ độ đã chọn (gốc $B(0; 0)$):
+  + $B(0; 0)$;
+  + Do $AB = 12\text{ m}$ nằm trên trục $Oy$ nên $A(0; 12)$;
+  + Do $BC = AD = 15\text{ m}$ nằm trên trục $Ox$ nên $C(15; 0)$;
+  + $D(15; 12)$;
+  + Điểm $E$ thuộc cạnh $AD$ với $AE = 5\text{ m} \Rightarrow E(5; 12)$;
+  + Điểm $F$ thuộc cạnh $CD$ với $CF = 6\text{ m} \Rightarrow F(15; 6)$.
+  Đoạn $EF$ nối $E(5; 12)$ và $F(15; 6)$ có vectơ chỉ phương $\vec{EF} = (10; -6) = 2(5; -3)$, suy ra VTPT $\vec{n}\_{EF} = (3; 5)$. Phương trình đường thẳng $EF$:
+  $$3(x - 5) + 5(y - 12) = 0 \Leftrightarrow 3x + 5y - 75 = 0$$
+• b) Vị trí gần nhất từ $B$ đến vùng nuôi vịt $\Delta DEF$ chính là khoảng cách từ gốc $B(0; 0)$ đến đường thẳng ranh giới $EF$:
+  $$d(B, EF) = \frac{|3(0) + 5(0) - 75|}{\sqrt{3^{2} + 5^{2}}} = \frac{75}{\sqrt{34}} \approx 12{,}86\text{ m}$$
+  Vì khoảng cách ngắn nhất từ $B$ đến khu vực nuôi vịt là khoảng $12{,}86\text{ m} > 10{,}7\text{ m}$ (tầm quăng tối đa của Nam) nên lưỡi câu của Nam không thể rơi vào nơi nuôi vịt.
+
+**Bài 7.12 (Xác định vị trí nguồn âm thanh):** Trong mặt phẳng toạ độ, một tín hiệu âm thanh phát đi từ một vị trí và được ba thiết bị ghi tín hiệu đặt tại ba vị trí $O(0; 0)$, $A(1; 0)$, $B(1; 3)$ nhận được cùng một thời điểm. Hãy xác định vị trí phát tín hiệu âm thanh.
+
+Lời giải Bài 7.12:
+• Vì tín hiệu âm thanh lan truyền với vận tốc không đổi theo mọi hướng và đến ba thiết bị tại $O, A, B$ cùng một thời điểm nên khoảng cách từ vị trí phát tín hiệu $M(x; y)$ đến ba điểm $O, A, B$ là bằng nhau: $MO = MA = MB$.
+• Do đó, $M$ chính là tâm đường tròn ngoại tiếp tam giác $OAB$.
+• Ta có hệ phương trình:
+  $$\begin{cases} MO^{2} = MA^{2} \\\ MO^{2} = MB^{2} \end{cases} \Leftrightarrow \begin{cases} x^{2} + y^{2} = (x - 1)^{2} + y^{2} \\\ x^{2} + y^{2} = (x - 1)^{2} + (y - 3)^{2} \end{cases}$$
+  $$\Leftrightarrow \begin{cases} x^{2} + y^{2} = x^{2} - 2x + 1 + y^{2} \\\ x^{2} + y^{2} = x^{2} - 2x + 1 + y^{2} - 6y + 9 \end{cases} \Leftrightarrow \begin{cases} 2x = 1 \\\ 2x + 6y = 10 \end{cases} \Leftrightarrow \begin{cases} x = \frac{1}{2} \\\ y = \frac{3}{2} \end{cases}$$
+• Kết luận: Vị trí phát tín hiệu âm thanh có toạ độ là $M\left(\frac{1}{2}; \frac{3}{2}\right)$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 7.7:** Xét vị trí tương đối giữa các cặp đường thẳng sau:
+a) $\Delta\_{1}: 3\sqrt{2}x + \sqrt{2}y - \sqrt{3} = 0$ và $\Delta\_{2}: 6x + 2y - \sqrt{6} = 0$;
+b) $d\_{1}: x - \sqrt{3}y + 2 = 0$ và $d\_{2}: \sqrt{3}x - 3y + 2 = 0$;
+c) $m\_{1}: x - 2y + 1 = 0$ và $m\_{2}: 3x + y - 2 = 0$.
+
+Lời giải Bài 7.7:
+• a) Ta có $\frac{3\sqrt{2}}{6} = \frac{\sqrt{2}}{2} = \frac{-\sqrt{3}}{-\sqrt{6}} = \frac{\sqrt{2}}{2}$. Các hệ số tỉ lệ nên hai đường thẳng $\Delta\_{1}$ và $\Delta\_{2}$ trùng nhau.
+• b) VTPT của $d\_{1}$ là $\vec{n}\_{1} = (1; -\sqrt{3})$, của $d\_{2}$ là $\vec{n}\_{2} = (\sqrt{3}; -3) = \sqrt{3}\vec{n}\_{1}$. Do đó $\vec{n}\_{1}$ và $\vec{n}\_{2}$ cùng phương. Mặt khác $\frac{1}{\sqrt{3}} = \frac{-\sqrt{3}}{-3} \ne \frac{2}{2}$, nên $d\_{1}$ song song với $d\_{2}$.
+• c) VTPT của $m\_{1}$ là $\vec{n}\_{1} = (1; -2)$, của $m\_{2}$ là $\vec{n}\_{2} = (3; 1)$. Vì $\frac{1}{3} \ne \frac{-2}{1}$ nên $\vec{n}\_{1}$ và $\vec{n}\_{2}$ không cùng phương. Do đó $m\_{1}$ cắt $m\_{2}$. Giải hệ $\begin{cases} x - 2y + 1 = 0 \\\ 3x + y - 2 = 0 \end{cases} \Leftrightarrow \begin{cases} x = \frac{3}{7} \\\ y = \frac{5}{7} \end{cases}$, toạ độ giao điểm là $\left(\frac{3}{7}; \frac{5}{7}\right)$.
+
+**Bài 7.8:** Tính góc giữa các cặp đường thẳng sau:
+a) $\Delta\_{1}: \sqrt{3}x + y - 4 = 0$ và $\Delta\_{2}: x + \sqrt{3}y + 3 = 0$;
+b) $d\_{1}: \begin{cases} x = -1 + 2t \\\ y = 3 + 4t \end{cases}$ và $d\_{2}: \begin{cases} x = 3 + s \\\ y = 1 - 3s \end{cases}$.
+
+Lời giải Bài 7.8:
+• a) VTPT của $\Delta\_{1}$ là $\vec{n}\_{1} = (\sqrt{3}; 1)$, của $\Delta\_{2}$ là $\vec{n}\_{2} = (1; \sqrt{3})$. Gọi $\varphi$ là góc giữa hai đường thẳng:
+$$\cos \varphi = \frac{|\sqrt{3}(1) + 1(\sqrt{3})|}{\sqrt{(\sqrt{3})^{2} + 1^{2}} \cdot \sqrt{1^{2} + (\sqrt{3})^{2}}} = \frac{2\sqrt{3}}{2 \cdot 2} = \frac{\sqrt{3}}{2} \Rightarrow \varphi = 30^{\circ}$$
+• b) VTCP của $d\_{1}$ là $\vec{u}\_{1} = (2; 4) = 2(1; 2)$, VTCP của $d\_{2}$ là $\vec{u}\_{2} = (1; -3)$. Gọi $\varphi$ là góc giữa hai đường thẳng:
+$$\cos \varphi = \frac{|1(1) + 2(-3)|}{\sqrt{1^{2} + 2^{2}} \cdot \sqrt{1^{2} + (-3)^{2}}} = \frac{|-5|}{\sqrt{5} \cdot \sqrt{10}} = \frac{5}{5\sqrt{2}} = \frac{1}{\sqrt{2}} \Rightarrow \varphi = 45^{\circ}$$
+
+**Bài 7.9:** Trong mặt phẳng toạ độ $Oxy$, cho điểm $A(0; -2)$ và đường thẳng $\Delta: x + y - 4 = 0$.
+a) Tính khoảng cách từ điểm $A$ đến đường thẳng $\Delta$.
+b) Viết phương trình đường thẳng $a$ đi qua điểm $M(-1; 0)$ và song song với $\Delta$.
+c) Viết phương trình đường thẳng $b$ đi qua điểm $N(0; 3)$ và vuông góc với $\Delta$.
+
+Lời giải Bài 7.9:
+• a) Áp dụng công thức tính khoảng cách:
+$$d(A, \Delta) = \frac{|0 + (-2) - 4|}{\sqrt{1^{2} + 1^{2}}} = \frac{|-6|}{\sqrt{2}} = 3\sqrt{2}$$
+• b) Đường thẳng $a$ song song với $\Delta$ nên nhận $\vec{n} = (1; 1)$ làm VTPT. Phương trình đường thẳng $a$ đi qua $M(-1; 0)$ là:
+$$1(x + 1) + 1(y - 0) = 0 \Leftrightarrow x + y + 1 = 0$$
+• c) Đường thẳng $b$ vuông góc với $\Delta$ nên nhận $\vec{u}\_{\Delta} = (1; -1)$ làm VTPT (hoặc $\vec{n}\_{b} = (1; -1)$). Phương trình đường thẳng $b$ đi qua $N(0; 3)$ là:
+$$1(x - 0) - 1(y - 3) = 0 \Leftrightarrow x - y + 3 = 0$$
+
+**Bài 7.10:** Trong mặt phẳng toạ độ, cho tam giác $ABC$ có $A(1; 0)$, $B(3; 2)$ và $C(-2; -1)$.
+a) Tính độ dài đường cao kẻ từ đỉnh $A$ của tam giác $ABC$.
+b) Tính diện tích tam giác $ABC$.
+
+Lời giải Bài 7.10:
+• a) Đường thẳng $BC$ đi qua $B(3; 2)$ và có VTCP $\vec{BC} = (-5; -3) = -(5; 3)$, suy ra VTPT $\vec{n}\_{BC} = (3; -5)$. Phương trình tổng quát của đường thẳng $BC$ là:
+$$3(x - 3) - 5(y - 2) = 0 \Leftrightarrow 3x - 5y + 1 = 0$$
+Độ dài đường cao $h\_{a}$ kẻ từ $A$ chính là khoảng cách từ $A(1; 0)$ đến đường thẳng $BC$:
+$$h\_{a} = d(A, BC) = \frac{|3(1) - 5(0) + 1|}{\sqrt{3^{2} + (-5)^{2}}} = \frac{4}{\sqrt{34}}$$
+• b) Độ dài cạnh đáy $BC = \sqrt{(-5)^{2} + (-3)^{2}} = \sqrt{34}$.
+Diện tích tam giác $ABC$ là:
+$$S\_{ABC} = \frac{1}{2} BC \cdot h\_{a} = \frac{1}{2} \cdot \sqrt{34} \cdot \frac{4}{\sqrt{34}} = 2$$
+
+**Bài 7.11:** Chứng minh rằng hai đường thẳng $d: y = ax + b$ ($a \ne 0$) và $d': y = a'x + b'$ ($a' \ne 0$) vuông góc với nhau khi và chỉ khi $a \cdot a' = -1$.
+
+Lời giải Bài 7.11:
+• Viết lại phương trình hai đường thẳng dưới dạng tổng quát: $d: ax - y + b = 0$ và $d': a'x - y + b' = 0$.
+• VTPT của $d$ là $\vec{n} = (a; -1)$, VTPT của $d'$ là $\vec{n}' = (a'; -1)$.
+• Ta có điều kiện hai đường thẳng vuông góc:
+$$d \perp d' \Leftrightarrow \vec{n} \perp \vec{n}' \Leftrightarrow \vec{n} \cdot \vec{n}' = 0 \Leftrightarrow a \cdot a' + (-1)(-1) = 0 \Leftrightarrow a \cdot a' + 1 = 0 \Leftrightarrow a \cdot a' = -1$$
+• Đây là điều phải chứng minh.
