@@ -1,0 +1,128 @@
+---
+title: 'Lesson 24: Orthogonal Projection of a Line onto a Plane.'
+description: Theoretical system for the lesson on Orthogonal Projection of a Line onto a Plane with illustrative examples.
+tags:
+  - grade 11
+  - Orthogonal projection
+  - orthogonal projection of a point/line/figure
+  - Theorem of three perpendiculars
+  - Angle between a line and a plane
+grade: 11
+order: 24
+updatedDate: 2026-10-28T22:49:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Orthogonal projection, orthogonal projection of a point/line/figure
+
+·       Theorem of three perpendiculars
+
+·       Angle between a line and a plane
+
+### **Knowledge and Skills:**
+
+·       Recognize orthogonal projection and determine the orthogonal projection of a point, a line, and a triangle.
+
+·       Explain and proficiently apply the theorem of three perpendiculars.
+
+·       Recognize and compute the angle between a line and a plane in space.
+
+·       Apply the knowledge of the angle between a line and a plane to describe and explain real-world phenomena (midnight sun near the Arctic Circle, take-off angle of an airplane).
+
+## Orthogonal Projection
+
+<Youtube url="https://www.youtube.com/watch?v=example_phep_chieu_vuong_goc"/>
+
+### a) Definition of Orthogonal Projection
+
+Definition: Parallel projection onto a plane $(P)$ along a direction $\Delta$ perpendicular to $(P)$ is called orthogonal projection onto the plane $(P)$.
+Note:
+• Since orthogonal projection is a special case of parallel projection, it possesses all the properties of parallel projection.
+• If $A$ is a point not belonging to $(P)$ and $A'$ is the projection of $A$ on $(P)$, then the line $AA'$ is perpendicular to the plane $(P)$.
+• If a line $a$ is perpendicular to the plane $(P)$, its projection on $(P)$ is a single point (the intersection of $a$ and $(P)$).
+
+### b) Theorem of Three Perpendiculars
+
+Theorem of Three Perpendiculars: Let $a$ be a line and $(P)$ be a plane not perpendicular to each other. Then, a line $b$ lying in the plane $(P)$ is perpendicular to line $a$ if and only if $b$ is perpendicular to the orthogonal projection $a'$ of $a$ on $(P)$.
+Significance: The theorem of three perpendiculars allows shifting the verification of perpendicularity between $a$ and $b$ (which may be skew) to checking the perpendicularity between $b$ and $a'$ (both lying in the plane $(P)$).
+
+**Example 1:** On a flat horizontal courtyard, vertical poles $AM, BN, CP, DQ$ are erected at points $A, B, C, D$ respectively, and straight cables are stretched between $M$ and $P$, and between $N$ and $Q$.
+a) State the projections of the cables $MP$ and $NQ$ on the courtyard.
+b) Prove that if $BD \perp AC$, then $BD \perp MP$.
+c) Prove that if $ABCD$ is a parallelogram, then the midpoints $E$ and $F$ of segments $MP$ and $NQ$ respectively share the same projection on the courtyard.
+
+Solution to Example 1:
+• a) Since the vertical poles are perpendicular to the horizontal courtyard, $A, B, C, D$ are the orthogonal projections of $M, N, P, Q$ on the courtyard, respectively. Thus, the projections of $MP$ and $NQ$ on the courtyard are $AC$ and $BD$.
+• b) Given $BD \perp AC$. Since $AC$ is the projection of $MP$ on the courtyard and $BD$ lies in the courtyard, by the theorem of three perpendiculars, we conclude that $BD \perp MP$.
+• c) If $ABCD$ is a parallelogram, its diagonals $AC$ and $BD$ intersect at their common midpoint $O$. Considering trapezoid $ACPM$ (with $AM \parallel CP$ as both are perpendicular to the courtyard), the segment $EO$ is the midsegment, so $EO \parallel AM \implies EO \perp \text{court}$. Thus, $O$ is the projection of $E$ on the courtyard. Similarly, $O$ is also the projection of $F$ on the courtyard. Therefore, $E$ and $F$ share the same projection on the courtyard.
+
+## Angle Between a Line and a Plane
+
+### a) Definition of the Angle Between a Line and a Plane
+
+Definition:
+• If a line $a$ is perpendicular to a plane $(P)$, the angle between $a$ and $(P)$ is defined to be $90^{\circ}$.
+• If a line $a$ is not perpendicular to a plane $(P)$, the angle between $a$ and its projection $a'$ on $(P)$ is called the angle between the line $a$ and the plane $(P)$.
+Note: If $\alpha$ is the angle between a line $a$ and a plane $(P)$, then $0^{\circ} \le \alpha \le 90^{\circ}$.
+Remark: Let point $A$ have projection $H$ on $(P)$. Let $O \in (P)$ ($O \ne H$). Then the angle between line $AO$ and plane $(P)$ is equal to the angle $\widehat{AOH}$.
+
+### b) Examples and Practice on the Angle Between a Line and a Plane
+
+**Example 2:** Given a pyramid $S.ABC$ with $SA \perp (ABC)$, $CA = CB = a\sqrt{7}$, $AB = 2a$, and $SA = a$.
+a) Let $\alpha$ be the angle between $SB$ and $(ABC)$. Compute $\tan \alpha$.
+b) Compute the angle between $SC$ and $(SAB)$.
+
+Solution to Example 2:
+• a) Since $SA \perp (ABC)$, the projection of $SB$ on $(ABC)$ is $AB$. Therefore, the angle between $SB$ and $(ABC)$ is $\widehat{SBA}$.
+  Right-angled triangle $SAB$ at $A$ has $\tan \alpha = \tan \widehat{SBA} = \frac{SA}{AB} = \frac{a}{2a} = \frac{1}{2}$.
+• b) Let $M$ be the midpoint of $AB$. Since triangle $ABC$ is isosceles at $C$ ($CA = CB = a\sqrt{7}$), we have $CM \perp AB$.
+  Moreover, $SA \perp (ABC) \implies SA \perp CM$. Thus, $CM \perp (SAB)$.
+  Hence, the projection of $SC$ on $(SAB)$ is the segment $SM$, implying the angle between $SC$ and $(SAB)$ is $\widehat{CSM}$.
+  - Compute $SM$: right-angled triangle $SAM$ at $A$ with $SA = a$ and $AM = \frac{1}{2}AB = a \implies SM = \sqrt{SA^2 + AM^2} = a\sqrt{2}$.
+  - Compute $SC$: right-angled triangle $SAC$ at $A$ with $SA = a$ and $AC = a\sqrt{7} \implies SC = \sqrt{SA^2 + AC^2} = \sqrt{a^2 + 7a^2} = a\sqrt{8} = 2a\sqrt{2}$.
+  - In right-angled triangle $CMS$ at $M$: $\cos \widehat{CSM} = \frac{SM}{SC} = \frac{a\sqrt{2}}{2a\sqrt{2}} = \frac{1}{2} \implies \widehat{CSM} = 60^{\circ}$.
+• Thus, the angle between $SC$ and $(SAB)$ is $60^{\circ}$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (The Midnight Sun Phenomenon):** During midsummer north of the Arctic Circle (such as in Norway, Finland, and Russia), the Sun can be seen throughout the entire 24-hour day. Explain this phenomenon using spatial geometry combined with the angle between the Earth's axis and the orbital plane.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 7.10:** Given a pyramid $S.ABC$ with $SA \perp (ABC)$ and triangle $ABC$ right-angled at $B$.
+a) Identify the projection of point $S$ on $(ABC)$;
+b) Identify the projection of triangle $SBC$ on $(ABC)$;
+c) Identify the projection of triangle $SBC$ on $(SAB)$.
+
+Solution to Exercise 7.10:
+• a) The projection of point $S$ on $(ABC)$ is point $A$.
+• b) The projection of triangle $SBC$ on $(ABC)$ is triangle $ABC$.
+• c) The projection of triangle $SBC$ on $(SAB)$ is triangle $SAB$ (since $BC \perp (SAB)$, the projection of point $C$ on $(SAB)$ is point $B$).
+
+**Exercise 7.11:** Given a pyramid $S.ABCD$ with square base $ABCD$ of side length $a$, $SA \perp (ABCD)$, and $SA = a\sqrt{2}$.
+a) Calculate the angle between $SC$ and the plane $(ABCD)$;
+b) Calculate the angle between $BD$ and the plane $(SAC)$;
+c) Find the projection of $SB$ on the plane $(SAC)$.
+
+Solution to Exercise 7.11:
+• a) The projection of $SC$ on $(ABCD)$ is $AC$. The angle between $SC$ and $(ABCD)$ is $\widehat{SCA}$.
+  Right-angled triangle $SAC$ at $A$ has $SA = a\sqrt{2}$ and $AC = a\sqrt{2}$ (diagonal of a square of side $a$). Thus, $\tan \widehat{SCA} = \frac{SA}{AC} = \frac{a\sqrt{2}}{a\sqrt{2}} = 1 \implies \widehat{SCA} = 45^{\circ}$.
+• b) Let $O$ be the center of square $ABCD$. We have $BD \perp AC$ and $BD \perp SA$ (since $SA \perp (ABCD)$), which implies $BD \perp (SAC)$.
+  Therefore, the projection of $BD$ on $(SAC)$ is the point $O$. The angle between $BD$ and $(SAC)$ is $0^{\circ}$.
+• c) The projection of $S$ is $S$, and the projection of $B$ on $(SAC)$ is $O$ (since $BO \perp AC$ and $BO \perp SA$). Thus, the projection of $SB$ on $(SAC)$ is the segment $SO$.
+
+**Exercise 7.14 (Take-off Angle of an Airplane):** For a short period after take-off, an airplane flies along a straight line. The take-off angle is the angle between that line and the horizontal plane. Two airplanes take off and fly straight at the same speed during the first 5 minutes, with take-off angles of $10^{\circ}$ and $15^{\circ}$ respectively. Which airplane is at a greater altitude above the ground after 1 minute of flight?
+
+Solution to Exercise 7.14:
+• Let $v$ be the speed of the airplane. After $t = 1$ minute, the flight distance of each airplane is $s = v \cdot 1 = v$.
+• The altitude of the airplane above the ground is the distance from the airplane to its orthogonal projection on the ground, given by $h = s \cdot \sin \alpha = v \cdot \sin \alpha$, where $\alpha$ is the take-off angle.
+• Since the sine function $\sin \alpha$ is strictly increasing on $[0^{\circ}; 90^{\circ}]$ and $15^{\circ} > 10^{\circ}$, we have $\sin 15^{\circ} > \sin 10^{\circ}$.
+• Therefore, the airplane with the $15^{\circ}$ take-off angle will be at a greater altitude after 1 minute.
