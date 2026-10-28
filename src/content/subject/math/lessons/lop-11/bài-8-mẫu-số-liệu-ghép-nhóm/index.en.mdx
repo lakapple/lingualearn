@@ -1,0 +1,183 @@
+---
+title: 'Lesson: Grouped data.'
+description: Theoretical system for the lesson on grouped data with illustrative examples.
+tags:
+  - Grade 11
+grade: 11
+order: 8
+updatedDate: 2026-10-28T15:01:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Grouped data (grouped frequency distribution)
+
+·       Class interval (class, bin), lower limit (left endpoint), upper limit (right endpoint), class width
+
+·       Class frequency
+
+### **Knowledge and Skills:**
+
+·       Read, describe, and interpret statistical information represented in grouped frequency distributions.
+
+·       Group ungrouped raw data into structured class intervals according to given criteria.
+
+·       Select the appropriate number of classes, lower/upper boundaries, and equal class widths systematically.
+
+·       Apply grouped data methods to analyze real-world quantitative problems (BMI classifications, commute duration, worker productivity, garment sizing proportions, athletic match appearances).
+
+## Introduction to Grouped Data
+
+<Youtube url="https://www.youtube.com/watch?v=example_mau_so_lieu_ghep_nhom"/>
+
+### a) Concept of Grouped Data
+
+Definition:
+A grouped data set is a statistical dataset presented in the form of a frequency distribution table over partitioned data classes (intervals).
+• Each data group (class interval) is a set of observation values grouped according to a specified criterion.
+• A class interval is commonly expressed as a half-open interval $[a; b)$, where $a$ is the lower limit (left endpoint) and $b$ is the upper limit (right endpoint).
+• In certain contexts, the terminal class interval may be closed at both ends: $[a; b]$.
+• The class width of the interval $[a; b)$ is the difference $b - a$.
+
+Practical Significance:
+Grouped data tables are essential when exact values cannot be recorded or when dealing with massive datasets where an aggregate overview is required to facilitate data organization, visualization, reading, and analysis.
+
+### b) Reading and Interpreting Grouped Data
+
+**Example 1:** The age distribution of Vietnam's population in the 2019 census is given as follows:
+• Under 15 years old: 23,371,882 people;
+• From 15 to under 65 years old: 65,420,451 people;
+• 65 years old and older: 7,416,651 people.
+a) Is this dataset a grouped dataset?
+b) State the class intervals and their corresponding frequencies. Compute the total population of Vietnam in 2019.
+
+Solution for Example 1:
+• a) The provided dataset is indeed a grouped dataset.
+• b) There are three class intervals:
+  + Class 1 (Under 15 years old, i.e., $[0; 15)$) with a frequency of $23,371,882$ people;
+  + Class 2 (From 15 to under 65 years old, i.e., $[15; 65)$) with a frequency of $65,420,451$ people;
+  + Class 3 (65 years old and older, i.e., $[65; +\infty)$) with a frequency of $7,416,651$ people.
+  The total population of Vietnam in 2019 was:
+  $$23,371,882 + 65,420,451 + 7,416,651 = 96,208,984\text{ (people).}$$
+
+**Practice 1:** Consider the grouped frequency distribution of commute times (in minutes) from home to work for company employees:
+• $[15; 20)$: 6 employees; $[20; 25)$: 14 employees; $[25; 30)$: 25 employees;
+• $[30; 35)$: 37 employees; $[35; 40)$: 21 employees; $[40; 45)$: 13 employees; $[45; 50)$: 9 employees.
+Read and interpret this grouped dataset.
+
+Solution for Practice 1:
+• The total sample size surveyed is: $6 + 14 + 25 + 37 + 21 + 13 + 9 = 125$ employees.
+• The data is divided into 7 class intervals, each with an equal width of 5 minutes.
+• There are 6 employees whose commute takes between 15 and under 20 minutes; 14 employees take between 20 and under 25 minutes; the modal class is $[30; 35)$ with 37 employees; and 9 employees spend between 45 and under 50 minutes commuting.
+
+## Methods of Grouping Raw Data
+
+<Youtube url="https://www.youtube.com/watch?v=example_ghep_nhom_mau_so_lieu"/>
+
+### a) Procedure for Grouping Data
+
+To convert an ungrouped raw dataset into a grouped frequency distribution, follow these two steps:
+• Step 1: Partition the range of the dataset into a set of classes based on specified criteria.
+  + Determine the sample range: $R = x\_{\max} - x\_{\min}$.
+  + Classes should generally have equal widths, be mutually disjoint, and encompass the entire data range (the sum of all class widths must be greater than or equal to $R$).
+  + Typically, between 5 and 10 classes are chosen depending on the sample size.
+• Step 2: Tally the number of observations falling into each class (determine the class frequencies) and construct the grouped frequency distribution table.
+
+### b) Illustrative Examples and Practice on Data Grouping
+
+**Example 2:** The finishing times (in minutes) of 30 marathon runners have a minimum value of 129 and a maximum value of 145. The range is $145 - 129 = 16$. Convert this dataset into a grouped frequency distribution consisting of six classes with equal width equal to 3.
+
+Solution for Example 2:
+• The total width across 6 classes is $6 \times 3 = 18 > 16$. Choosing a lower boundary of $127.5$ for the first class and an upper boundary of $145.5$ for the last class ensures clean boundaries.
+• The six class intervals are: $[127.5; 130.5)$, $[130.5; 133.5)$, $[133.5; 136.5)$, $[136.5; 139.5)$, $[139.5; 142.5)$, $[142.5; 145.5)$.
+• Tallying the frequencies yields the grouped table:
+  + $[127.5; 130.5)$: 3 runners;
+  + $[130.5; 133.5)$: 1 runner;
+  + $[133.5; 136.5)$: 4 runners;
+  + $[136.5; 139.5)$: 3 runners;
+  + $[139.5; 142.5)$: 7 runners;
+  + $[142.5; 145.5)$: 12 runners.
+
+**Practice 2:** Body weights (in kg) of 35 adults in a residential community are recorded: 43, 51, 47, 62, 48, 40, 50, 62, 53, 56, 40, 48, 56, 53, 50, 42, 55, 52, 48, 46, 45, 54, 52, 50, 47, 44, 54, 55, 60, 63, 58, 55, 60, 58, 53. Group this data into equal-width classes, including the class $[40; 45)$.
+
+Solution for Practice 2:
+• The minimum value is 40 and the maximum is 63. With class width 5 and starting from $[40; 45)$, we partition the range into 5 intervals:
+  + Class $[40; 45)$: values $\\{40, 40, 42, 43, 44\\} \Rightarrow$ frequency is 5;
+  + Class $[45; 50)$: values $\\{45, 46, 47, 47, 48, 48, 48\\} \Rightarrow$ frequency is 7;
+  + Class $[50; 55)$: values $\\{50, 50, 50, 51, 52, 52, 53, 53, 53, 54, 54\\} \Rightarrow$ frequency is 11;
+  + Class $[55; 60)$: values $\\{55, 55, 55, 56, 56, 58, 58\\} \Rightarrow$ frequency is 7;
+  + Class $[60; 65)$: values $\\{60, 60, 62, 62, 63\\} \Rightarrow$ frequency is 5.
+• Total sample size verified: $5 + 7 + 11 + 7 + 5 = 35$ people.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application (School Uniform Size Estimation):** Standard uniform garment sizes correspond to height intervals as follows: Size S $[150; 160)$; Size M $[160; 167)$; Size L $[167; 170)$; Size XL $[170; 175)$; Size XXL $[175; 180)$. A sample of 36 Grade 11 male students yielded the following heights (in cm):
+160, 161, 161, 162, 162, 162, 163, 163, 163, 164, 164, 164, 164, 165, 165, 165, 165, 165, 166, 166, 166, 166, 167, 167, 168, 168, 168, 168, 169, 169, 170, 171, 171, 172, 172, 174.
+a) Construct the grouped frequency table matching the defined sizing intervals.
+b) If the apparel company manufactures 500 uniforms for Grade 11 students, how many garments of each size should be produced?
+
+Solution for Application:
+• a) Counting students in each height category:
+  + Class $[150; 160)$ (Size S): 0 students (frequency 0);
+  + Class $[160; 167)$ (Size M): 160 cm to 166 cm, total 22 students (frequency 22);
+  + Class $[167; 170)$ (Size L): 167 cm to 169 cm, total 8 students (frequency 8);
+  + Class $[170; 175)$ (Size XL): 170 cm to 174 cm, total 6 students (frequency 6);
+  + Class $[175; 180)$ (Size XXL): 0 students (frequency 0).
+  Total students: $22 + 8 + 6 = 36$.
+• b) Sample proportions for each size:
+  + Size M: $\frac{22}{36} = \frac{11}{18} \approx 61.11\\%$;
+  + Size L: $\frac{8}{36} = \frac{2}{9} \approx 22.22\\%$;
+  + Size XL: $\frac{6}{36} = \frac{1}{6} \approx 16.67\\%$.
+  For an order of 500 uniforms, the recommended production quantities are:
+  + Size M: $500 \times \frac{22}{36} \approx 306$ pieces;
+  + Size L: $500 \times \frac{8}{36} \approx 111$ pieces;
+  + Size XL: $500 - 306 - 111 = 83$ pieces (or $500 \times \frac{6}{36} \approx 83$ pieces).
+
+### b) Detailed Section Exercises
+
+**Exercise 3.1:** Identify whether the following tables represent grouped datasets, then read and interpret them:
+a) Monthly mobile phone expenditures by university students: $[0; 50)$ (5 students); $[50; 100)$ (12 students); $[100; 150)$ (23 students); $[150; 200)$ (17 students); $[200; 250)$ (3 students).
+b) Daily recorded temperatures over 40 days: $[19; 22)$ (7 days); $[22; 25)$ (15 days); $[25; 28)$ (12 days); $[28; 31)$ (6 days).
+
+Solution for Exercise 3.1:
+• Both tables a) and b) are grouped datasets.
+• Interpretation of table a): A total of $5 + 12 + 23 + 17 + 3 = 60$ students were surveyed. Expenditures are divided into 5 classes with a constant width of 50 thousand VND. The most common expenditure interval is $[100; 150)$ thousand VND, comprising 23 students.
+• Interpretation of table b): The temperature survey covers 40 days across 4 classes with a uniform width of $3^{\circ}\text{C}$. The modal temperature class is $[22; 25)^{\circ}\text{C}$, occurring on 15 days.
+
+**Exercise 3.2:** Daily output units produced by 25 workers: 18, 25, 39, 12, 54, 27, 46, 25, 19, 8, 36, 22, 20, 19, 17, 44, 5, 18, 23, 28, 25, 34, 46, 27, 16. Convert this data into a grouped frequency distribution with six equal-width classes.
+
+Solution for Exercise 3.2:
+• Minimum value is 5, maximum value is 54. Sample range $R = 54 - 5 = 49$.
+• Partitioning into 6 classes of equal width, we choose class width $d = 9$ (total coverage $6 \times 9 = 54 > 49$).
+• Setting the lower limit of the first class at 4 yields the classes: $[4; 13)$, $[13; 22)$, $[22; 31)$, $[31; 40)$, $[40; 49)$, $[49; 58)$.
+• Class frequencies:
+  + Class $[4; 13)$: $\\{5, 8, 12\\} \Rightarrow$ frequency is 3;
+  + Class $[13; 22)$: $\\{16, 17, 18, 18, 19, 19, 20\\} \Rightarrow$ frequency is 7;
+  + Class $[22; 31)$: $\\{22, 23, 25, 25, 25, 27, 27, 28\\} \Rightarrow$ frequency is 8;
+  + Class $[31; 40)$: $\\{34, 36, 39\\} \Rightarrow$ frequency is 3;
+  + Class $[40; 49)$: $\\{44, 46, 46\\} \Rightarrow$ frequency is 3;
+  + Class $[49; 58)$: $\\{54\\} \Rightarrow$ frequency is 1.
+• Total worker count verified: $3 + 7 + 8 + 3 + 3 + 1 = 25$ workers.
+
+**Exercise 3.3:** Playing time (in hours) of 16 veteran English Premier League players: 653, 632, 609, 572, 565, 535, 516, 514, 508, 505, 504, 504, 503, 499, 496, 492. Convert into a grouped frequency distribution with seven equal-width classes.
+
+Solution for Exercise 3.3:
+• Minimum value is 492, maximum value is 653. Range $R = 653 - 492 = 161$.
+• For 7 equal-width classes, we choose class width $d = 24$ (total coverage $7 \times 24 = 168 > 161$).
+• Setting the lower limit of the first class at 490 gives the 7 classes: $[490; 514)$, $[514; 538)$, $[538; 562)$, $[562; 586)$, $[586; 610)$, $[610; 634)$, $[634; 658)$.
+• Class frequencies:
+  + Class $[490; 514)$: $\\{492, 496, 499, 503, 504, 504, 505, 508\\} \Rightarrow$ frequency is 8;
+  + Class $[514; 538)$: $\\{514, 516, 535\\} \Rightarrow$ frequency is 3;
+  + Class $[538; 562)$: empty set $\Rightarrow$ frequency is 0;
+  + Class $[562; 586)$: $\\{565, 572\\} \Rightarrow$ frequency is 2;
+  + Class $[586; 610)$: $\\{609\\} \Rightarrow$ frequency is 1;
+  + Class $[610; 634)$: $\\{632\\} \Rightarrow$ frequency is 1;
+  + Class $[634; 658)$: $\\{653\\} \Rightarrow$ frequency is 1.
+• Total player count verified: $8 + 3 + 0 + 2 + 1 + 1 + 1 = 16$ players.
