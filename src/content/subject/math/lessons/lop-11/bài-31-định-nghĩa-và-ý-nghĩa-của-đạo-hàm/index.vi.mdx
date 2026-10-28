@@ -1,0 +1,201 @@
+---
+title: 'Bài 31: Định nghĩa và ý nghĩa của đạo hàm.'
+description: Hệ thống lý thuyết bài Định nghĩa và ý nghĩa của đạo hàm cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Đạo hàm tại một điểm
+  - Đạo hàm trên một khoảng
+  - Hệ số góc của tiếp tuyến
+  - Vận tốc tức thời
+grade: 11
+order: 31
+updatedDate: 2026-10-29T00:23:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Đạo hàm tại một điểm
+
+·       Đạo hàm trên một khoảng
+
+·       Hệ số góc của tiếp tuyến
+
+·       Vận tốc tức thời, cường độ tức thời
+
+·       Tốc độ biến đổi tức thời
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết một số bài toán dẫn đến khái niệm đạo hàm (vận tốc tức thời, cường độ dòng điện tức thời).
+
+·       Hiểu định nghĩa đạo hàm tại một điểm và biết cách tính đạo hàm của hàm số đơn giản bằng định nghĩa.
+
+·       Nhận biết đạo hàm của hàm số trên một khoảng và các công thức đạo hàm cơ bản: $(c)' = 0$, $(x)' = 1$, $(cx^2)' = 2cx$.
+
+·       Hiểu ý nghĩa hình học và ý nghĩa vật lí của đạo hàm; viết phương trình tiếp tuyến của đồ thị hàm số tại một điểm thuộc đồ thị.
+
+·       Vận dụng đạo hàm giải quyết các bài toán thực tiễn (rơi tự do tại Landmark 81, độ dốc cầu vượt giao thông, thiết kế đường ray tàu lượn).
+
+## Định nghĩa đạo hàm của hàm số
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_nghia_dao_ham"/>
+
+### a) Đạo hàm tại một điểm
+
+Cho hàm số $y = f(x)$ xác định trên khoảng $(a; b)$ và điểm $x_0 \in (a; b)$.
+Nếu tồn tại giới hạn hữu hạn:
+$$\lim\_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$$
+thì giới hạn đó được gọi là đạo hàm của hàm số $y = f(x)$ tại điểm $x_0$, kí hiệu là $f'(x_0)$ (hoặc $y'(x_0)$), tức là:
+$$f'(x_0) = \lim\_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$$
+Đặt số gia của đối số là $h = x - x_0$, ta có công thức tương đương:
+$$f'(x_0) = \lim\_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
+Các bước tính đạo hàm tại một điểm bằng định nghĩa:
+1\. Tính hiệu $f(x) - f(x_0)$;
+2\. Lập và rút gọn tỉ số $\frac{f(x) - f(x_0)}{x - x_0}$ với $x \ne x_0$;
+3\. Tìm giới hạn $\lim\_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$.
+
+### b) Ví dụ và luyện tập tính đạo hàm tại một điểm
+
+**Ví dụ 1:** Tính đạo hàm của hàm số $y = f(x) = x^2 + 2x$ tại điểm $x_0 = 1$.
+
+Lời giải Ví dụ 1:
+• Ta có: $f(x) - f(1) = (x^2 + 2x) - 3 = x^2 + 2x - 3 = (x - 1)(x + 3)$.
+• Với $x \ne 1$, tỉ số là:
+  $$\frac{f(x) - f(1)}{x - 1} = \frac{(x - 1)(x + 3)}{x - 1} = x + 3.$$
+• Tính giới hạn:
+  $$f'(1) = \lim\_{x \to 1} \frac{f(x) - f(1)}{x - 1} = \lim\_{x \to 1} (x + 3) = 4.$$
+• Vậy $f'(1) = 4$.
+
+**Luyện tập 1:** Tính đạo hàm của hàm số $y = -x^2 + 2x + 1$ tại điểm $x_0 = -1$.
+
+Lời giải Luyện tập 1:
+• Tại $x_0 = -1$, ta có $f(-1) = -(-1)^2 + 2(-1) + 1 = -2$.
+• Xét hiệu:
+  $$f(x) - f(-1) = (-x^2 + 2x + 1) - (-2) = -x^2 + 2x + 3 = -(x + 1)(x - 3).$$
+• Lập tỉ số với $x \ne -1$:
+  $$\frac{f(x) - f(-1)}{x - (-1)} = \frac{-(x + 1)(x - 3)}{x + 1} = -(x - 3) = 3 - x.$$
+• Giới hạn:
+  $$f'(-1) = \lim\_{x \to -1} (3 - x) = 3 - (-1) = 4.$$
+• Vậy $f'(-1) = 4$.
+
+### c) Đạo hàm trên một khoảng
+
+Hàm số $y = f(x)$ được gọi là có đạo hàm trên khoảng $(a; b)$ nếu nó có đạo hàm $f'(x)$ tại mọi điểm $x$ thuộc khoảng đó, kí hiệu là $y' = f'(x)$.
+Một số công thức đạo hàm cơ bản tìm được từ định nghĩa:
+• $(c)' = 0$ (với $c$ là hằng số);
+• $(x)' = 1$;
+• $(cx^2)' = 2cx$ (với $c$ là hằng số).
+
+**Ví dụ 2:** Tìm đạo hàm của hàm số $y = cx^2$ (với $c$ là hằng số) trên $\mathbb{R}$.
+
+Lời giải Ví dụ 2:
+• Với điểm $x_0$ bất kì, ta có:
+  $$f'(x_0) = \lim\_{x \to x_0} \frac{cx^2 - cx_0^2}{x - x_0} = \lim\_{x \to x_0} \frac{c(x - x_0)(x + x_0)}{x - x_0} = \lim\_{x \to x_0} c(x + x_0) = 2cx_0.$$
+• Vậy hàm số $y = cx^2$ có đạo hàm là $y' = 2cx$.
+
+## Ý nghĩa hình học và ý nghĩa vật lí của đạo hàm
+
+### a) Ý nghĩa hình học và phương trình tiếp tuyến
+
+• Ý nghĩa hình học: Đạo hàm $f'(x_0)$ là hệ số góc của tiếp tuyến của đồ thị hàm số $y = f(x)$ tại tiếp điểm $P(x_0; f(x_0))$.
+• Phương trình tiếp tuyến: Nếu hàm số $y = f(x)$ có đạo hàm tại điểm $x_0$ thì phương trình tiếp tuyến của đồ thị hàm số tại điểm $P(x_0; y_0)$ (với $y_0 = f(x_0)$) là:
+$$y - y_0 = f'(x_0)(x - x_0)$$
+
+**Ví dụ 5:** Viết phương trình tiếp tuyến của parabol $(P): y = 3x^2$ tại điểm có hoành độ $x_0 = 1$.
+
+Lời giải Ví dụ 5:
+• Ta có $y' = 6x$. Hệ số góc của tiếp tuyến tại $x_0 = 1$ là $k = f'(1) = 6 \cdot 1 = 6$.
+• Tung độ tiếp điểm: $y_0 = f(1) = 3 \cdot 1^2 = 3$.
+• Phương trình tiếp tuyến là:
+  $$y - 3 = 6(x - 1) \iff y = 6x - 3.$$
+
+**Luyện tập 4:** Viết phương trình tiếp tuyến của parabol $(P): y = -2x^2$ tại điểm có hoành độ $x_0 = -1$.
+
+Lời giải Luyện tập 4:
+• Ta có đạo hàm $y' = -4x$. Hệ số góc tiếp tuyến tại $x_0 = -1$ là $k = y'(-1) = -4(-1) = 4$.
+• Tung độ tiếp điểm: $y_0 = -2(-1)^2 = -2$.
+• Phương trình tiếp tuyến là:
+  $$y - (-2) = 4(x - (-1)) \iff y + 2 = 4(x + 1) \iff y = 4x + 2.$$
+
+### b) Ý nghĩa vật lí của đạo hàm
+
+• Vận tốc tức thời: Nếu phương trình chuyển động của một vật là $s = s(t)$ thì vận tốc tức thời của vật tại thời điểm $t_0$ là đạo hàm của quãng đường theo thời gian tại điểm đó:
+$$v(t_0) = s'(t_0)$$
+• Cường độ dòng điện tức thời: Nếu điện lượng truyền trong dây dẫn là $Q = Q(t)$ thì cường độ tức thời của dòng điện tại thời điểm $t_0$ là:
+$$I(t_0) = Q'(t_0)$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 1 (Vận tốc rơi tự do từ Landmark 81):** Một quả bóng rơi tự do từ sân thượng toà nhà Landmark 81 cao 461,3 m xuống đất theo phương trình $s(t) = \frac{1}{2}gt^2$ với $g = 9{,}8\text{ m/s}^2$. Tính vận tốc của quả bóng khi chạm đất (bỏ qua sức cản không khí, làm tròn kết quả đến chữ số thập phân thứ nhất).
+
+Lời giải Vận dụng 1:
+• Vận tốc tức thời của quả bóng tại thời điểm $t$ là:
+  $$v(t) = s'(t) = gt = 9{,}8t\text{ (m/s).}$$
+• Quả bóng chạm đất khi $s(t) = 461{,}3\text{ m} \iff 4{,}9t^2 = 461{,}3 \iff t = \sqrt{\frac{461{,}3}{4{,}9}} \approx 9{,}703\text{ (giây).}$$
+• Vận tốc khi chạm đất là:
+  $$v = 9{,}8 \cdot \sqrt{\frac{461{,}3}{4{,}9}} \approx 95{,}1\text{ (m/s)} \approx 342{,}4\text{ (km/h).}$$
+
+**Vận dụng 2 (Độ dốc cầu vượt thép):** Một cây cầu vượt parabol nối hai điểm cách nhau 400 m có đỉnh tại gốc toạ độ $y = -ax^2$ ($a > 0$). Độ dốc mặt cầu tại mọi điểm không vượt quá $10^{\circ}$. Tính chiều cao giới hạn từ đỉnh cầu đến mặt đường.
+
+Lời giải Vận dụng 2:
+• Chọn hệ trục toạ độ sao cho đỉnh cầu là gốc $O(0; 0)$ và mặt phẳng đường nằm ngang bên dưới. Khi đó $-200 \le x \le 200$.
+• Hệ số góc tiếp tuyến tại điểm có hoành độ $x$ là $k = y' = -2ax$. Độ dốc tại điểm đó là $|k| = 2a|x|$.
+• Độ dốc lớn nhất đạt tại hai đầu cầu $x = \pm 200$, do đó:
+  $$\max |k| = 2a \cdot 200 = 400a.$$
+• Vì độ dốc không vượt quá $10^{\circ}$ nên $400a \le \tan 10^{\circ} \implies a \le \frac{\tan 10^{\circ}}{400}$.
+• Chiều cao từ đỉnh cầu đến mặt đường là khoảng cách từ $y(0) = 0$ đến $y(200) = -a(200)^2 = -40\\,000a$:
+  $$h = 40\\,000a \le 40\\,000 \cdot \frac{\tan 10^{\circ}}{400} = 100 \cdot \tan 10^{\circ} \approx 100 \cdot 0{,}1763 = 17{,}6\text{ (m).}$$
+• Vậy chiều cao giới hạn từ đỉnh cầu đến mặt đường xấp xỉ 17,6 m.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 9.1:** Tính bằng định nghĩa đạo hàm của các hàm số sau:
+a) $y = x^2 - x$ tại $x_0 = 1$;
+b) $y = -x^3$ tại $x_0 = -1$.
+
+Lời giải Bài 9.1:
+• a) Tại $x_0 = 1$, $f(1) = 0$. Ta có:
+  $$f'(1) = \lim\_{x \to 1} \frac{(x^2 - x) - 0}{x - 1} = \lim\_{x \to 1} \frac{x(x - 1)}{x - 1} = \lim\_{x \to 1} x = 1.$$
+• b) Tại $x_0 = -1$, $f(-1) = -(-1)^3 = 1$. Ta có:
+  $$f'(-1) = \lim\_{x \to -1} \frac{-x^3 - 1}{x - (-1)} = \lim\_{x \to -1} \frac{-(x^3 + 1)}{x + 1} = \lim\_{x \to -1} \frac{-(x + 1)(x^2 - x + 1)}{x + 1} = \lim\_{x \to -1} -(x^2 - x + 1) = -3.$$
+
+**Bài 9.2:** Sử dụng định nghĩa, tính đạo hàm của các hàm số sau trên tập xác định:
+a) $y = kx^2 + c$ (với $k, c$ là hằng số);
+b) $y = x^3$.
+
+Lời giải Bài 9.2:
+• a) Lấy điểm $x_0$ bất kì:
+  $$y'(x_0) = \lim\_{x \to x_0} \frac{(kx^2 + c) - (kx_0^2 + c)}{x - x_0} = \lim\_{x \to x_0} \frac{k(x^2 - x_0^2)}{x - x_0} = \lim\_{x \to x_0} k(x + x_0) = 2kx_0.$$
+  Vậy $(kx^2 + c)' = 2kx$.
+• b) Lấy điểm $x_0$ bất kì:
+  $$y'(x_0) = \lim\_{x \to x_0} \frac{x^3 - x_0^3}{x - x_0} = \lim\_{x \to x_0} (x^2 + x x_0 + x_0^2) = 3x_0^2.$$
+  Vậy $(x^3)' = 3x^2$.
+
+**Bài 9.3:** Viết phương trình tiếp tuyến của parabol $y = -x^2 + 4x$ biết:
+a) Tiếp điểm có hoành độ $x_0 = 1$;
+b) Tiếp điểm có tung độ $y_0 = 0$.
+
+Lời giải Bài 9.3:
+• Đạo hàm: $y' = -2x + 4$.
+• a) Với $x_0 = 1 \implies y_0 = -1^2 + 4(1) = 3$. Hệ số góc: $k = y'(1) = -2(1) + 4 = 2$.
+  Phương trình tiếp tuyến: $y - 3 = 2(x - 1) \iff y = 2x + 1$.
+• b) Với $y_0 = 0 \iff -x^2 + 4x = 0 \iff x = 0$ hoặc $x = 4$.
+  - Tại tiếp điểm $(0; 0)$: $k = y'(0) = 4 \implies$ Phương trình tiếp tuyến là $y = 4x$.
+  - Tại tiếp điểm $(4; 0)$: $k = y'(4) = -2(4) + 4 = -4 \implies$ Phương trình tiếp tuyến là $y - 0 = -4(x - 4) \iff y = -4x + 16$.
+
+**Bài 9.4:** Một vật được phóng thẳng đứng lên trên từ mặt đất với phương trình độ cao $h(t) = 19{,}6t - 4{,}9t^2$ (mét). Tìm vận tốc của vật khi chạm đất.
+
+Lời giải Bài 9.4:
+• Vận tốc tức thời tại thời điểm $t$ là đạo hàm của độ cao: $v(t) = h'(t) = 19{,}6 - 9{,}8t\text{ (m/s)}$.
+• Vật chạm đất khi $h(t) = 0 \iff 19{,}6t - 4{,}9t^2 = 0 \iff t(19{,}6 - 4{,}9t) = 0$.
+  Vì $t > 0$ nên thời điểm chạm đất là $t = \frac{19{,}6}{4{,}9} = 4\text{ (giây)}$.
+• Vận tốc khi chạm đất là:
+  $$v(4) = 19{,}6 - 9{,}8(4) = 19{,}6 - 39{,}2 = -19{,}6\text{ (m/s).}$$
+• Dấu âm thể hiện hướng chuyển động đi xuống phía mặt đất, với độ lớn vận tốc khi chạm đất là $19{,}6\text{ m/s}$.
