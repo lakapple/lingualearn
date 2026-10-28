@@ -1,0 +1,255 @@
+---
+title: 'Lesson 5: Numerical sequences.'
+description: Theoretical system for the lesson on numerical sequences with illustrative examples.
+tags:
+  - grade 11
+  - Infinite sequence
+  - finite sequence
+  - recurrence relation
+  - Increasing sequence
+  - decreasing sequence
+  - Bounded above, bounded below, bounded sequence
+grade: 11
+order: 0
+updatedDate: 2026-10-28T10:06:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Infinite sequence, finite sequence
+
+·       First term, nth term (general term), recurrence relation
+
+·       Increasing sequence, decreasing sequence (monotonic sequence)
+
+·       Bounded above, bounded below, bounded sequence
+
+### **Knowledge and Skills:**
+
+·       Recognize the concepts of infinite sequences, finite sequences, and fundamental elements of a numerical sequence.
+
+·       Proficiently express sequences via four representations: listing terms, general term formula, recurrence relation, and verbal descriptive method.
+
+·       Identify and prove the monotonicity (increasing/decreasing) and boundedness of sequences in standard cases.
+
+·       Apply sequences to model and solve real-world problems (population growth, salary progression, compound interest, and reducing-balance installment loans).
+
+## Definition of a Sequence
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_nghia_day_so"/>
+
+### a) Infinite Sequence
+
+Definition:
+A function $u$ defined on the set of positive integers $\mathbb{N}^\* = \\{1, 2, 3, \dots\\}$ is called an infinite sequence (or simply a sequence), denoted by $u = u(n)$.
+• We usually write $u_n$ instead of $u(n)$ and denote the sequence by $(u_n)$.
+• The expanded form of a sequence $(u_n)$ is written as: $u_1, u_2, u_3, \dots, u_n, \dots$
+• The term $u_1$ is called the first term, and $u_n$ is called the $n$-th term (or the general term) of the sequence.
+• Note: If $u_n = c$ (a constant) for all $n \in \mathbb{N}^\*$, then $(u_n)$ is called a constant sequence.
+
+**Example 1:** Determine the first term and the general term of each sequence:
+a) The sequence $(u_n)$ of positive odd integers: $1, 3, 5, 7, \dots$;
+b) The sequence $(v_n)$ of positive multiples of 5: $5, 10, 15, 20, \dots$.
+
+Solution for Example 1:
+• a) The sequence $(u_n)$ has first term $u_1 = 1$ and general term $u_n = 2n - 1$.
+• b) The sequence $(v_n)$ has first term $v_1 = 5$ and general term $v_n = 5n$.
+
+### b) Finite Sequence
+
+Definition:
+A function $u$ defined on a finite set $M = \\{1, 2, 3, \dots, m\\}$ (where $m \in \mathbb{N}^\*$) is called a finite sequence.
+• The expanded form of a finite sequence is: $u_1, u_2, \dots, u_m$.
+• The term $u_1$ is called the first term, and $u_m$ is called the last term of the sequence.
+
+**Example 2:** Consider the finite sequence of positive odd integers less than 20 arranged in ascending order. List all terms, and identify the first and last terms.
+
+Solution for Example 2:
+• The terms of the sequence are: $1, 3, 5, 7, 9, 11, 13, 15, 17, 19$.
+• The first term is $u_1 = 1$, and the last term is $u\_{10} = 19$.
+
+**Practice 1:** a) Find the general term of the sequence consisting of all natural numbers that leave a remainder of 1 when divided by 5, in ascending order.
+b) Write the finite sequence consisting of the first five terms of this sequence, and specify the first and last terms.
+
+Solution for Practice 1:
+• a) The natural numbers leaving remainder 1 upon division by 5 form a sequence with general term: $u_n = 5(n - 1) + 1 = 5n - 4$ ($n \in \mathbb{N}^\*$).
+• b) The first five terms are: $1, 6, 11, 16, 21$. The first term is $u_1 = 1$, and the last term is $u_5 = 21$.
+
+## Methods of Specifying a Sequence
+
+<Youtube url="https://www.youtube.com/watch?v=example_cac_cach_cho_day_so"/>
+
+### a) Four Representations of a Sequence
+
+A numerical sequence can be specified by one of the following methods:
+1\. Listing its terms (typically used for finite sequences with few terms);
+2\. An explicit formula for the general term $u_n = f(n)$;
+3\. A verbal description (stating a rule to determine the $n$-th term without necessarily providing an algebraic formula);
+4\. A recurrence relation (specifying the initial term(s) and a formula relating $u_n$ to preceding term(s)).
+
+### b) Illustrative Examples and Practice on Specifying Sequences
+
+**Example 3:** Find the first five terms and the 100th term of the sequence $(u_n)$ given by:
+a) $u_n = 2n$;
+b) $u_n = \frac{(-1)^n}{n}$.
+
+Solution for Example 3:
+• a) The first five terms are: $2, 4, 6, 8, 10$. The 100th term is $u\_{100} = 2 \cdot 100 = 200$.
+• b) The first five terms are: $-1, \frac{1}{2}, -\frac{1}{3}, \frac{1}{4}, -\frac{1}{5}$. The 100th term is $u\_{100} = \frac{(-1)^{100}}{100} = \frac{1}{100}$.
+
+**Example 5:** Given the sequence $(u_n)$ defined recursively by: $u_1 = 1, u_n = 3u\_{n-1} + 2$ ($n \ge 2$). Find the first three terms of the sequence.
+
+Solution for Example 5:
+• We have: $u_1 = 1$.
+• $u_2 = 3u_1 + 2 = 3(1) + 2 = 5$.
+• $u_3 = 3u_2 + 2 = 3(5) + 2 = 17$.
+
+**Practice 2:** a) Write the first five terms of the sequence $(u_n)$ with general term $u_n = n!$.
+b) Write the first five terms of the Fibonacci sequence $(F_n)$ defined by $F_1 = 1, F_2 = 1, F_n = F\_{n-1} + F\_{n-2}$ ($n \ge 3$).
+
+Solution for Practice 2:
+• a) $u_1 = 1! = 1; u_2 = 2! = 2; u_3 = 3! = 6; u_4 = 4! = 24; u_5 = 5! = 120$.
+• b) $F_1 = 1; F_2 = 1; F_3 = 1 + 1 = 2; F_4 = 2 + 1 = 3; F_5 = 3 + 2 = 5$.
+
+## Monotonic and Bounded Sequences
+
+<Youtube url="https://www.youtube.com/watch?v=example_tang_giam_bi_chan"/>
+
+### a) Increasing and Decreasing Sequences
+
+Definitions of Monotonicity:
+• A sequence $(u_n)$ is called an increasing (strictly increasing) sequence if $u\_{n+1} > u_n$ for all $n \in \mathbb{N}^\*$ (i.e., $u\_{n+1} - u_n > 0$, or $\frac{u\_{n+1}}{u_n} > 1$ when $u_n > 0$).
+• A sequence $(u_n)$ is called a decreasing (strictly decreasing) sequence if $u\_{n+1} < u_n$ for all $n \in \mathbb{N}^\*$ (i.e., $u\_{n+1} - u_n < 0$, or $\frac{u\_{n+1}}{u_n} < 1$ when $u_n > 0$).
+
+**Example 7:** Determine whether the sequence $(u_n)$ with $u_n = -2n + 5$ is increasing or decreasing.
+
+Solution for Example 7:
+• Consider the difference: $u\_{n+1} - u_n = [-2(n + 1) + 5] - (-2n + 5) = -2n + 3 + 2n - 5 = -2 < 0, \forall n \in \mathbb{N}^\*$.
+• Since $u\_{n+1} < u_n$ for all $n \in \mathbb{N}^\*$, $(u_n)$ is a decreasing sequence.
+
+**Practice 3:** Determine whether the sequence $(u_n)$ with $u_n = \frac{1}{n + 1}$ is increasing or decreasing.
+
+Solution for Practice 3:
+• Consider the difference: $u\_{n+1} - u_n = \frac{1}{n + 2} - \frac{1}{n + 1} = \frac{(n + 1) - (n + 2)}{(n + 2)(n + 1)} = \frac{-1}{(n + 2)(n + 1)} < 0, \forall n \in \mathbb{N}^\*$.
+• Thus, $(u_n)$ is a decreasing sequence.
+
+### b) Bounded Sequences
+
+Definitions of Boundedness:
+• A sequence $(u_n)$ is said to be bounded above if there exists a real number $M$ such that $u_n \le M, \forall n \in \mathbb{N}^\*$.
+• A sequence $(u_n)$ is said to be bounded below if there exists a real number $m$ such that $u_n \ge m, \forall n \in \mathbb{N}^\*$.
+• A sequence $(u_n)$ is said to be bounded if it is bounded both above and below, that is, there exist numbers $m$ and $M$ such that $m \le u_n \le M, \forall n \in \mathbb{N}^\*$.
+
+**Example 8:** Determine whether the sequence $(u_n)$ with $u_n = \frac{n - 1}{n}$ is bounded.
+
+Solution for Example 8:
+• We have $u_n = 1 - \frac{1}{n} < 1, \forall n \in \mathbb{N}^\* \Rightarrow (u_n)$ is bounded above by $M = 1$.
+• On the other hand, for all $n \ge 1$, we have $n - 1 \ge 0 \Rightarrow u_n \ge 0, \forall n \in \mathbb{N}^\* \Rightarrow (u_n)$ is bounded below by $m = 0$.
+• Since $0 \le u_n < 1, \forall n \in \mathbb{N}^\*$, the sequence $(u_n)$ is bounded.
+
+**Practice 4:** Determine the boundedness of the sequence $(u_n)$ with $u_n = 2n - 1$.
+
+Solution for Practice 4:
+• For all $n \in \mathbb{N}^\*$, $n \ge 1 \Rightarrow u_n = 2n - 1 \ge 2(1) - 1 = 1$. The sequence is bounded below by $m = 1$.
+• As $n \to +\infty$, $u_n = 2n - 1$ grows without bound, so no finite constant $M$ satisfies $u_n \le M$ for all $n$. The sequence is not bounded above.
+• Therefore, $(u_n)$ is bounded below but not bounded above; hence, it is not a bounded sequence.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Introductory Application (Population Forecasting):** In 2020, the population of a municipal city was approximately 500 thousand people, with an annual growth rate of 2%. The population $P_n$ after $n$ years is given by $P_n = 500(1 + 0.02)^n$. Estimate the population in the year 2030.
+
+Solution for Introductory Application:
+• The number of years elapsed from 2020 to 2030 is $n = 2030 - 2020 = 10$ years.
+• The estimated population in 2030 is: $P\_{10} = 500(1 + 0.02)^{10} = 500(1.02)^{10} \approx 609.496$ (thousand people) $\approx 609$ thousand people.
+
+**Application (Salary Growth Model):** Thanh is hired at a tech firm with a starting first-year salary of $s_1 = 200$ million VND, with an annual raise of 25 million VND for each subsequent year: $s_n = s\_{n-1} + 25$ ($n \ge 2$).
+a) Calculate Thanh's salary in his 5th year at the company.
+b) Prove that $(s_n)$ is an increasing sequence and explain the practical meaning.
+
+Solution for Application:
+• a) We have:
+  $s_1 = 200$; $s_2 = 225$; $s_3 = 250$; $s_4 = 275$; $s_5 = 300$ (million VND).
+  (General term formula: $s_n = 200 + 25(n - 1) = 25n + 175 \Rightarrow s_5 = 25(5) + 175 = 300$ million VND).
+• b) Consider the difference: $s\_{n+1} - s_n = 25 > 0, \forall n \in \mathbb{N}^\*$, which proves that $(s_n)$ is an increasing sequence.
+  Practical significance: Thanh's annual earnings grow strictly and steadily each consecutive year of employment.
+
+**Exercise 2.6 (Compound Interest Savings):** An deposits 100 million VND into a 1-month term savings account at an annual interest rate of 6% compounded monthly: $A_n = 100\left(1 + \frac{0.06}{12}\right)^n$.
+a) Find the balance after the first month and after the second month.
+b) Find the accumulated balance after 1 year (12 months).
+
+Solution for Exercise 2.6:
+• We have $A_n = 100(1 + 0.005)^n = 100(1.005)^n$.
+• a) After the 1st month: $A_1 = 100(1.005)^1 = 100.5$ million VND.
+  After the 2nd month: $A_2 = 100(1.005)^2 = 101.0025$ million VND.
+• b) After 1 year ($n = 12$ months): $A\_{12} = 100(1.005)^{12} \approx 106.1678$ million VND.
+
+**Exercise 2.7 (Reducing-Balance Installment Loan):** Huong takes out an installment loan of 100 million VND, agreeing to pay 2 million VND each month with a monthly interest rate of 0.8% applied to the remaining balance.
+a) Calculate $A_0, A_1, A_2, A_3, A_4, A_5, A_6$ to determine Huong's remaining loan balance after 6 months.
+b) State the recurrence relation for the sequence $(A_n)$.
+
+Solution for Exercise 2.7:
+• a) Initial balance: $A_0 = 100$ million VND.
+  At the end of month 1, interest is $100 \times 0.008 = 0.8$ million VND; after paying 2 million VND, remaining balance is: $A_1 = 100(1 + 0.008) - 2 = 100.8 - 2 = 98.8$ million VND.
+  $A_2 = 98.8(1.008) - 2 = 99.5904 - 2 = 97.5904$ million VND.
+  $A_3 = 97.5904(1.008) - 2 \approx 96.3711$ million VND.
+  $A_4 = 96.3711(1.008) - 2 \approx 95.1421$ million VND.
+  $A_5 = 95.1421(1.008) - 2 \approx 93.9032$ million VND.
+  $A_6 = 93.9032(1.008) - 2 \approx 92.6544$ million VND.
+• b) Recurrence relation for $(A_n)$: $\begin{cases} A_0 = 100 \\\ A_n = A\_{n-1}(1 + 0.008) - 2 = 1.008A\_{n-1} - 2 \quad (n \ge 1) \end{cases}$.
+
+### b) Detailed Section Exercises
+
+**Exercise 2.1:** Write the first five terms and the 100th term of each sequence $(u_n)$:
+a) $u_n = 3n - 2$;
+b) $u_n = 3 \cdot 2^n$;
+c) $u_n = \left(1 + \frac{1}{n}\right)^n$.
+
+Solution for Exercise 2.1:
+• a) First five terms: $1, 4, 7, 10, 13$. The 100th term: $u\_{100} = 3(100) - 2 = 298$.
+• b) First five terms: $6, 12, 24, 48, 96$. The 100th term: $u\_{100} = 3 \cdot 2^{100}$.
+• c) First five terms: $u_1 = 2; u_2 = \frac{9}{4} = 2.25; u_3 = \frac{64}{27} \approx 2.37; u_4 = \frac{625}{256} \approx 2.44; u_5 = \frac{7776}{3125} \approx 2.49$. The 100th term: $u\_{100} = \left(1 + \frac{1}{100}\right)^{100} = (1.01)^{100} \approx 2.7048$.
+
+**Exercise 2.2:** Given the sequence $(u_n)$ defined recursively by $u_1 = 1, u_n = n \cdot u\_{n-1}$ ($n \ge 2$).
+a) Write the first five terms of the sequence.
+b) Conjecture a formula for the general term $u_n$.
+
+Solution for Exercise 2.2:
+• a) $u_1 = 1; u_2 = 2 \cdot 1 = 2; u_3 = 3 \cdot 2 = 6; u_4 = 4 \cdot 6 = 24; u_5 = 5 \cdot 24 = 120$.
+• b) We observe $u_1 = 1!, u_2 = 2!, u_3 = 3!, u_4 = 4!, u_5 = 5!$. We conjecture the explicit formula: $u_n = n!$.
+
+**Exercise 2.3:** Determine whether each of the following sequences is increasing or decreasing:
+a) $u_n = 2n - 1$;
+b) $u_n = -3n + 2$;
+c) $u_n = \frac{(-1)^{n-1}}{2^n}$.
+
+Solution for Exercise 2.3:
+• a) $u\_{n+1} - u_n = [2(n+1) - 1] - (2n - 1) = 2 > 0 \Rightarrow (u_n)$ is an increasing sequence.
+• b) $u\_{n+1} - u_n = [-3(n+1) + 2] - (-3n + 2) = -3 < 0 \Rightarrow (u_n)$ is a decreasing sequence.
+• c) The terms alternate in sign: $u_1 = \frac{1}{2}, u_2 = -\frac{1}{4}, u_3 = \frac{1}{8}, \dots$ Since $u_1 > u_2$ but $u_2 < u_3$, the sequence is neither increasing nor decreasing (non-monotonic).
+
+**Exercise 2.4:** For each sequence $(u_n)$, state whether it is bounded below, bounded above, or bounded:
+a) $u_n = n - 1$;
+b) $u_n = \frac{n+1}{n+2}$;
+c) $u_n = \sin n$;
+d) $u_n = (-1)^{n-1} n^2$.
+
+Solution for Exercise 2.4:
+• a) $u_n = n - 1 \ge 0, \forall n \in \mathbb{N}^\*$. The sequence is bounded below by 0, but not bounded above. Hence, it is not bounded.
+• b) $u_n = \frac{n+1}{n+2} = 1 - \frac{1}{n+2} < 1, \forall n \in \mathbb{N}^\*$. For $n \ge 1$, $u_n \ge \frac{2}{3}$. Thus $\frac{2}{3} \le u_n < 1, \forall n \in \mathbb{N}^\*$. Hence, the sequence is bounded.
+• c) For all $n \in \mathbb{N}^\*$, $-1 \le \sin n \le 1$. Hence, $(u_n)$ is bounded.
+• d) Sequence terms: $1, -4, 9, -16, 25, \dots$ Positive terms grow toward $+\infty$ and negative terms toward $-\infty$. Hence, it is neither bounded below nor bounded above, and thus not bounded.
+
+**Exercise 2.5:** Write the general term of the increasing sequence of all positive integers:
+a) That are divisible by 3;
+b) That leave a remainder of 1 when divided by 4.
+
+Solution for Exercise 2.5:
+• a) Positive multiples of 3: $3, 6, 9, \dots \Rightarrow u_n = 3n$ ($n \in \mathbb{N}^\*$).
+• b) Positive integers of form $4k + 1$: $1, 5, 9, 13, \dots \Rightarrow u_n = 4(n - 1) + 1 = 4n - 3$ ($n \in \mathbb{N}^\*$).
