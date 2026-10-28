@@ -1,0 +1,160 @@
+---
+title: 'Bài 20: Hàm số mũ và loogarit.'
+description: Hệ thống lý thuyết bài hàm số mũ và loogarit cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Hàm số mũ
+  - Hàm số lôgarit
+  - Cơ số của hàm số mũ
+  - Cơ số của hàm số lôgarit
+grade: 11
+order: 20
+updatedDate: 2026-10-28T21:46:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hàm số mũ
+
+·       Hàm số lôgarit
+
+·       Cơ số của hàm số mũ, hàm số lôgarit
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết hàm số mũ và hàm số lôgarit. Nêu một số ví dụ thực tế về hàm số mũ, hàm số lôgarit.
+
+·       Nhận dạng đồ thị của các hàm số mũ, hàm số lôgarit.
+
+·       Giải thích các tính chất của hàm số mũ, hàm số lôgarit thông qua đồ thị của chúng (tập xác định, tập giá trị, tính đơn điệu, tính liên tục, các điểm đặc biệt đi qua).
+
+·       Giải quyết một số vấn đề có liên quan đến môn học khác hoặc thực tiễn gắn với hàm số mũ và hàm số lôgarit (tăng trưởng dân số, phân rã phóng xạ, độ nhớ thông tin theo thời gian).
+
+## Hàm số mũ
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_mu"/>
+
+### a) Định nghĩa và tính chất của hàm số mũ
+
+Định nghĩa: Cho $a$ là số thực dương khác 1. Hàm số $y = a^x$ được gọi là hàm số mũ cơ số $a$.
+Tính chất của hàm số mũ $y = a^x$ ($a > 0, a \ne 1$):
+• Có tập xác định là $\mathbb{R}$ và tập giá trị là $(0; +\infty)$;
+• Đồng biến trên $\mathbb{R}$ khi $a > 1$ và nghịch biến trên $\mathbb{R}$ khi $0 < a < 1$;
+• Liên tục trên $\mathbb{R}$;
+• Có đồ thị đi qua các điểm $(0; 1)$, $(1; a)$ và luôn nằm phía trên trục hoành.
+
+### b) Ví dụ và đồ thị hàm số mũ
+
+**Ví dụ 1:** Vẽ đồ thị của hàm số $y = \left(\frac{1}{2}\right)^x$.
+
+Lời giải Ví dụ 1:
+• Lập bảng giá trị của hàm số tại một số điểm:
+  $$\begin{array}{|c|c|c|c|c|c|c|c|}
+  \hline
+  x & -3 & -2 & -1 & 0 & 1 & 2 & 3 \\\\
+  \hline
+  y = (1/2)^x & 8 & 4 & 2 & 1 & 1/2 & 1/4 & 1/8 \\\\
+  \hline
+  \end{array}$$
+• Đồ thị hàm số là đường cong liên tục, giảm dần từ trái sang phải, đi qua các điểm $(-3; 8), (-2; 4), (-1; 2), (0; 1), (1; 1/2), (2; 1/4), (3; 1/8)$ và nhận trục hoành làm tiệm cận ngang.
+
+**Luyện tập 1:** Vẽ đồ thị của hàm số $y = \left(\frac{3}{2}\right)^x$.
+
+Lời giải Luyện tập 1:
+• Do cơ số $a = \frac{3}{2} > 1$ nên hàm số đồng biến trên $\mathbb{R}$.
+• Bảng giá trị:
+  $$\begin{array}{|c|c|c|c|c|c|}
+  \hline
+  x & -2 & -1 & 0 & 1 & 2 \\\\
+  \hline
+  y = (3/2)^x & 4/9 & 2/3 & 1 & 3/2 & 9/4 \\\\
+  \hline
+  \end{array}$$
+• Đồ thị là đường cong tăng từ trái sang phải, đi qua $(0; 1), (1; 1{,}5)$, nằm hoàn toàn phía trên trục $Ox$.
+
+## Hàm số lôgarit
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_logarit"/>
+
+### a) Định nghĩa và tính chất của hàm số lôgarit
+
+Định nghĩa: Cho $a$ là số thực dương khác 1. Hàm số $y = \log_a x$ được gọi là hàm số lôgarit cơ số $a$.
+Tính chất của hàm số lôgarit $y = \log_a x$ ($a > 0, a \ne 1$):
+• Có tập xác định là $(0; +\infty)$ và tập giá trị là $\mathbb{R}$;
+• Đồng biến trên $(0; +\infty)$ khi $a > 1$ và nghịch biến trên $(0; +\infty)$ khi $0 < a < 1$;
+• Liên tục trên $(0; +\infty)$;
+• Có đồ thị đi qua các điểm $(1; 0)$, $(a; 1)$ và luôn nằm bên phải trục tung.
+
+### b) Ví dụ và đồ thị hàm số lôgarit
+
+**Ví dụ 2:** Vẽ đồ thị của hàm số $y = \log\_{\frac{1}{2}} x$.
+
+Lời giải Ví dụ 2:
+• Bảng giá trị tại một số điểm:
+  $$\begin{array}{|c|c|c|c|c|c|c|c|}
+  \hline
+  x & 1/8 & 1/4 & 1/2 & 1 & 2 & 4 & 8 \\\\
+  \hline
+  y = \log\_{1/2} x & 3 & 2 & 1 & 0 & -1 & -2 & -3 \\\\
+  \hline
+  \end{array}$$
+• Đồ thị hàm số là đường cong liên tục, giảm từ trái sang phải trên $(0; +\infty)$, đi qua $(1; 0), (2; -1), (4; -2)$, nhận trục tung làm tiệm cận đứng.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng (Tăng trưởng dân số mở đầu):** Sự tăng trưởng dân số được ước tính theo công thức tăng trưởng mũ: $A = P e^{rt}$, trong đó $P$ là dân số của năm mốc, $A$ là dân số sau $t$ năm, $r$ là tỉ lệ tăng dân số hằng năm. Năm 2020, dân số Việt Nam khoảng 97,34 triệu người và tỉ lệ tăng dân số là 0,91%/năm. Nếu tỉ lệ này giữ nguyên, hãy ước tính dân số Việt Nam vào năm 2050 (làm tròn đến hai chữ số thập phân).
+
+Lời giải Vận dụng:
+• Năm mốc 2020 có $P = 97{,}34$ triệu người, tỉ lệ tăng trưởng $r = 0{,}91\\% = 0{,}0091$.
+• Khoảng thời gian từ năm 2020 đến năm 2050 là: $t = 2050 - 2020 = 30$ (năm).
+• Ước tính dân số Việt Nam vào năm 2050 là:
+  $$A = 97{,}34 \cdot e^{0{,}0091 \cdot 30} = 97{,}34 \cdot e^{0{,}273} \approx 97{,}34 \cdot 1{,}3139 \approx 127{,}89\text{ (triệu người).}$$
+• Kết luận: Đến năm 2050, dân số Việt Nam ước tính khoảng 127,89 triệu người.
+
+**Bài 6.18 (Phân rã chất phóng xạ):** Khối lượng $m(t)$ của một chất phóng xạ còn lại (kg) sau $t$ ngày được cho bởi hàm số $m(t) = 13e^{-0{,}015t}$.
+a) Tìm khối lượng của chất đó tại thời điểm $t = 0$.
+b) Sau 45 ngày khối lượng chất đó còn lại là bao nhiêu?
+
+Lời giải Bài 6.18:
+• a) Tại thời điểm $t = 0$: $m(0) = 13e^0 = 13\text{ kg}$.
+• b) Sau $t = 45$ ngày: $m(45) = 13e^{-0{,}015 \cdot 45} = 13e^{-0{,}675} \approx 13 \cdot 0{,}50916 \approx 6{,}62\text{ kg}$.
+
+**Bài 6.19 (Khả năng ghi nhớ thông tin):** Khả năng nhớ trung bình của một nhóm học sinh sau $t$ tháng được tính theo công thức $M(t) = 75 - 20\ln(t + 1)$ ($0 \le t \le 12$, đơn vị: %). Hãy tính khả năng nhớ trung bình của nhóm học sinh đó sau 6 tháng.
+
+Lời giải Bài 6.19:
+• Thay $t = 6$ vào công thức:
+  $$M(6) = 75 - 20\ln(6 + 1) = 75 - 20\ln 7 \approx 75 - 20(1{,}9459) = 75 - 38{,}92 = 36{,}08\\%.$$
+• Kết luận: Sau 6 tháng, khả năng nhớ trung bình của nhóm học sinh còn khoảng 36,08%.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.15:** Nêu tính chất và các điểm đặc trưng của đồ thị các hàm số sau:
+a) $y = 3^x$;
+b) $y = \left(\frac{1}{3}\right)^x$.
+
+Lời giải Bài 6.15:
+• a) Hàm số $y = 3^x$: cơ số $a = 3 > 1$ nên đồng biến trên $\mathbb{R}$. Đồ thị đi qua $(0; 1), (1; 3)$, nhận $Ox$ làm tiệm cận ngang khi $x \to -\infty$.
+• b) Hàm số $y = (1/3)^x$: cơ số $a = 1/3 < 1$ nên nghịch biến trên $\mathbb{R}$. Đồ thị đi qua $(0; 1), (1; 1/3)$, nhận $Ox$ làm tiệm cận ngang khi $x \to +\infty$.
+
+**Bài 6.16:** Nêu tính chất và các điểm đặc trưng của đồ thị các hàm số sau:
+a) $y = \log x$;
+b) $y = \log\_{\frac{1}{3}} x$.
+
+Lời giải Bài 6.16:
+• a) $y = \log x$ (cơ số 10): tập xác định $(0; +\infty)$, cơ số $10 > 1$ nên đồng biến trên $(0; +\infty)$. Đồ thị đi qua $(1; 0), (10; 1)$, nhận $Oy$ làm tiệm cận đứng.
+• b) $y = \log\_{1/3} x$: tập xác định $(0; +\infty)$, cơ số $1/3 < 1$ nên nghịch biến trên $(0; +\infty)$. Đồ thị đi qua $(1; 0), (1/3; 1)$, nhận $Oy$ làm tiệm cận đứng.
+
+**Bài 6.17:** Tìm tập xác định của các hàm số sau:
+a) $y = \log |x + 3|$;
+b) $y = \ln(4 - x^2)$.
+
+Lời giải Bài 6.17:
+• a) Điều kiện: $|x + 3| > 0 \iff x + 3 \ne 0 \iff x \ne -3$. Tập xác định $D = \mathbb{R} \setminus \\{-3\\}$.
+• b) Điều kiện: $4 - x^2 > 0 \iff x^2 < 4 \iff -2 < x < 2$. Tập xác định $D = (-2; 2)$.

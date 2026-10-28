@@ -1,0 +1,160 @@
+---
+title: 'Lesson 20: Exponential functions and Logarithmic functions.'
+description: Theoretical system for the lesson on exponential functions and Logarithmic functions with illustrative examples.
+tags:
+  - grade 11
+  - Exponential functions ·        ·
+  - Logarithmic functions
+  - Base of an exponential function
+  - Base of a Logarithmic function
+grade: 11
+order: 20
+updatedDate: 2026-10-28T21:46:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Exponential functions
+
+·       Logarithmic functions
+
+·       Base of an exponential function, base of a logarithmic function
+
+### **Knowledge and Skills:**
+
+·       Recognize exponential and logarithmic functions. State real-world examples of exponential and logarithmic functions.
+
+·       Recognize the graphs of exponential and logarithmic functions.
+
+·       Explain the properties of exponential and logarithmic functions through their graphs (domain, range, monotonicity, continuity, special points).
+
+·       Solve practical problems associated with exponential and logarithmic functions (population growth, radioactive decay, information retention over time).
+
+## Exponential Functions
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_mu"/>
+
+### a) Definition and Properties of Exponential Functions
+
+Definition: Let $a$ be a positive real number different from 1. The function $y = a^x$ is called the exponential function with base $a$.
+Properties of the exponential function $y = a^x$ ($a > 0, a \ne 1$):
+• Domain is $\mathbb{R}$ and range is $(0; +\infty)$;
+• Strictly increasing on $\mathbb{R}$ when $a > 1$ and strictly decreasing on $\mathbb{R}$ when $0 < a < 1$;
+• Continuous on $\mathbb{R}$;
+• Its graph passes through the points $(0; 1)$ and $(1; a)$, and lies entirely above the x-axis.
+
+### b) Examples and Graphs of Exponential Functions
+
+**Example 1:** Sketch the graph of the function $y = \left(\frac{1}{2}\right)^x$.
+
+Solution to Example 1:
+• Construct a table of values at selected points:
+  $$\begin{array}{|c|c|c|c|c|c|c|c|}
+  \hline
+  x & -3 & -2 & -1 & 0 & 1 & 2 & 3 \\\\
+  \hline
+  y = (1/2)^x & 8 & 4 & 2 & 1 & 1/2 & 1/4 & 1/8 \\\\
+  \hline
+  \end{array}$$
+• The graph is a continuous curve, decreasing from left to right, passing through $(-3; 8), (-2; 4), (-1; 2), (0; 1), (1; 1/2), (2; 1/4), (3; 1/8)$, and having the x-axis as a horizontal asymptote.
+
+**Practice 1:** Sketch the graph of the function $y = \left(\frac{3}{2}\right)^x$.
+
+Solution to Practice 1:
+• Since the base $a = \frac{3}{2} > 1$, the function is strictly increasing on $\mathbb{R}$.
+• Table of values:
+  $$\begin{array}{|c|c|c|c|c|c|}
+  \hline
+  x & -2 & -1 & 0 & 1 & 2 \\\\
+  \hline
+  y = (3/2)^x & 4/9 & 2/3 & 1 & 3/2 & 9/4 \\\\
+  \hline
+  \end{array}$$
+• The graph is a rising curve from left to right, passing through $(0; 1)$ and $(1; 1{,}5)$, lying entirely above the x-axis.
+
+## Logarithmic Functions
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_logarit"/>
+
+### a) Definition and Properties of Logarithmic Functions
+
+Definition: Let $a$ be a positive real number different from 1. The function $y = \log_a x$ is called the logarithmic function with base $a$.
+Properties of the logarithmic function $y = \log_a x$ ($a > 0, a \ne 1$):
+• Domain is $(0; +\infty)$ and range is $\mathbb{R}$;
+• Strictly increasing on $(0; +\infty)$ when $a > 1$ and strictly decreasing on $(0; +\infty)$ when $0 < a < 1$;
+• Continuous on $(0; +\infty)$;
+• Its graph passes through the points $(1; 0)$ and $(a; 1)$, and lies entirely to the right of the y-axis.
+
+### b) Examples and Graphs of Logarithmic Functions
+
+**Example 2:** Sketch the graph of the function $y = \log\_{\frac{1}{2}} x$.
+
+Solution to Example 2:
+• Table of values at selected points:
+  $$\begin{array}{|c|c|c|c|c|c|c|c|}
+  \hline
+  x & 1/8 & 1/4 & 1/2 & 1 & 2 & 4 & 8 \\\\
+  \hline
+  y = \log\_{1/2} x & 3 & 2 & 1 & 0 & -1 & -2 & -3 \\\\
+  \hline
+  \end{array}$$
+• The graph is a continuous curve, decreasing from left to right on $(0; +\infty)$, passing through $(1; 0), (2; -1), (4; -2)$, and having the y-axis as a vertical asymptote.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Mathematical Modeling
+
+**Application (Population Growth):** Population growth is estimated using the exponential growth model: $A = P e^{rt}$, where $P$ is the population in the base year, $A$ is the population after $t$ years, and $r$ is the annual growth rate. In 2020, the population of Vietnam was approximately 97.34 million people with an annual growth rate of 0.91%. Assuming this growth rate remains constant, estimate the population of Vietnam in 2050 (rounded to two decimal places).
+
+Solution to Application:
+• Base year 2020 has $P = 97{,}34$ million people, growth rate $r = 0{,}91\\% = 0{,}0091$.
+• The time period from 2020 to 2050 is: $t = 2050 - 2020 = 30$ years.
+• Estimated population of Vietnam in 2050 is:
+  $$A = 97{,}34 \cdot e^{0{,}0091 \cdot 30} = 97{,}34 \cdot e^{0{,}273} \approx 97{,}34 \cdot 1{,}3139 \approx 127{,}89\text{ (million people).}$$
+• Conclusion: By 2050, the population of Vietnam is estimated to be approximately 127.89 million people.
+
+**Exercise 6.18 (Radioactive Decay):** The mass $m(t)$ of a remaining radioactive substance (in kg) after $t$ days is given by the function $m(t) = 13e^{-0{,}015t}$.
+a) Find the mass of the substance at time $t = 0$.
+b) How much of the substance remains after 45 days?
+
+Solution to Exercise 6.18:
+• a) At time $t = 0$: $m(0) = 13e^0 = 13\text{ kg}$.
+• b) After $t = 45$ days: $m(45) = 13e^{-0{,}015 \cdot 45} = 13e^{-0{,}675} \approx 13 \cdot 0{,}50916 \approx 6{,}62\text{ kg}$.
+
+**Exercise 6.19 (Information Retention):** The average retention capability of a group of students after $t$ months is calculated by $M(t) = 75 - 20\ln(t + 1)$ ($0 \le t \le 12$, unit: %). Calculate the average retention capability of the group after 6 months.
+
+Solution to Exercise 6.19:
+• Substitute $t = 6$ into the formula:
+  $$M(6) = 75 - 20\ln(6 + 1) = 75 - 20\ln 7 \approx 75 - 20(1{,}9459) = 75 - 38{,}92 = 36{,}08\\%.$$
+• Conclusion: After 6 months, the average retention capability of the student group is approximately 36.08%.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 6.15:** State the properties and characteristic features of the graphs of the following functions:
+a) $y = 3^x$;
+b) $y = \left(\frac{1}{3}\right)^x$.
+
+Solution to Exercise 6.15:
+• a) Function $y = 3^x$: base $a = 3 > 1$, so it is strictly increasing on $\mathbb{R}$. The graph passes through $(0; 1), (1; 3)$ and has the x-axis as a horizontal asymptote as $x \to -\infty$.
+• b) Function $y = (1/3)^x$: base $a = 1/3 < 1$, so it is strictly decreasing on $\mathbb{R}$. The graph passes through $(0; 1), (1; 1/3)$ and has the x-axis as a horizontal asymptote as $x \to +\infty$.
+
+**Exercise 6.16:** State the properties and characteristic features of the graphs of the following functions:
+a) $y = \log x$;
+b) $y = \log\_{\frac{1}{3}} x$.
+
+Solution to Exercise 6.16:
+• a) $y = \log x$ (base 10): domain $(0; +\infty)$, base $10 > 1$, strictly increasing on $(0; +\infty)$. The graph passes through $(1; 0), (10; 1)$ and has the y-axis as a vertical asymptote.
+• b) $y = \log\_{1/3} x$: domain $(0; +\infty)$, base $1/3 < 1$, strictly decreasing on $(0; +\infty)$. The graph passes through $(1; 0), (1/3; 1)$ and has the y-axis as a vertical asymptote.
+
+**Exercise 6.17:** Find the domain of the following functions:
+a) $y = \log |x + 3|$;
+b) $y = \ln(4 - x^2)$.
+
+Solution to Exercise 6.17:
+• a) Condition: $|x + 3| > 0 \iff x + 3 \ne 0 \iff x \ne -3$. Domain $D = \mathbb{R} \setminus \\{-3\\}$.
+• b) Condition: $4 - x^2 > 0 \iff x^2 < 4 \iff -2 < x < 2$. Domain $D = (-2; 2)$.
