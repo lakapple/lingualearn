@@ -1,0 +1,174 @@
+---
+title: 'Bài 30: Công thức nhân xác suất.'
+description: Hệ thống lý thuyết bài Công thức nhân xác suất cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Hai biến cố độc lập
+  - Công thức nhân xác suất cho hai biến cố độc lập
+  - Sơ đồ hình cây
+grade: 11
+order: 30
+updatedDate: 2026-10-29T00:17:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hai biến cố độc lập
+
+·       Công thức nhân xác suất cho hai biến cố độc lập
+
+·       Sơ đồ hình cây
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết công thức nhân xác suất cho hai biến cố độc lập.
+
+·       Tính xác suất của biến cố giao của hai biến cố độc lập bằng cách sử dụng công thức nhân xác suất.
+
+·       Sử dụng sơ đồ hình cây để tính xác suất trong các bài toán liên quan đến hai biến cố độc lập và biến cố đối.
+
+·       Sử dụng công thức nhân xác suất để kiểm tra mối liên hệ hoặc phát hiện tính phụ thuộc giữa hai biến cố trong thực tế (tai nạn giao thông và thắt dây an toàn, hút thuốc lá và viêm phổi).
+
+## Công thức nhân xác suất cho hai biến cố độc lập
+
+<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_nhan_xac_suat"/>
+
+### a) Định nghĩa và công thức nhân xác suất
+
+Nếu hai biến cố $A$ và $B$ độc lập với nhau thì:
+$$P(AB) = P(A) \cdot P(B)$$
+Công thức này gọi là công thức nhân xác suất cho hai biến cố độc lập.
+Chú ý:
+• Với hai biến cố $A$ và $B$, nếu $P(AB) \ne P(A) \cdot P(B)$ thì hai biến cố $A$ và $B$ không độc lập.
+• Nếu $A$ và $B$ độc lập thì các cặp biến cố $A$ và $\overline{B}$, $\overline{A}$ và $B$, $\overline{A}$ và $\overline{B}$ cũng độc lập, do đó:
+  - $P(A\overline{B}) = P(A) \cdot P(\overline{B})$;
+  - $P(\overline{A}B) = P(\overline{A}) \cdot P(B)$;
+  - $P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B})$.
+
+### b) Ví dụ và luyện tập có sử dụng sơ đồ hình cây
+
+**Ví dụ 1:** Tại vòng chung kết đại hội thể thao, vận động viên An thi đấu môn Bắn súng với xác suất đạt huy chương là 0,8; vận động viên Bình thi đấu môn Bơi lội với xác suất đạt huy chương là 0,9.
+a) Giải thích tại sao hai biến cố $A$: "An đạt huy chương" và $B$: "Bình đạt huy chương" là độc lập.
+b) Tính xác suất để cả hai vận động viên đều đạt huy chương.
+c) Sử dụng sơ đồ hình cây, tính xác suất để: cả hai vận động viên không đạt huy chương; An đạt huy chương và Bình không đạt; An không đạt và Bình đạt.
+
+Lời giải Ví dụ 1:
+• a) Vì hai vận động viên An và Bình thi đấu ở hai môn thể thao hoàn toàn khác nhau nên kết quả thi đấu của người này không ảnh hưởng đến người kia, do đó $A$ và $B$ là hai biến cố độc lập.
+• b) Xác suất để cả hai vận động viên đạt huy chương là:
+  $$P(AB) = P(A) \cdot P(B) = 0{,}8 \cdot 0{,}9 = 0{,}72.$$
+• c) Ta có $P(\overline{A}) = 1 - 0{,}8 = 0{,}2$ và $P(\overline{B}) = 1 - 0{,}9 = 0{,}1$. Theo sơ đồ hình cây:
+  - Xác suất cả hai không đạt huy chương: $P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B}) = 0{,}2 \cdot 0{,}1 = 0{,}02$.
+  - Xác suất An đạt, Bình không đạt: $P(A\overline{B}) = P(A) \cdot P(\overline{B}) = 0{,}8 \cdot 0{,}1 = 0{,}08$.
+  - Xác suất An không đạt, Bình đạt: $P(\overline{A}B) = P(\overline{A}) \cdot P(B) = 0{,}2 \cdot 0{,}9 = 0{,}18$.
+
+**Luyện tập 1:** Lớp 11D làm thí nghiệm gieo hai loại hạt giống A và B. Xác suất để hai loại hạt giống A và B nảy mầm tương ứng là 0,92 và 0,88. Giả sử việc nảy mầm của hai loại hạt giống là độc lập. Dùng sơ đồ hình cây, tính xác suất để:
+a) Hạt giống A nảy mầm còn hạt giống B không nảy mầm;
+b) Hạt giống A không nảy mầm còn hạt giống B nảy mầm;
+c) Có ít nhất một trong hai loại hạt giống nảy mầm.
+
+Lời giải Luyện tập 1:
+• Gọi $A$: "Hạt giống A nảy mầm" $\implies P(A) = 0{,}92, P(\overline{A}) = 0{,}08$.
+• Gọi $B$: "Hạt giống B nảy mầm" $\implies P(B) = 0{,}88, P(\overline{B}) = 0{,}12$.
+• a) Xác suất hạt A nảy mầm, hạt B không nảy mầm là:
+  $$P(A\overline{B}) = P(A) \cdot P(\overline{B}) = 0{,}92 \cdot 0{,}12 = 0{,}1104.$$
+• b) Xác suất hạt A không nảy mầm, hạt B nảy mầm là:
+  $$P(\overline{A}B) = P(\overline{A}) \cdot P(B) = 0{,}08 \cdot 0{,}88 = 0{,}0704.$$
+• c) Biến cố "Có ít nhất một trong hai loại hạt giống nảy mầm" là $A \cup B$. Biến cố đối là cả hai hạt đều không nảy mầm ($\overline{A}\overline{B}$):
+  $$P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B}) = 0{,}08 \cdot 0{,}12 = 0{,}0096.$$
+  Suy ra xác suất có ít nhất một loại hạt nảy mầm là:
+  $$P(A \cup B) = 1 - P(\overline{A}\overline{B}) = 1 - 0{,}0096 = 0{,}9904.$$
+
+## Ứng dụng và phát hiện mối liên hệ giữa các biến cố
+
+### a) Phương pháp kiểm tra tính độc lập và mối liên hệ thực tế
+
+**Ví dụ 2:** Số liệu thống kê tại một vùng cho thấy trong các vụ tai nạn ô tô có 0,37% người tử vong, 29% người không thắt dây an toàn và 0,28% người không thắt dây an toàn và tử vong. Chứng tỏ rằng việc không thắt dây an toàn khi lái xe và nguy cơ tử vong khi gặp tai nạn có liên quan với nhau.
+
+Lời giải Ví dụ 2:
+• Chọn ngẫu nhiên một người bị tai nạn ô tô. Gọi $A$: "Người đó đã tử vong", $B$: "Người đó không thắt dây an toàn".
+• Khi đó $AB$ là biến cố: "Người đó không thắt dây an toàn và đã tử vong".
+• Theo số liệu thống kê: $P(A) = 0{,}37\\% = 0{,}0037$; $P(B) = 29\\% = 0{,}29$; $P(AB) = 0{,}28\\% = 0{,}0028$.
+• Ta có:
+  $$P(A) \cdot P(B) = 0{,}0037 \cdot 0{,}29 = 0{,}001073.$$
+• Nhận thấy $P(AB) = 0{,}0028 \ne 0{,}001073 = P(A) \cdot P(B)$, suy ra hai biến cố $A$ và $B$ không độc lập.
+• Vậy việc không thắt dây an toàn khi lái xe và nguy cơ tử vong khi gặp tai nạn có liên quan với nhau.
+
+**Luyện tập 2:** Nghiên cứu mối liên quan giữa hút thuốc lá và viêm phổi trên 5.000 người đàn ông:
+\- Nghiện thuốc lá: 752 người viêm phổi, 1.236 người không viêm phổi (tổng 1.988 người).
+\- Không nghiện thuốc lá: 575 người viêm phổi, 2.437 người không viêm phổi (tổng 3.012 người).
+Từ bảng thống kê, chứng tỏ rằng việc nghiện thuốc lá và mắc bệnh viêm phổi có liên quan với nhau.
+
+Lời giải Luyện tập 2:
+• Chọn ngẫu nhiên một người trong nhóm 5.000 người đàn ông. Gọi $A$: "Người đó nghiện thuốc lá", $B$: "Người đó bị viêm phổi".
+• Tổng số người nghiện thuốc lá là $752 + 1236 = 1988 \implies P(A) = \frac{1988}{5000} = 0{,}3976$.
+• Tổng số người bị viêm phổi là $752 + 575 = 1327 \implies P(B) = \frac{1327}{5000} = 0{,}2654$.
+• Số người vừa nghiện thuốc lá vừa bị viêm phổi là 752 $\implies P(AB) = \frac{752}{5000} = 0{,}1504$.
+• Ta tính tích xác suất:
+  $$P(A) \cdot P(B) = 0{,}3976 \cdot 0{,}2654 \approx 0{,}1055.$$
+• Vì $P(AB) = 0{,}1504 \ne 0{,}1055 \approx P(A) \cdot P(B)$, hai biến cố $A$ và $B$ không độc lập.
+• Do đó, việc nghiện thuốc lá và mắc bệnh viêm phổi có liên quan mật thiết với nhau.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 8.11:** Cho hai biến cố $A$ và $B$ là hai biến cố xung khắc với $P(A) > 0, P(B) > 0$. Chứng tỏ rằng hai biến cố $A$ và $B$ không độc lập.
+
+Lời giải Bài 8.11:
+• Vì $A$ và $B$ xung khắc nên $AB = \emptyset$, do đó $P(AB) = 0$.
+• Mặt khác theo giả thiết $P(A) > 0$ và $P(B) > 0$, suy ra $P(A) \cdot P(B) > 0$.
+• Do đó $P(AB) = 0 \ne P(A) \cdot P(B)$. Vậy $A$ và $B$ không độc lập.
+
+**Bài 8.12:** Một thùng đựng 60 tấm thẻ cùng loại được đánh số từ 1 đến 60. Rút ngẫu nhiên một tấm thẻ. Xét các biến cố $A$: "Số ghi trên thẻ là ước của 60" và $B$: "Số ghi trên thẻ là ước của 48". Chứng tỏ rằng $A$ và $B$ không độc lập.
+
+Lời giải Bài 8.12:
+• Không gian mẫu $n(\Omega) = 60$.
+• Các ước nguyên dương của 60 trong phạm vi từ 1 đến 60 có 12 số: $\\{1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60\\} \implies n(A) = 12 \implies P(A) = \frac{12}{60} = \frac{1}{5}$.
+• Các ước nguyên dương của 48 có 10 số: $\\{1, 2, 3, 4, 6, 8, 12, 16, 24, 48\\} \implies n(B) = 10 \implies P(B) = \frac{10}{60} = \frac{1}{6}$.
+• Tích xác suất: $P(A) \cdot P(B) = \frac{1}{5} \cdot \frac{1}{6} = \frac{1}{30}$.
+• Biến cố $AB = A \cap B$ là các ước chung của 60 và 48, tức là ước của $\text{ƯCLN}(60, 48) = 12$, gồm 6 số: $\\{1, 2, 3, 4, 6, 12\\} \implies n(AB) = 6 \implies P(AB) = \frac{6}{60} = \frac{1}{10}$.
+• Vì $P(AB) = \frac{1}{10} \ne \frac{1}{30} = P(A) \cdot P(B)$, nên $A$ và $B$ là hai biến cố không độc lập.
+
+**Bài 8.13:** Có hai túi đựng bi. Túi I có 3 viên bi xanh và 7 viên bi đỏ (tổng 10 viên). Túi II có 10 viên bi xanh và 6 viên bi đỏ (tổng 16 viên). Từ mỗi túi lấy ngẫu nhiên ra một viên bi. Tính xác suất để:
+a) Hai viên bi lấy ra có cùng màu xanh;
+b) Hai viên bi lấy ra có cùng màu đỏ;
+c) Hai viên bi lấy ra có cùng màu;
+d) Hai viên bi lấy ra không cùng màu.
+
+Lời giải Bài 8.13:
+• Gọi $X_1$: "Lấy bi xanh từ túi I" $\implies P(X_1) = \frac{3}{10}$, $D_1$: "Lấy bi đỏ từ túi I" $\implies P(D_1) = \frac{7}{10}$.
+• Gọi $X_2$: "Lấy bi xanh từ túi II" $\implies P(X_2) = \frac{10}{16} = \frac{5}{8}$, $D_2$: "Lấy bi đỏ từ túi II" $\implies P(D_2) = \frac{6}{16} = \frac{3}{8}$.
+• Do hai túi hoàn toàn riêng biệt nên việc lấy bi ở túi I và túi II độc lập với nhau.
+  - a) Xác suất hai bi cùng màu xanh: $P = P(X_1) \cdot P(X_2) = \frac{3}{10} \cdot \frac{5}{8} = \frac{3}{16} = 0{,}1875$.
+  - b) Xác suất hai bi cùng màu đỏ: $P = P(D_1) \cdot P(D_2) = \frac{7}{10} \cdot \frac{3}{8} = \frac{21}{80} = 0{,}2625$.
+  - c) Xác suất hai bi có cùng màu: $P = \frac{3}{16} + \frac{21}{80} = \frac{15}{80} + \frac{21}{80} = \frac{36}{80} = \frac{9}{20} = 0{,}45$.
+  - d) Xác suất hai bi không cùng màu: $P = 1 - 0{,}45 = 0{,}55 = \frac{11}{20}$.
+
+**Bài 8.14:** Có hai túi, mỗi túi đựng 10 quả cầu được đánh số từ 1 đến 10. Từ mỗi túi lấy ngẫu nhiên ra một quả cầu. Tính xác suất để trong hai quả cầu được lấy ra không có quả cầu nào ghi số 1 hoặc ghi số 5.
+
+Lời giải Bài 8.14:
+• Ở mỗi túi có 10 quả cầu. Các quả không ghi số 1 và không ghi số 5 gồm 8 quả: $\\{2, 3, 4, 6, 7, 8, 9, 10\\}$.
+• Xác suất để túi I lấy được quả cầu không ghi số 1 và không ghi số 5 là $P_1 = \frac{8}{10} = \frac{4}{5}$.
+• Xác suất để túi II lấy được quả cầu không ghi số 1 và không ghi số 5 là $P_2 = \frac{8}{10} = \frac{4}{5}$.
+• Vì việc lấy cầu ở hai túi là độc lập nên xác suất cần tìm là:
+  $$P = P_1 \cdot P_2 = \frac{4}{5} \cdot \frac{4}{5} = \frac{16}{25} = 0{,}64.$$
+
+**Bài 8.15:** Trong kì kiểm tra, tỉ lệ học sinh đạt yêu cầu của tỉnh X là 93%, của tỉnh Y là 87%. Chọn ngẫu nhiên một học sinh của tỉnh X và một học sinh của tỉnh Y. Giả thiết kết quả hai tỉnh là độc lập. Tính xác suất để:
+a) Cả hai học sinh được chọn đều đạt yêu cầu;
+b) Cả hai học sinh được chọn đều không đạt yêu cầu;
+c) Chỉ có đúng một học sinh đạt yêu cầu;
+d) Có ít nhất một học sinh đạt yêu cầu.
+
+Lời giải Bài 8.15:
+• Gọi $A$: "Học sinh tỉnh X đạt yêu cầu" $\implies P(A) = 0{,}93; P(\overline{A}) = 0{,}07$.
+• Gọi $B$: "Học sinh tỉnh Y đạt yêu cầu" $\implies P(B) = 0{,}87; P(\overline{B}) = 0{,}13$.
+• Do hai học sinh được chọn độc lập:
+  - a) Cả hai đều đạt yêu cầu: $P(AB) = P(A) \cdot P(B) = 0{,}93 \cdot 0{,}87 = 0{,}8091$.
+  - b) Cả hai đều không đạt yêu cầu: $P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B}) = 0{,}07 \cdot 0{,}13 = 0{,}0091$.
+  - c) Chỉ có đúng một học sinh đạt yêu cầu:
+    $$P = P(A\overline{B}) + P(\overline{A}B) = (0{,}93 \cdot 0{,}13) + (0{,}07 \cdot 0{,}87) = 0{,}1209 + 0{,}0609 = 0{,}1818.$$
+  - d) Có ít nhất một học sinh đạt yêu cầu:
+    $$P = 1 - P(\overline{A}\overline{B}) = 1 - 0{,}0091 = 0{,}9909.$$

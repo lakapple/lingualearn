@@ -1,0 +1,174 @@
+---
+title: 'Lesson 30: Multiplication rule of probability.'
+description: Theoretical system for the lesson on Multiplication rule of probability with illustrative examples
+tags:
+  - grade 11
+  - Two independent events
+  - Multiplication rule of probability for two independent events
+  - Tree diagram
+grade: 11
+order: 30
+updatedDate: 2026-10-29T00:17:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Two independent events
+
+·       Multiplication rule of probability for two independent events
+
+·       Tree diagram
+
+### **Knowledge and Skills:**
+
+·       Recognize the multiplication rule of probability for two independent events.
+
+·       Compute the probability of the intersection of two independent events using the multiplication rule.
+
+·       Use tree diagrams to calculate probabilities in problems involving independent events and complementary events.
+
+·       Apply the multiplication rule of probability to check connections or identify statistical dependence between two real-world events (traffic accidents and seat belt usage, smoking habits and pneumonia).
+
+## Multiplication Rule of Probability for Two Independent Events
+
+<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_nhan_xac_suat"/>
+
+### a) Definition and the Multiplication Rule
+
+If two events $A$ and $B$ are independent of each other, then:
+$$P(AB) = P(A) \cdot P(B)$$
+This formula is called the multiplication rule of probability for two independent events.
+Note:
+• For two events $A$ and $B$, if $P(AB) \ne P(A) \cdot P(B)$, then $A$ and $B$ are not independent.
+• If $A$ and $B$ are independent, then the pairs of events $A$ and $\overline{B}$, $\overline{A}$ and $B$, $\overline{A}$ and $\overline{B}$ are also independent, so:
+  - $P(A\overline{B}) = P(A) \cdot P(\overline{B})$;
+  - $P(\overline{A}B) = P(\overline{A}) \cdot P(B)$;
+  - $P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B})$.
+
+### b) Examples and Practice Using Tree Diagrams
+
+**Example 1:** At the finals of a sports festival, athlete An competes in Shooting with a medal-winning probability of 0.8; athlete Binh competes in Swimming with a medal-winning probability of 0.9.
+a) Explain why the two events $A$: "An wins a medal" and $B$: "Binh wins a medal" are independent.
+b) Calculate the probability that both athletes win medals.
+c) Using a tree diagram, calculate the probability that: neither athlete wins a medal; An wins a medal but Binh does not; An does not win a medal but Binh wins a medal.
+
+Solution to Example 1:
+• a) Since the two athletes An and Binh compete in two entirely different sports, the competition result of one athlete does not affect the performance or outcome of the other; thus, $A$ and $B$ are independent events.
+• b) The probability that both athletes win medals is:
+  $$P(AB) = P(A) \cdot P(B) = 0.8 \cdot 0.9 = 0.72.$$
+• c) We have $P(\overline{A}) = 1 - 0.8 = 0.2$ and $P(\overline{B}) = 1 - 0.9 = 0.1$. From the tree diagram:
+  - Probability that neither athlete wins a medal: $P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B}) = 0.2 \cdot 0.1 = 0.02$.
+  - Probability that An wins a medal and Binh does not: $P(A\overline{B}) = P(A) \cdot P(\overline{B}) = 0.8 \cdot 0.1 = 0.08$.
+  - Probability that An does not win a medal and Binh wins a medal: $P(\overline{A}B) = P(\overline{A}) \cdot P(B) = 0.2 \cdot 0.9 = 0.18$.
+
+**Practice 1:** Students of class 11D conduct an experiment planting two types of seeds, A and B. The germination probabilities of seed types A and B are 0.92 and 0.88, respectively. Assuming the germination of seed A and seed B are independent events, use a tree diagram to calculate the probability that:
+a) Seed type A germinates while seed type B does not germinate;
+b) Seed type A does not germinate while seed type B germinates;
+c) At least one of the two types of seeds germinates.
+
+Solution to Practice 1:
+• Let $A$: "Seed type A germinates" $\implies P(A) = 0.92, P(\overline{A}) = 0.08$.
+• Let $B$: "Seed type B germinates" $\implies P(B) = 0.88, P(\overline{B}) = 0.12$.
+• a) The probability that seed A germinates and seed B does not germinate is:
+  $$P(A\overline{B}) = P(A) \cdot P(\overline{B}) = 0.92 \cdot 0.12 = 0.1104.$$
+• b) The probability that seed A does not germinate and seed B germinates is:
+  $$P(\overline{A}B) = P(\overline{A}) \cdot P(B) = 0.08 \cdot 0.88 = 0.0704.$$
+• c) The event "At least one of the two seed types germinates" is $A \cup B$. The complementary event is that neither seed type germinates ($\overline{A}\overline{B}$):
+  $$P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B}) = 0.08 \cdot 0.12 = 0.0096.$$
+  Thus, the probability that at least one seed type germinates is:
+  $$P(A \cup B) = 1 - P(\overline{A}\overline{B}) = 1 - 0.0096 = 0.9904.$$
+
+## Applications and Discovering Relationships Between Events
+
+### a) Methods for Testing Independence and Empirical Associations
+
+**Example 2:** Statistics in a region show that among automobile accident victims, 0.37% were fatal, 29% did not wear seat belts, and 0.28% did not wear seat belts and were fatal. Show that not wearing a seat belt while driving and the risk of fatality in an accident are associated.
+
+Solution to Example 2:
+• Randomly select a person involved in an automobile accident. Let $A$: "The person was fatally injured", $B$: "The person did not wear a seat belt".
+• Then $AB$ is the event: "The person did not wear a seat belt and was fatally injured".
+• According to the statistical data: $P(A) = 0.37\\% = 0.0037$; $P(B) = 29\\% = 0.29$; $P(AB) = 0.28\\% = 0.0028$.
+• We have:
+  $$P(A) \cdot P(B) = 0.0037 \cdot 0.29 = 0.001073.$$
+• Since $P(AB) = 0.0028 \ne 0.001073 = P(A) \cdot P(B)$, the two events $A$ and $B$ are not independent.
+• Therefore, not wearing a seat belt while driving and the risk of fatality in an accident are statistically associated.
+
+**Practice 2:** A study investigating the relationship between smoking habits and pneumonia was conducted on a group of 5,000 men:
+\- Smokers: 752 diagnosed with pneumonia, 1,236 without pneumonia (total 1,988 men).
+\- Non-smokers: 575 diagnosed with pneumonia, 2,437 without pneumonia (total 3,012 men).
+From the contingency table, demonstrate that smoking habits and contracting pneumonia are associated.
+
+Solution to Practice 2:
+• Randomly select one individual from the group of 5,000 men. Let $A$: "The person is a smoker", $B$: "The person has pneumonia".
+• The total number of smokers is $752 + 1,236 = 1,988 \implies P(A) = \frac{1988}{5000} = 0.3976$.
+• The total number of individuals with pneumonia is $752 + 575 = 1,327 \implies P(B) = \frac{1327}{5000} = 0.2654$.
+• The number of individuals who are both smokers and have pneumonia is 752 $\implies P(AB) = \frac{752}{5000} = 0.1504$.
+• Calculate the product of probabilities:
+  $$P(A) \cdot P(B) = 0.3976 \cdot 0.2654 \approx 0.1055.$$
+• Since $P(AB) = 0.1504 \ne 0.1055 \approx P(A) \cdot P(B)$, the events $A$ and $B$ are not independent.
+• Hence, smoking habits and contracting pneumonia are associated.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 8.11:** Given two mutually exclusive events $A$ and $B$ with $P(A) > 0$ and $P(B) > 0$. Prove that events $A$ and $B$ are not independent.
+
+Solution to Exercise 8.11:
+• Since $A$ and $B$ are mutually exclusive, $AB = \emptyset$, which implies $P(AB) = 0$.
+• On the other hand, since $P(A) > 0$ and $P(B) > 0$, we have $P(A) \cdot P(B) > 0$.
+• Therefore, $P(AB) = 0 \ne P(A) \cdot P(B)$. Thus, events $A$ and $B$ are not independent.
+
+**Exercise 8.12:** A box contains 60 identical cards numbered from 1 to 60. A card is drawn at random from the box. Consider the events $A$: "The number on the card is a divisor of 60" and $B$: "The number on the card is a divisor of 48". Show that $A$ and $B$ are not independent events.
+
+Solution to Exercise 8.12:
+• The sample space has size $n(\Omega) = 60$.
+• The positive divisors of 60 between 1 and 60 are 12 numbers: $\\{1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60\\} \implies n(A) = 12 \implies P(A) = \frac{12}{60} = \frac{1}{5}$.
+• The positive divisors of 48 are 10 numbers: $\\{1, 2, 3, 4, 6, 8, 12, 16, 24, 48\\} \implies n(B) = 10 \implies P(B) = \frac{10}{60} = \frac{1}{6}$.
+• The product of probabilities is: $P(A) \cdot P(B) = \frac{1}{5} \cdot \frac{1}{6} = \frac{1}{30}$.
+• The event $AB = A \cap B$ consists of common divisors of 60 and 48, which are divisors of $\gcd(60, 48) = 12$, consisting of 6 numbers: $\\{1, 2, 3, 4, 6, 12\\} \implies n(AB) = 6 \implies P(AB) = \frac{6}{60} = \frac{1}{10}$.
+• Since $P(AB) = \frac{1}{10} \ne \frac{1}{30} = P(A) \cdot P(B)$, events $A$ and $B$ are not independent.
+
+**Exercise 8.13:** There are two bags containing marbles of identical size and mass. Bag I contains 3 green marbles and 7 red marbles (total 10 marbles). Bag II contains 10 green marbles and 6 red marbles (total 16 marbles). One marble is drawn at random from each bag. Calculate the probability that:
+a) Both drawn marbles are green;
+b) Both drawn marbles are red;
+c) Both drawn marbles are of the same color;
+d) Both drawn marbles are of different colors.
+
+Solution to Exercise 8.13:
+• Let $G_1$: "Draw a green marble from Bag I" $\implies P(G_1) = \frac{3}{10}$, $R_1$: "Draw a red marble from Bag I" $\implies P(R_1) = \frac{7}{10}$.
+• Let $G_2$: "Draw a green marble from Bag II" $\implies P(G_2) = \frac{10}{16} = \frac{5}{8}$, $R_2$: "Draw a red marble from Bag II" $\implies P(R_2) = \frac{6}{16} = \frac{3}{8}$.
+• Because the selections from the two bags are completely independent:
+  - a) Probability that both marbles are green: $P = P(G_1) \cdot P(G_2) = \frac{3}{10} \cdot \frac{5}{8} = \frac{3}{16} = 0.1875$.
+  - b) Probability that both marbles are red: $P = P(R_1) \cdot P(R_2) = \frac{7}{10} \cdot \frac{3}{8} = \frac{21}{80} = 0.2625$.
+  - c) Probability that both marbles have the same color: $P = \frac{3}{16} + \frac{21}{80} = \frac{15}{80} + \frac{21}{80} = \frac{36}{80} = \frac{9}{20} = 0.45$.
+  - d) Probability that both marbles have different colors: $P = 1 - 0.45 = 0.55 = \frac{11}{20}$.
+
+**Exercise 8.14:** There are two bags, each containing 10 identical balls numbered from 1 to 10. One ball is drawn at random from each bag. Calculate the probability that neither of the two drawn balls is numbered 1 or 5.
+
+Solution to Exercise 8.14:
+• In each bag of 10 balls, the balls not numbered 1 and not numbered 5 comprise 8 balls: $\\{2, 3, 4, 6, 7, 8, 9, 10\\}$.
+• The probability of drawing a ball not numbered 1 or 5 from Bag I is $P_1 = \frac{8}{10} = \frac{4}{5}$.
+• The probability of drawing a ball not numbered 1 or 5 from Bag II is $P_2 = \frac{8}{10} = \frac{4}{5}$.
+• Because the selections from the two bags are independent, the required probability is:
+  $$P = P_1 \cdot P_2 = \frac{4}{5} \cdot \frac{4}{5} = \frac{16}{25} = 0.64.$$
+
+**Exercise 8.15:** In the second semester final exams of high schools, statistics indicate that 93% of students in province X passed and 87% of students in province Y passed. A student from province X and a student from province Y are selected at random. Assuming that the academic performance in the two provinces is independent, calculate the probability that:
+a) Both selected students passed;
+b) Neither selected student passed;
+c) Exactly one of the selected students passed;
+d) At least one of the selected students passed.
+
+Solution to Exercise 8.15:
+• Let $A$: "The student from province X passed" $\implies P(A) = 0.93; P(\overline{A}) = 0.07$.
+• Let $B$: "The student from province Y passed" $\implies P(B) = 0.87; P(\overline{B}) = 0.13$.
+• Since the two students are selected independently:
+  - a) Both students passed: $P(AB) = P(A) \cdot P(B) = 0.93 \cdot 0.87 = 0.8091$.
+  - b) Neither student passed: $P(\overline{A}\overline{B}) = P(\overline{A}) \cdot P(\overline{B}) = 0.07 \cdot 0.13 = 0.0091$.
+  - c) Exactly one student passed:
+    $$P = P(A\overline{B}) + P(\overline{A}B) = (0.93 \cdot 0.13) + (0.07 \cdot 0.87) = 0.1209 + 0.0609 = 0.1818.$$
+  - d) At least one student passed:
+    $$P = 1 - P(\overline{A}\overline{B}) = 1 - 0.0091 = 0.9909.$$
