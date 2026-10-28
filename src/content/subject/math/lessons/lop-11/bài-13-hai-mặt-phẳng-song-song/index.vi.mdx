@@ -1,0 +1,203 @@
+---
+title: 'Bài 13: Hai mặt phẳng song song.'
+description: Hệ thống lý thuyết bài hai mặt phẳng song song cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Hai mặt phẳng song song
+  - Định lí Thalès trong không gian
+  - Hình lăng trụ
+  - hình hộp
+  - Mặt đáy
+  - mặt bên
+  - cạnh bên
+  - đường chéo hình hộp
+grade: 11
+order: 13
+updatedDate: 2026-10-28T17:21:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hai mặt phẳng song song ($(P) \parallel (Q)$)
+
+·       Định lí Thalès trong không gian
+
+·       Hình lăng trụ, hình hộp
+
+·       Mặt đáy, mặt bên, cạnh bên, đường chéo hình hộp
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết và giải thích điều kiện để hai mặt phẳng song song trong không gian.
+
+·       Nắm vững các tính chất cơ bản của hai mặt phẳng song song và định lí Thalès trong không gian.
+
+·       Giải thích và nhận biết các đặc trưng hình học của hình lăng trụ và hình hộp.
+
+·       Vận dụng kiến thức vào giải quyết các bài toán thực tiễn (thái rau củ đều nhau, bậc thang, ruộng bậc thang, tỉ lệ mực nước trong bể, cấu trúc cầu thang xương cá).
+
+## Hai mặt phẳng song song và điều kiện tồn tại
+
+<Youtube url="https://www.youtube.com/watch?v=example_hai_mat_phang_song_song"/>
+
+### a) Khái niệm hai mặt phẳng song song
+
+Định nghĩa:
+Hai mặt phẳng $(\alpha)$ và $(\beta)$ được gọi là song song với nhau nếu chúng không có điểm chung nào, kí hiệu là $(\alpha) \parallel (\beta)$ hay $(\beta) \parallel (\alpha)$.
+• Nhận xét: Nếu hai mặt phẳng $(\alpha)$ và $(\beta)$ song song với nhau thì mọi đường thẳng nằm trong $(\alpha)$ đều song song với $(\beta)$.
+
+### b) Điều kiện để hai mặt phẳng song song
+
+Định lí (Dấu hiệu nhận biết):
+Nếu mặt phẳng $(\alpha)$ chứa hai đường thẳng cắt nhau và hai đường thẳng này cùng song song với mặt phẳng $(\beta)$ thì $(\alpha)$ song song với $(\beta)$:
+$$\begin{cases} a \subset (\alpha), \\, b \subset (\alpha) \\\ a \cap b = \\{M\\} \\\ a \parallel (\beta), \\, b \parallel (\beta) \end{cases} \Rightarrow (\alpha) \parallel (\beta)$$
+
+Hệ quả và tính chất:
+• Qua một điểm nằm ngoài một mặt phẳng cho trước, có một và chỉ một mặt phẳng song song với mặt phẳng đó.
+• Nếu hai mặt phẳng phân biệt cùng song song với mặt phẳng thứ ba thì chúng song song với nhau.
+
+**Ví dụ 1:** Cho hai hình bình hành $ABCD$ và $ABEF$ không cùng nằm trong một mặt phẳng. Chứng minh rằng mặt phẳng $(BCE)$ song song với mặt phẳng $(ADF)$.
+
+Lời giải Ví dụ 1:
+• Vì $ABCD$ là hình bình hành nên $BC \parallel AD$, suy ra $BC \parallel \text{mp}(ADF)$.
+• Vì $ABEF$ là hình bình hành nên $BE \parallel AF$, suy ra $BE \parallel \text{mp}(ADF)$.
+• Mặt phẳng $(BCE)$ chứa hai đường thẳng cắt nhau $BC$ và $BE$ cùng song song với mặt phẳng $(ADF)$. Do đó $(BCE) \parallel (ADF)$.
+
+**Luyện tập 1:** Cho bốn điểm $A, B, C, D$ không đồng phẳng. Qua điểm $A$ vẽ hai đường thẳng $m, n$ lần lượt song song với hai đường thẳng $BC$ và $BD$. Chứng minh rằng $\text{mp}(m, n)$ song song với mặt phẳng $(BCD)$.
+
+Lời giải Luyện tập 1:
+• Ta có $m \parallel BC$ mà $BC \subset (BCD)$ và $m \not\subset (BCD) \Rightarrow m \parallel (BCD)$.
+• Tương tự, $n \parallel BD$ mà $BD \subset (BCD)$ và $n \not\subset (BCD) \Rightarrow n \parallel (BCD)$.
+• Mặt phẳng $\text{mp}(m, n)$ chứa hai đường thẳng cắt nhau $m$ và $n$ cùng song song với mặt phẳng $(BCD)$. Vậy $\text{mp}(m, n) \parallel (BCD)$.
+
+## Tính chất của hai mặt phẳng song song và định lí Thalès
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_mp_song_song"/>
+
+### a) Tính chất cơ bản của hai mặt phẳng song song
+
+Định lí giao tuyến song song:
+Cho hai mặt phẳng song song $(P)$ và $(Q)$. Nếu một mặt phẳng $(R)$ cắt $(P)$ theo giao tuyến $a$ thì $(R)$ cũng cắt $(Q)$ theo giao tuyến $b$, và hai giao tuyến $a, b$ song song với nhau:
+$$\begin{cases} (P) \parallel (Q) \\\ a = (R) \cap (P) \\\ b = (R) \cap (Q) \end{cases} \Rightarrow a \parallel b$$
+
+**Ví dụ 2:** Cho hình chóp $S.ABCD$. Gọi $M, N, P, Q$ lần lượt là trung điểm của $SA, SB, SC, SD$. Chứng minh rằng hai mặt phẳng $(MNP)$ và $(NPQ)$ cùng song song với mặt phẳng $(ABCD)$, từ đó suy ra bốn điểm $M, N, P, Q$ đồng phẳng.
+
+Lời giải Ví dụ 2:
+• $M, N$ là trung điểm của $SA, SB \Rightarrow MN$ là đường trung bình của $\triangle SAB \Rightarrow MN \parallel AB \parallel (ABCD)$.
+• Tương tự $NP \parallel BC \parallel (ABCD)$. Mặt phẳng $(MNP)$ chứa hai đường thẳng cắt nhau $MN$ và $NP$ cùng song song với $(ABCD)$, suy ra $(MNP) \parallel (ABCD)$.
+• Lập luận tương tự, $(NPQ) \parallel (ABCD)$. Hai mặt phẳng $(MNP)$ và $(NPQ)$ cùng đi qua điểm $N$ và cùng song song với $(ABCD)$ nên chúng trùng nhau. Do đó bốn điểm $M, N, P, Q$ đồng phẳng.
+
+**Luyện tập 2:** Cho hình chóp $S.ABCD$. Gọi $M, N, P, Q$ lần lượt là các điểm thuộc các cạnh $SA, SB, SC, SD$ sao cho $\frac{MA}{MS} = \frac{NB}{NS} = \frac{PC}{PS} = \frac{QD}{QS} = \frac{1}{2}$. Chứng minh rằng bốn điểm $M, N, P, Q$ đồng phẳng.
+
+Lời giải Luyện tập 2:
+• Theo định lí Thalès đảo trong tam giác, từ tỉ số $\frac{MA}{MS} = \frac{NB}{NS} = \frac{1}{2}$ suy ra $MN \parallel AB$. Lại có $AB \subset (ABCD) \Rightarrow MN \parallel (ABCD)$.
+• Tương tự, $NP \parallel BC \parallel (ABCD) \Rightarrow (MNP) \parallel (ABCD)$.
+• Chứng minh tương tự với $(NPQ)$, ta có $(NPQ) \parallel (ABCD)$. Hai mặt phẳng phân biệt cùng song song với một mặt phẳng và đi qua điểm chung $N$ thì trùng nhau. Vậy bốn điểm $M, N, P, Q$ đồng phẳng.
+
+### b) Định lí Thalès trong không gian
+
+Định lí Thalès trong không gian:
+Ba mặt phẳng đôi một song song chắn trên hai cát tuyến phân biệt bất kì những đoạn thẳng tương ứng tỉ lệ:
+$$\frac{AB}{A'B'} = \frac{BC}{B'C'} = \frac{AC}{A'C'}$$
+
+**Ví dụ 4:** Cho hình tứ diện $SABC$. Trên cạnh $SA$ lấy các điểm $A_1, A_2$ sao cho $A_2A_1 = 2A_1A$. Gọi $(P)$ và $(Q)$ là hai mặt phẳng song song với mặt phẳng $(ABC)$ và lần lượt đi qua $A_1, A_2$. Mặt phẳng $(P)$ cắt các cạnh $SB, SC$ lần lượt tại $B_1, C_1$. Mặt phẳng $(Q)$ cắt các cạnh $SB, SC$ lần lượt tại $B_2, C_2$. Chứng minh $B_2B_1 = 2B_1B$ và $C_2C_1 = 2C_1C$.
+
+Lời giải Ví dụ 4:
+• Áp dụng định lí Thalès cho ba mặt phẳng đôi một song song $(P), (Q), (ABC)$ và hai cát tuyến $SA, SB$:
+$$\frac{A_2A_1}{A_1A} = \frac{B_2B_1}{B_1B} = 2 \Rightarrow B_2B_1 = 2B_1B$$
+• Tương tự với hai cát tuyến $SA, SC$ suy ra $C_2C_1 = 2C_1C$.
+
+## Hình lăng trụ và hình hộp
+
+<Youtube url="https://www.youtube.com/watch?v=example_hinh_lang_tru_va_hinh_hop"/>
+
+### a) Định nghĩa hình lăng trụ và hình hộp
+
+Hình lăng trụ:
+• Cho hai mặt phẳng song song $(\alpha)$ và $(\alpha')$. Trên $(\alpha)$ cho đa giác lồi $A_1A_2\dots A_n$. Qua các đỉnh vẽ các đường thẳng đôi một song song và cắt mặt phẳng $(\alpha')$ tại $A_1', A_2', \dots, A_n'$.
+• Hình gồm hai đa giác $A_1A_2\dots A_n, A_1'A_2'\dots A_n'$ và các tứ giác $A_1A_1'A_2'A_2, \dots$ được gọi là hình lăng trụ, kí hiệu là $A_1A_2\dots A_n.A_1'A_2'\dots A_n'$.
+
+Hình hộp:
+• Hình lăng trụ tứ giác có hai đáy là hình bình hành được gọi là hình hộp ($ABCD.A'B'C'D'$).
+• Các cặp đỉnh đối diện, các đường chéo và các mặt đối diện của hình hộp có các tính chất đặc trưng (đường chéo đồng quy tại trung điểm mỗi đường, mặt đối diện song song).
+
+### b) Ví dụ và luyện tập về hình lăng trụ và hình hộp
+
+**Ví dụ 5:** Cho hình lăng trụ tam giác $ABC.A'B'C'$. Một mặt phẳng song song với mặt đáy của hình lăng trụ cắt các cạnh bên lần lượt tại $A'', B'', C''$. Chứng minh rằng $ABC.A''B''C''$ là hình lăng trụ.
+
+Lời giải Ví dụ 5:
+• Vì các cạnh bên của hình lăng trụ $ABC.A'B'C'$ đôi một song song nên $AA'', BB'', CC'\\$$ đôi một song song. Mặt phẳng $(ABC)$ song song với mặt phẳng $(A''B''C'')$ nên $ABC.A''B''C''$ thỏa mãn định nghĩa hình lăng trụ.
+
+**Ví dụ 6:** Cho hình hộp $ABCD.A'B'C'D'$. Chứng minh rằng các đường chéo $AC', BD', CA', DB'$ cùng đi qua trung điểm của mỗi đường.
+
+Lời giải Ví dụ 6:
+• Đáy $ABCD$ của hình hộp là hình bình hành nên $AD \parallel BC$ và $AD = BC$. Mặt bên $BCC'B'$ là hình bình hành nên $BC \parallel B'C'$ và $BC = B'C'$.
+• Suy ra $AD \parallel B'C'$ và $AD = B'C'$, suy ra tứ giác $ADC'B'$ là hình bình hành. Từ đó $AC'$ và $DB'$ cắt nhau tại trung điểm của mỗi đường. Tương tự $AC'$ và $CA'$, $AC'$ và $DB'$ cũng cắt nhau tại trung điểm của mỗi đường.
+• Vậy bốn đường chéo của hình hộp cùng đi qua trung điểm của mỗi đường.
+
+**Luyện tập 6:** Cho hình hộp $ABCD.A'B'C'D'$. Chứng minh rằng hai mặt phẳng $(ADD'A')$ và $(BCC'B')$ song song với nhau.
+
+Lời giải Luyện tập 6:
+• Ta có $AA' \parallel BB'$ và $AD \parallel BC$ (do các mặt bên và đáy là hình bình hành).
+• Mặt phẳng $(ADD'A')$ chứa hai đường thẳng cắt nhau $AA'$ và $AD$ cùng song song với mặt phẳng $(BCC'B')$. Vậy $(ADD'A') \parallel (BCC'B')$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 1 (Chân bàn gấp thông minh):** Một chiếc bàn có phần chân là hai khung sắt hình chữ nhật có thể xoay quanh một trục. Khi mặt bàn được đặt lên phần chân bàn thì mặt bàn luôn song song với mặt đất. Hãy giải thích tại sao.
+
+Lời giải Vận dụng 1:
+• Các khớp xoay và khung chân sắt được thiết kế đối xứng tạo thành hệ thống hai mặt phẳng song song liên kết. Khi mở rộng tối đa, mặt phẳng đỡ của khung chân tạo thành mặt phẳng song song cố định với mặt đất, do đó mặt bàn đặt lên sẽ luôn song song với mặt đất.
+
+**Bài 4.28 (Cầu thang xương cá):** Cầu thang xương cá có phần mép của mỗi bậc thang nằm trên tường song song với nhau. Hãy giải thích tại sao.
+
+Lời giải Bài 4.28:
+• Các bậc cầu thang được lắp đặt song song cách đều theo chiều dọc của dầm xương cá nghiêng. Các mặt phẳng chứa mỗi bậc thang là các mặt phẳng song song với nhau (cùng song song với mặt sàn nhà và mặt trần). Khi cắt bởi bức tường chung, các giao tuyến tạo ra là các đoạn mép bậc thang nằm trên tường và đôi một song song với nhau.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 4.21:** Trong không gian cho ba mặt phẳng phân biệt $(P), (Q), (R)$. Những mệnh đề nào sau đây là đúng?
+a) Nếu $(P)$ chứa một đường thẳng song song với $(Q)$ thì $(P) \parallel (Q)$.
+b) Nếu $(P)$ chứa hai đường thẳng song song với $(Q)$ thì $(P) \parallel (Q)$.
+c) Nếu $(P)$ và $(Q)$ song song với $(R)$ thì $(P) \parallel (Q)$.
+d) Nếu $(P)$ và $(Q)$ cắt $(R)$ thì $(P) \parallel (Q)$.
+
+Lời giải Bài 4.21:
+• Mệnh đề c) đúng (tính chất bắc cầu của hai mặt phẳng song song).
+• Mệnh đề a), b), d) đều sai (vì chứa đường thẳng song song chưa đủ điều kiện, hoặc hai mặt phẳng cùng cắt $(R)$ có thể cắt nhau thay vì song song).
+
+**Bài 4.22:** Cho hình lăng trụ tam giác $ABC.A'B'C'$. Gọi $M, N, P$ lần lượt là trung điểm của các cạnh $AA', BB', CC'$. Chứng minh rằng mặt phẳng $(MNP)$ song song với mặt phẳng $(ABC)$.
+
+Lời giải Bài 4.22:
+• $M, N$ là trung điểm của $AA', BB' \Rightarrow MN$ là đường trung bình của hình bình hành $ABB'A' \Rightarrow MN \parallel AB \parallel (ABC)$.
+• Tương tự, $NP \parallel BC \parallel (ABC)$.
+• Mặt phẳng $(MNP)$ chứa hai đường thẳng cắt nhau $MN$ và $NP$ cùng song song với mặt phẳng $(ABC)$. Vậy $(MNP) \parallel (ABC)$.
+
+**Bài 4.23:** Cho hình thang $ABCD$ có hai đáy $AB$ và $CD$. Qua các điểm $A, D$ lần lượt vẽ các đường thẳng $m, n$ song song với nhau và không nằm trong mặt phẳng $(ABCD)$. Chứng minh rằng $\text{mp}(B, m)$ song song với $\text{mp}(C, n)$.
+
+Lời giải Bài 4.23:
+• Ta có $m \parallel n$ và $AB \parallel CD$. Mặt phẳng $\text{mp}(B, m)$ chứa $AB$ và $m$; mặt phẳng $\text{mp}(C, n)$ chứa $CD$ và $n$.
+• Do $AB \parallel CD$ và $m \parallel n$, hai mặt phẳng $\text{mp}(B, m)$ và $\text{mp}(C, n)$ chứa hai cặp đường thẳng cắt nhau đôi một song song, nên chúng song song với nhau.
+
+**Bài 4.25:** Cho hình lăng trụ tứ giác $ABCD.A'B'C'D'$. Một mặt phẳng song song với mặt phẳng $(A'B'C'D')$ cắt các cạnh bên của hình lăng trụ lần lượt tại $A'', B'', C'', D''$. Hình tạo bởi các điểm $A, B, C, D, A'', B'', C'', D''$ là hình gì?
+
+Lời giải Bài 4.25:
+• Mặt phẳng cắt các cạnh bên song song với đáy tạo ra đa giác đáy mới $A''B''C''D''$ bằng và song song với đáy $ABCD$.
+• Hình tạo bởi các đỉnh này chính là một hình lăng trụ tứ giác mới $ABCD.A''B''C''D''$.
+
+**Bài 4.26:** Cho hình lăng trụ tam giác $ABC.A'B'C'$. Gọi $G$ và $G'$ lần lượt là trọng tâm của hai tam giác $ABC$ và $A'B'C'$.
+a) Chứng minh rằng tứ giác $AGG'A'$ là hình bình hành.
+b) Chứng minh rằng $AGC.A'G'C'$ là hình lăng trụ.
+
+Lời giải Bài 4.26:
+• a) Gọi $M, M'$ là trung điểm của $BC, B'C'$. Các đường trung tuyến $AM, A'M'$ cắt $G, G'$.
+  Ta có $AG = \frac{2}{3}AM, A'G' = \frac{2}{3}A'M'$ và $AM \parallel A'M', AM = A'M' \Rightarrow AG \parallel A'G', AG = A'G'$.
+  Do đó tứ giác $AGG'A'$ là hình bình hành.
+• b) Từ $AGG'A'$ là hình bình hành $\Rightarrow GG' \parallel AA' \parallel CC'$ và $GG' = AA' = CC'$.
+  Do đó các mặt bên $AGC.A'G'C'$ thỏa mãn cấu trúc hình lăng trụ tam giác.

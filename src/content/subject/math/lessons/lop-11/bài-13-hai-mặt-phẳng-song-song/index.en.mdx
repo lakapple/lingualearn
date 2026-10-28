@@ -1,0 +1,203 @@
+---
+title: 'Lesson 13: Parallel Planes'
+description: Theoretical system for the lesson on …, with illustrative examples..
+tags:
+  - grade 11
+  - Parallel planes
+  - Thalès' theorem in space (intercept theorem)
+  - Prism
+  - parallelepiped
+  - Bases
+  - lateral faces
+  - lateral edges
+  - diagonals of a parallelepiped
+grade: 11
+order: 13
+updatedDate: 2026-10-28T17:21:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Parallel planes ($(P) \parallel (Q)$)
+
+·       Thalès' theorem in space (intercept theorem)
+
+·       Prism, parallelepiped
+
+·       Bases, lateral faces, lateral edges, diagonals of a parallelepiped
+
+### **Knowledge and Skills:**
+
+·       Recognize and explain the conditions under which two planes are parallel in space.
+
+·       Master fundamental properties of parallel planes and Thalès' theorem in three-dimensional space.
+
+·       Explain and identify geometric characteristics of prisms and parallelepipeds.
+
+·       Apply spatial geometric knowledge to solve practical problems (uniform food slicing, staircases, terraced rice fields, water level ratios in tanks, fishbone staircase structures).
+
+## Parallel Planes and Existence Conditions
+
+<Youtube url="https://www.youtube.com/watch?v=example_hai_mat_phang_song_song"/>
+
+### a) Concept of Parallel Planes
+
+Definition:
+Two planes $(\alpha)$ and $(\beta)$ are called parallel if they have no common points, denoted by $(\alpha) \parallel (\beta)$ or $(\beta) \parallel (\alpha)$.
+• Remark: If two planes $(\alpha)$ and $(\beta)$ are parallel, then every straight line lying in $(\alpha)$ is parallel to $(\beta)$.
+
+### b) Conditions for Two Planes to be Parallel
+
+Theorem (Criterion for Plane-Plane Parallelism):
+If a plane $(\alpha)$ contains two intersecting lines both of which are parallel to another plane $(\beta)$, then $(\alpha)$ is parallel to $(\beta)$:
+$$\begin{cases} a \subset (\alpha), \\, b \subset (\alpha) \\\ a \cap b = \\{M\\} \\\ a \parallel (\beta), \\, b \parallel (\beta) \end{cases} \Rightarrow (\alpha) \parallel (\beta)$$
+
+Corollaries and Properties:
+• Through a point not lying on a given plane, there passes one and only one plane parallel to that plane.
+• If two distinct planes are each parallel to a third plane, then they are parallel to each other.
+
+**Example 1:** Given two non-coplanar parallelograms $ABCD$ and $ABEF$. Prove that plane $(BCE)$ is parallel to plane $(ADF)$.
+
+Solution for Example 1:
+• Since $ABCD$ is a parallelogram, $BC \parallel AD$, which implies $BC \parallel \text{plane}(ADF)$.
+• Since $ABEF$ is a parallelogram, $BE \parallel AF$, which implies $BE \parallel \text{plane}(ADF)$.
+• Plane $(BCE)$ contains two intersecting lines $BC$ and $BE$ that are both parallel to plane $(ADF)$. Therefore, $(BCE) \parallel (ADF)$.
+
+**Luyện tập 1:** Given four non-coplanar points $A, B, C, D$. Through point $A$, draw two lines $m$ and $n$ parallel to lines $BC$ and $BD$, respectively. Prove that $\text{plane}(m, n)$ is parallel to plane $(BCD)$.
+
+Solution for Practice 1:
+• We have $m \parallel BC$ where $BC \subset (BCD)$ and $m \not\subset (BCD) \Rightarrow m \parallel (BCD)$.
+• Similarly, $n \parallel BD$ where $BD \subset (BCD)$ and $n \not\subset (BCD) \Rightarrow n \parallel (BCD)$.
+• Plane $\text{plane}(m, n)$ contains two intersecting lines $m$ and $n$ both parallel to plane $(BCD)$. Thus, $\text{plane}(m, n) \parallel (BCD)$.
+
+## Properties of Parallel Planes and Thalès' Theorem
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_mp_song_song"/>
+
+### a) Fundamental Properties of Parallel Planes
+
+Parallel Intersection Theorem:
+Let $(P)$ and $(Q)$ be two parallel planes. If a plane $(R)$ intersects $(P)$ along a line $a$, then $(R)$ also intersects $(Q)$ along a line $b$, and the two intersection lines $a$ and $b$ are parallel:
+$$\begin{cases} (P) \parallel (Q) \\\ a = (R) \cap (P) \\\ b = (R) \cap (Q) \end{cases} \Rightarrow a \parallel b$$
+
+**Example 2:** Given a pyramid $S.ABCD$. Let $M, N, P, Q$ be the midpoints of $SA, SB, SC, SD$, respectively. Prove that planes $(MNP)$ and $(NPQ)$ are both parallel to plane $(ABCD)$, and deduce that the four points $M, N, P, Q$ are coplanar.
+
+Solution for Example 2:
+• $M, N$ are midpoints of $SA, SB \Rightarrow MN$ is the midline of $\triangle SAB \Rightarrow MN \parallel AB \parallel (ABCD)$.
+• Similarly, $NP \parallel BC \parallel (ABCD)$. Plane $(MNP)$ contains two intersecting lines $MN$ and $NP$ parallel to $(ABCD)$, so $(MNP) \parallel (ABCD)$.
+• By analogous reasoning, $(NPQ) \parallel (ABCD)$. Planes $(MNP)$ and $(NPQ)$ share point $N$ and are both parallel to $(ABCD)$, hence they must coincide. Consequently, the four points $M, N, P, Q$ are coplanar.
+
+**Practice 2:** Given a pyramid $S.ABCD$. Let $M, N, P, Q$ be points on edges $SA, SB, SC, SD$ such that $\frac{MA}{MS} = \frac{NB}{NS} = \frac{PC}{PS} = \frac{QD}{QS} = \frac{1}{2}$. Prove that the four points $M, N, P, Q$ are coplanar.
+
+Solution for Practice 2:
+• By the converse of Thalès' theorem in triangles, the ratio $\frac{MA}{MS} = \frac{NB}{NS} = \frac{1}{2}$ implies $MN \parallel AB$. Since $AB \subset (ABCD)$, we have $MN \parallel (ABCD)$.
+• Similarly, $NP \parallel BC \parallel (ABCD) \Rightarrow (MNP) \parallel (ABCD)$.
+• Applying the same reasoning to $(NPQ)$, we get $(NPQ) \parallel (ABCD)$. Two distinct planes sharing a common point $N$ and parallel to the same plane must coincide. Thus, the four points $M, N, P, Q$ are coplanar.
+
+### b) Thalès' Theorem in Space
+
+Thalès' Theorem in Three-Dimensional Space:
+Three mutually parallel planes intercept proportional segments on any two distinct secant lines:
+$$\frac{AB}{A'B'} = \frac{BC}{B'C'} = \frac{AC}{A'C'}$$
+
+**Example 4:** Given a tetrahedron $SABC$. On edge $SA$, choose points $A_1, A_2$ such that $A_2A_1 = 2A_1A$. Let $(P)$ and $(Q)$ be two planes parallel to plane $(ABC)$ passing through $A_1$ and $A_2$, respectively. Plane $(P)$ cuts edges $SB, SC$ at $B_1, C_1$, and plane $(Q)$ cuts edges $SB, SC$ at $B_2, C_2$. Prove that $B_2B_1 = 2B_1B$ and $C_2C_1 = 2C_1C$.
+
+Solution for Example 4:
+• Applying Thalès' theorem for the three mutually parallel planes $(P), (Q), (ABC)$ and secant lines $SA, SB$:
+$$\frac{A_2A_1}{A_1A} = \frac{B_2B_1}{B_1B} = 2 \Rightarrow B_2B_1 = 2B_1B$$
+• Symmetrically for secant lines $SA, SC$, we obtain $C_2C_1 = 2C_1C$.
+
+## Prisms and Parallelepipeds
+
+<Youtube url="https://www.youtube.com/watch?v=example_hinh_lang_tru_va_hinh_hop"/>
+
+### a) Definitions of Prisms and Parallelepipeds
+
+Prism:
+• Given two parallel planes $(\alpha)$ and $(\alpha')$. In $(\alpha)$, consider a convex polygon $A_1A_2\dots A_n$. Through its vertices, draw mutually parallel lines intersecting $(\alpha')$ at $A_1', A_2', \dots, A_n'$.
+• The polyhedron bounded by the two base polygons $A_1A_2\dots A_n, A_1'A_2'\dots A_n'$ and the parallelogram lateral faces $A_1A_1'A_2'A_2, \dots$ is called a prism, denoted by $A_1A_2\dots A_n.A_1'A_2'\dots A_n'$.
+
+Parallelepiped:
+• A quadrangular prism whose bases are parallelograms is called a parallelepiped ($ABCD.A'B'C'D'$).
+• Opposite vertices, diagonals, and opposite faces of a parallelepiped possess characteristic properties (diagonals concurrent at their common midpoint, opposite faces parallel).
+
+### b) Illustrative Examples and Practice on Parallelepipeds
+
+**Example 5:** Given a triangular prism $ABC.A'B'C'$. A plane parallel to the base of the prism cuts its lateral edges at $A'', B'', C''$. Prove that $ABC.A''B''C''$ is a prism.
+
+Solution for Example 5:
+• Since the lateral edges of prism $ABC.A'B'C'$ are mutually parallel, $AA'', BB'', CC'\\$$ are mutually parallel. Plane $(ABC)$ is parallel to plane $(A''B''C'')$, which ensures that $ABC.A''B''C''$ satisfies the definition of a prism.
+
+**Example 6:** Given a parallelepiped $ABCD.A'B'C'D'$. Prove that its four diagonals $AC', BD', CA', DB'$ are concurrent at their common midpoint.
+
+Solution for Example 6:
+• Base $ABCD$ of the parallelepiped is a parallelogram, so $AD \parallel BC$ and $AD = BC$. Lateral face $BCC'B'$ is a parallelogram, so $BC \parallel B'C'$ and $BC = B'C'$.
+• Hence, $AD \parallel B'C'$ and $AD = B'C'$, which implies quadrilateral $ADC'B'$ is a parallelogram. Consequently, diagonals $AC'$ and $DB'$ bisect each other at their midpoint. Similarly, $AC'$ and $CA'$, as well as $AC'$ and $DB'$, bisect each other.
+• Therefore, all four diagonals of the parallelepiped are concurrent at their shared midpoint.
+
+**Luyện tập 6:** Given a parallelepiped $ABCD.A'B'C'D'$. Prove that planes $(ADD'A')$ and $(BCC'B')$ are parallel.
+
+Solution for Practice 6:
+• We have $AA' \parallel BB'$ and $AD \parallel BC$ (since lateral faces and bases are parallelograms).
+• Plane $(ADD'A')$ contains two intersecting lines $AA'$ and $AD$ both parallel to plane $(BCC'B')$. Thus, $(ADD'A') \parallel (BCC'B')$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application 1 (Smart Folding Table Legs):** A table features legs composed of two rectangular metal frames rotating about an axis. When the tabletop is placed upon the leg assembly, the tabletop remains parallel to the floor. Explain why.
+
+Solution for Application:
+• The joints and metal frames are symmetrically designed to form a linked system of parallel planes. When fully extended, the supporting plane of the leg assembly forms a fixed plane parallel to the floor, ensuring that any tabletop placed upon it remains strictly parallel to the ground.
+
+**Exercise 4.28 (Fishbone Staircase Structure):** A fishbone staircase has the outer edges of each stair tread mounted on the wall running parallel to one another. Explain why.
+
+Solution for Exercise 4.28:
+• The individual stair treads are installed parallel and equidistant along the inclined central stringer beam. The planes containing each stair tread are mutually parallel (and parallel to the floor and ceiling). When intersected by a common wall plane, the resulting intersection traces form step edges along the wall that are mutually parallel.
+
+### b) Detailed Section Exercises
+
+**Exercise 4.21:** In space, given three distinct planes $(P), (Q), (R)$. Which of the following propositions are true?
+a) If $(P)$ contains a line parallel to $(Q)$, then $(P) \parallel (Q)$.
+b) If $(P)$ contains two lines parallel to $(Q)$, then $(P) \parallel (Q)$.
+c) If $(P)$ and $(Q)$ are both parallel to $(R)$, then $(P) \parallel (Q)$.
+d) If $(P)$ and $(Q)$ both intersect $(R)$, then $(P) \parallel (Q)$.
+
+Solution for Exercise 4.21:
+• Proposition c) is true (transitive property of parallel planes).
+• Propositions a), b), and d) are all false (containing a parallel line or intersecting the same third plane is insufficient to guarantee mutual plane parallelism; intersecting planes can meet at an angle).
+
+**Exercise 4.22:** Given a triangular prism $ABC.A'B'C'$. Let $M, N, P$ be the midpoints of edges $AA', BB', CC'$, respectively. Prove that plane $(MNP)$ is parallel to plane $(ABC)$.
+
+Solution for Exercise 4.22:
+• $M, N$ are midpoints of $AA', BB' \Rightarrow MN$ is the midline of parallelogram $ABB'A' \Rightarrow MN \parallel AB \parallel (ABC)$.
+• Similarly, $NP \parallel BC \parallel (ABC)$.
+• Plane $(MNP)$ contains two intersecting lines $MN$ and $NP$ both parallel to plane $(ABC)$. Thus, $(MNP) \parallel (ABC)$.
+
+**Exercise 4.23:** Given a trapezoid $ABCD$ with bases $AB$ and $CD$. Through points $A$ and $D$, draw lines $m$ and $n$ respectively that are parallel to each other and do not lie in plane $(ABCD)$. Prove that $\text{plane}(B, m)$ is parallel to $\text{plane}(C, n)$.
+
+Solution for Exercise 4.23:
+• We have $m \parallel n$ and $AB \parallel CD$. Plane $\text{plane}(B, m)$ contains $AB$ and $m$; plane $\text{plane}(C, n)$ contains $CD$ and $n$.
+• Because $AB \parallel CD$ and $m \parallel n$, planes $\text{plane}(B, m)$ and $\text{plane}(C, n)$ contain two pairs of intersecting lines that are mutually parallel, proving that the two planes are parallel.
+
+**Exercise 4.25:** Given a quadrangular prism $ABCD.A'B'C'D'$. A plane parallel to plane $(A'B'C'D')$ cuts the lateral edges at $A'', B'', C'', D''$. What kind of solid is formed by $A, B, C, D, A'', B'', C'', D''$?
+
+Solution for Exercise 4.25:
+• A plane cutting the lateral edges parallel to the base forms a new base polygon $A''B''C''D''$ congruent and parallel to base $ABCD$.
+• The solid formed by these vertices is a new quadrangular prism $ABCD.A''B''C''D''$.
+
+**Exercise 4.26:** Given a triangular prism $ABC.A'B'C'$. Let $G$ and $G'$ be the centroids of triangles $ABC$ and $A'B'C'$, respectively.
+a) Prove that quadrilateral $AGG'A'$ is a parallelogram.
+b) Prove that $AGC.A'G'C'$ is a prism.
+
+Solution for Exercise 4.26:
+• a) Let $M, M'$ be the midpoints of $BC$ and $B'C'$. Medians $AM$ and $A'M'$ pass through $G$ and $G'$.
+  We have $AG = \frac{2}{3}AM, A'G' = \frac{2}{3}A'M'$ and $AM \parallel A'M', AM = A'M' \Rightarrow AG \parallel A'G', AG = A'G'$.
+  Therefore, quadrilateral $AGG'A'$ is a parallelogram.
+• b) Since $AGG'A'$ is a parallelogram, $GG' \parallel AA' \parallel CC'$ and $GG' = AA' = CC'$.
+  Thus, the lateral faces of $AGC.A'G'C'$ satisfy the structural definition of a triangular prism.
