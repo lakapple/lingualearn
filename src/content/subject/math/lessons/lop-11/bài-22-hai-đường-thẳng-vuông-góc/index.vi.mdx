@@ -1,0 +1,130 @@
+---
+title: 'Bài 22: Hai đường thẳng vuông góc.'
+description: Hệ thống lý thuyết bài hai đường thẳng vuông góc cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Góc giữa hai đường thẳng
+  - Hai đường thẳng vuông góc
+grade: 11
+order: 22
+updatedDate: 2026-10-28T22:37:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Góc giữa hai đường thẳng
+
+·       Hai đường thẳng vuông góc
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết góc giữa hai đường thẳng trong không gian.
+
+·       Nhận biết hai đường thẳng vuông góc trong không gian.
+
+·       Chứng minh hai đường thẳng vuông góc trong một số tình huống đơn giản (dùng vectơ, tính chất hình học, quan hệ song song).
+
+·       Vận dụng kiến thức về quan hệ vuông góc giữa hai đường thẳng để mô tả và giải quyết một số hình ảnh thực tế (nút giao thông khác mức, kiến trúc nhà gỗ truyền thống).
+
+## Góc giữa hai đường thẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_duong_thang"/>
+
+### a) Định nghĩa góc giữa hai đường thẳng
+
+Định nghĩa: Góc giữa hai đường thẳng $m$ và $n$ trong không gian, kí hiệu $(m, n)$, là góc giữa hai đường thẳng $a$ và $b$ cùng đi qua một điểm bất kì và tương ứng song song (hoặc trùng) với $m$ và $n$.
+Chú ý:
+• Để xác định góc giữa hai đường thẳng chéo nhau $a$ và $b$, ta có thể lấy một điểm $O$ thuộc đường thẳng $a$ và qua đó kẻ đường thẳng $b'$ song song với $b$. Khi đó $(a, b) = (a, b')$.
+• Với hai đường thẳng bất kì $a$ và $b$, ta luôn có: $0^{\circ} \le (a, b) \le 90^{\circ}$.
+
+### b) Ví dụ và luyện tập về góc giữa hai đường thẳng
+
+**Ví dụ 1:** Cho hình hộp $ABCD.A'B'C'D'$ có các mặt là các hình vuông. Tính các góc:
+a) $(AA', CD)$;
+b) $(A'C', BD)$;
+c) $(AC, DC')$.
+
+Lời giải Ví dụ 1:
+• a) Vì $CD \parallel AB$ nên $(AA', CD) = (AA', AB) = 90^{\circ}$ (vì các mặt là hình vuông).
+• b) Tứ giác $ACC'A'$ có các cặp cạnh đối song song và bằng nhau nên là hình bình hành, suy ra $A'C' \parallel AC$.
+  Do đó $(A'C', BD) = (AC, BD) = 90^{\circ}$ (hai đường chéo của hình vuông $ABCD$ vuông góc với nhau).
+• c) Ta có $DC' \parallel AB'$. Do đó $(AC, DC') = (AC, AB')$.
+  Tam giác $AB'C$ có ba cạnh là các đường chéo của các mặt hình vuông nên bằng nhau, suy ra tam giác $AB'C$ đều.
+  Vậy $(AC, DC') = 60^{\circ}$.
+
+**Vận dụng (Kim tự tháp Kheops):** Kim tự tháp Kheops ở Ai Cập có dạng hình chóp đều với đáy là hình vuông cạnh khoảng $230\text{ m}$, các cạnh bên bằng nhau và dài khoảng $219\text{ m}$. Tính (gần đúng) góc tạo bởi cạnh bên $SC$ và cạnh đáy $AB$.
+
+Lời giải Vận dụng:
+• Vì $AB \parallel CD$, góc giữa $SC$ và $AB$ chính là góc giữa $SC$ và $CD$, tức là góc $\widehat{SCD}$ (hoặc góc bù với nó).
+• Xét tam giác $SCD$: Các cạnh $SD = 219\text{ m}$ (cạnh bên), $SC = 219\text{ m}$ (cạnh bên), và $CD = 230\text{ m}$ (cạnh đáy).
+• Áp dụng định lí côsin trong tam giác $SCD$:
+  $$\cos \widehat{SCD} = \frac{SC^2 + CD^2 - SD^2}{2 \cdot SC \cdot CD} = \frac{219^2 + 230^2 - 219^2}{2 \cdot 219 \cdot 230} = \frac{230^2}{2 \cdot 219 \cdot 230} = \frac{230}{438} \approx 0{,}5251$$
+• Suy ra $\widehat{SCD} \approx 58{,}3^{\circ}$. Vậy góc giữa $SC$ và $AB$ khoảng $58{,}3^{\circ}$.
+
+## Hai đường thẳng vuông góc
+
+### a) Định nghĩa hai đường thẳng vuông góc
+
+Định nghĩa: Hai đường thẳng $a$ và $b$ trong không gian được gọi là vuông góc với nhau, kí hiệu là $a \perp b$, nếu góc giữa chúng bằng $90^{\circ}$.
+Tính chất: Nếu đường thẳng $a$ vuông góc với đường thẳng $b$ thì $a$ cũng vuông góc với bất kì đường thẳng nào song song (hoặc trùng) với $b$.
+
+### b) Ví dụ và luyện tập về hai đường thẳng vuông góc
+
+**Ví dụ 2:** Cho hình hộp $ABCD.A'B'C'D'$.
+a) Xác định vị trí tương đối của hai đường thẳng $AC$ và $B'D'$.
+b) Chứng minh rằng $AC$ và $B'D'$ vuông góc với nhau khi và chỉ khi $ABCD$ là một hình thoi.
+
+Lời giải Ví dụ 2:
+• a) Hai đường thẳng $AC$ và $B'D'$ lần lượt nằm trong hai mặt phẳng song song $(ABCD)$ và $(A'B'C'D')$ nên chúng không đồng phẳng, suy ra $AC$ và $B'D'$ chéo nhau.
+• b) Tứ giác $BDD'B'$ là hình bình hành nên $B'D' \parallel BD$.
+  Do đó góc giữa $AC$ và $B'D'$ bằng góc giữa $AC$ và $BD$.
+  Vậy $AC \perp B'D' \iff AC \perp BD \iff ABCD$ là hình thoi (vì tứ giác $ABCD$ là hình bình hành có hai đường chéo vuông góc).
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Bài toán thực tế (Cửa ra vào):** Đối với hai cánh cửa mở quay, giả sử mép cửa $BC$ và $MN$. Hãy xác định góc giữa hai đường mép cửa này khi cửa mở.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 7.1:** Cho hình lăng trụ $ABC.A'B'C'$ có các đáy là các tam giác đều. Tính góc $(AB, B'C')$.
+
+Lời giải Bài 7.1:
+• Vì $BC \parallel B'C'$ nên góc giữa $AB$ và $B'C'$ chính là góc giữa $AB$ và $BC$, tức là góc $\widehat{ABC}$ (hoặc góc bù với nó).
+• Do tam giác $ABC$ là tam giác đều nên $\widehat{ABC} = 60^{\circ}$.
+• Vậy $(AB, B'C') = 60^{\circ}$.
+
+**Bài 7.2:** Cho hình hộp $ABCD.A'B'C'D'$ có các cạnh bằng nhau (hình thoi hoặc hình lập phương suy rộng). Chứng minh rằng tứ diện $ACB'D'$ có các cặp cạnh đối diện vuông góc với nhau.
+
+Lời giải Bài 7.2:
+• Xét tứ diện $ACB'D'$ có các cặp cạnh đối: $(AC, B'D')$, $(AB', C'D)$, $(AD', CB')$.
+• Do các mặt của hình hộp là hình thoi (hoặc hình bình hành có cạnh bằng nhau), ta sử dụng tính chất vectơ hoặc tính chất hình học không gian để chứng minh các cặp vectơ chỉ phương của các cặp cạnh đối vuông góc với nhau (tích vô hướng bằng 0).
+• Chẳng hạn, xét cặp cạnh $AC$ và $B'D'$: vì $B'D' \parallel BD$ và $AC \perp BD$ (do các mặt đáy là hình thoi/hình vuông các cạnh bằng nhau), suy ra $AC \perp B'D'$. Tương tự cho các cặp cạnh đối còn lại.
+
+**Bài 7.3:** Cho tứ diện $ABCD$ có $\widehat{CBD} = 90^{\circ}$.
+a) Gọi $M, N$ tương ứng là trung điểm của $AB, AD$. Chứng minh rằng $MN \perp BC$.
+b) Gọi $G, K$ tương ứng là trọng tâm của các tam giác $ABC, ACD$. Chứng minh rằng $GK \perp BC$.
+
+Lời giải Bài 7.3:
+• a) Trong tam giác $ABD$, $M$ và $N$ lần lượt là trung điểm của $AB$ và $AD$, nên $MN$ là đường trung bình của tam giác $ABD$. Suy ra $MN \parallel BD$.
+  Mặt khác, theo giả thiết $\widehat{CBD} = 90^{\circ}$ nên $BD \perp BC$.
+  Vì $MN \parallel BD$ và $BD \perp BC$, suy ra $MN \perp BC$.
+• b) Trong tam giác $ABC$, $G$ là trọng tâm, kéo dài $AG$ cắt $BC$ tại trung điểm $E$ của $BC$. Trong tam giác $ADC$, $K$ là trọng tâm, kéo dài $AK$ cắt $DC$ tại trung điểm giả sử tương ứng...
+  Theo tính chất trọng tâm: $\frac{AG}{AE} = \frac{AK}{AF} = \frac{2}{3}$ (với $F$ là trung điểm $CD$).
+  Suy ra $GK \parallel EF$ (trong tam giác $AEF$). Mà $EF \parallel BD$ (đường trung bình tam giác $BCD$).
+  Do đó $GK \parallel BD$. Vì $BD \perp BC$ nên $GK \perp BC$.
+
+**Bài 7.4 (Cấu kiện nhà gỗ truyền thống):** Đối với nhà gỗ truyền thống, trong các cấu kiện: hoành, quá giang, xà cái, rui, cột tương ứng được đánh số 1, 2, 3, 4, 5 như trong Hình 7.8, những cặp cấu kiện nào vuông góc với nhau?
+
+Lời giải Bài 7.4:
+• Cột (5) đặt thẳng đứng (vuông góc với mặt đất/mặt phẳng nằm ngang).
+• Quá giang (2), xà cái (3), hoành (1) và rui (4) nằm trên mái hoặc kết cấu khung ngang/dọc nhà.
+• Các cặp cấu kiện vuông góc tiêu biểu trong kiến trúc nhà gỗ cổ truyền:
+  - Cột (5) vuông góc với quá giang (2) và xà cái (3) (cột dựng thẳng đứng vuông góc với các xà ngang);
+  - Hoành (1) vuông góc với rui (4) (hoành chạy theo chiều dài nhà, rui gác vuông góc lên hoành theo chiều dốc mái).

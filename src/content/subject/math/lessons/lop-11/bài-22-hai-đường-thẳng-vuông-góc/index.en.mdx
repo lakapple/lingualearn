@@ -1,0 +1,130 @@
+---
+title: 'Lesson 22: Perpendicular Lines.'
+description: 'Theoretical system for the lesson on Lesson 22: Perpendicular Lines with illustrative examples'
+tags:
+  - grade 11
+  - Angle between two lines
+  - Perpendicular lines
+grade: 11
+order: 22
+updatedDate: 2026-10-28T22:37:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Angle between two lines
+
+·       Perpendicular lines
+
+### **Knowledge and Skills:**
+
+·       Recognize the angle between two lines in space.
+
+·       Recognize perpendicular lines in space.
+
+·       Prove that two lines are perpendicular in simple situations (using vectors, geometric properties, parallel relations).
+
+·       Apply the knowledge of perpendicularity between two lines to describe and solve real-world problems (multi-level interchanges, traditional wooden house architecture).
+
+## Angle Between Two Lines
+
+<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_duong_thang"/>
+
+### a) Definition of the Angle Between Two Lines
+
+Definition: The angle between two lines $m$ and $n$ in space, denoted by $(m, n)$, is the angle between two lines $a$ and $b$ passing through an arbitrary point and respectively parallel (or coinciding) to $m$ and $n$.
+Note:
+• To determine the angle between two skew lines $a$ and $b$, we can choose a point $O$ on line $a$ and draw a line $b'$ through $O$ parallel to $b$. Then $(a, b) = (a, b')$.
+• For any two lines $a$ and $b$, we always have: $0^{\circ} \le (a, b) \le 90^{\circ}$.
+
+### b) Examples and Practice on the Angle Between Two Lines
+
+**Example 1:** Given a rectangular prism (or cuboid) $ABCD.A'B'C'D'$ with square faces. Calculate the angles:
+a) $(AA', CD)$;
+b) $(A'C', BD)$;
+c) $(AC, DC')$.
+
+Solution to Example 1:
+• a) Since $CD \parallel AB$, we have $(AA', CD) = (AA', AB) = 90^{\circ}$ (since the faces are squares).
+• b) The quadrilateral $ACC'A'$ has opposite sides parallel and equal, so it is a parallelogram, which implies $A'C' \parallel AC$.
+  Therefore, $(A'C', BD) = (AC, BD) = 90^{\circ}$ (the diagonals of square $ABCD$ are perpendicular to each other).
+• c) We have $DC' \parallel AB'$. Thus, $(AC, DC') = (AC, AB')$.
+  Triangle $AB'C$ has three sides that are diagonals of square faces of equal length, so it is an equilateral triangle.
+  Hence, $(AC, DC') = 60^{\circ}$.
+
+**Application (Great Pyramid of Giza / Kheops Pyramid):** The Great Pyramid of Giza in Egypt is a regular pyramid with a square base of side length approximately $230\text{ m}$, and lateral edges of equal length approximately $219\text{ m}$. Calculate (approximately) the angle formed by the lateral edge $SC$ and the base edge $AB$.
+
+Solution to Application:
+• Since $AB \parallel CD$, the angle between $SC$ and $AB$ is equal to the angle between $SC$ and $CD$, which is $\widehat{SCD}$ (or its supplement).
+• Consider triangle $SCD$: The sides are $SD = 219\text{ m}$ (lateral edge), $SC = 219\text{ m}$ (lateral edge), and $CD = 230\text{ m}$ (base edge).
+• Applying the Law of Cosines in triangle $SCD$:
+  $$\cos \widehat{SCD} = \frac{SC^2 + CD^2 - SD^2}{2 \cdot SC \cdot CD} = \frac{219^2 + 230^2 - 219^2}{2 \cdot 219 \cdot 230} = \frac{230^2}{2 \cdot 219 \cdot 230} = \frac{230}{438} \approx 0{,}5251$$
+• Thus, $\widehat{SCD} \approx 58{,}3^{\circ}$. Therefore, the angle between $SC$ and $AB$ is approximately $58{,}3^{\circ}$.
+
+## Perpendicular Lines
+
+### a) Definition of Perpendicular Lines
+
+Definition: Two lines $a$ and $b$ in space are said to be perpendicular to each other, denoted by $a \perp b$, if the angle between them is $90^{\circ}$.
+Property: If a line $a$ is perpendicular to a line $b$, then $a$ is also perpendicular to any line parallel (or coinciding) to $b$.
+
+### b) Examples and Practice on Perpendicular Lines
+
+**Example 2:** Given a parallelepiped $ABCD.A'B'C'D'$.
+a) Determine the relative position of the two lines $AC$ and $B'D'$.
+b) Prove that $AC$ and $B'D'$ are perpendicular if and only if $ABCD$ is a rhombus.
+
+Solution to Example 2:
+• a) The two lines $AC$ and $B'D'$ lie in parallel planes $(ABCD)$ and $(A'B'C'D')$ respectively, so they are non-coplanar; thus, $AC$ and $B'D'$ are skew lines.
+• b) The quadrilateral $BDD'B'$ is a parallelogram, so $B'D' \parallel BD$.
+  Therefore, the angle between $AC$ and $B'D'$ equals the angle between $AC$ and $BD$.
+  Thus, $AC \perp B'D' \iff AC \perp BD \iff ABCD$ is a rhombus (since $ABCD$ is a parallelogram with perpendicular diagonals).
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Practical Problem (Swinging Doors):** For two swinging doors, let their door edges be $BC$ and $MN$. Determine the angle between these two door edges when the doors are open.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 7.1:** Given a prism $ABC.A'B'C'$ whose bases are equilateral triangles. Calculate the angle $(AB, B'C')$.
+
+Solution to Exercise 7.1:
+• Since $BC \parallel B'C'$, the angle between $AB$ and $B'C'$ is the angle between $AB$ and $BC$, which is $\widehat{ABC}$ (or its supplement).
+• Since triangle $ABC$ is equilateral, $\widehat{ABC} = 60^{\circ}$.
+• Therefore, $(AB, B'C') = 60^{\circ}$.
+
+**Exercise 7.2:** Given a parallelepiped $ABCD.A'B'C'D'$ with all edges equal. Prove that the tetrahedron $ACB'D'$ has opposite pairs of edges that are mutually perpendicular.
+
+Solution to Exercise 7.2:
+• Consider the tetrahedron $ACB'D'$ with opposite pairs of edges: $(AC, B'D')$, $(AB', C'D)$, $(AD', CB')$.
+• Since the faces of the parallelepiped are rhombuses (or parallelepipods with equal edges), we can use vector properties or spatial geometry to show that the directional vectors of opposite edges are orthogonal (their dot product is zero).
+• For example, consider the pair $AC$ and $B'D'$: since $B'D' \parallel BD$ and $AC \perp BD$ (because the base is a rhombus with perpendicular diagonals), it follows that $AC \perp B'D'$. Similarly for the other pairs of opposite edges.
+
+**Exercise 7.3:** Given a tetrahedron $ABCD$ such that $\widehat{CBD} = 90^{\circ}$.
+a) Let $M$ and $N$ be the midpoints of $AB$ and $AD$ respectively. Prove that $MN \perp BC$.
+b) Let $G$ and $K$ be the centroids of triangles $ABC$ and $ACD$ respectively. Prove that $GK \perp BC$.
+
+Lời giải Bài 7.3 (Translation to English Solution):
+• a) In triangle $ABD$, $M$ and $N$ are the midpoints of $AB$ and $AD$ respectively, so $MN$ is the midsegment of triangle $ABD$. Thus, $MN \parallel BD$.
+  On the other hand, by hypothesis $\widehat{CBD} = 90^{\circ}$, so $BD \perp BC$.
+  Since $MN \parallel BD$ and $BD \perp BC$, it follows that $MN \perp BC$.
+• b) In triangle $ABC$, $G$ is the centroid; extending $AG$ intersects $BC$ at the midpoint $E$ of $BC$. In triangle $ADC$, $K$ is the centroid; extending $AK$ intersects $DC$ at the midpoint $F$ of $DC$.
+  By the centroid property: $\frac{AG}{AE} = \frac{AK}{AF} = \frac{2}{3}$.
+  This implies $GK \parallel EF$ in triangle $AEF$. Furthermore, $EF \parallel BD$ (since $EF$ is the midsegment of triangle $BCD$).
+  Therefore, $GK \parallel BD$. Since $BD \perp BC$, we have $GK \perp BC$.
+
+**Exercise 7.4 (Traditional Wooden House Structural Components):** In traditional wooden architecture, among the components: purlin (hoành), cross-beam (quá giang), main tie-beam (xà cái), rafter (rui), and column (cột) labeled 1, 2, 3, 4, 5 respectively as shown in Figure 7.8, which pairs of components are perpendicular to each other?
+
+Solution to Exercise 7.4:
+• The column (5) is erected vertically (perpendicular to the ground/horizontal plane).
+• The cross-beam (2), main tie-beam (3), purlin (1), and rafter (4) lie on the roof or horizontal/vertical frame structures.
+• Typical perpendicular pairs in traditional wooden architecture:
+  - Column (5) is perpendicular to the cross-beam (2) and the main tie-beam (3) (vertical columns are perpendicular to horizontal beams);
+  - Purlin (1) is perpendicular to rafter (4) (purlins run along the length of the house, while rafters rest perpendicularly across the purlins along the roof slope).
