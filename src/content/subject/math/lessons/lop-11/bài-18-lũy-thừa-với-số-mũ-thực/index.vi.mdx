@@ -1,0 +1,235 @@
+---
+title: 'Bài 18: Lũy thừa với số mũ thực.'
+description: Hệ thống lý thuyết bài lũy thừa với số mũ thực cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Cơ số
+  - số mũ
+  - Căn bậc n
+  - Luỹ thừa với số mũ nguyên
+  - Luỹ thừa với số mũ hữu tỉ
+  - Luỹ thừa với số mũ thực
+grade: 11
+order: 18
+updatedDate: 2026-10-28T19:24:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Cơ số, số mũ
+
+·       Căn bậc n
+
+·       Luỹ thừa với số mũ nguyên
+
+·       Luỹ thừa với số mũ hữu tỉ
+
+·       Luỹ thừa với số mũ thực
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết khái niệm luỹ thừa với số mũ nguyên của một số thực khác 0; luỹ thừa với số mũ hữu tỉ và luỹ thừa với số mũ thực của một số thực dương.
+
+·       Giải thích và vận dụng các tính chất của luỹ thừa với số mũ nguyên, số mũ hữu tỉ và số mũ thực.
+
+·       Sử dụng tính chất của phép tính luỹ thừa trong tính toán các biểu thức số và rút gọn các biểu thức chứa biến.
+
+·       Tính giá trị biểu thức số có chứa phép tính luỹ thừa bằng cách sử dụng máy tính cầm tay.
+
+·       Giải quyết một số vấn đề có liên quan đến môn học khác hoặc thực tiễn gắn với phép tính luỹ thừa (lãi kép, tăng trưởng dân số).
+
+## Luỹ thừa với số mũ nguyên
+
+<Youtube url="https://www.youtube.com/watch?v=example_luy_thua_so_mu_nguyen"/>
+
+### a) Định nghĩa và tính chất
+
+Cho $n$ là một số nguyên dương:
+• Với $a$ là số thực tuỳ ý: $a^n = \underbrace{a \cdot a \cdot \dots \cdot a}\_{n \text{ thừa số}}$.
+• Với $a$ là số thực khác 0: $a^0 = 1$; $a^{-n} = \frac{1}{a^n}$.
+Trong biểu thức $a^m$, $a$ gọi là cơ số, $m$ gọi là số mũ.
+Chú ý: $0^0$ và $0^{-n}$ ($n \in \mathbb{N}^\*$) không có nghĩa.
+Tính chất: Với $a \ne 0, b \ne 0$ và $m, n \in \mathbb{Z}$, ta có:
+• $a^m \cdot a^n = a^{m+n}$;
+• $\frac{a^m}{a^n} = a^{m-n}$;
+• $(a^m)^n = a^{mn}$;
+• $(ab)^m = a^m b^m$;
+• $\left(\frac{a}{b}\right)^m = \frac{a^m}{b^m}$.
+So sánh luỹ thừa:
+• Nếu $a > 1$ thì $a^m > a^n \iff m > n$.
+• Nếu $0 < a < 1$ thì $a^m > a^n \iff m < n$.
+
+### b) Ví dụ và luyện tập về luỹ thừa với số mũ nguyên
+
+**Ví dụ 1:** Tính giá trị của biểu thức: $A = \left(\frac{1}{2}\right)^{-8} \cdot 8^{-2} + (0{,}2)^{-4} \cdot 25^{-2}$.
+
+Lời giải Ví dụ 1:
+• Ta có:
+  $$A = 2^8 \cdot \frac{1}{8^2} + \frac{1}{0{,}2^4} \cdot \frac{1}{25^2} = 2^8 \cdot \frac{1}{2^6} + \frac{1}{0{,}2^4 \cdot 5^4} = 2^2 + \frac{1}{(0{,}2 \cdot 5)^4} = 4 + 1 = 5.$$
+
+**Luyện tập 1:** Một số dương $x$ được gọi là viết dưới dạng kí hiệu khoa học nếu $x = a \cdot 10^m$, ở đó $1 \le a < 10$ và $m \in \mathbb{Z}$. Viết các số liệu sau dưới dạng kí hiệu khoa học:
+a) Khối lượng Trái Đất khoảng $5\\,980\\,000\\,000\\,000\\,000\\,000\\,000\\,000\text{ kg}$;
+b) Khối lượng hạt proton khoảng $0{,}000\\,000\\,000\\,000\\,000\\,000\\,000\\,000\\,001\\,672\\,62\text{ kg}$.
+
+Lời giải Luyện tập 1:
+• a) Khối lượng Trái Đất: $5{,}98 \cdot 10^{24}\text{ kg}$.
+• b) Khối lượng hạt proton: $1{,}67262 \cdot 10^{-27}\text{ kg}$.
+
+## Luỹ thừa với số mũ hữu tỉ
+
+<Youtube url="https://www.youtube.com/watch?v=example_luy_thua_so_mu_huu_ti"/>
+
+### a) Khái niệm căn bậc n
+
+Cho số thực $a$ và số nguyên dương $n$. Số $b$ được gọi là căn bậc $n$ của số $a$ nếu $b^n = a$.
+• Khi $n$ lẻ: Mỗi số thực $a$ có đúng một căn bậc $n$, kí hiệu là $\sqrt[n]{a}$.
+• Khi $n$ chẵn: Mỗi số thực dương $a$ có đúng hai căn bậc $n$ là hai số đối nhau, giá trị dương kí hiệu là $\sqrt[n]{a}$ (gọi là căn số học bậc $n$), giá trị âm kí hiệu là $-\sqrt[n]{a}$. Số âm không có căn bậc chẵn. $\sqrt[n]{0} = 0$.
+Tính chất của căn bậc $n$ ($a, b > 0$):
+• $\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{ab}$;
+• $\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$;
+• $(\sqrt[n]{a})^m = \sqrt[n]{a^m}$;
+• $\sqrt[n]{\sqrt[k]{a}} = \sqrt[nk]{a}$;
+• $\sqrt[n]{a^n} = a$ khi $n$ lẻ và $\sqrt[n]{a^n} = |a|$ khi $n$ chẵn.
+
+### b) Định nghĩa luỹ thừa với số mũ hữu tỉ
+
+Cho số thực $a > 0$ và số hữu tỉ $r = \frac{m}{n}$, trong đó $m \in \mathbb{Z}, n \in \mathbb{N}^\*$. Luỹ thừa của $a$ với số mũ $r$ được xác định bởi:
+$$a^r = a^{\frac{m}{n}} = \sqrt[n]{a^m}$$
+Chú ý: Luỹ thừa với số mũ hữu tỉ của số thực dương có đầy đủ các tính chất như luỹ thừa với số mũ nguyên.
+
+**Ví dụ 4:** Tính: a) $16^{\frac{3}{2}}$; b) $8^{-\frac{2}{3}}$.
+
+Lời giải Ví dụ 4:
+• a) $16^{\frac{3}{2}} = \sqrt{16^3} = \sqrt{(4^2)^3} = \sqrt{(4^3)^2} = 4^3 = 64$.
+• b) $8^{-\frac{2}{3}} = \sqrt[3]{8^{-2}} = \sqrt[3]{(2^3)^{-2}} = 2^{-2} = \frac{1}{4}$.
+
+**Luyện tập 4:** Rút gọn biểu thức: $A = \frac{x^{\frac{3}{2}}y + xy^{\frac{3}{2}}}{\sqrt{x} + \sqrt{y}} \quad (x, y > 0)$.
+
+Lời giải Luyện tập 4:
+• Ta có $x^{\frac{3}{2}} = x\sqrt{x}$ và $y^{\frac{3}{2}} = y\sqrt{y}$.
+• Do đó:
+  $$A = \frac{xy\sqrt{x} + xy\sqrt{y}}{\sqrt{x} + \sqrt{y}} = \frac{xy(\sqrt{x} + \sqrt{y})}{\sqrt{x} + \sqrt{y}} = xy.$$
+
+## Luỹ thừa với số mũ thực
+
+<Youtube url="https://www.youtube.com/watch?v=example_luy_thua_so_mu_thuc"/>
+
+### a) Khái niệm và tính chất
+
+Cho $a$ là số thực dương và $\alpha$ là một số vô tỉ. Xét dãy số hữu tỉ $(r_n)$ mà $\lim\_{n \to +\infty} r_n = \alpha$. Khi đó dãy số $(a^{r_n})$ có giới hạn xác định, không phụ thuộc vào dãy $(r_n)$ đã chọn. Giới hạn đó gọi là luỹ thừa của $a$ với số mũ $\alpha$:
+$$a^\alpha = \lim\_{n \to +\infty} a^{r_n}$$
+Chú ý: Luỹ thừa với số mũ thực của số dương có đầy đủ các tính chất như luỹ thừa với số mũ nguyên.
+
+### b) Ví dụ và luyện tập về luỹ thừa với số mũ thực
+
+**Ví dụ 5:** Rút gọn biểu thức: $A = \frac{a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}}}{(a^{\sqrt{3} - 1})^{\sqrt{3} + 1}} \quad (a > 0)$.
+
+Lời giải Ví dụ 5:
+• Tử số: $a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}} = a^{\sqrt{5} - 1 + 3 - \sqrt{5}} = a^2$.
+• Mẫu số: $(a^{\sqrt{3} - 1})^{\sqrt{3} + 1} = a^{(\sqrt{3} - 1)(\sqrt{3} + 1)} = a^{3 - 1} = a^2$.
+• Do đó: $A = \frac{a^2}{a^2} = 1$.
+
+**Ví dụ 6:** Không dùng máy tính cầm tay, hãy so sánh $8^{\sqrt{3}}$ và $4^{2\sqrt{3}}$.
+
+Lời giải Ví dụ 6:
+• Đưa về cùng cơ số 2: $8^{\sqrt{3}} = (2^3)^{\sqrt{3}} = 2^{3\sqrt{3}}$ và $4^{2\sqrt{3}} = (2^2)^{2\sqrt{3}} = 2^{4\sqrt{3}}$.
+• Vì $3\sqrt{3} < 4\sqrt{3}$ và cơ số $2 > 1$ nên $2^{3\sqrt{3}} < 2^{4\sqrt{3}}$.
+• Vậy $8^{\sqrt{3}} < 4^{2\sqrt{3}}$.
+
+**Luyện tập 5:** Rút gọn biểu thức: $A = \frac{(a^{\sqrt{2} + 1})^{1 - \sqrt{2}}}{a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}}} \quad (a > 0)$.
+
+Lời giải Luyện tập 5:
+• Tử số: $(a^{\sqrt{2} + 1})^{1 - \sqrt{2}} = a^{(1 + \sqrt{2})(1 - \sqrt{2})} = a^{1 - 2} = a^{-1}$.
+• Mẫu số: $a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}} = a^{\sqrt{5} - 1 + 3 - \sqrt{5}} = a^2$.
+• Do đó: $A = \frac{a^{-1}}{a^2} = a^{-1 - 2} = a^{-3} = \frac{1}{a^3}$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 1 (Công thức lãi kép):** Nếu gửi số tiền $P$ với lãi suất $r$ mỗi kì thì sau $N$ kì, tổng số tiền thu được (cả gốc lẫn lãi) là $A = P(1 + r)^N$. Bác Minh gửi tiết kiệm số tiền 100 triệu đồng kì hạn 12 tháng với lãi suất 6%/năm. Giả sử lãi suất không đổi, tính số tiền thu được sau 3 năm.
+
+Lời giải Vận dụng 1:
+• Số tiền gốc $P = 100$ triệu đồng, lãi suất $r = 6\\% = 0{,}06$/kì hạn (1 năm), số kì gửi $N = 3$.
+• Số tiền thu được sau 3 năm là:
+  $$A = 100 \cdot (1 + 0{,}06)^3 = 100 \cdot (1{,}06)^3 = 119{,}1016\text{ (triệu đồng).}$$
+• Kết luận: Bác Minh thu được khoảng $119\\,101\\,600$ đồng sau 3 năm.
+
+**Vận dụng 2 (Tăng trưởng dân số):** Năm 2021, dân số của một quốc gia khoảng 19 triệu người và ước tính tăng gấp đôi sau 30 năm nữa. Dân số $A$ (triệu người) sau $t$ năm kể từ năm 2021 được ước tính bởi $A = 19 \cdot 2^{\frac{t}{30}}$. Hỏi sau 20 năm nữa dân số quốc gia này là bao nhiêu (làm tròn đến hàng triệu)?
+
+Lời giải Vận dụng 2:
+• Thay $t = 20$ vào công thức:
+  $$A = 19 \cdot 2^{\frac{20}{30}} = 19 \cdot 2^{\frac{2}{3}} = 19 \cdot \sqrt[3]{2^2} = 19 \cdot \sqrt[3]{4} \approx 19 \cdot 1{,}5874 \approx 30{,}16\text{ (triệu người).}$$
+• Kết luận: Sau 20 năm nữa, dân số quốc gia đó khoảng 30 triệu người.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.1:** Tính:
+a) $\left(\frac{1}{5}\right)^{-2}$;
+b) $4^{\frac{3}{2}}$;
+c) $\left(\frac{1}{8}\right)^{-\frac{2}{3}}$;
+d) $\left(\frac{1}{16}\right)^{-0{,}75}$.
+
+Lời giải Bài 6.1:
+• a) $\left(\frac{1}{5}\right)^{-2} = 5^2 = 25$.
+• b) $4^{\frac{3}{2}} = (2^2)^{\frac{3}{2}} = 2^3 = 8$.
+• c) $\left(\frac{1}{8}\right)^{-\frac{2}{3}} = (8^{-1})^{-\frac{2}{3}} = 8^{\frac{2}{3}} = (2^3)^{\frac{2}{3}} = 2^2 = 4$.
+• d) $\left(\frac{1}{16}\right)^{-0{,}75} = (16^{-1})^{-\frac{3}{4}} = 16^{\frac{3}{4}} = (2^4)^{\frac{3}{4}} = 2^3 = 8$.
+
+**Bài 6.2:** Thực hiện phép tính:
+a) $27^{\frac{2}{3}} + 81^{-0{,}75} - 25^{0{,}5}$;
+b) $4^{2 - 3\sqrt{7}} \cdot 8^{2\sqrt{7}}$.
+
+Lời giải Bài 6.2:
+• a) $27^{\frac{2}{3}} = (3^3)^{\frac{2}{3}} = 3^2 = 9$; $81^{-0{,}75} = (3^4)^{-\frac{3}{4}} = 3^{-3} = \frac{1}{27}$; $25^{0{,}5} = (5^2)^{\frac{1}{2}} = 5$.
+  Vậy: $9 + \frac{1}{27} - 5 = 4 + \frac{1}{27} = \frac{109}{27}$.
+• b) $4^{2 - 3\sqrt{7}} \cdot 8^{2\sqrt{7}} = (2^2)^{2 - 3\sqrt{7}} \cdot (2^3)^{2\sqrt{7}} = 2^{4 - 6\sqrt{7}} \cdot 2^{6\sqrt{7}} = 2^{4 - 6\sqrt{7} + 6\sqrt{7}} = 2^4 = 16$.
+
+**Bài 6.3:** Rút gọn các biểu thức sau:
+a) $A = \frac{x^5 y^{-2}}{x^3 y} \quad (x, y \ne 0)$;
+b) $B = \frac{x^2 y^{-3}}{(x^{-1} y^4)^{-3}} \quad (x, y \ne 0)$.
+
+Lời giải Bài 6.3:
+• a) $A = x^{5-3} \cdot y^{-2-1} = x^2 y^{-3} = \frac{x^2}{y^3}$.
+• b) Mẫu số: $(x^{-1} y^4)^{-3} = x^3 y^{-12}$. Do đó $B = \frac{x^2 y^{-3}}{x^3 y^{-12}} = x^{2-3} y^{-3 - (-12)} = x^{-1} y^9 = \frac{y^9}{x}$.
+
+**Bài 6.4:** Cho $x, y > 0$. Rút gọn các biểu thức sau:
+a) $A = \frac{x^3 \sqrt{y} + y^3 \sqrt{x}}{\sqrt[6]{x} + \sqrt[6]{y}}$ (với số mũ phân số);
+b) $B = \left(\frac{x^{\sqrt{3}}}{y^{\sqrt{3} - 1}}\right)^{\sqrt{3} + 1} \cdot \frac{x^{-\sqrt{3} - 1}}{y^{-2}}$.
+
+Lời giải Bài 6.4:
+• a) Biến đổi dưới dạng luỹ thừa hữu tỉ:
+  $$A = \frac{x^{\frac{1}{3}} y^{\frac{1}{2}} + y^{\frac{1}{3}} x^{\frac{1}{2}}}{x^{\frac{1}{6}} + y^{\frac{1}{6}}} = \frac{x^{\frac{1}{3}} y^{\frac{1}{3}} (x^{\frac{1}{6}} + y^{\frac{1}{6}})}{x^{\frac{1}{6}} + y^{\frac{1}{6}}} = x^{\frac{1}{3}} y^{\frac{1}{3}} = \sqrt[3]{xy}.$$
+• b) Khai triển số mũ:
+  $$B = \frac{x^{\sqrt{3}(\sqrt{3} + 1)}}{y^{(\sqrt{3} - 1)(\sqrt{3} + 1)}} \cdot \frac{x^{-\sqrt{3} - 1}}{y^{-2}} = \frac{x^{3 + \sqrt{3}}}{y^{3 - 1}} \cdot \frac{x^{-\sqrt{3} - 1}}{y^{-2}} = \frac{x^{3 + \sqrt{3} - \sqrt{3} - 1}}{y^2 \cdot y^{-2}} = \frac{x^2}{y^0} = x^2.$$
+
+**Bài 6.5:** Chứng minh rằng $\sqrt{4 + 2\sqrt{3}} - \sqrt{4 - 2\sqrt{3}} = 2$.
+
+Lời giải Bài 6.5:
+• Ta có $4 \pm 2\sqrt{3} = (\sqrt{3} \pm 1)^2$.
+• Do đó:
+  $$\sqrt{4 + 2\sqrt{3}} - \sqrt{4 - 2\sqrt{3}} = \sqrt{(\sqrt{3} + 1)^2} - \sqrt{(\sqrt{3} - 1)^2} = (\sqrt{3} + 1) - (\sqrt{3} - 1) = 2\text{ (đpcm)}.$$
+
+**Bài 6.6:** Không dùng máy tính cầm tay, hãy so sánh:
+a) $5^{6\sqrt{3}}$ và $5^{3\sqrt{6}}$;
+b) $\left(\frac{1}{2}\right)^{-\frac{4}{3}}$ và $\sqrt{2} \cdot 2^{\frac{2}{3}}$.
+
+Lời giải Bài 6.6:
+• a) So sánh số mũ: $6\sqrt{3} = \sqrt{36 \cdot 3} = \sqrt{108}$ và $3\sqrt{6} = \sqrt{9 \cdot 6} = \sqrt{54}$. Vì $108 > 54 \Rightarrow 6\sqrt{3} > 3\sqrt{6}$. Do cơ số $5 > 1$ nên $5^{6\sqrt{3}} > 5^{3\sqrt{6}}$.
+• b) $\left(\frac{1}{2}\right)^{-\frac{4}{3}} = (2^{-1})^{-\frac{4}{3}} = 2^{\frac{4}{3}}$.
+  Vế kia: $\sqrt{2} \cdot 2^{\frac{2}{3}} = 2^{\frac{1}{2}} \cdot 2^{\frac{2}{3}} = 2^{\frac{1}{2} + \frac{2}{3}} = 2^{\frac{7}{6}}$.
+  So sánh số mũ: $\frac{4}{3} = \frac{8}{6} > \frac{7}{6}$, do cơ số $2 > 1$ nên $2^{\frac{4}{3}} > 2^{\frac{7}{6}}$, tức là $\left(\frac{1}{2}\right)^{-\frac{4}{3}} > \sqrt{2} \cdot 2^{\frac{2}{3}}$.
+
+**Bài 6.7:** Khoản tiền gốc $P$ gửi ngân hàng với lãi suất năm $r$, tính lãi $n$ lần/năm thì tổng số tiền sau $N$ kì gửi là $A = P\left(1 + \frac{r}{n}\right)^N$. Bác An gửi tiết kiệm 120 triệu đồng kì hạn 6 tháng với lãi suất 5%/năm. Tính số tiền thu được sau 2 năm.
+
+Lời giải Bài 6.7:
+• Số tiền gốc $P = 120$ triệu đồng, lãi suất $r = 0{,}05$. Kì hạn 6 tháng nên $n = 2$ lần/năm.
+• Sau 2 năm, số kì gửi là $N = 2 \times 2 = 4$ kì.
+• Tổng số tiền thu được là:
+  $$A = 120 \cdot \left(1 + \frac{0{,}05}{2}\right)^4 = 120 \cdot (1{,}025)^4 \approx 120 \cdot 1{,}103813 \approx 132{,}458\text{ (triệu đồng).}$$
+• Kết luận: Bác An thu được khoảng $132\\,458\\,000$ đồng sau 2 năm.

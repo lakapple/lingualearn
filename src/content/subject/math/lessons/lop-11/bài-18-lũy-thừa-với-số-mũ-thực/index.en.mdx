@@ -1,0 +1,235 @@
+---
+title: 'Lesson 18: Powers with real exponents.'
+description: Theoretical system for the lesson on Powers with real exponents with illustrative examples.
+tags:
+  - grade 11
+  - Base
+  - exponent
+  - n-th root
+  - Powers with integer exponents
+  - Powers with rational exponents
+  - Powers with real exponents
+grade: 11
+order: 18
+updatedDate: 2026-10-28T19:24:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Base, exponent
+
+·       n-th root
+
+·       Powers with integer exponents
+
+·       Powers with rational exponents
+
+·       Powers with real exponents
+
+### **Knowledge and Skills:**
+
+·       Understand the concepts of powers with integer exponents of a non-zero real number; powers with rational exponents and real exponents of a positive real number.
+
+·       Explain and apply the properties of powers with integer, rational, and real exponents.
+
+·       Apply the properties of exponentiation to evaluate numerical expressions and simplify variable expressions.
+
+·       Evaluate numerical expressions containing powers using a scientific calculator.
+
+·       Solve real-world and cross-disciplinary problems related to exponentiation (compound interest, population growth).
+
+## Powers with Integer Exponents
+
+<Youtube url="https://www.youtube.com/watch?v=example_luy_thua_so_mu_nguyen"/>
+
+### a) Definition and Properties
+
+Let $n$ be a positive integer:
+• For any real number $a$: $a^n = \underbrace{a \cdot a \cdot \dots \cdot a}\_{n \text{ factors}}$.
+• For any non-zero real number $a$: $a^0 = 1$; $a^{-n} = \frac{1}{a^n}$.
+In the expression $a^m$, $a$ is called the base and $m$ is called the exponent.
+Note: $0^0$ and $0^{-n}$ ($n \in \mathbb{N}^\*$) are undefined.
+Properties: For $a \ne 0, b \ne 0$ and $m, n \in \mathbb{Z}$, we have:
+• $a^m \cdot a^n = a^{m+n}$;
+• $\frac{a^m}{a^n} = a^{m-n}$;
+• $(a^m)^n = a^{mn}$;
+• $(ab)^m = a^m b^m$;
+• $\left(\frac{a}{b}\right)^m = \frac{a^m}{b^m}$.
+Comparing powers:
+• If $a > 1$, then $a^m > a^n \iff m > n$.
+• If $0 < a < 1$, then $a^m > a^n \iff m < n$.
+
+### b) Examples and Practice on Integer Exponents
+
+**Example 1:** Evaluate the expression: $A = \left(\frac{1}{2}\right)^{-8} \cdot 8^{-2} + (0{,}2)^{-4} \cdot 25^{-2}$.
+
+Solution to Example 1:
+• We have:
+  $$A = 2^8 \cdot \frac{1}{8^2} + \frac{1}{0{,}2^4} \cdot \frac{1}{25^2} = 2^8 \cdot \frac{1}{2^6} + \frac{1}{0{,}2^4 \cdot 5^4} = 2^2 + \frac{1}{(0{,}2 \cdot 5)^4} = 4 + 1 = 5.$$
+
+**Practice 1:** A positive number $x$ is written in scientific notation if $x = a \cdot 10^m$, where $1 \le a < 10$ and $m \in \mathbb{Z}$. Write the following data in scientific notation:
+a) The mass of the Earth is approximately $5\\,980\\,000\\,000\\,000\\,000\\,000\\,000\\,000\text{ kg}$;
+b) The mass of a proton is approximately $0{,}000\\,000\\,000\\,000\\,000\\,000\\,000\\,000\\,001\\,672\\,62\text{ kg}$.
+
+Solution to Practice 1:
+• a) Mass of the Earth: $5{,}98 \cdot 10^{24}\text{ kg}$.
+• b) Mass of a proton: $1{,}67262 \cdot 10^{-27}\text{ kg}$.
+
+## Powers with Rational Exponents
+
+<Youtube url="https://www.youtube.com/watch?v=example_luy_thua_so_mu_huu_ti"/>
+
+### a) Concept of the n-th Root
+
+Let $a$ be a real number and $n$ be a positive integer. A number $b$ is called an $n$-th root of $a$ if $b^n = a$.
+• When $n$ is odd: Every real number $a$ has a unique $n$-th root, denoted by $\sqrt[n]{a}$.
+• When $n$ is even: Every positive real number $a$ has exactly two $n$-th roots that are opposites of each other; the positive value is denoted by $\sqrt[n]{a}$ (called the principal $n$-th root), and the negative value is denoted by $-\sqrt[n]{a}$. Negative numbers have no even roots in $\mathbb{R}$. $\sqrt[n]{0} = 0$.
+Properties of roots ($a, b > 0$):
+• $\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{ab}$;
+• $\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$;
+• $(\sqrt[n]{a})^m = \sqrt[n]{a^m}$;
+• $\sqrt[n]{\sqrt[k]{a}} = \sqrt[nk]{a}$;
+• $\sqrt[n]{a^n} = a$ if $n$ is odd, and $\sqrt[n]{a^n} = |a|$ if $n$ is even.
+
+### b) Definition of Powers with Rational Exponents
+
+Let $a > 0$ be a real number and $r = \frac{m}{n}$ be a rational number, where $m \in \mathbb{Z}, n \in \mathbb{N}^\*$. The power of $a$ with exponent $r$ is defined by:
+$$a^r = a^{\frac{m}{n}} = \sqrt[n]{a^m}$$
+Note: Powers with rational exponents of positive real numbers satisfy all properties of powers with integer exponents.
+
+**Example 4:** Evaluate: a) $16^{\frac{3}{2}}$; b) $8^{-\frac{2}{3}}$.
+
+Solution to Example 4:
+• a) $16^{\frac{3}{2}} = \sqrt{16^3} = \sqrt{(4^2)^3} = \sqrt{(4^3)^2} = 4^3 = 64$.
+• b) $8^{-\frac{2}{3}} = \sqrt[3]{8^{-2}} = \sqrt[3]{(2^3)^{-2}} = 2^{-2} = \frac{1}{4}$.
+
+**Practice 4:** Simplify the expression: $A = \frac{x^{\frac{3}{2}}y + xy^{\frac{3}{2}}}{\sqrt{x} + \sqrt{y}} \quad (x, y > 0)$.
+
+Solution to Practice 4:
+• We have $x^{\frac{3}{2}} = x\sqrt{x}$ and $y^{\frac{3}{2}} = y\sqrt{y}$.
+• Thus:
+  $$A = \frac{xy\sqrt{x} + xy\sqrt{y}}{\sqrt{x} + \sqrt{y}} = \frac{xy(\sqrt{x} + \sqrt{y})}{\sqrt{x} + \sqrt{y}} = xy.$$
+
+## Powers with Real Exponents
+
+<Youtube url="https://www.youtube.com/watch?v=example_luy_thua_so_mu_thuc"/>
+
+### a) Concept and Properties
+
+Let $a$ be a positive real number and $\alpha$ be an irrational number. Consider a sequence of rational numbers $(r_n)$ such that $\lim\_{n \to +\infty} r_n = \alpha$. Then the sequence $(a^{r_n})$ has a finite limit that is independent of the choice of the sequence $(r_n)$. That limit is defined as the power of $a$ with exponent $\alpha$:
+$$a^\alpha = \lim\_{n \to +\infty} a^{r_n}$$
+Note: Powers with real exponents of positive real numbers satisfy all properties of powers with integer exponents.
+
+### b) Examples and Practice on Real Exponents
+
+**Example 5:** Simplify the expression: $A = \frac{a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}}}{(a^{\sqrt{3} - 1})^{\sqrt{3} + 1}} \quad (a > 0)$.
+
+Solution to Example 5:
+• Numerator: $a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}} = a^{\sqrt{5} - 1 + 3 - \sqrt{5}} = a^2$.
+• Denominator: $(a^{\sqrt{3} - 1})^{\sqrt{3} + 1} = a^{(\sqrt{3} - 1)(\sqrt{3} + 1)} = a^{3 - 1} = a^2$.
+• Therefore: $A = \frac{a^2}{a^2} = 1$.
+
+**Example 6:** Without using a calculator, compare $8^{\sqrt{3}}$ and $4^{2\sqrt{3}}$.
+
+Solution to Example 6:
+• Express both numbers with base 2: $8^{\sqrt{3}} = (2^3)^{\sqrt{3}} = 2^{3\sqrt{3}}$ and $4^{2\sqrt{3}} = (2^2)^{2\sqrt{3}} = 2^{4\sqrt{3}}$.
+• Since $3\sqrt{3} < 4\sqrt{3}$ and base $2 > 1$, we have $2^{3\sqrt{3}} < 2^{4\sqrt{3}}$.
+• Thus, $8^{\sqrt{3}} < 4^{2\sqrt{3}}$.
+
+**Practice 5:** Simplify the expression: $A = \frac{(a^{\sqrt{2} + 1})^{1 - \sqrt{2}}}{a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}}} \quad (a > 0)$.
+
+Solution to Practice 5:
+• Numerator: $(a^{\sqrt{2} + 1})^{1 - \sqrt{2}} = a^{(1 + \sqrt{2})(1 - \sqrt{2})} = a^{1 - 2} = a^{-1}$.
+• Denominator: $a^{\sqrt{5} - 1} \cdot a^{3 - \sqrt{5}} = a^{\sqrt{5} - 1 + 3 - \sqrt{5}} = a^2$.
+• Therefore: $A = \frac{a^{-1}}{a^2} = a^{-1 - 2} = a^{-3} = \frac{1}{a^3}$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Mathematical Modeling
+
+**Application 1 (Compound Interest Formula):** If an initial principal $P$ is invested at an interest rate $r$ per compounding period, then after $N$ periods, the compound amount is given by $A = P(1 + r)^N$. Mr. Minh deposits 100 million VND in a 12-month term account at an annual interest rate of 6%. Assuming the interest rate remains constant, calculate the total amount accumulated after 3 years.
+
+Solution to Application 1:
+• Principal $P = 100$ million VND, interest rate $r = 6\\% = 0{,}06$ per period (1 year), number of compounding periods $N = 3$.
+• The total amount accumulated after 3 years is:
+  $$A = 100 \cdot (1 + 0{,}06)^3 = 100 \cdot (1{,}06)^3 = 119{,}1016\text{ (million VND).}$$
+• Conclusion: Mr. Minh receives approximately $119\\,101\\,600$ VND after 3 years.
+
+**Application 2 (Population Growth):** In 2021, the population of an Asian country was approximately 19 million people, with an estimated doubling time of 30 years. The population $A$ (in millions) after $t$ years from 2021 is modeled by $A = 19 \cdot 2^{\frac{t}{30}}$. What will the population be after 20 years (rounded to the nearest million)?
+
+Solution to Application 2:
+• Substitute $t = 20$ into the formula:
+  $$A = 19 \cdot 2^{\frac{20}{30}} = 19 \cdot 2^{\frac{2}{3}} = 19 \cdot \sqrt[3]{2^2} = 19 \cdot \sqrt[3]{4} \approx 19 \cdot 1{,}5874 \approx 30{,}16\text{ (million people).}$$
+• Conclusion: After 20 years, the population will be approximately 30 million people.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 6.1:** Evaluate:
+a) $\left(\frac{1}{5}\right)^{-2}$;
+b) $4^{\frac{3}{2}}$;
+c) $\left(\frac{1}{8}\right)^{-\frac{2}{3}}$;
+d) $\left(\frac{1}{16}\right)^{-0{,}75}$.
+
+Solution to Exercise 6.1:
+• a) $\left(\frac{1}{5}\right)^{-2} = 5^2 = 25$.
+• b) $4^{\frac{3}{2}} = (2^2)^{\frac{3}{2}} = 2^3 = 8$.
+• c) $\left(\frac{1}{8}\right)^{-\frac{2}{3}} = (8^{-1})^{-\frac{2}{3}} = 8^{\frac{2}{3}} = (2^3)^{\frac{2}{3}} = 2^2 = 4$.
+• d) $\left(\frac{1}{16}\right)^{-0{,}75} = (16^{-1})^{-\frac{3}{4}} = 16^{\frac{3}{4}} = (2^4)^{\frac{3}{4}} = 2^3 = 8$.
+
+**Exercise 6.2:** Perform the calculations:
+a) $27^{\frac{2}{3}} + 81^{-0{,}75} - 25^{0{,}5}$;
+b) $4^{2 - 3\sqrt{7}} \cdot 8^{2\sqrt{7}}$.
+
+Solution to Exercise 6.2:
+• a) $27^{\frac{2}{3}} = (3^3)^{\frac{2}{3}} = 3^2 = 9$; $81^{-0{,}75} = (3^4)^{-\frac{3}{4}} = 3^{-3} = \frac{1}{27}$; $25^{0{,}5} = (5^2)^{\frac{1}{2}} = 5$.
+  Hence: $9 + \frac{1}{27} - 5 = 4 + \frac{1}{27} = \frac{109}{27}$.
+• b) $4^{2 - 3\sqrt{7}} \cdot 8^{2\sqrt{7}} = (2^2)^{2 - 3\sqrt{7}} \cdot (2^3)^{2\sqrt{7}} = 2^{4 - 6\sqrt{7}} \cdot 2^{6\sqrt{7}} = 2^{4 - 6\sqrt{7} + 6\sqrt{7}} = 2^4 = 16$.
+
+**Exercise 6.3:** Simplify the following expressions:
+a) $A = \frac{x^5 y^{-2}}{x^3 y} \quad (x, y \ne 0)$;
+b) $B = \frac{x^2 y^{-3}}{(x^{-1} y^4)^{-3}} \quad (x, y \ne 0)$.
+
+Solution to Exercise 6.3:
+• a) $A = x^{5-3} \cdot y^{-2-1} = x^2 y^{-3} = \frac{x^2}{y^3}$.
+• b) Denominator: $(x^{-1} y^4)^{-3} = x^3 y^{-12}$. Thus $B = \frac{x^2 y^{-3}}{x^3 y^{-12}} = x^{2-3} y^{-3 - (-12)} = x^{-1} y^9 = \frac{y^9}{x}$.
+
+**Exercise 6.4:** Given $x, y > 0$. Simplify the following expressions:
+a) $A = \frac{x^3 \sqrt{y} + y^3 \sqrt{x}}{\sqrt[6]{x} + \sqrt[6]{y}}$ (written with fractional exponents);
+b) $B = \left(\frac{x^{\sqrt{3}}}{y^{\sqrt{3} - 1}}\right)^{\sqrt{3} + 1} \cdot \frac{x^{-\sqrt{3} - 1}}{y^{-2}}$.
+
+Solution to Exercise 6.4:
+• a) Expressing as rational exponents:
+  $$A = \frac{x^{\frac{1}{3}} y^{\frac{1}{2}} + y^{\frac{1}{3}} x^{\frac{1}{2}}}{x^{\frac{1}{6}} + y^{\frac{1}{6}}} = \frac{x^{\frac{1}{3}} y^{\frac{1}{3}} (x^{\frac{1}{6}} + y^{\frac{1}{6}})}{x^{\frac{1}{6}} + y^{\frac{1}{6}}} = x^{\frac{1}{3}} y^{\frac{1}{3}} = \sqrt[3]{xy}.$$
+• b) Expanding the exponents:
+  $$B = \frac{x^{\sqrt{3}(\sqrt{3} + 1)}}{y^{(\sqrt{3} - 1)(\sqrt{3} + 1)}} \cdot \frac{x^{-\sqrt{3} - 1}}{y^{-2}} = \frac{x^{3 + \sqrt{3}}}{y^{3 - 1}} \cdot \frac{x^{-\sqrt{3} - 1}}{y^{-2}} = \frac{x^{3 + \sqrt{3} - \sqrt{3} - 1}}{y^2 \cdot y^{-2}} = \frac{x^2}{y^0} = x^2.$$
+
+**Exercise 6.5:** Prove that $\sqrt{4 + 2\sqrt{3}} - \sqrt{4 - 2\sqrt{3}} = 2$.
+
+Solution to Exercise 6.5:
+• We observe that $4 \pm 2\sqrt{3} = (\sqrt{3} \pm 1)^2$.
+• Thus:
+  $$\sqrt{4 + 2\sqrt{3}} - \sqrt{4 - 2\sqrt{3}} = \sqrt{(\sqrt{3} + 1)^2} - \sqrt{(\sqrt{3} - 1)^2} = (\sqrt{3} + 1) - (\sqrt{3} - 1) = 2\text{ (Q.E.D.)}.$$
+
+**Exercise 6.6:** Without using a calculator, compare:
+a) $5^{6\sqrt{3}}$ and $5^{3\sqrt{6}}$;
+b) $\left(\frac{1}{2}\right)^{-\frac{4}{3}}$ and $\sqrt{2} \cdot 2^{\frac{2}{3}}$.
+
+Solution to Exercise 6.6:
+• a) Comparing the exponents: $6\sqrt{3} = \sqrt{36 \cdot 3} = \sqrt{108}$ and $3\sqrt{6} = \sqrt{9 \cdot 6} = \sqrt{54}$. Since $108 > 54 \Rightarrow 6\sqrt{3} > 3\sqrt{6}$. Because base $5 > 1$, we have $5^{6\sqrt{3}} > 5^{3\sqrt{6}}$.
+• b) $\left(\frac{1}{2}\right)^{-\frac{4}{3}} = (2^{-1})^{-\frac{4}{3}} = 2^{\frac{4}{3}}$.
+  On the other hand: $\sqrt{2} \cdot 2^{\frac{2}{3}} = 2^{\frac{1}{2}} \cdot 2^{\frac{2}{3}} = 2^{\frac{1}{2} + \frac{2}{3}} = 2^{\frac{7}{6}}$.
+  Comparing exponents: $\frac{4}{3} = \frac{8}{6} > \frac{7}{6}$; since base $2 > 1$, $2^{\frac{4}{3}} > 2^{\frac{7}{6}}$, meaning $\left(\frac{1}{2}\right)^{-\frac{4}{3}} > \sqrt{2} \cdot 2^{\frac{2}{3}}$.
+
+**Exercise 6.7:** If an initial principal $P$ is deposited at an annual interest rate $r$ compounded $n$ times per year, then the accumulated amount after $N$ compounding periods is $A = P\left(1 + \frac{r}{n}\right)^N$. Mr. An deposits 120 million VND for a 6-month term at an annual rate of 5%. Calculate the total amount accumulated after 2 years.
+
+Solution to Exercise 6.7:
+• Principal $P = 120$ million VND, annual rate $r = 0{,}05$. Compounded semi-annually (every 6 months), so $n = 2$ times per year.
+• After 2 years, the number of periods is $N = 2 \times 2 = 4$ periods.
+• The total amount accumulated is:
+  $$A = 120 \cdot \left(1 + \frac{0{,}05}{2}\right)^4 = 120 \cdot (1{,}025)^4 \approx 120 \cdot 1{,}103813 \approx 132{,}458\text{ (million VND).}$$
+• Conclusion: Mr. An receives approximately $132\\,458\\,000$ VND after 2 years.
