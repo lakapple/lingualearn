@@ -1,0 +1,214 @@
+---
+title: 'Lesson 17: Continuous functions.'
+description: Theoretical system for the lesson on Continuous functions with illustrative examples.
+tags:
+  - grade 11
+  - Intermediate Value Theorem of continuous functions
+  - Continuous function at a point
+  - Continuity of elementary functions
+  - Continuous function on an open interval, on a closed interval, on a half-open interval
+  - discontinuous function
+grade: 11
+order: 17
+updatedDate: 2026-10-28T19:13:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Continuous function at a point, discontinuous function
+
+·       Continuous function on an open interval, on a closed interval, on a half-open interval
+
+·       Continuity of elementary functions
+
+·       Intermediate Value Theorem of continuous functions
+
+### **Knowledge and Skills:**
+
+·       Identify the continuity of a function at a point, or on an interval, or on a segment.
+
+·       Recognize the continuity of the sum, difference, product, and quotient of two continuous functions.
+
+·       Recognize the continuity of basic elementary functions on their domains.
+
+·       Apply the properties of continuous functions to prove the existence of roots of equations and solve real-world problems.
+
+## Continuity of a Function at a Point
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_lien_tuc_tai_mot_diem"/>
+
+### a) Definition of Continuity at a Point
+
+Definition: Let $y = f(x)$ be a function defined on an open interval $(a; b)$ containing $x_0$. The function $f(x)$ is said to be continuous at $x_0$ if:
+$$\lim\_{x \to x_0} f(x) = f(x_0)$$
+A function $f(x)$ that is not continuous at $x_0$ is said to be discontinuous at that point.
+Note: A function $f(x)$ is continuous at $x_0$ if and only if:
+$$\lim\_{x \to x_0^+} f(x) = \lim\_{x \to x_0^-} f(x) = f(x_0)$$
+
+### b) Examples and Practice on Continuity at a Point
+
+**Example 1:** Examine the continuity of the function $f(x) = \frac{x + 1}{x - 1}$ at the point $x_0 = 2$.
+
+Solution to Example 1:
+• The function $f(x)$ is defined on $\mathbb{R} \setminus \\{1\\}$, so $x_0 = 2$ belongs to the domain of the function.
+• We have: $\lim\_{x \to 2} f(x) = \lim\_{x \to 2} \frac{x + 1}{x - 1} = \frac{2 + 1}{2 - 1} = 3 = f(2)$.
+• Thus, the function $f(x)$ is continuous at $x_0 = 2$.
+
+**Example 2:** Examine the continuity of the signum function $s(x) = \begin{cases} 1 & \text{if } x > 0 \\\ 0 & \text{if } x = 0 \\\ -1 & \text{if } x < 0 \end{cases}$ at the point $x_0 = 0$.
+
+Solution to Example 2:
+• We have: $\lim\_{x \to 0^+} s(x) = 1$ and $\lim\_{x \to 0^-} s(x) = -1$.
+• Since $\lim\_{x \to 0^+} s(x) \ne \lim\_{x \to 0^-} s(x)$, the two-sided limit $\lim\_{x \to 0} s(x)$ does not exist.
+• Therefore, the function is discontinuous at $x_0 = 0$.
+
+**Practice 1:** Examine the continuity of the function $f(x) = \begin{cases} -x & \text{if } x < 0 \\\ 0 & \text{if } x = 0 \\\ x^2 & \text{if } x > 0 \end{cases}$ at the point $x_0 = 0$.
+
+Solution to Practice 1:
+• We have: $f(0) = 0$.
+• $\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^+} x^2 = 0$.
+• $\lim\_{x \to 0^-} f(x) = \lim\_{x \to 0^-} (-x) = 0$.
+• Since $\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^-} f(x) = f(0) = 0$, the function is continuous at $x_0 = 0$.
+
+## Continuity of a Function on an Interval
+
+### a) Concepts of Continuity on Open, Closed, and Half-Open Intervals
+
+• A function $y = f(x)$ is said to be continuous on an open interval $(a; b)$ if it is continuous at every point in this interval.
+• A function $y = f(x)$ is said to be continuous on a closed interval $[a; b]$ if it is continuous on $(a; b)$ and:
+$$\lim\_{x \to a^+} f(x) = f(a), \quad \lim\_{x \to b^-} f(x) = f(b)$$
+• The concepts of continuity on half-open intervals such as $(a; b]$, $[a; b)$, $[a; +\infty)$, and $(-\infty; b]$ are defined similarly.
+• Remark: The graph of a continuous function on an interval is an unbroken curve on that interval.
+
+### b) Continuity of Elementary Functions
+
+• Polynomial functions and the trigonometric functions $y = \sin x$, $y = \cos x$ are continuous on $\mathbb{R}$.
+• Rational functions, the square root function $y = \sqrt{x}$, and the trigonometric functions $y = \tan x$, $y = \cot x$ are continuous on each interval of their domains.
+
+**Example 3:** Examine the continuity of the function $f(x) = \begin{cases} x - 1 & \text{if } x \in (0; 1) \\\ 0 & \text{if } x = 1 \end{cases}$ on the half-open interval $(0; 1]$.
+
+Solution to Example 3:
+• For any $x_0 \in (0; 1)$, we have $\lim\_{x \to x_0} f(x) = \lim\_{x \to x_0} (x - 1) = x_0 - 1 = f(x_0)$, so the function is continuous on the open interval $(0; 1)$.
+• At $x = 1$: $\lim\_{x \to 1^-} f(x) = \lim\_{x \to 1^-} (x - 1) = 0 = f(1)$.
+• Thus, the function $f(x)$ is continuous on the half-open interval $(0; 1]$.
+
+**Example 4:** Given the function $f(x) = \frac{x + 1}{x - 1}$. Find the intervals on which $f(x)$ is continuous.
+
+Solution to Example 4:
+• The domain of the function is $D = (-\infty; 1) \cup (1; +\infty)$.
+• Since $f(x)$ is a rational function, it is continuous on each interval of its domain, namely on $(-\infty; 1)$ and $(1; +\infty)$.
+
+**Practice 2:** Find the intervals on which the function $f(x) = \frac{x^2 + 1}{x + 2}$ is continuous.
+
+Solution to Practice 2:
+• The function is defined for $x \ne -2$, so its domain is $D = (-\infty; -2) \cup (-2; +\infty)$.
+• Since $f(x)$ is a rational function, it is continuous on $(-\infty; -2)$ and $(-2; +\infty)$.
+
+## Fundamental Properties of Continuous Functions
+
+### a) Continuity of Algebraic Operations on Functions
+
+Suppose two functions $y = f(x)$ and $y = g(x)$ are continuous at $x_0$. Then:
+• The functions $y = f(x) + g(x)$, $y = f(x) - g(x)$, and $y = f(x)g(x)$ are continuous at $x_0$;
+• The quotient function $y = \frac{f(x)}{g(x)}$ is continuous at $x_0$ if $g(x_0) \ne 0$.
+
+**Example 5:** Examine the continuity of the function $f(x) = \frac{\sin x}{x - 1}$.
+
+Solution to Example 5:
+• The domain of the function is $D = \mathbb{R} \setminus \\{1\\}$.
+• On the intervals $(-\infty; 1)$ and $(1; +\infty)$, the numerator $y = \sin x$ and the denominator $y = x - 1$ are continuous functions, and the denominator is non-zero.
+• Therefore, the function $f(x)$ is continuous on $\mathbb{R} \setminus \\{1\\}$ (that is, continuous on each of the intervals $(-\infty; 1)$ and $(1; +\infty)$).
+
+### b) Intermediate Value Theorem and Root Existence
+
+Theorem: If a function $y = f(x)$ is continuous on a closed interval $[a; b]$ and $f(a)f(b) < 0$, then there exists at least one point $c \in (a; b)$ such that $f(c) = 0$.
+Geometric interpretation: The graph of a continuous function on $[a; b]$ connecting $A(a; f(a))$ and $B(b; f(b))$ with opposite signs must intersect the x-axis at least once within the open interval $(a; b)$.
+
+**Example 6:** Prove that the equation $x^5 + x^3 - 10 = 0$ has at least one root.
+
+Solution to Example 6:
+• Consider the function $f(x) = x^5 + x^3 - 10$ on the closed interval $[0; 2]$.
+• Since $f(x)$ is a polynomial function, it is continuous on $\mathbb{R}$, and hence continuous on $[0; 2]$.
+• We have: $f(0) = -10 < 0$ and $f(2) = 2^5 + 2^3 - 10 = 32 + 8 - 10 = 30 > 0$.
+• Since $f(0) \cdot f(2) = (-10) \cdot 30 = -300 < 0$, by the Intermediate Value Theorem, the equation $f(x) = 0$ has at least one root in $(0; 2)$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Instantaneous Speed of an Automobile):** A driver travels from point A to point B in 3 hours. The distance from A to B is 180 km. Prove that at least once during the journey, the car travels at an instantaneous speed of $60\text{ km/h}$.
+
+Solution to Application:
+• The average speed of the car over the entire journey is: $v\_{\text{avg}} = \frac{s}{t} = \frac{180}{3} = 60\text{ (km/h)}$.
+• Let $v(t)$ be the instantaneous velocity of the car at time $t$ ($0 \le t \le 3$). In physical mechanics, $v(t)$ is a continuous function on $[0; 3]$.
+• Since the average speed is $60\text{ km/h}$, there must exist at least one instant $t_1$ where $v(t_1) \le 60$ and at least one instant $t_2$ where $v(t_2) \ge 60$ (if the speed were strictly greater than 60 or strictly less than 60 at all times, the average speed could not equal 60).
+• Since $v(t)$ is continuous on the interval between $t_1$ and $t_2$, by the Intermediate Value Theorem, there exists at least one instant $t_0 \in [0; 3]$ such that $v(t_0) = 60\text{ km/h}$.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 5.14:** Let $f(x)$ and $g(x)$ be continuous functions at $x = 1$. Given that $f(1) = 2$ and $\lim\_{x \to 1} [2f(x) - g(x)] = 3$. Find $g(1)$.
+
+Solution to Exercise 5.14:
+• Since $f(x)$ and $g(x)$ are continuous at $x = 1$, we have:
+  $$\lim\_{x \to 1} f(x) = f(1) = 2 \quad \text{and} \quad \lim\_{x \to 1} g(x) = g(1)$$
+• Therefore:
+  $$\lim\_{x \to 1} [2f(x) - g(x)] = 2\lim\_{x \to 1} f(x) - \lim\_{x \to 1} g(x) = 2(2) - g(1) = 4 - g(1)$$
+• According to the problem statement: $4 - g(1) = 3 \implies g(1) = 1$.
+
+**Exercise 5.15:** Examine the continuity of the following functions on their domains:
+a) $f(x) = \frac{x}{x^2 + 5x + 6}$;
+b) $f(x) = \begin{cases} 1 + x^2 & \text{if } x < 1 \\\ 4 - x & \text{if } x \ge 1. \end{cases}$
+
+Solution to Exercise 5.15:
+• a) The denominator satisfies $x^2 + 5x + 6 = (x + 2)(x + 3) \ne 0 \Leftrightarrow x \ne -2$ and $x \ne -3$.
+  The domain is $D = (-\infty; -3) \cup (-3; -2) \cup (-2; +\infty)$.
+  Since $f(x)$ is a rational function, it is continuous on each interval of its domain: $(-\infty; -3)$, $(-3; -2)$, and $(-2; +\infty)$.
+• b) Domain $D = \mathbb{R}$.
+  - For $x < 1$: $f(x) = 1 + x^2$ is a polynomial function, hence continuous on $(-\infty; 1)$.
+  - For $x > 1$: $f(x) = 4 - x$ is a polynomial function, hence continuous on $(1; +\infty)$.
+  - At $x = 1$: $f(1) = 4 - 1 = 3$.
+    $$\lim\_{x \to 1^-} f(x) = \lim\_{x \to 1^-} (1 + x^2) = 1 + 1^2 = 2$$
+    $$\lim\_{x \to 1^+} f(x) = \lim\_{x \to 1^+} (4 - x) = 4 - 1 = 3$$
+    Since $\lim\_{x \to 1^-} f(x) = 2 \ne 3 = \lim\_{x \to 1^+} f(x)$, the two-sided limit $\lim\_{x \to 1} f(x)$ does not exist. Thus, the function is discontinuous at $x = 1$.
+  - Conclusion: The function is continuous on $(-\infty; 1)$ and $(1; +\infty)$, and discontinuous at $x = 1$.
+
+**Exercise 5.16:** Find the value of parameter $m$ so that the following function is continuous on $\mathbb{R}$:
+$$f(x) = \begin{cases} \sin x & \text{if } x \ge 0 \\\ -x + m & \text{if } x < 0. \end{cases}$$
+
+Solution to Exercise 5.16:
+• The domain of the function is $D = \mathbb{R}$.
+• For $x > 0$, $f(x) = \sin x$ is a trigonometric function continuous on $(0; +\infty)$.
+• For $x < 0$, $f(x) = -x + m$ is a polynomial function continuous on $(-\infty; 0)$.
+• Therefore, the function is continuous on $\mathbb{R}$ if and only if it is continuous at $x = 0$:
+  - Value at point: $f(0) = \sin 0 = 0$;
+  - Right-hand limit: $\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^+} \sin x = 0$;
+  - Left-hand limit: $\lim\_{x \to 0^-} f(x) = \lim\_{x \to 0^-} (-x + m) = m$.
+• For continuity at $x = 0$:
+  $$\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^-} f(x) = f(0) \iff m = 0.$$
+• Conclusion: The function is continuous on $\mathbb{R}$ when $m = 0$.
+
+**Exercise 5.17:** A taxi fare table is given as follows: Flag drop fare (first $0{,}5\text{ km}$) is $10\\,000$ VND; fare for subsequent kilometers up to $30\text{ km}$ is $13\\,500$ VND/km; fare from the 31st kilometer onwards is $11\\,000$ VND/km.
+a) Write a function formula describing the amount of money a customer has to pay according to distance $x$ ($x > 0$).
+b) Examine the continuity of the function in part a.
+
+Solution to Exercise 5.17:
+• a) Let $T(x)$ be the taxi fare (in VND) for traveling distance $x$ (km) with $x > 0$:
+  - For $0 < x \le 0{,}5$: $T(x) = 10\\,000$;
+  - For $0{,}5 < x \le 30$: $T(x) = 10\\,000 + 13\\,500(x - 0{,}5) = 13\\,500x + 3\\,250$;
+  - For $x > 30$: $T(x) = 10\\,000 + 13\\,500(30 - 0{,}5) + 11\\,000(x - 30) = 11\\,000x + 78\\,250$.
+  The function formula is:
+  $$T(x) = \begin{cases} 10\\,000 & \text{if } 0 < x \le 0{,}5 \\\ 13\\,500x + 3\\,250 & \text{if } 0{,}5 < x \le 30 \\\ 11\\,000x + 78\\,250 & \text{if } x > 30. \end{cases}$$
+• b) Examining continuity of $T(x)$ on $(0; +\infty)$:
+  - On the intervals $(0; 0{,}5)$, $(0{,}5; 30)$, and $(30; +\infty)$, $T(x)$ is either constant or linear, hence continuous.
+  - At $x = 0{,}5$:
+    $T(0{,}5) = 10\\,000$, $\lim\_{x \to 0{,}5^-} T(x) = 10\\,000$, and $\lim\_{x \to 0{,}5^+} T(x) = 13\\,500(0{,}5) + 3\\,250 = 10\\,000$.
+    Since $\lim\_{x \to 0{,}5} T(x) = T(0{,}5) = 10\\,000$, the function is continuous at $x = 0{,}5$.
+  - At $x = 30$:
+    $T(30) = 13\\,500(30) + 3\\,250 = 408\\,250$.
+    $\lim\_{x \to 30^-} T(x) = 408\\,250$, and $\lim\_{x \to 30^+} T(x) = 11\\,000(30) + 78\\,250 = 408\\,250$.
+    Since $\lim\_{x \to 30} T(x) = T(30) = 408\\,250$, the function is continuous at $x = 30$.
+  - Conclusion: The function $T(x)$ is continuous on the entire domain $(0; +\infty)$.

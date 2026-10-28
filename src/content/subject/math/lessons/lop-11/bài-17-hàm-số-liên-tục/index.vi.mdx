@@ -1,0 +1,214 @@
+---
+title: 'Bài 17: Hàm số liên tục.'
+description: Hệ thống lý thuyết bài hàm số liên tục cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Hàm số liên tục tại một điểm
+  - Định lí giá trị trung gian của hàm số liên tục
+  - Tính liên tục của các hàm số sơ cấp cơ bản
+  - Hàm số liên tục trên một khoảng, trên một đoạn, trên nửa khoảng
+  - hàm số gián đoạn
+grade: 11
+order: 17
+updatedDate: 2026-10-28T19:13:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hàm số liên tục tại một điểm, hàm số gián đoạn
+
+·       Hàm số liên tục trên một khoảng, trên một đoạn, trên nửa khoảng
+
+·       Tính liên tục của các hàm số sơ cấp cơ bản
+
+·       Định lí giá trị trung gian của hàm số liên tục
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận dạng hàm số liên tục tại một điểm, hoặc trên một khoảng, trên một đoạn.
+
+·       Nhận dạng tính liên tục của tổng, hiệu, tích, thương của hai hàm số liên tục.
+
+·       Nhận biết tính liên tục của một số hàm sơ cấp cơ bản trên tập xác định của chúng.
+
+·       Vận dụng tính chất của hàm số liên tục để chứng minh phương trình có nghiệm và giải quyết các bài toán thực tiễn.
+
+## Hàm số liên tục tại một điểm
+
+<Youtube url="https://www.youtube.com/watch?v=example_ham_so_lien_tuc_tai_mot_diem"/>
+
+### a) Định nghĩa hàm số liên tục tại một điểm
+
+Định nghĩa: Cho hàm số $y = f(x)$ xác định trên khoảng $(a; b)$ chứa điểm $x_0$. Hàm số $f(x)$ được gọi là liên tục tại điểm $x_0$ nếu:
+$$\lim\_{x \to x_0} f(x) = f(x_0)$$
+Hàm số $f(x)$ không liên tục tại $x_0$ được gọi là gián đoạn tại điểm đó.
+Chú ý: Hàm số $f(x)$ liên tục tại $x_0$ khi và chỉ khi:
+$$\lim\_{x \to x_0^+} f(x) = \lim\_{x \to x_0^-} f(x) = f(x_0)$$
+
+### b) Ví dụ và luyện tập về tính liên tục tại một điểm
+
+**Ví dụ 1:** Xét tính liên tục của hàm số $f(x) = \frac{x + 1}{x - 1}$ tại điểm $x_0 = 2$.
+
+Lời giải Ví dụ 1:
+• Hàm số $f(x)$ xác định trên $\mathbb{R} \setminus \\{1\\}$, do đó $x_0 = 2$ thuộc tập xác định của hàm số.
+• Ta có: $\lim\_{x \to 2} f(x) = \lim\_{x \to 2} \frac{x + 1}{x - 1} = \frac{2 + 1}{2 - 1} = 3 = f(2)$.
+• Vậy hàm số $f(x)$ liên tục tại điểm $x_0 = 2$.
+
+**Ví dụ 2:** Xét tính liên tục của hàm dấu $s(x) = \begin{cases} 1 & \text{nếu } x > 0 \\\ 0 & \text{nếu } x = 0 \\\ -1 & \text{nếu } x < 0 \end{cases}$ tại điểm $x_0 = 0$.
+
+Lời giải Ví dụ 2:
+• Ta có: $\lim\_{x \to 0^+} s(x) = 1$ và $\lim\_{x \to 0^-} s(x) = -1$.
+• Vì $\lim\_{x \to 0^+} s(x) \ne \lim\_{x \to 0^-} s(x)$ nên không tồn tại giới hạn $\lim\_{x \to 0} s(x)$.
+• Do đó, hàm số gián đoạn tại $x_0 = 0$.
+
+**Luyện tập 1:** Xét tính liên tục của hàm số $f(x) = \begin{cases} -x & \text{nếu } x < 0 \\\ 0 & \text{nếu } x = 0 \\\ x^2 & \text{nếu } x > 0 \end{cases}$ tại điểm $x_0 = 0$.
+
+Lời giải Luyện tập 1:
+• Ta có: $f(0) = 0$.
+• $\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^+} x^2 = 0$.
+• $\lim\_{x \to 0^-} f(x) = \lim\_{x \to 0^-} (-x) = 0$.
+• Vì $\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^-} f(x) = f(0) = 0$, nên hàm số liên tục tại điểm $x_0 = 0$.
+
+## Hàm số liên tục trên một khoảng
+
+### a) Khái niệm liên tục trên khoảng, đoạn và nửa khoảng
+
+• Hàm số $y = f(x)$ được gọi là liên tục trên khoảng $(a; b)$ nếu nó liên tục tại mọi điểm thuộc khoảng này.
+• Hàm số $y = f(x)$ được gọi là liên tục trên đoạn $[a; b]$ nếu nó liên tục trên khoảng $(a; b)$ và:
+$$\lim\_{x \to a^+} f(x) = f(a), \quad \lim\_{x \to b^-} f(x) = f(b)$$
+• Các khái niệm hàm số liên tục trên nửa khoảng $(a; b]$, $[a; b)$, $[a; +\infty)$, $(-\infty; b]$ được định nghĩa tương tự.
+• Nhận xét: Đồ thị của một hàm số liên tục trên một khoảng là một đường liền nét trên khoảng đó.
+
+### b) Tính liên tục của các hàm số sơ cấp cơ bản
+
+• Hàm số đa thức và các hàm số lượng giác $y = \sin x$, $y = \cos x$ liên tục trên $\mathbb{R}$.
+• Các hàm số phân thức hữu tỉ, hàm số căn thức $y = \sqrt{x}$, và các hàm số $y = \tan x$, $y = \cot x$ liên tục trên từng khoảng của tập xác định của chúng.
+
+**Ví dụ 3:** Xét tính liên tục của hàm số $f(x) = \begin{cases} x - 1 & \text{nếu } x \in (0; 1) \\\ 0 & \text{nếu } x = 1 \end{cases}$ trên nửa khoảng $(0; 1]$.
+
+Lời giải Ví dụ 3:
+• Với mọi $x_0 \in (0; 1)$, ta có $\lim\_{x \to x_0} f(x) = \lim\_{x \to x_0} (x - 1) = x_0 - 1 = f(x_0)$, do đó hàm số liên tục trên khoảng $(0; 1)$.
+• Tại $x = 1$: $\lim\_{x \to 1^-} f(x) = \lim\_{x \to 1^-} (x - 1) = 0 = f(1)$.
+• Vậy hàm số $f(x)$ liên tục trên nửa khoảng $(0; 1]$.
+
+**Ví dụ 4:** Cho hàm số $f(x) = \frac{x + 1}{x - 1}$. Tìm các khoảng trên đó hàm số $f(x)$ liên tục.
+
+Lời giải Ví dụ 4:
+• Tập xác định của hàm số là $D = (-\infty; 1) \cup (1; +\infty)$.
+• Vì $f(x)$ là hàm phân thức hữu tỉ nên nó liên tục trên từng khoảng xác định, tức là liên tục trên các khoảng $(-\infty; 1)$ và $(1; +\infty)$.
+
+**Luyện tập 2:** Tìm các khoảng trên đó hàm số $f(x) = \frac{x^2 + 1}{x + 2}$ liên tục.
+
+Lời giải Luyện tập 2:
+• Hàm số xác định khi $x \ne -2$, do đó tập xác định là $D = (-\infty; -2) \cup (-2; +\infty)$.
+• Do $f(x)$ là hàm phân thức hữu tỉ nên nó liên tục trên các khoảng $(-\infty; -2)$ và $(-2; +\infty)$.
+
+## Một số tính chất cơ bản của hàm số liên tục
+
+### a) Tính liên tục của các phép toán trên hàm số
+
+Giả sử hai hàm số $y = f(x)$ và $y = g(x)$ liên tục tại điểm $x_0$. Khi đó:
+• Các hàm số $y = f(x) + g(x)$, $y = f(x) - g(x)$, và $y = f(x)g(x)$ liên tục tại $x_0$;
+• Hàm số $y = \frac{f(x)}{g(x)}$ liên tục tại $x_0$ nếu $g(x_0) \ne 0$.
+
+**Ví dụ 5:** Xét tính liên tục của hàm số $f(x) = \frac{\sin x}{x - 1}$.
+
+Lời giải Ví dụ 5:
+• Tập xác định của hàm số là $D = \mathbb{R} \setminus \\{1\\}$.
+• Trên các khoảng $(-\infty; 1)$ và $(1; +\infty)$, tử thức $y = \sin x$ và mẫu thức $y = x - 1$ đều là các hàm số liên tục, đồng thời mẫu thức khác 0.
+• Do đó, hàm số $f(x)$ liên tục trên $\mathbb{R} \setminus \\{1\\}$ (tức là liên tục trên mỗi khoảng $(-\infty; 1)$ và $(1; +\infty)$).
+
+### b) Định lí giá trị trung gian và sự tồn tại nghiệm của phương trình
+
+Định lí: Nếu hàm số $y = f(x)$ liên tục trên đoạn $[a; b]$ và $f(a)f(b) < 0$ thì tồn tại ít nhất một điểm $c \in (a; b)$ sao cho $f(c) = 0$.
+Ý nghĩa hình học: Đồ thị của hàm số liên tục trên đoạn $[a; b]$ nối điểm $A(a; f(a))$ và điểm $B(b; f(b))$ với $f(a), f(b)$ trái dấu phải cắt trục hoành ít nhất tại một điểm nằm trong khoảng $(a; b)$.
+
+**Ví dụ 6:** Chứng minh rằng phương trình $x^5 + x^3 - 10 = 0$ có ít nhất một nghiệm.
+
+Lời giải Ví dụ 6:
+• Xét hàm số $f(x) = x^5 + x^3 - 10$ trên đoạn $[0; 2]$.
+• Vì $f(x)$ là hàm đa thức nên liên tục trên $\mathbb{R}$, suy ra nó liên tục trên đoạn $[0; 2]$.
+• Ta có: $f(0) = -10 < 0$ và $f(2) = 2^5 + 2^3 - 10 = 32 + 8 - 10 = 30 > 0$.
+• Do $f(0) \cdot f(2) = (-10) \cdot 30 = -300 < 0$, nên theo định lí giá trị trung gian, phương trình $f(x) = 0$ có ít nhất một nghiệm trong khoảng $(0; 2)$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng (Tốc độ tức thời của ô tô):** Một người lái xe từ địa điểm A đến địa điểm B trong thời gian 3 giờ. Biết quãng đường từ A đến B dài 180 km. Chứng tỏ rằng có ít nhất một thời điểm trên hành trình, xe chạy với vận tốc $60\text{ km/h}$.
+
+Lời giải Vận dụng:
+• Vận tốc trung bình của ô tô trên cả hành trình là: $v\_{tb} = \frac{s}{t} = \frac{180}{3} = 60\text{ (km/h)}$.
+• Gọi $v(t)$ là vận tốc của xe tại thời điểm $t$ ($0 \le t \le 3$). Trong thực tế chuyển động cơ học, vận tốc tức thời $v(t)$ là một hàm số liên tục trên đoạn $[0; 3]$.
+• Vì vận tốc trung bình bằng $60\text{ km/h}$, nên phải có ít nhất một thời điểm $t_1$ mà $v(t_1) \le 60$ và ít nhất một thời điểm $t_2$ mà $v(t_2) \ge 60$ (nếu vận tốc luôn lớn hơn 60 hoặc luôn nhỏ hơn 60 thì vận tốc trung bình không thể bằng 60).
+• Do $v(t)$ liên tục trên đoạn giữa $t_1$ và $t_2$, theo định lí giá trị trung gian, tồn tại ít nhất một thời điểm $t_0 \in [0; 3]$ sao cho $v(t_0) = 60\text{ km/h}$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 5.14:** Cho $f(x)$ và $g(x)$ là các hàm số liên tục tại $x = 1$. Biết $f(1) = 2$ và $\lim\_{x \to 1} [2f(x) - g(x)] = 3$. Tính $g(1)$.
+
+Lời giải Bài 5.14:
+• Vì $f(x)$ và $g(x)$ liên tục tại $x = 1$ nên:
+  $$\lim\_{x \to 1} f(x) = f(1) = 2 \quad \text{và} \quad \lim\_{x \to 1} g(x) = g(1)$$
+• Do đó:
+  $$\lim\_{x \to 1} [2f(x) - g(x)] = 2\lim\_{x \to 1} f(x) - \lim\_{x \to 1} g(x) = 2(2) - g(1) = 4 - g(1)$$
+• Theo giả thiết $4 - g(1) = 3 \implies g(1) = 1$.
+
+**Bài 5.15:** Xét tính liên tục của các hàm số sau trên tập xác định của chúng:
+a) $f(x) = \frac{x}{x^2 + 5x + 6}$;
+b) $f(x) = \begin{cases} 1 + x^2 & \text{nếu } x < 1 \\\ 4 - x & \text{nếu } x \ge 1. \end{cases}$
+
+Lời giải Bài 5.15:
+• a) Mẫu số $x^2 + 5x + 6 = (x + 2)(x + 3) \ne 0 \Leftrightarrow x \ne -2$ và $x \ne -3$.
+  Tập xác định là $D = (-\infty; -3) \cup (-3; -2) \cup (-2; +\infty)$.
+  Vì $f(x)$ là hàm phân thức hữu tỉ nên liên tục trên từng khoảng của tập xác định: $(-\infty; -3)$, $(-3; -2)$ và $(-2; +\infty)$.
+• b) Tập xác định $D = \mathbb{R}$.
+  - Với $x < 1$: $f(x) = 1 + x^2$ là hàm đa thức nên liên tục trên $(-\infty; 1)$.
+  - Với $x > 1$: $f(x) = 4 - x$ là hàm đa thức nên liên tục trên $(1; +\infty)$.
+  - Tại điểm $x = 1$: $f(1) = 4 - 1 = 3$.
+    $$\lim\_{x \to 1^-} f(x) = \lim\_{x \to 1^-} (1 + x^2) = 1 + 1^2 = 2$$
+    $$\lim\_{x \to 1^+} f(x) = \lim\_{x \to 1^+} (4 - x) = 4 - 1 = 3$$
+    Vì $\lim\_{x \to 1^-} f(x) = 2 \ne 3 = \lim\_{x \to 1^+} f(x)$ nên không tồn tại $\lim\_{x \to 1} f(x)$. Do đó hàm số gián đoạn tại $x = 1$.
+  - Kết luận: Hàm số liên tục trên các khoảng $(-\infty; 1)$ và $(1; +\infty)$, gián đoạn tại điểm $x = 1$.
+
+**Bài 5.16:** Tìm giá trị của tham số $m$ để hàm số sau liên tục trên $\mathbb{R}$:
+$$f(x) = \begin{cases} \sin x & \text{nếu } x \ge 0 \\\ -x + m & \text{nếu } x < 0. \end{cases}$$
+
+Lời giải Bài 5.16:
+• Tập xác định của hàm số là $D = \mathbb{R}$.
+• Với $x > 0$, $f(x) = \sin x$ là hàm số lượng giác liên tục trên $(0; +\infty)$.
+• Với $x < 0$, $f(x) = -x + m$ là hàm đa thức liên tục trên $(-\infty; 0)$.
+• Do đó, hàm số liên tục trên $\mathbb{R}$ khi và chỉ khi nó liên tục tại điểm $x = 0$:
+  - Giá trị tại điểm: $f(0) = \sin 0 = 0$;
+  - Giới hạn bên phải: $\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^+} \sin x = 0$;
+  - Giới hạn bên trái: $\lim\_{x \to 0^-} f(x) = \lim\_{x \to 0^-} (-x + m) = m$.
+• Để hàm số liên tục tại $x = 0$ thì:
+  $$\lim\_{x \to 0^+} f(x) = \lim\_{x \to 0^-} f(x) = f(0) \iff m = 0.$$
+• Kết luận: Với $m = 0$ thì hàm số liên tục trên $\mathbb{R}$.
+
+**Bài 5.17:** Một bảng giá cước taxi được cho như sau: Giá mở cửa ($0{,}5\text{ km}$ đầu) là $10\\,000$ đồng; giá cước các km tiếp theo đến $30\text{ km}$ là $13\\,500$ đồng/km; giá cước từ km thứ 31 trở đi là $11\\,000$ đồng/km.
+a) Viết công thức hàm số mô tả số tiền khách phải trả theo quãng đường di chuyển $x$ ($x > 0$).
+b) Xét tính liên tục của hàm số ở câu a.
+
+Lời giải Bài 5.17:
+• a) Gọi $T(x)$ là số tiền cước taxi (đơn vị: đồng) khi đi quãng đường $x$ (km) với $x > 0$:
+  - Khi $0 < x \le 0{,}5$: $T(x) = 10\\,000$;
+  - Khi $0{,}5 < x \le 30$: $T(x) = 10\\,000 + 13\\,500(x - 0{,}5) = 13\\,500x + 3\\,250$;
+  - Khi $x > 30$: $T(x) = 10\\,000 + 13\\,500(30 - 0{,}5) + 11\\,000(x - 30) = 10\\,000 + 398\\,250 + 11\\,000x - 330\\,000 = 11\\,000x + 78\\,250$.
+  Công thức hàm số là:
+  $$T(x) = \begin{cases} 10\\,000 & \text{nếu } 0 < x \le 0{,}5 \\\ 13\\,500x + 3\\,250 & \text{nếu } 0{,}5 < x \le 30 \\\ 11\\,000x + 78\\,250 & \text{nếu } x > 30. \end{cases}$$
+• b) Xét tính liên tục của $T(x)$ trên $(0; +\infty)$:
+  - Trên các khoảng $(0; 0{,}5)$, $(0{,}5; 30)$ và $(30; +\infty)$, $T(x)$ là các hàm số bậc nhất hoặc hằng số nên liên tục.
+  - Tại điểm $x = 0{,}5$:
+    $T(0{,}5) = 10\\,000$, $\lim\_{x \to 0{,}5^-} T(x) = 10\\,000$, và $\lim\_{x \to 0{,}5^+} T(x) = 13\\,500(0{,}5) + 3\\,250 = 6\\,750 + 3\\,250 = 10\\,000$.
+    Vì $\lim\_{x \to 0{,}5} T(x) = T(0{,}5) = 10\\,000$ nên hàm số liên tục tại $x = 0{,}5$.
+  - Tại điểm $x = 30$:
+    $T(30) = 13\\,500(30) + 3\\,250 = 405\\,000 + 3\\,250 = 408\\,250$.
+    $\lim\_{x \to 30^-} T(x) = 408\\,250$, và $\lim\_{x \to 30^+} T(x) = 11\\,000(30) + 78\\,250 = 330\\,000 + 78\\,250 = 408\\,250$.
+    Vì $\lim\_{x \to 30} T(x) = T(30) = 408\\,250$ nên hàm số liên tục tại $x = 30$.
+  - Kết luận: Hàm số $T(x)$ liên tục trên toàn bộ khoảng $(0; +\infty)$.
