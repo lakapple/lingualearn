@@ -1,0 +1,188 @@
+---
+title: 'Lesson 14: Parallel projection.'
+description: Theoretical system for the lesson on parallel projection with illustrative examples.
+tags:
+  - grade 11
+  - Parallel projection
+  - projection direction
+  - projection plane
+  - Parallel projection of a geometric figure
+grade: 11
+order: 14
+updatedDate: 2026-10-28T17:33:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Parallel projection, projection direction, projection plane
+
+·       Parallel projection of a point and a geometric figure
+
+·       Graphical representation of a spatial figure
+
+### **Knowledge and Skills:**
+
+·       Recognize the concept and basic properties of parallel projection in space.
+
+·       Accurately determine the parallel projection of a point, line segment, triangle, parallelogram, and circle.
+
+·       Draw graphical representations of simple solid figures (pyramids, prisms, parallelepipeds) on a plane.
+
+·       Apply parallel projection principles to explain real-world phenomena (goal-line technology in football, shadow casting under sunlight).
+
+## Parallel Projection and Projections
+
+<Youtube url="https://www.youtube.com/watch?v=example_phep_chieu_song_song"/>
+
+### a) Definition of Parallel Projection
+
+Definition:
+Given a plane (alpha) and a straight line Delta intersecting (alpha). For each point M in space, determine its corresponding point M' as follows:
+• If M in Delta, then M' is the intersection point of (alpha) and Delta.
+• If M not in Delta, then M' is the intersection point of (alpha) and the straight line passing through M and parallel to Delta.
+The point M' is called the parallel projection of point M onto plane (alpha) along the projection direction Delta.
+• The mapping that associates each point M with its projection M' is called the parallel projection onto (alpha) along direction Delta.
+• Plane (alpha) is called the projection plane, and line Delta is called the direction of projection.
+• The projection of a figure is the set of projections M' of all points M belonging to that figure.
+
+### b) Illustrative Examples and Practice on Parallel Projection
+
+**Example 1:** Given a triangular prism ABC.A'B'C'.
+a) Determine the parallel projection of point A onto plane (A'B'C') along the direction CC'.
+b) Let M be a point on segment AB. Determine the parallel projection of M onto plane (A'B'C') along the direction CC'.
+
+Solution for Example 1:
+• a) Since ABC.A'B'C' is a prism, AA' || BB' || CC'. Because vertex A' in (A'B'C') and line AA' is parallel to the projection direction CC', A' is precisely the parallel projection of A onto plane (A'B'C') along direction CC'.
+• b) In plane (ABB'A'), draw the line through M parallel to AA' (and thus parallel to CC') intersecting edge A'B' at point M'. Since M' in (A'B'C'), M' is the projection of M onto plane (A'B'C') along CC'.
+
+**Practice 1:** Given a parallelepiped ABCD.EFGH. Determine the projection of point A onto plane (DCGH) along direction BC and along direction BG.
+
+Solution for Practice 1:
+• Along direction BC: Since ABCD.EFGH is a parallelepiped, base ABCD is a parallelogram, implying AB || DC. Because point D in (DCGH) and line AD is parallel to projection direction BC, D is the projection of A onto (DCGH) along BC.
+• Along direction BG: The line passing through A parallel to BG intersects plane (DCGH) at point H (since AH || BG and H in (DCGH)). Thus, H is the projection of A onto (DCGH) along BG.
+
+## Properties of Parallel Projection
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_phep_chieu_song_song"/>
+
+### a) Fundamental Properties
+
+Core Properties of Parallel Projection:
+1\. Collinearity preservation: Parallel projection maps three collinear points into three collinear points and preserves their relative order.
+2\. Line preservation: Parallel projection maps lines into lines, rays into rays, and line segments into line segments.
+3\. Parallelism preservation: Parallel projection maps two parallel straight lines into two parallel straight lines or two coincident lines.
+4\. Ratio preservation: Parallel projection preserves the ratio of lengths of two line segments lying on the same straight line or on two parallel straight lines:
+$$\frac{AB}{CD} = \frac{A'B'}{C'D'}$$
+
+### b) Illustrative Examples and Practice on Properties
+
+**Example 2:** Given a parallelogram ABCD and let A'B'C'D' be its parallel projection onto a plane (P) along a direction d. Prove that quadrilateral A'B'C'D' is a parallelogram.
+
+Solution for Example 2:
+• Since ABCD is a parallelogram, AB || CD and AD || BC.
+• By the properties of parallel projection, projections of parallel lines are parallel lines or coincident lines, which implies A'B' || C'D' and A'D' || B'C'.
+• Therefore, quadrilateral A'B'C'D' has opposite sides parallel, proving it is a parallelogram.
+
+**Luyện tập 2:** Prove that the parallel projection of a trapezoid is a trapezoid.
+
+Solution for Practice 2:
+• Let trapezoid ABCD have bases AB || CD. Let A'B'C'D' be the parallel projection of quadrilateral ABCD.
+• Since AB || CD, their projections satisfy A'B' || C'D' (they cannot be coincident because non-parallel legs AD and BC do not project onto the same lines).
+• Since A'B' || C'D', quadrilateral A'B'C'D' has at least one pair of parallel sides, confirming it is a trapezoid.
+
+**Example 3:** Given a triangle ABC where M is the midpoint of BC. A parallel projection maps triangle ABC to triangle A'B'C' and maps M to M'. Prove that A'M' is a median of triangle A'B'C'.
+
+Solution for Example 3:
+• Since M is the midpoint of BC, points B, M, C are collinear in that order with BM/MC = 1.
+• Parallel projection preserves collinearity, point ordering, and segment length ratios; hence, B', M', C' are collinear in that order with B'M'/M'C' = BM/MC = 1.
+• This implies M' is the midpoint of segment B'C'. Therefore, A'M' is a median of triangle A'B'C'.
+
+## Graphical Representation of Spatial Figures
+
+<Youtube url="https://www.youtube.com/watch?v=example_hinh_bieu_dien_hinh_khong_gian"/>
+
+### a) Concept of Graphical Representation and Drawing Rules
+
+Concept of Graphical Representation:
+• The graphical representation of a spatial figure on a plane is its parallel projection onto a plane along a projection direction, or a figure similar to that projection.
+Drawing Rules for Plane Figures:
+• Triangles (isosceles, equilateral, right-angled) are represented by corresponding triangles.
+• Squares, rectangles, rhombuses, and parallelograms are represented by parallelograms.
+• A trapezoid with bases AB || CD is represented by a trapezoid A'B'C'D' with A'B' || C'D' and AB/CD = A'B'/C'D'.
+• A circle is represented by an ellipse.
+
+### b) Illustrative Examples and Practice on Graphical Representation
+
+**Example 4:** Draw the graphical representation of a quadrangular prism ABCD.A'B'C'D' whose base ABCD is a trapezoid with AB || CD and AB = 2CD.
+
+Solution for Example 4:
+• The lateral faces of a prism are parallelograms, so their graphical representations are parallelograms.
+• Base ABCD is a trapezoid with AB = 2CD, so its representation is a trapezoid where base AB is drawn twice as long as base CD.
+• Combining these yields the complete graphical representation of the prism ABCD.A'B'C'D'.
+
+**Luyện tập 4:** Draw the graphical representation of a pyramid S.ABCD with a parallelogram base ABCD.
+
+Solution for Practice 4:
+• Draw base ABCD as a parallelogram (with edge AD drawn dashed for occlusion).
+• Choose vertex S outside the base plane, and connect S to vertices A, B, C, D (draw lateral edges SA, SB, SC as solid lines and SD as a dashed line).
+• This completes the graphical representation of pyramid S.ABCD.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application 1 (Goal-Line Technology in Football):** When a goal is scored, how is the orthogonal projection of the football onto the ground along the vertical direction positioned relative to the goal line?
+
+Solution for Application:
+• According to football regulations, a goal is scored when the entire ball has crossed completely beyond the vertical plane containing the goal line.
+• The orthogonal projection of the entire ball onto the ground along the vertical direction must lie completely past the outer edge of the goal line into the goal interior.
+
+**Exercise 4.34 (Shadows of Ladder Bars under Sunlight):** In a diagram, AB and CD represent the shadows cast by two parallel rungs of a ladder under sunlight. Explain why AB is parallel to CD.
+
+Solution for Exercise 4.34:
+• Sunlight rays shining onto the ground form mutually parallel straight lines, acting as the projection direction of a parallel projection.
+• The two rungs of the ladder are parallel to each other in space.
+• By the properties of parallel projection, projections of parallel straight lines (namely, shadows AB and CD on the ground) remain parallel.
+
+### b) Detailed Section Exercises
+
+**Exercise 4.29:** Which of the following propositions are true?
+a) Parallel projection maps a line segment into a line segment.
+b) Parallel projection maps two parallel straight lines into two intersecting straight lines.
+c) Parallel projection maps an equilateral triangle into an isosceles triangle.
+d) Parallel projection maps a square into a parallelogram.
+
+Solution for Exercise 4.29:
+• Proposition a) is true (preservation of line segments).
+• Proposition d) is true (parallel projection maps a square into a parallelogram).
+• Proposition b) is false (parallel lines project to parallel or coincident lines).
+• Proposition c) is false (an equilateral triangle can project into any general triangle, not necessarily isosceles).
+
+**Exercise 4.30:** If triangle A'B'C' is the projection of triangle ABC under a parallel projection, is triangle ABC also the projection of triangle A'B'C' under some parallel projection? Explain why.
+
+Solution for Exercise 4.30:
+• Yes. By reversing the projection direction and selecting a suitable projection plane (or inverting the parallel projection system), triangle ABC can indeed be regarded as the parallel projection of triangle A'B'C'.
+
+**Exercise 4.31:** A parallel projection maps triangle ABC to triangle A'B'C'. Prove that the projection maps the centroid of triangle ABC to the centroid of triangle A'B'C'.
+
+Solution for Exercise 4.31:
+• Let M be the midpoint of BC and M' be its projection (so M' is the midpoint of B'C').
+• Median AM of triangle ABC projects to median A'M' of triangle A'B'C'.
+• Centroid G divides segment AM in the ratio AG/GM = 2. Because parallel projection preserves length ratios along a line, projection G' of G divides segment A'M' in the same ratio A'G'/G'M' = 2.
+• Therefore, G' is the centroid of triangle A'B'C'.
+
+**Exercise 4.32:** Can Figure 4.65 serve as a graphical representation of a regular hexagon? Why or why not?
+
+Solution for Exercise 4.32:
+• Yes. A regular hexagon in space, when projected onto a plane along an appropriate direction, yields a centrally symmetric graphical representation whose corresponding segment length ratios satisfy parallel projection properties (Figure 4.65 can indeed represent a regular hexagon).
+
+**Exercise 4.33:** Draw the graphical representation of a pyramid S.ABCD whose base ABCD is a trapezoid with AB || CD, AB = 2 cm, and CD = 6 cm.
+
+Solution for Exercise 4.33:
+• Draw base ABCD as a trapezoid with CD = 3AB (maintaining the proportional scale of 2 cm and 6 cm).
+• Choose apex S above the base and connect S to vertices A, B, C, D (drawing edge AD as dashed) to complete the pyramid representation.
