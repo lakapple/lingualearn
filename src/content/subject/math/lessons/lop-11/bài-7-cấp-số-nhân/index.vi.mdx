@@ -1,0 +1,232 @@
+---
+title: 'Bài 7: Cấp số nhân'
+description: Hệ thống lý thuyết bài cấp số nhân cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Cấp số nhân
+  - Tổng của $n$ số hạng đầu
+  - Công bội
+  - Số hạng tổng quát
+grade: 11
+order: 0
+updatedDate: 2026-10-28T14:35:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Cấp số nhân
+
+·       Công bội ($q$)
+
+·       Số hạng tổng quát ($u_n$)
+
+·       Tổng của $n$ số hạng đầu ($S_n$)
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết một dãy số là cấp số nhân và xác định được số hạng đầu $u_1$, công bội $q$.
+
+·       Giải thích và vận dụng thành thạo công thức xác định số hạng tổng quát của cấp số nhân: $u_n = u_1 \cdot q^{n-1}$ ($n \ge 2$).
+
+·       Tính tổng của $n$ số hạng đầu của cấp số nhân: $S_n = \frac{u_1(1 - q^n)}{1 - q}$ ($q \ne 1$) hoặc $S_n = n u_1$ ($q = 1$).
+
+·       Giải quyết một số vấn đề thực tiễn gắn với cấp số nhân (tăng trưởng dân số, phân rã liều lượng thuốc trong máu, khấu hao tài sản luỹ kế, bài toán lựa chọn phương án tiền lương).
+
+## Định nghĩa cấp số nhân
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_nghia_cap_so_nhan"/>
+
+### a) Khái niệm và hệ thức truy hồi
+
+Định nghĩa:
+Cấp số nhân là một dãy số (hữu hạn hay vô hạn), trong đó kể từ số hạng thứ hai, mỗi số hạng đều là tích của số hạng đứng ngay trước nó với một số không đổi $q$:
+$$u_n = u\_{n-1} \cdot q \quad (n \ge 2)$$
+• Số $q$ được gọi là công bội của cấp số nhân.
+• Khi $q = 1$, cấp số nhân là một dãy số không đổi: $a, a, a, \dots$
+• Khi $q = 0$, cấp số nhân có dạng: $u_1, 0, 0, \dots$
+• Để chứng minh một dãy số $(u_n)$ (với các số hạng khác 0) là cấp số nhân, ta chứng minh tỉ số giữa hai số hạng liên tiếp $\frac{u_n}{u\_{n-1}} = q$ không đổi với mọi $n \ge 2$.
+
+### b) Ví dụ và luyện tập về định nghĩa cấp số nhân
+
+**Ví dụ 1:** Cho cấp số nhân có số hạng đầu $u_1 = 5$ và công bội $q = -2$. Viết năm số hạng đầu của cấp số nhân này.
+
+Lời giải Ví dụ 1:
+• $u_1 = 5$.
+• $u_2 = u_1 \cdot q = 5 \cdot (-2) = -10$.
+• $u_3 = u_2 \cdot q = (-10) \cdot (-2) = 20$.
+• $u_4 = u_3 \cdot q = 20 \cdot (-2) = -40$.
+• $u_5 = u_4 \cdot q = (-40) \cdot (-2) = 80$.
+Vậy năm số hạng đầu là: $5, -10, 20, -40, 80$.
+
+**Ví dụ 2:** Cho dãy số $(u_n)$ với $u_n = \frac{1}{3^{n-1}}$. Chứng minh rằng dãy số này là cấp số nhân và tìm $u_1, q$.
+
+Lời giải Ví dụ 2:
+• Với mọi $n \ge 2$, ta có: $\frac{u_n}{u\_{n-1}} = \frac{1/3^{n-1}}{1/3^{n-2}} = \frac{3^{n-2}}{3^{n-1}} = \frac{1}{3}$ (không đổi).
+• Vậy $(u_n)$ là cấp số nhân có số hạng đầu $u_1 = \frac{1}{3^0} = 1$ và công bội $q = \frac{1}{3}$.
+
+**Luyện tập 1:** Cho dãy số $(u_n)$ với $u_n = 2 \cdot 5^n$. Chứng minh rằng dãy số này là cấp số nhân. Xác định số hạng đầu và công bội của nó.
+
+Lời giải Luyện tập 1:
+• Với mọi $n \ge 2$, ta có: $\frac{u_n}{u\_{n-1}} = \frac{2 \cdot 5^n}{2 \cdot 5^{n-1}} = 5$ không đổi.
+• Do đó $(u_n)$ là cấp số nhân có số hạng đầu $u_1 = 2 \cdot 5^1 = 10$ và công bội $q = 5$.
+
+## Số hạng tổng quát
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_hang_tong_quat_csn"/>
+
+### a) Công thức số hạng tổng quát
+
+Định lí:
+Nếu một cấp số nhân có số hạng đầu $u_1$ và công bội $q$ thì số hạng tổng quát $u_n$ của nó được xác định theo công thức:
+$$u_n = u_1 \cdot q^{n-1} \quad (n \ge 2)$$
+
+### b) Ví dụ và luyện tập về số hạng tổng quát
+
+**Ví dụ 3:** Tìm năm số hạng đầu và số hạng thứ 100 của cấp số nhân: $8, -4, \dots$
+
+Lời giải Ví dụ 3:
+• Cấp số nhân có số hạng đầu $u_1 = 8$ và công bội $q = \frac{-4}{8} = -\frac{1}{2}$.
+• Năm số hạng đầu là: $8, -4, 2, -1, \frac{1}{2}$.
+• Số hạng thứ 100 là: $u\_{100} = u_1 \cdot q^{99} = 8 \cdot \left(-\frac{1}{2}\right)^{99} = 2^3 \cdot \frac{-1}{2^{99}} = -\frac{1}{2^{96}}$.
+
+**Ví dụ 4:** Cho một cấp số nhân gồm các số hạng dương. Biết số hạng thứ 10 bằng 1 536 và số hạng thứ 12 bằng 6 144. Tìm số hạng thứ 20 của cấp số nhân đó.
+
+Lời giải Ví dụ 4:
+• Gọi $u_1 > 0$ là số hạng đầu và $q > 0$ là công bội. Ta có:
+$$\begin{cases} u\_{10} = u_1 \cdot q^9 = 1\\,536 \\\ u\_{12} = u_1 \cdot q^{11} = 6\\,144 \end{cases} \Rightarrow \frac{u\_{12}}{u\_{10}} = q^2 = \frac{6\\,144}{1\\,536} = 4 \Rightarrow q = 2 \quad (\text{do } q > 0)$$
+• Từ $u_1 \cdot 2^9 = 1\\,536 \Rightarrow u_1 = \frac{1\\,536}{512} = 3$.
+• Số hạng thứ 20 là: $u\_{20} = u_1 \cdot q^{19} = 3 \cdot 2^{19} = 1\\,572\\,864$.
+
+**Luyện tập 2:** Trong một lọ nuôi cấy vi khuẩn, ban đầu có 5 000 con vi khuẩn và số lượng vi khuẩn tăng thêm 8% mỗi giờ. Hỏi sau 5 giờ thì số lượng vi khuẩn là bao nhiêu?
+
+Lời giải Luyện tập 2:
+• Sau mỗi giờ, số lượng vi khuẩn nhân với hệ số tăng trưởng: $q = 1 + 8\\% = 1{,}08$.
+• Số lượng vi khuẩn ban đầu $N_0 = 5\\,000$.
+• Sau 5 giờ, số lượng vi khuẩn là:
+$$N_5 = N_0 \cdot (1{,}08)^5 = 5\\,000 \cdot (1{,}08)^5 \approx 7\\,347\text{ (con vi khuẩn).}$$
+
+## Tổng n số hạng đầu của một cấp số nhân
+
+<Youtube url="https://www.youtube.com/watch?v=example_tong_n_so_hang_csn"/>
+
+### a) Công thức tính tổng n số hạng đầu
+
+Định lí:
+Cho cấp số nhân $(u_n)$ với công bội $q$. Đặt $S_n = u_1 + u_2 + \dots + u_n$. Khi đó:
+• Nếu $q \ne 1$ thì:
+$$S_n = \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1(q^n - 1)}{q - 1}$$
+• Nếu $q = 1$ thì cấp số nhân là $u_1, u_1, \dots, u_1$ nên:
+$$S_n = n u_1$$
+
+### b) Ví dụ và luyện tập về tính tổng
+
+**Ví dụ 5 (Bài toán tiền lương chuyên gia CNTT mở đầu):** Một công ty tuyển chuyên gia CNTT với mức lương năm đầu 240 triệu đồng và cam kết tăng 5% lương mỗi năm. Tính tổng số lương chuyên gia đó nhận được sau 10 năm làm việc (làm tròn đến triệu đồng).
+
+Lời giải Ví dụ 5:
+• Lương hàng năm của chuyên gia lập thành cấp số nhân với $u_1 = 240$ triệu đồng và công bội $q = 1 + 0{,}05 = 1{,}05$.
+• Tổng số lương sau 10 năm làm việc là:
+$$S\_{10} = \frac{u_1(1 - q^{10})}{1 - q} = \frac{240[1 - (1{,}05)^{10}]}{1 - 1{,}05} = \frac{240[(1{,}05)^{10} - 1]}{0{,}05} \approx 3\\,019\text{ (triệu đồng)} = 3{,}019\text{ tỉ đồng.}$$
+
+**Ví dụ 6:** Cần lấy tổng của bao nhiêu số hạng đầu của cấp số nhân $2, 6, 18, \dots$ để được kết quả bằng 728?
+
+Lời giải Ví dụ 6:
+• Cấp số nhân có $u_1 = 2$ và công bội $q = \frac{6}{2} = 3$.
+• Gọi $n$ là số số hạng đầu cần lấy tổng. Ta có:
+$$S_n = \frac{u_1(1 - q^n)}{1 - q} = \frac{2(1 - 3^n)}{1 - 3} = 3^n - 1 = 728$$
+$$\Leftrightarrow 3^n = 729 = 3^6 \Rightarrow n = 6$$
+• Vậy cần lấy tổng của 6 số hạng đầu.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và so sánh phương án
+
+**Vận dụng (So sánh phương án nhận lương 3 năm):** Nhà máy tuyển công nhân làm việc trong thời hạn 3 năm (12 quý) với 2 phương án lương tháng:
+• Phương án 1: Lương tháng khởi điểm 5 triệu đồng, sau mỗi quý lương tháng tăng thêm 500 nghìn đồng ($0{,}5$ triệu đồng).
+• Phương án 2: Lương tháng khởi điểm 5 triệu đồng, sau mỗi quý lương tháng tăng thêm 5%.
+Hỏi với phương án nào thì tổng lương nhận được sau 3 năm lớn hơn?
+
+Lời giải Vận dụng:
+• Ba năm làm việc gồm 12 quý, mỗi quý có 3 tháng.
+• Theo Phương án 1 (Cấp số cộng):
+  Lương tháng ở quý thứ $n$ là: $u_n = 5 + (n - 1) \cdot 0{,}5$ ($1 \le n \le 12$).
+  Tổng lương tháng của 12 quý là:
+  $$S_1 = \frac{12}{2}[2(5) + (12 - 1) \cdot 0{,}5] = 6[10 + 5{,}5] = 6 \cdot 15{,}5 = 93\text{ (triệu đồng)}.$$
+  Tổng lương nhận được trong 3 năm (36 tháng) là: $3 \times 93 = 279$ triệu đồng.
+• Theo Phương án 2 (Cấp số nhân):
+  Lương tháng ở quý thứ $n$ lập thành cấp số nhân với $v_1 = 5$ và $q = 1 + 0{,}05 = 1{,}05$.
+  Tổng lương tháng của 12 quý là:
+  $$S_2 = \frac{v_1(1 - q^{12})}{1 - q} = \frac{5[1 - (1{,}05)^{12}]}{1 - 1{,}05} = \frac{5[(1{,}05)^{12} - 1]}{0{,}05} = 100[(1{,}05)^{12} - 1] \approx 100 \times 0{,}795856 = 79{,}5856\text{ (triệu đồng)}.$$
+  Tổng lương nhận được trong 3 năm là: $3 \times 79{,}5856 \approx 238{,}76$ triệu đồng.
+• Kết luận: Vì $279 > 238{,}76$ nên Phương án 1 đem lại tổng số lương lớn hơn sau 3 năm.
+
+**Bài 2.19 (Khấu hao máy ủi):** Chiếc máy ủi giá mua mới 3 tỉ đồng. Cứ sau mỗi năm sử dụng, giá trị giảm 20% so với năm liền trước đó. Tìm giá trị còn lại sau 5 năm sử dụng.
+
+Lời giải Bài 2.19:
+• Sau mỗi năm, giá trị máy ủi còn lại bằng: $100\\% - 20\\% = 80\\% = 0{,}8$ so với năm trước.
+• Giá trị ban đầu: $V_0 = 3$ tỉ đồng $= 3\\,000$ triệu đồng.
+• Sau 5 năm sử dụng, giá trị còn lại của máy ủi là:
+$$V_5 = V_0 \cdot (0{,}8)^5 = 3\\,000 \cdot (0{,}8)^5 = 3\\,000 \cdot 0{,}32768 = 983{,}04\text{ (triệu đồng)} \approx 0{,}983\text{ tỉ đồng.}$$
+
+**Bài 2.20 (Tăng trưởng dân số theo cấp số nhân):** Năm 2020 dân số một quốc gia khoảng 97 triệu người, tốc độ tăng trưởng ổn định 0,91%/năm. Ước tính dân số quốc gia đó vào năm 2030.
+
+Lời giải Bài 2.20:
+• Số năm từ 2020 đến 2030 là $n = 10$ năm.
+• Công bội tăng trưởng hằng năm là: $q = 1 + 0{,}91\\% = 1{,}0091$.
+• Dân số ước tính năm 2030 là:
+$$P\_{2030} = 97 \cdot (1{,}0091)^{10} \approx 97 \cdot 1{,}09482 \approx 106{,}2\text{ (triệu người).}$$
+
+**Bài 2.21 (Lượng thuốc trong máu bệnh nhân):** Một loại thuốc uống mỗi ngày một lần. Lượng thuốc trong máu ngày thứ nhất là 50 mg, mỗi ngày sau đó giảm chỉ còn một nửa so với ngày kề trước. Tính tổng lượng thuốc trong máu bệnh nhân sau 10 ngày liên tiếp.
+
+Lời giải Bài 2.21:
+• Lượng thuốc trong máu qua các ngày lập thành cấp số nhân với $u_1 = 50\text{ mg}$ và công bội $q = \frac{1}{2} = 0{,}5$.
+• Tổng lượng thuốc sau 10 ngày là:
+$$S\_{10} = \frac{u_1(1 - q^{10})}{1 - q} = \frac{50\left[1 - \left(\frac{1}{2}\right)^{10}\right]}{1 - \frac{1}{2}} = 100\left(1 - \frac{1}{1\\,024}\right) = \frac{100 \times 1\\,023}{1\\,024} \approx 99{,}9\text{ (mg).}$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 2.15:** Xác định công bội, số hạng thứ 5, số hạng tổng quát và số hạng thứ 100 của mỗi cấp số nhân sau:
+a) $1, 4, 16, \dots$;
+b) $2, -\frac{1}{2}, \frac{1}{8}, \dots$
+
+Lời giải Bài 2.15:
+• a) $u_1 = 1, q = \frac{4}{1} = 4$.
+  + Số hạng tổng quát: $u_n = 1 \cdot 4^{n-1} = 4^{n-1}$.
+  + Số hạng thứ 5: $u_5 = 4^{5-1} = 4^4 = 256$.
+  + Số hạng thứ 100: $u\_{100} = 4^{99}$.
+• b) $u_1 = 2, q = \frac{-1/2}{2} = -\frac{1}{4}$.
+  + Số hạng tổng quát: $u_n = 2 \cdot \left(-\frac{1}{4}\right)^{n-1}$.
+  + Số hạng thứ 5: $u_5 = 2 \cdot \left(-\frac{1}{4}\right)^4 = 2 \cdot \frac{1}{256} = \frac{1}{128}$.
+  + Số hạng thứ 100: $u\_{100} = 2 \cdot \left(-\frac{1}{4}\right)^{99} = -\frac{2}{4^{99}} = -\frac{1}{2^{197}}$.
+
+**Bài 2.16:** Viết năm số hạng đầu của mỗi dãy số sau và xét xem có phải là cấp số nhân không. Nếu là cấp số nhân, tìm $q$ và viết dạng $u_n = u_1 \cdot q^{n-1}$:
+a) $u_n = 5n$;
+b) $u_n = 5^n$;
+c) $u_1 = 1, u_n = n \cdot u\_{n-1}$ ($n \ge 2$);
+d) $u_1 = 1, u_n = 5u\_{n-1}$ ($n \ge 2$).
+
+Lời giải Bài 2.16:
+• a) Năm số hạng đầu: $5, 10, 15, 20, 25$. Tỉ số $\frac{10}{5} = 2 \ne \frac{15}{10} = 1{,}5$ nên dãy không phải là cấp số nhân.
+• b) Năm số hạng đầu: $5, 25, 125, 625, 3\\,125$. Ta có $\frac{u_n}{u\_{n-1}} = 5$ không đổi nên là cấp số nhân với $u_1 = 5, q = 5$. Công thức: $u_n = 5 \cdot 5^{n-1}$.
+• c) Năm số hạng đầu: $1, 2, 6, 24, 120$. Tỉ số $\frac{u_n}{u\_{n-1}} = n$ thay đổi nên không phải cấp số nhân.
+• d) Năm số hạng đầu: $1, 5, 25, 125, 625$. Tỉ số $\frac{u_n}{u\_{n-1}} = 5$ không đổi nên là cấp số nhân có $u_1 = 1, q = 5$. Công thức: $u_n = 1 \cdot 5^{n-1} = 5^{n-1}$.
+
+**Bài 2.17:** Một cấp số nhân có số hạng thứ 6 bằng 96 và số hạng thứ 3 bằng 12. Tìm số hạng thứ 50 của cấp số nhân này.
+
+Lời giải Bài 2.17:
+• Ta có: $u_6 = u_1 \cdot q^5 = 96$ và $u_3 = u_1 \cdot q^2 = 12$.
+• Lập tỉ số: $\frac{u_6}{u_3} = q^3 = \frac{96}{12} = 8 \Rightarrow q = 2$.
+• Thay vào $u_3$: $u_1 \cdot 2^2 = 12 \Rightarrow u_1 = 3$.
+• Số hạng thứ 50 là: $u\_{50} = u_1 \cdot q^{49} = 3 \cdot 2^{49}$.
+
+**Bài 2.18:** Một cấp số nhân có số hạng đầu bằng 5 và công bội bằng 2. Hỏi phải lấy tổng của bao nhiêu số hạng đầu để có tổng bằng 5 115?
+
+Lời giải Bài 2.18:
+• Ta có $u_1 = 5$ và $q = 2$. Công thức tính tổng $n$ số hạng đầu:
+$$S_n = \frac{u_1(q^n - 1)}{q - 1} = \frac{5(2^n - 1)}{2 - 1} = 5(2^n - 1) = 5\\,115$$
+$$\Leftrightarrow 2^n - 1 = \frac{5\\,115}{5} = 1\\,023 \Leftrightarrow 2^n = 1\\,024 = 2^{10} \Rightarrow n = 10$$
+• Vậy cần lấy tổng của 10 số hạng đầu.
