@@ -1,0 +1,266 @@
+---
+title: 'Lesson 10: Lines and Planes in Space'
+description: Theoretical system for the lesson on Lines and Planes in Space with illustrative examples.
+tags:
+  - grade 11
+  - Coplanar points
+  - non-coplanar points
+  - Line of intersection (intersection line) of two planes
+  - regular tetrahedron
+  - tetrahedron
+  - intersection point of a line and a plane
+  - Pyramid (triangular pyramid, quadrangular pyramid)
+grade: 11
+order: 10
+updatedDate: 2026-10-28T16:41:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Plane, point incident to / lying on a plane, point not lying on a plane
+
+·       Coplanar points, non-coplanar points
+
+·       Line of intersection (intersection line) of two planes, intersection point of a line and a plane
+
+·       Pyramid (triangular pyramid, quadrangular pyramid), tetrahedron, regular tetrahedron
+
+### **Knowledge and Skills:**
+
+·       Recognize fundamental incidence relations among points, lines, and planes in three-dimensional space.
+
+·       Master fundamental axioms and proficiently describe the three standard methods of specifying a plane.
+
+·       Apply geometric methods to find the intersection line of two planes and the intersection point of a line and a plane.
+
+·       Identify the structural elements and properties of pyramids and tetrahedra.
+
+·       Explain and model real-world phenomena using spatial geometric principles (tripods, magnetic door stops, three-finger tray holding rule, lever paper cutters).
+
+## Introductory Concepts and Basic Axioms
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_tinh_chat_hinh_khong_gian"/>
+
+### a) Concept of a Plane and Spatial Representation
+
+Concept of a Plane:
+• A chalkboard surface, a computer monitor, or the still surface of water provides a physical model of a portion of a plane. A plane has zero thickness and extends infinitely in all directions.
+• In geometric drawings, a plane is usually depicted as a parallelogram or an angle corner, labeled with an uppercase Latin letter or a Greek letter enclosed in parentheses: $(P), (Q), (\alpha), (\beta), \dots$
+• Incidence relations: If point $A$ lies on plane $(P)$, we write $A \in (P)$; if point $B$ does not lie on plane $(P)$, we write $B \notin (P)$.
+
+Conventions for Representing Spatial Figures in a Plane:
+1\. Straight lines are represented by straight lines; line segments are represented by line segments.
+2\. Parallel lines are represented by parallel lines; intersecting lines are represented by intersecting lines.
+3\. Incidence relations between points and lines are preserved.
+4\. Visible lines are drawn as solid strokes (—), whereas hidden (occluded) lines are drawn as dashed strokes (---).
+
+### b) Fundamental Axioms of Solid Geometry
+
+Axiomatic System:
+• Axiom 1: There is one and only one straight line passing through any two distinct points.
+• Axiom 2: There is one and only one plane passing through any three non-collinear points.
+  (The unique plane passing through three non-collinear points $A, B, C$ is denoted by $(ABC)$).
+• Axiom 3: There exist four points that do not lie in the same plane (non-coplanar points).
+• Axiom 4: If a straight line contains two distinct points lying in a plane, then every point of the line lies in that plane ($d \subset (P)$).
+• Axiom 5: If two distinct planes have a point in common, their intersection is a unique straight line passing through that point (called their intersection line: $d = (P) \cap (Q)$).
+• Axiom 6: In every plane, all theorems and results established in Euclidean plane geometry remain valid.
+
+**Example 1:** Given four non-coplanar points $A, B, C, D$. How many distinct planes pass through three of these four points?
+
+Solution for Example 1:
+• Any three non-collinear points uniquely determine a plane.
+• From four non-coplanar points $A, B, C, D$, exactly 4 distinct planes can be formed: $(ABC), (ABD), (ACD), (BCD)$.
+
+**Practice 1:** Given a quadrilateral $ABCD$. How many distinct planes pass through three of the four vertices of this quadrilateral?
+
+Solution for Practice 1:
+• Since $ABCD$ is a planar quadrilateral, its four vertices $A, B, C, D$ are coplanar.
+• Therefore, any combination of three vertices determines the same single plane containing the quadrilateral $ABCD$. Thus, there is exactly 1 plane.
+
+**Application 1 (Tripod Stability in Practice):** Explain why many everyday objects are designed with three legs, such as camera tripods, painting easels, and cooking trivets.
+
+Solution for Application 1:
+• According to Axiom 2, any three non-collinear points uniquely define a plane.
+• The three tips of a tripod constitute three non-collinear points, so they are guaranteed to lie simultaneously in a single plane (the ground surface). Consequently, a three-legged base never wobbles, even on uneven terrain.
+
+## Methods of Specifying a Plane and Finding Intersection Lines
+
+<Youtube url="https://www.youtube.com/watch?v=example_xac_dinh_mat_phang_giao_tuyen"/>
+
+### a) Three Ways to Uniquely Determine a Plane
+
+A plane is uniquely determined if given:
+1\. Three non-collinear points: denoted by $(ABC)$;
+2\. A line and a point not belonging to that line: denoted by $\text{plane}(A, d)$;
+3\. Two intersecting straight lines: denoted by $\text{plane}(a, b)$.
+
+### b) Method for Finding the Intersection Line of Two Planes
+
+Intersection Line Method:
+To determine the line of intersection of two distinct planes, identify two distinct common points belonging to both planes. The straight line passing through these two common points is their intersection line.
+
+**Example 3:** Given a triangle $ABC$ and a point $S \notin (ABC)$. Let $M, N$ be the midpoints of $AB, AC$, respectively.
+a) Identify a common point of the two planes $(SBN)$ and $(SCM)$ distinct from $S$.
+b) Does the intersection line of $(SBN)$ and $(SCM)$ pass through the centroid of triangle $ABC$?
+
+Solution for Example 3:
+• a) In the plane $(ABC)$, medians $BN$ and $CM$ intersect at the centroid $G$ of triangle $ABC$.
+  Since $G \in BN \subset (SBN) \Rightarrow G \in (SBN)$, and $G \in CM \subset (SCM) \Rightarrow G \in (SCM)$.
+  Hence, $G$ is a second common point distinct from $S$ shared by $(SBN)$ and $(SCM)$.
+• b) Because planes $(SBN)$ and $(SCM)$ share two distinct points $S$ and $G$, their line of intersection is the line $SG$. This line passes through the centroid $G$ of triangle $ABC$.
+
+**Practice 3:** In Example 3, determine the intersection line of the two planes $(SBM)$ and $(SCN)$.
+
+Solution for Practice 3:
+• Since $M \in AB$, plane $(SBM)$ is identical to plane $(SAB)$.
+• Similarly, since $N \in AC$, plane $(SCN)$ is identical to plane $(SAC)$.
+• The two planes $(SAB)$ and $(SAC)$ share two distinct points $S$ and $A$. Thus, their intersection line is the line $SA$.
+
+**Example 4:** Given two intersecting lines $a$ and $b$ meeting at point $M$, and a point $S \notin \text{plane}(a, b)$. Determine the line of intersection of $\text{plane}(S, a)$ and $\text{plane}(S, b)$.
+
+Solution for Example 4:
+• Point $S$ is the first common point of $\text{plane}(S, a)$ and $\text{plane}(S, b)$.
+• Since $M = a \cap b \Rightarrow M \in a \subset \text{plane}(S, a)$ and $M \in b \subset \text{plane}(S, b)$, point $M$ is a second common point.
+• Consequently, the line of intersection is the line $SM$.
+
+## Pyramids and Tetrahedra
+
+<Youtube url="https://www.youtube.com/watch?v=example_hinh_chop_hinh_tu_dien"/>
+
+### a) Definitions of Pyramids and Tetrahedra
+
+Pyramid $S.A_1A_2\dots A_n$:
+• Given a convex polygon $A_1A_2\dots A_n$ in a plane and a point $S$ outside that plane. Connecting $S$ to each vertex of the polygon forms $n$ triangular faces $SA_1A_2, SA_2A_3, \dots, SA_nA_1$.
+• The point $S$ is the apex (vertex); polygon $A_1A_2\dots A_n$ is the base; the triangles $SA_iA\_{i+1}$ are lateral faces; segments $SA_i$ are lateral edges; segments $A_iA\_{i+1}$ are base edges.
+
+Tetrahedron $ABCD$:
+• Given four non-coplanar points $A, B, C, D$. The polyhedron bounded by the four triangles $ABC, ACD, ABD, BCD$ is called the tetrahedron $ABCD$.
+• The points $A, B, C, D$ are vertices; segments $AB, BC, CD, DA, AC, BD$ are edges; the four triangles are faces.
+• Two edges without a shared vertex are called opposite edges (e.g., $AB$ and $CD$, $AC$ and $BD$, $AD$ and $BC$).
+• A tetrahedron whose four faces are all equilateral triangles is called a regular tetrahedron.
+
+### b) Method for Finding the Intersection Point of a Line and a Plane
+
+Procedure to find the intersection point of line $d$ and plane $(P)$:
+• Find an auxiliary plane $(Q)$ containing line $d$.
+• Find the intersection line $a = (P) \cap (Q)$.
+• In plane $(Q)$, locate the intersection point $I = d \cap a$. Then $I$ is the intersection point of line $d$ and plane $(P)$.
+
+**Example 6:** Given a tetrahedron $ABCD$, point $E$ in the interior of triangle $BCD$, and point $F$ lying between $A$ and $E$. Determine the intersection point of line $BF$ with plane $(ACD)$.
+
+Solution for Example 6:
+• In plane $(BCD)$, extend line $BE$ to intersect edge $CD$ at point $M$.
+• Consider the auxiliary plane $(ABM)$, which contains line $BF$ (since $A, B, E, F, M \in (ABM)$).
+• The line of intersection of $(ABM)$ and $(ACD)$ is line $AM$ (since $A$ and $M$ are shared points).
+• In plane $(ABM)$, line $BF$ intersects line $AM$ at point $N$.
+• Since $N \in AM \subset (ACD)$, point $N$ is the intersection of line $BF$ with plane $(ACD)$.
+
+**Practice 6:** In Example 6, determine the intersection point of line $DF$ with plane $(ABC)$.
+
+Solution for Practice 6:
+• In plane $(BCD)$, extend $DE$ to intersect edge $BC$ at point $K$.
+• Plane $(ADK)$ contains point $E$, and hence contains point $F \in AE$. Thus, line $DF$ lies in plane $(ADK)$.
+• The intersection line of $(ADK)$ and $(ABC)$ is line $AK$ (since $A$ and $K$ are shared by both planes).
+• In plane $(ADK)$, line $DF$ intersects line $AK$ at point $I$.
+• Since $I \in AK \subset (ABC)$, point $I$ is the intersection of line $DF$ with plane $(ABC)$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application 2 (Magnetic Door Catch):** Explain why a door is held completely stationary when engaged by a magnetic door stop mounted to the floor or wall.
+
+Solution for Application 2:
+• The door hinges define a fixed rotation axis (a straight line passing through two hinge points).
+• When the door contacts the magnet, the catch provides an additional fixed point located off the hinge line.
+• By the second method of specifying a plane, a straight line and an external point uniquely define a single plane. Consequently, the plane of the door leaf is locked in position, preventing vibration and swinging.
+
+**Exercise 4.7 (Three-Finger Tray Holding Rule):** In the hospitality industry, waitstaff are trained to balance serving trays with at least three fingertips. Explain the geometric rationale.
+
+Solution for Exercise 4.7:
+• The bottom surface of a serving tray forms a flat plane.
+• By spatial geometric axioms, three non-collinear points uniquely determine a single supporting plane.
+• Three fingertips provide three non-collinear support points, creating a unique equilibrium plane that ensures the tray remains steady and does not tilt or spill.
+
+**Exercise 4.8 (Guillotine Paper Cutter):** A guillotine paper trimmer consists of a flat cutting board and a hinged cutting blade pivoted at one corner. Why does the blade always produce a perfectly straight cut across the paper?
+
+Solution for Exercise 4.8:
+• The flat surface of the cutting table defines a horizontal plane $(P)$.
+• As the cutting blade sweeps downward around its fixed pivot axis, it sweeps out a planar surface $(Q)$.
+• By Axiom 5, the intersection of two distinct planes $(P)$ and $(Q)$ is always a straight line. Therefore, the cutting boundary formed on the paper is always a straight line.
+
+### b) Detailed Section Exercises
+
+**Exercise 4.1:** In space, given two lines $a, b$ and a plane $(P)$. Which of the following propositions are true?
+a) If line $a$ contains one point lying in $(P)$, then line $a$ lies in $(P)$.
+b) If line $a$ contains two distinct points lying in $(P)$, then line $a$ lies in $(P)$.
+c) If lines $a$ and $b$ both lie in $(P)$, then their intersection point (if it exists) also lies in $(P)$.
+d) If line $a$ lies in $(P)$ and intersects line $b$, then line $b$ lies in $(P)$.
+
+Solution for Exercise 4.1:
+• Proposition b) is true (by Axiom 4).
+• Proposition c) is true (if $M = a \cap b$ and $a, b \subset (P)$, then $M \in a \subset (P) \Rightarrow M \in (P)$).
+• Proposition a) is false (a line may pierce plane $(P)$ at a single point without lying in $(P)$).
+• Proposition d) is false (line $b$ may intersect line $a$ at a single point and pierce plane $(P)$).
+
+**Exercise 4.2:** Given a triangle $ABC$ and a point $S \notin (ABC)$. Let $D, E$ be points on edges $SA, SB$, respectively ($D, E \ne S$).
+a) Does line $DE$ lie in plane $(SAB)$?
+b) Suppose $DE$ intersects $AB$ at $F$. Prove that $F$ is a common point of planes $(SAB)$ and $(CDE)$.
+
+Solution for Exercise 4.2:
+• a) Since $D \in SA \subset (SAB)$ and $E \in SB \subset (SAB)$, line $DE$ contains two distinct points lying in plane $(SAB)$. By Axiom 4, $DE \subset (SAB)$.
+• b) Let $F = DE \cap AB$:
+  + Since $F \in AB \subset (SAB) \Rightarrow F \in (SAB)$;
+  + Since $F \in DE \subset (CDE) \Rightarrow F \in (CDE)$.
+  Therefore, $F$ is a common point belonging to both planes $(SAB)$ and $(CDE)$.
+
+**Exercise 4.3:** Given a plane $(P)$ and two lines $a, b \subset (P)$. A third line $c$ intersects $a$ and $b$ at two distinct points. Prove that line $c$ lies in plane $(P)$.
+
+Solution for Exercise 4.3:
+• Let $A = c \cap a$ and $B = c \cap b$ with $A \ne B$.
+• Since $A \in a \subset (P) \Rightarrow A \in (P)$, and $B \in b \subset (P) \Rightarrow B \in (P)$.
+• Straight line $c$ contains two distinct points $A$ and $B$ belonging to plane $(P)$. By Axiom 4, line $c$ lies entirely in plane $(P)$ ($c \subset (P)$).
+
+**Exercise 4.4:** Given a quadrangular pyramid $S.ABCD$, and let $M$ be a point on edge $SC$ ($M \ne S, C$). Suppose lines $AB$ and $CD$ intersect at point $N$. Prove that line $MN$ is the line of intersection of planes $(ABM)$ and $(SCD)$.
+
+Solution for Exercise 4.4:
+• Considering point $M$: $M \in (ABM)$ by definition; and $M \in SC \subset (SCD) \Rightarrow M \in (SCD)$. Thus, $M$ is a first common point.
+• Considering point $N = AB \cap CD$:
+  + $N \in AB \subset (ABM) \Rightarrow N \in (ABM)$;
+  + $N \in CD \subset (SCD) \Rightarrow N \in (SCD)$.
+  Thus, $N$ is a second distinct common point.
+• Therefore, the intersection line of planes $(ABM)$ and $(SCD)$ is line $MN$.
+
+**Exercise 4.5:** Given a pyramid $S.ABCD$ and a point $E$ on edge $SA$ ($E \ne S, A$). In plane $(ABCD)$, line $d$ intersects edges $CB, CD$ at $M, N$ and intersects rays $AB, AD$ at $P, Q$, respectively.
+a) Find the intersection points of $\text{plane}(E, d)$ with edges $SB, SD$.
+b) Determine the traces (intersection lines) of $\text{plane}(E, d)$ with the faces of the pyramid.
+
+Solution for Exercise 4.5:
+• a) Consider plane $(SAB)$, which contains point $E$ and ray $AB$. Point $P = d \cap AB \Rightarrow P \in \text{plane}(E, d)$ and $P \in (SAB)$.
+  In plane $(SAB)$, segment $EP$ intersects edge $SB$ at point $I$. Thus, $I = SB \cap \text{plane}(E, d)$.
+  Similarly, in plane $(SAD)$, segment $EQ$ intersects edge $SD$ at point $K$. Thus, $K = SD \cap \text{plane}(E, d)$.
+• b) The intersection lines with the faces of the pyramid are:
+  + With face $(SAB)$: line segment $EI$;
+  + With face $(SBC)$: line segment $IM$ (since $I \in SB, M \in BC$);
+  + With base $(ABCD)$: line segment $MN$;
+  + With face $(SCD)$: line segment $NK$ (since $N \in CD, K \in SD$);
+  + With face $(SAD)$: line segment $KE$.
+
+**Exercise 4.6:** Given a tetrahedron $ABCD$. On edges $AC, BC, BD$, choose points $M, N, P$ such that $AM = CM, BN = CN, BP = 2DP$.
+a) Determine the intersection point of line $CD$ with plane $(MNP)$.
+b) Determine the line of intersection of planes $(ACD)$ and $(MNP)$.
+
+Solution for Exercise 4.6:
+• a) In triangle $BCD$, point $N \in BC$ (with $BN = CN$) and $P \in BD$ (with $BP = 2DP$).
+  Since $\frac{BN}{BC} = \frac{1}{2} \ne \frac{BP}{BD} = \frac{2}{3}$, line $NP$ is not parallel to $CD$.
+  In plane $(BCD)$, extend $NP$ to intersect line $CD$ at point $K$.
+  Since $K \in NP \subset (MNP)$, point $K$ is the intersection of line $CD$ with plane $(MNP)$.
+• b) Examining planes $(ACD)$ and $(MNP)$:
+  + Point $M$ is the midpoint of $AC \Rightarrow M \in AC \subset (ACD)$ and $M \in (MNP)$, so $M$ is a first common point.
+  + Point $K = NP \cap CD \Rightarrow K \in CD \subset (ACD)$ and $K \in NP \subset (MNP)$, so $K$ is a second common point.
+  Consequently, the intersection line of $(ACD)$ and $(MNP)$ is line $MK$.

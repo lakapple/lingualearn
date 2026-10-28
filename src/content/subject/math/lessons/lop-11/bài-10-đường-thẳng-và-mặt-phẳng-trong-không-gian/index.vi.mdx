@@ -1,0 +1,266 @@
+---
+title: 'Bài 10: Đường thẳng và mặt phẳng trong không gian.'
+description: Hệ thống lý thuyết bài Đường thẳng và mặt phẳng trong không gian cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Điểm đồng phẳng
+  - điểm không đồng phẳng
+  - Giao tuyến của hai mặt phẳng
+  - tứ diện đều
+  - hình tứ diện
+  - giao điểm của đường thẳng và mặt phẳng
+  - Hình chóp (chóp tam giác, chóp tứ giác)
+grade: 11
+order: 10
+updatedDate: 2026-10-28T16:41:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Mặt phẳng, điểm thuộc mặt phẳng, điểm không thuộc mặt phẳng
+
+·       Điểm đồng phẳng, điểm không đồng phẳng
+
+·       Giao tuyến của hai mặt phẳng, giao điểm của đường thẳng và mặt phẳng
+
+·       Hình chóp (chóp tam giác, chóp tứ giác), hình tứ diện, tứ diện đều
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết các quan hệ liên thuộc cơ bản giữa điểm, đường thẳng và mặt phẳng trong không gian.
+
+·       Nắm vững các tính chất thừa nhận và mô tả thành thạo ba cách xác định mặt phẳng.
+
+·       Phương pháp xác định giao tuyến của hai mặt phẳng và giao điểm của đường thẳng với mặt phẳng.
+
+·       Nhận biết cấu tạo, các yếu tố đặc trưng của hình chóp và hình tứ diện.
+
+·       Giải thích và vận dụng các tính chất không gian vào các hiện tượng thực tế (kiềng ba chân, hít cửa nam châm, quy tắc bưng khay, bàn cắt giấy).
+
+## Khái niệm mở đầu và các tính chất thừa nhận
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_tinh_chat_hinh_khong_gian"/>
+
+### a) Khái niệm mặt phẳng và biểu diễn hình không gian
+
+Khái niệm mặt phẳng:
+• Mặt bảng, màn hình máy tính hay mặt nước lúc tĩnh lặng là hình ảnh một phần của mặt phẳng. Mặt phẳng không có bề dày và mở rộng không giới hạn.
+• Để biểu diễn mặt phẳng, ta thường dùng hình bình hành hoặc một góc, kí hiệu bằng chữ cái in hoa hoặc chữ Hy Lạp đặt trong dấu ngoặc: $(P), (Q), (\alpha), (\beta), \dots$
+• Quan hệ liên thuộc: Điểm $A$ thuộc mặt phẳng $(P)$ kí hiệu là $A \in (P)$; điểm $B$ không thuộc mặt phẳng $(P)$ kí hiệu là $B \notin (P)$.
+
+Quy tắc biểu diễn hình không gian lên mặt phẳng:
+1\. Đường thẳng biểu diễn thành đường thẳng, đoạn thẳng thành đoạn thẳng.
+2\. Hai đường thẳng song song biểu diễn thành hai đường thẳng song song; hai đường thẳng cắt nhau biểu diễn thành hai đường thẳng cắt nhau.
+3\. Giữ nguyên quan hệ liên thuộc giữa điểm và đường thẳng.
+4\. Dùng nét vẽ liền (—) để biểu diễn cho các đường nhìn thấy và nét đứt đoạn (---) cho các đường bị che khuất.
+
+### b) Các tính chất thừa nhận của hình học không gian
+
+Hệ thống các tính chất thừa nhận:
+• Tính chất 1: Có một và chỉ một đường thẳng đi qua hai điểm phân biệt.
+• Tính chất 2: Có một và chỉ một mặt phẳng đi qua ba điểm không thẳng hàng.
+  (Mặt phẳng qua 3 điểm không thẳng hàng $A, B, C$ kí hiệu là $(ABC)$).
+• Tính chất 3: Tồn tại bốn điểm không cùng thuộc một mặt phẳng (bốn điểm không đồng phẳng).
+• Tính chất 4: Nếu một đường thẳng có hai điểm phân biệt cùng thuộc một mặt phẳng thì mọi điểm của đường thẳng đều thuộc mặt phẳng đó ($d \subset (P)$).
+• Tính chất 5: Nếu hai mặt phẳng phân biệt có một điểm chung thì chúng có một đường thẳng chung duy nhất chứa tất cả các điểm chung của hai mặt phẳng đó (đường thẳng này gọi là giao tuyến: $d = (P) \cap (Q)$).
+• Tính chất 6: Trên mỗi mặt phẳng, tất cả các kết quả đã biết trong hình học phẳng đều đúng.
+
+**Ví dụ 1:** Cho bốn điểm $A, B, C, D$ không đồng phẳng. Có bao nhiêu mặt phẳng đi qua ba trong số bốn điểm đã cho?
+
+Lời giải Ví dụ 1:
+• Cứ ba điểm không thẳng hàng xác định duy nhất một mặt phẳng.
+• Từ bốn điểm $A, B, C, D$ không đồng phẳng, có đúng 4 mặt phẳng tạo thành: $(ABC), (ABD), (ACD), (BCD)$.
+
+**Luyện tập 1:** Cho tứ giác $ABCD$. Có bao nhiêu mặt phẳng đi qua ba trong số bốn đỉnh của tứ giác đó?
+
+Lời giải Luyện tập 1:
+• Vì $ABCD$ là tứ giác nên bốn điểm $A, B, C, D$ cùng nằm trong một mặt phẳng (đồng phẳng).
+• Do đó các bộ ba điểm $(A, B, C), (A, C, D), (A, B, D), (B, C, D)$ đều cùng xác định một mặt phẳng duy nhất là mặt phẳng chứa tứ giác $ABCD$. Vậy có đúng 1 mặt phẳng.
+
+**Vận dụng 1 (Kiềng ba chân trong thực tế):** Giải thích tại sao trong thực tiễn nhiều đồ vật được thiết kế 3 chân như chân máy ảnh, giá đỡ tranh, kiềng ba chân?
+
+Lời giải Vận dụng 1:
+• Theo Tính chất 2, ba điểm không thẳng hàng xác định một mặt phẳng duy nhất.
+• Ba đầu mút chân của kiềng tạo thành 3 điểm không thẳng hàng, do đó chúng luôn cùng nằm trên một mặt phẳng (mặt đất), giúp đồ vật luôn đứng vững vàng và không bị bập bênh ngay cả trên mặt sàn không bằng phẳng.
+
+## Cách xác định một mặt phẳng và tìm giao tuyến
+
+<Youtube url="https://www.youtube.com/watch?v=example_xac_dinh_mat_phang_giao_tuyen"/>
+
+### a) Ba cách xác định mặt phẳng
+
+Một mặt phẳng được hoàn toàn xác định nếu biết:
+1\. Nó đi qua ba điểm không thẳng hàng: kí hiệu $(ABC)$.
+2\. Nó đi qua một điểm và chứa một đường thẳng không đi qua điểm đó: kí hiệu $\text{mp}(A, d)$.
+3\. Nó chứa hai đường thẳng cắt nhau: kí hiệu $\text{mp}(a, b)$.
+
+### b) Phương pháp tìm giao tuyến của hai mặt phẳng
+
+Quy tắc tìm giao tuyến:
+Để tìm giao tuyến của hai mặt phẳng phân biệt, ta tìm hai điểm chung phân biệt của hai mặt phẳng đó. Đường thẳng đi qua hai điểm chung chính là giao tuyến cần tìm.
+
+**Ví dụ 3:** Cho tam giác $ABC$ và điểm $S \notin (ABC)$. Gọi $M, N$ lần lượt là trung điểm của $AB, AC$.
+a) Chỉ ra một điểm chung khác $S$ của hai mặt phẳng $(SBN)$ và $(SCM)$.
+b) Giao tuyến của $(SBN)$ và $(SCM)$ có đi qua trọng tâm tam giác $ABC$ không?
+
+Lời giải Ví dụ 3:
+• a) Trong mặt phẳng $(ABC)$, hai đường trung tuyến $BN$ và $CM$ cắt nhau tại trọng tâm $G$ của tam giác $ABC$.
+  Vì $G \in BN \subset (SBN)$ nên $G \in (SBN)$; vì $G \in CM \subset (SCM)$ nên $G \in (SCM)$.
+  Vậy $G$ là một điểm chung thứ hai khác $S$ của $(SBN)$ và $(SCM)$.
+• b) Vì hai mặt phẳng $(SBN)$ và $(SCM)$ có hai điểm chung là $S$ và $G$, nên giao tuyến của chúng là đường thẳng $SG$. Đường thẳng này đi qua trọng tâm $G$ của tam giác $ABC$.
+
+**Luyện tập 3:** Trong Ví dụ 3, hãy xác định giao tuyến của hai mặt phẳng $(SBM)$ và $(SCN)$.
+
+Lời giải Luyện tập 3:
+• Ta có $M \in AB \Rightarrow (SBM)$ chính là mặt phẳng $(SAB)$.
+• Tương tự $N \in AC \Rightarrow (SCN)$ chính là mặt phẳng $(SAC)$.
+• Hai mặt phẳng $(SAB)$ và $(SAC)$ có hai điểm chung phân biệt là $S$ và $A$. Vậy giao tuyến của chúng là đường thẳng $SA$.
+
+**Ví dụ 4:** Cho hai đường thẳng cắt nhau $a, b$ tại điểm $M$ và điểm $S \notin \text{mp}(a, b)$. Xác định giao tuyến của $\text{mp}(S, a)$ và $\text{mp}(S, b)$.
+
+Lời giải Ví dụ 4:
+• Điểm $S$ là điểm chung thứ nhất của $\text{mp}(S, a)$ và $\text{mp}(S, b)$.
+• Điểm $M = a \cap b \Rightarrow M \in a \subset \text{mp}(S, a)$ và $M \in b \subset \text{mp}(S, b)$, do đó $M$ là điểm chung thứ hai.
+• Vậy giao tuyến cần tìm là đường thẳng $SM$.
+
+## Hình chóp và hình tứ diện
+
+<Youtube url="https://www.youtube.com/watch?v=example_hinh_chop_hinh_tu_dien"/>
+
+### a) Định nghĩa hình chóp và hình tứ diện
+
+Hình chóp $S.A_1A_2\dots A_n$:
+• Cho đa giác lồi $A_1A_2\dots A_n$ nằm trong mặt phẳng và điểm $S$ nằm ngoài mặt phẳng đó. Nối $S$ với các đỉnh của đa giác đáy.
+• Điểm $S$: đỉnh; đa giác $A_1A_2\dots A_n$: mặt đáy; các tam giác $SA_1A_2, SA_2A_3, \dots$: các mặt bên; các đoạn thẳng $SA_i$: cạnh bên; các đoạn thẳng $A_iA\_{i+1}$: cạnh đáy.
+
+Hình tứ diện $ABCD$:
+• Cho bốn điểm $A, B, C, D$ không đồng phẳng. Hình gồm bốn tam giác $ABC, ACD, ABD, BCD$ gọi là hình tứ diện $ABCD$.
+• Bốn điểm $A, B, C, D$ là các đỉnh; sáu đoạn thẳng $AB, BC, CD, DA, AC, BD$ là các cạnh; bốn tam giác là bốn mặt.
+• Hai cạnh không có đỉnh chung gọi là hai cạnh đối diện (ví dụ $AB$ và $CD$, $AC$ và $BD$, $AD$ và $BC$).
+• Tứ diện có bốn mặt là các tam giác đều được gọi là hình tứ diện đều.
+
+### b) Phương pháp tìm giao điểm của đường thẳng và mặt phẳng
+
+Quy tắc tìm giao điểm đường thẳng $d$ và mặt phẳng $(P)$:
+• Tìm một mặt phẳng phụ $(Q)$ chứa đường thẳng $d$.
+• Tìm giao tuyến $a = (P) \cap (Q)$.
+• Trong mặt phẳng $(Q)$, tìm giao điểm $I = d \cap a$. Khi đó $I$ chính là giao điểm của đường thẳng $d$ và mặt phẳng $(P)$.
+
+**Ví dụ 6:** Cho tứ diện $ABCD$, $E$ nằm trong tam giác $BCD$, $F$ nằm giữa $A$ và $E$. Xác định giao điểm của đường thẳng $BF$ và mặt phẳng $(ACD)$.
+
+Lời giải Ví dụ 6:
+• Trong mặt phẳng $(BCD)$, nối $BE$ cắt $CD$ tại $M$.
+• Xét mặt phẳng $(ABM)$ chứa đường thẳng $BF$ (vì $A, B, E, F, M \in (ABM)$).
+• Giao tuyến của $(ABM)$ và $(ACD)$ là đường thẳng $AM$ (vì có hai điểm chung là $A$ và $M$).
+• Trong tam giác $ABM$, gọi $N = BF \cap AM$.
+• Vì $N \in AM \subset (ACD)$, nên $N$ chính là giao điểm của đường thẳng $BF$ và mặt phẳng $(ACD)$.
+
+**Luyện tập 6:** Trong Ví dụ 6, xác định giao điểm của đường thẳng $DF$ và mặt phẳng $(ABC)$.
+
+Lời giải Luyện tập 6:
+• Trong mặt phẳng $(BCD)$, kéo dài $DE$ cắt cạnh $BC$ tại điểm $K$.
+• Mặt phẳng $(ADK)$ chứa điểm $E$, do đó chứa điểm $F \in AE$. Vậy đường thẳng $DF$ nằm trong mặt phẳng $(ADK)$.
+• Giao tuyến của $(ADK)$ và $(ABC)$ là đường thẳng $AK$ (vì $A$ và $K$ đều thuộc cả hai mặt phẳng).
+• Trong mặt phẳng $(ADK)$, đường thẳng $DF$ cắt $AK$ tại điểm $I$.
+• Do $I \in AK \subset (ABC)$, nên $I$ chính là giao điểm của đường thẳng $DF$ với mặt phẳng $(ABC)$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 2 (Hít cửa nam châm):** Hãy giải thích tại sao khi cửa được hút tới vị trí của nam châm gắn tường/sàn thì cánh cửa được giữ cố định?
+
+Lời giải Vận dụng 2:
+• Trục bản lề của cánh cửa là một đường thẳng cố định đi qua hai bản lề.
+• Cục hít nam châm cung cấp thêm một điểm cố định nằm ngoài trục bản lề khi cửa chạm vào.
+• Theo cách xác định mặt phẳng thứ hai: Một đường thẳng và một điểm không thuộc đường thẳng đó xác định duy nhất một mặt phẳng. Do đó mặt phẳng chứa cánh cửa hoàn toàn bị khóa cố định, ngăn cửa chuyển động rung lắc.
+
+**Bài 4.7 (Quy tắc bưng khay bằng ít nhất 3 ngón tay):** Tại các nhà hàng, khách sạn, nhân viên phục vụ bàn bưng khay thức ăn bằng ít nhất 3 ngón tay. Giải thích tại sao.
+
+Lời giải Bài 4.7:
+• Đáy khay thức ăn là một mặt phẳng phẳng.
+• Theo tính chất hình học không gian, có một và chỉ một mặt phẳng đi qua ba điểm không thẳng hàng.
+• Ba đầu ngón tay tiếp xúc với đáy khay tạo thành ba điểm không thẳng hàng, giúp cố định khay trên mặt phẳng đỡ duy nhất, giữ khay thăng bằng vững chắc và không bị nghiêng đổ.
+
+**Bài 4.8 (Bàn cắt giấy):** Bàn cắt giấy gồm mặt bàn phẳng và lưỡi dao cắt có một đầu cố định xoay quanh bản lề. Giải thích tại sao đường cắt luôn là đường thẳng?
+
+Lời giải Bài 4.8:
+• Mặt bàn cắt tạo thành một mặt phẳng $(P)$.
+• Khi lưỡi dao chuyển động xoay quanh trục cố định, lưỡi dao quét tạo thành một mặt phẳng $(Q)$.
+• Theo Tính chất 5, giao tuyến của hai mặt phẳng phân biệt $(P)$ và $(Q)$ luôn là một đường thẳng. Do đó vết cắt của lưỡi dao trên mặt bàn giấy luôn luôn là một đường thẳng.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 4.1:** Trong không gian, cho hai đường thẳng $a, b$ và mặt phẳng $(P)$. Mệnh đề nào sau đây là đúng?
+a) Nếu $a$ chứa một điểm nằm trong $(P)$ thì $a$ nằm trong $(P)$.
+b) Nếu $a$ chứa hai điểm phân biệt thuộc $(P)$ thì $a$ nằm trong $(P)$.
+c) Nếu $a$ và $b$ cùng nằm trong $(P)$ thì giao điểm (nếu có) của $a$ và $b$ cũng nằm trong $(P)$.
+d) Nếu $a$ nằm trong $(P)$ và $a$ cắt $b$ thì $b$ nằm trong $(P)$.
+
+Lời giải Bài 4.1:
+• Mệnh đề b) đúng (theo Tính chất 4).
+• Mệnh đề c) đúng (nếu $M = a \cap b$ và $a, b \subset (P)$ thì $M \in a \subset (P) \Rightarrow M \in (P)$).
+• Mệnh đề a) sai (đường thẳng có thể cắt $(P)$ tại 1 điểm duy nhất mà không nằm trong $(P)$).
+• Mệnh đề d) sai ($b$ có thể đâm xuyên qua $(P)$ tại điểm thuộc $a$).
+
+**Bài 4.2:** Cho tam giác $ABC$ và điểm $S \notin (ABC)$. $D, E$ lần lượt thuộc $SA, SB$ ($D, E \ne S$).
+a) Đường thẳng $DE$ có nằm trong mặt phẳng $(SAB)$ không?
+b) Giả sử $DE$ cắt $AB$ tại $F$. Chứng minh $F$ là điểm chung của $(SAB)$ và $(CDE)$.
+
+Lời giải Bài 4.2:
+• a) Vì $D \in SA \subset (SAB)$ và $E \in SB \subset (SAB)$, nên đường thẳng $DE$ có hai điểm phân biệt thuộc $(SAB)$, suy ra $DE \subset (SAB)$.
+• b) Điểm $F = DE \cap AB$:
+  + Vì $F \in AB \subset (SAB) \Rightarrow F \in (SAB)$;
+  + Vì $F \in DE \subset (CDE) \Rightarrow F \in (CDE)$.
+  Vậy $F$ là điểm chung của hai mặt phẳng $(SAB)$ và $(CDE)$.
+
+**Bài 4.3:** Cho mặt phẳng $(P)$ và hai đường thẳng $a, b \subset (P)$. Đường thẳng $c$ cắt $a, b$ tại hai điểm phân biệt. Chứng minh $c \subset (P)$.
+
+Lời giải Bài 4.3:
+• Gọi $A = c \cap a$ và $B = c \cap b$ với $A \ne B$.
+• Vì $A \in a \subset (P) \Rightarrow A \in (P)$; vì $B \in b \subset (P) \Rightarrow B \in (P)$.
+• Đường thẳng $c$ đi qua hai điểm phân biệt $A, B$ cùng thuộc mặt phẳng $(P)$, theo Tính chất 4 suy ra $c \subset (P)$.
+
+**Bài 4.4:** Cho hình chóp tứ giác $S.ABCD$, $M \in SC$ ($M \ne S, C$). Giả sử $AB$ và $CD$ cắt nhau tại $N$. Chứng minh $MN$ là giao tuyến của $(ABM)$ và $(SCD)$.
+
+Lời giải Bài 4.4:
+• Xét điểm $M$: $M \in (ABM)$ hiển nhiên; và $M \in SC \subset (SCD) \Rightarrow M \in (SCD)$. Vậy $M$ là điểm chung thứ nhất.
+• Xét điểm $N = AB \cap CD$:
+  + $N \in AB \subset (ABM) \Rightarrow N \in (ABM)$;
+  + $N \in CD \subset (SCD) \Rightarrow N \in (SCD)$.
+  Vậy $N$ là điểm chung thứ hai.
+• Do đó giao tuyến của hai mặt phẳng $(ABM)$ và $(SCD)$ chính là đường thẳng $MN$.
+
+**Bài 4.5:** Cho hình chóp $S.ABCD$, $E \in SA$ ($E \ne S, A$). Trong $(ABCD)$, đường thẳng $d$ cắt $CB, CD$ tại $M, N$ và cắt các tia $AB, AD$ tại $P, Q$.
+a) Xác định giao điểm của $\text{mp}(E, d)$ với các cạnh $SB, SD$.
+b) Xác định giao tuyến của $\text{mp}(E, d)$ với các mặt của hình chóp.
+
+Lời giải Bài 4.5:
+• a) Xét mặt phẳng $(SAB)$ chứa điểm $E$ và tia $AB$. Điểm $P = d \cap AB \Rightarrow P \in \text{mp}(E, d)$ và $P \in (SAB)$.
+  Trong mặt phẳng $(SAB)$, nối $EP$ cắt cạnh $SB$ tại điểm $I$. Khi đó $I = SB \cap \text{mp}(E, d)$.
+  Tương tự trong mặt phẳng $(SAD)$, nối $EQ$ cắt cạnh $SD$ tại điểm $K$. Khi đó $K = SD \cap \text{mp}(E, d)$.
+• b) Giao tuyến của $\text{mp}(E, d)$ với các mặt của hình chóp:
+  + Với mặt $(SAB)$: là đoạn thẳng $EI$;
+  + Với mặt $(SBC)$: là đoạn thẳng $IM$ (vì $I \in SB, M \in BC$);
+  + Với mặt đáy $(ABCD)$: là đoạn thẳng $MN$;
+  + Với mặt $(SCD)$: là đoạn thẳng $NK$ (vì $N \in CD, K \in SD$);
+  + Với mặt $(SAD)$: là đoạn thẳng $KE$.
+
+**Bài 4.6:** Cho tứ diện $ABCD$. Trên các cạnh $AC, BC, BD$ lần lượt lấy $M, N, P$ sao cho $AM = CM, BN = CN, BP = 2DP$.
+a) Xác định giao điểm của đường thẳng $CD$ và mặt phẳng $(MNP)$.
+b) Xác định giao tuyến của hai mặt phẳng $(ACD)$ và $(MNP)$.
+
+Lời giải Bài 4.6:
+• a) Xét trong tam giác $BCD$, điểm $N \in BC$ (với $BN = CN$) và $P \in BD$ (với $BP = 2DP$).
+  Vì $\frac{BN}{BC} = \frac{1}{2} \ne \frac{BP}{BD} = \frac{2}{3}$, nên đường thẳng $NP$ không song song với $CD$.
+  Trong mặt phẳng $(BCD)$, kéo dài $NP$ cắt $CD$ tại điểm $K$.
+  Vì $K \in NP \subset (MNP)$, nên $K$ chính là giao điểm của đường thẳng $CD$ và mặt phẳng $(MNP)$.
+• b) Xét hai mặt phẳng $(ACD)$ và $(MNP)$:
+  + Điểm $M$ là trung điểm của $AC \Rightarrow M \in AC \subset (ACD)$ và $M \in (MNP)$, nên $M$ là điểm chung thứ nhất.
+  + Điểm $K = NP \cap CD \Rightarrow K \in CD \subset (ACD)$ và $K \in NP \subset (MNP)$, nên $K$ là điểm chung thứ hai.
+  Vậy giao tuyến của $(ACD)$ và $(MNP)$ là đường thẳng $MK$.
