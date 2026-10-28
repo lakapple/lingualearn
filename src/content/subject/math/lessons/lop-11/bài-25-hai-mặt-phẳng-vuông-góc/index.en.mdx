@@ -1,0 +1,122 @@
+---
+title: 'Lesson 25: Perpendicular Planes.'
+description: Theoretical system for the lesson on Perpendicular Planes with illustrative examples.
+tags:
+  - grade 11
+  - Angle between two planes  , , , ,
+  - Perpendicular planes
+  - Dihedral angle
+  - plane angle of a dihedral angle
+  - Right prism
+  - regular prism
+  - regular truncated pyramid
+  - right parallelepiped
+  - regular pyramid
+grade: 11
+order: 26
+updatedDate: 2026-10-28T22:55:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Angle between two planes
+
+·       Perpendicular planes
+
+·       Dihedral angle, plane angle of a dihedral angle
+
+·       Right prism, regular prism, right parallelepiped, regular pyramid, regular truncated pyramid
+
+### **Knowledge and Skills:**
+
+·       Recognize the angle between two planes and perpendicular planes.
+
+·       Determine the conditions for two planes to be perpendicular.
+
+·       Explain the fundamental properties of perpendicular planes.
+
+·       Recognize the plane angle of a dihedral angle and compute the measure of a dihedral angle in simple cases.
+
+·       Explain the fundamental properties of regular pyramids, right prisms, and their special cases.
+
+## Angle Between Two Planes and Perpendicular Planes
+
+<Youtube url="https://www.youtube.com/watch?v=example_hai_mat_phang_vuong_goc"/>
+
+### a) Angle Between Two Planes
+
+Definition: Let $(P)$ and $(Q)$ be two planes. Choose two lines $a$ and $b$ perpendicular to $(P)$ and $(Q)$ respectively. Then the angle between $a$ and $b$ is independent of the positions of $a$ and $b$, and is called the angle between the two planes $(P)$ and $(Q)$.
+Note: If $\varphi$ is the angle between two planes $(P)$ and $(Q)$, then $0^{\circ} \le \varphi \le 90^{\circ}$.
+Geometric Method for Determining the Angle (Theorem): Let two planes $(P)$ and $(Q)$ intersect along the line of intersection $\Delta$. Choose two lines $m$ and $n$ lying in $(P)$ and $(Q)$ respectively, such that both are perpendicular to the line of intersection $\Delta$ at the same point. Then the angle between $(P)$ and $(Q)$ is equal to the angle between $m$ and $n$.
+
+### b) Perpendicular Planes
+
+Definition: Two planes $(P)$ and $(Q)$ are said to be perpendicular to each other if the angle between them is $90^{\circ}$, denoted by $(P) \perp (Q)$.
+Condition for Perpendicular Planes: Two planes are perpendicular if one of them contains a line perpendicular to the other plane.
+
+## Properties of Perpendicular Planes
+
+### a) Fundamental Properties
+
+• If two planes are perpendicular to each other, then any line lying in one plane that is perpendicular to their line of intersection is also perpendicular to the other plane.
+• If two intersecting planes are both perpendicular to a third plane, then their line of intersection is perpendicular to that third plane.
+
+### b) Examples and Practice
+
+**Example 3:** Given a pyramid $S.ABCD$ with a rectangular base and $SA \perp (ABCD)$. Let $B', C', D'$ be the projections of $A$ on $SB, SC, SD$ respectively. Prove that:
+a) $(SBC) \perp (SAB)$, $AB' \perp (SBC)$;
+b) The points $A, B', C', D'$ all lie in the same plane.
+
+Solution to Example 3:
+• a) Since $BC \perp SA$ and $BC \perp AB$, we have $BC \perp (SAB)$. Since $BC \subset (SBC)$, it follows that $(SBC) \perp (SAB)$.
+  The line $AB'$ lies in $(SAB)$ and is perpendicular to $SB$. Moreover, $AB'$ is perpendicular to $BC$ (since $BC \perp (SAB)$), so $AB' \perp (SBC)$.
+• b) From part a, we have $AB' \perp SC$. Similarly, we can prove that $AD' \perp SC$. The lines $AB', AC', AD'$ all pass through $A$ and are perpendicular to $SC$; therefore, they lie in the same plane perpendicular to $SC$ at the foot of the perpendicular dropped from $A$ to $SC$. Thus, the four points $A, B', C', D'$ are coplanar.
+
+## Dihedral Angles and Special Prisms and Pyramids
+
+### a) Dihedral Angles
+
+• Definition: A figure formed by two half-planes $(P)$ and $(Q)$ sharing a common edge $a$ is called a dihedral angle, denoted by $[P, a, Q]$. The line $a$ is called the edge, and the half-planes are called the faces of the dihedral angle.
+• Plane Angle of a Dihedral Angle: From any point $O \in a$, draw two rays $Ox \subset (P)$ and $Oy \subset (Q)$ such that $Ox \perp a$ and $Oy \perp a$. The angle $\widehat{xOy}$ is called the plane angle of the dihedral angle $[P, a, Q]$. The measure of the plane angle of a dihedral angle is defined as the measure of the dihedral angle ($0^{\circ} \le \theta \le 180^{\circ}$).
+
+### b) Right Prisms, Regular Prisms, and Regular Pyramids
+
+• Right Prism: A prism whose lateral edges are perpendicular to the base faces. Its lateral faces are rectangles and are perpendicular to the bases.
+• Regular Prism: A right prism whose bases are regular polygons.
+• Regular Pyramid: A pyramid whose base is a regular polygon and whose lateral edges are equal (the orthogonal projection of the apex on the base is the center of the base polygon).
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Geographic Coordinates - Latitude and Longitude):** Explain the geometric meaning of longitude and latitude on Earth through the angles between meridian planes and the equatorial plane.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 7.16:** Given a pyramid $S.ABC$ with $SA \perp (ABC)$. Let $H$ be the projection of $A$ on $BC$.
+a) Prove that $(SAB) \perp (ABC)$ and $(SAH) \perp (SBC)$;
+b) Suppose triangle $ABC$ is right-angled at $A$, $\widehat{ABC} = 30^{\circ}$, $AC = a$, and $SA = \frac{a\sqrt{3}}{2}$. Calculate the measure of the dihedral angle $[S, BC, A]$.
+
+Solution to Exercise 7.16:
+• a) The plane $(SAB)$ contains $SA$, and $SA \perp (ABC) \implies (SAB) \perp (ABC)$.
+  Since $AH \perp BC$ and $SA \perp BC$, we have $BC \perp (SAH)$. Since $BC \subset (SBC)$, it follows that $(SAH) \perp (SBC)$.
+• b) The plane angle of the dihedral angle $[S, BC, A]$ is $\widehat{SHA}$.
+  Right-angled triangle $ABC$ at $A$ with $\widehat{ABC} = 30^{\circ}$ and $AC = a \implies AB = a\sqrt{3}$ and $BC = 2a$.
+  The altitude length is $AH = \frac{AB \cdot AC}{BC} = \frac{a\sqrt{3} \cdot a}{2a} = \frac{a\sqrt{3}}{2}$.
+  Considering right-angled triangle $SAH$ at $A$ with $SA = \frac{a\sqrt{3}}{2}$ and $AH = \frac{a\sqrt{3}}{2}$, we get $\tan \widehat{SHA} = \frac{SA}{AH} = 1 \implies \widehat{SHA} = 45^{\circ}$.
+
+**Exercise 7.17:** Given a cube $ABCD.A'B'C'D'$ with side length $a$.
+a) Calculate the length of the diagonal of the cube.
+b) Prove that $(ACC'A') \perp (BDD'B')$.
+c) Let $O$ be the center of square $ABCD$. Prove that $\widehat{COC'}$ is the plane angle of the dihedral angle $[C, BD, C']$ and compute its measure.
+
+Solution to Exercise 7.17:
+• a) The diagonal of a cube of side $a$ has length $d = a\sqrt{3}$.
+• b) The plane $(ACC'A')$ contains $AA'$ which is perpendicular to the base $(ABCD)$, and contains $AC$ which is perpendicular to $BD$. Therefore, $(ACC'A') \perp (BDD'B')$.
+• c) The line of intersection of the planes $(CBD)$ and $(CBD')$ is $BD$. We have $CO \perp BD$ (since $ABCD$ is a square) and $C'O \perp BD$ (due to triangle $C'BD$ being isosceles at $C'$ or properties of the cube). Thus, $\widehat{COC'}$ is the plane angle of the dihedral angle $[C, BD, C']$.
+  Considering right-angled triangle $COC'$ at $C'$ (or $C$) with $CC' = a$ and $OC = \frac{a\sqrt{2}}{2}$, we find $\tan \widehat{COC'} = \frac{CC'}{OC} = \frac{a}{a\sqrt{2}/2} = \sqrt{2} \implies \widehat{COC'} \approx 54.7^{\circ}$.
