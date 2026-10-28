@@ -1,0 +1,232 @@
+---
+title: 'Lesson 21:'
+description: Theoretical system for the lesson on …, with illustrative examples
+tags:
+  - grade 11
+  - Exponential equations
+  - logarithmic equations
+  - Exponential inequalities
+  - logarithmic inequalities
+grade: 11
+order: 21
+updatedDate: 2026-10-28T21:59:00
+draft: true
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Exponential equations, logarithmic equations
+
+·       Exponential inequalities, logarithmic inequalities
+
+### **Knowledge and Skills:**
+
+·       Solve simple exponential and logarithmic equations and inequalities.
+
+·       Solve cross-disciplinary or practical problems associated with exponential and logarithmic equations and inequalities (asset depreciation, population growth, radioactive decay, atmospheric pressure).
+
+## Exponential Equations
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_mu"/>
+
+### a) Basic Exponential Equations
+
+Basic exponential equations have the form a^x = b (where 0 < a != 1):
+• If b > 0, the equation has a unique solution x = \log_a b.
+• If b <= 0, the equation has no solution.
+Method of equating bases:
+If 0 < a != 1, then a^u = a^v <=> u = v.
+
+### b) Examples and Practice on Exponential Equations
+
+**Example 1:** Solve the equation: 3^{x+1} = \frac{1}{3^{1-2x}}.
+
+Solution to Example 1:
+• Expressing the right-hand side with base 3, we have \frac{1}{3^{1-2x}} = 3^{-(1-2x)} = 3^{2x-1}.
+• The equation becomes:
+  $$3^{x+1} = 3^{2x-1} \iff x + 1 = 2x - 1 \iff x = 2$$
+• Thus, the equation has a unique solution x = 2.
+
+**Example 2:** Solve the equation: 10^{x-1} = 2,022.
+
+Solution to Example 2:
+• Taking the common logarithm of both sides of the equation, we obtain:
+  $$x - 1 = \log 2,022 \iff x = 1 + \log 2,022$$
+• Thus, the equation has a unique solution x = 1 + \log 2,022.
+
+**Practice 1:** Solve the following equations:
+a) 2^{3x-1} = \frac{1}{2^{x+1}};
+b) 2e^{2x} = 5.
+
+Solution to Practice 1:
+• a) 2^{3x-1} = 2^{-(x+1)} \iff 3x - 1 = -x - 1 \iff 4x = 0 \iff x = 0.
+• b) 2e^{2x} = 5 \iff e^{2x} = \frac{5}{2} \iff 2x = \ln\left(\frac{5}{2}\right) \iff x = \frac{1}{2}\ln\left(\frac{5}{2}\right).
+
+## Logarithmic Equations
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_logarit"/>
+
+### a) Basic Logarithmic Equations
+
+Basic logarithmic equations have the form \log_a x = b (where 0 < a != 1):
+The equation always has a unique solution x = a^b.
+Method of equating bases:
+If u, v > 0 and 0 < a != 1, then \log_a u = \log_a v <=> u = v.
+
+### b) Examples and Practice on Logarithmic Equations
+
+**Example 3:** Solve the equation: 4 + 3\log(2x) = 16.
+
+Solution to Example 3:
+• Existence condition: 2x > 0 <=> x > 0.
+• The equation becomes:
+  $$3\log(2x) = 12 \iff \log(2x) = 4 \iff 2x = 10^4 \iff 2x = 10,000 \iff x = 5,000$$
+• The value x = 5,000 satisfies the condition. Thus, the solution is x = 5,000.
+
+**Example 4:** Solve the equation: \log_3(x + 1) = \log_3(x^2 - 1).
+
+Solution to Example 4:
+• Existence condition: \begin{cases} x + 1 > 0 \\\ x^2 - 1 > 0 \end{cases} \iff \begin{cases} x > -1 \\\ [x > 1 \text{ or } x < -1] \end{cases} \iff x > 1$.
+• The equation is equivalent to:
+  $$x + 1 = x^2 - 1 \iff x^2 - x - 2 = 0 \iff \left[\begin{matrix} x = -1 \\\ x = 2 \end{matrix}\right.$$
+• Comparing with the condition x > 1, only x = 2 is valid.
+• Thus, the equation has a unique solution x = 2.
+
+**Practice 2:** Solve the following equations:
+a) 4 - \log(3 - x) = 3;
+b) \log_2(x + 2) + \log_2(x - 1) = 1.
+
+Solution to Practice 2:
+• a) 4 - \log(3 - x) = 3 \iff \log(3 - x) = 1 \iff 3 - x = 10^1 = 10 \iff x = -7$ (satisfying $3 - x > 0$).
+• b) Condition: x > 1. The equation becomes:
+  $$\log_2[(x + 2)(x - 1)] = 1 \iff (x + 2)(x - 1) = 2^1 = 2$$
+  $$\iff x^2 + x - 2 = 2 \iff x^2 + x - 4 = 0 \iff x = \frac{-1 \pm \sqrt{17}}{2}.$$
+  Combining with the condition x > 1, the unique solution is x = \frac{-1 + \sqrt{17}}{2}.
+
+## Exponential Inequalities
+
+### a) Basic Exponential Inequalities
+
+Basic exponential inequalities have the form a^x > b (or >=, <, <=) with 0 < a != 1:
+• If b <= 0, the solution set is \mathbb{R} (for inequalities > 0).
+• If b > 0, we convert to the same base a^x > a^{\log_a b}:
+  - When a > 1: the solution is x > \log_a b.
+  - When 0 < a < 1: the solution is x < \log_a b$.
+Method of equating bases for exponential functions:
+• If a > 1, then a^u > a^v <=> u > v.
+• If 0 < a < 1, then a^u > a^v <=> u < v.
+
+### b) Examples and Practice on Exponential Inequalities
+
+**Example 5:** Solve the inequality: 16^x > \frac{1}{8}.
+
+Solution to Example 5:
+• Expressing with base 2: 16^x = (2^4)^x = 2^{4x} and \frac{1}{8} = 2^{-3}.
+• The inequality becomes:
+  $$2^{4x} > 2^{-3} \iff 4x > -3 \iff x > -\frac{3}{4}.
+
+**Practice 3:** Solve the following inequalities:
+a) 0{,}1^{2x - 1} \le 0{,}1^{2 - x};
+b) 3 \cdot 2^{x+1} \le 1.
+
+Solution to Practice 3:
+• a) Since the base 0{,}1 < 1, 0{,}1^{2x - 1} \le 0{,}1^{2 - x} \iff 2x - 1 \ge 2 - x \iff 3x \ge 3 \iff x \ge 1$.
+• b) 3 \cdot 2^{x+1} \le 1 \iff 2^{x+1} \le \frac{1}{3} \iff x + 1 \le \log_2\left(\frac{1}{3}\right) = -\log_2 3 \iff x \le -1 - \log_2 3$.
+
+## Logarithmic Inequalities
+
+### a) Basic Logarithmic Inequalities
+
+Basic logarithmic inequalities have the form \log_a x > b (or >=, <, <=) with 0 < a != 1:
+• When a > 1: the solution is x > a^b (combined with condition x > 0).
+• When 0 < a < 1: the solution is 0 < x < a^b$.
+Method of equating bases for logarithms:
+• If a > 1, then \log_a u > \log_a v <=> u > v > 0$.
+• If 0 < a < 1, then \log_a u > \log_a v <=> 0 < u < v$.
+
+### b) Examples and Practice on Logarithmic Inequalities
+
+**Example 7:** Solve the inequality: \log\_{0{,}3}(x + 1) \le \log\_{0{,}3}(2x - 1).
+
+Solution to Example 7:
+• Existence condition: \begin{cases} x + 1 > 0 \\\ 2x - 1 > 0 \end{cases} \iff x > \frac{1}{2}.
+• Since the base 0{,}3 < 1, the inequality is equivalent to:
+  $$x + 1 \ge 2x - 1 \iff x \le 2$$
+• Combining with the condition x > 1/2, the solution is \frac{1}{2} < x \le 2.
+
+**Practice 4:** Solve the following inequalities:
+a) \log\_{\frac{1}{7}}(x + 1) > \log_7(2 - x);
+b) 2\log(2x + 1) > 3$.
+
+Solution to Practice 4:
+• a) Converting to base 7: \log\_{\frac{1}{7}}(x + 1) = -\log_7(x + 1) > \log_7(2 - x) \iff \log_7(x + 1)^{-1} > \log_7(2 - x) \iff \frac{1}{x + 1} > 2 - x$.
+  Combining with condition -1 < x < 2, solving the inequality yields 1 < x < 2.
+• b) Condition: x > -\frac{1}{2}. \log(2x + 1) > \frac{3}{2} \iff 2x + 1 > 10^{\frac{3}{2}} = 10\sqrt{10} \iff x > \frac{10\sqrt{10} - 1}{2}$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Mathematical Modeling
+
+**Application (Automobile Depreciation):** The remaining value of an automobile after $t$ years of use is modeled by V(t) = 780 \cdot (0{,}905)^t (in million VND). After how many years of use will the value of the car be no more than 300 million VND (rounded to the nearest integer)?
+
+Solution to Application:
+• The problem leads to the inequality:
+  $$780 \cdot (0{,}905)^t \le 300 \iff (0{,}905)^t \le \frac{300}{780} = \frac{5}{13}$$
+• Since the base 0{,}905 < 1, we have:
+  $$t \ge \log\_{0{,}905}\left(\frac{5}{13}\right) \approx 9{,}6$$
+• Conclusion: After at least 10 years of use, the value of the car will be no more than 300 million VND.
+
+**Exercise 6.23 (Bank Savings):** Mr. Minh deposits 500 million VND at a constant interest rate of 7.5% per year under compound interest with a 12-month term. The total amount accumulated after n years is A = 500 \cdot (1 + 0{,}075)^n (million VND). Calculate the minimum time required for Mr. Minh to accumulate at least 800 million VND.
+
+Solution to Exercise 6.23:
+• We need to find n such that 500 \cdot (1{,}075)^n \ge 800 \iff (1{,}075)^n \ge \frac{8}{5} = 1{,}6$.
+• Thus: n \ge \log\_{1{,}075} 1{,}6 \approx 7{,}01$.
+• Since n must be an integer number of years, the minimum time is 8 years.
+
+**Exercise 6.24 (Bacterial Growth):** The initial number of bacteria in a culture is 500, with a growth rate of 40% per hour. The number of bacteria N(t) after t hours is estimated by N(t) = 500e^{0{,}4t}. After how many hours of culture will the number of bacteria exceed 80,000?
+
+Solution to Exercise 6.24:
+• We need to find t such that 500e^{0{,}4t} > 80,000 \iff e^{0{,}4t} > 160 \iff 0{,}4t > \ln 160 \iff t > \frac{\ln 160}{0{,}4} \approx \frac{5{,}075}{0{,}4} \approx 12{,}7$ hours.
+• Conclusion: After approximately 13 hours of culture, the number of bacteria will exceed 80,000.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 6.20:** Solve the following equations:
+a) 3^{x-1} = 27;
+b) 100^{2x^2 - 3} = 0{,}1^{2x^2 - 18};
+c) \sqrt{3}e^{3x} = 1;
+d) 5^x = 3^{2x-1}.
+
+Solution to Exercise 6.20:
+• a) 3^{x-1} = 3^3 \iff x - 1 = 3 \iff x = 4$.
+• b) (10^2)^{2x^2 - 3} = (10^{-1})^{2x^2 - 18} \iff 4x^2 - 6 = -2x^2 + 18 \iff 6x^2 = 24 \iff x^2 = 4 \iff x = \pm 2$.
+• c) \sqrt{3}e^{3x} = 1 \iff e^{3x} = \frac{1}{\sqrt{3}} \iff 3x = \ln(3^{-1/2}) = -\frac{1}{2}\ln 3 \iff x = -\frac{\ln 3}{6}$.
+• d) 5^x = 3^{2x-1} \iff x \ln 5 = (2x - 1)\ln 3 \iff x(\ln 5 - 2\ln 3) = -\ln 3 \iff x = \frac{\ln 3}{2\ln 3 - \ln 5} = \frac{\ln 3}{\ln(9/5)}.
+
+**Exercise 6.21:** Solve the following equations:
+a) \log(x + 1) = 2;
+b) 2\log_4 x + \log_2(x - 3) = 2;
+c) \ln x + \ln(x - 1) = \ln 4x;
+d) \log_3(x^2 - 3x + 2) = \log_3(2x - 4).
+
+Solution to Exercise 6.21:
+• a) Condition x > -1. \log(x + 1) = 2 \iff x + 1 = 10^2 = 100 \iff x = 99$ (valid).
+• b) Condition x > 3. Since \log_4 x = \frac{1}{2}\log_2 x = \log_2 \sqrt{x}, the equation becomes \log_2 x + \log_2(x - 3) = 2 \iff x(x - 3) = 4 \iff x^2 - 3x - 4 = 0 \iff x = 4$ (valid) or x = -1 (rejected).
+• c) Condition x > 1. \ln[x(x - 1)] = \ln(4x) \iff x^2 - x = 4x \iff x^2 - 5x = 0 \iff x(x - 5) = 0 \iff x = 5$ (valid) since x = 0 is rejected.
+• d) Condition x > 2. x^2 - 3x + 2 = 2x - 4 \iff x^2 - 5x + 6 = 0 \iff x = 2$ (rejected since x > 2) or x = 3 (valid). Thus x = 3.
+
+**Exercise 6.22:** Solve the following inequalities:
+a) 0{,}1^{2x} > 0{,}1^{4 - 2x};
+b) 2 \cdot 5^{2x-1} \le 3;
+c) \log_3(x + 7) \ge -1;
+d) \log\_{0{,}5}(x + 7) \ge \log\_{0{,}5}(2x - 1).
+
+Solution to Exercise 6.22:
+• a) Base 0{,}1 < 1 \implies 2x < 4 - 2x \iff 4x < 4 \iff x < 1$.
+• b) 5^{2x-1} \le \frac{3}{2} \iff 2x - 1 \le \log_5(1{,}5) \iff x \le \frac{1 + \log_5(1{,}5)}{2}$.
+• c) Condition x > -7. \log_3(x + 7) \ge -1 \iff x + 7 \ge 3^{-1} = \frac{1}{3} \iff x \ge -\frac{20}{3}$ (valid).
+• d) Condition x > \frac{1}{2}. Since base 0{,}5 < 1, we have x + 7 \le 2x - 1 \iff x \ge 8$. Combining with the condition, we get x \ge 8.

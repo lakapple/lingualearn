@@ -1,0 +1,232 @@
+---
+title: 'Bài 21: Phương trình, bất phương trình mũ và lôgarit.'
+description: Hệ thống lý thuyết bài … cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Phương trình mũ
+  - phương trình lôgarit
+  - Bất phương trình mũ
+  - bất phương trình lôgarit
+grade: 11
+order: 21
+updatedDate: 2026-10-28T21:59:00
+draft: true
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Phương trình mũ, phương trình lôgarit
+
+·       Bất phương trình mũ, bất phương trình lôgarit
+
+### **Kiến thức, kĩ năng:**
+
+·       Giải phương trình, bất phương trình mũ và lôgarit ở dạng đơn giản.
+
+·       Giải quyết một số vấn đề liên môn hoặc có liên quan đến thực tiễn gắn với phương trình, bất phương trình mũ và lôgarit (khấu hao tài sản, tăng trưởng dân số, phân rã phóng xạ, áp suất khí quyển).
+
+## Phương trình mũ
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_mu"/>
+
+### a) Phương trình mũ cơ bản
+
+Phương trình mũ cơ bản có dạng $a^x = b$ (với $0 < a \ne 1$):
+• Nếu $b > 0$ thì phương trình có nghiệm duy nhất $x = \log_a b$.
+• Nếu $b \le 0$ thì phương trình vô nghiệm.
+Phương pháp giải bằng cách đưa về cùng cơ số:
+Nếu $0 < a \ne 1$ thì $a^u = a^v \iff u = v$.
+
+### b) Ví dụ và luyện tập về phương trình mũ
+
+**Ví dụ 1:** Giải phương trình: $3^{x+1} = \frac{1}{3^{1-2x}}$.
+
+Lời giải Ví dụ 1:
+• Đưa vế phải về cơ số 3, ta có $\frac{1}{3^{1-2x}} = 3^{-(1-2x)} = 3^{2x-1}$.
+• Phương trình trở thành:
+  $$3^{x+1} = 3^{2x-1} \iff x + 1 = 2x - 1 \iff x = 2$$
+• Vậy phương trình có nghiệm duy nhất $x = 2$.
+
+**Ví dụ 2:** Giải phương trình: $10^{x-1} = 2\\,022$.
+
+Lời giải Ví dụ 2:
+• Lấy lôgarit thập phân hai vế của phương trình, ta được:
+  $$x - 1 = \log 2\\,022 \iff x = 1 + \log 2\\,022$$
+• Vậy phương trình có nghiệm duy nhất $x = 1 + \log 2\\,022$.
+
+**Luyện tập 1:** Giải các phương trình sau:
+a) $2^{3x-1} = \frac{1}{2^{x+1}}$;
+b) $2e^{2x} = 5$.
+
+Lời giải Luyện tập 1:
+• a) $2^{3x-1} = 2^{-(x+1)} \iff 3x - 1 = -x - 1 \iff 4x = 0 \iff x = 0$.
+• b) $2e^{2x} = 5 \iff e^{2x} = \frac{5}{2} \iff 2x = \ln\left(\frac{5}{2}\right) \iff x = \frac{1}{2}\ln\left(\frac{5}{2}\right)$.
+
+## Phương trình lôgarit
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_logarit"/>
+
+### a) Phương trình lôgarit cơ bản
+
+Phương trình lôgarit cơ bản có dạng $\log_a x = b$ (với $0 < a \ne 1$):
+Phương trình luôn có nghiệm duy nhất $x = a^b$.
+Phương pháp giải bằng cách đưa về cùng cơ số:
+Nếu $u, v > 0$ và $0 < a \ne 1$ thì $\log_a u = \log_a v \iff u = v$.
+
+### b) Ví dụ và luyện tập về phương trình lôgarit
+
+**Ví dụ 3:** Giải phương trình: $4 + 3\log(2x) = 16$.
+
+Lời giải Ví dụ 3:
+• Điều kiện xác định: $2x > 0 \iff x > 0$.
+• Phương trình trở thành:
+  $$3\log(2x) = 12 \iff \log(2x) = 4 \iff 2x = 10^4 \iff 2x = 10\\,000 \iff x = 5\\,000$$
+• Giá trị $x = 5\\,000$ thỏa mãn điều kiện. Vậy nghiệm của phương trình là $x = 5\\,000$.
+
+**Ví dụ 4:** Giải phương trình: $\log_3(x + 1) = \log_3(x^2 - 1)$.
+
+Lời giải Ví dụ 4:
+• Điều kiện xác định: $\begin{cases} x + 1 > 0 \\\ x^2 - 1 > 0 \end{cases} \iff \begin{cases} x > -1 \\\ [x > 1 \text{ hoặc } x < -1] \end{cases} \iff x > 1$.
+• Phương trình tương đương:
+  $$x + 1 = x^2 - 1 \iff x^2 - x - 2 = 0 \iff \left[\begin{matrix} x = -1 \\\ x = 2 \end{matrix}\right.$$
+• So với điều kiện $x > 1$, chỉ có $x = 2$ thỏa mãn.
+• Vậy phương trình có nghiệm duy nhất $x = 2$.
+
+**Luyện tập 2:** Giải các phương trình sau:
+a) $4 - \log(3 - x) = 3$;
+b) $\log_2(x + 2) + \log_2(x - 1) = 1$.
+
+Lời giải Luyện tập 2:
+• a) $4 - \log(3 - x) = 3 \iff \log(3 - x) = 1 \iff 3 - x = 10^1 = 10 \iff x = -7$ (thỏa mãn $3 - x > 0$).
+• b) Điều kiện: $x > 1$. Phương trình trở thành:
+  $$\log_2[(x + 2)(x - 1)] = 1 \iff (x + 2)(x - 1) = 2^1 = 2$$
+  $$\iff x^2 + x - 2 = 2 \iff x^2 + x - 4 = 0 \iff x = \frac{-1 \pm \sqrt{17}}{2}.$$
+  Kết hợp điều kiện $x > 1$, nghiệm duy nhất là $x = \frac{-1 + \sqrt{17}}{2}$.
+
+## Bất phương trình mũ
+
+### a) Bất phương trình mũ cơ bản
+
+Bất phương trình mũ cơ bản có dạng $a^x > b$ (hoặc $\ge, <, \le$) với $0 < a \ne 1$:
+• Nếu $b \le 0$ thì tập nghiệm là $\mathbb{R}$ (với bất phương trình $> 0$).
+• Nếu $b > 0$, ta đưa về cùng cơ số $a^x > a^{\log_a b}$:
+  - Khi $a > 1$: nghiệm là $x > \log_a b$.
+  - Khi $0 < a < 1$: nghiệm là $x < \log_a b$.
+Phương pháp đưa về cùng cơ số cho hàm mũ:
+• Nếu $a > 1$ thì $a^u > a^v \iff u > v$.
+• Nếu $0 < a < 1$ thì $a^u > a^v \iff u < v$.
+
+### b) Ví dụ và luyện tập về bất phương trình mũ
+
+**Ví dụ 5:** Giải bất phương trình: $16^x > \frac{1}{8}$.
+
+Lời giải Ví dụ 5:
+• Đưa về cơ số 2: $16^x = (2^4)^x = 2^{4x}$ và $\frac{1}{8} = 2^{-3}$.
+• Bất phương trình trở thành:
+  $$2^{4x} > 2^{-3} \iff 4x > -3 \iff x > -\frac{3}{4}.$$
+
+**Luyện tập 3:** Giải các bất phương trình sau:
+a) $0{,}1^{2x - 1} \le 0{,}1^{2 - x}$;
+b) $3 \cdot 2^{x+1} \le 1$.
+
+Lời giải Luyện tập 3:
+• a) Vì cơ số $0{,}1 < 1$ nên $0{,}1^{2x - 1} \le 0{,}1^{2 - x} \iff 2x - 1 \ge 2 - x \iff 3x \ge 3 \iff x \ge 1$.
+• b) $3 \cdot 2^{x+1} \le 1 \iff 2^{x+1} \le \frac{1}{3} \iff x + 1 \le \log_2\left(\frac{1}{3}\right) = -\log_2 3 \iff x \le -1 - \log_2 3$.
+
+## Bất phương trình lôgarit
+
+### a) Bất phương trình lôgarit cơ bản
+
+Bất phương trình lôgarit cơ bản có dạng $\log_a x > b$ (hoặc $\ge, <, \le$) với $0 < a \ne 1$:
+• Khi $a > 1$: nghiệm là $x > a^b$ (kết hợp điều kiện $x > 0$).
+• Khi $0 < a < 1$: nghiệm là $0 < x < a^b$.
+Phương pháp đưa về cùng cơ số cho lôgarit:
+• Nếu $a > 1$ thì $\log_a u > \log_a v \iff u > v > 0$.
+• Nếu $0 < a < 1$ thì $\log_a u > \log_a v \iff 0 < u < v$.
+
+### b) Ví dụ và luyện tập về bất phương trình lôgarit
+
+**Ví dụ 7:** Giải bất phương trình: $\log\_{0{,}3}(x + 1) \le \log\_{0{,}3}(2x - 1)$.
+
+Lời giải Ví dụ 7:
+• Điều kiện xác định: $\begin{cases} x + 1 > 0 \\\ 2x - 1 > 0 \end{cases} \iff x > \frac{1}{2}$.
+• Vì cơ số $0{,}3 < 1$, bất phương trình tương đương với:
+  $$x + 1 \ge 2x - 1 \iff x \le 2$$
+• Kết hợp với điều kiện $x > \frac{1}{2}$, ta được nghiệm của bất phương trình là $\frac{1}{2} < x \le 2$.
+
+**Luyện tập 4:** Giải các bất phương trình sau:
+a) $\log\_{\frac{1}{7}}(x + 1) > \log_7(2 - x)$;
+b) $2\log(2x + 1) > 3$.
+
+Lời giải Luyện tập 4:
+• a) Đưa về cùng cơ số 7: $\log\_{\frac{1}{7}}(x + 1) = -\log_7(x + 1) > \log_7(2 - x) \iff \log_7(x + 1)^{-1} > \log_7(2 - x) \iff \frac{1}{x + 1} > 2 - x$.
+  Kết hợp điều kiện $-1 < x < 2$, giải bất phương trình ta được $1 < x < 2$.
+• b) Điều kiện: $x > -\frac{1}{2}$. $\log(2x + 1) > \frac{3}{2} \iff 2x + 1 > 10^{\frac{3}{2}} = 10\sqrt{10} \iff x > \frac{10\sqrt{10} - 1}{2}$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng (Khấu hao ô tô mở đầu):** Giá trị còn lại của một chiếc ô tô sau $t$ năm sử dụng được mô hình hoá bởi công thức $V(t) = 780 \cdot (0{,}905)^t$ (triệu đồng). Sau bao nhiêu năm sử dụng thì giá trị của chiếc ô tô đó còn lại không quá 300 triệu đồng (làm tròn đến hàng đơn vị)?
+
+Lời giải Vận dụng:
+• Yêu cầu bài toán dẫn đến bất phương trình:
+  $$780 \cdot (0{,}905)^t \le 300 \iff (0{,}905)^t \le \frac{300}{780} = \frac{5}{13}$$
+• Vì cơ số $0{,}905 < 1$, ta có:
+  $$t \ge \log\_{0{,}905}\left(\frac{5}{13}\right) \approx 9{,}6$$
+• Kết luận: Sau ít nhất 10 năm sử dụng, giá trị ô tô sẽ còn lại không quá 300 triệu đồng.
+
+**Bài 6.23 (Tiết kiệm ngân hàng):** Bác Minh gửi tiết kiệm 500 triệu đồng với lãi suất không đổi 7,5%/năm theo thể thức lãi kép kì hạn 12 tháng. Tổng số tiền thu được sau $n$ năm là $A = 500 \cdot (1 + 0{,}075)^n$ (triệu đồng). Tính thời gian tối thiểu để bác Minh thu được ít nhất 800 triệu đồng.
+
+Lời giải Bài 6.23:
+• Ta cần tìm $n$ sao cho $500 \cdot (1{,}075)^n \ge 800 \iff (1{,}075)^n \ge \frac{8}{5} = 1{,}6$.
+• Suy ra: $n \ge \log\_{1{,}075} 1{,}6 \approx 7{,}01$.
+• Vì $n$ là số năm (số nguyên) nên thời gian tối thiểu là 8 năm.
+
+**Bài 6.24 (Tăng trưởng vi khuẩn):** Số lượng vi khuẩn ban đầu trong mẻ nuôi cấy là 500 con và tỉ lệ tăng trưởng là 40%/giờ. Số lượng vi khuẩn $N(t)$ sau $t$ giờ được ước tính bởi $N(t) = 500e^{0{,}4t}$. Sau bao nhiêu giờ nuôi cấy thì số lượng vi khuẩn vượt mức 80.000 con?
+
+Lời giải Bài 6.24:
+• Ta cần tìm $t$ sao cho $500e^{0{,}4t} > 80\\,000 \iff e^{0{,}4t} > 160 \iff 0{,}4t > \ln 160 \iff t > \frac{\ln 160}{0{,}4} \approx \frac{5{,}075}{0{,}4} \approx 12{,}7$ (giờ).
+• Kết luận: Sau khoảng 13 giờ nuôi cấy thì số lượng vi khuẩn sẽ vượt mức 80.000 con.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.20:** Giải các phương trình sau:
+a) $3^{x-1} = 27$;
+b) $100^{2x^2 - 3} = 0{,}1^{2x^2 - 18}$;
+c) $\sqrt{3}e^{3x} = 1$;
+d) $5^x = 3^{2x-1}$.
+
+Lời giải Bài 6.20:
+• a) $3^{x-1} = 3^3 \iff x - 1 = 3 \iff x = 4$.
+• b) $(10^2)^{2x^2 - 3} = (10^{-1})^{2x^2 - 18} \iff 4x^2 - 6 = -2x^2 + 18 \iff 6x^2 = 24 \iff x^2 = 4 \iff x = \pm 2$.
+• c) $\sqrt{3}e^{3x} = 1 \iff e^{3x} = \frac{1}{\sqrt{3}} \iff 3x = \ln(3^{-1/2}) = -\frac{1}{2}\ln 3 \iff x = -\frac{\ln 3}{6}$.
+• d) $5^x = 3^{2x-1} \iff x \ln 5 = (2x - 1)\ln 3 \iff x(\ln 5 - 2\ln 3) = -\ln 3 \iff x = \frac{\ln 3}{2\ln 3 - \ln 5} = \frac{\ln 3}{\ln(9/5)}$.
+
+**Bài 6.21:** Giải các phương trình sau:
+a) $\log(x + 1) = 2$;
+b) $2\log_4 x + \log_2(x - 3) = 2$;
+c) $\ln x + \ln(x - 1) = \ln 4x$;
+d) $\log_3(x^2 - 3x + 2) = \log_3(2x - 4)$.
+
+Lời giải Bài 6.21:
+• a) Điều kiện $x > -1$. $\log(x + 1) = 2 \iff x + 1 = 10^2 = 100 \iff x = 99$ (nhận).
+• b) Điều kiện $x > 3$. Do $\log_4 x = \frac{1}{2}\log_2 x = \log_2 \sqrt{x}$, phương trình thành $\log_2 x + \log_2(x - 3) = 2 \iff x(x - 3) = 4 \iff x^2 - 3x - 4 = 0 \iff x = 4$ (nhận) hoặc $x = -1$ (loại).
+• c) Điều kiện $x > 1$. $\ln[x(x - 1)] = \ln(4x) \iff x^2 - x = 4x \iff x^2 - 5x = 0 \iff x(x - 5) = 0 \iff x = 5$ (nhận) vì $x = 0$ loại.
+• d) Điều kiện $x > 2$. $x^2 - 3x + 2 = 2x - 4 \iff x^2 - 5x + 6 = 0 \iff x = 2$ (loại vì không thỏa mãn $x > 2$) hoặc $x = 3$ (nhận). Vậy $x = 3$.
+
+**Bài 6.22:** Giải các bất phương trình sau:
+a) $0{,}1^{2x} > 0{,}1^{4 - 2x}$;
+b) $2 \cdot 5^{2x-1} \le 3$;
+c) $\log_3(x + 7) \ge -1$;
+d) $\log\_{0{,}5}(x + 7) \ge \log\_{0{,}5}(2x - 1)$.
+
+Lời giải Bài 6.22:
+• a) Cơ số $0{,}1 < 1 \implies 2x < 4 - 2x \iff 4x < 4 \iff x < 1$.
+• b) $5^{2x-1} \le \frac{3}{2} \iff 2x - 1 \le \log_5(1{,}5) \iff x \le \frac{1 + \log_5(1{,}5)}{2}$.
+• c) Điều kiện $x > -7$. $\log_3(x + 7) \ge -1 \iff x + 7 \ge 3^{-1} = \frac{1}{3} \iff x \ge -\frac{20}{3}$ (thỏa mãn).
+• d) Điều kiện $x > \frac{1}{2}$. Vì cơ số $0{,}5 < 1$, ta có $x + 7 \le 2x - 1 \iff x \ge 8$. Kết hợp điều kiện ta được $x \ge 8$.
