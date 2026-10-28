@@ -1,0 +1,185 @@
+---
+title: 'Bài 29: Công thức cộng xác suất.'
+description: Hệ thống lý thuyết bài Công thức cộng xác suất cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Biến cố xung khắc
+  - Công thức cộng xác suất cho hai biến cố xung khắc
+  - Công thức cộng xác suất tổng quát
+grade: 11
+order: 29
+updatedDate: 2026-10-29T00:09:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Biến cố xung khắc
+
+·       Công thức cộng xác suất cho hai biến cố xung khắc
+
+·       Công thức cộng xác suất tổng quát
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết khái niệm hai biến cố xung khắc.
+
+·       Tính xác suất của biến cố hợp của hai biến cố xung khắc bằng công thức cộng xác suất.
+
+·       Tính xác suất của biến cố hợp của hai biến cố bất kì bằng cách sử dụng công thức cộng xác suất tổng quát và phương pháp tổ hợp.
+
+·       Vận dụng công thức cộng xác suất để giải quyết các bài toán thống kê thực tiễn (tỉ lệ mắc bệnh tim mạch - huyết áp, tỉ lệ sở hữu thiết bị, khảo sát sở thích học tập).
+
+## Công thức cộng xác suất cho hai biến cố xung khắc
+
+<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_cong_xac_suat_xung_khac"/>
+
+### a) Khái niệm biến cố xung khắc
+
+Biến cố $A$ và biến cố $B$ được gọi là xung khắc nếu $A$ và $B$ không đồng thời xảy ra.
+• Hai biến cố $A$ và $B$ xung khắc khi và chỉ khi $A \cap B = \emptyset$.
+• Chú ý: Biến cố $A$ và biến cố đối $\overline{A}$ luôn là hai biến cố xung khắc.
+
+### b) Công thức cộng xác suất cho hai biến cố xung khắc
+
+Nếu $A$ và $B$ là hai biến cố xung khắc thì:
+$$P(A \cup B) = P(A) + P(B)$$
+
+**Ví dụ 1:** Gieo đồng thời hai con xúc xắc cân đối, đồng chất. Xét các biến cố:
+$A$: "Tổng số chấm xuất hiện trên hai con xúc xắc lớn hơn hoặc bằng 7";
+$B$: "Tổng số chấm xuất hiện trên hai con xúc xắc nhỏ hơn hoặc bằng 4";
+$C$: "Tổng số chấm xuất hiện trên hai con xúc xắc là số nguyên tố".
+Trong các cặp biến cố $A$ và $B$, $A$ và $C$, $B$ và $C$, cặp biến cố nào xung khắc? Tại sao?
+
+Lời giải Ví dụ 1:
+• Cặp biến cố $A$ và $B$ là xung khắc vì tổng số chấm không thể vừa $\ge 7$ vừa $\le 4$ (tức $A \cap B = \emptyset$).
+• Cặp biến cố $A$ và $C$ không xung khắc vì nếu tổng số chấm là 7 (hoặc 11) thì cả $A$ và $C$ đều xảy ra.
+• Cặp biến cố $B$ và $C$ không xung khắc vì nếu tổng số chấm là 2 hoặc 3 thì cả $B$ và $C$ đều xảy ra.
+
+**Ví dụ 2:** Một hộp đựng 9 tấm thẻ cùng loại được ghi số từ 1 đến 9. Rút ngẫu nhiên đồng thời hai tấm thẻ từ trong hộp. Xét các biến cố:
+$A$: "Cả hai tấm thẻ đều ghi số chẵn";
+$B$: "Chỉ có một tấm thẻ ghi số chẵn";
+$C$: "Tích hai số ghi trên hai tấm thẻ là một số chẵn".
+a) Chứng minh rằng $C = A \cup B$.
+b) Tính $P(C)$.
+
+Lời giải Ví dụ 2:
+• a) Tích của hai số là số chẵn khi và chỉ khi có ít nhất một số chẵn. Điều này xảy ra khi cả hai số đều chẵn (biến cố $A$) hoặc một số chẵn và một số lẻ (biến cố $B$). Vì vậy $C = A \cup B$.
+• b) Do $A$ và $B$ xung khắc nên $P(C) = P(A \cup B) = P(A) + P(B)$.
+  - Không gian mẫu có số phần tử: $n(\Omega) = C_9^2 = 36$.
+  - Trong tập $\\{1; 2; \dots; 9\\}$ có 4 số chẵn và 5 số lẻ.
+  - Số phần tử của $A$ là: $n(A) = C_4^2 = 6 \implies P(A) = \frac{6}{36} = \frac{1}{6}$.
+  - Số phần tử của $B$ là: $n(B) = C_4^1 \cdot C_5^1 = 4 \cdot 5 = 20 \implies P(B) = \frac{20}{36} = \frac{5}{9}$.
+  - Vậy: $P(C) = \frac{6}{36} + \frac{20}{36} = \frac{26}{36} = \frac{13}{18}$.
+
+**Luyện tập 2:** Một hộp đựng 5 quả cầu màu xanh và 3 quả cầu màu đỏ, có cùng kích thước và khối lượng. Chọn ngẫu nhiên hai quả cầu trong hộp. Tính xác suất để chọn được hai quả cầu có cùng màu.
+
+Lời giải Luyện tập 2:
+• Không gian mẫu chọn 2 quả từ 8 quả: $n(\Omega) = C_8^2 = 28$.
+• Gọi $A$: "Chọn được 2 quả màu xanh", $n(A) = C_5^2 = 10 \implies P(A) = \frac{10}{28}$.
+• Gọi $B$: "Chọn được 2 quả màu đỏ", $n(B) = C_3^2 = 3 \implies P(B) = \frac{3}{28}$.
+• Vì $A$ và $B$ xung khắc nên xác suất chọn 2 quả cùng màu là:
+  $$P(A \cup B) = P(A) + P(B) = \frac{10}{28} + \frac{3}{28} = \frac{13}{28}.$$
+
+## Công thức cộng xác suất tổng quát
+
+### a) Định lí công thức cộng xác suất
+
+Cho hai biến cố bất kì $A$ và $B$. Khi đó ta có:
+$$P(A \cup B) = P(A) + P(B) - P(AB)$$
+Chú ý: Khi $A$ và $B$ xung khắc thì $AB = \emptyset \implies P(AB) = 0$, công thức trở về $P(A \cup B) = P(A) + P(B)$. Do đó công thức cho biến cố xung khắc là một trường hợp riêng của công thức cộng tổng quát.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 3:** Ở một trường THPT X, có 19% học sinh học khá môn Ngữ văn, 32% học sinh học khá môn Toán, 7% học sinh học khá cả hai môn Ngữ văn và Toán. Chọn ngẫu nhiên một học sinh của trường X. Tính tỉ lệ học sinh học khá môn Ngữ văn hoặc học khá môn Toán của trường X.
+
+Lời giải Ví dụ 3:
+• Gọi $A$: "Học sinh học khá Ngữ văn", $B$: "Học sinh học khá Toán".
+• Theo đề bài: $P(A) = 0{,}19; P(B) = 0{,}32; P(AB) = 0{,}07$.
+• Tỉ lệ học sinh học khá Ngữ văn hoặc Toán là:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0{,}19 + 0{,}32 - 0{,}07 = 0{,}44 = 44\\%.$$
+
+**Luyện tập 3:** Phỏng vấn 30 học sinh lớp 11A về môn thể thao yêu thích thu được kết quả có 19 bạn thích môn Bóng đá, 17 bạn thích môn Bóng bàn và 15 bạn thích cả hai môn đó. Chọn ngẫu nhiên một học sinh của lớp 11A. Tính xác suất để chọn được học sinh thích ít nhất một trong hai môn Bóng đá hoặc Bóng bàn.
+
+Lời giải Luyện tập 3:
+• Gọi $A$: "Học sinh thích môn Bóng đá", $P(A) = \frac{19}{30}$.
+• Gọi $B$: "Học sinh thích môn Bóng bàn", $P(B) = \frac{17}{30}$.
+• Biến cố thích cả hai môn là $AB$, với $P(AB) = \frac{15}{30}$.
+• Xác suất chọn được học sinh thích ít nhất một trong hai môn là:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = \frac{19}{30} + \frac{17}{30} - \frac{15}{30} = \frac{21}{30} = \frac{7}{10} = 0{,}7.$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng (Tỉ lệ mắc bệnh tim mạch và huyết áp):** Tại tỉnh X, thống kê cho thấy trong số những người trên 50 tuổi có 8,2% mắc bệnh tim; 12,5% mắc bệnh huyết áp và 5,7% mắc cả bệnh tim và bệnh huyết áp. Tính tỉ lệ dân cư trên 50 tuổi của tỉnh X không mắc cả bệnh tim và bệnh huyết áp.
+
+Lời giải Vận dụng:
+• Chọn ngẫu nhiên một người trên 50 tuổi của tỉnh X. Gọi $A$: "Người đó mắc bệnh tim", $B$: "Người đó mắc bệnh huyết áp".
+• Theo đề bài: $P(A) = 8{,}2\\% = 0{,}082; P(B) = 12{,}5\\% = 0{,}125; P(AB) = 5{,}7\\% = 0{,}057$.
+• Xác suất người đó mắc bệnh tim hoặc huyết áp là:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0{,}082 + 0{,}125 - 0{,}057 = 0{,}15 = 15\\%.$$
+• Biến cố "Người đó không mắc cả bệnh tim và huyết áp" chính là biến cố đối của $A \cup B$, tức là $\overline{A \cup B}$.
+• Vậy tỉ lệ người trên 50 tuổi không mắc cả hai bệnh là:
+  $$P(\overline{A \cup B}) = 1 - P(A \cup B) = 1 - 0{,}15 = 0{,}85 = 85\\%.$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 8.6:** Một hộp đựng 8 viên bi màu xanh và 6 viên bi màu đỏ, có cùng kích thước và khối lượng. Bạn Sơn lấy ngẫu nhiên một viên bi từ hộp (không trả lại vào hộp). Tiếp đó đến lượt bạn Tùng lấy ngẫu nhiên một viên bi từ hộp đó. Tính xác suất để bạn Tùng lấy được viên bi màu xanh.
+
+Lời giải Bài 8.6:
+• Xét hai trường hợp xung khắc về kết quả lấy bi của Sơn:
+  - Trường hợp 1: Sơn lấy được bi xanh (xác suất $\frac{8}{14}$). Khi đó trong hộp còn 7 xanh và 6 đỏ (tổng 13 viên), xác suất Tùng lấy bi xanh là $\frac{7}{13}$. Xác suất trường hợp này là $\frac{8}{14} \cdot \frac{7}{13} = \frac{56}{182}$.
+  - Trường hợp 2: Sơn lấy được bi đỏ (xác suất $\frac{6}{14}$). Khi đó trong hộp còn 8 xanh và 5 đỏ (tổng 13 viên), xác suất Tùng lấy bi xanh là $\frac{8}{13}$. Xác suất trường hợp này là $\frac{6}{14} \cdot \frac{8}{13} = \frac{48}{182}$.
+• Theo công thức cộng xác suất cho hai biến cố xung khắc, xác suất để Tùng lấy được bi xanh là:
+  $$P = \frac{56}{182} + \frac{48}{182} = \frac{104}{182} = \frac{4}{7}.$$
+
+**Bài 8.7:** Lớp 11A có 40 học sinh, trong đó có 14 bạn thích nhạc cổ điển, 13 bạn thích nhạc trẻ và 5 bạn thích cả nhạc cổ điển và nhạc trẻ. Chọn ngẫu nhiên một bạn trong lớp. Tính xác suất để:
+a) Bạn đó thích nhạc cổ điển hoặc nhạc trẻ;
+b) Bạn đó không thích cả nhạc cổ điển và nhạc trẻ.
+
+Lời giải Bài 8.7:
+• Gọi $A$: "Bạn thích nhạc cổ điển", $P(A) = \frac{14}{40}$. Gọi $B$: "Bạn thích nhạc trẻ", $P(B) = \frac{13}{40}$.
+  Biến cố thích cả hai loại nhạc là $AB$ với $P(AB) = \frac{5}{40}$.
+• a) Xác suất bạn đó thích nhạc cổ điển hoặc nhạc trẻ là:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = \frac{14}{40} + \frac{13}{40} - \frac{5}{40} = \frac{22}{40} = \frac{11}{20} = 0{,}55.$$
+• b) Xác suất bạn đó không thích cả nhạc cổ điển và nhạc trẻ là:
+  $$P = 1 - P(A \cup B) = 1 - 0{,}55 = 0{,}45 = \frac{9}{20}.$$
+
+**Bài 8.8:** Một khu phố có 50 hộ gia đình, trong đó có 18 hộ nuôi chó, 16 hộ nuôi mèo và 7 hộ nuôi cả chó và mèo. Chọn ngẫu nhiên một hộ trong khu phố. Tính xác suất để:
+a) Hộ đó nuôi chó hoặc nuôi mèo;
+b) Hộ đó không nuôi cả chó và mèo.
+
+Lời giải Bài 8.8:
+• Gọi $A$: "Hộ nuôi chó", $P(A) = \frac{18}{50}$. Gọi $B$: "Hộ nuôi mèo", $P(B) = \frac{16}{50}$.
+  Biến cố nuôi cả hai là $AB$ với $P(AB) = \frac{7}{50}$.
+• a) Xác suất hộ đó nuôi chó hoặc nuôi mèo:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = \frac{18}{50} + \frac{16}{50} - \frac{7}{50} = \frac{27}{50} = 0{,}54.$$
+• b) Xác suất hộ đó không nuôi cả chó và mèo:
+  $$P = 1 - P(A \cup B) = 1 - 0{,}54 = 0{,}46.$$
+
+**Bài 8.9:** Một nhà xuất bản phát hành hai cuốn sách A và B. Thống kê cho thấy có 50% người mua sách A; 70% người mua sách B; 30% người mua cả sách A và sách B. Chọn ngẫu nhiên một người mua sách. Tính xác suất để:
+a) Người đó mua ít nhất một trong hai sách A hoặc B;
+b) Người đó không mua cả sách A và sách B.
+
+Lời giải Bài 8.9:
+• Gọi $A$: "Người mua sách A", $P(A) = 0{,}5$. Gọi $B$: "Người mua sách B", $P(B) = 0{,}7$.
+  Xác suất mua cả hai cuốn là $P(AB) = 0{,}3$.
+• a) Xác suất người đó mua ít nhất một trong hai sách A hoặc B:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0{,}5 + 0{,}7 - 0{,}3 = 0{,}9 = 90\\%.$$
+• b) Xác suất người đó không mua cả sách A và sách B:
+  $$P = 1 - P(A \cup B) = 1 - 0{,}9 = 0{,}1 = 10\\%.$$
+
+**Bài 8.10:** Tại các trường THPT của một tỉnh, thống kê cho thấy có 63% giáo viên môn Toán tham khảo bộ sách giáo khoa A, 56% tham khảo bộ sách giáo khoa B và 28,5% tham khảo cả hai bộ sách giáo khoa A và B. Tính tỉ lệ giáo viên môn Toán của tỉnh đó không tham khảo cả hai bộ sách giáo khoa A và B.
+
+Lời giải Bài 8.10:
+• Gọi $A$ và $B$ lần lượt là biến cố giáo viên tham khảo bộ SGK A và bộ SGK B.
+• Theo giả thiết: $P(A) = 63\\% = 0{,}63; P(B) = 56\\% = 0{,}56; P(AB) = 28{,}5\\% = 0{,}285$.
+• Tỉ lệ giáo viên tham khảo ít nhất một trong hai bộ sách là:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0{,}63 + 0{,}56 - 0{,}285 = 0{,}905 = 90{,}5\\%.$$
+• Tỉ lệ giáo viên không tham khảo cả hai bộ sách giáo khoa A và B là:
+  $$P = 1 - P(A \cup B) = 1 - 0{,}905 = 0{,}095 = 9{,}5\\%.$$

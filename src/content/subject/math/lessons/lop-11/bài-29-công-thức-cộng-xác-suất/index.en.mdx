@@ -1,0 +1,185 @@
+---
+title: 'Lesson 30: Addition rules of probability.'
+description: Theoretical system for the lesson on Addition rules of probability with illustrative exampless
+tags:
+  - grade 11
+  - Mutually exclusive events
+  - Addition rule of probability for mutually exclusive events
+  - General addition rule of probability
+grade: 11
+order: 29
+updatedDate: 2026-10-29T00:09:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Mutually exclusive events
+
+·       Addition rule of probability for mutually exclusive events
+
+·       General addition rule of probability
+
+### **Knowledge and Skills:**
+
+·       Recognize the concept of mutually exclusive events.
+
+·       Compute the probability of the union of mutually exclusive events using the addition rule.
+
+·       Compute the probability of the union of any two events using the general addition rule and combinatorial methods.
+
+·       Apply the addition rule of probability to solve practical statistical problems (prevalence of cardiovascular and hypertensive diseases, device ownership rates, student interest surveys).
+
+## Addition Rule of Probability for Mutually Exclusive Events
+
+<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_cong_xac_suat_xung_khac"/>
+
+### a) Concept of Mutually Exclusive Events
+
+Events $A$ and $B$ are called mutually exclusive (or disjoint) if $A$ and $B$ cannot occur simultaneously.
+• Two events $A$ and $B$ are mutually exclusive if and only if $A \cap B = \emptyset$.
+• Note: An event $A$ and its complementary event $\overline{A}$ are always mutually exclusive.
+
+### b) Addition Rule for Mutually Exclusive Events
+
+If $A$ and $B$ are mutually exclusive events, then:
+$$P(A \cup B) = P(A) + P(B)$$
+
+**Example 1:** Roll two balanced, fair dice simultaneously. Consider the following events:
+$A$: "The sum of the spots on the two dice is greater than or equal to 7";
+$B$: "The sum of the spots on the two dice is less than or equal to 4";
+$C$: "The sum of the spots on the two dice is a prime number".
+Among the pairs of events ($A$ and $B$), ($A$ and $C$), and ($B$ and $C$), which pairs are mutually exclusive? Why?
+
+Solution to Example 1:
+• The pair $A$ and $B$ is mutually exclusive because the sum of the spots cannot be both $\ge 7$ and $\le 4$ simultaneously (i.e., $A \cap B = \emptyset$).
+• The pair $A$ and $C$ is not mutually exclusive because if the sum of spots is 7 (or 11), both $A$ and $C$ occur.
+• The pair $B$ and $C$ is not mutually exclusive because if the sum of spots is 2 or 3, both $B$ and $C$ occur.
+
+**Example 2:** A box contains 9 identical cards numbered from 1 to 9. Two cards are drawn at random simultaneously from the box. Consider the events:
+$A$: "Both cards show even numbers";
+$B$: "Exactly one card shows an even number";
+$C$: "The product of the numbers on the two cards is an even number".
+a) Prove that $C = A \cup B$.
+b) Compute $P(C)$.
+
+Solution to Example 2:
+• a) The product of two numbers is even if and only if at least one number is even. This happens when either both numbers are even (event $A$) or one is even and the other is odd (event $B$). Therefore, $C = A \cup B$.
+• b) Since $A$ and $B$ are mutually exclusive, $P(C) = P(A \cup B) = P(A) + P(B)$.
+  - The number of outcomes in the sample space is $n(\Omega) = C_9^2 = 36$.
+  - In the set $\\{1; 2; \dots; 9\\}$, there are 4 even numbers and 5 odd numbers.
+  - The number of outcomes favorable to $A$ is $n(A) = C_4^2 = 6 \implies P(A) = \frac{6}{36} = \frac{1}{6}$.
+  - The number of outcomes favorable to $B$ is $n(B) = C_4^1 \cdot C_5^1 = 4 \cdot 5 = 20 \implies P(B) = \frac{20}{36} = \frac{5}{9}$.
+  - Thus: $P(C) = \frac{6}{36} + \frac{20}{36} = \frac{26}{36} = \frac{13}{18}$.
+
+**Practice 2:** A box contains 5 green balls and 3 red balls of identical size and mass. Two balls are selected at random from the box. Compute the probability of selecting two balls of the same color.
+
+Solution to Practice 2:
+• The total number of ways to choose 2 balls from 8 balls is $n(\Omega) = C_8^2 = 28$.
+• Let $A$ be the event "Choose 2 green balls", so $n(A) = C_5^2 = 10 \implies P(A) = \frac{10}{28}$.
+• Let $B$ be the event "Choose 2 red balls", so $n(B) = C_3^2 = 3 \implies P(B) = \frac{3}{28}$.
+• Since $A$ and $B$ are mutually exclusive, the probability of choosing two balls of the same color is:
+  $$P(A \cup B) = P(A) + P(B) = \frac{10}{28} + \frac{3}{28} = \frac{13}{28}.$$
+
+## General Addition Rule of Probability
+
+### a) Theorem on the General Addition Rule
+
+For any two events $A$ and $B$, we have:
+$$P(A \cup B) = P(A) + P(B) - P(AB)$$
+Note: When $A$ and $B$ are mutually exclusive, $AB = \emptyset \implies P(AB) = 0$, and the formula simplifies to $P(A \cup B) = P(A) + P(B)$. Thus, the addition rule for mutually exclusive events is a special case of the general addition rule.
+
+### b) Examples and Practice
+
+**Example 3:** At High School X, 19% of students are proficient in Literature, 32% of students are proficient in Mathematics, and 7% of students are proficient in both Literature and Mathematics. A student is selected at random from High School X. Compute the proportion of students who are proficient in Literature or Mathematics at High School X.
+
+Solution to Example 3:
+• Let $A$: "The student is proficient in Literature", $B$: "The student is proficient in Mathematics".
+• According to the problem: $P(A) = 0.19; P(B) = 0.32; P(AB) = 0.07$.
+• The proportion of students proficient in Literature or Mathematics is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0.19 + 0.32 - 0.07 = 0.44 = 44\\%.$$
+
+**Practice 3:** A survey of 30 students in class 11A regarding favorite sports found that 19 students like Football, 17 students like Table Tennis, and 15 students like both sports. A student is selected at random from class 11A. Compute the probability of selecting a student who likes at least one of the two sports (Football or Table Tennis).
+
+Solution to Practice 3:
+• Let $A$: "The student likes Football", $P(A) = \frac{19}{30}$.
+• Let $B$: "The student likes Table Tennis", $P(B) = \frac{17}{30}$.
+• The event that the student likes both sports is $AB$, with $P(AB) = \frac{15}{30}$.
+• The probability of choosing a student who likes at least one of the two sports is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = \frac{19}{30} + \frac{17}{30} - \frac{15}{30} = \frac{21}{30} = \frac{7}{10} = 0.7.$$
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Prevalence of Heart Disease and Hypertension):** In province X, statistics show that among people aged over 50, 8.2% suffer from heart disease, 12.5% suffer from hypertension, and 5.7% suffer from both heart disease and hypertension. Compute the proportion of residents aged over 50 in province X who do not suffer from either heart disease or hypertension.
+
+Solution to Application:
+• Choose at random a person aged over 50 in province X. Let $A$: "The person has heart disease", $B$: "The person has hypertension".
+• According to the problem: $P(A) = 8.2\\% = 0.082; P(B) = 12.5\\% = 0.125; P(AB) = 5.7\\% = 0.057$.
+• The probability that the person suffers from heart disease or hypertension is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0.082 + 0.125 - 0.057 = 0.15 = 15\\%.$$
+• The event "The person suffers from neither heart disease nor hypertension" is the complement of $A \cup B$, denoted by $\overline{A \cup B}$.
+• Therefore, the proportion of residents aged over 50 free of both diseases is:
+  $$P(\overline{A \cup B}) = 1 - P(A \cup B) = 1 - 0.15 = 0.85 = 85\\%.$$
+
+### b) End-of-Lesson Exercises
+
+**Exercise 8.6:** A box contains 8 green marbles and 6 red marbles of identical size and mass. Son draws one marble at random from the box (without replacement). Next, Tung draws one marble at random from the box. Compute the probability that Tung draws a green marble.
+
+Solution to Exercise 8.6:
+• Consider two mutually exclusive cases regarding Son's draw:
+  - Case 1: Son draws a green marble (probability $\frac{8}{14}$). Then 7 green and 6 red marbles remain (total 13 marbles), and the probability that Tung draws a green marble is $\frac{7}{13}$. The probability of this case is $\frac{8}{14} \cdot \frac{7}{13} = \frac{56}{182}$.
+  - Case 2: Son draws a red marble (probability $\frac{6}{14}$). Then 8 green and 5 red marbles remain (total 13 marbles), and the probability that Tung draws a green marble is $\frac{8}{13}$. The probability of this case is $\frac{6}{14} \cdot \frac{8}{13} = \frac{48}{182}$.
+• By the addition rule of probability for mutually exclusive events, the probability that Tung draws a green marble is:
+  $$P = \frac{56}{182} + \frac{48}{182} = \frac{104}{182} = \frac{4}{7}.$$
+
+**Exercise 8.7:** Class 11A has 40 students, of whom 14 like classical music, 13 like pop music, and 5 like both classical and pop music. A student is selected at random from the class. Compute the probability that:
+a) The student likes classical music or pop music;
+b) The student likes neither classical music nor pop music.
+
+Solution to Exercise 8.7:
+• Let $A$: "The student likes classical music", $P(A) = \frac{14}{40}$. Let $B$: "The student likes pop music", $P(B) = \frac{13}{40}$.
+  The event that the student likes both is $AB$ with $P(AB) = \frac{5}{40}$.
+• a) The probability that the student likes classical or pop music is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = \frac{14}{40} + \frac{13}{40} - \frac{5}{40} = \frac{22}{40} = \frac{11}{20} = 0.55.$$
+• b) The probability that the student likes neither classical nor pop music is:
+  $$P = 1 - P(A \cup B) = 1 - 0.55 = 0.45 = \frac{9}{20}.$$
+
+**Exercise 8.8:** A neighborhood has 50 households, of which 18 raise dogs, 16 raise cats, and 7 raise both dogs and cats. A household is selected at random from the neighborhood. Compute the probability that:
+a) The household raises dogs or cats;
+b) The household raises neither dogs nor cats.
+
+Solution to Exercise 8.8:
+• Let $A$: "The household raises dogs", $P(A) = \frac{18}{50}$. Let $B$: "The household raises cats", $P(B) = \frac{16}{50}$.
+  The event that the household raises both is $AB$ with $P(AB) = \frac{7}{50}$.
+• a) The probability that the household raises dogs or cats is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = \frac{18}{50} + \frac{16}{50} - \frac{7}{50} = \frac{27}{50} = 0.54.$$
+• b) The probability that the household raises neither dogs nor cats is:
+  $$P = 1 - P(A \cup B) = 1 - 0.54 = 0.46.$$
+
+**Exercise 8.9:** A publisher releases two books, A and B. Statistics show that 50% of buyers purchase book A, 70% purchase book B, and 30% purchase both book A and book B. A book buyer is chosen at random. Compute the probability that:
+a) The person buys at least one of the two books A or B;
+b) The person buys neither book A nor book B.
+
+Solution to Exercise 8.9:
+• Let $A$: "The person buys book A", $P(A) = 0.5$. Let $B$: "The person buys book B", $P(B) = 0.7$.
+  The probability of buying both books is $P(AB) = 0.3$.
+• a) The probability that the person buys at least one of the two books is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0.5 + 0.7 - 0.3 = 0.9 = 90\\%.$$
+• b) The probability that the person buys neither book A nor book B is:
+  $$P = 1 - P(A \cup B) = 1 - 0.9 = 0.1 = 10\\%.$$
+
+**Exercise 8.10:** In high schools across a province, statistics show that 63% of Mathematics teachers consult textbook series A, 56% consult textbook series B, and 28.5% consult both textbook series A and B. Compute the proportion of Mathematics teachers in that province who do not consult either textbook series A or B.
+
+Solution to Exercise 8.10:
+• Let $A$ and $B$ be the events that a Mathematics teacher consults textbook series A and textbook series B, respectively.
+• According to the problem: $P(A) = 63\\% = 0.63; P(B) = 56\\% = 0.56; P(AB) = 28.5\\% = 0.285$.
+• The proportion of teachers consulting at least one of the two textbook series is:
+  $$P(A \cup B) = P(A) + P(B) - P(AB) = 0.63 + 0.56 - 0.285 = 0.905 = 90.5\\%.$$
+• The proportion of teachers who do not consult either textbook series A or B is:
+  $$P = 1 - P(A \cup B) = 1 - 0.905 = 0.095 = 9.5\\%.$$
