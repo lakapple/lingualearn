@@ -1,0 +1,242 @@
+---
+title: 'Lesson 11: Parallel Lines'
+description: Theoretical system for the lesson on Parallel Lines with illustrative examples.
+tags:
+  - grade 11
+  - Intersecting lines
+  - parallel lines
+  - coincident lines
+  - Skew lines
+  - Theorem on three intersection lines
+grade: 11
+order: 11
+updatedDate: 2026-10-28T16:52:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Coplanar lines, non-coplanar lines
+
+·       Intersecting lines, parallel lines, coincident lines
+
+·       Skew lines
+
+·       Theorem on three intersection lines (three-line theorem)
+
+### **Knowledge and Skills:**
+
+·       Identify and distinguish the four relative positions of two straight lines in three-dimensional space: intersecting, parallel, coincident, and skew.
+
+·       Master fundamental properties of parallel lines: the parallel postulate through an external point and transitivity of parallelism.
+
+·       Proficiently apply the theorem on three intersection lines and its corollary to determine parallel intersection lines of planes.
+
+·       Prove lines are parallel, and prove quadrilaterals are parallelograms or trapezoids in solid geometry.
+
+·       Apply spatial line concepts to explain real-world physical structures (grade-separated interchanges, loom warp threads, water line in a tilted tank, rectangular vs. trapezoidal window kinematics).
+
+## Relative Positions of Two Lines in Space
+
+<Youtube url="https://www.youtube.com/watch?v=example_vi_tri_tuong_doi_hai_duong_thang"/>
+
+### a) Four Relative Positions in Three-Dimensional Space
+
+Given two straight lines $a$ and $b$ in space:
+1\. Case 1: $a$ and $b$ lie in the same plane (coplanar lines):
+• Intersecting: $a$ and $b$ share exactly one common point, denoted by $a \cap b = \\{M\\}$.
+• Parallel: $a$ and $b$ lie in the same plane and have no common points, denoted by $a \parallel b$.
+  (Definition: Two straight lines are parallel if and only if they are coplanar and do not intersect. There is exactly one plane containing two parallel lines).
+• Coincident: $a$ and $b$ share infinitely many common points (all points are identical), denoted by $a \equiv b$.
+
+2\. Case 2: $a$ and $b$ do not lie in any common plane (non-coplanar lines):
+• Skew lines: $a$ and $b$ are skew (there exists no plane containing both lines simultaneously).
+Remark: In space, two straight lines that have no common points can be either parallel or skew.
+
+### b) Illustrative Examples and Practice on Relative Positions
+
+**Example 1:** Given two non-coplanar parallelograms $ABCD$ and $ABEF$.
+a) Considering the four lines $AB, BC, CD, DA$, identify the pairs of intersecting lines and parallel lines.
+b) Among the three lines $AB, AF, BE$, are there any pairs of skew lines?
+
+Solution for Example 1:
+• a) Since $ABCD$ is a parallelogram, its defining lines lie in the common plane $(ABCD)$:
+  + Intersecting pairs: $AB$ and $BC$, $AB$ and $DA$, $BC$ and $CD$, $CD$ and $DA$.
+  + Parallel pairs: $AB \parallel CD$ and $AD \parallel BC$.
+• b) The lines $AB, AF, BE$ all lie in the plane $(ABEF)$; hence, they are coplanar. Therefore, none of them are skew to each other.
+
+**Practice 1:** Given a pyramid $S.ABCD$ whose base $ABCD$ is a parallelogram.
+a) Among the lines $AB, AC, CD$, which are parallel and which are intersecting?
+b) Choose points $M \in SA, N \in SB$. Among the lines $SA, MN, AB$, are there any skew lines?
+
+Solution for Practice 1:
+• a) In the base plane $(ABCD)$: $AB \parallel CD$; lines $AB$ and $AC$ intersect at vertex $A$; lines $AC$ and $CD$ intersect at vertex $C$.
+• b) Points $S, A, B$ determine the plane $(SAB)$. Since $M \in SA \subset (SAB)$ and $N \in SB \subset (SAB)$, lines $SA, MN, AB$ all lie in $(SAB)$. Thus, they are coplanar, so no two lines among them are skew.
+
+**Example 2:** Given a tetrahedron $ABCD$. Are the lines $AB$ and $CD$ skew? Identify all pairs of skew lines in the tetrahedron.
+
+Solution for Example 2:
+• If $AB$ and $CD$ were not skew, they would lie in a common plane, implying that the four vertices $A, B, C, D$ are coplanar. This contradicts the definition of a tetrahedron $ABCD$. Hence, $AB$ and $CD$ are skew.
+• By analogous reasoning, the tetrahedron $ABCD$ contains exactly 3 pairs of skew opposite edges: $AB$ and $CD$; $AC$ and $BD$; $AD$ and $BC$.
+
+**Practice 2:** In a quadrangular pyramid $S.ABCD$, identify the lines passing through vertices that are:
+a) Skew to line $SA$;
+b) Skew to line $BC$.
+
+Solution for Practice 2:
+• a) Lines formed by vertices skew to $SA$ are: $BC$ and $CD$ (since $BC, CD$ do not lie in planes containing $SA$, namely $(SAB), (SAD), (SAC)$).
+• b) Lines formed by vertices skew to $BC$ are: $SA$ and $SD$.
+
+## Properties of Parallel Lines and the Three-Line Theorem
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_dinh_li_giao_tuyen"/>
+
+### a) Fundamental Properties of Parallel Lines
+
+Core Properties:
+• Property 1: In space, through a point not lying on a given line, there passes one and only one line parallel to the given line.
+• Property 2 (Transitivity): In space, two distinct straight lines each parallel to a third straight line are parallel to each other:
+$$\begin{cases} a \parallel c \\\ b \parallel c \\\ a \ne b \end{cases} \Rightarrow a \parallel b$$
+
+**Example 3:** Given a tetrahedron $ABCD$. Let $M, N, P, Q, R, S$ be the midpoints of segments $AB, CD, AD, BC, AC, BD$, respectively.
+a) Prove that quadrilateral $MPNQ$ is a parallelogram.
+b) Prove that the three segments $MN, PQ, RS$ are concurrent at their common midpoint.
+
+Solution for Example 3:
+• a) In $\triangle ABD$, $MP$ is a midline (mid-segment), so $MP \parallel BD$ and $MP = \frac{1}{2}BD$.
+  In $\triangle BCD$, $QN$ is a midline, so $QN \parallel BD$ and $QN = \frac{1}{2}BD$.
+  Therefore, $MP \parallel QN$ and $MP = QN$. Thus, quadrilateral $MPNQ$ is a parallelogram.
+• b) Because $MPNQ$ is a parallelogram, diagonals $MN$ and $PQ$ bisect each other at a common midpoint $I$.
+  Similarly, quadrilateral $MRNS$ is a parallelogram (since $MS \parallel RN \parallel AD$ and $MS = RN = \frac{1}{2}AD$), so diagonals $MN$ and $RS$ bisect each other at their common midpoint.
+  Hence, the three segments $MN, PQ, RS$ are concurrent at their shared midpoint $I$.
+
+**Practice 3:** In Example 1, prove that the four points $C, D, E, F$ are coplanar and that quadrilateral $CDFE$ is a parallelogram.
+
+Solution for Practice 3:
+• Since $ABCD$ is a parallelogram, $CD \parallel AB$ and $CD = AB$.
+• Since $ABEF$ is a parallelogram, $EF \parallel AB$ and $EF = AB$.
+• By transitivity: $CD \parallel EF$ and $CD = EF$. Two parallel lines $CD$ and $EF$ uniquely define a plane; hence, the four points $C, D, E, F$ are coplanar.
+• Quadrilateral $CDFE$ has a pair of opposite sides that are equal and parallel ($CD \parallel EF, CD = EF$), so $CDFE$ is a parallelogram.
+
+### b) Theorem on Three Intersection Lines and Its Corollary
+
+Theorem on Three Intersection Lines:
+If three planes intersect each other pairwise in three distinct lines of intersection, then these three lines are either concurrent or mutually parallel:
+$$\begin{cases} (P) \cap (Q) = c \\\ (Q) \cap (R) = b \\\ (R) \cap (P) = a \end{cases} \Rightarrow a, b, c \text{ are concurrent or } a \parallel b \parallel c$$
+
+Corollary (Intersection of Planes Containing Parallel Lines):
+If two distinct planes contain two parallel straight lines, their line of intersection (if it exists) is parallel to both lines or coincident with one of them:
+$$\begin{cases} a \subset (P), \\, b \subset (Q) \\\ a \parallel b \\\ d = (P) \cap (Q) \end{cases} \Rightarrow d \parallel a \parallel b$$
+
+**Example 4:** Given a pyramid $S.ABCD$ with parallelogram base $ABCD$. Find the line of intersection of planes $(SAB)$ and $(SCD)$.
+
+Solution for Example 4:
+• Planes $(SAB)$ and $(SCD)$ share the common vertex $S$.
+• Line $AB \subset (SAB)$, line $CD \subset (SCD)$, and $AB \parallel CD$.
+• By the corollary, the line of intersection of $(SAB)$ and $(SCD)$ is the straight line $m$ passing through $S$ and parallel to $AB$ and $CD$.
+
+**Practice 4:** In Example 4, determine the line of intersection of planes $(SAD)$ and $(SBC)$.
+
+Solution for Practice 4:
+• Planes $(SAD)$ and $(SBC)$ share the common vertex $S$.
+• Furthermore, $AD \subset (SAD), BC \subset (SBC)$, and $AD \parallel BC$ (as $ABCD$ is a parallelogram).
+• By the corollary, their intersection line is the straight line passing through $S$ and parallel to $AD$ and $BC$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application 1 (Stick Leaning Against a Wall):** A straight stick has one end resting against a vertical wall and the other on the floor. Can the stick be placed parallel to one of the wall's edges?
+
+Solution for Application 1:
+• The junction line between the wall and floor is a horizontal line, and the vertical room corner is a vertical line perpendicular to the floor.
+• If both ends of the stick are placed at equal perpendicular distances from the corner within a vertical plane parallel to that wall, or if the stick lies horizontally on the floor/wall parallel to the baseboard, the stick can be placed parallel to a horizontal room boundary line.
+
+**Application 2 (Waterline in a Tilted Tank):** A rectangular glass aquarium is tilted. Explain why the upper waterline segment $AB$ is always parallel to the base edge $CD$ of the tank.
+
+Solution for Application 2:
+• The water surface constitutes a horizontal plane $(P)$, while the bottom of the tank forms a planar surface $(Q)$. Their intersection trace along the tilted side is the waterline $AB$.
+• The front and rear glass panes of the tank are two parallel planes. When the horizontal water plane intersects these parallel side panes, the lines of intersection formed are parallel. By the intersection theorem, the waterline $AB$ is parallel to the opposite base edge $CD$.
+
+**Exercise 4.15 (Window Casement Puzzle):** a) When two rectangular casement window leaves are swung open to any arbitrary angle, why do their outer vertical edges always remain parallel to each other?
+b) If the window leaves are trapezoidal, is there any opening angle at which their outer edges are parallel?
+
+Solution for Exercise 4.15:
+• a) The hinge axes of the two window leaves are vertical parallel lines: $d_1 \parallel d_2$.
+  For each rectangular sash, the outer edge is parallel to its hinge axis: outer edge $a \parallel d_1$, and outer edge $b \parallel d_2$.
+  Since $a \parallel d_1$, $b \parallel d_2$, and $d_1 \parallel d_2$, by transitivity $a \parallel b$. Therefore, the two outer edges remain parallel at all opening angles.
+• b) For trapezoidal leaves, the outer edges are slanted and not parallel to the vertical hinge axes. When swung open at varying angles in space, their directions in three dimensions cannot remain parallel; hence, no such opening position exists.
+
+### b) Detailed Section Exercises
+
+**Exercise 4.9:** In space, given three lines $a, b, c$. Which of the following propositions are true?
+a) If $a$ and $b$ do not intersect, then $a$ and $b$ are parallel.
+b) If $b$ and $c$ are skew, then $b$ and $c$ do not lie in the same plane.
+c) If $a$ and $b$ are both parallel to $c$, then $a$ is parallel to $b$.
+d) If $a$ intersects $b$ and $b$ intersects $c$, then $a$ intersects $c$.
+
+Solution for Exercise 4.9:
+• Proposition b) is true (by definition of skew lines).
+• Proposition c) is true when $a, b, c$ are distinct lines (transitive property of parallelism); in the general case, $a$ may be coincident with $b$.
+• Proposition a) is false (since $a$ and $b$ can be skew without intersecting).
+• Proposition d) is false (lines $a$ and $c$ may be skew or parallel, e.g., three edges of a box).
+
+**Exercise 4.10:** Given a pyramid $S.ABCD$ with parallelogram base. Determine the relative position of each pair of lines:
+a) $AB$ and $CD$;
+b) $AC$ and $BD$;
+c) $SB$ and $CD$.
+
+Solution for Exercise 4.10:
+• a) $AB$ and $CD$ lie in the base plane $(ABCD)$ without intersecting, so $AB \parallel CD$ (parallel lines).
+• b) $AC$ and $BD$ are the diagonals of parallelogram $ABCD$, so they intersect at the center $O$ of the base (intersecting lines).
+• c) $SB$ lies in plane $(SBC)$, while $CD$ lies in base $(ABCD)$. The four points $S, B, C, D$ are non-coplanar, so $SB$ and $CD$ are skew lines.
+
+**Exercise 4.11:** Given a pyramid $S.ABCD$ with parallelogram base $ABCD$. Let $M, N, P, Q$ be the midpoints of lateral edges $SA, SB, SC, SD$, respectively. Prove that quadrilateral $MNPQ$ is a parallelogram.
+
+Solution for Exercise 4.11:
+• In $\triangle SAB$, $MN$ is a midline, so $MN \parallel AB$ and $MN = \frac{1}{2}AB$.
+• In $\triangle SCD$, $QP$ is a midline, so $QP \parallel CD$ and $QP = \frac{1}{2}CD$.
+• Since $ABCD$ is a parallelogram, $AB \parallel CD$ and $AB = CD$.
+• It follows that $MN \parallel QP$ and $MN = QP$. Thus, quadrilateral $MNPQ$ is a parallelogram.
+
+**Exercise 4.12:** Given a pyramid $S.ABCD$ with trapezoidal base $ABCD$ ($AB \parallel CD$). Let $M, N$ be the midpoints of $SA, SB$. Prove that quadrilateral $MNCD$ is a trapezoid.
+
+Solution for Exercise 4.12:
+• In $\triangle SAB$, $MN$ is a midline, so $MN \parallel AB$.
+• Given that $ABCD$ is a trapezoid with $AB \parallel CD$, by transitivity we obtain $MN \parallel CD$.
+• Consequently, points $M, N, C, D$ are coplanar.
+• Since $MN \parallel CD$ and $MN = \frac{1}{2}AB \ne CD$ (assuming $AB \ne 2CD$), quadrilateral $MNCD$ is a trapezoid.
+
+**Exercise 4.13:** Given a pyramid $S.ABCD$ with trapezoidal base $ABCD$ ($AB \parallel CD$). Let $M$ be the midpoint of $SD$.
+a) Determine the line of intersection of $(MAB)$ and $(SCD)$.
+b) Let $N = SC \cap (MAB)$. Prove that $MN$ is a midline of triangle $SCD$.
+
+Solution for Exercise 4.13:
+• a) For planes $(MAB)$ and $(SCD)$:
+  Point $M$ is a shared point ($M \in (MAB)$ and $M \in SD \subset (SCD)$).
+  Line $AB \subset (MAB)$, line $CD \subset (SCD)$, and $AB \parallel CD$.
+  By the intersection corollary, the line of intersection is the line passing through $M$ and parallel to $CD$.
+• b) In plane $(SCD)$, the line through $M$ parallel to $CD$ intersects $SC$ at point $N$. Thus, $N = SC \cap (MAB)$.
+  In $\triangle SCD$, segment $MN$ passes through the midpoint $M$ of $SD$ and is parallel to base $CD$, so $N$ is the midpoint of $SC$.
+  Therefore, $MN$ is a midline of triangle $SCD$.
+
+**Exercise 4.14:** Given a tetrahedron $ABCD$. Let $M, N$ be the midpoints of $BC, CD$, and let $P \in AC$.
+a) Determine the line of intersection $d$ of planes $(AMN)$ and $(BPD)$.
+b) Prove that $d$ is parallel to $BD$.
+
+Solution for Exercise 4.14:
+• a) In $\triangle BCD$, $MN$ is a midline, so $MN \parallel BD$.
+  In plane $(ABC)$, $AM$ intersects $BP$ at point $E$.
+  In plane $(ACD)$, $AN$ intersects $DP$ at point $F$.
+  Since $E \in AM \subset (AMN)$ and $E \in BP \subset (BPD)$, point $E$ is a first common point.
+  Since $F \in AN \subset (AMN)$ and $F \in DP \subset (BPD)$, point $F$ is a second common point.
+  Hence, the line of intersection $d$ of $(AMN)$ and $(BPD)$ is line $EF$.
+• b) Consider three planes: $(BCD), (AMN)$, and $(BPD)$:
+  + $(BCD) \cap (AMN) = MN$;
+  + $(BCD) \cap (BPD) = BD$;
+  + $(AMN) \cap (BPD) = EF$.
+  Since $MN \parallel BD$, by the theorem on three intersection lines, the three lines of intersection must be mutually parallel. Therefore, $EF \parallel BD$ (i.e., $d \parallel BD$).

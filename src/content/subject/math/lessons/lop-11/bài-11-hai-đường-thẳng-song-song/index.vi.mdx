@@ -1,0 +1,243 @@
+---
+title: 'Bài 11: Hai đường thẳng song song.'
+description: Hệ thống lý thuyết bài hai đường thẳng song song cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Hai đường thẳng cắt nhau
+  - Hai đường thẳng song song
+  - Hai đường thẳng trùng nhau
+  - Hai đường thẳng chéo nhau
+  - Định lí về ba đường giao tuyến
+grade: 11
+order: 11
+updatedDate: 2026-10-28T16:52:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hai đường thẳng đồng phẳng, hai đường thẳng không đồng phẳng
+
+·       Hai đường thẳng cắt nhau, song song, trùng nhau
+
+·       Hai đường thẳng chéo nhau
+
+·       Định lí về ba đường giao tuyến
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết và phân biệt chính xác bốn vị trí tương đối của hai đường thẳng trong không gian: cắt nhau, song song, trùng nhau, chéo nhau.
+
+·       Nắm vững các tính chất cơ bản của hai đường thẳng song song: tính duy nhất của đường thẳng song song qua một điểm ngoài đường thẳng và tính chất bắc cầu.
+
+·       Vận dụng thành thạo định lí về ba đường giao tuyến và hệ quả để tìm giao tuyến song song của hai mặt phẳng.
+
+·       Chứng minh hai đường thẳng song song, chứng minh các tứ giác là hình bình hành, hình thang trong không gian.
+
+·       Vận dụng kiến thức vào giải thích các hiện tượng thực tiễn (nút giao lập thể, khung cửi dệt vải, mép nước trong bể nghiêng, nguyên lí chuyển động của cánh cửa sổ).
+
+## Vị trí tương đối của hai đường thẳng trong không gian
+
+<Youtube url="https://www.youtube.com/watch?v=example_vi_tri_tuong_doi_hai_duong_thang"/>
+
+### a) Bốn vị trí tương đối trong không gian
+
+Cho hai đường thẳng $a$ và $b$ trong không gian:
+1\. Trường hợp $a$ và $b$ cùng nằm trong một mặt phẳng (hai đường thẳng đồng phẳng):
+• Cắt nhau: $a$ và $b$ có một điểm chung duy nhất, kí hiệu $a \cap b = \\{M\\}$.
+• Song song: $a$ và $b$ không có điểm chung nào, kí hiệu $a \parallel b$.
+  (Định nghĩa: Hai đường thẳng song song là hai đường thẳng đồng phẳng và không có điểm chung. Có đúng một mặt phẳng chứa hai đường thẳng song song).
+• Trùng nhau: $a$ và $b$ có vô số điểm chung, kí hiệu $a \equiv b$.
+
+2\. Trường hợp $a$ và $b$ không cùng nằm trong bất kì mặt phẳng nào (hai đường thẳng không đồng phẳng):
+• Chéo nhau: $a$ và $b$ chéo nhau (không có mặt phẳng nào đồng thời chứa cả $a$ và $b$).
+Chú ý: Hai đường thẳng không có điểm chung trong không gian có thể song song hoặc chéo nhau.
+
+### b) Ví dụ và luyện tập về vị trí tương đối
+
+**Ví dụ 1:** Cho hai hình bình hành $ABCD$ và $ABEF$ không cùng nằm trong một mặt phẳng.
+a) Xét bốn đường thẳng $AB, BC, CD, DA$. Chỉ ra các cặp đường thẳng cắt nhau, song song.
+b) Trong ba đường thẳng $AB, AF, BE$, có hai đường thẳng nào chéo nhau không?
+
+Lời giải Ví dụ 1:
+• a) Vì $ABCD$ là hình bình hành nên các đường thẳng đều cùng thuộc mặt phẳng $(ABCD)$:
+  + Các cặp đường thẳng cắt nhau: $AB$ và $BC$, $AB$ và $DA$, $BC$ và $CD$, $CD$ và $DA$.
+  + Các cặp đường thẳng song song: $AB \parallel CD$ và $AD \parallel BC$.
+• b) Ba đường thẳng $AB, AF, BE$ cùng nằm trong mặt phẳng $(ABEF)$, do đó chúng đồng phẳng. Vậy không có cặp đường thẳng nào chéo nhau.
+
+**Luyện tập 1:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành.
+a) Trong các đường thẳng $AB, AC, CD$, hai đường thẳng nào song song, hai đường thẳng nào cắt nhau?
+b) Lấy $M \in SA, N \in SB$. Trong các đường thẳng $SA, MN, AB$ có cặp nào chéo nhau không?
+
+Lời giải Luyện tập 1:
+• a) Trong mặt phẳng đáy $(ABCD)$: $AB \parallel CD$; hai đường thẳng $AB$ và $AC$ cắt nhau tại $A$; $AC$ và $CD$ cắt nhau tại $C$.
+• b) Các điểm $S, A, B$ cùng xác định mặt phẳng $(SAB)$. Vì $M \in SA \subset (SAB)$ và $N \in SB \subset (SAB)$ nên ba đường thẳng $SA, MN, AB$ cùng nằm trong mặt phẳng $(SAB)$. Do đó không có hai đường thẳng nào chéo nhau.
+
+**Ví dụ 2:** Cho hình tứ diện $ABCD$. Hai đường thẳng $AB$ và $CD$ có chéo nhau không? Chỉ ra tất cả các cặp đường thẳng chéo nhau trong tứ diện.
+
+Lời giải Ví dụ 2:
+• Giả sử $AB$ và $CD$ không chéo nhau, khi đó chúng cùng thuộc một mặt phẳng. Suy ra bốn điểm $A, B, C, D$ đồng phẳng, mâu thuẫn với giả thiết $ABCD$ là hình tứ diện.
+• Vậy $AB$ và $CD$ chéo nhau.
+• Tương tự, trong tứ diện $ABCD$ có đúng 3 cặp cạnh chéo nhau là: $AB$ và $CD$; $AC$ và $BD$; $AD$ và $BC$.
+
+**Luyện tập 2:** Trong hình chóp tứ giác $S.ABCD$, chỉ ra những đường thẳng:
+a) Chéo với đường thẳng $SA$;
+b) Chéo với đường thẳng $BC$.
+
+Lời giải Luyện tập 2:
+• a) Các đường thẳng đi qua các đỉnh của hình chóp và chéo với $SA$ là: $BC$ và $CD$ (vì $BC, CD$ không nằm trong các mặt phẳng chứa $SA$ là $(SAB), (SAD), (SAC)$).
+• b) Các đường thẳng chéo với $BC$ là: $SA$ và $SD$.
+
+## Tính chất của hai đường thẳng song song và định lí ba đường giao tuyến
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_dinh_li_giao_tuyen"/>
+
+### a) Các tính chất cơ bản của hai đường thẳng song song
+
+Hệ thống tính chất:
+• Tính chất 1: Trong không gian, qua một điểm nằm ngoài một đường thẳng cho trước, có một và chỉ một đường thẳng song song với đường thẳng đã cho.
+• Tính chất 2 (Tính chất bắc cầu): Trong không gian, hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì song song với nhau:
+$$\begin{cases} a \parallel c \\\ b \parallel c \\\ a \ne b \end{cases} \Rightarrow a \parallel b$$
+
+**Ví dụ 3:** Cho tứ diện $ABCD$. Gọi $M, N, P, Q, R, S$ lần lượt là trung điểm của $AB, CD, AD, BC, AC, BD$.
+a) Chứng minh tứ giác $MPNQ$ là hình bình hành.
+b) Chứng minh ba đoạn thẳng $MN, PQ, RS$ đồng quy tại trung điểm của mỗi đoạn.
+
+Lời giải Ví dụ 3:
+• a) Trong tam giác $ABD$, $MP$ là đường trung bình nên $MP \parallel BD$ và $MP = \frac{1}{2}BD$.
+  Trong tam giác $BCD$, $QN$ là đường trung bình nên $QN \parallel BD$ và $QN = \frac{1}{2}BD$.
+  Suy ra $MP \parallel QN$ và $MP = QN$. Do đó tứ giác $MPNQ$ là hình bình hành.
+• b) Vì $MPNQ$ là hình bình hành nên hai đường chéo $MN$ và $PQ$ cắt nhau tại trung điểm $I$ của mỗi đoạn.
+  Chứng minh tương tự, tứ giác $MRNS$ cũng là hình bình hành (do $MS \parallel RN \parallel AD$ và $MS = RN = \frac{1}{2}AD$), nên hai đường chéo $MN$ và $RS$ cắt nhau tại trung điểm của mỗi đoạn.
+  Vậy ba đoạn thẳng $MN, PQ, RS$ cùng đi qua trung điểm $I$ của mỗi đoạn (đồng quy tại $I$).
+
+**Luyện tập 3:** Trong Ví dụ 1, chứng minh bốn điểm $C, D, E, F$ đồng phẳng và tứ giác $CDFE$ là hình bình hành.
+
+Lời giải Luyện tập 3:
+• Vì $ABCD$ là hình bình hành nên $CD \parallel AB$ và $CD = AB$.
+• Vì $ABEF$ là hình bình hành nên $EF \parallel AB$ và $EF = AB$.
+• Theo tính chất bắc cầu: $CD \parallel EF$ và $CD = EF$. Hai đường thẳng song song $CD$ và $EF$ xác định một mặt phẳng duy nhất, suy ra bốn điểm $C, D, E, F$ đồng phẳng.
+• Tứ giác $CDFE$ có một cặp cạnh đối song song và bằng nhau ($CD \parallel EF, CD = EF$), nên $CDFE$ là hình bình hành.
+
+### b) Định lí về ba đường giao tuyến và hệ quả
+
+Định lí về ba đường giao tuyến:
+Nếu ba mặt phẳng đôi một cắt nhau theo ba giao tuyến phân biệt thì ba giao tuyến đó hoặc đồng quy, hoặc đôi một song song với nhau.
+$$\begin{cases} (P) \cap (Q) = c \\\ (Q) \cap (R) = b \\\ (R) \cap (P) = a \end{cases} \Rightarrow a, b, c \text{ đồng quy hoặc } a \parallel b \parallel c$$
+
+Hệ quả (Giao tuyến của hai mặt phẳng chứa hai đường thẳng song song):
+Nếu hai mặt phẳng phân biệt lần lượt chứa hai đường thẳng song song thì giao tuyến của chúng (nếu có) song song với hai đường thẳng đó hoặc trùng với một trong hai đường thẳng đó:
+$$\begin{cases} a \subset (P), \\, b \subset (Q) \\\ a \parallel b \\\ d = (P) \cap (Q) \end{cases} \Rightarrow d \parallel a \parallel b$$
+
+**Ví dụ 4:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Xác định giao tuyến của hai mặt phẳng $(SAB)$ và $(SCD)$.
+
+Lời giải Ví dụ 4:
+• Hai mặt phẳng $(SAB)$ và $(SCD)$ có điểm chung $S$.
+• Mặt phẳng $(SAB)$ chứa đường thẳng $AB$, mặt phẳng $(SCD)$ chứa đường thẳng $CD$, và $AB \parallel CD$.
+• Áp dụng hệ quả, giao tuyến của $(SAB)$ và $(SCD)$ là đường thẳng $m$ đi qua điểm chung $S$ và song song với $AB, CD$.
+
+**Luyện tập 4:** Trong Ví dụ 4, hãy xác định giao tuyến của hai mặt phẳng $(SAD)$ và $(SBC)$.
+
+Lời giải Luyện tập 4:
+• Hai mặt phẳng $(SAD)$ và $(SBC)$ có điểm chung $S$.
+• Mặt khác $AD \subset (SAD), BC \subset (SBC)$ và $AD \parallel BC$ (do đáy là hình bình hành).
+• Theo hệ quả, giao tuyến của $(SAD)$ và $(SBC)$ là đường thẳng đi qua đỉnh $S$ và song song với $AD$ và $BC$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 1 (Chiếc gậy tựa tường):** Một chiếc gậy được đặt một đầu dựa vào tường và đầu kia trên mặt sàn. Có thể đặt chiếc gậy đó song song với một trong các mép tường hay không?
+
+Lời giải Vận dụng 1:
+• Mép chân tường và mép góc tường giao nhau tại một góc vuông.
+• Nếu đặt chiếc gậy sao cho đầu dựa tường và đầu dưới sàn cùng cách đều một mép tường và nằm trong cùng một mặt phẳng song song với mép tường đó thì chiếc gậy có thể song song với mép giao giữa tường và sàn (hoặc mép góc tường thẳng đứng). Hoàn toàn có thể đặt gậy song song với một mép tường nằm ngang.
+
+**Vận dụng 2 (Mép nước trong bể nghiêng):** Một bể kính chứa nước đáy hình chữ nhật đặt nghiêng. Giải thích tại sao đường mép nước $AB$ luôn song song với cạnh $CD$ của đáy bể.
+
+Lời giải Vận dụng 2:
+• Mặt nước là một mặt phẳng nằm ngang $(P)$. Mặt đáy bể là mặt phẳng $(Q)$. Hai mặt này cắt nhau theo đường mép nước $AB$.
+• Mặt thành bể chứa $CD$ song song với mặt thành bể đối diện. Áp dụng định lí giao tuyến của mặt phẳng ngang cắt hai mặt song song của thành bể, ta có đường mép nước $AB$ luôn song song với cạnh đáy $CD$.
+
+**Bài 4.15 (Đố vui cánh cửa sổ):** a) Khi hai cánh cửa sổ hình chữ nhật được mở ở bất kì vị trí nào, tại sao hai mép ngoài của chúng luôn song song với nhau?
+b) Nếu hai cánh cửa sổ có dạng hình thang thì có vị trí nào để hai mép ngoài song song với nhau không?
+
+Lời giải Bài 4.15:
+• a) Trục bản lề của hai cánh cửa sổ là hai đường thẳng đứng song song $d_1 \parallel d_2$.
+  Mỗi cánh cửa hình chữ nhật nên mép ngoài $a$ của cánh thứ nhất song song với trục bản lề $d_1$; mép ngoài $b$ của cánh thứ hai song song với trục bản lề $d_2$.
+  Vì $a \parallel d_1$, $b \parallel d_2$ và $d_1 \parallel d_2$, theo tính chất bắc cầu suy ra $a \parallel b$. Vậy hai mép ngoài luôn song song với nhau ở mọi góc mở.
+• b) Với cửa sổ hình thang, mép ngoài không song song với trục bản lề. Khi mở ở các góc khác nhau, phương của hai mép ngoài không cùng song song với trục bản lề thẳng đứng, nên không tồn tại vị trí nào để hai mép ngoài song song với nhau.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 4.9:** Trong không gian, cho ba đường thẳng $a, b, c$. Những mệnh đề nào sau đây là đúng?
+a) Nếu $a$ và $b$ không cắt nhau thì $a$ và $b$ song song.
+b) Nếu $b$ và $c$ chéo nhau thì $b$ và $c$ không cùng thuộc một mặt phẳng.
+c) Nếu $a$ và $b$ cùng song song với $c$ thì $a$ song song với $b$.
+d) Nếu $a$ và $b$ cắt nhau, $b$ và $c$ cắt nhau thì $a$ và $c$ cắt nhau.
+
+Lời giải Bài 4.9:
+• Mệnh đề b) đúng (theo định nghĩa hai đường thẳng chéo nhau).
+• Mệnh đề c) đúng nếu $a, b, c$ phân biệt (tính chất bắc cầu); trong trường hợp tổng quát $a$ có thể trùng $b$.
+• Mệnh đề a) sai (vì $a$ và $b$ có thể chéo nhau).
+• Mệnh đề d) sai (ví dụ ba cạnh của một hình chóp cùng xuất phát từ đỉnh, hoặc hai đường cắt nhau tại các điểm khác nhau thì $a$ và $c$ có thể chéo nhau hoặc song song).
+
+**Bài 4.10:** Cho hình chóp $S.ABCD$ có đáy là hình bình hành. Xác định vị trí tương đối của các cặp đường thẳng sau:
+a) $AB$ và $CD$;
+b) $AC$ và $BD$;
+c) $SB$ và $CD$.
+
+Lời giải Bài 4.10:
+• a) $AB$ và $CD$ cùng nằm trong mặt phẳng đáy $(ABCD)$ và không có điểm chung nên $AB \parallel CD$ (song song).
+• b) $AC$ và $BD$ là hai đường chéo của hình bình hành $ABCD$ nên chúng cắt nhau tại tâm $O$ của đáy.
+• c) $SB$ nằm trong mặt phẳng $(SBC)$, $CD$ nằm trong mặt phẳng $(ABCD)$. Bốn điểm $S, B, C, D$ không đồng phẳng, do đó $SB$ và $CD$ chéo nhau.
+
+**Bài 4.11:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. $M, N, P, Q$ lần lượt là trung điểm của $SA, SB, SC, SD$. Chứng minh tứ giác $MNPQ$ là hình bình hành.
+
+Lời giải Bài 4.11:
+• Trong tam giác $SAB$, $MN$ là đường trung bình nên $MN \parallel AB$ và $MN = \frac{1}{2}AB$.
+• Trong tam giác $SCD$, $QP$ là đường trung bình nên $QP \parallel CD$ và $QP = \frac{1}{2}CD$.
+• Vì $ABCD$ là hình bình hành nên $AB \parallel CD$ và $AB = CD$.
+• Suy ra $MN \parallel QP$ và $MN = QP$. Vậy tứ giác $MNPQ$ là hình bình hành.
+
+**Bài 4.12:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang ($AB \parallel CD$). Gọi $M, N$ lần lượt là trung điểm của $SA, SB$. Chứng minh tứ giác $MNCD$ là hình thang.
+
+Lời giải Bài 4.12:
+• Trong tam giác $SAB$, $MN$ là đường trung bình nên $MN \parallel AB$.
+• Theo giả thiết đáy $ABCD$ là hình thang có $AB \parallel CD$.
+• Theo tính chất bắc cầu: $MN \parallel CD$. Do đó bốn điểm $M, N, C, D$ cùng thuộc một mặt phẳng.
+• Vì $MN \parallel CD$ và $MN = \frac{1}{2}AB \ne CD$ (nếu $AB \ne 2CD$), nên tứ giác $MNCD$ là hình thang.
+
+**Bài 4.13:** Cho hình chóp $S.ABCD$ có đáy là hình thang ($AB \parallel CD$). Gọi $M$ là trung điểm của $SD$.
+a) Xác định giao tuyến của $(MAB)$ và $(SCD)$.
+b) Gọi $N = SC \cap (MAB)$. Chứng minh $MN$ là đường trung bình của tam giác $SCD$.
+
+Lời giải Bài 4.13:
+• a) Xét hai mặt phẳng $(MAB)$ và $(SCD)$:
+  Điểm $M$ là điểm chung (vì $M \in (MAB)$ và $M \in SD \subset (SCD)$).
+  Mặt phẳng $(MAB)$ chứa đường thẳng $AB$, mặt phẳng $(SCD)$ chứa đường thẳng $CD$, mà $AB \parallel CD$.
+  Theo hệ quả, giao tuyến của $(MAB)$ và $(SCD)$ là đường thẳng qua $M$ và song song với $CD$.
+• b) Trong mặt phẳng $(SCD)$, qua $M$ kẻ đường thẳng song song với $CD$ cắt $SC$ tại điểm $N$. Khi đó $N = SC \cap (MAB)$.
+  Trong tam giác $SCD$, đoạn thẳng $MN$ đi qua trung điểm $M$ của $SD$ và song song với đáy $CD$, nên $N$ là trung điểm của $SC$.
+  Vậy $MN$ là đường trung bình của tam giác $SCD$.
+
+**Bài 4.14:** Cho tứ diện $ABCD$. $M, N$ lần lượt là trung điểm của $BC, CD$ và $P \in AC$.
+a) Xác định giao tuyến $d$ của hai mặt phẳng $(AMN)$ và $(BPD)$.
+b) Chứng minh rằng $d$ song song với $BD$.
+
+Lời giải Bài 4.14:
+• a) Trong tam giác $BCD$, $MN$ là đường trung bình nên $MN \parallel BD$.
+  Trong mặt phẳng $(ABC)$, nối $AM$ cắt $BP$ tại điểm $E$.
+  Trong mặt phẳng $(ACD)$, nối $AN$ cắt $DP$ tại điểm $F$.
+  Vì $E \in AM \subset (AMN)$ và $E \in BP \subset (BPD)$ nên $E$ là điểm chung thứ nhất.
+  Vì $F \in AN \subset (AMN)$ và $F \in DP \subset (BPD)$ nên $F$ là điểm chung thứ hai.
+  Vậy giao tuyến $d$ của $(AMN)$ và $(BPD)$ là đường thẳng $EF$.
+• b) Xét ba mặt phẳng: $(BCD), (AMN)$ và $(BPD)$:
+  + $(BCD) \cap (AMN) = MN$;
+  + $(BCD) \cap (BPD) = BD$;
+  + $(AMN) \cap (BPD) = EF$.
+  Vì $MN \parallel BD$, theo định lí về ba đường giao tuyến, ba giao tuyến này phải đôi một song song. Do đó $EF \parallel BD$ (tức $d \parallel BD$).
