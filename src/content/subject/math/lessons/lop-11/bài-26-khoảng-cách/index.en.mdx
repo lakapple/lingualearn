@@ -1,0 +1,110 @@
+---
+title: 'Lesson 26: Distance.'
+description: Theoretical system for the lesson on Distance with illustrative examples.
+tags:
+  - grade 11
+  - Distance from a point to a line, to a plane
+  - Distance between a line and a parallel plane, between two parallel planes
+  - Common perpendicular and distance between two skew lines
+grade: 11
+order: 26
+updatedDate: 2026-10-28T23:42:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Distance from a point to a line, to a plane
+
+·       Altitude of a pyramid, of a prism
+
+·       Distance between a line and a parallel plane, between two parallel planes
+
+·       Common perpendicular and distance between two skew lines
+
+### **Knowledge and Skills:**
+
+·       Determine the distance between points, lines, and planes in space.
+
+·       Determine the common perpendicular of two skew lines in simple cases.
+
+·       Apply distance concepts to practical situations (installing fire sprinkler heads, height control barriers at overpasses, tripod stands).
+
+## Distance from a Point to a Line and to a Plane
+
+<Youtube url="https://www.youtube.com/watch?v=example_khoang_cach_diem_duong_mat"/>
+
+### a) Definition of Distance from a Point to a Line and to a Plane
+
+• The distance from a point $M$ to a line $a$, denoted by $d(M, a)$, is the distance between $M$ and its projection $H$ on $a$.
+• The distance from a point $M$ to a plane $(P)$, denoted by $d(M, (P))$, is the distance between $M$ and its projection $H$ on $(P)$.
+Note:
+\- $d(M, a) = 0 \iff M \in a$;
+\- $d(M, (P)) = 0 \iff M \in (P)$;
+\- The distance from $M$ to a line $a$ (or a plane $(P)$) is the shortest distance between $M$ and any point belonging to $a$ (belonging to $(P)$).
+\- The distance from the apex to the plane containing the base of a pyramid is called the altitude (height) of that pyramid.
+
+### b) Examples and Practice
+
+**Example 1:** Given a regular pyramid $S.ABC$. Let the base edge and lateral edge be $a$ and $b$ respectively ($a < b\sqrt{3}$). Calculate the altitude of the pyramid.
+
+Solution to Example 1:
+• The projection of $S$ on the plane $(ABC)$ is the center $O$ of the equilateral triangle $ABC$.
+• In the equilateral triangle $ABC$ of side $a$, the radius of the circumscribed circle is $OA = \frac{a}{\sqrt{3}}$.
+• Considering the right-angled triangle $SOA$ at $O$, we have:
+  $$SO = \sqrt{SA^2 - OA^2} = \sqrt{b^2 - \left(\frac{a}{\sqrt{3}}
+ight)^2} = \sqrt{b^2 - \frac{a^2}{3}}$$
+• Thus, the altitude of the pyramid is $\sqrt{b^2 - \frac{a^2}{3}}.$
+
+**Practice 1:** Given a right prism $ABC.A'B'C'$ where $ABC$ is a right-angled isosceles triangle at $A$, $AB = a$, and $AA' = h$.
+a) Calculate the distance from $A$ to the plane $(BCC'B')$.
+b) What kind of triangle is $ABC'$? Calculate the distance from $A$ to $BC$.
+
+Solution to Practice 1:
+• a) Since it is a right prism, $AB \perp (BCC'B')$ at $B$. Therefore, the distance from $A$ to $(BCC'B')$ is equal to the length of segment $AB = a$.
+• b) Triangle $ABC'$ is right-angled at $B$ (since $AB \perp (BCC'B') \implies AB \perp BC'$). The distance from $A$ to $BC$ is equal to the length of side $AB = a$ (since $AB \perp BC$ because triangle $ABC$ is right-angled isosceles at $A$).
+
+## Distance Between a Line and a Parallel Plane, and Between Two Parallel Planes
+
+### a) Definitions
+
+• The distance between a line $a$ and a plane $(P)$ parallel to $a$, denoted by $d(a, (P))$, is the distance from any point on $a$ to the plane $(P)$.
+• The distance between two parallel planes $(P)$ and $(Q)$, denoted by $d((P), (Q))$, is the distance from any point on one plane to the other plane.
+• The distance between two parallel lines $m$ and $n$, denoted by $d(m, n)$, is the distance from any point on one line to the other line.
+Note: The distance between the two bases of a prism is called the altitude (height) of that prism.
+
+### b) Examples and Practice
+
+**Example 2:** Given a right parallelepiped $ABCD.A'B'C'D'$ whose base is a rhombus with side length $a$, $\widehat{BAD} = 120^{\circ}$, and $AA' = h$. Calculate the distances between $A'C'$ and $(ABCD)$, and between $AA'$ and $(BDD'B')$.
+
+Solution to Example 2:
+• $A'C' \parallel (ABCD)$ and the parallelepiped is a right parallelepiped, so $AA' \perp (ABCD)$. Thus, $d(A'C', (ABCD)) = d(A', (ABCD)) = AA' = h$.
+• $AA' \parallel BB' \parallel (BDD'B')$. Let $O$ be the center of the rhombus $ABCD$. We have $AO \perp BD$ and $AO \perp BB' \implies AO \perp (BDD'B')$.
+  Therefore, the distance between $AA'$ and $(BDD'B')$ equals the length of segment $AO$.
+  Isosceles triangle $BAD$ at $A$ has $\widehat{BAD} = 120^{\circ} \implies \widehat{ABO} = 30^{\circ}$.
+  In the right-angled triangle $AOB$ at $O$, we have $AO = \frac{1}{2}AB = \frac{a}{2}$.
+• Thus, the distance between $AA'$ and $(BDD'B')$ is $\frac{a}{2}$.
+
+## Distance Between Two Skew Lines
+
+### a) Common Perpendicular and Definition
+
+• Common Perpendicular: A line $\Delta$ that intersects two skew lines $a$ and $b$ and is perpendicular to both of them is called the common perpendicular of $a$ and $b$.
+• Distance Between Two Skew Lines: If the common perpendicular $\Delta$ intersects $a$ and $b$ at $M$ and $N$ respectively, the length of the segment $MN$ is called the distance between the two skew lines $a$ and $b$.
+• Remarks:
+\- The distance between two skew lines equals the distance from one of the lines to a plane parallel to it and containing the other line.
+\- The distance between two skew lines equals the distance between two parallel planes containing the respective lines.
+
+### b) Illustrative Example
+
+**Example 3:** Given a pyramid $S.ABC$ with $SA \perp (ABC)$, $AB = a$, and $\widehat{ABC} = 60^{\circ}$. Identify the common perpendicular and calculate the distance between the two lines $SA$ and $BC$.
+
+Solution to Example 3:
+• Let $H$ be the projection of $A$ on $BC$. Right-angled triangle $ABH$ at $H$ has $AB = a$ and $\widehat{ABH} = 60^{\circ}$, so $BH = AB \cdot \cos 60^{\circ} = \frac{a}{2}$.
+• Since $SA \perp (ABC)$, we have $SA \perp AH$ and $SA \perp BC$. Moreover, $AH \perp BC$; thus, $AH$ is the common perpendicular segment of $SA$ and $BC$.
+• The distance between the two lines $SA$ and $BC$ is:
+  $$d(SA, BC) = AH = AB \cdot \sin 60^{\circ} = a \cdot \frac{\sqrt{3}}{2} = \frac{a\sqrt{3}}{2}.$$

@@ -1,0 +1,109 @@
+---
+title: 'Bài 26: Khoảng cách.'
+description: Hệ thống lý thuyết bài Khoảng cách cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Khoảng cách từ một điểm đến một đường thẳng, đến một mặt phẳng
+  - Khoảng cách giữa đường thẳng và mặt phẳng song song, giữa hai mặt phẳng song song
+  - Khoảng cách giữa đường thẳng và mặt phẳng song song, giữa hai mặt phẳng song song
+grade: 11
+order: 26
+updatedDate: 2026-10-28T23:42:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Khoảng cách từ một điểm đến một đường thẳng, đến một mặt phẳng
+
+·       Chiều cao của hình chóp, hình lăng trụ
+
+·       Khoảng cách giữa đường thẳng và mặt phẳng song song, giữa hai mặt phẳng song song
+
+·       Đường vuông góc chung và khoảng cách giữa hai đường thẳng chéo nhau
+
+### **Kiến thức, kĩ năng:**
+
+·       Xác định khoảng cách giữa các đối tượng điểm, đường thẳng, mặt phẳng trong không gian.
+
+·       Xác định đường vuông góc chung của hai đường thẳng chéo nhau trong các trường hợp đơn giản.
+
+·       Vận dụng kiến thức về khoảng cách vào một số tình huống thực tế (lắp đặt đầu phun nước chữa cháy sprinkler, khung khống chế chiều cao ở cầu vượt, giá đỡ ba chân).
+
+## Khoảng cách từ một điểm đến một đường thẳng, đến một mặt phẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_khoang_cach_diem_duong_mat"/>
+
+### a) Định nghĩa khoảng cách từ điểm đến đường thẳng và mặt phẳng
+
+• Khoảng cách từ một điểm $M$ đến một đường thẳng $a$, kí hiệu $d(M, a)$, là khoảng cách giữa $M$ và hình chiếu $H$ của $M$ trên $a$.
+• Khoảng cách từ một điểm $M$ đến một mặt phẳng $(P)$, kí hiệu $d(M, (P))$, là khoảng cách giữa $M$ và hình chiếu $H$ của $M$ trên $(P)$.
+Chú ý:
+\- $d(M, a) = 0 \iff M \in a$;
+\- $d(M, (P)) = 0 \iff M \in (P)$;
+\- Khoảng cách từ $M$ đến đường thẳng $a$ (hoặc mặt phẳng $(P)$) là khoảng cách nhỏ nhất giữa $M$ và một điểm bất kì thuộc $a$ (thuộc $(P)$).
+\- Khoảng cách từ đỉnh đến mặt phẳng chứa mặt đáy của một hình chóp được gọi là chiều cao của hình chóp đó.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 1:** Cho hình chóp đều $S.ABC$. Biết độ dài cạnh đáy và cạnh bên tương ứng bằng $a, b$ ($a < b\sqrt{3}$). Tính chiều cao của hình chóp.
+
+Lời giải Ví dụ 1:
+• Hình chiếu của $S$ trên mặt phẳng $(ABC)$ là tâm $O$ của tam giác đều $ABC$.
+• Trong tam giác đều $ABC$ cạnh $a$, bán kính đường tròn ngoại tiếp là $OA = \frac{a}{\sqrt{3}}$.
+• Xét tam giác vuông $SOA$ tại $O$, ta có:
+  $$SO = \sqrt{SA^2 - OA^2} = \sqrt{b^2 - \left(\frac{a}{\sqrt{3}}\right)^2} = \sqrt{b^2 - \frac{a^2}{3}}$$
+• Vậy chiều cao của hình chóp là $\sqrt{b^2 - \frac{a^2}{3}}$.
+
+**Luyện tập 1:** Cho hình lăng trụ đứng $ABC.A'B'C'$ có $ABC$ là tam giác vuông cân tại $A$, $AB = a$, $AA' = h$.
+a) Tính khoảng cách từ $A$ đến mặt phẳng $(BCC'B')$.
+b) Tam giác $ABC'$ là tam giác gì? Tính khoảng cách từ $A$ đến $BC$.
+
+Lời giải Luyện tập 1:
+• a) Do hình lăng trụ đứng nên $AB \perp (BCC'B')$ tại $B$. Do đó khoảng cách từ $A$ đến $(BCC'B')$ chính là độ dài đoạn $AB = a$.
+• b) Tam giác $ABC'$ vuông tại $B$ (vì $AB \perp (BCC'B') \implies AB \perp BC'$). Khoảng cách từ $A$ đến $BC$ chính là độ dài cạnh $AB = a$ (vì $AB \perp BC$ do tam giác $ABC$ vuông cân tại $A$).
+
+## Khoảng cách giữa đường thẳng và mặt phẳng song song, giữa hai mặt phẳng song song
+
+### a) Định nghĩa
+
+• Khoảng cách giữa đường thẳng $a$ và mặt phẳng $(P)$ song song với $a$, kí hiệu $d(a, (P))$, là khoảng cách từ một điểm bất kì trên $a$ đến mặt phẳng $(P)$.
+• Khoảng cách giữa hai mặt phẳng song song $(P)$ và $(Q)$, kí hiệu $d((P), (Q))$, là khoảng cách từ một điểm bất kì thuộc mặt phẳng này đến mặt phẳng kia.
+• Khoảng cách giữa hai đường thẳng song song $m$ và $n$, kí hiệu $d(m, n)$, là khoảng cách từ một điểm thuộc đường thẳng này đến đường thẳng kia.
+Chú ý: Khoảng cách giữa hai đáy của một hình lăng trụ được gọi là chiều cao của hình lăng trụ đó.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 2:** Cho hình hộp đứng $ABCD.A'B'C'D'$, đáy là hình thoi có cạnh bằng $a$, $\widehat{BAD} = 120^{\circ}$, $AA' = h$. Tính các khoảng cách giữa $A'C'$ và $(ABCD)$, $AA'$ và $(BDD'B')$.
+
+Lời giải Ví dụ 2:
+• $A'C' \parallel (ABCD)$ và hình hộp đứng có $AA' \perp (ABCD)$. Do đó $d(A'C', (ABCD)) = d(A', (ABCD)) = AA' = h$.
+• $AA' \parallel BB' \parallel (BDD'B')$. Gọi $O$ là tâm hình thoi $ABCD$. Ta có $AO \perp BD$ và $AO \perp BB' \implies AO \perp (BDD'B')$.
+  Do đó khoảng cách giữa $AA'$ và $(BDD'B')$ bằng độ dài đoạn thẳng $AO$.
+  Tam giác $BAD$ cân tại $A$ có $\widehat{BAD} = 120^{\circ} \implies \widehat{ABO} = 30^{\circ}$.
+  Trong tam giác vuông $AOB$ tại $O$, ta có $AO = \frac{1}{2}AB = \frac{a}{2}$.
+• Vậy khoảng cách giữa $AA'$ và $(BDD'B')$ bằng $\frac{a}{2}$.
+
+## Khoảng cách giữa hai đường thẳng chéo nhau
+
+### a) Đường vuông góc chung và định nghĩa
+
+• Đường vuông góc chung: Đường thẳng $\Delta$ cắt hai đường thẳng chéo nhau $a, b$ và vuông góc với cả hai đường thẳng đó được gọi là đường vuông góc chung của $a$ và $b$.
+• Khoảng cách giữa hai đường thẳng chéo nhau: Nếu đường vuông góc chung $\Delta$ cắt $a$ và $b$ lần lượt tại $M$ và $N$ thì độ dài đoạn thẳng $MN$ được gọi là khoảng cách giữa hai đường thẳng chéo nhau $a$ và $b$.
+• Nhận xét:
+\- Khoảng cách giữa hai đường thẳng chéo nhau bằng khoảng cách từ một trong hai đường thẳng đó đến mặt phẳng song song với nó và chứa đường thẳng còn lại.
+\- Khoảng cách giữa hai đường thẳng chéo nhau bằng khoảng cách giữa hai mặt phẳng song song lần lượt chứa hai đường thẳng đó.
+
+### b) Ví dụ minh hoạ
+
+**Ví dụ 3:** Cho hình chóp $S.ABC$ có $SA \perp (ABC)$, $AB = a$, $\widehat{ABC} = 60^{\circ}$. Xác định đường vuông góc chung và tính khoảng cách giữa hai đường thẳng $SA$ và $BC$.
+
+Lời giải Ví dụ 3:
+• Gọi $H$ là hình chiếu của $A$ trên $BC$. Tam giác $ABH$ vuông tại $H$ có $AB = a$ và $\widehat{ABH} = 60^{\circ}$, nên $BH = AB \cdot \cos 60^{\circ} = \frac{a}{2}$.
+• Do $SA \perp (ABC)$, ta có $SA \perp AH$ và $SA \perp BC$. Hơn nữa $AH \perp BC$, vậy $AH$ chính là đoạn vuông góc chung của $SA$ và $BC$.
+• Khoảng cách giữa hai đường thẳng $SA$ và $BC$ là:
+  $$d(SA, BC) = AH = AB \cdot \sin 60^{\circ} = a \cdot \frac{\sqrt{3}}{2} = \frac{a\sqrt{3}}{2}.$$
