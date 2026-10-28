@@ -1,0 +1,185 @@
+---
+title: 'Bài 12: Đường thẳng và mặt phẳng song song.'
+description: Hệ thống lý thuyết bài đường thẳng và mặt phẳng song song cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Đường thẳng song song với mặt phẳng
+  - Đường thẳng cắt mặt phẳng
+  - đường thẳng nằm trong mặt phẳng
+  - định lí giao tuyến
+grade: 11
+order: 12
+updatedDate: 2026-10-28T17:06:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Đường thẳng song song với mặt phẳng ($d \parallel (\alpha)$)
+
+·       Đường thẳng cắt mặt phẳng, đường thẳng nằm trong mặt phẳng
+
+·       Điều kiện để đường thẳng song song với mặt phẳng
+
+·       Tính chất của đường thẳng song song với mặt phẳng (định lí giao tuyến)
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết và phân biệt chính xác ba vị trí tương đối giữa đường thẳng và mặt phẳng: song song, cắt nhau, nằm trong.
+
+·       Giải thích và vận dụng thành thạo điều kiện để đường thẳng song song với mặt phẳng.
+
+·       Nắm vững và vận dụng tính chất cơ bản: mặt phẳng chứa một đường thẳng song song với mặt phẳng thứ hai thì cắt mặt phẳng đó theo giao tuyến song song với đường thẳng đã cho.
+
+·       Xác định thiết diện của hình chóp, hình tứ diện khi cắt bởi mặt phẳng song song với một hoặc hai đường thẳng cho trước.
+
+·       Mô tả và giải thích các hình ảnh thực tế gắn với đường thẳng song song với mặt phẳng (dây căng xây tường, xà ngang khung thành, mép cửa ra vào khi mở).
+
+## Đường thẳng song song với mặt phẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_duong_thang_va_mat_phang_song_song"/>
+
+### a) Vị trí tương đối giữa đường thẳng và mặt phẳng
+
+Cho đường thẳng $d$ và mặt phẳng $(\alpha)$ trong không gian:
+1\. $d$ song song với $(\alpha)$: $d$ và $(\alpha)$ không có điểm chung nào, kí hiệu $d \parallel (\alpha)$ hay $(\alpha) \parallel d$.
+2\. $d$ cắt $(\alpha)$: $d$ và $(\alpha)$ có duy nhất một điểm chung $M$, kí hiệu $d \cap (\alpha) = \\{M\\}$ (hoặc $d \cap (\alpha) = M$).
+3\. $d$ nằm trong $(\alpha)$ (hay $(\alpha)$ chứa $d$): $d$ và $(\alpha)$ có từ hai điểm chung phân biệt trở lên (mọi điểm của $d$ đều thuộc $(\alpha)$), kí hiệu $d \subset (\alpha)$ hay $(\alpha) \supset d$.
+
+### b) Ví dụ và luyện tập về vị trí tương đối
+
+**Ví dụ 1:** Cho hình tứ diện $ABCD$. Trong các mặt phẳng chứa các mặt của hình tứ diện:
+a) Đường thẳng $AB$ cắt các mặt phẳng nào?
+b) Đường thẳng $AB$ nằm trong các mặt phẳng nào?
+
+Lời giải Ví dụ 1:
+• a) Đường thẳng $AB$ cắt hai mặt phẳng $(ACD)$ tại $A$ và $(BCD)$ tại $B$.
+• b) Đường thẳng $AB$ nằm trong hai mặt phẳng $(ABC)$ và $(ABD)$ (vì cả hai điểm $A, B$ cùng thuộc các mặt phẳng này).
+
+**Luyện tập 1:** Trong Ví dụ 1, đường thẳng $AC$ cắt các mặt phẳng nào, nằm trong các mặt phẳng nào?
+
+Lời giải Luyện tập 1:
+• Đường thẳng $AC$ cắt hai mặt phẳng $(ABD)$ tại điểm $A$ và $(BCD)$ tại điểm $C$.
+• Đường thẳng $AC$ nằm trong hai mặt phẳng $(ABC)$ và $(ACD)$.
+
+## Điều kiện và tính chất của đường thẳng song song với mặt phẳng
+
+<Youtube url="https://www.youtube.com/watch?v=example_dieu_kien_tinh_chat_d_song_song_alpha"/>
+
+### a) Điều kiện để đường thẳng song song với mặt phẳng
+
+Định lí 1 (Dấu hiệu nhận biết):
+Nếu đường thẳng $a$ không nằm trong mặt phẳng $(P)$ và song song với một đường thẳng $b$ nằm trong $(P)$ thì $a$ song song với $(P)$:
+$$\begin{cases} a \not\subset (P) \\\ b \subset (P) \\\ a \parallel b \end{cases} \Rightarrow a \parallel (P)$$
+
+**Ví dụ 2:** Cho ba đường thẳng $a, b, c$ đôi một song song với nhau và không cùng nằm trong một mặt phẳng. Chứng minh rằng đường thẳng $a$ song song với mặt phẳng $\text{mp}(b, c)$.
+
+Lời giải Ví dụ 2:
+• Ba đường thẳng $a, b, c$ không cùng nằm trong một mặt phẳng nên $a \not\subset \text{mp}(b, c)$.
+• Vì $a \parallel b$ mà $b \subset \text{mp}(b, c)$, nên theo Định lí 1 ta có $a \parallel \text{mp}(b, c)$.
+
+**Luyện tập 2:** Trong Ví dụ 2, chứng minh rằng đường thẳng $c$ song song với $\text{mp}(a, b)$, và đường thẳng $b$ song song với $\text{mp}(a, c)$.
+
+Lời giải Luyện tập 2:
+• Vì $c \not\subset \text{mp}(a, b)$ và $c \parallel a \subset \text{mp}(a, b)$ nên $c \parallel \text{mp}(a, b)$.
+• Vì $b \not\subset \text{mp}(a, c)$ và $b \parallel a \subset \text{mp}(a, c)$ nên $b \parallel \text{mp}(a, c)$.
+
+**Ví dụ 3:** Trong không gian cho hai đường thẳng chéo nhau $a$ và $b$. Chứng minh rằng có một mặt phẳng chứa $a$ và song song với $b$. Mặt phẳng đó có duy nhất không?
+
+Lời giải Ví dụ 3:
+• Lấy điểm $M \in a$. Qua $M$ kẻ đường thẳng $b' \parallel b$. Đặt $(P) = \text{mp}(a, b')$.
+• Do $a$ và $b$ chéo nhau nên $b \not\subset (P)$. Lại có $b \parallel b' \subset (P)$, do đó $b \parallel (P)$. Vậy $(P)$ là mặt phẳng chứa $a$ và song song với $b$.
+• Tính duy nhất: Mặt phẳng $(P)$ chứa $a$ và song song với $b$ là duy nhất.
+
+**Luyện tập 3:** Cho hình chóp $S.ABCD$ có đáy là hình thang ($AB \parallel CD$). Hai đường thẳng $SD$ và $AB$ có chéo nhau hay không? Chỉ ra mặt phẳng chứa $SD$ và song song với $AB$.
+
+Lời giải Luyện tập 3:
+• Bốn điểm $S, D, A, B$ không đồng phẳng (vì $S \notin (ABCD)$ và $D \notin AB$), do đó hai đường thẳng $SD$ và $AB$ chéo nhau.
+• Mặt phẳng $(SCD)$ chứa đường thẳng $SD$. Vì $AB \parallel CD \subset (SCD)$ và $AB \not\subset (SCD)$ nên $AB \parallel (SCD)$. Vậy mặt phẳng chứa $SD$ và song song với $AB$ chính là $(SCD)$.
+
+### b) Tính chất của đường thẳng song song với mặt phẳng
+
+Định lí 2 (Định lí giao tuyến song song):
+Cho đường thẳng $a$ song song với mặt phẳng $(P)$. Nếu mặt phẳng $(Q)$ chứa $a$ và cắt $(P)$ theo giao tuyến $b$ thì $b$ song song với $a$:
+$$\begin{cases} a \parallel (P) \\\ a \subset (Q) \\\ b = (P) \cap (Q) \end{cases} \Rightarrow b \parallel a$$
+
+**Ví dụ 4:** Cho tứ diện $ABCD$, điểm $E$ nằm giữa $A$ và $C$. Gọi $(P)$ là mặt phẳng qua $E$ và song song với hai đường thẳng $AB, CD$. Xác định thiết diện của $(P)$ với tứ diện và cho biết thiết diện là hình gì.
+
+Lời giải Ví dụ 4:
+• Mặt phẳng $(ABC)$ chứa $AB \parallel (P)$, nên cắt $(P)$ theo giao tuyến qua $E$ song song với $AB$. Trong $(ABC)$, kẻ $EF \parallel AB$ ($F \in BC$), ta được giao tuyến $EF$.
+• Mặt phẳng $(ACD)$ chứa $CD \parallel (P)$, nên cắt $(P)$ theo giao tuyến qua $E$ song song với $CD$. Kẻ $EH \parallel CD$ ($H \in AD$), ta được giao tuyến $EH$.
+• Mặt phẳng $(BCD)$ chứa $CD \parallel (P)$, nên cắt $(P)$ theo giao tuyến qua $F$ song song với $CD$. Kẻ $FG \parallel CD$ ($G \in BD$), ta được giao tuyến $FG$.
+• Giao tuyến của $(P)$ với $(ABD)$ là đoạn thẳng $GH$. Khi đó $GH \parallel AB$ (vì $(ABD)$ chứa $AB \parallel (P)$).
+• Thiết diện tạo bởi các giao tuyến là tứ giác $EFGH$. Ta có $EF \parallel GH$ (cùng song song với $AB$) và $EH \parallel FG$ (cùng song song với $CD$).
+• Vậy thiết diện $EFGH$ là hình bình hành.
+
+**Luyện tập 4:** Trong Ví dụ 4, gọi $(Q)$ là mặt phẳng qua $E$ và song song với hai đường thẳng $AB, AD$. Xác định giao tuyến của $(Q)$ với các mặt của tứ diện.
+
+Lời giải Luyện tập 4:
+• Mặt phẳng $(ABC)$ chứa $AB \parallel (Q)$, qua $E$ kẻ $EF \parallel AB$ ($F \in BC$), ta được giao tuyến $EF$.
+• Mặt phẳng $(ACD)$ chứa $AD \parallel (Q)$, qua $E$ kẻ $EH \parallel AD$ ($H \in CD$), ta được giao tuyến $EH$.
+• Trong mặt phẳng đáy $(BCD)$, nối $F$ và $H$, ta được giao tuyến $FH$ của $(Q)$ với $(BCD)$.
+• Thiết diện của tứ diện khi cắt bởi mặt phẳng $(Q)$ là tam giác $EFH$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng (Dây nhợ căng khi xây tường):** Khi xây tường gạch, người thợ căng dây nhợ dọc theo cạnh các viên gạch dẫn. Giải thích tại sao dây nhợ khi căng thẳng song song với mặt đất và tác dụng của việc này?
+
+Lời giải Vận dụng:
+• Các viên gạch dẫn được thợ xây lấy thăng bằng sao cho mép trên của chúng cách đều mặt sàn (mặt đất), tạo thành một đường thẳng song song với mặt sàn.
+• Khi căng dây nhợ qua mép các viên gạch dẫn, dây nhợ tạo thành một đường thẳng song song với mặt đất.
+• Tác dụng: Dây nhợ làm chuẩn giúp các viên gạch tiếp theo được đặt thẳng hàng, giữ cho hàng gạch phẳng tuyệt đối, tường xây đều đặn, không bị lượn sóng và luôn song song với nền nhà.
+
+**Bài 4.20 (Mép trên cửa ra vào khi mở):** Bạn Nam quan sát thấy dù cửa ra vào mở ở vị trí nào thì mép trên của cửa luôn song song với một mặt phẳng cố định. Đó là mặt phẳng nào và giải thích tại sao?
+
+Lời giải Bài 4.20:
+• Mặt phẳng cố định đó là mặt sàn nhà (hoặc mặt phẳng trần nhà cố định).
+• Giải thích: Cánh cửa ra vào là hình chữ nhật, nên mép trên của cửa vuông góc với trục bản lề thẳng đứng và song song với mép dưới của cửa (nằm trên mặt sàn).
+• Khi cửa quay quanh trục bản lề, mép trên của cửa luôn chuyển động trong một mặt phẳng song song với mặt sàn nhà. Do đó mép trên của cửa luôn luôn song song với mặt sàn nhà ở mọi góc mở.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 4.16:** Trong không gian, cho hai đường thẳng phân biệt $a, b$ và mặt phẳng $(P)$. Mệnh đề nào sau đây là đúng?
+a) Nếu $a$ và $(P)$ có điểm chung thì $a$ không song song với $(P)$.
+b) Nếu $a$ và $(P)$ có điểm chung thì $a$ và $(P)$ cắt nhau.
+c) Nếu $a$ song song với $b$ và $b$ nằm trong $(P)$ thì $a$ song song với $(P)$.
+d) Nếu $a$ và $b$ song song với $(P)$ thì $a$ song song với $b$.
+
+Lời giải Bài 4.16:
+• Mệnh đề a) đúng (theo định nghĩa: đường thẳng song song với mặt phẳng là không có điểm chung nào).
+• Mệnh đề b) sai (vì $a$ có thể nằm trong $(P)$).
+• Mệnh đề c) sai nếu thiếu điều kiện $a$ không nằm trong $(P)$ (khi $a \subset (P)$ thì không gọi là song song).
+• Mệnh đề d) sai ($a$ và $b$ có thể cắt nhau hoặc chéo nhau dù cùng song song với $(P)$).
+
+**Bài 4.17:** Cho hai tam giác $ABC$ và $ABD$ không cùng nằm trong một mặt phẳng. Gọi $M, N$ lần lượt là trung điểm của $AC, AD$.
+a) Đường thẳng $AM$ có song song với mặt phẳng $(BCD)$ không? Giải thích.
+b) Đường thẳng $MN$ có song song với mặt phẳng $(BCD)$ không? Giải thích.
+
+Lời giải Bài 4.17:
+• a) Đường thẳng $AM$ chính là đường thẳng $AC$. Đường thẳng $AC$ cắt mặt phẳng $(BCD)$ tại điểm $C$, do đó $AM$ không song song với $(BCD)$.
+• b) Trong tam giác $ACD$, đoạn thẳng $MN$ là đường trung bình nối trung điểm của $AC$ và $AD$, nên $MN \parallel CD$.
+  Mà $CD \subset (BCD)$ và $MN \not\subset (BCD)$ (vì $M \notin (BCD)$).
+  Theo Định lí 1 suy ra $MN \parallel (BCD)$.
+
+**Bài 4.18:** Cho tứ diện $ABCD$. Gọi $M, N$ lần lượt là trung điểm của hai cạnh $BC, CD$. Chứng minh rằng đường thẳng $BD$ song song với mặt phẳng $(AMN)$.
+
+Lời giải Bài 4.18:
+• Trong tam giác $BCD$, $M$ là trung điểm của $BC$, $N$ là trung điểm của $CD$, nên $MN$ là đường trung bình của tam giác $BCD$. Suy ra $BD \parallel MN$.
+• Lại có $MN \subset (AMN)$ và $BD \not\subset (AMN)$ (vì $B \notin (AMN)$).
+• Theo dấu hiệu nhận biết đường thẳng song song với mặt phẳng, suy ra $BD \parallel (AMN)$.
+
+**Bài 4.19:** Cho hình chóp $S.ABCD$ có đáy là hình thang ($AB \parallel CD$). Gọi $E$ là một điểm nằm giữa $S$ và $A$. Gọi $(P)$ là mặt phẳng qua $E$ và song song với hai đường thẳng $AB, AD$. Xác định giao tuyến của $(P)$ với các mặt bên của hình chóp và cho biết hình tạo bởi các giao tuyến là hình gì?
+
+Lời giải Bài 4.19:
+• Mặt phẳng $(SAB)$ chứa $AB \parallel (P)$, nên cắt $(P)$ theo giao tuyến qua $E$ song song với $AB$. Trong $(SAB)$, kẻ $EF \parallel AB$ ($F \in SB$), ta được giao tuyến $EF$.
+• Mặt phẳng $(SAD)$ chứa $AD \parallel (P)$, nên cắt $(P)$ theo giao tuyến qua $E$ song song với $AD$. Trong $(SAD)$, kẻ $EH \parallel AD$ ($H \in SD$), ta được giao tuyến $EH$.
+• Mặt phẳng $(SCD)$ chứa $CD \parallel AB \parallel (P)$, qua $H$ kẻ $HG \parallel CD$ ($G \in SC$), ta được giao tuyến $HG$.
+• Mặt phẳng $(SBC)$ cắt $(P)$ theo đoạn thẳng nối $F$ và $G$. Vì $EF \parallel AB \parallel CD \parallel HG$ nên $FG$ cũng song song với các cạnh này.
+• Bốn đoạn giao tuyến với các mặt bên là $EF, FG, GH, HE$.
+• Vì $EF \parallel GH$ (cùng song song với $AB, CD$), nên hình tạo bởi các giao tuyến $EFGH$ là một hình thang.
