@@ -1,0 +1,185 @@
+---
+title: 'Lesson 12: Line and plane parallelism.'
+description: Theoretical system for the lesson on line and plane parallelism with illustrative examples.
+tags:
+  - grade 11
+  - Line parallel to a plane
+  - Line intersecting a plane
+  - line lying in a plane (contained in a plane)
+  - parallel intersection line theorem
+grade: 11
+order: 12
+updatedDate: 2026-10-28T17:06:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Line parallel to a plane ($d \parallel (\alpha)$)
+
+·       Line intersecting a plane, line lying in a plane (contained in a plane)
+
+·       Condition for a line to be parallel to a plane
+
+·       Properties of a line parallel to a plane (parallel intersection line theorem)
+
+### **Knowledge and Skills:**
+
+·       Identify and distinguish the three relative positions of a straight line and a plane in space: parallel, intersecting, and contained in the plane.
+
+·       Explain and proficiently apply the sufficient condition for a line to be parallel to a plane.
+
+·       Master and apply the fundamental theorem: if a plane contains a line parallel to another plane, any intersecting plane cuts the latter along an intersection line parallel to the given line.
+
+·       Determine cross-sections of pyramids and tetrahedra cut by planes parallel to one or two given lines.
+
+·       Model and explain real-world phenomena involving line-plane parallelism (masonry mason line, soccer goal crossbar, door top edge rotation).
+
+## Line Parallel to a Plane
+
+<Youtube url="https://www.youtube.com/watch?v=example_duong_thang_va_mat_phang_song_song"/>
+
+### a) Relative Positions of a Line and a Plane
+
+Given a straight line $d$ and a plane $(\alpha)$ in three-dimensional space:
+1\. $d$ is parallel to $(\alpha)$: $d$ and $(\alpha)$ have no common points, denoted by $d \parallel (\alpha)$ or $(\alpha) \parallel d$.
+2\. $d$ intersects $(\alpha)$: $d$ and $(\alpha)$ have exactly one unique common point $M$, denoted by $d \cap (\alpha) = \\{M\\}$ (or $d \cap (\alpha) = M$).
+3\. $d$ lies in $(\alpha)$ (or $(\alpha)$ contains $d$): $d$ and $(\alpha)$ have more than one common point (every point of $d$ belongs to $(\alpha)$), denoted by $d \subset (\alpha)$ or $(\alpha) \supset d$.
+
+### b) Illustrative Examples and Practice on Relative Positions
+
+**Example 1:** Given a tetrahedron $ABCD$. Among the planes containing the faces of the tetrahedron:
+a) Which planes does line $AB$ intersect?
+b) In which planes does line $AB$ lie?
+
+Solution for Example 1:
+• a) Line $AB$ intersects plane $(ACD)$ at point $A$ and plane $(BCD)$ at point $B$.
+• b) Line $AB$ lies in plane $(ABC)$ and plane $(ABD)$ (since both points $A$ and $B$ belong to each of these planes).
+
+**Practice 1:** In Example 1, which planes does line $AC$ intersect, and in which planes does it lie?
+
+Solution for Practice 1:
+• Line $AC$ intersects plane $(ABD)$ at point $A$ and plane $(BCD)$ at point $C$.
+• Line $AC$ lies in plane $(ABC)$ and plane $(ACD)$.
+
+## Conditions and Properties of a Line Parallel to a Plane
+
+<Youtube url="https://www.youtube.com/watch?v=example_dieu_kien_tinh_chat_d_song_song_alpha"/>
+
+### a) Condition for a Line to be Parallel to a Plane
+
+Theorem 1 (Criterion for Line-Plane Parallelism):
+If a straight line $a$ does not lie in plane $(P)$ and is parallel to a straight line $b$ lying in $(P)$, then $a$ is parallel to $(P)$:
+$$\begin{cases} a \not\subset (P) \\\ b \subset (P) \\\ a \parallel b \end{cases} \Rightarrow a \parallel (P)$$
+
+**Example 2:** Given three mutually parallel lines $a, b, c$ that do not lie in the same plane. Prove that line $a$ is parallel to plane $\text{plane}(b, c)$.
+
+Solution for Example 2:
+• Since the three lines $a, b, c$ are not coplanar, line $a$ does not lie in $\text{plane}(b, c)$ ($a \not\subset \text{plane}(b, c)$).
+• Because $a \parallel b$ and $b \subset \text{plane}(b, c)$, by Theorem 1 we conclude that $a \parallel \text{plane}(b, c)$.
+
+**Practice 2:** In Example 2, prove that line $c$ is parallel to $\text{plane}(a, b)$, and line $b$ is parallel to $\text{plane}(a, c)$.
+
+Solution for Practice 2:
+• Since $c \not\subset \text{plane}(a, b)$ and $c \parallel a \subset \text{plane}(a, b)$, we have $c \parallel \text{plane}(a, b)$.
+• Since $b \not\subset \text{plane}(a, c)$ and $b \parallel a \subset \text{plane}(a, c)$, we have $b \parallel \text{plane}(a, c)$.
+
+**Example 3:** Given two skew lines $a$ and $b$ in space. Prove that there exists a plane containing $a$ and parallel to $b$. Is this plane unique?
+
+Solution for Example 3:
+• Choose any point $M \in a$. Through $M$, draw line $b' \parallel b$. Let $(P) = \text{plane}(a, b')$.
+• Since $a$ and $b$ are skew, $b \not\subset (P)$. Furthermore, $b \parallel b' \subset (P)$, which implies $b \parallel (P)$. Thus, $(P)$ is a plane containing $a$ and parallel to $b$.
+• Uniqueness: Such a plane $(P)$ containing line $a$ and parallel to line $b$ is unique.
+
+**Practice 3:** Given a pyramid $S.ABCD$ with trapezoidal base ($AB \parallel CD$). Are lines $SD$ and $AB$ skew? Identify the plane containing line $SD$ and parallel to line $AB$.
+
+Solution for Practice 3:
+• The four points $S, D, A, B$ are non-coplanar (as $S \notin (ABCD)$ and $D \notin AB$), so lines $SD$ and $AB$ are skew.
+• Plane $(SCD)$ contains line $SD$. Since $AB \parallel CD \subset (SCD)$ and $AB \not\subset (SCD)$, line $AB$ is parallel to plane $(SCD)$ ($AB \parallel (SCD)$). Hence, the plane containing $SD$ and parallel to $AB$ is $(SCD)$.
+
+### b) Properties of a Line Parallel to a Plane
+
+Theorem 2 (Parallel Intersection Theorem):
+If a straight line $a$ is parallel to a plane $(P)$, and a plane $(Q)$ containing $a$ intersects $(P)$ along a line $b$, then $b$ is parallel to $a$:
+$$\begin{cases} a \parallel (P) \\\ a \subset (Q) \\\ b = (P) \cap (Q) \end{cases} \Rightarrow b \parallel a$$
+
+**Example 4:** Given a tetrahedron $ABCD$ and a point $E$ lying between $A$ and $C$. Let $(P)$ be the plane passing through $E$ and parallel to both lines $AB$ and $CD$. Determine the cross-section of the tetrahedron cut by $(P)$ and classify the resulting geometric figure.
+
+Solution for Example 4:
+• Plane $(ABC)$ contains $AB \parallel (P)$, so $(ABC)$ intersects $(P)$ along a line through $E$ parallel to $AB$. In $(ABC)$, draw $EF \parallel AB$ ($F \in BC$), giving intersection segment $EF$.
+• Plane $(ACD)$ contains $CD \parallel (P)$, so it intersects $(P)$ along a line through $E$ parallel to $CD$. Draw $EH \parallel CD$ ($H \in AD$), giving intersection segment $EH$.
+• Plane $(BCD)$ contains $CD \parallel (P)$, so it intersects $(P)$ along a line through $F$ parallel to $CD$. Draw $FG \parallel CD$ ($G \in BD$), giving intersection segment $FG$.
+• The intersection segment of $(P)$ with $(ABD)$ is $GH$. Then $GH \parallel AB$ (since $(ABD)$ contains $AB \parallel (P)$).
+• The cross-section formed by the intersection lines is the quadrilateral $EFGH$. We have $EF \parallel GH$ (both parallel to $AB$) and $EH \parallel FG$ (both parallel to $CD$).
+• Hence, cross-section $EFGH$ is a parallelogram.
+
+**Practice 4:** In Example 4, let $(Q)$ be the plane passing through $E$ and parallel to both lines $AB$ and $AD$. Determine the intersection lines of $(Q)$ with the faces of the tetrahedron.
+
+Solution for Practice 4:
+• Plane $(ABC)$ contains $AB \parallel (Q)$; through $E$, draw $EF \parallel AB$ ($F \in BC$), giving intersection segment $EF$.
+• Plane $(ACD)$ contains $AD \parallel (Q)$; through $E$, draw $EH \parallel AD$ ($H \in CD$), giving intersection segment $EH$.
+• In base plane $(BCD)$, connecting $F$ and $H$ yields the intersection segment $FH$ of $(Q)$ with $(BCD)$.
+• The cross-section of the tetrahedron cut by plane $(Q)$ is triangle $EFH$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application (Mason's Line in Bricklaying):** When laying brick walls, masons stretch a mason's string line along the edge of lead bricks. Explain why the taut string line is parallel to the ground and describe the purpose of this practice.
+
+Solution for Application:
+• Lead corner bricks are leveled such that their top edges are at an equal distance from the flat ground, defining a line parallel to the ground surface.
+• When the mason line is pulled taut across these lead edges, it forms a straight line parallel to the floor plane.
+• Purpose: The line provides an exact linear guide to lay intermediate bricks true and level, ensuring the wall courses remain planar, straight, and consistently parallel to the ground.
+
+**Exercise 4.20 (Top Edge of a Door Leaf):** Nam observes that regardless of how far a rectangular door is swung open, the top edge of the door always remains parallel to a fixed plane. Identify that plane and explain why.
+
+Solution for Exercise 4.20:
+• The fixed plane is the floor plane (or the ceiling plane).
+• Explanation: A door leaf is rectangular, so its top edge is perpendicular to the vertical hinge axis and parallel to the bottom door edge (which is parallel to the floor).
+• As the door rotates about its vertical hinge axis, the top edge sweeps out a horizontal plane parallel to the floor. Therefore, the top edge of the door remains parallel to the floor plane at all opening angles.
+
+### b) Detailed Section Exercises
+
+**Exercise 4.16:** In space, given two distinct lines $a, b$ and a plane $(P)$. Which of the following propositions are true?
+a) If $a$ and $(P)$ have a common point, then $a$ is not parallel to $(P)$.
+b) If $a$ and $(P)$ have a common point, then $a$ and $(P)$ intersect.
+c) If $a$ is parallel to $b$ and $b$ lies in $(P)$, then $a$ is parallel to $(P)$.
+d) If $a$ and $b$ are both parallel to $(P)$, then $a$ is parallel to $b$.
+
+Solution for Exercise 4.16:
+• Proposition a) is true (by definition, a line parallel to a plane has no points in common with that plane).
+• Proposition b) is false (line $a$ may lie entirely in plane $(P)$).
+• Proposition c) is false unless we add the condition that $a$ does not lie in $(P)$ (if $a \subset (P)$, it is not considered parallel).
+• Proposition d) is false (two lines parallel to the same plane can intersect or be skew to each other).
+
+**Exercise 4.17:** Given two non-coplanar triangles $ABC$ and $ABD$. Let $M, N$ be the midpoints of sides $AC, AD$, respectively.
+a) Is line $AM$ parallel to plane $(BCD)$? Explain why.
+b) Is line $MN$ parallel to plane $(BCD)$? Explain why.
+
+Solution for Exercise 4.17:
+• a) Line $AM$ is the line $AC$. Line $AC$ intersects plane $(BCD)$ at point $C$, so $AM$ is not parallel to $(BCD)$.
+• b) In $\triangle ACD$, segment $MN$ is a midline connecting the midpoints of $AC$ and $AD$, so $MN \parallel CD$.
+  Furthermore, $CD \subset (BCD)$ and $MN \not\subset (BCD)$ (since $M \notin (BCD)$).
+  By Theorem 1, it follows that $MN \parallel (BCD)$.
+
+**Exercise 4.18:** Given a tetrahedron $ABCD$. Let $M, N$ be the midpoints of edges $BC, CD$, respectively. Prove that line $BD$ is parallel to plane $(AMN)$.
+
+Solution for Exercise 4.18:
+• In $\triangle BCD$, points $M$ and $N$ are the midpoints of $BC$ and $CD$, so $MN$ is the midline of $\triangle BCD$, which yields $BD \parallel MN$.
+• In addition, $MN \subset (AMN)$ and $BD \not\subset (AMN)$ (since $B \notin (AMN)$).
+• By the line-plane parallelism criterion, line $BD$ is parallel to plane $(AMN)$ ($BD \parallel (AMN)$).
+
+**Exercise 4.19:** Given a pyramid $S.ABCD$ with trapezoidal base ($AB \parallel CD$). Let $E$ be a point between $S$ and $A$. Let $(P)$ be the plane passing through $E$ and parallel to lines $AB$ and $AD$. Determine the lines of intersection of $(P)$ with the lateral faces of the pyramid, and identify the geometric shape formed by these intersection segments.
+
+Solution for Exercise 4.19:
+• Plane $(SAB)$ contains $AB \parallel (P)$, so it cuts $(P)$ along an intersection line through $E$ parallel to $AB$. In $(SAB)$, draw $EF \parallel AB$ ($F \in SB$), giving segment $EF$.
+• Plane $(SAD)$ contains $AD \parallel (P)$, so it cuts $(P)$ along an intersection line through $E$ parallel to $AD$. In $(SAD)$, draw $EH \parallel AD$ ($H \in SD$), giving segment $EH$.
+• Plane $(SCD)$ contains $CD \parallel AB \parallel (P)$; through $H$, draw $HG \parallel CD$ ($G \in SC$), giving segment $HG$.
+• Plane $(SBC)$ cuts $(P)$ along the line segment connecting $F$ and $G$. Since $EF \parallel AB \parallel CD \parallel HG$, segment $FG$ is also parallel to these lines.
+• The four intersection segments with the lateral faces are $EF, FG, GH, HE$.
+• Since $EF \parallel GH$ (both parallel to base edges $AB, CD$), the polygon formed by the cross-section $EFGH$ is a trapezoid.
