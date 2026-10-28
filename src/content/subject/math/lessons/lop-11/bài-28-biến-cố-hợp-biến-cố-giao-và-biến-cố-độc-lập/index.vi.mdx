@@ -1,0 +1,201 @@
+---
+title: 'Bài 28: Biến cố hợp, biến cố giao và biến cố độc lập.'
+description: Hệ thống lý thuyết bài Biến cố hợp, biến cố giao và biến cố độc lập cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Biến cố hợp
+  - biến cố giao
+  - biến cố độc lập
+grade: 11
+order: 28
+updatedDate: 2026-10-29T00:00:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Biến cố hợp
+
+·       Biến cố giao
+
+·       Biến cố độc lập
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết các khái niệm biến cố hợp, biến cố giao, biến cố độc lập.
+
+·       Mô tả biến cố hợp và biến cố giao bằng ngôn ngữ tập hợp và biểu đồ Venn.
+
+·       Xác định các biến cố độc lập trong các phép thử ngẫu nhiên đơn giản.
+
+·       Biểu diễn các biến cố phức hợp thông qua các phép toán hợp, giao và biến cố đối.
+
+## Biến cố hợp
+
+<Youtube url="https://www.youtube.com/watch?v=example_bien_co_hop"/>
+
+### a) Định nghĩa biến cố hợp
+
+Cho $A$ và $B$ là hai biến cố. Biến cố: "$A$ hoặc $B$ xảy ra" được gọi là biến cố hợp của $A$ và $B$, kí hiệu là $A \cup B$.
+Biến cố hợp của $A$ và $B$ là tập con $A \cup B$ của không gian mẫu $\Omega$, bao gồm các kết quả thuận lợi cho ít nhất một trong hai biến cố $A$ hoặc $B$.
+
+### b) Ví dụ và luyện tập về biến cố hợp
+
+**Ví dụ 1:** Một hộp đựng 15 tấm thẻ cùng loại được đánh số từ 1 đến 15. Rút ngẫu nhiên một tấm thẻ trong hộp. Gọi $E$ là biến cố "Số ghi trên tấm thẻ là số lẻ"; $F$ là biến cố "Số ghi trên tấm thẻ là số nguyên tố".
+a) Mô tả không gian mẫu.
+b) Nêu nội dung của biến cố hợp $G = E \cup F$. Hỏi $G$ là tập con nào của không gian mẫu?
+
+Lời giải Ví dụ 1:
+• a) Không gian mẫu là:
+  $$\Omega = \\{1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15\\}.$$
+• b) $E \cup F$ là biến cố "Số ghi trên tấm thẻ là số lẻ hoặc số nguyên tố".
+  Ta có:
+  $$E = \\{1; 3; 5; 7; 9; 11; 13; 15\\}$$
+  $$F = \\{2; 3; 5; 7; 11; 13\\}$$
+  Do đó tập con tương ứng là:
+  $$G = E \cup F = \\{1; 2; 3; 5; 7; 9; 11; 13; 15\\}.$$
+
+**Luyện tập 1:** Một tổ trong lớp 11B có 4 học sinh nữ là Hương, Hồng, Dung, Phương và 5 học sinh nam là Sơn, Tùng, Hoàng, Tiến, Hải. Giáo viên chọn ngẫu nhiên một học sinh lên bảng kiểm tra bài. Xét các biến cố:
+$H$: "Học sinh đó là một bạn nữ";
+$K$: "Học sinh đó có tên bắt đầu là chữ cái H".
+a) Mô tả không gian mẫu.
+b) Nêu nội dung của biến cố hợp $M = H \cup K$. Mỗi biến cố $H, K, M$ là tập con nào của không gian mẫu?
+
+Lời giải Luyện tập 1:
+• a) Không gian mẫu:
+  $$\Omega = \\{\text{Hương}, \text{Hồng}, \text{Dung}, \text{Phương}, \text{Sơn}, \text{Tùng}, \text{Hoàng}, \text{Tiến}, \text{Hải}\\}.$$
+• b) $M = H \cup K$ là biến cố: "Học sinh được chọn là bạn nữ hoặc có tên bắt đầu bằng chữ cái H".
+  - $H = \\{\text{Hương}, \text{Hồng}, \text{Dung}, \text{Phương}\\}$;
+  - $K = \\{\text{Hương}, \text{Hồng}, \text{Hoàng}, \text{Hải}\\}$;
+  - $M = H \cup K = \\{\text{Hương}, \text{Hồng}, \text{Dung}, \text{Phương}, \text{Hoàng}, \text{Hải}\\}.$
+
+## Biến cố giao
+
+### a) Định nghĩa biến cố giao
+
+Cho $A$ và $B$ là hai biến cố. Biến cố: "Cả $A$ và $B$ đều xảy ra" được gọi là biến cố giao của $A$ và $B$, kí hiệu là $AB$ (hoặc $A \cap B$).
+Biến cố giao của $A$ và $B$ là tập con $A \cap B$ của không gian mẫu $\Omega$, bao gồm các kết quả đồng thời thuận lợi cho cả $A$ và $B$.
+
+### b) Ví dụ và luyện tập về biến cố giao
+
+**Ví dụ 2:** Một tổ có 9 học sinh gồm: Bảo, Đăng, Giang, Hoa, Long, Mai, Phúc, Tuấn, Yến. Phỏng vấn môn thể thao biết chơi: Cầu lông gồm Bảo, Đăng, Long, Phúc, Tuấn, Yến; Bóng bàn gồm Giang, Long, Phúc, Tuấn. Chọn ngẫu nhiên một bạn. Xét:
+$U$: "Học sinh được chọn biết chơi cầu lông";
+$V$: "Học sinh được chọn biết chơi bóng bàn".
+a) Mô tả không gian mẫu.
+b) Nội dung của biến cố giao $T = UV$ là gì? Mỗi biến cố $U, V, T$ là tập con nào của không gian mẫu?
+
+Lời giải Ví dụ 2:
+• a) Không gian mẫu:
+  $$\Omega = \\{\text{Bảo}, \text{Đăng}, \text{Giang}, \text{Hoa}, \text{Long}, \text{Mai}, \text{Phúc}, \text{Tuấn}, \text{Yến}\\}.$$
+• b) $T = UV$ là biến cố: "Học sinh được chọn biết chơi cả cầu lông và bóng bàn".
+  - $U = \\{\text{Bảo}, \text{Đăng}, \text{Long}, \text{Phúc}, \text{Tuấn}, \text{Yến}\\}$;
+  - $V = \\{\text{Giang}, \text{Long}, \text{Phúc}, \text{Tuấn}\\}$;
+  - $T = U \cap V = \\{\text{Long}, \text{Phúc}, \text{Tuấn}\\}.$
+
+**Luyện tập 2:** Một hộp đựng 25 tấm thẻ cùng loại đánh số từ 1 đến 25. Rút ngẫu nhiên một tấm thẻ. Xét các biến cố:
+$P$: "Số ghi trên thẻ chia hết cho 4";
+$Q$: "Số ghi trên thẻ chia hết cho 6".
+a) Mô tả không gian mẫu.
+b) Nội dung của biến cố giao $S = PQ$ là gì? Mỗi biến cố $P, Q, S$ là tập con nào của không gian mẫu?
+
+Lời giải Luyện tập 2:
+• a) Không gian mẫu $\Omega = \\{1; 2; 3; \dots; 25\\}$.
+• b) $S = PQ$ là biến cố: "Số ghi trên tấm thẻ vừa chia hết cho 4 vừa chia hết cho 6" (tức chia hết cho $\text{BCNN}(4, 6) = 12$).
+  - $P = \\{4; 8; 12; 16; 20; 24\\}$;
+  - $Q = \\{6; 12; 18; 24\\}$;
+  - $S = P \cap Q = \\{12; 24\\}.$
+
+**Vận dụng:** Xét cuộc khảo sát gia đình tại Hà Nội với $M$: "Gia đình có ti vi", $N$: "Gia đình có máy vi tính". Biểu diễn các biến cố sau theo $M$ và $N$:
+$E$: "Gia đình đó có ti vi hoặc máy vi tính";
+$F$: "Gia đình đó có cả ti vi và máy vi tính".
+
+Lời giải Vận dụng:
+• Biến cố $E$ xảy ra khi gia đình có ti vi hoặc máy vi tính: $E = M \cup N$.
+• Biến cố $F$ xảy ra khi gia đình có cả ti vi và máy vi tính: $F = MN = M \cap N$.
+
+## Biến cố độc lập
+
+### a) Định nghĩa biến cố độc lập
+
+Cặp biến cố $A$ và $B$ được gọi là độc lập nếu việc xảy ra hay không xảy ra của biến cố này không làm ảnh hưởng tới xác suất xảy ra của biến cố kia.
+Chú ý: Nếu cặp biến cố $A$ và $B$ độc lập thì các cặp biến cố sau cũng độc lập:
+• $A$ và $\overline{B}$;
+• $\overline{A}$ và $B$;
+• $\overline{A}$ và $\overline{B}$.
+
+### b) Ví dụ và nhận biết biến cố độc lập
+
+**Ví dụ 3:** Một hộp đựng 4 viên bi màu đỏ và 5 viên bi màu xanh có cùng kích thước và khối lượng.
+a) Bạn Minh lấy ngẫu nhiên một viên bi, ghi lại màu rồi trả lại vào hộp. Sau đó bạn Hùng lấy ngẫu nhiên một viên bi. Xét biến cố $A$: "Minh lấy được bi đỏ", $B$: "Hùng lấy được bi xanh". Chứng tỏ $A$ và $B$ độc lập.
+b) Bạn Sơn lấy một viên bi và không trả lại vào hộp. Sau đó bạn Tùng lấy ngẫu nhiên một viên bi. Xét biến cố $C$: "Sơn lấy được bi đỏ", $D$: "Tùng lấy được bi xanh". Chứng tỏ $C$ và $D$ không độc lập.
+
+Lời giải Ví dụ 3:
+• a) Do Minh trả bi lại hộp nên số lượng bi trong hộp khi Hùng lấy luôn là 4 đỏ và 5 xanh. Do đó $P(B) = \frac{5}{9}$ dù $A$ xảy ra hay không xảy ra. Vì Hùng lấy sau nên việc Hùng lấy cũng không ảnh hưởng tới kết quả của Minh $P(A) = \frac{4}{9}$. Vậy $A$ và $B$ độc lập.
+• b) Nếu $C$ xảy ra (Sơn lấy bi đỏ và không trả lại), trong hộp còn 8 viên (3 đỏ, 5 xanh) nên $P(D) = \frac{5}{8}$. Nếu $C$ không xảy ra (Sơn lấy bi xanh), trong hộp còn 8 viên (4 đỏ, 4 xanh) nên $P(D) = \frac{4}{8} = \frac{1}{2}$. Như vậy xác suất của $D$ thay đổi phụ thuộc vào $C$. Do đó $C$ và $D$ không độc lập.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài tập xác định biến cố hợp và biến cố giao
+
+**Bài 8.1:** Một hộp đựng 15 tấm thẻ cùng loại được đánh số từ 1 đến 15. Rút ngẫu nhiên một tấm thẻ. Gọi $A$ là biến cố "Số ghi trên tấm thẻ nhỏ hơn 7"; $B$ là biến cố "Số ghi trên tấm thẻ là số nguyên tố".
+a) Mô tả không gian mẫu.
+b) Mỗi biến cố $A \cup B$ và $AB$ là tập con nào của không gian mẫu?
+
+Lời giải Bài 8.1:
+• a) Không gian mẫu $\Omega = \\{1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15\\}$.
+• b) Biến cố $A = \\{1; 2; 3; 4; 5; 6\\}$ và $B = \\{2; 3; 5; 7; 11; 13\\}$.
+  - Biến cố hợp: $A \cup B = \\{1; 2; 3; 4; 5; 6; 7; 11; 13\\}$.
+  - Biến cố giao: $AB = A \cap B = \\{2; 3; 5\\}$.
+
+**Bài 8.2:** Gieo hai con xúc xắc cân đối, đồng chất. Xét các biến cố:
+$E$: "Số chấm xuất hiện trên hai con xúc xắc đều là số chẵn";
+$F$: "Số chấm xuất hiện trên hai con xúc xắc khác tính chẵn lẻ";
+$K$: "Tích số chấm xuất hiện trên hai con xúc xắc là số chẵn".
+Chứng minh rằng $K$ là biến cố hợp của $E$ và $F$.
+
+Lời giải Bài 8.2:
+• Tích số chấm của hai con xúc xắc là số chẵn khi và chỉ khi có ít nhất một con xúc xắc xuất hiện mặt chẵn.
+• Điều này xảy ra trong hai trường hợp xung khắc:
+  - Cả hai con xúc xắc cùng xuất hiện mặt chẵn (biến cố $E$);
+  - Một con xuất hiện mặt chẵn và một con xuất hiện mặt lẻ (biến cố $F$).
+• Vậy biến cố $K$ xảy ra khi và chỉ khi $E$ hoặc $F$ xảy ra, nghĩa là $K = E \cup F$.
+
+**Bài 8.3:** Chọn ngẫu nhiên một học sinh trong trường. Xét hai biến cố:
+$P$: "Học sinh đó bị cận thị";
+$Q$: "Học sinh đó học giỏi môn Toán".
+Nêu nội dung của các biến cố $P \cup Q$, $PQ$ và $\overline{P}Q$.
+
+Lời giải Bài 8.3:
+• $P \cup Q$: "Học sinh đó bị cận thị hoặc học giỏi môn Toán".
+• $PQ$: "Học sinh đó vừa bị cận thị vừa học giỏi môn Toán".
+• $\overline{P}Q$: "Học sinh đó không bị cận thị nhưng học giỏi môn Toán".
+
+### b) Bài tập kiểm tra tính độc lập của biến cố
+
+**Bài 8.4:** Có hai chuồng nuôi thỏ. Chuồng I có 5 con thỏ đen và 10 con thỏ trắng. Chuồng II có 3 con thỏ trắng và 7 con thỏ đen. Từ mỗi chuồng bắt ngẫu nhiên ra một con thỏ. Xét các biến cố:
+$A$: "Bắt được con thỏ trắng từ chuồng I";
+$B$: "Bắt được con thỏ đen từ chuồng II".
+Chứng tỏ rằng hai biến cố $A$ và $B$ độc lập.
+
+Lời giải Bài 8.4:
+• Xác suất bắt được thỏ trắng ở chuồng I là $P(A) = \frac{10}{15} = \frac{2}{3}$, kết quả này chỉ phụ thuộc vào số lượng thỏ trong chuồng I.
+• Xác suất bắt được thỏ đen ở chuồng II là $P(B) = \frac{7}{10}$, kết quả này hoàn toàn độc lập với việc bắt thỏ ở chuồng I.
+• Việc xảy ra hay không xảy ra biến cố $A$ không ảnh hưởng tới xác suất xảy ra biến cố $B$, và ngược lại. Vậy $A$ và $B$ là hai biến cố độc lập.
+
+**Bài 8.5:** Có hai chuồng nuôi gà. Chuồng I có 9 con gà mái và 3 con gà trống. Chuồng II có 3 con gà mái và 6 con gà trống. Bắt ngẫu nhiên một con gà của chuồng I đem bán rồi dồn các con gà còn lại của chuồng I vào chuồng II. Sau đó bắt ngẫu nhiên một con gà của chuồng II. Xét các biến cố:
+$E$: "Bắt được con gà trống từ chuồng I";
+$F$: "Bắt được con gà mái từ chuồng II".
+Chứng tỏ rằng hai biến cố $E$ và $F$ không độc lập.
+
+Lời giải Bài 8.5:
+• Tổng số gà ban đầu của chuồng I là $9 + 3 = 12$ con. Sau khi bán 1 con thì chuồng I còn 11 con.
+  Dồn 11 con này vào chuồng II (có sẵn 9 con: 3 mái, 6 trống), tổng số gà trong chuồng II lúc sau là $9 + 11 = 20$ con.
+• Nếu biến cố $E$ xảy ra (con gà bán đi là gà trống):
+  Số gà mái chuyển từ chuồng I sang chuồng II là 9 con mái. Chuồng II lúc này có $3 + 9 = 12$ con gà mái trên tổng số 20 con gà. Do đó $P(F) = \frac{12}{20} = \frac{3}{5} = 0{,}6$.
+• Nếu biến cố $E$ không xảy ra (con gà bán đi là gà mái):
+  Số gà mái chuyển từ chuồng I sang chuồng II là 8 con mái. Chuồng II lúc này có $3 + 8 = 11$ con gà mái trên tổng số 20 con gà. Do đó $P(F) = \frac{11}{20} = 0{,}55$.
+• Vì xác suất của biến cố $F$ thay đổi theo việc biến cố $E$ có xảy ra hay không ($0{,}6 \ne 0{,}55$), nên hai biến cố $E$ và $F$ không độc lập.

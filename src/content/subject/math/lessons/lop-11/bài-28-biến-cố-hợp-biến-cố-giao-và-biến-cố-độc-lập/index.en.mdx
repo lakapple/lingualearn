@@ -1,0 +1,201 @@
+---
+title: 'Lesson 28: Union of events, Intersection of events and Independent events.'
+description: Theoretical system for the lesson on Union of events, Intersection of events and Independent events with illustrative examples.
+tags:
+  - grade 11
+  - Union of events
+  - Intersection of events
+  - Independent events
+grade: 11
+order: 28
+updatedDate: 2026-10-29T00:00:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Union of events
+
+·       Intersection of events
+
+·       Independent events
+
+### **Knowledge and Skills:**
+
+·       Recognize the concepts of union of events, intersection of events, and independent events.
+
+·       Describe the union and intersection of events using set notation and Venn diagrams.
+
+·       Identify independent events in simple random experiments.
+
+·       Represent compound events using set operations: union, intersection, and complementary events.
+
+## Union of Events
+
+<Youtube url="https://www.youtube.com/watch?v=example_bien_co_hop"/>
+
+### a) Definition of the Union of Events
+
+Let $A$ and $B$ be two events. The event "$A$ or $B$ occurs" is called the union of $A$ and $B$, denoted by $A \cup B$.
+The union of $A$ and $B$ is the subset $A \cup B$ of the sample space $\Omega$, consisting of outcomes favorable to at least one of the two events $A$ or $B$.
+
+### b) Examples and Practice on the Union of Events
+
+**Example 1:** A box contains 15 identical cards numbered from 1 to 15. A card is drawn at random from the box. Let $E$ be the event "The number on the card is odd"; let $F$ be the event "The number on the card is a prime number".
+a) Describe the sample space.
+b) State the verbal description of the union event $G = E \cup F$. Which subset of the sample space is $G$?
+
+Solution to Example 1:
+• a) The sample space is:
+  $$\Omega = \\{1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15\\}.$$
+• b) $E \cup F$ is the event: "The number on the card is odd or prime".
+  We have:
+  $$E = \\{1; 3; 5; 7; 9; 11; 13; 15\\}$$
+  $$F = \\{2; 3; 5; 7; 11; 13\\}$$
+  Therefore, the corresponding subset is:
+  $$G = E \cup F = \\{1; 2; 3; 5; 7; 9; 11; 13; 15\\}.$$
+
+**Practice 1:** A group in class 11B consists of 4 female students (Huong, Hong, Dung, Phuong) and 5 male students (Son, Tung, Hoang, Tien, Hai). The teacher randomly selects one student to check their homework. Consider the events:
+$H$: "The selected student is female";
+$K$: "The selected student has a name starting with the letter H".
+a) Describe the sample space.
+b) State the verbal description of the union event $M = H \cup K$. Which subset of the sample space does each event $H, K, M$ represent?
+
+Solution to Practice 1:
+• a) The sample space is:
+  $$\Omega = \\{\text{Huong}, \text{Hong}, \text{Dung}, \text{Phuong}, \text{Son}, \text{Tung}, \text{Hoang}, \text{Tien}, \text{Hai}\\}.$$
+• b) $M = H \cup K$ is the event: "The selected student is female or has a name starting with the letter H".
+  - $H = \\{\text{Huong}, \text{Hong}, \text{Dung}, \text{Phuong}\\}$;
+  - $K = \\{\text{Huong}, \text{Hong}, \text{Hoang}, \text{Hai}\\}$;
+  - $M = H \cup K = \\{\text{Huong}, \text{Hong}, \text{Dung}, \text{Phuong}, \text{Hoang}, \text{Hai}\\}.$
+
+## Intersection of Events
+
+### a) Definition of the Intersection of Events
+
+Let $A$ and $B$ be two events. The event "Both $A$ and $B$ occur" is called the intersection of $A$ and $B$, denoted by $AB$ (or $A \cap B$).
+The intersection of $A$ and $B$ is the subset $A \cap B$ of the sample space $\Omega$, consisting of outcomes that are simultaneously favorable to both $A$ and $B$.
+
+### b) Examples and Practice on the Intersection of Events
+
+**Example 2:** A group consists of 9 students: Bao, Dang, Giang, Hoa, Long, Mai, Phuc, Tuan, Yen. In a sports survey, the students who play badminton are Bao, Dang, Long, Phuc, Tuan, Yen; those who play table tennis are Giang, Long, Phuc, Tuan. A student is selected at random. Consider:
+$U$: "The selected student plays badminton";
+$V$: "The selected student plays table tennis".
+a) Describe the sample space.
+b) What is the description of the intersection event $T = UV$? Which subset of the sample space does each event $U, V, T$ represent?
+
+Solution to Example 2:
+• a) The sample space is:
+  $$\Omega = \\{\text{Bao}, \text{Dang}, \text{Giang}, \text{Hoa}, \text{Long}, \text{Mai}, \text{Phuc}, \text{Tuan}, \text{Yen}\\}.$$
+• b) $T = UV$ is the event: "The selected student plays both badminton and table tennis".
+  - $U = \\{\text{Bao}, \text{Dang}, \text{Long}, \text{Phuc}, \text{Tuan}, \text{Yen}\\}$;
+  - $V = \\{\text{Giang}, \text{Long}, \text{Phuc}, \text{Tuan}\\}$;
+  - $T = U \cap V = \\{\text{Long}, \text{Phuc}, \text{Tuan}\\}.$
+
+**Practice 2:** A box contains 25 identical cards numbered from 1 to 25. A card is drawn at random. Consider the events:
+$P$: "The number on the card is divisible by 4";
+$Q$: "The number on the card is divisible by 6".
+a) Describe the sample space.
+b) What is the description of the intersection event $S = PQ$? Which subset of the sample space does each event $P, Q, S$ represent?
+
+Solution to Practice 2:
+• a) The sample space is $\Omega = \\{1; 2; 3; \dots; 25\\}$.
+• b) $S = PQ$ is the event: "The number on the card is divisible by both 4 and 6" (that is, divisible by $\text{lcm}(4, 6) = 12$).
+  - $P = \\{4; 8; 12; 16; 20; 24\\}$;
+  - $Q = \\{6; 12; 18; 24\\}$;
+  - $S = P \cap Q = \\{12; 24\\}.$
+
+**Application:** Consider the household survey in Hanoi with $M$: "The family owns a television", $N$: "The family owns a computer". Express the following events in terms of $M$ and $N$:
+$E$: "The family owns a television or a computer";
+$F$: "The family owns both a television and a computer".
+
+Solution to Application:
+• Event $E$ occurs when the family owns a television or a computer: $E = M \cup N$.
+• Event $F$ occurs when the family owns both a television and a computer: $F = MN = M \cap N$.
+
+## Independent Events
+
+### a) Definition of Independent Events
+
+A pair of events $A$ and $B$ are called independent if the occurrence or non-occurrence of one event does not affect the probability of occurrence of the other.
+Note: If the events $A$ and $B$ are independent, then the following pairs of events are also independent:
+• $A$ and $\overline{B}$;
+• $\overline{A}$ and $B$;
+• $\overline{A}$ and $\overline{B}$.
+
+### b) Examples and Identification of Independent Events
+
+**Example 3:** A box contains 4 red marbles and 5 blue marbles of identical size and mass.
+a) Minh draws a marble at random, notes its color, and returns it to the box. Then Hung draws a marble at random. Consider events $A$: "Minh draws a red marble", $B$: "Hung draws a blue marble". Show that $A$ and $B$ are independent.
+b) Son draws a marble at random and does not return it to the box. Then Tung draws a marble at random. Consider events $C$: "Son draws a red marble", $D$: "Tung draws a blue marble". Show that $C$ and $D$ are not independent.
+
+Solution to Example 3:
+• a) Since Minh replaces the marble into the box, the composition of the box when Hung draws is always 4 red and 5 blue marbles. Therefore, $P(B) = \frac{5}{9}$ regardless of whether $A$ occurs or not. Since Hung draws after Minh, Hung's draw does not affect Minh's result, so $P(A) = \frac{4}{9}$. Thus, $A$ and $B$ are independent.
+• b) If $C$ occurs (Son draws a red marble without replacement), 8 marbles remain in the box (3 red, 5 blue), so $P(D) = \frac{5}{8}$. If $C$ does not occur (Son draws a blue marble), 8 marbles remain in the box (4 red, 4 blue), so $P(D) = \frac{4}{8} = \frac{1}{2}$. Thus, the probability of event $D$ changes depending on whether event $C$ occurs. Hence, $C$ and $D$ are not independent.
+
+## Applications and Exercises
+
+### a) Exercises on Determining Union and Intersection of Events
+
+**Exercise 8.1:** A box contains 15 identical cards numbered from 1 to 15. A card is drawn at random. Let $A$ be the event "The number on the card is less than 7"; let $B$ be the event "The number on the card is a prime number".
+a) Describe the sample space.
+b) Which subset of the sample space does each event $A \cup B$ and $AB$ represent?
+
+Solution to Exercise 8.1:
+• a) The sample space is $\Omega = \\{1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15\\}$.
+• b) Events $A = \\{1; 2; 3; 4; 5; 6\\}$ and $B = \\{2; 3; 5; 7; 11; 13\\}$.
+  - Union event: $A \cup B = \\{1; 2; 3; 4; 5; 6; 7; 11; 13\\}$.
+  - Intersection event: $AB = A \cap B = \\{2; 3; 5\\}$.
+
+**Exercise 8.2:** Roll two balanced, fair dice. Consider the events:
+$E$: "The numbers of spots on both dice are even";
+$F$: "The numbers of spots on the two dice have different parities (one even, one odd)";
+$K$: "The product of the numbers of spots on the two dice is even".
+Prove that $K$ is the union of events $E$ and $F$.
+
+Solution to Exercise 8.2:
+• The product of the numbers of spots on two dice is even if and only if at least one die shows an even number.
+• This occurs in two mutually exclusive cases:
+  - Both dice show even numbers (event $E$);
+  - One die shows an even number and the other shows an odd number (event $F$).
+• Thus, event $K$ occurs if and only if $E$ or $F$ occurs, which means $K = E \cup F$.
+
+**Exercise 8.3:** Select a student at random from your school. Consider the two events:
+$P$: "The student has myopia (nearsightedness)";
+$Q$: "The student excels in Mathematics".
+State the verbal descriptions of the events $P \cup Q$, $PQ$, and $\overline{P}Q$.
+
+Solution to Exercise 8.3:
+• $P \cup Q$: "The student has myopia or excels in Mathematics".
+• $PQ$: "The student both has myopia and excels in Mathematics".
+• $\overline{P}Q$: "The student does not have myopia but excels in Mathematics".
+
+### b) Exercises on Testing Event Independence
+
+**Exercise 8.4:** There are two rabbit cages. Cage I has 5 black rabbits and 10 white rabbits. Cage II has 3 white rabbits and 7 black rabbits. One rabbit is chosen at random from each cage. Consider the events:
+$A$: "A white rabbit is chosen from Cage I";
+$B$: "A black rabbit is chosen from Cage II".
+Show that events $A$ and $B$ are independent.
+
+Solution to Exercise 8.4:
+• The probability of choosing a white rabbit from Cage I is $P(A) = \frac{10}{15} = \frac{2}{3}$, which depends solely on the composition of Cage I.
+• The probability of choosing a black rabbit from Cage II is $P(B) = \frac{7}{10}$, which depends solely on the composition of Cage II and is completely independent of the selection in Cage I.
+• The occurrence or non-occurrence of event $A$ does not affect the probability of event $B$, and vice versa. Hence, $A$ and $B$ are independent events.
+
+**Exercise 8.5:** There are two chicken coops. Coop I contains 9 hens and 3 roosters. Coop II contains 3 hens and 6 roosters. One chicken is chosen at random from Coop I to be sold, and all remaining chickens in Coop I are then transferred into Coop II. Afterward, one chicken is chosen at random from Coop II. Consider the events:
+$E$: "A rooster is chosen from Coop I";
+$F$: "A hen is chosen from Coop II".
+Show that events $E$ and $F$ are not independent.
+
+Solution to Exercise 8.5:
+• Initially, Coop I has $9 + 3 = 12$ chickens. After selling 1 chicken, 11 chickens remain.
+  Transferring these 11 chickens into Coop II (which already has 9 chickens: 3 hens, 6 roosters) brings the total in Coop II to $9 + 11 = 20$ chickens.
+• If event $E$ occurs (the sold chicken was a rooster):
+  The number of hens transferred from Coop I to Coop II is 9. Coop II now contains $3 + 9 = 12$ hens out of 20 chickens. Therefore, $P(F) = \frac{12}{20} = \frac{3}{5} = 0.6$.
+• If event $E$ does not occur (the sold chicken was a hen):
+  The number of hens transferred from Coop I to Coop II is 8. Coop II now contains $3 + 8 = 11$ hens out of 20 chickens. Therefore, $P(F) = \frac{11}{20} = 0.55$.
+• Since the probability of event $F$ changes depending on whether event $E$ occurs or not ($0.6 \ne 0.55$), the events $E$ and $F$ are not independent.
