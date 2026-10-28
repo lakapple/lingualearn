@@ -1,0 +1,208 @@
+---
+title: 'Lesson 32: Rules of Differentiation.'
+description: Theoretical system for the lesson on Rules of Differentiation with illustrative examples
+tags:
+  - grade 11
+  - Derivative of a sum, difference, product, and quotient
+  - Derivative of a composite function (chain rule)
+  - Derivatives of basic elementary functions
+grade: 11
+order: 32
+updatedDate: 2026-10-29T00:30:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Derivative of a sum, difference, product, and quotient
+
+·       Derivative of a composite function (chain rule)
+
+·       Derivatives of basic elementary functions (power, radical, trigonometric, exponential, and logarithmic functions)
+
+### **Knowledge and Skills:**
+
+·       Compute derivatives of basic elementary functions: power functions, square root function, trigonometric functions, exponential functions, and logarithmic functions.
+
+·       Apply differentiation rules for the sum, difference, product, and quotient of functions, as well as the chain rule for composite functions.
+
+·       Apply differentiation rules to solve practical problems (velocity at maximum height and upon impact, harmonic motion of a vibrating string, rate of change of pH).
+
+## Derivatives of Common Functions and Differentiation Rules
+
+<Youtube url="https://www.youtube.com/watch?v=example_cac_quy_tac_tinh_dao_ham"/>
+
+### a) Derivatives of Power and Square Root Functions
+
+• The power function $y = x^n$ ($n \in \mathbb{N}^\*$) is differentiable on $\mathbb{R}$ and:
+$$(x^n)' = n x^{n-1}$$
+• The square root function $y = \sqrt{x}$ is differentiable on $(0; +\infty)$ and:
+$$(\sqrt{x})' = \frac{1}{2\sqrt{x}}$$
+• The reciprocal function $y = \frac{1}{x}$ is differentiable for all $x \ne 0$:
+$$\left(\frac{1}{x}\right)' = -\frac{1}{x^2}$$
+
+### b) Differentiation Rules for Sum, Difference, Product, and Quotient
+
+Assume functions $u = u(x)$ and $v = v(x)$ are differentiable on an interval $(a; b)$. Then:
+• $(u + v)' = u' + v'$;
+• $(u - v)' = u' - v'$;
+• $(uv)' = u'v + uv'$;
+• $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ (where $v(x) \ne 0$).
+Consequences:
+• Constant multiple rule: $(ku)' = k u'$ (for any constant $k$);
+• Reciprocal rule: $\left(\frac{1}{v}\right)' = -\frac{v'}{v^2}$ (where $v(x) \ne 0$).
+
+### c) Derivative of a Composite Function (Chain Rule)
+
+If $u = g(x)$ has a derivative $u'\_x$ at $x$ and $y = f(u)$ has a derivative $y'\_u$ at $u$, then the composite function $y = f(g(x))$ has a derivative $y'\_x$ at $x$ given by:
+$$y'\_x = y'\_u \cdot u'\_x$$
+Corresponding composite formulas:
+• $(u^n)' = n u^{n-1} \cdot u'$;
+• $(\sqrt{u})' = \frac{u'}{2\sqrt{u}}$ (for $u > 0$).
+
+**Example 2:** Compute the derivative of the following functions:
+a) $y = \frac{1}{3}x^3 - x^2 + 2x + 1$;
+b) $y = \frac{2x+1}{x-1}$.
+
+Solution to Example 2:
+• a) We have:
+  $$y' = \frac{1}{3}(x^3)' - (x^2)' + 2(x)' + (1)' = \frac{1}{3} \cdot 3x^2 - 2x + 2 = x^2 - 2x + 2.$$
+• b) For all $x \ne 1$, applying the quotient rule:
+  $$y' = \frac{(2x+1)'(x-1) - (2x+1)(x-1)'}{(x-1)^2} = \frac{2(x-1) - (2x+1)}{(x-1)^2} = -\frac{3}{(x-1)^2}.$$
+
+**Example 5:** Compute the derivative of the function $y = \sqrt{x^2 + 1}$.
+
+Solution to Example 5:
+• Let $u = x^2 + 1 > 0$, then $y = \sqrt{u}$.
+• Applying the chain rule:
+  $$y' = (\sqrt{x^2 + 1})' = \frac{(x^2 + 1)'}{2\sqrt{x^2 + 1}} = \frac{2x}{2\sqrt{x^2 + 1}} = \frac{x}{\sqrt{x^2 + 1}}.$$
+
+## Derivatives of Trigonometric, Exponential, and Logarithmic Functions
+
+### a) Derivatives of Trigonometric Functions
+
+• $(\sin x)' = \cos x$; for a composite function: $(\sin u)' = u' \cdot \cos u$.
+• $(\cos x)' = -\sin x$; for a composite function: $(\cos u)' = -u' \cdot \sin u$.
+• $(\tan x)' = \frac{1}{\cos^2 x}$ ($x \ne \frac{\pi}{2} + k\pi$); for a composite function: $(\tan u)' = \frac{u'}{\cos^2 u}$.
+• $(\cot x)' = -\frac{1}{\sin^2 x}$ ($x \ne k\pi$); for a composite function: $(\cot u)' = -\frac{u'}{\sin^2 u}$.
+
+**Example 6:** Compute the derivative of the function $y = \sin\left(2x + \frac{\pi}{8}\right)$.
+
+Solution to Example 6:
+• We have:
+  $$y' = \left(2x + \frac{\pi}{8}\right)' \cdot \cos\left(2x + \frac{\pi}{8}\right) = 2\cos\left(2x + \frac{\pi}{8}\right).$$
+
+### b) Derivatives of Exponential and Logarithmic Functions
+
+• $(e^x)' = e^x$; for a composite function: $(e^u)' = u' \cdot e^u$.
+• $(a^x)' = a^x \ln a$ ($0 < a \ne 1$); for a composite function: $(a^u)' = u' \cdot a^u \ln a$.
+• $(\ln x)' = \frac{1}{x}$ ($x > 0$); for a composite function: $(\ln u)' = \frac{u'}{u}$.
+• $(\log_a x)' = \frac{1}{x \ln a}$ ($x > 0, 0 < a \ne 1$); for a composite function: $(\log_a u)' = \frac{u'}{u \ln a}$.
+• Note: $(\ln |x|)' = \frac{1}{x}$ for all $x \ne 0$.
+
+**Example 9:** Compute the derivative of the function $y = 2^{x^2 - x}$.
+
+Solution to Example 9:
+• Applying the formula $(a^u)' = u' \cdot a^u \ln a$ with $u = x^2 - x$ and $a = 2$:
+  $$y' = 2^{x^2 - x} \cdot (x^2 - x)' \cdot \ln 2 = (2x - 1) \cdot 2^{x^2 - x} \ln 2.$$
+
+**Example 10:** Compute the derivative of the function $y = \ln(x^2 + 1)$.
+
+Solution to Example 10:
+• Since $x^2 + 1 > 0$ for all $x \in \mathbb{R}$, the function is defined on $\mathbb{R}$.
+• Applying the formula $(\ln u)' = \frac{u'}{u}$:
+  $$y' = \frac{(x^2 + 1)'}{x^2 + 1} = \frac{2x}{x^2 + 1}.$$
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 1 (Vertical Projectile Motion):** An object is launched vertically upward from the ground with an initial velocity $v_0 = 20\text{ m/s}$. Neglecting air resistance, the equation of motion is $h(t) = v_0 t - \frac{1}{2}gt^2$ with $g = 9.8\text{ m/s}^2$. Calculate the velocity of the object when it reaches its maximum height and when it hits the ground.
+
+Solution to Application 1:
+• The instantaneous velocity of the object at time $t$ is:
+  $$v(t) = h'(t) = v_0 - gt = 20 - 9.8t\text{ (m/s).}$$
+• The object reaches its maximum height when its velocity becomes zero ($v(t_1) = 0$):
+  $$20 - 9.8t_1 = 0 \iff t_1 = \frac{20}{9.8} \approx 2.04\text{ (seconds).}$$
+  At the maximum height, the velocity of the object is $0\text{ m/s}$.
+• The object hits the ground when $h(t_2) = 0$:
+  $$20t_2 - 4.9t_2^2 = 0 \iff t_2(20 - 4.9t_2) = 0.$$
+  Since the impact time $t_2 > 0$, we have $t_2 = \frac{20}{4.9} \approx 4.08\text{ (seconds)}$.
+• The velocity upon impact is:
+  $$v(t_2) = 20 - 9.8 \cdot \frac{20}{4.9} = 20 - 40 = -20\text{ (m/s).}$$
+  The negative sign indicates downward motion toward the ground with a speed of $20\text{ m/s}$.
+
+**Application 2 (Rate of Change of pH):** The pH of a chemical solution is given by $pH = -\log[H^+]$, where $[H^+]$ is the hydrogen ion concentration in moles per liter. Determine the rate of change of pH with respect to the concentration $[H^+]$.
+
+Solution to Application 2:
+• Let $x = [H^+] > 0$, then $y = pH = -\log\_{10} x = -\frac{\ln x}{\ln 10}$.
+• The rate of change of pH with respect to $[H^+]$ is the derivative of $y$ with respect to $x$:
+  $$y' = \left(-\frac{\ln x}{\ln 10}\right)' = -\frac{1}{\ln 10} \cdot (\ln x)' = -\frac{1}{x \ln 10} = -\frac{1}{[H^+] \ln 10}.$$
+• The negative sign indicates that as the hydrogen ion concentration $[H^+]$ increases, the pH of the solution decreases.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 9.6:** Compute the derivative of the following functions:
+a) $y = x^3 - 3x^2 + 2x + 1$;
+b) $y = x^2 - 4\sqrt{x} + 3$.
+
+Solution to Exercise 9.6:
+• a) $y' = (x^3)' - 3(x^2)' + 2(x)' + (1)' = 3x^2 - 6x + 2$.
+• b) On the interval $(0; +\infty)$:
+  $$y' = (x^2)' - 4(\sqrt{x})' + (3)' = 2x - 4 \cdot \frac{1}{2\sqrt{x}} = 2x - \frac{2}{\sqrt{x}}.$$
+
+**Exercise 9.7:** Compute the derivative of the following functions:
+a) $y = \frac{2x-1}{x+2}$;
+b) $y = \frac{2x}{x^2+1}$.
+
+Solution to Exercise 9.7:
+• a) For $x \ne -2$:
+  $$y' = \frac{(2x-1)'(x+2) - (2x-1)(x+2)'}{(x+2)^2} = \frac{2(x+2) - (2x-1)}{(x+2)^2} = \frac{5}{(x+2)^2}.$$
+• b) For all $x \in \mathbb{R}$:
+  $$y' = \frac{(2x)'(x^2+1) - 2x(x^2+1)'}{(x^2+1)^2} = \frac{2(x^2+1) - 2x(2x)}{(x^2+1)^2} = \frac{2 - 2x^2}{(x^2+1)^2}.$$
+
+**Exercise 9.8:** Compute the derivative of the following functions:
+a) $y = x \sin^2 x$;
+b) $y = \cos^2 x + \sin 2x$;
+c) $y = \sin 3x - 3\sin x$;
+d) $y = \tan x + \cot x$.
+
+Solution to Exercise 9.8:
+• a) Applying the product rule $(uv)' = u'v + uv'$:
+  $$y' = (x)' \sin^2 x + x (\sin^2 x)' = \sin^2 x + x \cdot 2\sin x \cos x = \sin^2 x + x \sin 2x.$$
+• b) $y' = (\cos^2 x)' + (\sin 2x)' = 2\cos x (-\sin x) + 2\cos 2x = -\sin 2x + 2\cos 2x$.
+• c) $y' = (\sin 3x)' - 3(\sin x)' = 3\cos 3x - 3\cos x$.
+• d) $y' = (\tan x)' + (\cot x)' = \frac{1}{\cos^2 x} - \frac{1}{\sin^2 x} = \frac{\sin^2 x - \cos^2 x}{\sin^2 x \cos^2 x} = -\frac{\cos 2x}{\frac{1}{4}\sin^2 2x} = -\frac{4\cos 2x}{\sin^2 2x}$.
+
+**Exercise 9.9:** Compute the derivative of the following functions:
+a) $y = 2^{3x - x^2}$;
+b) $y = \log_3(4x + 1)$.
+
+Solution to Exercise 9.9:
+• a) Applying the formula $(a^u)' = u' \cdot a^u \ln a$:
+  $$y' = (3x - x^2)' \cdot 2^{3x - x^2} \cdot \ln 2 = (3 - 2x) \cdot 2^{3x - x^2} \ln 2.$$
+• b) Domain condition $4x + 1 > 0 \iff x > -\frac{1}{4}$. Applying $(\log_a u)' = \frac{u'}{u \ln a}$:
+  $$y' = \frac{(4x + 1)'}{(4x + 1) \ln 3} = \frac{4}{(4x + 1) \ln 3}.$$
+
+**Bài 9.10:** Given the function $f(x) = 2\sin^2\left(3x - \frac{\pi}{4}\right)$. Prove that $|f'(x)| \le 6$ for all $x$.
+
+Solution to Exercise 9.10:
+• Using the power-reduction formula:
+  $$f(x) = 1 - \cos\left(6x - \frac{\pi}{2}\right) = 1 - \sin 6x.$$
+• Taking the derivative:
+  $$f'(x) = - (\sin 6x)' = -6\cos 6x.$$
+• Since $|\cos 6x| \le 1$ for all $x \in \mathbb{R}$, we have:
+  $$|f'(x)| = |-6\cos 6x| = 6|\cos 6x| \le 6.$$
+• The inequality is proved.
+
+**Exercise 9.12:** The motion of a particle on a vibrating string is described by $s(t) = 12 + 0.5\sin(4\pi t)$, where $s$ is in centimeters and $t$ is in seconds. Find the velocity of the particle after $t$ seconds. What is the maximum speed of the particle?
+
+Solution to Exercise 9.12:
+• The instantaneous velocity of the particle is the derivative of position with respect to time:
+  $$v(t) = s'(t) = 0.5 \cdot (4\pi) \cdot \cos(4\pi t) = 2\pi \cos(4\pi t)\text{ (cm/s).}$$
+• Since $\cos(4\pi t) \le 1$ for all $t$, the maximum speed of the particle occurs when $\cos(4\pi t) = 1$:
+  $$v\_{\max} = 2\pi \approx 6.28\text{ (cm/s).}$$
