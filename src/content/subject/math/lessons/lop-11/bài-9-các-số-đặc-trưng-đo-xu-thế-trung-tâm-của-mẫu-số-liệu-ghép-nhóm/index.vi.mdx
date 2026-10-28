@@ -1,0 +1,284 @@
+---
+title: 'Bài 9: Các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm.'
+description: Hệ thống lý thuyết bài … cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Giá trị đại diện của nhóm
+  - Số trung bình
+  - Tứ phân vị
+  - Trung vị
+  - Mốt
+grade: 11
+order: 9
+updatedDate: 2026-10-28T15:48:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Số trung bình (Mean)
+
+·       Trung vị (Median)
+
+·       Tứ phân vị (Quartiles: $Q_1, Q_2, Q_3$)
+
+·       Mốt (Mode)
+
+·       Giá trị đại diện của nhóm, tần số tích luỹ
+
+### **Kiến thức, kĩ năng:**
+
+·       Tính thành thạo các số đặc trưng đo xu thế trung tâm của mẫu số liệu ghép nhóm: số trung bình, trung vị, các tứ phân vị và mốt.
+
+·       Hiểu rõ ý nghĩa, vai trò của từng số đặc trưng và lựa chọn số đặc trưng phù hợp để mô tả bức tranh phân bố của dữ liệu thực tế.
+
+·       Hiệu chỉnh mẫu số liệu rời rạc dạng $k_1 - k_2$ về dạng nửa khoảng $[k_1 - 0{,}5; k_2 + 0{,}5)$ trước khi tính toán.
+
+·       Vận dụng các số đặc trưng vào giải quyết các bài toán thống kê thực tiễn (tiền mua xăng, cân nặng, thời gian tự học, thời gian ngủ, điểm thi, tuổi thọ sản phẩm).
+
+## Số trung bình của mẫu số liệu ghép nhóm
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_trung_binh_ghep_nhom"/>
+
+### a) Công thức tính số trung bình
+
+Công thức tính:
+Cho mẫu số liệu ghép nhóm gồm $k$ nhóm $[a_i; a\_{i+1})$ với tần số tương ứng $m_i$ ($i = 1, 2, \dots, k$).
+• Giá trị đại diện của nhóm $[a_i; a\_{i+1})$ là trung bình cộng hai đầu mút:
+$$x_i = \frac{a_i + a\_{i+1}}{2}$$
+• Số trung bình của mẫu số liệu ghép nhóm, kí hiệu là $\overline{x}$, được tính theo công thức:
+$$\overline{x} = \frac{m_1 x_1 + m_2 x_2 + \dots + m_k x_k}{n}$$
+trong đó $n = m_1 + m_2 + \dots + m_k$ là cỡ mẫu.
+Chú ý: Đối với số liệu rời rạc cho dưới dạng các nhóm $k_1 - k_2$ ($k_1, k_2 \in \mathbb{N}$), ta hiệu chỉnh thành nhóm $[k_1 - 0{,}5; k_2 + 0{,}5)$ trước khi xác định giá trị đại diện và tính toán.
+
+### b) Ví dụ và luyện tập về số trung bình
+
+**Ví dụ 1:** Tìm cân nặng trung bình của 42 học sinh lớp 11D được cho trong bảng sau:
+• $[40{,}5; 45{,}5)$: 10 học sinh;
+• $[45{,}5; 50{,}5)$: 7 học sinh;
+• $[50{,}5; 55{,}5)$: 16 học sinh;
+• $[55{,}5; 60{,}5)$: 4 học sinh;
+• $[60{,}5; 65{,}5)$: 2 học sinh;
+• $[65{,}5; 70{,}5)$: 3 học sinh.
+
+Lời giải Ví dụ 1:
+• Xác định giá trị đại diện $x_i$ của từng nhóm:
+  $x_1 = 43; x_2 = 48; x_3 = 53; x_4 = 58; x_5 = 63; x_6 = 68$.
+• Tổng số học sinh là $n = 42$.
+• Cân nặng trung bình là:
+$$\overline{x} = \frac{10 \cdot 43 + 7 \cdot 48 + 16 \cdot 53 + 4 \cdot 58 + 2 \cdot 63 + 3 \cdot 68}{42} = \frac{2\\,176}{42} \approx 51{,}81\text{ (kg).}$$
+
+**Luyện tập 1:** Khảo sát thời gian xem ti vi trong tuần trước (giờ) của học sinh thu được bảng:
+• $[0; 5)$: 8 học sinh; $[5; 10)$: 16 học sinh; $[10; 15)$: 4 học sinh; $[15; 20)$: 2 học sinh; $[20; 25)$: 2 học sinh.
+Tính thời gian xem ti vi trung bình của các học sinh này.
+
+Lời giải Luyện tập 1:
+• Cỡ mẫu: $n = 8 + 16 + 4 + 2 + 2 = 32$ học sinh.
+• Giá trị đại diện của các nhóm lần lượt là: $2{,}5; 7{,}5; 12{,}5; 17{,}5; 22{,}5$.
+• Thời gian xem ti vi trung bình là:
+$$\overline{x} = \frac{8(2{,}5) + 16(7{,}5) + 4(12{,}5) + 2(17{,}5) + 2(22{,}5)}{32} = \frac{20 + 120 + 50 + 35 + 45}{32} = \frac{270}{32} = 8{,}4375\text{ (giờ).}$$
+
+## Trung vị của mẫu số liệu ghép nhóm
+
+<Youtube url="https://www.youtube.com/watch?v=example_trung_vi_ghep_nhom"/>
+
+### a) Công thức tính trung vị
+
+Quy trình xác định trung vị:
+• Bước 1: Xác định nhóm chứa trung vị. Giả sử đó là nhóm thứ $p$: $[a_p; a\_{p+1})$. Nhóm này thoả mãn tần số tích luỹ đến nhóm $p$ lớn hơn hoặc bằng $\frac{n}{2}$ lần đầu tiên.
+• Bước 2: Áp dụng công thức tính trung vị $M_e$:
+$$M_e = a_p + \frac{\frac{n}{2} - (m_1 + m_2 + \dots + m\_{p-1})}{m_p} \cdot (a\_{p+1} - a_p)$$
+trong đó $n$ là cỡ mẫu, $m_p$ là tần số của nhóm chứa trung vị, $a_p$ và $a\_{p+1}$ là hai đầu mút của nhóm thứ $p$ (quy ước $m_1 + \dots + m\_{p-1} = 0$ khi $p = 1$).
+
+### b) Ví dụ và luyện tập về trung vị
+
+**Ví dụ 2:** Thời gian (phút) truy cập Internet mỗi tối của học sinh:
+• $[9{,}5; 12{,}5)$: 3 học sinh; $[12{,}5; 15{,}5)$: 12 học sinh;
+• $[15{,}5; 18{,}5)$: 15 học sinh; $[18{,}5; 21{,}5)$: 24 học sinh; $[21{,}5; 24{,}5)$: 2 học sinh.
+Tính trung vị của mẫu số liệu ghép nhóm này.
+
+Lời giải Ví dụ 2:
+• Cỡ mẫu: $n = 3 + 12 + 15 + 24 + 2 = 56 \Rightarrow \frac{n}{2} = 28$.
+• Tần số tích luỹ các nhóm: $cf_1 = 3; cf_2 = 15; cf_3 = 30 > 28$. Do đó nhóm chứa trung vị là nhóm thứ 3: $[15{,}5; 18{,}5)$.
+• Các thông số: $p = 3, a_3 = 15{,}5, m_3 = 15, cf_2 = 15, h = 18{,}5 - 15{,}5 = 3$.
+• Trung vị là:
+$$M_e = 15{,}5 + \frac{28 - 15}{15} \cdot 3 = 15{,}5 + \frac{13}{15} \cdot 3 = 15{,}5 + 2{,}6 = 18{,}1\text{ (phút).}$$
+
+**Luyện tập 2:** Tốc độ giao bóng (km/h) trong 200 lần của một VĐV quần vợt:
+• $[150; 155)$: 18 lần; $[155; 160)$: 28 lần; $[160; 165)$: 35 lần;
+• $[165; 170)$: 43 lần; $[170; 175)$: 41 lần; $[175; 180)$: 35 lần.
+Tính trung vị của mẫu số liệu này.
+
+Lời giải Luyện tập 2:
+• Cỡ mẫu $n = 200 \Rightarrow \frac{n}{2} = 100$.
+• Tần số tích luỹ: $cf_1 = 18; cf_2 = 46; cf_3 = 81; cf_4 = 124 > 100$. Nhóm chứa trung vị là nhóm thứ 4: $[165; 170)$.
+• Áp dụng công thức với $a_4 = 165, m_4 = 43, cf_3 = 81, h = 5$:
+$$M_e = 165 + \frac{100 - 81}{43} \cdot 5 = 165 + \frac{19 \cdot 5}{43} = 165 + \frac{95}{43} \approx 167{,}21\text{ (km/h).}$$
+
+## Tứ phân vị của mẫu số liệu ghép nhóm
+
+<Youtube url="https://www.youtube.com/watch?v=example_tu_phan_vi_ghep_nhom"/>
+
+### a) Công thức tính tứ phân vị Q1, Q2, Q3
+
+Tứ phân vị thứ hai: $Q_2 = M_e$ (chính là trung vị).
+Tứ phân vị thứ nhất $Q_1$:
+• Nhóm chứa $Q_1$ là nhóm thứ $p: [a_p; a\_{p+1})$ có tần số tích luỹ lớn hơn hoặc bằng $\frac{n}{4}$ lần đầu tiên.
+$$Q_1 = a_p + \frac{\frac{n}{4} - (m_1 + m_2 + \dots + m\_{p-1})}{m_p} \cdot (a\_{p+1} - a_p)$$
+Tứ phân vị thứ ba $Q_3$:
+• Nhóm chứa $Q_3$ là nhóm thứ $q: [a_q; a\_{q+1})$ có tần số tích luỹ lớn hơn hoặc bằng $\frac{3n}{4}$ lần đầu tiên.
+$$Q_3 = a_q + \frac{\frac{3n}{4} - (m_1 + m_2 + \dots + m\_{q-1})}{m_q} \cdot (a\_{q+1} - a_q)$$
+
+### b) Ví dụ và luyện tập về tứ phân vị
+
+**Ví dụ 3:** Tìm tứ phân vị thứ nhất $Q_1$ và tứ phân vị thứ ba $Q_3$ của mẫu số liệu thời gian truy cập Internet ở Ví dụ 2 ($n = 56$).
+
+Lời giải Ví dụ 3:
+• Tính $Q_1$:
+  Ta có $\frac{n}{4} = \frac{56}{4} = 14$. Tần số tích luỹ: $cf_1 = 3, cf_2 = 15 > 14$. Nhóm chứa $Q_1$ là nhóm 2: $[12{,}5; 15{,}5)$.
+  $$Q_1 = 12{,}5 + \frac{14 - 3}{12} \cdot 3 = 12{,}5 + \frac{11}{4} = 15{,}25\text{ (phút).}$$
+• Tính $Q_3$:
+  Ta có $\frac{3n}{4} = \frac{3 \cdot 56}{4} = 42$. Tần số tích luỹ: $cf_3 = 30, cf_4 = 54 > 42$. Nhóm chứa $Q_3$ là nhóm 4: $[18{,}5; 21{,}5)$.
+  $$Q_3 = 18{,}5 + \frac{42 - 30}{24} \cdot 3 = 18{,}5 + \frac{12}{24} \cdot 3 = 18{,}5 + 1{,}5 = 20\text{ (phút).}$$
+
+**Luyện tập 3:** Tìm tứ phân vị thứ nhất và tứ phân vị thứ ba cho mẫu số liệu tốc độ giao bóng của VĐV quần vợt ở Luyện tập 2 ($n = 200$).
+
+Lời giải Luyện tập 3:
+• Tần số tích luỹ các nhóm: $cf_1 = 18; cf_2 = 46; cf_3 = 81; cf_4 = 124; cf_5 = 165; cf_6 = 200$.
+• Tìm $Q_1$: $\frac{n}{4} = 50$. Vì $cf_2 = 46 < 50 < cf_3 = 81$, nhóm chứa $Q_1$ là $[160; 165)$.
+  $$Q_1 = 160 + \frac{50 - 46}{35} \cdot 5 = 160 + \frac{4 \cdot 5}{35} = 160 + \frac{4}{7} \approx 160{,}57\text{ (km/h).}$$
+• Tìm $Q_3$: $\frac{3n}{4} = 150$. Vì $cf_4 = 124 < 150 < cf_5 = 165$, nhóm chứa $Q_3$ là $[170; 175)$.
+  $$Q_3 = 170 + \frac{150 - 124}{41} \cdot 5 = 170 + \frac{26 \cdot 5}{41} = 170 + \frac{130}{41} \approx 173{,}17\text{ (km/h).}$$
+
+## Mốt của mẫu số liệu ghép nhóm
+
+<Youtube url="https://www.youtube.com/watch?v=example_mot_ghep_nhom"/>
+
+### a) Công thức xác định mốt
+
+Quy trình xác định mốt $M_o$:
+• Bước 1: Xác định nhóm có tần số lớn nhất (nhóm chứa mốt), giả sử là nhóm thứ $j: [a_j; a\_{j+1})$.
+• Bước 2: Áp dụng công thức:
+$$M_o = a_j + \frac{m_j - m\_{j-1}}{(m_j - m\_{j-1}) + (m_j - m\_{j+1})} \cdot h$$
+trong đó $m_j$ là tần số của nhóm chứa mốt (quy ước $m_0 = m\_{k+1} = 0$), $m\_{j-1}$ và $m\_{j+1}$ là tần số của nhóm liền trước và liền sau, $h = a\_{j+1} - a_j$ là độ dài nhóm.
+Lưu ý: Mốt chỉ xác định cho các mẫu số liệu ghép nhóm có độ dài các nhóm bằng nhau. Nếu tất cả các nhóm có tần số bằng nhau thì mẫu không có mốt.
+
+### b) Ví dụ và luyện tập về mốt
+
+**Ví dụ 4:** Chiều cao (cm) của 50 học sinh lớp 11A:
+• $[145; 150)$: 7 học sinh; $[150; 155)$: 14 học sinh; $[155; 160)$: 10 học sinh;
+• $[160; 165)$: 10 học sinh; $[165; 170)$: 9 học sinh.
+Tính mốt của mẫu số liệu ghép nhóm này.
+
+Lời giải Ví dụ 4:
+• Tần số lớn nhất là $14$ nên nhóm chứa mốt là $[150; 155)$.
+• Ta có $j = 2, a_2 = 150, m_2 = 14, m_1 = 7, m_3 = 10, h = 5$.
+• Mốt là:
+$$M_o = 150 + \frac{14 - 7}{(14 - 7) + (14 - 10)} \cdot 5 = 150 + \frac{7}{7 + 4} \cdot 5 = 150 + \frac{35}{11} \approx 153{,}18\text{ (cm).}$$
+Ý nghĩa: Số học sinh có chiều cao khoảng $153{,}18\text{ cm}$ là chiếm tỉ lệ nhiều nhất.
+
+**Luyện tập 4:** Thời gian (phút) hoàn thành câu hỏi thi:
+• $[0{,}5; 10{,}5)$: 2 học sinh; $[10{,}5; 20{,}5)$: 10 học sinh; $[20{,}5; 30{,}5)$: 6 học sinh;
+• $[30{,}5; 40{,}5)$: 4 học sinh; $[40{,}5; 50{,}5)$: 3 học sinh.
+Tìm mốt của mẫu số liệu này.
+
+Lời giải Luyện tập 4:
+• Tần số lớn nhất là 10, nên nhóm chứa mốt là $[10{,}5; 20{,}5)$.
+• Thông số: $a_2 = 10{,}5, m_2 = 10, m_1 = 2, m_3 = 6, h = 10$.
+• Mốt là:
+$$M_o = 10{,}5 + \frac{10 - 2}{(10 - 2) + (10 - 6)} \cdot 10 = 10{,}5 + \frac{8}{8 + 4} \cdot 10 = 10{,}5 + \frac{80}{12} = 10{,}5 + 6{,}67 \approx 17{,}17\text{ (phút).}$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế tổng hợp
+
+**Vận dụng (Ước lượng số tiền mua xăng):** Số tiền bán xăng cho 35 khách hàng đi xe máy (Bảng 3.1):
+• $[0; 30)$: 3 khách; $[30; 60)$: 15 khách; $[60; 90)$: 10 khách; $[90; 120)$: 7 khách.
+Tính các số đặc trưng đo xu thế trung tâm (số trung bình, trung vị, tứ phân vị, mốt) và nêu ý nghĩa.
+
+Lời giải Vận dụng:
+• 1. Số trung bình:
+  Giá trị đại diện: $x_1 = 15; x_2 = 45; x_3 = 75; x_4 = 105$.
+  $$\overline{x} = \frac{3(15) + 15(45) + 10(75) + 7(105)}{35} = \frac{45 + 675 + 750 + 735}{35} = \frac{2\\,205}{35} = 63\text{ (nghìn đồng).}$$
+• 2. Trung vị $M_e$ ($n = 35 \Rightarrow \frac{n}{2} = 17{,}5$):
+  Tần số tích luỹ: $cf_1 = 3; cf_2 = 18 > 17{,}5$. Nhóm chứa trung vị là $[30; 60)$.
+  $$M_e = 30 + \frac{17{,}5 - 3}{15} \cdot 30 = 30 + \frac{14{,}5}{15} \cdot 30 = 30 + 29 = 59\text{ (nghìn đồng).}$$
+• 3. Tứ phân vị $Q_1, Q_3$:
+  + $\frac{n}{4} = 8{,}75$. Nhóm chứa $Q_1$ là $[30; 60)$ ($cf_1 = 3 < 8{,}75 < cf_2 = 18$):
+    $$Q_1 = 30 + \frac{8{,}75 - 3}{15} \cdot 30 = 30 + 2(5{,}75) = 41{,}5\text{ (nghìn đồng).}$$
+  + $\frac{3n}{4} = 26{,}25$. Nhóm chứa $Q_3$ là $[60; 90)$ ($cf_2 = 18 < 26{,}25 < cf_3 = 28$):
+    $$Q_3 = 60 + \frac{26{,}25 - 18}{10} \cdot 30 = 60 + 3(8{,}25) = 84{,}75\text{ (nghìn đồng).}$$
+• 4. Mốt $M_o$:
+  Tần số lớn nhất là 15 (nhóm $[30; 60)$), $m_1 = 3, m_2 = 15, m_3 = 10, h = 30$.
+  $$M_o = 30 + \frac{15 - 3}{(15 - 3) + (15 - 10)} \cdot 30 = 30 + \frac{12}{12 + 5} \cdot 30 = 30 + \frac{360}{17} \approx 51{,}18\text{ (nghìn đồng).}$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 3.4:** Quãng đường (km) từ nhà đến nơi làm việc của 40 công nhân:
+5, 3, 10, 20, 25, 11, 13, 7, 12, 31, 19, 10, 12, 17, 18, 11, 32, 17, 16, 2, 7, 9, 7, 8, 3, 5, 12, 15, 18, 3, 12, 14, 2, 9, 6, 15, 15, 7, 6, 12.
+a) Ghép nhóm dãy số liệu thành các khoảng có độ rộng bằng 5, khoảng đầu là $[0; 5)$. Tìm giá trị đại diện.
+b) Tính số trung bình của mẫu không ghép nhóm và mẫu ghép nhóm. Giá trị nào chính xác hơn?
+c) Xác định nhóm chứa mốt của mẫu ghép nhóm.
+
+Lời giải Bài 3.4:
+• a) Bảng tần số ghép nhóm gồm 7 nhóm độ rộng 5:
+  + $[0; 5)$: tần số 5, giá trị đại diện $2{,}5$;
+  + $[5; 10)$: tần số 9, giá trị đại diện $7{,}5$;
+  + $[10; 15)$: tần số 11, giá trị đại diện $12{,}5$;
+  + $[15; 20)$: tần số 9, giá trị đại diện $17{,}5$;
+  + $[20; 25)$: tần số 2, giá trị đại diện $22{,}5$;
+  + $[25; 30)$: tần số 1, giá trị đại diện $27{,}5$;
+  + $[30; 35)$: tần số 3, giá trị đại diện $32{,}5$.
+• b) Tính số trung bình:
+  + Mẫu không ghép nhóm: $\overline{x}\_{\text{gốc}} = \frac{\sum x_i}{40} = \frac{498}{40} = 12{,}45\text{ km}$.
+  + Mẫu ghép nhóm: $\overline{x}\_{\text{ghép}} = \frac{5(2{,}5) + 9(7{,}5) + 11(12{,}5) + 9(17{,}5) + 2(22{,}5) + 1(27{,}5) + 3(32{,}5)}{40} = \frac{515}{40} = 12{,}875\text{ km}$.
+  Giá trị $\overline{x}\_{\text{gốc}} = 12{,}45\text{ km}$ chính xác hơn vì tính trực tiếp từ dữ liệu gốc.
+• c) Tần số lớn nhất là 11 nên nhóm chứa mốt là $[10; 15)$.
+
+**Bài 3.5:** Tuổi thọ (năm) của 50 bình ắc quy ô tô:
+• $[2; 2{,}5)$: 4; $[2{,}5; 3)$: 9; $[3; 3{,}5)$: 14; $[3{,}5; 4)$: 7; $[4; 4{,}5)$: 11; $[4{,}5; 5)$: 5.
+a) Xác định mốt và giải thích ý nghĩa.
+b) Tính tuổi thọ trung bình của 50 bình ắc quy ô tô này.
+
+Lời giải Bài 3.5:
+• a) Tần số lớn nhất là 14 ứng với nhóm $[3; 3{,}5)$. Ta có $a_3 = 3, m_3 = 14, m_2 = 9, m_4 = 7, h = 0{,}5$:
+  $$M_o = 3 + \frac{14 - 9}{(14 - 9) + (14 - 7)} \cdot 0{,}5 = 3 + \frac{5}{5 + 7} \cdot 0{,}5 = 3 + \frac{2{,}5}{12} \approx 3{,}21\text{ (năm).}$$
+  Ý nghĩa: Tuổi thọ bình ắc quy xuất hiện phổ biến nhất là khoảng $3{,}21$ năm.
+• b) Giá trị đại diện các nhóm: $2{,}25; 2{,}75; 3{,}25; 3{,}75; 4{,}25; 4{,}75$.
+  $$\overline{x} = \frac{4(2{,}25) + 9(2{,}75) + 14(3{,}25) + 7(3{,}75) + 11(4{,}25) + 5(4{,}75)}{50} = \frac{9 + 24{,}75 + 45{,}5 + 26{,}25 + 46{,}75 + 23{,}75}{50} = \frac{176}{50} = 3{,}52\text{ (năm).}$$
+
+**Bài 3.6:** Điểm thi môn Toán thang 100 của 60 thí sinh: 0-9 (1); 10-19 (2); 20-29 (4); 30-39 (6); 40-49 (15); 50-59 (12); 60-69 (10); 70-79 (6); 80-89 (3); 90-99 (1).
+a) Hiệu chỉnh mẫu số liệu về dạng chuẩn $[a_i; a\_{i+1})$.
+b) Tìm các tứ phân vị và giải thích ý nghĩa.
+
+Lời giải Bài 3.6:
+• a) Hiệu chỉnh các nhóm: $[-0{,}5; 9{,}5)$ (1); $[9{,}5; 19{,}5)$ (2); $[19{,}5; 29{,}5)$ (4); $[29{,}5; 39{,}5)$ (6); $[39{,}5; 49{,}5)$ (15); $[49{,}5; 59{,}5)$ (12); $[59{,}5; 69{,}5)$ (10); $[69{,}5; 79{,}5)$ (6); $[79{,}5; 89{,}5)$ (3); $[89{,}5; 99{,}5)$ (1).
+• b) Cỡ mẫu $n = 60$.
+  + Tính $Q_1$ ($\frac{n}{4} = 15$): Tần số tích luỹ: $cf_3 = 7, cf_4 = 13, cf_5 = 28 > 15$. Nhóm chứa $Q_1$ là $[39{,}5; 49{,}5)$:
+    $$Q_1 = 39{,}5 + \frac{15 - 13}{15} \cdot 10 = 39{,}5 + \frac{20}{15} \approx 40{,}83.$$
+  + Tính $Q_2 = M_e$ ($\frac{n}{2} = 30$): Tần số tích luỹ $cf_5 = 28 < 30 < cf_6 = 40$. Nhóm chứa $Q_2$ là $[49{,}5; 59{,}5)$:
+    $$Q_2 = 49{,}5 + \frac{30 - 28}{12} \cdot 10 = 49{,}5 + \frac{20}{12} \approx 51{,}17.$$
+  + Tính $Q_3$ ($\frac{3n}{4} = 45$): Tần số tích luỹ $cf_6 = 40 < 45 < cf_7 = 50$. Nhóm chứa $Q_3$ là $[59{,}5; 69{,}5)$:
+    $$Q_3 = 59{,}5 + \frac{45 - 40}{10} \cdot 10 = 59{,}5 + 5 = 64{,}5.$$
+  Ý nghĩa: Có khoảng 25% thí sinh có điểm dưới $40{,}83$; 50% thí sinh dưới $51{,}17$; và 75% thí sinh có điểm dưới $64{,}5$.
+
+**Bài 3.7:** Thời gian ngủ buổi tối (giờ) của học sinh nam (45 bạn) và nữ (41 bạn):
+• $[4; 5)$: 6 nam, 4 nữ; $[5; 6)$: 10 nam, 8 nữ; $[6; 7)$: 13 nam, 10 nữ; $[7; 8)$: 9 nam, 11 nữ; $[8; 9)$: 7 nam, 8 nữ.
+a) So sánh thời gian ngủ trung bình của học sinh nam và nữ.
+b) Cho biết 75% học sinh khối 11 ngủ ít nhất bao nhiêu giờ.
+
+Lời giải Bài 3.7:
+• a) Giá trị đại diện các nhóm: $4{,}5; 5{,}5; 6{,}5; 7{,}5; 8{,}5$.
+  + Nam ($n_1 = 45$): $\overline{x}\_1 = \frac{6(4{,}5) + 10(5{,}5) + 13(6{,}5) + 9(7{,}5) + 7(8{,}5)}{45} = \frac{27 + 55 + 84{,}5 + 67{,}5 + 59{,}5}{45} = \frac{293{,}5}{45} \approx 6{,}52\text{ giờ}$.
+  + Nữ ($n_2 = 41$): $\overline{x}\_2 = \frac{4(4{,}5) + 8(5{,}5) + 10(6{,}5) + 11(7{,}5) + 8(8{,}5)}{41} = \frac{18 + 44 + 65 + 82{,}5 + 68}{41} = \frac{277{,}5}{41} \approx 6{,}77\text{ giờ}$.
+  Thời gian ngủ trung bình của các bạn nữ ($6{,}77$ giờ) cao hơn các bạn nam ($6{,}52$ giờ).
+• b) Xét chung toàn bộ học sinh khối 11 ($n = 45 + 41 = 86$ học sinh):
+  Bảng tổng hợp: $[4; 5)$ có 10; $[5; 6)$ có 18; $[6; 7)$ có 23; $[7; 8)$ có 20; $[8; 9)$ có 15.
+  75% học sinh ngủ ít nhất bao nhiêu giờ tương ứng với tứ phân vị thứ nhất $Q_1$ (vì có 25% số học sinh ngủ ít hơn $Q_1$ và 75% học sinh ngủ từ $Q_1$ trở lên).
+  Với $n = 86 \Rightarrow \frac{n}{4} = 21{,}5$. Tần số tích luỹ: $cf_1 = 10, cf_2 = 28 > 21{,}5$. Nhóm chứa $Q_1$ là $[5; 6)$:
+  $$Q_1 = 5 + \frac{21{,}5 - 10}{18} \cdot 1 = 5 + \frac{11{,}5}{18} \approx 5{,}64\text{ (giờ)} \approx 5\text{ giờ } 38\text{ phút}.$$
+  Vậy 75% học sinh khối 11 ngủ ít nhất khoảng $5{,}64$ giờ (khoảng 5 giờ 38 phút) mỗi đêm.

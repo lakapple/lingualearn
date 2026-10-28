@@ -1,0 +1,284 @@
+---
+title: 'Lesson 9: Measures of Central Tendency for Grouped Data.'
+description: Theoretical system for the lesson on Measures of Central Tendency for Grouped Data with illustrative examples.
+tags:
+  - grade 11
+  - Class midpoint
+  - Mean (arithmetic average)
+  - Quartiles
+  - Median
+  - Mode
+grade: 11
+order: 9
+updatedDate: 2026-10-28T15:48:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+**Terminology:**
+
+·       Mean (arithmetic average)
+
+·       Median
+
+·       Quartiles ($Q_1, Q_2, Q_3$)
+
+·       Mode
+
+·       Class midpoint (class mark), cumulative frequency
+
+**Knowledge and Skills:**
+
+·       Compute measures of central tendency for grouped data proficiently: mean, median, quartiles, and mode.
+
+·       Understand the statistical meaning and role of each measure to appropriately describe the distribution of empirical data.
+
+·       Adjust discrete integer intervals of the form $k_1 - k_2$ to continuous class boundaries $[k_1 - 0.5; k_2 + 0.5)$ prior to calculations.
+
+·       Apply central tendency measures to solve practical statistical problems (fuel expenditure, body weights, study duration, sleep duration, exam scores, battery lifespan).
+
+## Mean of Grouped Data
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_trung_binh_ghep_nhom"/>
+
+### a) Mean Computation Formula
+
+Computation Formula:
+Let a grouped dataset consist of $k$ class intervals $[a_i; a\_{i+1})$ with corresponding frequencies $m_i$ ($i = 1, 2, \dots, k$).
+• The class midpoint (representative value) of the interval $[a_i; a\_{i+1})$ is the average of its boundaries:
+$$x_i = \frac{a_i + a\_{i+1}}{2}$$
+• The sample mean of the grouped data, denoted by $\overline{x}$, is given by:
+$$\overline{x} = \frac{m_1 x_1 + m_2 x_2 + \dots + m_k x_k}{n}$$
+where $n = m_1 + m_2 + \dots + m_k$ is the total sample size.
+Note: For discrete integer data given as classes $k_1 - k_2$ ($k_1, k_2 \in \mathbb{N}$), adjust them to continuous intervals $[k_1 - 0.5; k_2 + 0.5)$ before determining midpoints and evaluating statistics.
+
+### b) Illustrative Examples and Practice on the Mean
+
+**Example 1:** Find the mean weight of 42 students in class 11D given in the table:
+• $[40.5; 45.5)$: 10 students;
+• $[45.5; 50.5)$: 7 students;
+• $[50.5; 55.5)$: 16 students;
+• $[55.5; 60.5)$: 4 students;
+• $[60.5; 65.5)$: 2 students;
+• $[65.5; 70.5)$: 3 students.
+
+Solution for Example 1:
+• Determine the class midpoints $x_i$ for each interval:
+  $x_1 = 43; x_2 = 48; x_3 = 53; x_4 = 58; x_5 = 63; x_6 = 68$.
+• Total number of students is $n = 42$.
+• The mean weight is:
+$$\overline{x} = \frac{10 \cdot 43 + 7 \cdot 48 + 16 \cdot 53 + 4 \cdot 58 + 2 \cdot 63 + 3 \cdot 68}{42} = \frac{2\\,176}{42} \approx 51.81\text{ (kg).}$$
+
+**Practice 1:** A survey on television viewing time during the previous week (in hours) among students yielded:
+• $[0; 5)$: 8 students; $[5; 10)$: 16 students; $[10; 15)$: 4 students; $[15; 20)$: 2 students; $[20; 25)$: 2 students.
+Calculate the average weekly television viewing time for these students.
+
+Solution for Practice 1:
+• Sample size: $n = 8 + 16 + 4 + 2 + 2 = 32$ students.
+• Class midpoints: $2.5; 7.5; 12.5; 17.5; 22.5$.
+• The mean viewing time is:
+$$\overline{x} = \frac{8(2.5) + 16(7.5) + 4(12.5) + 2(17.5) + 2(22.5)}{32} = \frac{20 + 120 + 50 + 35 + 45}{32} = \frac{270}{32} = 8.4375\text{ (hours).}$$
+
+## Median of Grouped Data
+
+<Youtube url="https://www.youtube.com/watch?v=example_trung_vi_ghep_nhom"/>
+
+### a) Median Computation Formula
+
+Procedure for Determining the Median:
+• Step 1: Identify the median class. Suppose it is the $p$-th class: $[a_p; a\_{p+1})$. This is the first class interval whose cumulative frequency is greater than or equal to $\frac{n}{2}$.
+• Step 2: Apply the linear interpolation formula for the median $M_e$:
+$$M_e = a_p + \frac{\frac{n}{2} - (m_1 + m_2 + \dots + m\_{p-1})}{m_p} \cdot (a\_{p+1} - a_p)$$
+where $n$ is the sample size, $m_p$ is the frequency of the median class, and $a_p, a\_{p+1}$ are the class boundaries (by convention, $m_1 + \dots + m\_{p-1} = 0$ when $p = 1$).
+
+### b) Illustrative Examples and Practice on the Median
+
+**Example 2:** Evening Internet access time (in minutes) of students is recorded as follows:
+• $[9.5; 12.5)$: 3 students; $[12.5; 15.5)$: 12 students;
+• $[15.5; 18.5)$: 15 students; $[18.5; 21.5)$: 24 students; $[21.5; 24.5)$: 2 students.
+Compute the median of this grouped dataset.
+
+Solution for Example 2:
+• Sample size: $n = 3 + 12 + 15 + 24 + 2 = 56 \Rightarrow \frac{n}{2} = 28$.
+• Cumulative frequencies: $cf_1 = 3; cf_2 = 15; cf_3 = 30 > 28$. Hence, the median class is the 3rd class: $[15.5; 18.5)$.
+• Parameters: $p = 3, a_3 = 15.5, m_3 = 15, cf_2 = 15, h = 18.5 - 15.5 = 3$.
+• The median is:
+$$M_e = 15.5 + \frac{28 - 15}{15} \cdot 3 = 15.5 + \frac{13}{15} \cdot 3 = 15.5 + 2.6 = 18.1\text{ (minutes).}$$
+
+**Practice 2:** Serve speeds (km/h) recorded across 200 serves by a tennis player:
+• $[150; 155)$: 18 serves; $[155; 160)$: 28 serves; $[160; 165)$: 35 serves;
+• $[165; 170)$: 43 serves; $[170; 175)$: 41 serves; $[175; 180)$: 35 serves.
+Find the median serve speed.
+
+Solution for Practice 2:
+• Sample size $n = 200 \Rightarrow \frac{n}{2} = 100$.
+• Cumulative frequencies: $cf_1 = 18; cf_2 = 46; cf_3 = 81; cf_4 = 124 > 100$. The median class is the 4th class: $[165; 170)$.
+• Applying the formula with $a_4 = 165, m_4 = 43, cf_3 = 81, h = 5$:
+$$M_e = 165 + \frac{100 - 81}{43} \cdot 5 = 165 + \frac{19 \cdot 5}{43} = 165 + \frac{95}{43} \approx 167.21\text{ (km/h).}$$
+
+## Quartiles of Grouped Data
+
+<Youtube url="https://www.youtube.com/watch?v=example_tu_phan_vi_ghep_nhom"/>
+
+### a) Formulas for Quartiles Q1, Q2, Q3
+
+The second quartile coincides with the median: $Q_2 = M_e$.
+First Quartile $Q_1$:
+• The class containing $Q_1$ is the $p$-th class: $[a_p; a\_{p+1})$, which is the first class whose cumulative frequency is at least $\frac{n}{4}$.
+$$Q_1 = a_p + \frac{\frac{n}{4} - (m_1 + m_2 + \dots + m\_{p-1})}{m_p} \cdot (a\_{p+1} - a_p)$$
+Third Quartile $Q_3$:
+• The class containing $Q_3$ is the $q$-th class: $[a_q; a\_{q+1})$, which is the first class whose cumulative frequency is at least $\frac{3n}{4}$.
+$$Q_3 = a_q + \frac{\frac{3n}{4} - (m_1 + m_2 + \dots + m\_{q-1})}{m_q} \cdot (a\_{q+1} - a_q)$$
+
+### b) Illustrative Examples and Practice on Quartiles
+
+**Example 3:** Find the first quartile $Q_1$ and third quartile $Q_3$ for the Internet usage dataset in Example 2 ($n = 56$).
+
+Solution for Example 3:
+• Calculating $Q_1$:
+  We have $\frac{n}{4} = \frac{56}{4} = 14$. Cumulative frequencies: $cf_1 = 3, cf_2 = 15 > 14$. The class containing $Q_1$ is $[12.5; 15.5)$.
+  $$Q_1 = 12.5 + \frac{14 - 3}{12} \cdot 3 = 12.5 + \frac{11}{4} = 15.25\text{ (minutes).}$$
+• Calculating $Q_3$:
+  We have $\frac{3n}{4} = \frac{3 \cdot 56}{4} = 42$. Cumulative frequencies: $cf_3 = 30, cf_4 = 54 > 42$. The class containing $Q_3$ is $[18.5; 21.5)$.
+  $$Q_3 = 18.5 + \frac{42 - 30}{24} \cdot 3 = 18.5 + \frac{12}{24} \cdot 3 = 18.5 + 1.5 = 20\text{ (minutes).}$$
+
+**Practice 3:** Find the first and third quartiles for the tennis serve speed dataset in Practice 2 ($n = 200$).
+
+Solution for Practice 3:
+• Cumulative frequencies: $cf_1 = 18; cf_2 = 46; cf_3 = 81; cf_4 = 124; cf_5 = 165; cf_6 = 200$.
+• Finding $Q_1$: $\frac{n}{4} = 50$. Since $cf_2 = 46 < 50 < cf_3 = 81$, the class containing $Q_1$ is $[160; 165)$.
+  $$Q_1 = 160 + \frac{50 - 46}{35} \cdot 5 = 160 + \frac{4 \cdot 5}{35} = 160 + \frac{4}{7} \approx 160.57\text{ (km/h).}$$
+• Finding $Q_3$: $\frac{3n}{4} = 150$. Since $cf_4 = 124 < 150 < cf_5 = 165$, the class containing $Q_3$ is $[170; 175)$.
+  $$Q_3 = 170 + \frac{150 - 124}{41} \cdot 5 = 170 + \frac{26 \cdot 5}{41} = 170 + \frac{130}{41} \approx 173.17\text{ (km/h).}$$
+
+## Mode of Grouped Data
+
+<Youtube url="https://www.youtube.com/watch?v=example_mot_ghep_nhom"/>
+
+### a) Mode Determination Formula
+
+Procedure for Determining the Mode $M_o$:
+• Step 1: Identify the modal class (the class interval with the largest frequency), denoted by $[a_j; a\_{j+1})$.
+• Step 2: Apply the formula:
+$$M_o = a_j + \frac{m_j - m\_{j-1}}{(m_j - m\_{j-1}) + (m_j - m\_{j+1})} \cdot h$$
+where $m_j$ is the frequency of the modal class (convention: $m_0 = m\_{k+1} = 0$), $m\_{j-1}$ and $m\_{j+1}$ are frequencies of adjacent preceding and succeeding classes, and $h = a\_{j+1} - a_j$ is the class width.
+Note: The mode is defined strictly for grouped data with equal class widths. If all classes have identical frequencies, the distribution has no mode.
+
+### b) Illustrative Examples and Practice on the Mode
+
+**Example 4:** Heights (in cm) of 50 students in class 11A:
+• $[145; 150)$: 7 students; $[150; 155)$: 14 students; $[155; 160)$: 10 students;
+• $[160; 165)$: 10 students; $[165; 170)$: 9 students.
+Compute the mode of this grouped dataset.
+
+Solution for Example 4:
+• The maximum frequency is $14$, so the modal class is $[150; 155)$.
+• Parameters: $j = 2, a_2 = 150, m_2 = 14, m_1 = 7, m_3 = 10, h = 5$.
+• The mode is:
+$$M_o = 150 + \frac{14 - 7}{(14 - 7) + (14 - 10)} \cdot 5 = 150 + \frac{7}{7 + 4} \cdot 5 = 150 + \frac{35}{11} \approx 153.18\text{ (cm).}$$
+Interpretation: The height value around $153.18\text{ cm}$ occurs with the greatest relative frequency.
+
+**Practice 4:** Time (in minutes) required for students to complete an exam question:
+• $[0.5; 10.5)$: 2 students; $[10.5; 20.5)$: 10 students; $[20.5; 30.5)$: 6 students;
+• $[30.5; 40.5)$: 4 students; $[40.5; 50.5)$: 3 students.
+Find the mode of this grouped dataset.
+
+Solution for Practice 4:
+• Maximum frequency is 10, so the modal class is $[10.5; 20.5)$.
+• Parameters: $a_2 = 10.5, m_2 = 10, m_1 = 2, m_3 = 6, h = 10$.
+• The mode is:
+$$M_o = 10.5 + \frac{10 - 2}{(10 - 2) + (10 - 6)} \cdot 10 = 10.5 + \frac{8}{8 + 4} \cdot 10 = 10.5 + \frac{80}{12} = 10.5 + 6.67 \approx 17.17\text{ (minutes).}$$
+
+## Applications and Exercises
+
+### a) Comprehensive Real-World Applications
+
+**Application (Fuel Purchase Expenditure Estimation):** Gasoline sales recorded for 35 motorcyclists (Table 3.1):
+• $[0; 30)$: 3 customers; $[30; 60)$: 15 customers; $[60; 90)$: 10 customers; $[90; 120)$: 7 customers.
+Calculate the measures of central tendency (mean, median, quartiles, mode) and interpret their significance.
+
+Solution for Application:
+• 1. Sample Mean:
+  Midpoints: $x_1 = 15; x_2 = 45; x_3 = 75; x_4 = 105$.
+  $$\overline{x} = \frac{3(15) + 15(45) + 10(75) + 7(105)}{35} = \frac{45 + 675 + 750 + 735}{35} = \frac{2\\,205}{35} = 63\text{ (thousand VND).}$$
+• 2. Median $M_e$ ($n = 35 \Rightarrow \frac{n}{2} = 17.5$):
+  Cumulative frequencies: $cf_1 = 3; cf_2 = 18 > 17.5$. Median class is $[30; 60)$.
+  $$M_e = 30 + \frac{17.5 - 3}{15} \cdot 30 = 30 + \frac{14.5}{15} \cdot 30 = 30 + 29 = 59\text{ (thousand VND).}$$
+• 3. Quartiles $Q_1, Q_3$:
+  + $\frac{n}{4} = 8.75$. Class containing $Q_1$ is $[30; 60)$ ($cf_1 = 3 < 8.75 < cf_2 = 18$):
+    $$Q_1 = 30 + \frac{8.75 - 3}{15} \cdot 30 = 30 + 2(5.75) = 41.5\text{ (thousand VND).}$$
+  + $\frac{3n}{4} = 26.25$. Class containing $Q_3$ is $[60; 90)$ ($cf_2 = 18 < 26.25 < cf_3 = 28$):
+    $$Q_3 = 60 + \frac{26.25 - 18}{10} \cdot 30 = 60 + 3(8.25) = 84.75\text{ (thousand VND).}$$
+• 4. Mode $M_o$:
+  Modal class is $[30; 60)$ with $m_1 = 3, m_2 = 15, m_3 = 10, h = 30$.
+  $$M_o = 30 + \frac{15 - 3}{(15 - 3) + (15 - 10)} \cdot 30 = 30 + \frac{12}{12 + 5} \cdot 30 = 30 + \frac{360}{17} \approx 51.18\text{ (thousand VND).}$$
+
+### b) Detailed Section Exercises
+
+**Exercise 3.4:** Commuting distances (in km) from home to workplace for 40 factory workers:
+5, 3, 10, 20, 25, 11, 13, 7, 12, 31, 19, 10, 12, 17, 18, 11, 32, 17, 16, 2, 7, 9, 7, 8, 3, 5, 12, 15, 18, 3, 12, 14, 2, 9, 6, 15, 15, 7, 6, 12.
+a) Group the dataset into equal-width classes of width 5, starting with $[0; 5)$. Identify the midpoint of each class.
+b) Compute the mean for the ungrouped data and the grouped data. Which value is more accurate?
+c) Determine the modal class of the grouped data.
+
+Solution for Exercise 3.4:
+• a) Grouped frequency distribution across 7 intervals of width 5:
+  + $[0; 5)$: frequency 5, midpoint $2.5$;
+  + $[5; 10)$: frequency 9, midpoint $7.5$;
+  + $[10; 15)$: frequency 11, midpoint $12.5$;
+  + $[15; 20)$: frequency 9, midpoint $17.5$;
+  + $[20; 25)$: frequency 2, midpoint $22.5$;
+  + $[25; 30)$: frequency 1, midpoint $27.5$;
+  + $[30; 35)$: frequency 3, midpoint $32.5$.
+• b) Computing the mean:
+  + Ungrouped raw mean: $\overline{x}\_{\text{raw}} = \frac{\sum x_i}{40} = \frac{498}{40} = 12.45\text{ km}$.
+  + Grouped mean: $\overline{x}\_{\text{grouped}} = \frac{5(2.5) + 9(7.5) + 11(12.5) + 9(17.5) + 2(22.5) + 1(27.5) + 3(32.5)}{40} = \frac{515}{40} = 12.875\text{ km}$.
+  The raw mean $\overline{x}\_{\text{raw}} = 12.45\text{ km}$ is more accurate because it computes directly from exact individual data points.
+• c) The highest frequency is 11, so the modal class is $[10; 15)$.
+
+**Exercise 3.5:** Operational lifespan (in years) of 50 automotive batteries:
+• $[2; 2.5)$: 4; $[2.5; 3)$: 9; $[3; 3.5)$: 14; $[3.5; 4)$: 7; $[4; 4.5)$: 11; $[4.5; 5)$: 5.
+a) Determine the mode and interpret its meaning.
+b) Calculate the mean lifespan of these 50 automotive batteries.
+
+Solution for Exercise 3.5:
+• a) The highest frequency is 14 in class $[3; 3.5)$. With $a_3 = 3, m_3 = 14, m_2 = 9, m_4 = 7, h = 0.5$:
+  $$M_o = 3 + \frac{14 - 9}{(14 - 9) + (14 - 7)} \cdot 0.5 = 3 + \frac{5}{5 + 7} \cdot 0.5 = 3 + \frac{2.5}{12} \approx 3.21\text{ (years).}$$
+  Interpretation: The battery lifespan occurring with highest density is approximately $3.21$ years.
+• b) Midpoints: $2.25; 2.75; 3.25; 3.75; 4.25; 4.75$.
+  $$\overline{x} = \frac{4(2.25) + 9(2.75) + 14(3.25) + 7(3.75) + 11(4.25) + 5(4.75)}{50} = \frac{9 + 24.75 + 45.5 + 26.25 + 46.75 + 23.75}{50} = \frac{176}{50} = 3.52\text{ (years).}$$
+
+**Exercise 3.6:** Mathematics exam scores (on a 100-point scale rounded to integers) of 60 candidates: 0-9 (1); 10-19 (2); 20-29 (4); 30-39 (6); 40-49 (15); 50-59 (12); 60-69 (10); 70-79 (6); 80-89 (3); 90-99 (1).
+a) Adjust the discrete classes into continuous standard intervals $[a_i; a\_{i+1})$.
+b) Find the quartiles and interpret their statistical meaning.
+
+Solution for Exercise 3.6:
+• a) Adjusted continuous intervals: $[-0.5; 9.5)$ (1); $[9.5; 19.5)$ (2); $[19.5; 29.5)$ (4); $[29.5; 39.5)$ (6); $[39.5; 49.5)$ (15); $[49.5; 59.5)$ (12); $[59.5; 69.5)$ (10); $[69.5; 79.5)$ (6); $[79.5; 89.5)$ (3); $[89.5; 99.5)$ (1).
+• b) Sample size $n = 60$.
+  + Calculating $Q_1$ ($\frac{n}{4} = 15$): Cumulative frequencies: $cf_3 = 7, cf_4 = 13, cf_5 = 28 > 15$. Class containing $Q_1$ is $[39.5; 49.5)$:
+    $$Q_1 = 39.5 + \frac{15 - 13}{15} \cdot 10 = 39.5 + \frac{20}{15} \approx 40.83.$$
+  + Calculating $Q_2 = M_e$ ($\frac{n}{2} = 30$): Cumulative frequencies $cf_5 = 28 < 30 < cf_6 = 40$. Class containing $Q_2$ is $[49.5; 59.5)$:
+    $$Q_2 = 49.5 + \frac{30 - 28}{12} \cdot 10 = 49.5 + \frac{20}{12} \approx 51.17.$$
+  + Calculating $Q_3$ ($\frac{3n}{4} = 45$): Cumulative frequencies $cf_6 = 40 < 45 < cf_7 = 50$. Class containing $Q_3$ is $[59.5; 69.5)$:
+    $$Q_3 = 59.5 + \frac{45 - 40}{10} \cdot 10 = 59.5 + 5 = 64.5.$$
+  Interpretation: Approximately 25% of candidates scored below $40.83$; 50% scored below $51.17$; and 75% scored below $64.5$.
+
+**Exercise 3.7:** Nightly sleep duration (in hours) among male students (45 boys) and female students (41 girls):
+• $[4; 5)$: 6 boys, 4 girls; $[5; 6)$: 10 boys, 8 girls; $[6; 7)$: 13 boys, 10 girls; $[7; 8)$: 9 boys, 11 girls; $[8; 9)$: 7 boys, 8 girls.
+a) Compare the average sleep duration between boys and girls.
+b) Determine the minimum number of hours that 75% of Grade 11 students sleep each night.
+
+Solution for Exercise 3.7:
+• a) Midpoints: $4.5; 5.5; 6.5; 7.5; 8.5$.
+  + Boys ($n_1 = 45$): $\overline{x}\_1 = \frac{6(4.5) + 10(5.5) + 13(6.5) + 9(7.5) + 7(8.5)}{45} = \frac{27 + 55 + 84.5 + 67.5 + 59.5}{45} = \frac{293.5}{45} \approx 6.52\text{ hours}$.
+  + Girls ($n_2 = 41$): $\overline{x}\_2 = \frac{4(4.5) + 8(5.5) + 10(6.5) + 11(7.5) + 8(8.5)}{41} = \frac{18 + 44 + 65 + 82.5 + 68}{41} = \frac{277.5}{41} \approx 6.77\text{ hours}$.
+  The average sleep duration of female students ($6.77$ hours) is slightly higher than that of male students ($6.52$ hours).
+• b) Combining all Grade 11 students ($n = 45 + 41 = 86$ students):
+  Aggregated table: $[4; 5)$ has 10; $[5; 6)$ has 18; $[6; 7)$ has 23; $[7; 8)$ has 20; $[8; 9)$ has 15.
+  The threshold where 75% of students sleep at least that amount corresponds to the 1st quartile $Q_1$ (since 25% sleep less than $Q_1$ and 75% sleep $Q_1$ or more).
+  With $n = 86 \Rightarrow \frac{n}{4} = 21.5$. Cumulative frequencies: $cf_1 = 10, cf_2 = 28 > 21.5$. Class containing $Q_1$ is $[5; 6)$:
+  $$Q_1 = 5 + \frac{21.5 - 10}{18} \cdot 1 = 5 + \frac{11.5}{18} \approx 5.64\text{ (hours)} \approx 5\text{ hours } 38\text{ minutes}.$$
+  Conclusion: 75% of Grade 11 students sleep at least approximately $5.64$ hours (about 5 hours 38 minutes) each night.
