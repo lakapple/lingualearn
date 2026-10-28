@@ -1,0 +1,226 @@
+---
+title: 'Lesson 19: Logarithms'
+description: Theoretical system for the lesson on logarithms with illustrative examples.
+tags:
+  - grade 11
+  - Logarithm
+  - Change-of-base formula
+  - Common logarithm
+  - natural logarithm
+  - number e
+  - base of a logarithm
+grade: 11
+order: 19
+updatedDate: 2026-10-28T19:35:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Logarithm, base of a logarithm
+
+·       Common logarithm, natural logarithm, number e
+
+·       Change-of-base formula
+
+### **Knowledge and Skills:**
+
+·       Recognize the concept of a logarithm to base a of a positive real number.
+
+·       Explain the properties of logarithmic operations using definitions or previously known properties.
+
+·       Use properties of logarithms to evaluate numerical expressions and simplify variable expressions.
+
+·       Calculate exact or approximate values of logarithms using a scientific calculator.
+
+·       Solve practical and cross-disciplinary problems related to logarithms (pH in chemistry, sound intensity level in decibels, atmospheric pressure, continuous compound interest).
+
+## Concept of Logarithm
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_logarit"/>
+
+### a) Definition and Basic Properties
+
+Definition: Let $a$ be a positive real number different from 1 ($0 < a \ne 1$) and $M$ be a positive real number ($M > 0$). The real number $\alpha$ such that $a^\alpha = M$ is called the logarithm to base $a$ of $M$, denoted by $\log_a M$:
+$$\alpha = \log_a M \iff a^\alpha = M$$
+Note: Logarithms of negative numbers and zero do not exist. The base of a logarithm must be positive and different from 1.
+Basic Properties: For $0 < a \ne 1$, $M > 0$, and any real number $\alpha \in \mathbb{R}$, we have:
+• $\log_a 1 = 0$;
+• $\log_a a = 1$;
+• $a^{\log_a M} = M$;
+• $\log_a a^\alpha = \alpha$.
+
+### b) Examples and Practice on the Concept of Logarithm
+
+**Example 1:** Evaluate: a) $\log_2 \frac{1}{8}$; b) $\log\_{\sqrt{3}} 9$.
+
+Solution to Example 1:
+• a) $\log_2 \frac{1}{8} = \log_2 2^{-3} = -3$.
+• b) $\log\_{\sqrt{3}} 9 = \log\_{\sqrt{3}} (\sqrt{3})^4 = 4$.
+
+**Practice 1:** Evaluate: a) $\log_3 (3\sqrt{3})$; b) $\log\_{\frac{1}{2}} 32$.
+
+Solution to Practice 1:
+• a) We have $3\sqrt{3} = 3^1 \cdot 3^{\frac{1}{2}} = 3^{\frac{3}{2}}$, hence: $\log_3 (3\sqrt{3}) = \log_3 3^{\frac{3}{2}} = \frac{3}{2}$.
+• b) We have $32 = 2^5 = \left(\frac{1}{2}\right)^{-5}$, hence: $\log\_{\frac{1}{2}} 32 = \log\_{\frac{1}{2}} \left(\frac{1}{2}\right)^{-5} = -5$.
+
+## Properties of Logarithms
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_logarit"/>
+
+### a) Operational Rules for Logarithms
+
+Let $0 < a \ne 1$, $M > 0$, $N > 0$, and $\alpha$ be an arbitrary real number. Then:
+• Logarithm of a product: $\log_a (MN) = \log_a M + \log_a N$;
+• Logarithm of a quotient: $\log_a \left(\frac{M}{N}\right) = \log_a M - \log_a N$;
+• Logarithm of a power: $\log_a M^\alpha = \alpha \log_a M$.
+
+**Example 2:** Compute the value of the following expressions:
+a) $\log_4 2 + \log_4 32$;
+b) $\log_2 80 - \log_2 5$.
+
+Solution to Example 2:
+• a) $\log_4 2 + \log_4 32 = \log_4 (2 \cdot 32) = \log_4 64 = \log_4 4^3 = 3$.
+• b) $\log_2 80 - \log_2 5 = \log_2 \frac{80}{5} = \log_2 16 = \log_2 2^4 = 4$.
+
+**Practice 2:** Simplify the expression: $A = \log_2 (x^3 - x) - \log_2 (x + 1) - \log_2 (x - 1) \quad (x > 1)$.
+
+Solution to Practice 2:
+• We have:
+  $$A = \log_2 \left[\frac{x^3 - x}{(x + 1)(x - 1)}\right] = \log_2 \left[\frac{x(x^2 - 1)}{x^2 - 1}\right] = \log_2 x.$$
+
+### b) Change-of-Base Formula
+
+For any bases $0 < a \ne 1$, $0 < b \ne 1$, and any positive real number $M > 0$, the change-of-base formula is:
+$$\log_a M = \frac{\log_b M}{\log_b a}$$
+Special cases:
+• $\log_a b = \frac{1}{\log_b a}$ ($b \ne 1$);
+• $\log\_{a^\alpha} M = \frac{1}{\alpha} \log_a M$ (for $\alpha \ne 0$);
+• $\log_a b \cdot \log_b c = \log_a c$.
+
+**Example 3:** Without using a calculator, evaluate $\log_4 8$.
+
+Solution to Example 3:
+• Applying the change-of-base formula with base 2:
+  $$\log_4 8 = \frac{\log_2 8}{\log_2 4} = \frac{\log_2 2^3}{\log_2 2^2} = \frac{3}{2}.$$
+
+**Practice 3:** Without using a calculator, evaluate $\log_9 \frac{1}{27}$.
+
+Solution to Practice 3:
+• Note that $9 = 3^2$ and $\frac{1}{27} = 3^{-3}$. Applying the formula:
+  $$\log_9 \frac{1}{27} = \log\_{3^2} 3^{-3} = \frac{-3}{2} \log_3 3 = -\frac{3}{2}.$$
+
+## Common Logarithm and Natural Logarithm
+
+### a) Common Logarithm
+
+The logarithm to base 10 of a positive number $M$ is called the common logarithm of $M$, denoted by $\log M$ or $\lg M$.
+Practical Application (pH value): The pH of a chemical solution is given by $pH = -\log [H^+]$, where $[H^+]$ is the hydrogen ion concentration (mol/L). If $pH < 7$: acidic; $pH > 7$: basic; $pH = 7$: neutral.
+
+**Example 5:** a) Calculate the pH of a solution with a hydrogen ion concentration of $0{,}01\text{ mol/L}$.
+b) Determine the hydrogen ion concentration of a solution with a pH of $7{,}4$.
+
+Solution to Example 5:
+• a) When $[H^+] = 0{,}01 = 10^{-2}$, we have: $pH = -\log 10^{-2} = -(-2) = 2$.
+• b) From $pH = -\log [H^+] = 7{,}4 \Rightarrow \log [H^+] = -7{,}4 \Rightarrow [H^+] = 10^{-7{,}4}\text{ (mol/L)}$.
+
+### b) The Number e and Natural Logarithm
+
+• The number $e$: Considering continuous compounding where compounding intervals approach infinity within a year gives: $e = \lim\_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x \approx 2{,}718281828\dots$
+• Continuous Compound Interest Formula: For an initial principal $P$ and annual constant interest rate $r$, the accumulated amount after $t$ years is:
+$$A = P e^{rt}$$
+• Natural Logarithm: The logarithm to base $e$ of a positive number $M$ is called the natural logarithm of $M$, denoted by $\ln M$ (Napierian logarithm).
+
+**Example 6:** The doubling time (in years) for an investment under continuous compounding with constant annual interest rate $r$ is given by $t = \frac{\ln 2}{r}$. Calculate the time required to double an investment when the interest rate is 6% per year.
+
+Solution to Example 6:
+• With $r = 6\\% = 0{,}06$, the required time is:
+  $$t = \frac{\ln 2}{0{,}06} \approx 11{,}6\text{ (years)}.$$
+
+## Applications and Exercises
+
+### a) Real-World Applications and Mathematical Modeling
+
+**Application 1 (Bank Savings):** Mr. An deposits 100 million VND in a bank with a 12-month term at an annual interest rate of 6%. The total amount accumulated after $n$ years is $A = 100 \cdot (1 + 0{,}06)^n$. After at least how many years will Mr. An receive an amount of not less than 150 million VND?
+
+Solution to Application 1:
+• For the accumulated amount to be at least 150 million VND, we have the inequality:
+  $$100 \cdot (1{,}06)^n \ge 150 \iff (1{,}06)^n \ge 1{,}5 \iff n \ge \log\_{1{,}06} 1{,}5 \approx 6{,}96$$
+• Since the compounding period is 12 months (1 year), $n$ must be an integer. Therefore, $n = 7$.
+• Conclusion: After at least 7 years, Mr. An will receive an amount of not less than 150 million VND.
+
+**Application 2 (Comparison of Compounding Methods):** Ms. Huong deposits 100 million VND at an interest rate of 6% per year.
+a) Calculate the total amount accumulated after 1 year under the following compounding methods: 12-month term; 1-month term; continuous compounding.
+b) Calculate the time required to accumulate 150 million VND under continuous compounding.
+
+Solution to Application 2:
+• a) Total amount accumulated after 1 year:
+  - 12-month term: $A = 100 \cdot (1 + 0{,}06)^1 = 106\text{ (million VND)}$.
+  - 1-month term ($n = 12$ periods): $A = 100 \cdot \left(1 + \frac{0{,}06}{12}\right)^{12} = 100 \cdot (1{,}005)^{12} \approx 106{,}168\text{ (million VND)}$.
+  - Continuous compounding: $A = 100 \cdot e^{0{,}06 \cdot 1} \approx 106{,}184\text{ (million VND)}$.
+• b) To reach 150 million VND under continuous compounding:
+  $$100 \cdot e^{0{,}06t} = 150 \iff e^{0{,}06t} = 1{,}5 \iff 0{,}06t = \ln 1{,}5 \iff t = \frac{\ln 1{,}5}{0{,}06} \approx 6{,}8\text{ (years)}.$$
+
+### b) End-of-Lesson Exercises
+
+**Exercise 6.9:** Evaluate:
+a) $\log_2 2^{-13}$;
+b) $\ln e^{\sqrt{2}}$;
+c) $\log_8 16 - \log_8 2$;
+d) $\log_2 6 \cdot \log_6 8$.
+
+Solution to Exercise 6.9:
+• a) $\log_2 2^{-13} = -13$.
+• b) $\ln e^{\sqrt{2}} = \sqrt{2}$.
+• c) $\log_8 16 - \log_8 2 = \log_8 \frac{16}{2} = \log_8 8 = 1$.
+• d) $\log_2 6 \cdot \log_6 8 = \log_2 8 = \log_2 2^3 = 3$.
+
+**Exercise 6.10:** Express each of the following as a single logarithm:
+a) $A = \ln\left(\frac{x}{x-1}\right) + \ln\left(\frac{x+1}{x}\right) - \ln(x^2 - 1)$;
+b) $B = 2\log_3 \sqrt[3]{x} + \log_3 (9x^2) - \log_3 9$.
+
+Solution to Exercise 6.10:
+• a) $A = \ln\left[\frac{x}{x-1} \cdot \frac{x+1}{x} \cdot \frac{1}{x^2 - 1}\right] = \ln\left[\frac{x+1}{(x-1)(x^2 - 1)}\right] = \ln\left[\frac{1}{(x-1)^2}\right]$.
+• b) $B = \log_3 x^{\frac{2}{3}} + \log_3 (9x^2) - \log_3 9 = \log_3 \left(\frac{x^{\frac{2}{3}} \cdot 9x^2}{9}\right) = \log_3 (x^{\frac{8}{3}})$.
+
+**Exercise 6.11:** Simplify the following expressions:
+a) $A = \log\_{\frac{1}{3}} 5 + 2\log_9 25 - \log\_{\sqrt{3}} \frac{1}{5}$;
+b) $B = \log_a M^2 + \log\_{a^2} M^4$.
+
+Solution to Exercise 6.11:
+• a) Change all logarithms to base 3:
+  $\log\_{\frac{1}{3}} 5 = -\log_3 5$;
+  $2\log_9 25 = 2 \cdot \log\_{3^2} 5^2 = 2 \cdot \frac{2}{2} \log_3 5 = 2\log_3 5$;
+  $\log\_{\sqrt{3}} \frac{1}{5} = \log\_{3^{\frac{1}{2}}} 5^{-1} = \frac{-1}{1/2} \log_3 5 = -2\log_3 5$.
+  Therefore: $A = -\log_3 5 + 2\log_3 5 - (-2\log_3 5) = 3\log_3 5$.
+• b) $B = 2\log_a M + \frac{4}{2}\log_a M = 2\log_a M + 2\log_a M = 4\log_a M$.
+
+**Exercise 6.12:** Compute the value of the following expressions:
+a) $A = \log_2 3 \cdot \log_3 4 \cdot \log_4 5 \cdot \log_5 6 \cdot \log_6 7 \cdot \log_7 8$;
+b) $B = \log_2 2 \cdot \log_2 4 \cdot \dots \cdot \log_2 2^n$.
+
+Solution to Exercise 6.12:
+• a) Applying the chain rule for logarithms $\log_a b \cdot \log_b c = \log_a c$:
+  $$A = \log_2 8 = \log_2 2^3 = 3.$$
+• b) We have $\log_2 2^k = k$ for $k = 1, 2, \dots, n$. Therefore:
+  $$B = 1 \cdot 2 \cdot 3 \cdot \dots \cdot n = n!$$
+
+**Exercise 6.13 (Atmospheric Pressure and Altitude):** The formula relating altitude $a$ (in meters) and atmospheric pressure $p$ (in pascals) is $a = 15\\,500(5 - \log p)$. Calculate the atmospheric pressure at the summit of Mount Everest, which has an altitude of approximately $8\\,850\text{ m}$ above sea level.
+
+Solution to Exercise 6.13:
+• Substitute $a = 8\\,850$ into the formula:
+  $$8\\,850 = 15\\,500(5 - \log p) \iff 5 - \log p = \frac{8\\,850}{15\\,500} = \frac{177}{310} \approx 0{,}571$$
+• Hence: $\log p = 5 - 0{,}571 = 4{,}429 \iff p = 10^{4{,}429} \approx 26\\,853\text{ (Pa)}$.
+• Conclusion: The atmospheric pressure at the summit of Mount Everest is approximately $26\\,853\text{ Pa}$.
+
+**Exercise 6.14 (Sound Intensity Level in Decibels):** The sound intensity level $L$ (dB) of a sound with intensity $I$ (in $\text{W/m}^2$) is defined by $L(I) = 10\log\left(\frac{I}{I_0}\right)$, where $I_0 = 10^{-12}\text{ W/m}^2$ is the hearing threshold. Determine the sound intensity level for:
+a) A normal conversation with intensity $I = 10^{-7}\text{ W/m}^2$;
+b) Heavy city traffic with intensity $I = 10^{-3}\text{ W/m}^2$.
+
+Solution to Exercise 6.14:
+• a) $L = 10\log\left(\frac{10^{-7}}{10^{-12}}\right) = 10\log(10^5) = 10 \cdot 5 = 50\text{ (dB)}$.
+• b) $L = 10\log\left(\frac{10^{-3}}{10^{-12}}\right) = 10\log(10^9) = 10 \cdot 9 = 90\text{ (dB)}$.

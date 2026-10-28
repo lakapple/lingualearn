@@ -1,0 +1,226 @@
+---
+title: 'Bài 19: Lôgarit'
+description: Hệ thống lý thuyết bài Lôgarit  cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Lôgarit
+  - Công thức đổi cơ số
+  - Lôgarit thập phân
+  - lôgarit tự nhiên
+  - số e
+  - cơ số của lôgarit
+grade: 11
+order: 19
+updatedDate: 2026-10-28T19:35:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Lôgarit, cơ số của lôgarit
+
+·       Lôgarit thập phân, lôgarit tự nhiên, số e
+
+·       Công thức đổi cơ số
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết khái niệm lôgarit cơ số a của một số thực dương.
+
+·       Giải thích các tính chất của phép tính lôgarit nhờ sử dụng định nghĩa hoặc các tính chất đã biết trước đó.
+
+·       Sử dụng tính chất của phép tính lôgarit trong tính toán các biểu thức số và rút gọn các biểu thức chứa biến.
+
+·       Tính giá trị (đúng hoặc gần đúng) của lôgarit bằng cách sử dụng máy tính cầm tay.
+
+·       Giải quyết một số vấn đề có liên quan đến môn học khác hoặc thực tiễn gắn với phép tính lôgarit (độ pH hoá học, mức cường độ âm decibel, áp suất không khí, lãi kép liên tục).
+
+## Khái niệm lôgarit
+
+<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_logarit"/>
+
+### a) Định nghĩa và tính chất cơ bản
+
+Định nghĩa: Cho $a$ là một số thực dương khác 1 và $M$ là một số thực dương. Số thực $\alpha$ để $a^\alpha = M$ được gọi là lôgarit cơ số $a$ của $M$ và kí hiệu là $\log_a M$:
+$$\alpha = \log_a M \iff a^\alpha = M$$
+Chú ý: Không có lôgarit của số âm và số 0. Cơ số của lôgarit phải dương và khác 1 ($0 < a \ne 1$).
+Tính chất cơ bản: Với $0 < a \ne 1, M > 0$ và $\alpha \in \mathbb{R}$, ta có:
+• $\log_a 1 = 0$;
+• $\log_a a = 1$;
+• $a^{\log_a M} = M$;
+• $\log_a a^\alpha = \alpha$.
+
+### b) Ví dụ và luyện tập về khái niệm lôgarit
+
+**Ví dụ 1:** Tính: a) $\log_2 \frac{1}{8}$; b) $\log\_{\sqrt{3}} 9$.
+
+Lời giải Ví dụ 1:
+• a) $\log_2 \frac{1}{8} = \log_2 2^{-3} = -3$.
+• b) $\log\_{\sqrt{3}} 9 = \log\_{\sqrt{3}} (\sqrt{3})^4 = 4$.
+
+**Luyện tập 1:** Tính: a) $\log_3 (3\sqrt{3})$; b) $\log\_{\frac{1}{2}} 32$.
+
+Lời giải Luyện tập 1:
+• a) Ta có $3\sqrt{3} = 3^1 \cdot 3^{\frac{1}{2}} = 3^{\frac{3}{2}}$, do đó: $\log_3 (3\sqrt{3}) = \log_3 3^{\frac{3}{2}} = \frac{3}{2}$.
+• b) Ta có $32 = 2^5 = \left(\frac{1}{2}\right)^{-5}$, do đó: $\log\_{\frac{1}{2}} 32 = \log\_{\frac{1}{2}} \left(\frac{1}{2}\right)^{-5} = -5$.
+
+## Tính chất của lôgarit
+
+<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_logarit"/>
+
+### a) Quy tắc tính lôgarit
+
+Giả sử $0 < a \ne 1$, $M$ và $N$ là các số thực dương, $\alpha$ là số thực tuỳ ý. Khi đó:
+• Lôgarit của một tích: $\log_a (MN) = \log_a M + \log_a N$;
+• Lôgarit của một thương: $\log_a \left(\frac{M}{N}\right) = \log_a M - \log_a N$;
+• Lôgarit của một luỹ thừa: $\log_a M^\alpha = \alpha \log_a M$.
+
+**Ví dụ 2:** Tính giá trị của các biểu thức sau:
+a) $\log_4 2 + \log_4 32$;
+b) $\log_2 80 - \log_2 5$.
+
+Lời giải Ví dụ 2:
+• a) $\log_4 2 + \log_4 32 = \log_4 (2 \cdot 32) = \log_4 64 = \log_4 4^3 = 3$.
+• b) $\log_2 80 - \log_2 5 = \log_2 \frac{80}{5} = \log_2 16 = \log_2 2^4 = 4$.
+
+**Luyện tập 2:** Rút gọn biểu thức: $A = \log_2 (x^3 - x) - \log_2 (x + 1) - \log_2 (x - 1) \quad (x > 1)$.
+
+Lời giải Luyện tập 2:
+• Ta có:
+  $$A = \log_2 \left[\frac{x^3 - x}{(x + 1)(x - 1)}\right] = \log_2 \left[\frac{x(x^2 - 1)}{x^2 - 1}\right] = \log_2 x.$$
+
+### b) Đổi cơ số của lôgarit
+
+Với các cơ số $0 < a \ne 1, 0 < b \ne 1$ và $M > 0$ tuỳ ý, ta có công thức đổi cơ số:
+$$\log_a M = \frac{\log_b M}{\log_b a}$$
+Các trường hợp đặc biệt:
+• $\log_a b = \frac{1}{\log_b a}$ ($b \ne 1$);
+• $\log\_{a^\alpha} M = \frac{1}{\alpha} \log_a M$ (với $\alpha \ne 0$);
+• $\log_a b \cdot \log_b c = \log_a c$.
+
+**Ví dụ 3:** Không dùng máy tính cầm tay, hãy tính $\log_4 8$.
+
+Lời giải Ví dụ 3:
+• Áp dụng công thức đổi cơ số về cơ số 2:
+  $$\log_4 8 = \frac{\log_2 8}{\log_2 4} = \frac{\log_2 2^3}{\log_2 2^2} = \frac{3}{2}.$$
+
+**Luyện tập 3:** Không dùng máy tính cầm tay, hãy tính $\log_9 \frac{1}{27}$.
+
+Lời giải Luyện tập 3:
+• Ta có $9 = 3^2$ và $\frac{1}{27} = 3^{-3}$. Áp dụng công thức:
+  $$\log_9 \frac{1}{27} = \log\_{3^2} 3^{-3} = \frac{-3}{2} \log_3 3 = -\frac{3}{2}.$$
+
+## Lôgarit thập phân và lôgarit tự nhiên
+
+### a) Lôgarit thập phân
+
+Lôgarit cơ số 10 của một số dương $M$ gọi là lôgarit thập phân của $M$, kí hiệu là $\log M$ hoặc $\lg M$.
+Ví dụ ứng dụng pH: Độ pH của dung dịch hoá học được tính bởi $pH = -\log [H^+]$, trong đó $[H^+]$ là nồng độ ion hydrogen (mol/lít). Nếu $pH < 7$: có tính acid; $pH > 7$: có tính base; $pH = 7$: trung tính.
+
+**Ví dụ 5:** a) Tính độ pH của dung dịch có nồng độ ion hydrogen bằng $0{,}01\text{ mol/lít}$.
+b) Xác định nồng độ ion hydrogen của dung dịch có độ pH bằng $7{,}4$.
+
+Lời giải Ví dụ 5:
+• a) Với $[H^+] = 0{,}01 = 10^{-2}$, ta có: $pH = -\log 10^{-2} = -(-2) = 2$.
+• b) Từ $pH = -\log [H^+] = 7{,}4 \Rightarrow \log [H^+] = -7{,}4 \Rightarrow [H^+] = 10^{-7{,}4}\text{ (mol/lít)}$.
+
+### b) Số e và lôgarit tự nhiên
+
+• Số $e$: Xét giới hạn của thể thức lãi kép khi kì tính lãi chia vô hạn lần trong năm: $e = \lim\_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x \approx 2{,}718281828\dots$
+• Công thức lãi kép liên tục: Với số vốn ban đầu $P$, lãi suất năm không đổi $r$, sau $t$ năm số tiền thu được (cả gốc lẫn lãi) là:
+$$A = P e^{rt}$$
+• Lôgarit tự nhiên: Lôgarit cơ số $e$ của một số dương $M$ gọi là lôgarit tự nhiên của $M$, kí hiệu là $\ln M$ (lôgarit Nê-pe của $M$).
+
+**Ví dụ 6:** Thời gian cần thiết (năm) để tăng gấp đôi số tiền đầu tư theo lãi kép liên tục với lãi suất $r$/năm là $t = \frac{\ln 2}{r}$. Tính thời gian cần thiết để tăng gấp đôi khoản đầu tư khi lãi suất là 6%/năm.
+
+Lời giải Ví dụ 6:
+• Với $r = 6\\% = 0{,}06$, thời gian cần thiết là:
+  $$t = \frac{\ln 2}{0{,}06} \approx 11{,}6\text{ (năm)}.$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 1 (Tiết kiệm ngân hàng mở đầu):** Bác An gửi tiết kiệm ngân hàng 100 triệu đồng kì hạn 12 tháng với lãi suất 6%/năm. Số tiền sau $n$ năm là $A = 100 \cdot (1 + 0{,}06)^n$. Hỏi sau ít nhất bao nhiêu năm thì tổng số tiền thu được không dưới 150 triệu đồng?
+
+Lời giải Vận dụng 1:
+• Để tổng số tiền không dưới 150 triệu đồng, ta có phương trình/bất phương trình:
+  $$100 \cdot (1{,}06)^n \ge 150 \iff (1{,}06)^n \ge 1{,}5 \iff n \ge \log\_{1{,}06} 1{,}5 \approx 6{,}96$$
+• Vì kì hạn gửi là 12 tháng (1 năm) nên $n$ là số nguyên. Do đó $n = 7$.
+• Kết luận: Sau ít nhất 7 năm thì bác An thu được số tiền không dưới 150 triệu đồng.
+
+**Vận dụng 2 (So sánh các thể thức lãi kép):** Cô Hương gửi tiết kiệm 100 triệu đồng với lãi suất 6%/năm.
+a) Tính số tiền thu được sau 1 năm theo các thể thức: kì hạn 12 tháng; kì hạn 1 tháng; lãi kép liên tục.
+b) Tính thời gian cần thiết để thu được 150 triệu đồng nếu gửi theo thể thức lãi kép liên tục.
+
+Lời giải Vận dụng 2:
+• a) Số tiền thu được sau 1 năm:
+  - Kì hạn 12 tháng: $A = 100 \cdot (1 + 0{,}06)^1 = 106\text{ (triệu đồng)}$.
+  - Kì hạn 1 tháng ($n = 12$ kì): $A = 100 \cdot \left(1 + \frac{0{,}06}{12}\right)^{12} = 100 \cdot (1{,}005)^{12} \approx 106{,}168\text{ (triệu đồng)}$.
+  - Lãi kép liên tục: $A = 100 \cdot e^{0{,}06 \cdot 1} \approx 106{,}184\text{ (triệu đồng)}$.
+• b) Để thu được 150 triệu đồng theo lãi kép liên tục:
+  $$100 \cdot e^{0{,}06t} = 150 \iff e^{0{,}06t} = 1{,}5 \iff 0{,}06t = \ln 1{,}5 \iff t = \frac{\ln 1{,}5}{0{,}06} \approx 6{,}8\text{ (năm)}.$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.9:** Tính:
+a) $\log_2 2^{-13}$;
+b) $\ln e^{\sqrt{2}}$;
+c) $\log_8 16 - \log_8 2$;
+d) $\log_2 6 \cdot \log_6 8$.
+
+Lời giải Bài 6.9:
+• a) $\log_2 2^{-13} = -13$.
+• b) $\ln e^{\sqrt{2}} = \sqrt{2}$.
+• c) $\log_8 16 - \log_8 2 = \log_8 \frac{16}{2} = \log_8 8 = 1$.
+• d) $\log_2 6 \cdot \log_6 8 = \log_2 8 = \log_2 2^3 = 3$.
+
+**Bài 6.10:** Viết mỗi biểu thức sau thành lôgarit của một biểu thức:
+a) $A = \ln\left(\frac{x}{x-1}\right) + \ln\left(\frac{x+1}{x}\right) - \ln(x^2 - 1)$;
+b) $B = 2\log_3 \sqrt[3]{x} + \log_3 (9x^2) - \log_3 9$.
+
+Lời giải Bài 6.10:
+• a) $A = \ln\left[\frac{x}{x-1} \cdot \frac{x+1}{x} \cdot \frac{1}{x^2 - 1}\right] = \ln\left[\frac{x+1}{(x-1)(x^2 - 1)}\right] = \ln\left[\frac{1}{(x-1)^2}\right]$.
+• b) $B = \log_3 x^{\frac{2}{3}} + \log_3 (9x^2) - \log_3 9 = \log_3 \left(\frac{x^{\frac{2}{3}} \cdot 9x^2}{9}\right) = \log_3 (x^{\frac{8}{3}})$.
+
+**Bài 6.11:** Rút gọn các biểu thức sau:
+a) $A = \log\_{\frac{1}{3}} 5 + 2\log_9 25 - \log\_{\sqrt{3}} \frac{1}{5}$;
+b) $B = \log_a M^2 + \log\_{a^2} M^4$.
+
+Lời giải Bài 6.11:
+• a) Đổi hết về cơ số 3:
+  $\log\_{\frac{1}{3}} 5 = -\log_3 5$;
+  $2\log_9 25 = 2 \cdot \log\_{3^2} 5^2 = 2 \cdot \frac{2}{2} \log_3 5 = 2\log_3 5$;
+  $\log\_{\sqrt{3}} \frac{1}{5} = \log\_{3^{\frac{1}{2}}} 5^{-1} = \frac{-1}{1/2} \log_3 5 = -2\log_3 5$.
+  Do đó: $A = -\log_3 5 + 2\log_3 5 - (-2\log_3 5) = 3\log_3 5$.
+• b) $B = 2\log_a M + \frac{4}{2}\log_a M = 2\log_a M + 2\log_a M = 4\log_a M$.
+
+**Bài 6.12:** Tính giá trị của các biểu thức sau:
+a) $A = \log_2 3 \cdot \log_3 4 \cdot \log_4 5 \cdot \log_5 6 \cdot \log_6 7 \cdot \log_7 8$;
+b) $B = \log_2 2 \cdot \log_2 4 \cdot \dots \cdot \log_2 2^n$.
+
+Lời giải Bài 6.12:
+• a) Áp dụng quy tắc nối tiếp cơ số: $\log_a b \cdot \log_b c = \log_a c$:
+  $$A = \log_2 8 = \log_2 2^3 = 3.$$
+• b) Ta có $\log_2 2^k = k$ với $k = 1, 2, \dots, n$. Do đó:
+  $$B = 1 \cdot 2 \cdot 3 \cdot \dots \cdot n = n!$$
+
+**Bài 6.13 (Áp suất không khí theo độ cao):** Công thức tính độ cao $a$ (mét) theo áp suất không khí $p$ (pascal) là $a = 15\\,500(5 - \log p)$. Tính áp suất không khí ở đỉnh Everest có độ cao khoảng $8\\,850\text{ m}$ so với mực nước biển.
+
+Lời giải Bài 6.13:
+• Thay $a = 8\\,850$ vào công thức:
+  $$8\\,850 = 15\\,500(5 - \log p) \iff 5 - \log p = \frac{8\\,850}{15\\,500} = \frac{177}{310} \approx 0{,}571$$
+• Suy ra: $\log p = 5 - 0{,}571 = 4{,}429 \iff p = 10^{4{,}429} \approx 26\\,853\text{ (Pa)}$.
+• Kết luận: Áp suất không khí ở đỉnh Everest khoảng $26\\,853\text{ Pa}$.
+
+**Bài 6.14 (Mức cường độ âm Decibel):** Mức cường độ âm $L$ (dB) đo bởi $L(I) = 10\log\left(\frac{I}{I_0}\right)$ với $I_0 = 10^{-12}\text{ W/m}^2$. Xác định mức cường độ âm của:
+a) Cuộc trò chuyện bình thường có $I = 10^{-7}\text{ W/m}^2$;
+b) Giao thông thành phố đông đúc có $I = 10^{-3}\text{ W/m}^2$.
+
+Lời giải Bài 6.14:
+• a) $L = 10\log\left(\frac{10^{-7}}{10^{-12}}\right) = 10\log(10^5) = 10 \cdot 5 = 50\text{ (dB)}$.
+• b) $L = 10\log\left(\frac{10^{-3}}{10^{-12}}\right) = 10\log(10^9) = 10 \cdot 9 = 90\text{ (dB)}$.
