@@ -1,0 +1,230 @@
+---
+title: 'Bài 4: Phương trình lượng giác cơ bản.'
+description: Hệ thống lý thuyết bài Phương trình lượng giác cơ bản cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Phương trình tương đương
+  - Phương trình lượng giác cơ bản
+  - Công thức nghiệm của phương trình lượng giác cơ bản
+grade: 11
+order: 4
+updatedDate: 2026-10-28T06:55:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Phương trình tương đương, phép biến đổi tương đương
+
+·       Phương trình lượng giác cơ bản
+
+·       Công thức nghiệm của phương trình lượng giác cơ bản
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết công thức nghiệm của các phương trình lượng giác cơ bản: $\sin x = m, \cos x = m, \tan x = m, \cot x = m$ bằng cách vận dụng đường tròn lượng giác và đồ thị hàm số tương ứng.
+
+·       Giải thành thạo các phương trình lượng giác ở dạng vận dụng trực tiếp phương trình lượng giác cơ bản.
+
+·       Sử dụng máy tính cầm tay để tính nghiệm gần đúng của phương trình lượng giác cơ bản.
+
+·       Giải quyết một số vấn đề thực tiễn gắn với phương trình lượng giác (quỹ đạo bay của đạn pháo, pha Mặt Trăng, dao động điều hoà).
+
+## Khái niệm phương trình tương đương
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_tuong_duong"/>
+
+### a) Định nghĩa hai phương trình tương đương
+
+Định nghĩa:
+Hai phương trình được gọi là tương đương khi chúng có cùng tập nghiệm.
+Nếu phương trình $f(x) = 0$ tương đương với phương trình $g(x) = 0$ thì ta viết $f(x) = 0 \Leftrightarrow g(x) = 0$.
+Chú ý: Hai phương trình cùng vô nghiệm được coi là tương đương với nhau.
+
+### b) Phép biến đổi tương đương
+
+Các phép biến đổi tương đương thông dụng:
+• Cộng hoặc trừ hai vế với cùng một số hoặc biểu thức mà không làm thay đổi điều kiện xác định:
+$$f(x) = g(x) \Leftrightarrow f(x) + h(x) = g(x) + h(x)$$
+• Nhân hoặc chia hai vế với cùng một số khác 0 hoặc biểu thức luôn khác 0:
+$$f(x) = g(x) \Leftrightarrow f(x)h(x) = g(x)h(x) \quad (h(x) \ne 0)$$
+
+**Ví dụ 1:** Hai phương trình $2x + 6 = 0$ và $x^2 + 6x + 9 = 0$ có tương đương không?
+
+Lời giải Ví dụ 1:
+• $2x + 6 = 0 \Leftrightarrow x = -3$, tập nghiệm $S_1 = \\{-3\\}$.
+• $x^2 + 6x + 9 = 0 \Leftrightarrow (x + 3)^2 = 0 \Leftrightarrow x = -3$, tập nghiệm $S_2 = \\{-3\\}$.
+• Vì $S_1 = S_2 = \\{-3\\}$ nên hai phương trình trên tương đương với nhau.
+
+**Luyện tập 1:** Xét sự tương đương của hai phương trình sau: $\frac{x - 1}{x + 1} = 0$ và $x^2 - 1 = 0$.
+
+Lời giải Luyện tập 1:
+• Phương trình $\frac{x - 1}{x + 1} = 0$ có điều kiện $x \ne -1$, suy ra $x = 1$, tập nghiệm $S_1 = \\{1\\}$.
+• Phương trình $x^2 - 1 = 0 \Leftrightarrow x = \pm 1$, tập nghiệm $S_2 = \\{-1; 1\\}$.
+• Vì $S_1 \ne S_2$ nên hai phương trình không tương đương với nhau.
+
+## Phương trình sin x = m và cos x = m
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_sin_cos"/>
+
+### a) Công thức nghiệm của phương trình sin x = m
+
+Điều kiện có nghiệm và công thức nghiệm:
+• Nếu $|m| > 1$, phương trình $\sin x = m$ vô nghiệm.
+• Nếu $|m| \le 1$, tồn tại duy nhất số $\alpha \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right]$ sao cho $\sin\alpha = m$. Khi đó:
+$$\sin x = m \Leftrightarrow \sin x = \sin\alpha \Leftrightarrow \begin{cases} x = \alpha + k2\pi \\\ x = \pi - \alpha + k2\pi \end{cases} (k \in \mathbb{Z})$$
+• Đơn vị độ:
+$$\sin x = \sin\alpha^{\circ} \Leftrightarrow \begin{cases} x = \alpha^{\circ} + k360^{\circ} \\\ x = 180^{\circ} - \alpha^{\circ} + k360^{\circ} \end{cases} (k \in \mathbb{Z})$$
+• Các trường hợp đặc biệt:
+  + $\sin x = 0 \Leftrightarrow x = k\pi \quad (k \in \mathbb{Z})$;
+  + $\sin x = 1 \Leftrightarrow x = \frac{\pi}{2} + k2\pi \quad (k \in \mathbb{Z})$;
+  + $\sin x = -1 \Leftrightarrow x = -\frac{\pi}{2} + k2\pi \quad (k \in \mathbb{Z})$.
+
+**Ví dụ 2:** Giải các phương trình sau:
+a) $\sin x = -\frac{\sqrt{3}}{2}$;
+b) $\sin 2x = \sin(60^{\circ} - 3x)$.
+
+Lời giải Ví dụ 2:
+• a) $\sin x = -\frac{\sqrt{3}}{2} \Leftrightarrow \sin x = \sin\left(-\frac{\pi}{3}\right) \Leftrightarrow \begin{cases} x = -\frac{\pi}{3} + k2\pi \\\ x = \frac{4\pi}{3} + k2\pi \end{cases} (k \in \mathbb{Z})$.
+• b) $\sin 2x = \sin(60^{\circ} - 3x) \Leftrightarrow \begin{cases} 2x = 60^{\circ} - 3x + k360^{\circ} \\\ 2x = 180^{\circ} - (60^{\circ} - 3x) + k360^{\circ} \end{cases} \Leftrightarrow \begin{cases} x = 12^{\circ} + k72^{\circ} \\\ x = -120^{\circ} - k360^{\circ} \end{cases} (k \in \mathbb{Z})$.
+
+### b) Công thức nghiệm của phương trình cos x = m
+
+Điều kiện có nghiệm và công thức nghiệm:
+• Nếu $|m| > 1$, phương trình $\cos x = m$ vô nghiệm.
+• Nếu $|m| \le 1$, tồn tại duy nhất số $\alpha \in [0; \pi]$ sao cho $\cos\alpha = m$. Khi đó:
+$$\cos x = m \Leftrightarrow \cos x = \cos\alpha \Leftrightarrow x = \pm \alpha + k2\pi \quad (k \in \mathbb{Z})$$
+• Đơn vị độ:
+$$\cos x = \cos\alpha^{\circ} \Leftrightarrow x = \pm \alpha^{\circ} + k360^{\circ} \quad (k \in \mathbb{Z})$$
+• Các trường hợp đặc biệt:
+  + $\cos x = 0 \Leftrightarrow x = \frac{\pi}{2} + k\pi \quad (k \in \mathbb{Z})$;
+  + $\cos x = 1 \Leftrightarrow x = k2\pi \quad (k \in \mathbb{Z})$;
+  + $\cos x = -1 \Leftrightarrow x = \pi + k2\pi \quad (k \in \mathbb{Z})$.
+
+**Ví dụ 5 & 6:** Giải các phương trình sau:
+a) $\cos x = -\frac{\sqrt{3}}{2}$;
+b) $\cos 2x = \cos(45^{\circ} - x)$.
+
+Lời giải Ví dụ 5 & 6:
+• a) $\cos x = -\frac{\sqrt{3}}{2} \Leftrightarrow \cos x = \cos\frac{5\pi}{6} \Leftrightarrow x = \pm \frac{5\pi}{6} + k2\pi \quad (k \in \mathbb{Z})$.
+• b) $\cos 2x = \cos(45^{\circ} - x) \Leftrightarrow \begin{cases} 2x = 45^{\circ} - x + k360^{\circ} \\\ 2x = -(45^{\circ} - x) + k360^{\circ} \end{cases} \Leftrightarrow \begin{cases} x = 15^{\circ} + k120^{\circ} \\\ x = -45^{\circ} + k360^{\circ} \end{cases} (k \in \mathbb{Z})$.
+
+**Luyện tập 3:** Giải các phương trình sau:
+a) $2\cos x = -\sqrt{2}$;
+b) $\cos 3x - \sin 5x = 0$.
+
+Lời giải Luyện tập 3:
+• a) $2\cos x = -\sqrt{2} \Leftrightarrow \cos x = -\frac{\sqrt{2}}{2} \Leftrightarrow \cos x = \cos\frac{3\pi}{4} \Leftrightarrow x = \pm \frac{3\pi}{4} + k2\pi \quad (k \in \mathbb{Z})$.
+• b) $\cos 3x - \sin 5x = 0 \Leftrightarrow \cos 3x = \sin 5x \Leftrightarrow \cos 3x = \cos\left(\frac{\pi}{2} - 5x\right)$
+  $$\Leftrightarrow \begin{cases} 3x = \frac{\pi}{2} - 5x + k2\pi \\\ 3x = -\left(\frac{\pi}{2} - 5x\right) + k2\pi \end{cases} \Leftrightarrow \begin{cases} 8x = \frac{\pi}{2} + k2\pi \\\ -2x = -\frac{\pi}{2} + k2\pi \end{cases} \Leftrightarrow \begin{cases} x = \frac{\pi}{16} + \frac{k\pi}{4} \\\ x = \frac{\pi}{4} - k\pi \end{cases} (k \in \mathbb{Z}).$$
+
+## Phương trình tan x = m và cot x = m
+
+<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_tan_cot"/>
+
+### a) Công thức nghiệm của phương trình tan x = m
+
+Nội dung công thức nghiệm:
+• Phương trình $\tan x = m$ luôn có nghiệm với mọi $m \in \mathbb{R}$.
+• Với mọi $m \in \mathbb{R}$, tồn tại duy nhất $\alpha \in \left(-\frac{\pi}{2}; \frac{\pi}{2}\right)$ sao cho $\tan\alpha = m$. Khi đó:
+$$\tan x = m \Leftrightarrow \tan x = \tan\alpha \Leftrightarrow x = \alpha + k\pi \quad (k \in \mathbb{Z})$$
+• Đơn vị độ: $\tan x = \tan\alpha^{\circ} \Leftrightarrow x = \alpha^{\circ} + k180^{\circ} \quad (k \in \mathbb{Z})$.
+
+### b) Công thức nghiệm của phương trình cot x = m
+
+Nội dung công thức nghiệm:
+• Phương trình $\cot x = m$ luôn có nghiệm với mọi $m \in \mathbb{R}$.
+• Với mọi $m \in \mathbb{R}$, tồn tại duy nhất $\alpha \in (0; \pi)$ sao cho $\cot\alpha = m$. Khi đó:
+$$\cot x = m \Leftrightarrow \cot x = \cot\alpha \Leftrightarrow x = \alpha + k\pi \quad (k \in \mathbb{Z})$$
+• Đơn vị độ: $\cot x = \cot\alpha^{\circ} \Leftrightarrow x = \alpha^{\circ} + k180^{\circ} \quad (k \in \mathbb{Z})$.
+
+**Ví dụ 7 & 8:** Giải các phương trình sau:
+a) $\tan x = -\sqrt{3}$;
+b) $\cot x = -\sqrt{3}$.
+
+Lời giải Ví dụ 7 & 8:
+• a) $\tan x = -\sqrt{3} \Leftrightarrow \tan x = \tan\left(-\frac{\pi}{3}\right) \Leftrightarrow x = -\frac{\pi}{3} + k\pi \quad (k \in \mathbb{Z})$.
+• b) $\cot x = -\sqrt{3} \Leftrightarrow \cot x = \cot\left(\frac{5\pi}{6}\right) \Leftrightarrow x = \frac{5\pi}{6} + k\pi \quad (k \in \mathbb{Z})$.
+
+**Luyện tập 4 & 5:** Giải các phương trình sau:
+a) $\sqrt{3}\tan 2x = -1$;
+b) $\sqrt{3}\cot x + 1 = 0$.
+
+Lời giải Luyện tập 4 & 5:
+• a) $\sqrt{3}\tan 2x = -1 \Leftrightarrow \tan 2x = -\frac{1}{\sqrt{3}} = \tan\left(-\frac{\pi}{6}\right) \Leftrightarrow 2x = -\frac{\pi}{6} + k\pi \Leftrightarrow x = -\frac{\pi}{12} + \frac{k\pi}{2} \quad (k \in \mathbb{Z})$.
+• b) $\sqrt{3}\cot x + 1 = 0 \Leftrightarrow \cot x = -\frac{1}{\sqrt{3}} = \cot\left(\frac{2\pi}{3}\right) \Leftrightarrow x = \frac{2\pi}{3} + k\pi \quad (k \in \mathbb{Z})$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng 1 (Góc bắn pháo tối ưu):** Một quả đạn pháo bắn ra từ mặt đất với vận tốc ban đầu $v_0$ không đổi hợp với phương ngang góc bắn $\alpha$ ($0^{\circ} \le \alpha \le 90^{\circ}$). Tầm xa mà quả đạn đạt tới là $x = \frac{v_0^2 \sin 2\alpha}{g}$. Tìm góc bắn $\alpha$ để quả đạn bay xa nhất.
+
+Lời giải Vận dụng 1:
+• Ta có tầm xa $x = \frac{v_0^2\sin 2\alpha}{g} \le \frac{v_0^2}{g}$ (do $\sin 2\alpha \le 1$).
+• Tầm xa lớn nhất đạt được khi $\sin 2\alpha = 1 \Leftrightarrow 2\alpha = 90^{\circ} + k360^{\circ} \Leftrightarrow \alpha = 45^{\circ} + k180^{\circ}$.
+• Vì $0^{\circ} \le \alpha \le 90^{\circ}$ nên ta chọn $\alpha = 45^{\circ}$.
+• Vậy góc bắn để quả đạn pháo bay xa nhất là $45^{\circ}$.
+
+**Vận dụng 2 (Pha Mặt Trăng):** Tỉ lệ phần Mặt Trăng được chiếu sáng cho bởi $F = \frac{1}{2}(1 - \cos\alpha)$ ($0^{\circ} \le \alpha \le 360^{\circ}$). Xác định góc $\alpha$ khi:
+a) $F = 0$ (trăng mới);
+b) $F = 0{,}25$ (trăng lưỡi liềm);
+c) $F = 0{,}5$ (trăng bán nguyệt);
+d) $F = 1$ (trăng tròn).
+
+Lời giải Vận dụng 2:
+• a) $F = 0 \Leftrightarrow \frac{1}{2}(1 - \cos\alpha) = 0 \Leftrightarrow \cos\alpha = 1 \Rightarrow \alpha = 0^{\circ}$ hoặc $\alpha = 360^{\circ}$.
+• b) $F = 0{,}25 \Leftrightarrow \frac{1}{2}(1 - \cos\alpha) = 0{,}25 \Leftrightarrow \cos\alpha = 0{,}5 \Rightarrow \alpha = 60^{\circ}$ hoặc $\alpha = 300^{\circ}$.
+• c) $F = 0{,}5 \Leftrightarrow \frac{1}{2}(1 - \cos\alpha) = 0{,}5 \Leftrightarrow \cos\alpha = 0 \Rightarrow \alpha = 90^{\circ}$ hoặc $\alpha = 270^{\circ}$.
+• d) $F = 1 \Leftrightarrow \frac{1}{2}(1 - \cos\alpha) = 1 \Leftrightarrow \cos\alpha = -1 \Rightarrow \alpha = 180^{\circ}$.
+
+**Bài 1.22 (Số lần đi qua vị trí cân bằng):** Một vật dao động điều hoà với phương trình $x = 2\cos\left(5t - \frac{\pi}{6}\right)$ ($t$ tính bằng giây, $x$ tính bằng cm). Trong khoảng thời gian từ 0 đến 6 giây, vật đi qua vị trí cân bằng bao nhiêu lần?
+
+Lời giải Bài 1.22:
+• Vật đi qua vị trí cân bằng khi $x = 0 \Leftrightarrow 2\cos\left(5t - \frac{\pi}{6}\right) = 0$
+  $$\Leftrightarrow 5t - \frac{\pi}{6} = \frac{\pi}{2} + k\pi \Leftrightarrow 5t = \frac{2\pi}{3} + k\pi \Leftrightarrow t = \frac{2\pi}{15} + \frac{k\pi}{5} \quad (k \in \mathbb{Z}).$$
+• Vì $0 \le t \le 6$ nên:
+  $$0 \le \frac{2\pi}{15} + \frac{k\pi}{5} \le 6 \Leftrightarrow -\frac{2\pi}{15} \le \frac{k\pi}{5} \le 6 - \frac{2\pi}{15}$$
+  $$\Leftrightarrow -\frac{2}{3} \le k \le \frac{30}{\pi} - \frac{2}{3} \approx 9{,}55 - 0{,}67 = 8{,}88.$$
+• Do $k \in \mathbb{Z}$, nên $k \in \\{0; 1; 2; 3; 4; 5; 6; 7; 8\\}$ (có 9 giá trị nguyên của $k$).
+• Kết luận: Trong khoảng thời gian từ 0 đến 6 giây, vật đi qua vị trí cân bằng 9 lần.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 1.19:** Giải các phương trình sau:
+a) $\sin x = \frac{\sqrt{3}}{2}$;
+b) $2\cos x = -\sqrt{2}$;
+c) $\sqrt{3}\tan\left(\frac{x}{2} + 15^{\circ}\right) = 1$;
+d) $\cot(2x - 1) = \cot\frac{\pi}{5}$.
+
+Lời giải Bài 1.19:
+• a) $\sin x = \frac{\sqrt{3}}{2} = \sin\frac{\pi}{3} \Leftrightarrow \begin{cases} x = \frac{\pi}{3} + k2\pi \\\ x = \frac{2\pi}{3} + k2\pi \end{cases} (k \in \mathbb{Z})$.
+• b) $\cos x = -\frac{\sqrt{2}}{2} = \cos\frac{3\pi}{4} \Leftrightarrow x = \pm \frac{3\pi}{4} + k2\pi \quad (k \in \mathbb{Z})$.
+• c) $\tan\left(\frac{x}{2} + 15^{\circ}\right) = \frac{1}{\sqrt{3}} = \tan 30^{\circ} \Leftrightarrow \frac{x}{2} + 15^{\circ} = 30^{\circ} + k180^{\circ} \Leftrightarrow \frac{x}{2} = 15^{\circ} + k180^{\circ} \Leftrightarrow x = 30^{\circ} + k360^{\circ} \quad (k \in \mathbb{Z})$.
+• d) Điều kiện: $\sin(2x - 1) \ne 0$. $\cot(2x - 1) = \cot\frac{\pi}{5} \Leftrightarrow 2x - 1 = \frac{\pi}{5} + k\pi \Leftrightarrow 2x = 1 + \frac{\pi}{5} + k\pi \Leftrightarrow x = \frac{1}{2} + \frac{\pi}{10} + \frac{k\pi}{2} \quad (k \in \mathbb{Z})$.
+
+**Bài 1.20:** Giải các phương trình sau:
+a) $\sin 2x + \cos 4x = 0$;
+b) $\cos 3x = -\cos 7x$.
+
+Lời giải Bài 1.20:
+• a) $\sin 2x = -\cos 4x = \cos(4x + \pi) = \sin\left(\frac{\pi}{2} - (4x + \pi)\right) = \sin\left(-4x - \frac{\pi}{2}\right)$
+  $$\Leftrightarrow \begin{cases} 2x = -4x - \frac{\pi}{2} + k2\pi \\\ 2x = \pi - \left(-4x - \frac{\pi}{2}\right) + k2\pi \end{cases} \Leftrightarrow \begin{cases} 6x = -\frac{\pi}{2} + k2\pi \\\ -2x = \frac{3\pi}{2} + k2\pi \end{cases} \Leftrightarrow \begin{cases} x = -\frac{\pi}{12} + \frac{k\pi}{3} \\\ x = -\frac{3\pi}{4} - k\pi \end{cases} (k \in \mathbb{Z}).$$
+• b) $\cos 3x = -\cos 7x = \cos(\pi - 7x) \Leftrightarrow \begin{cases} 3x = \pi - 7x + k2\pi \\\ 3x = -(\pi - 7x) + k2\pi \end{cases} \Leftrightarrow \begin{cases} 10x = \pi + k2\pi \\\ -4x = -\pi + k2\pi \end{cases} \Leftrightarrow \begin{cases} x = \frac{\pi}{10} + \frac{k\pi}{5} \\\ x = \frac{\pi}{4} - \frac{k\pi}{2} \end{cases} (k \in \mathbb{Z})$.
+
+**Bài 1.21:** Quả đạn pháo bắn từ mặt đất với $v_0 = 500\text{ m/s}$, góc bắn $\alpha$, quỹ đạo: $y = \frac{-g}{2v_0^2\cos^2\alpha}x^2 + x\tan\alpha$ với $g = 9{,}8\text{ m/s}^2$.
+a) Tính tầm xa của quả đạn theo góc $\alpha$.
+b) Tìm góc bắn $\alpha$ để quả đạn bắn trúng mục tiêu cách $22\\,000\text{ m}$.
+
+Lời giải Bài 1.21:
+• a) Quả đạn chạm đất khi $y = 0 \Leftrightarrow x\left(\tan\alpha - \frac{g x}{2v_0^2\cos^2\alpha}\right) = 0$.
+  Với $x > 0$, tầm xa là: $x = \frac{2v_0^2\tan\alpha\cos^2\alpha}{g} = \frac{2v_0^2\sin\alpha\cos\alpha}{g} = \frac{v_0^2\sin 2\alpha}{g}$.
+• b) Để trúng mục tiêu cách $22\\,000\text{ m}$, ta có:
+  $$\frac{500^2\sin 2\alpha}{9{,}8} = 22\\,000 \Leftrightarrow 250\\,000\sin 2\alpha = 215\\,600 \Leftrightarrow \sin 2\alpha = \frac{215\\,600}{250\\,000} = 0{,}8624.$$
+  Sử dụng máy tính cầm tay: $2\alpha \approx 59^{\circ}35' \Rightarrow \alpha_1 \approx 29^{\circ}47'$.
+  Hoặc $2\alpha = 180^{\circ} - 59^{\circ}35' = 120^{\circ}25' \Rightarrow \alpha_2 \approx 60^{\circ}13'$.
+  Vậy có hai góc bắn thoả mãn là $\alpha \approx 29^{\circ}47'$ và $\alpha \approx 60^{\circ}13'$.
