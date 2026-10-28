@@ -1,0 +1,144 @@
+---
+title: 'Lesson 23: Line Perpendicular to a Plane.'
+description: Theoretical system for the lesson on …, with illustrative examples
+tags:
+  - grade 11
+  - Line perpendicular to a plane
+  - Perpendicular bisector plane of a line segment
+grade: 11
+order: 23
+updatedDate: 2026-10-28T22:42:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Line perpendicular to a plane
+
+·       Perpendicular bisector plane of a line segment
+
+### **Knowledge and Skills:**
+
+·       Recognize a line perpendicular to a plane.
+
+·       Understand and apply the condition for a line to be perpendicular to a plane (perpendicular to two intersecting lines lying within the plane).
+
+·       Explain the relationship between parallel and perpendicular relations of lines and planes.
+
+·       Apply the knowledge of perpendicularity between a line and a plane to real-world problems (vertical alignment of structures, clothes racks, basketball poles).
+
+## Line Perpendicular to a Plane
+
+<Youtube url="https://www.youtube.com/watch?v=example_duong_thang_vuong_goc_voi_mat_phang"/>
+
+### a) Definition and Recognition Criteria
+
+Definition: A line $\Delta$ is said to be perpendicular to a plane $(P)$ if it is perpendicular to every line $a$ lying in $(P)$, denoted by $\Delta \perp (P)$ (or $(P) \perp \Delta$).
+Recognition Criterion (Theorem): If a line is perpendicular to two intersecting lines lying within a plane, then it is perpendicular to that plane.
+
+### b) Examples and Practice on Lines Perpendicular to a Plane
+
+**Example 1:** Given a pyramid $S.ABC$ whose base $ABC$ is a right-angled triangle at $B$ and edge $SA$ is perpendicular to edges $AB$ and $AC$. Prove that $BC \perp (SAB)$.
+
+Solution to Example 1:
+• Since $SA$ is perpendicular to both lines $AB$ and $AC$ (which intersect at $A$ in the plane $(ABC)$), we have $SA \perp (ABC)$.
+• This implies $SA \perp BC$.
+• On the other hand, since triangle $ABC$ is right-angled at $B$, $BC \perp AB$.
+• Since $BC$ is perpendicular to two intersecting lines $SA$ and $AB$ lying in the plane $(SAB)$, it follows that $BC \perp (SAB)$.
+
+**Practice 1:** Given a pyramid $S.ABCD$ with a parallelogram base $ABCD$ centered at $O$, such that $SA = SC$ and $SB = SD$. Prove that $SO \perp (ABCD)$.
+
+Solution to Practice 1:
+• Triangle $SAC$ is isosceles at $S$ (since $SA = SC$), and $SO$ is the median corresponding to the base $AC$ (as $O$ is the center of the parallelogram $ABCD$), so $SO \perp AC$.
+• Similarly, triangle $SBD$ is isosceles at $S$ (since $SB = SD$), and $SO$ is the median corresponding to the base $BD$, so $SO \perp BD$.
+• Since $SO$ is perpendicular to two intersecting lines $AC$ and $BD$ in the plane $(ABCD)$, we have $SO \perp (ABCD)$.
+
+## Properties and Perpendicular Bisector Planes
+
+### a) Basic Properties
+
+• There is a unique plane passing through a given point and perpendicular to a given line.
+• There is a unique line passing through a given point and perpendicular to a given plane.
+• If three mutually distinct lines $a, b, c$ pass through a point $O$ and are all perpendicular to a line $\Delta$, then these three lines lie in a plane passing through $O$ and perpendicular to $\Delta$.
+
+### b) Perpendicular Bisector Plane of a Line Segment
+
+**Example 2:** Prove that a point $M$ is equidistant from two given distinct points $A$ and $B$ if and only if $M$ lies in the plane passing through the midpoint of the segment $AB$ and perpendicular to the line $AB$ (called the perpendicular bisector plane of segment $AB$).
+
+Solution to Example 2:
+• Let $(\alpha)$ be the plane passing through the midpoint $I$ of segment $AB$ and perpendicular to line $AB$.
+• We have $MA = MB$ if and only if $M$ coincides with $I$ or triangle $MAB$ is isosceles at $M$.
+• Furthermore, triangle $MAB$ is isosceles at $M$ with median $MI$ also being the altitude, meaning $MI \perp AB$, which is equivalent to $M$ belonging to the plane $(\alpha)$.
+• Thus, the set of points equidistant from two endpoints $A$ and $B$ is the perpendicular bisector plane of segment $AB$.
+
+## Relationship Between Parallel and Perpendicular Relations
+
+### a) Relationship Between Parallelism and Perpendicularity of Lines and Planes
+
+• If a line $a$ is perpendicular to a plane $(P)$, then any line parallel to $a$ is also perpendicular to $(P)$.
+• If two distinct lines are both perpendicular to a plane, then they are parallel to each other.
+• If a line $a$ is perpendicular to a plane $(P)$, then it is perpendicular to any line parallel to $(P)$.
+• If a line $a$ and a plane $(P)$ are both perpendicular to the same line, then $a$ lies within $(P)$ or is parallel to $(P)$.
+
+### b) Relationship Between Parallel Planes and Perpendicular Lines
+
+• If a line $\Delta$ is perpendicular to a plane $(P)$, then $\Delta$ is also perpendicular to any planes parallel to $(P)$.
+• Two distinct planes that are both perpendicular to the same line are parallel to each other.
+
+**Example 4:** Given a tetrahedron $OABC$ whose edges $OA, OB, OC$ are mutually perpendicular. Let $M$ and $N$ be the centroids of triangles $ABC$ and $OBC$ respectively. Prove that the line $MN$ is perpendicular to the plane $(OBC)$.
+
+Solution to Example 4:
+• Since $OA$ is perpendicular to both lines $OB$ and $OC$, we have $OA \perp (OBC)$.
+• Draw the medians $AD$ of triangle $ABC$ and $OD$ of triangle $OBC$. By the centroid property:
+  $$\frac{MA}{MD} = 2 = \frac{NO}{ND}$$
+• Therefore, $MN \parallel AO$ (by the converse of Thales' theorem).
+• On the other hand, $AO \perp (OBC)$, which implies $MN \perp (OBC)$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Clothes Rack Post):** When constructing a clothes rack post, one can place two straight support bars on the floor and erect the post perpendicular to both bars. Explain why this ensures the post is perpendicular to the floor.
+
+Solution to Application:
+• The two intersecting support bars on the floor define a plane (the floor plane). Erecting the post perpendicular to these two intersecting bars means it is perpendicular to two intersecting lines within the floor plane.
+• According to the theorem on a line perpendicular to a plane, the clothes rack post is perpendicular to the floor plane.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 7.5:** Given a pyramid $S.ABC$ whose base is an isosceles triangle at $A$ and $SA \perp (ABC)$. Let $M$ be the midpoint of $BC$. Prove that:
+a) $BC \perp (SAM)$;
+b) Triangle $SBC$ is isosceles at $S$.
+
+Solution to Exercise 7.5:
+• a) Since $SA \perp (ABC)$, we have $SA \perp BC$. Triangle $ABC$ is isosceles at $A$ with $AM$ as the median, so $AM$ is also the altitude, meaning $AM \perp BC$.
+  Since $BC$ is perpendicular to two intersecting lines $SA$ and $AM$ in the plane $(SAM)$, we have $BC \perp (SAM)$.
+• b) Since $BC \perp (SAM)$ and $SM$ lies in the plane $(SAM)$, it follows that $BC \perp SM$.
+  Considering triangle $SBC$, $SM$ serves as both the altitude and the median (since $M$ is the midpoint of $BC$), so triangle $SBC$ is isosceles at $S$.
+
+**Exercise 7.6:** Given a pyramid $S.ABCD$ with a rectangular base $ABCD$ and $SA \perp (ABCD)$. Prove that all lateral faces of the pyramid $S.ABCD$ are right-angled triangles.
+
+Solution to Exercise 7.6:
+• The lateral faces are $(SAB), (SBC), (SCD), (SDA)$.
+• Since $SA \perp (ABCD)$, we have $SA \perp AB, SA \perp AD, SA \perp BC, SA \perp CD$.
+  - Triangle $SAB$ is right-angled at $A$ (since $SA \perp AB$).
+  - Triangle $SAD$ is right-angled at $A$ (since $SA \perp AD$).
+  - Since $AB \perp (SAB)$ and $BC \perp AB$, it follows that $BC \perp SB$, meaning triangle $SBC$ is right-angled at $B$.
+  - Since $AD \perp (SAD)$ and $CD \perp AD$, it follows that $CD \perp SD$, meaning triangle $SCD$ is right-angled at $D$.
+• Thus, all lateral faces of the pyramid are right-angled triangles.
+
+**Exercise 7.7:** Given a pyramid $S.ABCD$ with a rectangular base and $SA \perp (ABCD)$. Let $M$ and $N$ be the projections of $A$ onto $SB$ and $SD$ respectively. Prove that:
+a) $AM \perp (SBC)$;
+b) $AN \perp (SCD)$;
+c) $SC \perp (AMN)$.
+
+Solution to Exercise 7.7:
+• a) $BC \perp (SAB)$ (since $BC \perp AB$ and $BC \perp SA$). Since $AM \subset (SAB)$, we have $BC \perp AM$.
+  Combining this with $AM \perp SB$ (given), $AM$ is perpendicular to two intersecting lines $BC$ and $SB$ in the plane $(SBC)$, which implies $AM \perp (SBC)$.
+• b) Proved similarly to part a: $CD \perp (SAD) \implies CD \perp AN$. Combining with $AN \perp SD$, we get $AN \perp (SCD)$.
+• c) From $AM \perp (SBC)$, it follows that $AM \perp SC$. Similarly, from $AN \perp (SCD)$, it follows that $AN \perp SC$.
+  Since $SC$ is perpendicular to two intersecting lines $AM$ and $AN$ in the plane $(AMN)$, we have $SC \perp (AMN)$.
