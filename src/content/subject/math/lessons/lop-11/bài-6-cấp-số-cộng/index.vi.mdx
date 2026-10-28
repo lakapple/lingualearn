@@ -1,0 +1,220 @@
+---
+title: 'Bài 6: Cấp số cộng'
+description: Hệ thống lý thuyết bài cấp số cộng cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Cấp số cộng
+  - Công sai
+  - Số hạng tổng quát
+  - Tổng của $n$ số hạng đầu
+grade: 11
+order: 0
+updatedDate: 2026-10-28T14:06:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Cấp số cộng
+
+·       Công sai ($d$)
+
+·       Số hạng tổng quát ($u_n$)
+
+·       Tổng của $n$ số hạng đầu ($S_n$)
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết một dãy số là cấp số cộng và xác định được số hạng đầu $u_1$, công sai $d$.
+
+·       Giải thích và vận dụng thành thạo công thức xác định số hạng tổng quát của cấp số cộng: $u_n = u_1 + (n - 1)d$.
+
+·       Tính tổng của $n$ số hạng đầu của cấp số cộng theo các công thức: $S_n = \frac{n}{2}[2u_1 + (n - 1)d] = \frac{n(u_1 + u_n)}{2}$.
+
+·       Giải quyết một số vấn đề thực tiễn gắn với cấp số cộng (bố trí ghế ngồi rạp hát, hội trường, khấu hao tài sản, lương thưởng, tăng trưởng dân số).
+
+## Định nghĩa cấp số cộng
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_nghia_cap_so_cong"/>
+
+### a) Khái niệm và hệ thức truy hồi
+
+Định nghĩa:
+Cấp số cộng là một dãy số (hữu hạn hay vô hạn), trong đó kể từ số hạng thứ hai, mỗi số hạng đều bằng số hạng đứng ngay trước nó cộng với một số không đổi $d$:
+$$u_n = u\_{n-1} + d \quad (n \ge 2)$$
+• Số $d$ được gọi là công sai của cấp số cộng.
+• Khi $d = 0$, cấp số cộng là một dãy số không đổi: $a, a, a, \dots$
+• Để chứng minh một dãy số $(u_n)$ là cấp số cộng, ta chứng minh hiệu hai số hạng liên tiếp $u_n - u\_{n-1} = d$ không đổi với mọi $n \ge 2$.
+
+### b) Ví dụ và luyện tập về định nghĩa cấp số cộng
+
+**Ví dụ 1:** Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 2$ và công sai $d = 3$. Viết năm số hạng đầu của cấp số cộng này.
+
+Lời giải Ví dụ 1:
+• $u_1 = 2$.
+• $u_2 = u_1 + d = 2 + 3 = 5$.
+• $u_3 = u_2 + d = 5 + 3 = 8$.
+• $u_4 = u_3 + d = 8 + 3 = 11$.
+• $u_5 = u_4 + d = 11 + 3 = 14$.
+Vậy năm số hạng đầu là: $2, 5, 8, 11, 14$.
+
+**Ví dụ 2:** Cho dãy số $(u_n)$ với $u_n = 5n - 1$. Chứng minh $(u_n)$ là cấp số cộng và tìm $u_1, d$.
+
+Lời giải Ví dụ 2:
+• Xét hiệu với $n \ge 2$: $u_n - u\_{n-1} = (5n - 1) - [5(n - 1) - 1] = 5n - 1 - 5n + 6 = 5$ (không đổi).
+• Vậy $(u_n)$ là cấp số cộng có số hạng đầu $u_1 = 5(1) - 1 = 4$ và công sai $d = 5$.
+
+**Luyện tập 1:** Cho dãy số $(u_n)$ với $u_n = -2n + 3$. Chứng minh rằng $(u_n)$ là cấp số cộng và xác định số hạng đầu, công sai.
+
+Lời giải Luyện tập 1:
+• Xét hiệu: $u_n - u\_{n-1} = (-2n + 3) - [-2(n - 1) + 3] = -2n + 3 + 2n - 5 = -2$ không đổi với mọi $n \ge 2$.
+• Do đó $(u_n)$ là cấp số cộng có số hạng đầu $u_1 = -2(1) + 3 = 1$ và công sai $d = -2$.
+
+## Số hạng tổng quát
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_hang_tong_quat_csc"/>
+
+### a) Công thức số hạng tổng quát
+
+Định lí:
+Nếu cấp số cộng $(u_n)$ có số hạng đầu $u_1$ và công sai $d$ thì số hạng tổng quát $u_n$ được xác định theo công thức:
+$$u_n = u_1 + (n - 1)d \quad (n \ge 1)$$
+
+### b) Ví dụ và luyện tập về số hạng tổng quát
+
+**Ví dụ 3:** Tìm năm số hạng đầu và số hạng thứ 100 của cấp số cộng $(u_n): 10, 5, \dots$
+
+Lời giải Ví dụ 3:
+• Cấp số cộng có số hạng đầu $u_1 = 10$, công sai $d = 5 - 10 = -5$.
+• Năm số hạng đầu: $10, 5, 0, -5, -10$.
+• Số hạng thứ 100: $u\_{100} = u_1 + (100 - 1)d = 10 + 99(-5) = 10 - 495 = -485$.
+
+**Ví dụ 4:** Một cấp số cộng có số hạng thứ 10 bằng 48 và số hạng thứ 18 bằng 88. Tìm số hạng thứ 100 của cấp số cộng đó.
+
+Lời giải Ví dụ 4:
+• Gọi $u_1$ là số hạng đầu và $d$ là công sai. Ta có hệ phương trình:
+$$\begin{cases} u\_{10} = u_1 + 9d = 48 \\\ u\_{18} = u_1 + 17d = 88 \end{cases} \Leftrightarrow \begin{cases} 8d = 40 \\\ u_1 = 48 - 9d \end{cases} \Leftrightarrow \begin{cases} d = 5 \\\ u_1 = 3 \end{cases}$$
+• Số hạng thứ 100 là: $u\_{100} = u_1 + 99d = 3 + 99 \cdot 5 = 498$.
+
+**Luyện tập 2:** Cho dãy số $(u_n)$ với $u_n = 4n - 3$. Chứng minh $(u_n)$ là cấp số cộng, xác định $u_1, d$ và viết công thức $u_n$ dưới dạng $u_n = u_1 + (n - 1)d$.
+
+Lời giải Luyện tập 2:
+• Với $n \ge 2$: $u_n - u\_{n-1} = (4n - 3) - [4(n - 1) - 3] = 4$ (hằng số). Vậy $(u_n)$ là cấp số cộng.
+• Số hạng đầu $u_1 = 4(1) - 3 = 1$, công sai $d = 4$.
+• Viết lại công thức: $u_n = 1 + (n - 1) \cdot 4$.
+
+## Tổng n số hạng đầu của một cấp số cộng
+
+<Youtube url="https://www.youtube.com/watch?v=example_tong_n_so_hang_csc"/>
+
+### a) Công thức tính tổng n số hạng đầu
+
+Định lí:
+Cho cấp số cộng $(u_n)$ với số hạng đầu $u_1$ và công sai $d$. Đặt $S_n = u_1 + u_2 + \dots + u_n$. Khi đó:
+$$S_n = \frac{n}{2}[2u_1 + (n - 1)d]$$
+Hoặc biểu diễn qua số hạng đầu và số hạng cuối:
+$$S_n = \frac{n(u_1 + u_n)}{2}$$
+
+### b) Ví dụ và luyện tập về tính tổng
+
+**Ví dụ 5 (Bài toán rạp hát mở đầu):** Một nhà hát có 25 hàng ghế với 16 ghế ở hàng thứ nhất, 18 ghế ở hàng thứ hai, 20 ghế ở hàng thứ ba,... mỗi hàng sau nhiều hơn hàng trước 2 ghế. Tính tổng số ghế của nhà hát.
+
+Lời giải Ví dụ 5:
+• Số ghế ở các hàng lập thành cấp số cộng với $n = 25, u_1 = 16, d = 2$.
+• Tổng số ghế là:
+$$S\_{25} = \frac{25}{2}[2(16) + (25 - 1) \cdot 2] = \frac{25}{2}[32 + 48] = \frac{25 \cdot 80}{2} = 1\\,000\text{ (ghế).}$$
+
+**Ví dụ 6:** Cần lấy tổng của bao nhiêu số hạng đầu của cấp số cộng $2, 5, 8, \dots$ để được kết quả bằng 345?
+
+Lời giải Ví dụ 6:
+• Cấp số cộng có $u_1 = 2, d = 3$. Gọi $n$ là số số hạng cần lấy tổng:
+$$S_n = \frac{n}{2}[2(2) + (n - 1) \cdot 3] = \frac{n}{2}(3n + 1) = 345$$
+$$\Leftrightarrow n(3n + 1) = 690 \Leftrightarrow 3n^2 + n - 690 = 0$$
+• Giải phương trình bậc hai, ta được $n = 15$ (nhận vì $n \in \mathbb{N}^\*$) hoặc $n = -\frac{46}{3}$ (loại).
+• Vậy cần lấy tổng của 15 số hạng đầu.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và mô hình hoá
+
+**Vận dụng (Tổng thu nhập 10 năm):** Anh Nam nhận việc tại công ty công nghệ với lương năm đầu 100 triệu đồng, mỗi năm sau tăng thêm 20 triệu đồng. Tính tổng tiền lương anh Nam nhận được sau 10 năm làm việc.
+
+Lời giải Vận dụng:
+• Tiền lương hàng năm của anh Nam lập thành cấp số cộng với $u_1 = 100$, $d = 20$, $n = 10$.
+• Tổng số tiền lương sau 10 năm là:
+$$S\_{10} = \frac{10}{2}[2(100) + (10 - 1) \cdot 20] = 5[200 + 180] = 5 \cdot 380 = 1\\,900\text{ (triệu đồng)} = 1{,}9\text{ tỉ đồng.}$$
+
+**Bài 2.12 (Khấu hao giá trị xe ô tô):** Giá một chiếc xe ô tô lúc mới mua là 680 triệu đồng. Cứ sau mỗi năm sử dụng, giá trị xe giảm 55 triệu đồng. Tính giá trị còn lại của chiếc xe sau 5 năm sử dụng.
+
+Lời giải Bài 2.12:
+• Gọi $u_n$ là giá trị của xe sau $n$ năm sử dụng. Dãy $(u_n)$ là cấp số cộng có số hạng đầu $u_1 = 680 - 55 = 625$ triệu đồng và công sai $d = -55$ triệu đồng.
+• Giá trị xe sau 5 năm sử dụng là:
+$$u_5 = 680 - 5 \times 55 = 680 - 275 = 405\text{ (triệu đồng).}$$
+
+**Bài 2.13 (Thiết kế hội trường):** Hội trường có 15 ghế ở hàng thứ nhất, 18 ghế ở hàng thứ hai, 21 ghế ở hàng thứ ba,... mỗi hàng sau nhiều hơn hàng liền trước 3 ghế. Muốn hội trường chứa ít nhất 870 ghế thì phải thiết kế tối thiểu bao nhiêu hàng ghế?
+
+Lời giải Bài 2.13:
+• Số ghế ở các hàng lập thành cấp số cộng với $u_1 = 15, d = 3$.
+• Tổng số ghế của $n$ hàng là:
+$$S_n = \frac{n}{2}[2(15) + (n - 1) \cdot 3] = \frac{n}{2}(3n + 27) = \frac{3n(n + 9)}{2}$$
+• Để sức chứa ít nhất 870 ghế: $\frac{3n(n + 9)}{2} \ge 870 \Leftrightarrow n(n + 9) \ge 580 \Leftrightarrow n^2 + 9n - 580 \ge 0$.
+• Tam thức bậc hai $n^2 + 9n - 580 = 0$ có nghiệm $n = 20$ và $n = -29$.
+• Vì $n \in \mathbb{N}^\*$ nên ta có $n \ge 20$.
+• Vậy cần thiết kế tối thiểu 20 hàng ghế.
+
+**Bài 2.14 (Tăng trưởng dân số theo quy luật cộng):** Năm 2020 dân số thành phố là 1,2 triệu người. Mỗi năm dân số tăng thêm khoảng 30 nghìn người. Ước tính dân số thành phố vào năm 2030.
+
+Lời giải Bài 2.14:
+• Số năm từ 2020 đến 2030 là $n = 2030 - 2020 = 10$ năm.
+• Mỗi năm tăng 30 nghìn người $= 0{,}03$ triệu người.
+• Dân số thành phố năm 2030 là:
+$$P\_{2030} = 1{,}2 + 10 \times 0{,}03 = 1{,}2 + 0{,}3 = 1{,}5\text{ (triệu người)} = 1\\,500\text{ nghìn người.}$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 2.8:** Xác định công sai, số hạng thứ 5, số hạng tổng quát và số hạng thứ 100 của mỗi cấp số cộng sau:
+a) $4, 9, 14, 19, \dots$;
+b) $1, -1, -3, -5, \dots$
+
+Lời giải Bài 2.8:
+• a) $u_1 = 4, d = 9 - 4 = 5$. Ta có:
+  + Số hạng tổng quát: $u_n = 4 + (n - 1) \cdot 5 = 5n - 1$.
+  + Số hạng thứ 5: $u_5 = 5(5) - 1 = 24$.
+  + Số hạng thứ 100: $u\_{100} = 5(100) - 1 = 499$.
+• b) $u_1 = 1, d = -1 - 1 = -2$. Ta có:
+  + Số hạng tổng quát: $u_n = 1 + (n - 1)(-2) = -2n + 3$.
+  + Số hạng thứ 5: $u_5 = -2(5) + 3 = -7$.
+  + Số hạng thứ 100: $u\_{100} = -2(100) + 3 = -197$.
+
+**Bài 2.9:** Viết năm số hạng đầu của mỗi dãy số sau và xét xem có phải là cấp số cộng không. Nếu là cấp số cộng, tìm công sai $d$ và biểu diễn dưới dạng $u_n = u_1 + (n - 1)d$:
+a) $u_n = 3 + 5n$;
+b) $u_n = 6n - 4$;
+c) $u_1 = 2, u_n = u\_{n-1} + n$ ($n \ge 2$);
+d) $u_1 = 2, u_n = u\_{n-1} + 3$ ($n \ge 2$).
+
+Lời giải Bài 2.9:
+• a) Năm số hạng đầu: $8, 13, 18, 23, 28$. Ta có $u_n - u\_{n-1} = 5$ không đổi nên đây là cấp số cộng với $u_1 = 8, d = 5$. Công thức: $u_n = 8 + (n - 1) \cdot 5$.
+• b) Năm số hạng đầu: $2, 8, 14, 20, 26$. Ta có $u_n - u\_{n-1} = 6$ không đổi nên là cấp số cộng với $u_1 = 2, d = 6$. Công thức: $u_n = 2 + (n - 1) \cdot 6$.
+• c) Năm số hạng đầu: $u_1 = 2; u_2 = 4; u_3 = 7; u_4 = 11; u_5 = 16$. Hiệu $u_2 - u_1 = 2 \ne u_3 - u_2 = 3$ nên dãy số không phải là cấp số cộng.
+• d) Năm số hạng đầu: $2, 5, 8, 11, 14$. Theo định nghĩa $u_n - u\_{n-1} = 3$ nên đây là cấp số cộng có $u_1 = 2, d = 3$. Công thức: $u_n = 2 + (n - 1) \cdot 3$.
+
+**Bài 2.10:** Một cấp số cộng có số hạng thứ 5 bằng 18 và số hạng thứ 12 bằng 32. Tìm số hạng thứ 50 của cấp số cộng này.
+
+Lời giải Bài 2.10:
+• Ta có hệ phương trình theo $u_1$ và $d$:
+$$\begin{cases} u_5 = u_1 + 4d = 18 \\\ u\_{12} = u_1 + 11d = 32 \end{cases} \Leftrightarrow \begin{cases} 7d = 14 \\\ u_1 = 18 - 4d \end{cases} \Leftrightarrow \begin{cases} d = 2 \\\ u_1 = 10 \end{cases}$$
+• Số hạng thứ 50 là: $u\_{50} = u_1 + 49d = 10 + 49(2) = 10 + 98 = 108$.
+
+**Bài 2.11:** Một cấp số cộng có số hạng đầu bằng 5 và công sai bằng 2. Hỏi phải lấy tổng của bao nhiêu số hạng đầu để có tổng bằng 2 700?
+
+Lời giải Bài 2.11:
+• Ta có $u_1 = 5, d = 2$. Công thức tính tổng $n$ số hạng đầu:
+$$S_n = \frac{n}{2}[2(5) + (n - 1) \cdot 2] = \frac{n}{2}(10 + 2n - 2) = \frac{n(2n + 8)}{2} = n(n + 4) = 2\\,700$$
+$$\Leftrightarrow n^2 + 4n - 2\\,700 = 0$$
+• Phương trình bậc hai có $\Delta' = 4 - (-2\\,700) = 2\\,704 = 52^2$. Nghiệm là:
+$$n = -2 + 52 = 50 \quad (\text{nhận do } n \in \mathbb{N}^\*), \quad n = -2 - 52 = -54 \quad (\text{loại})$$
+• Vậy cần lấy tổng của 50 số hạng đầu.

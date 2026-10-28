@@ -1,0 +1,220 @@
+---
+title: 'Lesson 6: Arithmetic sequence'
+description: Theoretical system for the lesson on arithmetic sequence with illustrative examples.
+tags:
+  - grade 11
+  - Arithmetic progression (arithmetic sequence)
+  - Common difference
+  - General term
+  - Sum of the first $n$ terms
+grade: 11
+order: 0
+updatedDate: 2026-10-28T14:06:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Arithmetic progression (arithmetic sequence)
+
+·       Common difference ($d$)
+
+·       General term ($n$-th term, $u_n$)
+
+·       Sum of the first $n$ terms ($S_n$)
+
+### **Knowledge and Skills:**
+
+·       Identify whether a given sequence is an arithmetic progression, and determine its first term $u_1$ and common difference $d$.
+
+·       Explain and proficiently apply the general term formula of an arithmetic progression: $u_n = u_1 + (n - 1)d$.
+
+·       Compute the sum of the first $n$ terms of an arithmetic progression using standard formulas: $S_n = \frac{n}{2}[2u_1 + (n - 1)d] = \frac{n(u_1 + u_n)}{2}$.
+
+·       Apply arithmetic progressions to model and solve real-world problems (theater seating arrangements, auditorium capacity, asset depreciation, salary step increases, and linear population growth).
+
+## Definition of an Arithmetic Progression
+
+<Youtube url="https://www.youtube.com/watch?v=example_dinh_nghia_cap_so_cong"/>
+
+### a) Concept and Recurrence Relation
+
+Definition:
+An arithmetic progression (or arithmetic sequence) is a sequence (finite or infinite) in which, starting from the second term, each term is obtained by adding a fixed constant $d$ to the immediately preceding term:
+$$u_n = u\_{n-1} + d \quad (n \ge 2)$$
+• The constant $d$ is called the common difference of the arithmetic progression.
+• When $d = 0$, the arithmetic progression is a constant sequence: $a, a, a, \dots$
+• To prove that a sequence $(u_n)$ is an arithmetic progression, one demonstrates that the difference between consecutive terms $u_n - u\_{n-1} = d$ remains constant for all $n \ge 2$.
+
+### b) Illustrative Examples and Practice on the Definition
+
+**Example 1:** Given an arithmetic progression $(u_n)$ with first term $u_1 = 2$ and common difference $d = 3$. Write the first five terms of this arithmetic progression.
+
+Solution for Example 1:
+• $u_1 = 2$.
+• $u_2 = u_1 + d = 2 + 3 = 5$.
+• $u_3 = u_2 + d = 5 + 3 = 8$.
+• $u_4 = u_3 + d = 8 + 3 = 11$.
+• $u_5 = u_4 + d = 11 + 3 = 14$.
+Thus, the first five terms are: $2, 5, 8, 11, 14$.
+
+**Example 2:** Given the sequence $(u_n)$ defined by $u_n = 5n - 1$. Prove that $(u_n)$ is an arithmetic progression, and determine $u_1$ and $d$.
+
+Solution for Example 2:
+• For all $n \ge 2$, consider the difference: $u_n - u\_{n-1} = (5n - 1) - [5(n - 1) - 1] = 5n - 1 - 5n + 6 = 5$ (constant).
+• Therefore, $(u_n)$ is an arithmetic progression with first term $u_1 = 5(1) - 1 = 4$ and common difference $d = 5$.
+
+**Practice 1:** Given the sequence $(u_n)$ with $u_n = -2n + 3$. Prove that $(u_n)$ is an arithmetic progression, and specify its first term and common difference.
+
+Solution for Practice 1:
+• For all $n \ge 2$, the difference is: $u_n - u\_{n-1} = (-2n + 3) - [-2(n - 1) + 3] = -2n + 3 + 2n - 5 = -2$ (constant).
+• Hence, $(u_n)$ is an arithmetic progression with first term $u_1 = -2(1) + 3 = 1$ and common difference $d = -2$.
+
+## General Term of an Arithmetic Progression
+
+<Youtube url="https://www.youtube.com/watch?v=example_so_hang_tong_quat_csc"/>
+
+### a) General Term Formula
+
+Theorem:
+If an arithmetic progression $(u_n)$ has first term $u_1$ and common difference $d$, then its general term $u_n$ is given by:
+$$u_n = u_1 + (n - 1)d \quad (n \ge 1)$$
+
+### b) Illustrative Examples and Practice on the General Term
+
+**Example 3:** Find the first five terms and the 100th term of the arithmetic progression $(u_n): 10, 5, \dots$
+
+Solution for Example 3:
+• The arithmetic progression has first term $u_1 = 10$ and common difference $d = 5 - 10 = -5$.
+• The first five terms are: $10, 5, 0, -5, -10$.
+• The 100th term is: $u\_{100} = u_1 + (100 - 1)d = 10 + 99(-5) = 10 - 495 = -485$.
+
+**Example 4:** An arithmetic progression has a 10th term equal to 48 and an 18th term equal to 88. Find the 100th term of this progression.
+
+Solution for Example 4:
+• Let $u_1$ be the first term and $d$ be the common difference. We establish the linear system:
+$$\begin{cases} u\_{10} = u_1 + 9d = 48 \\\ u\_{18} = u_1 + 17d = 88 \end{cases} \Leftrightarrow \begin{cases} 8d = 40 \\\ u_1 = 48 - 9d \end{cases} \Leftrightarrow \begin{cases} d = 5 \\\ u_1 = 3 \end{cases}$$
+• Therefore, the 100th term is: $u\_{100} = u_1 + 99d = 3 + 99(5) = 498$.
+
+**Practice 2:** Given the sequence $(u_n)$ with $u_n = 4n - 3$. Prove that $(u_n)$ is an arithmetic progression, find $u_1$ and $d$, and express $u_n$ in the standard form $u_n = u_1 + (n - 1)d$.
+
+Solution for Practice 2:
+• For all $n \ge 2$: $u_n - u\_{n-1} = (4n - 3) - [4(n - 1) - 3] = 4$ (constant). Thus, $(u_n)$ is an arithmetic progression.
+• The first term is $u_1 = 4(1) - 3 = 1$, and the common difference is $d = 4$.
+• In standard form: $u_n = 1 + (n - 1) \cdot 4$.
+
+## Sum of the First n Terms of an Arithmetic Progression
+
+<Youtube url="https://www.youtube.com/watch?v=example_tong_n_so_hang_csc"/>
+
+### a) Formula for the Sum of the First n Terms
+
+Theorem:
+Let $(u_n)$ be an arithmetic progression with first term $u_1$ and common difference $d$. The sum of the first $n$ terms, denoted by $S_n = u_1 + u_2 + \dots + u_n$, is given by:
+$$S_n = \frac{n}{2}[2u_1 + (n - 1)d]$$
+Alternatively, expressed using the first term and the $n$-th term:
+$$S_n = \frac{n(u_1 + u_n)}{2}$$
+
+### b) Illustrative Examples and Practice on Summation
+
+**Example 5 (Introductory Theater Problem):** A theater has 25 rows of seats, with 16 seats in the first row, 18 seats in the second row, 20 seats in the third row, and each subsequent row having 2 more seats than the preceding one. Calculate the total number of seats in the theater.
+
+Solution for Example 5:
+• The seat numbers per row form an arithmetic progression with $n = 25, u_1 = 16, d = 2$.
+• The total seating capacity is:
+$$S\_{25} = \frac{25}{2}[2(16) + (25 - 1) \cdot 2] = \frac{25}{2}[32 + 48] = \frac{25 \cdot 80}{2} = 1\\,000\text{ (seats).}$$
+
+**Example 6:** How many terms of the arithmetic progression $2, 5, 8, \dots$ must be summed to yield a total of 345?
+
+Solution for Example 6:
+• The progression has $u_1 = 2$ and $d = 3$. Let $n$ be the required number of terms:
+$$S_n = \frac{n}{2}[2(2) + (n - 1) \cdot 3] = \frac{n}{2}(3n + 1) = 345$$
+$$\Leftrightarrow n(3n + 1) = 690 \Leftrightarrow 3n^2 + n - 690 = 0$$
+• Solving the quadratic equation gives $n = 15$ (valid since $n \in \mathbb{N}^\*$) or $n = -\frac{46}{3}$ (extraneous).
+• Hence, exactly 15 terms must be summed.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application (Ten-Year Total Compensation):** Nam accepts an employment offer at a tech company with a starting first-year salary of 100 million VND, with an annual raise of 20 million VND each subsequent year. Compute the total cumulative salary Nam receives after working 10 years at the company.
+
+Solution for Application:
+• Nam's annual salary sequence forms an arithmetic progression with $u_1 = 100$, $d = 20$, and $n = 10$.
+• The total cumulative salary over 10 years is:
+$$S\_{10} = \frac{10}{2}[2(100) + (10 - 1) \cdot 20] = 5[200 + 180] = 5(380) = 1\\,900\text{ (million VND)} = 1.9\text{ billion VND.}$$
+
+**Exercise 2.12 (Vehicle Depreciation):** The purchase price of a new car is 680 million VND. After each year of use, the market value of the car decreases by 55 million VND. Calculate the remaining value of the car after 5 years of use.
+
+Solution for Exercise 2.12:
+• Let $u_n$ denote the value of the car after $n$ years of usage. The sequence $(u_n)$ is an arithmetic progression with first term $u_1 = 680 - 55 = 625$ million VND and common difference $d = -55$ million VND.
+• The remaining value after 5 years is:
+$$u_5 = 680 - 5 \times 55 = 680 - 275 = 405\text{ (million VND).}$$
+
+**Exercise 2.13 (Auditorium Design):** An architect designs an auditorium with 15 seats in the first row, 18 seats in the second row, 21 seats in the third row, and each subsequent row having 3 more seats than the preceding one. If the auditorium must have a capacity of at least 870 seats, what is the minimum number of rows that must be designed?
+
+Solution for Exercise 2.13:
+• The seat counts per row form an arithmetic progression with $u_1 = 15$ and $d = 3$.
+• The total seating capacity of $n$ rows is:
+$$S_n = \frac{n}{2}[2(15) + (n - 1) \cdot 3] = \frac{n}{2}(3n + 27) = \frac{3n(n + 9)}{2}$$
+• For capacity of at least 870 seats: $\frac{3n(n + 9)}{2} \ge 870 \Leftrightarrow n(n + 9) \ge 580 \Leftrightarrow n^2 + 9n - 580 \ge 0$.
+• The quadratic equation $n^2 + 9n - 580 = 0$ has roots $n = 20$ and $n = -29$.
+• Since $n \in \mathbb{N}^\*$, we require $n \ge 20$.
+• Thus, a minimum of 20 rows of seats must be designed.
+
+**Exercise 2.14 (Linear Population Growth):** In 2020, the population of a city was approximately 1.2 million people. Suppose that each year, the population increases by approximately 30 thousand people. Estimate the city's population in the year 2030.
+
+Solution for Exercise 2.14:
+• The time elapsed from 2020 to 2030 is $n = 2030 - 2020 = 10$ years.
+• The annual increase is 30 thousand people $= 0.03$ million people.
+• The estimated population in 2030 is:
+$$P\_{2030} = 1.2 + 10 \times 0.03 = 1.2 + 0.3 = 1.5\text{ (million people)} = 1\\,500\text{ thousand people.}$$
+
+### b) Detailed Section Exercises
+
+**Exercise 2.8:** Determine the common difference, the 5th term, the general term, and the 100th term of each arithmetic progression:
+a) $4, 9, 14, 19, \dots$;
+b) $1, -1, -3, -5, \dots$
+
+Solution for Exercise 2.8:
+• a) $u_1 = 4, d = 9 - 4 = 5$. We have:
+  + General term: $u_n = 4 + (n - 1) \cdot 5 = 5n - 1$.
+  + 5th term: $u_5 = 5(5) - 1 = 24$.
+  + 100th term: $u\_{100} = 5(100) - 1 = 499$.
+• b) $u_1 = 1, d = -1 - 1 = -2$. We have:
+  + General term: $u_n = 1 + (n - 1)(-2) = -2n + 3$.
+  + 5th term: $u_5 = -2(5) + 3 = -7$.
+  + 100th term: $u\_{100} = -2(100) + 3 = -197$.
+
+**Exercise 2.9:** Write the first five terms of each sequence $(u_n)$ and determine whether it is an arithmetic progression. If it is an arithmetic progression, find the common difference $d$ and express the general term as $u_n = u_1 + (n - 1)d$:
+a) $u_n = 3 + 5n$;
+b) $u_n = 6n - 4$;
+c) $u_1 = 2, u_n = u\_{n-1} + n$ ($n \ge 2$);
+d) $u_1 = 2, u_n = u\_{n-1} + 3$ ($n \ge 2$).
+
+Solution for Exercise 2.9:
+• a) First five terms: $8, 13, 18, 23, 28$. The difference $u_n - u\_{n-1} = 5$ is constant, so this is an arithmetic progression with $u_1 = 8, d = 5$. Formula: $u_n = 8 + (n - 1) \cdot 5$.
+• b) First five terms: $2, 8, 14, 20, 26$. The difference $u_n - u\_{n-1} = 6$ is constant, so this is an arithmetic progression with $u_1 = 2, d = 6$. Formula: $u_n = 2 + (n - 1) \cdot 6$.
+• c) First five terms: $u_1 = 2; u_2 = 4; u_3 = 7; u_4 = 11; u_5 = 16$. Since $u_2 - u_1 = 2 \ne u_3 - u_2 = 3$, this sequence is not an arithmetic progression.
+• d) First five terms: $2, 5, 8, 11, 14$. By recurrence definition, $u_n - u\_{n-1} = 3$ is constant, so this is an arithmetic progression with $u_1 = 2, d = 3$. Formula: $u_n = 2 + (n - 1) \cdot 3$.
+
+**Exercise 2.10:** An arithmetic progression has a 5th term equal to 18 and a 12th term equal to 32. Find the 50th term of this progression.
+
+Solution for Exercise 2.10:
+• Setting up a system of linear equations in $u_1$ and $d$:
+$$\begin{cases} u_5 = u_1 + 4d = 18 \\\ u\_{12} = u_1 + 11d = 32 \end{cases} \Leftrightarrow \begin{cases} 7d = 14 \\\ u_1 = 18 - 4d \end{cases} \Leftrightarrow \begin{cases} d = 2 \\\ u_1 = 10 \end{cases}$$
+• The 50th term is: $u\_{50} = u_1 + 49d = 10 + 49(2) = 10 + 98 = 108$.
+
+**Exercise 2.11:** An arithmetic progression has a first term equal to 5 and a common difference equal to 2. How many terms must be summed to obtain a total of 2,700?
+
+Solution for Exercise 2.11:
+• Given $u_1 = 5$ and $d = 2$. The sum of the first $n$ terms is:
+$$S_n = \frac{n}{2}[2(5) + (n - 1) \cdot 2] = \frac{n}{2}(10 + 2n - 2) = \frac{n(2n + 8)}{2} = n(n + 4) = 2\\,700$$
+$$\Leftrightarrow n^2 + 4n - 2\\,700 = 0$$
+• Solving the quadratic equation yields $\Delta' = 4 - (-2\\,700) = 2\\,704 = 52^2$. The solutions are:
+$$n = -2 + 52 = 50 \quad (\text{accepted since } n \in \mathbb{N}^\*), \quad n = -2 - 52 = -54 \quad (\text{rejected})$$
+• Thus, exactly 50 terms must be summed.
