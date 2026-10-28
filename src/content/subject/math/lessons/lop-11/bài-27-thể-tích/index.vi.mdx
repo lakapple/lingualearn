@@ -1,0 +1,169 @@
+---
+title: 'Bài 27: Thể tích.'
+description: Hệ thống lý thuyết bài Thể tích cùng ví dụ minh họa.
+tags:
+  - lớp 11
+  - Thể tích khối hộp
+  - Thể tích khối lăng trụ
+  - Thể tích khối chóp
+  - Thể tích khối chóp cụt đều
+grade: 11
+order: 0
+updatedDate: 2026-10-28T23:50:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+**Thuật ngữ:**
+
+·       Thể tích khối hộp
+
+·       Thể tích khối lăng trụ
+
+·       Thể tích khối chóp
+
+·       Thể tích khối chóp cụt đều
+
+**Kiến thức, kĩ năng:**
+
+·       Nhận biết công thức tính thể tích của khối chóp, khối lăng trụ, khối hộp, khối chóp cụt đều.
+
+·       Tính thể tích của khối chóp, khối lăng trụ, khối hộp, khối chóp cụt đều trong một số tình huống hình học không gian đơn giản.
+
+·       Vận dụng kiến thức, kĩ năng về thể tích vào một số bài toán thực tế (tính công suất điều hoà theo thể tích phòng, tính thể tích sọt đựng đồ, tính dung tích thùng chứa nước).
+
+## Công thức tính thể tích của các khối đa diện
+
+<Youtube url="https://www.youtube.com/watch?v=example_the_tich_khoi_da_dien"/>
+
+### a) Khái niệm và các công thức cơ bản
+
+Phần không gian được giới hạn bởi hình chóp, hình chóp cụt đều, hình lăng trụ, hình hộp tương ứng được gọi là khối chóp, khối chóp cụt đều, khối lăng trụ, khối hộp.
+• Thể tích của khối chóp có diện tích đáy $S$ và chiều cao $h$ là:
+$$V = \frac{1}{3} \cdot S \cdot h$$
+• Thể tích của khối chóp cụt đều có diện tích đáy lớn $S$, diện tích đáy bé $S'$ và chiều cao $h$ là:
+$$V = \frac{1}{3} \cdot (S + S' + \sqrt{S \cdot S'}) \cdot h$$
+• Thể tích của khối lăng trụ có diện tích đáy $S$ và chiều cao $h$ là:
+$$V = S \cdot h$$
+Nhận xét:
+\- Thể tích của khối tứ diện bằng một phần ba tích của diện tích một mặt và chiều cao của khối tứ diện ứng với mặt đó.
+\- Thể tích của khối hộp bằng tích của diện tích một mặt và chiều cao của khối hộp ứng với mặt đó.
+
+### b) Ví dụ và luyện tập
+
+**Ví dụ 1:** Cho khối tứ diện $OABC$ có các cạnh $OA, OB, OC$ đôi một vuông góc với nhau và $OA = a, OB = b, OC = c$. Tính thể tích của khối tứ diện.
+
+Lời giải Ví dụ 1:
+• Tam giác vuông $OBC$ tại $O$ có diện tích là $S\_{OBC} = \frac{1}{2}bc$.
+• Vì $OA \perp OB$ và $OA \perp OC$ nên $OA \perp (OBC)$, do đó chiều cao của tứ diện hạ từ đỉnh $A$ xuống đáy $(OBC)$ là $OA = a$.
+• Thể tích của khối tứ diện $OABC$ là:
+  $$V\_{OABC} = \frac{1}{3} S\_{OBC} \cdot OA = \frac{1}{3} \cdot \left(\frac{1}{2}bc\right) \cdot a = \frac{1}{6}abc.$$
+
+**Luyện tập 1:** Cho khối chóp đều $S.ABCD$ có cạnh đáy bằng $a$, cạnh bên bằng $b$. Tính thể tích của khối chóp.
+
+Lời giải Luyện tập 1:
+• Đáy $ABCD$ là hình vuông cạnh $a$ nên diện tích đáy là $S = a^2$.
+• Gọi $O$ là tâm của hình vuông $ABCD$, suy ra $SO \perp (ABCD)$ và $SO$ là chiều cao của hình chóp.
+  Ta có $OA = \frac{AC}{2} = \frac{a\sqrt{2}}{2}$.
+• Xét tam giác vuông $SOA$ tại $O$:
+  $$SO = \sqrt{SA^2 - OA^2} = \sqrt{b^2 - \left(\frac{a\sqrt{2}}{2}\right)^2} = \sqrt{b^2 - \frac{a^2}{2}}$$
+• Thể tích khối chóp là:
+  $$V = \frac{1}{3} S\_{ABCD} \cdot SO = \frac{1}{3} a^2 \sqrt{b^2 - \frac{a^2}{2}} = \frac{a^2\sqrt{4b^2 - 2a^2}}{6}.$$
+
+**Ví dụ 2:** Cho khối lăng trụ $ABC.A'B'C'$ có đáy là các tam giác đều cạnh $a$, mặt bên $(ACC'A')$ vuông góc với hai mặt đáy, tam giác $A'AC$ cân tại $A'$ và $AA' = b$ ($a < 2b$). Tính thể tích của khối lăng trụ.
+
+Lời giải Ví dụ 2:
+• Gọi $H$ là trung điểm của $AC$. Vì tam giác $A'AC$ cân tại $A'$ nên $A'H \perp AC$.
+• Do $(ACC'A') \perp (ABC)$ và giao tuyến là $AC$, nên $A'H \perp (ABC)$, suy ra $A'H$ là chiều cao của lăng trụ:
+  $$A'H = \sqrt{A'A^2 - AH^2} = \sqrt{b^2 - \left(\frac{a}{2}\right)^2} = \sqrt{b^2 - \frac{a^2}{4}}$$
+• Tam giác đều $ABC$ cạnh $a$ có diện tích là $S\_{ABC} = \frac{a^2\sqrt{3}}{4}$.
+• Thể tích khối lăng trụ là:
+  $$V = S\_{ABC} \cdot A'H = \frac{a^2\sqrt{3}}{4} \cdot \sqrt{b^2 - \frac{a^2}{4}} = \frac{a^2\sqrt{3(4b^2 - a^2)}}{8}.$$
+
+**Ví dụ 3:** Cho khối hộp $ABCD.A'B'C'D'$ có $AB = 8\text{ cm}, AD = 5\text{ cm}, AA' = 6\text{ cm}, \widehat{BAD} = 30^{\circ}$, góc giữa $AA'$ và $(ABCD)$ bằng $45^{\circ}$. Tính thể tích của khối hộp.
+
+Lời giải Ví dụ 3:
+• Diện tích hình bình hành $ABCD$ là:
+  $$S\_{ABCD} = AB \cdot AD \cdot \sin \widehat{BAD} = 8 \cdot 5 \cdot \sin 30^{\circ} = 20\text{ (cm}^2\text{).}$$
+• Gọi $H$ là hình chiếu của $A'$ trên $(ABCD)$. Khi đó góc giữa $AA'$ và $(ABCD)$ là góc $\widehat{A'AH} = 45^{\circ}$.
+• Chiều cao của khối hộp là:
+  $$A'H = AA' \cdot \sin 45^{\circ} = 6 \cdot \frac{\sqrt{2}}{2} = 3\sqrt{2}\text{ (cm).}$$
+• Thể tích khối hộp là:
+  $$V = S\_{ABCD} \cdot A'H = 20 \cdot 3\sqrt{2} = 60\sqrt{2}\text{ (cm}^3\text{).}$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 1 (Công suất điều hoà phòng):** Khi mua máy điều hoà, mỗi mét khối của phòng cần công suất khoảng 200 BTU. Căn phòng có dạng hình hộp chữ nhật rộng 4 m, dài 5 m và cao 3 m. Bác An cần mua điều hoà có công suất bao nhiêu BTU?
+
+Lời giải Vận dụng 1:
+• Thể tích căn phòng hình hộp chữ nhật là:
+  $$V = 4 \cdot 5 \cdot 3 = 60\text{ (m}^3\text{).}$$
+• Công suất điều hoà cần thiết cho căn phòng là:
+  $$P = 60 \cdot 200 = 12\\,000\text{ (BTU).}$$
+• Vậy bác An cần mua điều hoà có công suất khoảng 12.000 BTU.
+
+**Vận dụng 2 (Sọt đựng đồ hình chóp cụt đều):** Một sọt đựng đồ có dạng hình chóp cụt đều. Đáy và miệng sọt là các hình vuông tương ứng có cạnh bằng 30 cm, 60 cm, cạnh bên của sọt dài 50 cm. Tính thể tích của sọt.
+
+Lời giải Vận dụng 2:
+• Đáy bé là hình vuông cạnh $a = 30\text{ cm} \implies S' = 30^2 = 900\text{ cm}^2$.
+• Đáy lớn (miệng sọt) là hình vuông cạnh $b = 60\text{ cm} \implies S = 60^2 = 3\\,600\text{ cm}^2$.
+• Gọi $O, O'$ lần lượt là tâm đáy lớn và đáy bé. Bán kính đường tròn ngoại tiếp mỗi đáy:
+  $$OA = \frac{60\sqrt{2}}{2} = 30\sqrt{2}\text{ cm}; \quad O'A' = \frac{30\sqrt{2}}{2} = 15\sqrt{2}\text{ cm}.$$
+• Xét hình thang vuông $AA'O'O$, kẻ $A'K \perp OA$ tại $K$, ta có $AK = OA - O'A' = 15\sqrt{2}\text{ cm}$.
+• Chiều cao của sọt là:
+  $$h = A'K = \sqrt{AA'^2 - AK^2} = \sqrt{50^2 - (15\sqrt{2})^2} = \sqrt{2500 - 450} = \sqrt{2050} = 5\sqrt{82}\text{ (cm)} \approx 45{,}28\text{ cm}.$$
+• Thể tích của sọt là:
+  $$V = \frac{1}{3} h (S + S' + \sqrt{S \cdot S'}) = \frac{1}{3} \cdot 5\sqrt{82} \cdot (3600 + 900 + 1800) = \frac{1}{3} \cdot 5\sqrt{82} \cdot 6300 = 10\\,500\sqrt{82}\text{ cm}^3 \approx 95\\,081\text{ cm}^3 = 95{,}08\text{ lít}.$$
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 7.28:** Cho khối chóp đều $S.ABC$, đáy có cạnh bằng $a$, cạnh bên bằng $b$. Tính thể tích của khối chóp đó. Từ đó suy ra thể tích của khối tứ diện đều có cạnh bằng $a$.
+
+Lời giải Bài 7.28:
+• Đáy $ABC$ là tam giác đều cạnh $a$ nên $S\_{ABC} = \frac{a^2\sqrt{3}}{4}$.
+• Gọi $O$ là tâm đáy $ABC$, bán kính ngoại tiếp $OA = \frac{a}{\sqrt{3}}$. Chiều cao của khối chóp là:
+  $$h = SO = \sqrt{SA^2 - OA^2} = \sqrt{b^2 - \frac{a^2}{3}} = \sqrt{\frac{3b^2 - a^2}{3}}.$$
+• Thể tích khối chóp đều $S.ABC$ là:
+  $$V = \frac{1}{3} S\_{ABC} \cdot h = \frac{1}{3} \cdot \frac{a^2\sqrt{3}}{4} \cdot \sqrt{\frac{3b^2 - a^2}{3}} = \frac{a^2\sqrt{3b^2 - a^2}}{12}.$$
+• Khi tứ diện đều cạnh $a$, tức $b = a$:
+  $$V = \frac{a^2\sqrt{3a^2 - a^2}}{12} = \frac{a^2\sqrt{2a^2}}{12} = \frac{a^3\sqrt{2}}{12}.$$
+
+**Bài 7.29:** Cho khối lăng trụ đứng $ABC.A'B'C'$ có $AA' = 5\text{ cm}, AB = 6\text{ cm}, BC = 2\text{ cm}, \widehat{ABC} = 150^{\circ}$. Tính thể tích của khối lăng trụ.
+
+Lời giải Bài 7.29:
+• Diện tích tam giác đáy $ABC$ là:
+  $$S\_{ABC} = \frac{1}{2} AB \cdot BC \cdot \sin \widehat{ABC} = \frac{1}{2} \cdot 6 \cdot 2 \cdot \sin 150^{\circ} = 6 \cdot \frac{1}{2} = 3\text{ (cm}^2\text{).}$$
+• Chiều cao của lăng trụ đứng là $h = AA' = 5\text{ cm}$.
+• Thể tích của khối lăng trụ là:
+  $$V = S\_{ABC} \cdot h = 3 \cdot 5 = 15\text{ (cm}^3\text{).}$$
+
+**Bài 7.30:** Cho khối chóp đều $S.ABCD$, đáy có cạnh bằng 6 cm. Tính thể tích của khối chóp đó trong các trường hợp sau:
+a) Cạnh bên tạo với mặt đáy một góc bằng $60^{\circ}$;
+b) Mặt bên tạo với mặt đáy một góc bằng $45^{\circ}$.
+
+Lời giải Bài 7.30:
+• Diện tích đáy hình vuông $ABCD$ là $S = 6^2 = 36\text{ cm}^2$. Gọi $O$ là tâm hình vuông $ABCD$, $SO \perp (ABCD)$.
+  Ta có $OA = \frac{6\sqrt{2}}{2} = 3\sqrt{2}\text{ cm}$.
+• a) Cạnh bên tạo với đáy góc $60^{\circ} \implies \widehat{SAO} = 60^{\circ}$.
+  Chiều cao $h = SO = OA \cdot \tan 60^{\circ} = 3\sqrt{2} \cdot \sqrt{3} = 3\sqrt{6}\text{ cm}$.
+  Thể tích khối chóp là: $V = \frac{1}{3} S \cdot h = \frac{1}{3} \cdot 36 \cdot 3\sqrt{6} = 36\sqrt{6}\text{ (cm}^3\text{)}$.
+• b) Gọi $M$ là trung điểm của $CD$, góc giữa mặt bên $(SCD)$ và đáy là $\widehat{SMO} = 45^{\circ}$.
+  Ta có $OM = \frac{6}{2} = 3\text{ cm}$.
+  Chiều cao $h = SO = OM \cdot \tan 45^{\circ} = 3 \cdot 1 = 3\text{ cm}$.
+  Thể tích khối chóp là: $V = \frac{1}{3} S \cdot h = \frac{1}{3} \cdot 36 \cdot 3 = 36\text{ (cm}^3\text{)}$.
+
+**Bài 7.31:** Cho khối lăng trụ $ABC.A'B'C'$ có đáy là các tam giác đều cạnh $a$, $A'A = A'B = A'C = b$. Tính thể tích của khối lăng trụ.
+
+Lời giải Bài 7.31:
+• Vì $A'A = A'B = A'C = b$ nên hình chiếu của $A'$ trên mặt phẳng $(ABC)$ là tâm $O$ của tam giác đều $ABC$.
+• Bán kính đường tròn ngoại tiếp tam giác đều $ABC$ là $OA = \frac{a}{\sqrt{3}}$.
+• Chiều cao của khối lăng trụ là:
+  $$h = A'O = \sqrt{A'A^2 - OA^2} = \sqrt{b^2 - \frac{a^2}{3}}.$$
+• Diện tích đáy tam giác đều là $S\_{ABC} = \frac{a^2\sqrt{3}}{4}$.
+• Thể tích khối lăng trụ là:
+  $$V = S\_{ABC} \cdot h = \frac{a^2\sqrt{3}}{4} \cdot \sqrt{\frac{3b^2 - a^2}{3}} = \frac{a^2\sqrt{3b^2 - a^2}}{4}.$$

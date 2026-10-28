@@ -1,0 +1,169 @@
+---
+title: 'Lesson 27: Volume.'
+description: Theoretical system for the lesson on Volume with illustrative examples.
+tags:
+  - grade 11
+  - Volume of a parallelepiped (box)
+  - Volume of a prism
+  - Volume of a pyramid
+  - Volume of a regular frustum of a pyramid (truncated pyramid)
+grade: 11
+order: 0
+updatedDate: 2026-10-28T23:50:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+**Terminology:**
+
+·       Volume of a parallelepiped (box)
+
+·       Volume of a prism
+
+·       Volume of a pyramid
+
+·       Volume of a regular frustum of a pyramid (truncated pyramid)
+
+**Knowledge and Skills:**
+
+·       Recognize volume formulas for pyramids, prisms, parallelepipeds, and regular truncated pyramids.
+
+·       Compute volumes of pyramids, prisms, parallelepipeds, and regular truncated pyramids in simple geometric situations.
+
+·       Apply knowledge and skills of volume to practical real-world problems (calculating air conditioner capacity based on room volume, computing the volume of a storage basket, finding the capacity of a water tank).
+
+## Volume Formulas for Polyhedral Solids
+
+<Youtube url="https://www.youtube.com/watch?v=example_the_tich_khoi_da_dien"/>
+
+### a) Concepts and Basic Formulas
+
+The portion of space bounded by a pyramid, a regular truncated pyramid, a prism, or a parallelepiped is called a solid pyramid, solid regular truncated pyramid, solid prism, or solid parallelepiped, respectively.
+• The volume of a solid pyramid with base area $S$ and height (altitude) $h$ is:
+$$V = \frac{1}{3} \cdot S \cdot h$$
+• The volume of a solid regular truncated pyramid with lower base area $S$, upper base area $S'$, and height $h$ is:
+$$V = \frac{1}{3} \cdot (S + S' + \sqrt{S \cdot S'}) \cdot h$$
+• The volume of a solid prism with base area $S$ and height $h$ is:
+$$V = S \cdot h$$
+Remarks:
+\- The volume of a tetrahedron equals one-third of the product of the area of any face and the corresponding altitude to that face.
+\- The volume of a parallelepiped equals the product of the area of any face and the corresponding altitude to that face.
+
+### b) Examples and Practice
+
+**Example 1:** Given a tetrahedron $OABC$ whose edges $OA, OB, OC$ are mutually perpendicular and $OA = a, OB = b, OC = c$. Compute the volume of the tetrahedron.
+
+Solution to Example 1:
+• The right-angled triangle $OBC$ at $O$ has area $S\_{OBC} = \frac{1}{2}bc$.
+• Since $OA \perp OB$ and $OA \perp OC$, we have $OA \perp (OBC)$, so the height of the tetrahedron from vertex $A$ to base $(OBC)$ is $OA = a$.
+• The volume of the tetrahedron $OABC$ is:
+  $$V\_{OABC} = \frac{1}{3} S\_{OBC} \cdot OA = \frac{1}{3} \cdot \left(\frac{1}{2}bc\right) \cdot a = \frac{1}{6}abc.$$
+
+**Practice 1:** Given a regular pyramid $S.ABCD$ with base edge $a$ and lateral edge $b$. Compute the volume of the pyramid.
+
+Solution to Practice 1:
+• The base $ABCD$ is a square of side $a$, so its area is $S = a^2$.
+• Let $O$ be the center of square $ABCD$, which implies $SO \perp (ABCD)$ and $SO$ is the altitude of the pyramid.
+  We have $OA = \frac{AC}{2} = \frac{a\sqrt{2}}{2}$.
+• In the right-angled triangle $SOA$ at $O$:
+  $$SO = \sqrt{SA^2 - OA^2} = \sqrt{b^2 - \left(\frac{a\sqrt{2}}{2}\right)^2} = \sqrt{b^2 - \frac{a^2}{2}}$$
+• The volume of the pyramid is:
+  $$V = \frac{1}{3} S\_{ABCD} \cdot SO = \frac{1}{3} a^2 \sqrt{b^2 - \frac{a^2}{2}} = \frac{a^2\sqrt{4b^2 - 2a^2}}{6}.$$
+
+**Example 2:** Given a prism $ABC.A'B'C'$ with equilateral triangular bases of side length $a$, lateral face $(ACC'A')$ perpendicular to both base planes, triangle $A'AC$ isosceles at $A'$, and $AA' = b$ ($a < 2b$). Compute the volume of the prism.
+
+Solution to Example 2:
+• Let $H$ be the midpoint of $AC$. Since triangle $A'AC$ is isosceles at $A'$, we have $A'H \perp AC$.
+• Since $(ACC'A') \perp (ABC)$ along the line of intersection $AC$, we get $A'H \perp (ABC)$, meaning $A'H$ is the altitude of the prism:
+  $$A'H = \sqrt{A'A^2 - AH^2} = \sqrt{b^2 - \left(\frac{a}{2}\right)^2} = \sqrt{b^2 - \frac{a^2}{4}}$$
+• The equilateral triangle $ABC$ of side $a$ has area $S\_{ABC} = \frac{a^2\sqrt{3}}{4}$.
+• The volume of the prism is:
+  $$V = S\_{ABC} \cdot A'H = \frac{a^2\sqrt{3}}{4} \cdot \sqrt{b^2 - \frac{a^2}{4}} = \frac{a^2\sqrt{3(4b^2 - a^2)}}{8}.$$
+
+**Example 3:** Given a parallelepiped $ABCD.A'B'C'D'$ with $AB = 8\text{ cm}, AD = 5\text{ cm}, AA' = 6\text{ cm}, \widehat{BAD} = 30^{\circ}$, and the angle between $AA'$ and $(ABCD)$ is $45^{\circ}$. Compute the volume of the parallelepiped.
+
+Solution to Example 3:
+• The area of parallelogram $ABCD$ is:
+  $$S\_{ABCD} = AB \cdot AD \cdot \sin \widehat{BAD} = 8 \cdot 5 \cdot \sin 30^{\circ} = 20\text{ (cm}^2\text{).}$$
+• Let $H$ be the projection of $A'$ on $(ABCD)$. Then the angle between $AA'$ and $(ABCD)$ is $\widehat{A'AH} = 45^{\circ}$.
+• The height of the parallelepiped is:
+  $$A'H = AA' \cdot \sin 45^{\circ} = 6 \cdot \frac{\sqrt{2}}{2} = 3\sqrt{2}\text{ (cm).}$$
+• The volume of the parallelepiped is:
+  $$V = S\_{ABCD} \cdot A'H = 20 \cdot 3\sqrt{2} = 60\sqrt{2}\text{ (cm}^3\text{).}$$
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 1 (Air Conditioner Cooling Capacity):** When purchasing an air conditioner, each cubic meter of room volume requires approximately 200 BTU of cooling capacity. A room has the shape of a rectangular box with width 4 m, length 5 m, and height 3 m. What cooling capacity (in BTU) should Mr. An choose for the air conditioner?
+
+Solution to Application 1:
+• The volume of the rectangular room is:
+  $$V = 4 \cdot 5 \cdot 3 = 60\text{ (m}^3\text{).}$$
+• The required air conditioner capacity for the room is:
+  $$P = 60 \cdot 200 = 12\\,000\text{ (BTU).}$$
+• Therefore, Mr. An should choose an air conditioner with a capacity of approximately 12,000 BTU.
+
+**Application 2 (Storage Basket Shaped as a Regular Truncated Pyramid):** A storage basket has the shape of a regular truncated pyramid. The bottom and opening of the basket are squares with side lengths 30 cm and 60 cm, respectively, and each lateral edge is 50 cm long. Compute the volume of the basket.
+
+Solution to Application 2:
+• The lower base is a square of side $a = 30\text{ cm} \implies S' = 30^2 = 900\text{ cm}^2$.
+• The upper base (opening) is a square of side $b = 60\text{ cm} \implies S = 60^2 = 3\\,600\text{ cm}^2$.
+• Let $O$ and $O'$ be the centers of the upper and lower bases, respectively. The circumradius of each base square is:
+  $$OA = \frac{60\sqrt{2}}{2} = 30\sqrt{2}\text{ cm}; \quad O'A' = \frac{30\sqrt{2}}{2} = 15\sqrt{2}\text{ cm}.$$
+• In the right trapezoid $AA'O'O$, drop $A'K \perp OA$ at $K$, giving $AK = OA - O'A' = 15\sqrt{2}\text{ cm}$.
+• The height of the basket is:
+  $$h = A'K = \sqrt{AA'^2 - AK^2} = \sqrt{50^2 - (15\sqrt{2})^2} = \sqrt{2500 - 450} = \sqrt{2050} = 5\sqrt{82}\text{ (cm)} \approx 45.28\text{ cm}.$$
+• The volume of the basket is:
+  $$V = \frac{1}{3} h (S + S' + \sqrt{S \cdot S'}) = \frac{1}{3} \cdot 5\sqrt{82} \cdot (3600 + 900 + 1800) = \frac{1}{3} \cdot 5\sqrt{82} \cdot 6300 = 10\\,500\sqrt{82}\text{ cm}^3 \approx 95\\,081\text{ cm}^3 = 95.08\text{ liters}.$$
+
+### b) End-of-Lesson Exercises
+
+**Exercise 7.28:** Given a regular pyramid $S.ABC$ with base edge $a$ and lateral edge $b$. Compute the volume of the pyramid. From this result, deduce the volume of a regular tetrahedron of edge length $a$.
+
+Solution to Exercise 7.28:
+• The base $ABC$ is an equilateral triangle of side $a$, so $S\_{ABC} = \frac{a^2\sqrt{3}}{4}$.
+• Let $O$ be the center of base $ABC$; the circumradius is $OA = \frac{a}{\sqrt{3}}$. The altitude of the pyramid is:
+  $$h = SO = \sqrt{SA^2 - OA^2} = \sqrt{b^2 - \frac{a^2}{3}} = \sqrt{\frac{3b^2 - a^2}{3}}.$$
+• The volume of the regular pyramid $S.ABC$ is:
+  $$V = \frac{1}{3} S\_{ABC} \cdot h = \frac{1}{3} \cdot \frac{a^2\sqrt{3}}{4} \cdot \sqrt{\frac{3b^2 - a^2}{3}} = \frac{a^2\sqrt{3b^2 - a^2}}{12}.$$
+• When the pyramid is a regular tetrahedron of side $a$ (i.e., $b = a$):
+  $$V = \frac{a^2\sqrt{3a^2 - a^2}}{12} = \frac{a^2\sqrt{2a^2}}{12} = \frac{a^3\sqrt{2}}{12}.$$
+
+**Exercise 7.29:** Given a right prism $ABC.A'B'C'$ with $AA' = 5\text{ cm}, AB = 6\text{ cm}, BC = 2\text{ cm}, \widehat{ABC} = 150^{\circ}$. Compute the volume of the prism.
+
+Solution to Exercise 7.29:
+• The area of the base triangle $ABC$ is:
+  $$S\_{ABC} = \frac{1}{2} AB \cdot BC \cdot \sin \widehat{ABC} = \frac{1}{2} \cdot 6 \cdot 2 \cdot \sin 150^{\circ} = 6 \cdot \frac{1}{2} = 3\text{ (cm}^2\text{).}$$
+• The height of the right prism is $h = AA' = 5\text{ cm}$.
+• The volume of the prism is:
+  $$V = S\_{ABC} \cdot h = 3 \cdot 5 = 15\text{ (cm}^3\text{).}$$
+
+**Exercise 7.30:** Given a regular pyramid $S.ABCD$ with a square base of side length 6 cm. Compute the volume of the pyramid in each of the following cases:
+a) Each lateral edge forms an angle of $60^{\circ}$ with the base plane;
+b) Each lateral face forms an angle of $45^{\circ}$ with the base plane.
+
+Solution to Exercise 7.30:
+• The area of the square base $ABCD$ is $S = 6^2 = 36\text{ cm}^2$. Let $O$ be the center of square $ABCD$, so $SO \perp (ABCD)$.
+  We have $OA = \frac{6\sqrt{2}}{2} = 3\sqrt{2}\text{ cm}$.
+• a) The lateral edge makes a $60^{\circ}$ angle with the base $\implies \widehat{SAO} = 60^{\circ}$.
+  The altitude is $h = SO = OA \cdot \tan 60^{\circ} = 3\sqrt{2} \cdot \sqrt{3} = 3\sqrt{6}\text{ cm}$.
+  The volume is: $V = \frac{1}{3} S \cdot h = \frac{1}{3} \cdot 36 \cdot 3\sqrt{6} = 36\sqrt{6}\text{ (cm}^3\text{)}$.
+• b) Let $M$ be the midpoint of $CD$; the angle between lateral face $(SCD)$ and the base is $\widehat{SMO} = 45^{\circ}$.
+  We have $OM = \frac{6}{2} = 3\text{ cm}$.
+  The altitude is $h = SO = OM \cdot \tan 45^{\circ} = 3 \cdot 1 = 3\text{ cm}$.
+  The volume is: $V = \frac{1}{3} S \cdot h = \frac{1}{3} \cdot 36 \cdot 3 = 36\text{ (cm}^3\text{)}$.
+
+**Exercise 7.31:** Given a prism $ABC.A'B'C'$ whose bases are equilateral triangles of side length $a$, such that $A'A = A'B = A'C = b$. Compute the volume of the prism.
+
+Solution to Exercise 7.31:
+• Since $A'A = A'B = A'C = b$, the projection of $A'$ on the plane $(ABC)$ is the center $O$ of the equilateral triangle $ABC$.
+• The circumradius of the base equilateral triangle $ABC$ is $OA = \frac{a}{\sqrt{3}}$.
+• The altitude of the prism is:
+  $$h = A'O = \sqrt{A'A^2 - OA^2} = \sqrt{b^2 - \frac{a^2}{3}}.$$
+• The base area of the equilateral triangle is $S\_{ABC} = \frac{a^2\sqrt{3}}{4}$.
+• The volume of the prism is:
+  $$V = S\_{ABC} \cdot h = \frac{a^2\sqrt{3}}{4} \cdot \sqrt{\frac{3b^2 - a^2}{3}} = \frac{a^2\sqrt{3b^2 - a^2}}{4}.$$
