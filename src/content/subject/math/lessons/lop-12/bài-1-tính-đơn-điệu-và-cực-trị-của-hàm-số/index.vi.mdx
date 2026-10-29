@@ -3,7 +3,7 @@ title: 'Bài 1: Tính đơn điệu và cực trị của hàm số'
 description: Hệ thống lý thuyết bài tính đơn điệu và cực trị của hàm số cùng ví dụ minh họa
 tags:
   - lớp 12
-  - Bảng biến thiên ·       , ,  ·
+  - Bảng biến thiên
   - Đồng biến
   - nghịch biến
   - tính đơn điệu của hàm số
@@ -65,35 +65,7 @@ Cho hàm số $y = f(x)$ có đạo hàm trên khoảng $K$.
 • Nếu $f'(x) \ge 0$ (hoặc $f'(x) \le 0$) với mọi $x \in K$ và $f'(x) = 0$ chỉ tại một số hữu hạn điểm của $K$ thì hàm số $f(x)$ đồng biến (hoặc nghịch biến) trên khoảng $K$.
 • Nếu $f'(x) = 0$ với mọi $x \in K$ thì hàm số $f(x)$ không đổi (hằng số) trên khoảng $K$.
 
-### b) Ví dụ và luyện tập về tính đơn điệu của hàm số
-
-**Ví dụ 1:** Tìm các khoảng đồng biến, khoảng nghịch biến của hàm số $y = x^2 - 4x + 2$.
-
-Lời giải Ví dụ 1:
-• Tập xác định của hàm số là $D = \mathbb{R}$.
-• Ta có đạo hàm $y' = 2x - 4$. Cho $y' = 0 \Leftrightarrow 2x - 4 = 0 \Leftrightarrow x = 2$.
-• Dấu của đạo hàm: $y' \gt 0$ với mọi $x \in (2; +\infty)$ và $y' \lt 0$ với mọi $x \in (-\infty; 2)$.
-• Vậy hàm số đồng biến trên khoảng $(2; +\infty)$ và nghịch biến trên khoảng $(-\infty; 2)$.
-
-**Ví dụ 2:** Tìm các khoảng đơn điệu của hàm số $y = \frac{x^2 - 2x + 5}{x - 1}$.
-
-Lời giải Ví dụ 2:
-• Hàm số xác định khi $x \ne 1$, tức là trên các khoảng $(-\infty; 1)$ và $(1; +\infty)$.
-• Đạo hàm của hàm số là:
-$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 5)}{(x - 1)^2} = \frac{x^2 - 2x - 3}{(x - 1)^2}$$
-• Giải phương trình $y' = 0 \Leftrightarrow x^2 - 2x - 3 = 0 \Leftrightarrow x = -1$ hoặc $x = 3$.
-• Xét dấu đạo hàm $y'$ trên từng khoảng xác định:
-  + Trên các khoảng $(-\infty; -1)$ và $(3; +\infty)$, ta có $y' \gt 0$ nên hàm số đồng biến.
-  + Trên các khoảng $(-1; 1)$ và $(1; 3)$, ta có $y' \lt 0$ nên hàm số nghịch biến.
-• Vậy hàm số đồng biến trên các khoảng $(-\infty; -1)$ và $(3; +\infty)$; nghịch biến trên các khoảng $(-1; 1)$ và $(1; 3)$.
-
-**Luyện tập 1:** Xét chiều biến thiên của hàm số $y = \frac{x - 2}{x + 1}$.
-
-Lời giải Luyện tập 1:
-• Hàm số xác định với mọi $x \ne -1$, tức là trên hai khoảng $(-\infty; -1)$ và $(-1; +\infty)$.
-• Ta có đạo hàm:
-$$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} \gt 0$$
-• Vì $y' \gt 0$ với mọi $x \ne -1$ nên hàm số đồng biến trên từng khoảng $(-\infty; -1)$ và $(-1; +\infty)$.
+### 
 
 ## Cực trị của hàm số
 
@@ -107,107 +79,6 @@ Giả sử hàm số $y = f(x)$ liên tục trên khoảng $(a; b)$ chứa đi�
 • Nếu $f'(x) \lt 0$ với mọi $x \in (a; x_0)$ và $f'(x) \gt 0$ với mọi $x \in (x_0; b)$ (đạo hàm đổi dấu từ âm sang dương khi $x$ đi qua $x_0$) thì hàm số $f(x)$ đạt cực tiểu tại điểm $x_0$, giá trị cực tiểu là $f(x_0)$.
 • Điểm cực đại và điểm cực tiểu được gọi chung là điểm cực trị của hàm số. Nếu $f'(x)$ không đổi dấu khi $x$ đi qua $x_0$ thì $x_0$ không phải là điểm cực trị của hàm số.
 
-### b) Ví dụ và luyện tập về cực trị của hàm số
+### 
 
-**Ví dụ 3:** Tìm cực trị của hàm số $y = x^3 - 6x^2 + 9x + 30$.
-
-Lời giải Ví dụ 3:
-• Tập xác định của hàm số là $D = \mathbb{R}$.
-• Đạo hàm: $y' = 3x^2 - 12x + 9 = 3(x - 1)(x - 3)$.
-• Cho $y' = 0 \Leftrightarrow x = 1$ hoặc $x = 3$.
-• Xét dấu của đạo hàm $y'$:
-  + Khi $x$ đi qua điểm $x = 1$, đạo hàm $y'$ đổi dấu từ dương sang âm nên hàm số đạt cực đại tại $x = 1$ và giá trị cực đại là $y(1) = 34$.
-  + Khi $x$ đi qua điểm $x = 3$, đạo hàm $y'$ đổi dấu từ âm sang dương nên hàm số đạt cực tiểu tại $x = 3$ và giá trị cực tiểu là $y(3) = 30$.
-
-**Ví dụ 4:** Tìm cực trị của hàm số $y = \frac{x^2 - 2x + 9}{x - 2}$.
-
-Lời giải Ví dụ 4:
-• Hàm số xác định với mọi $x \ne 2$.
-• Ta có đạo hàm:
-$$y' = \frac{(2x - 2)(x - 2) - (x^2 - 2x + 9)}{(x - 2)^2} = \frac{x^2 - 4x - 5}{(x - 2)^2}$$
-• Cho $y' = 0 \Leftrightarrow x^2 - 4x - 5 = 0 \Leftrightarrow x = -1$ hoặc $x = 5$.
-• Xét dấu của đạo hàm $y'$:
-  + Khi $x$ đi qua điểm $x = -1$, đạo hàm $y'$ đổi dấu từ dương sang âm nên hàm số đạt cực đại tại $x = -1$ và giá trị cực đại là $y(-1) = -4$.
-  + Khi $x$ đi qua điểm $x = 5$, đạo hàm $y'$ đổi dấu từ âm sang dương nên hàm số đạt cực tiểu tại $x = 5$ và giá trị cực tiểu là $y(5) = 8$.
-
-**Luyện tập 2:** Tìm các điểm cực trị của hàm số $y = x^4 - 4x^2 + 2$.
-
-Lời giải Luyện tập 2:
-• Tập xác định của hàm số là $D = \mathbb{R}$.
-• Đạo hàm: $y' = 4x^3 - 8x = 4x(x^2 - 2)$. Cho $y' = 0 \Leftrightarrow x = 0$ hoặc $x = \pm\sqrt{2}$.
-• Hàm số đạt cực đại tại $x = 0$ với giá trị cực đại $y(0) = 2$; hàm số đạt cực tiểu tại $x = -\sqrt{2}$ và $x = \sqrt{2}$ với cùng giá trị cực tiểu $y(\pm\sqrt{2}) = -2$.
-
-## Ứng dụng và bài tập rèn luyện
-
-### a) Bài toán thực tế
-
-**Vận dụng 1 (Chuyển động của chất điểm):** Vị trí của một chất điểm trên trục số tại thời điểm $t$ giây ($t \ge 0$) được cho bởi công thức $s(t) = t^3 - 9t^2 + 15t$ (mét). Trong khoảng thời gian nào chất điểm chuyển động sang phải, trong khoảng thời gian nào chuyển động sang trái?
-
-Lời giải Vận dụng 1:
-• Vận tốc tức thời của chất điểm tại thời điểm $t$ là:
-$$v(t) = s'(t) = 3t^2 - 18t + 15 = 3(t - 1)(t - 5)$$
-• Chất điểm chuyển động sang phải khi $v(t) \gt 0$, tức là $t \in [0; 1)$ hoặc $t \in (5; +\infty)$.
-• Chất điểm chuyển động sang trái khi $v(t) \lt 0$, tức là $t \in (1; 5)$.
-• Vậy chất điểm chuyển động sang phải trong khoảng thời gian từ 0 đến 1 giây và sau giây thứ 5; chuyển động sang trái từ giây thứ 1 đến giây thứ 5.
-
-**Vận dụng 2 (Độ cao cực đại của vật phóng thẳng đứng):** Một vật được phóng thẳng đứng lên trên từ độ cao 2 m với vận tốc ban đầu $24{,}5\text{ m/s}$. Độ cao của vật sau $t$ giây là $h(t) = 2 + 24{,}5t - 4{,}9t^2$ (mét). Hỏi tại thời điểm nào thì vật đạt độ cao lớn nhất?
-
-Lời giải Vận dụng 2:
-• Vận tốc của vật tại thời điểm $t$ là: $v(t) = h'(t) = 24{,}5 - 9{,}8t$.
-• Cho $h'(t) = 0 \Leftrightarrow 24{,}5 - 9{,}8t = 0 \Leftrightarrow t = \frac{24{,}5}{9{,}8} = 2{,}5\text{ (giây)}$.
-• Vì đạo hàm $h'(t)$ đổi dấu từ dương sang âm khi $t$ đi qua $2{,}5$ nên hàm số $h(t)$ đạt cực đại tại $t = 2{,}5$.
-• Độ cao lớn nhất mà vật đạt được là:
-$$h(2{,}5) = 2 + 24{,}5 \cdot 2{,}5 - 4{,}9 \cdot (2{,}5)^2 = 32{,}625\text{ (m).}$$
-• Vậy sau 2,5 giây kể từ lúc phóng thì vật đạt độ cao lớn nhất.
-
-**Bài 1.9 (Mô hình tốc độ bán hàng):** Doanh số bán hàng của một sản phẩm mới tuân theo hàm số logistic $f(t) = \frac{5\\,000}{1 + 5e^{-t}}$ ($t \ge 0$, thời gian tính bằng năm). Tốc độ bán hàng được biểu thị bởi đạo hàm $f'(t)$. Sau bao nhiêu năm kể từ khi phát hành thì tốc độ bán hàng đạt mức lớn nhất?
-
-Lời giải Bài 1.9:
-• Đạo hàm biểu thị tốc độ bán hàng tại thời điểm $t$ là:
-$$f'(t) = \frac{25\\,000 e^{-t}}{(1 + 5e^{-t})^2}$$
-• Để tìm điểm cực trị của hàm tốc độ bán hàng $f'(t)$, ta tính đạo hàm cấp hai $f''(t)$:
-$$f''(t) = \frac{25\\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}$$
-• Cho $f''(t) = 0 \Leftrightarrow 5e^{-t} - 1 = 0 \Leftrightarrow e^t = 5 \Leftrightarrow t = \ln 5 \approx 1{,}61\text{ (năm)}$.
-• Khi $t$ đi qua giá trị $\ln 5$, đạo hàm $f''(t)$ đổi dấu từ dương sang âm nên $f'(t)$ đạt cực đại tại $t = \ln 5$.
-• Vậy sau khoảng 1,61 năm thì tốc độ bán hàng đạt mức lớn nhất.
-
-### b) Hệ thống bài tập cuối bài
-
-**Bài 1.2:** Tìm các khoảng đồng biến, khoảng nghịch biến của các hàm số sau:
-a) $y = \frac{1}{3}x^3 - 2x^2 + 3x + 1$;
-b) $y = -x^3 + 2x^2 - 5x + 3$.
-
-Lời giải Bài 1.2:
-• a) Tập xác định $D = \mathbb{R}$. Đạo hàm $y' = x^2 - 4x + 3 = (x - 1)(x - 3)$.
-  + Cho $y' = 0 \Leftrightarrow x = 1$ hoặc $x = 3$.
-  + Ta có $y' \gt 0$ trên các khoảng $(-\infty; 1)$ và $(3; +\infty)$; $y' \lt 0$ trên khoảng $(1; 3)$.
-  + Vậy hàm số đồng biến trên các khoảng $(-\infty; 1)$ và $(3; +\infty)$; nghịch biến trên khoảng $(1; 3)$.
-• b) Tập xác định $D = \mathbb{R}$. Đạo hàm $y' = -3x^2 + 4x - 5 = -3\left(x - \frac{2}{3}\right)^2 - \frac{11}{3} \lt 0$ với mọi $x \in \mathbb{R}$.
-  + Vậy hàm số luôn nghịch biến trên $\mathbb{R}$.
-
-**Bài 1.3:** Xét chiều biến thiên của các hàm số sau:
-a) $y = \frac{2x - 1}{x + 2}$;
-b) $y = \frac{x^2 + x + 4}{x - 3}$.
-
-Lời giải Bài 1.3:
-• a) Hàm số xác định với mọi $x \ne -2$.
-  + Đạo hàm: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} \gt 0$ với mọi $x \ne -2$.
-  + Vậy hàm số đồng biến trên từng khoảng $(-\infty; -2)$ và $(-2; +\infty)$.
-• b) Hàm số xác định với mọi $x \ne 3$.
-  + Đạo hàm:
-$$y' = \frac{(2x + 1)(x - 3) - (x^2 + x + 4)}{(x - 3)^2} = \frac{x^2 - 6x - 7}{(x - 3)^2}$$
-  + Cho $y' = 0 \Leftrightarrow x^2 - 6x - 7 = 0 \Leftrightarrow x = -1$ hoặc $x = 7$.
-  + Vậy hàm số đồng biến trên các khoảng $(-\infty; -1)$ và $(7; +\infty)$; nghịch biến trên các khoảng $(-1; 3)$ và $(3; 7)$.
-
-**Bài 1.7:** Tìm cực trị của các hàm số sau:
-a) $y = 2x^3 - 9x^2 + 12x - 5$;
-b) $y = \frac{x^2 - 2x + 3}{x - 1}$.
-
-Lời giải Bài 1.7:
-• a) Tập xác định $D = \mathbb{R}$. Đạo hàm $y' = 6x^2 - 18x + 12 = 6(x - 1)(x - 2)$.
-  + Cho $y' = 0 \Leftrightarrow x = 1$ hoặc $x = 2$.
-  + Hàm số đạt cực đại tại $x = 1$ với giá trị cực đại $y(1) = 0$; đạt cực tiểu tại $x = 2$ với giá trị cực tiểu $y(2) = -1$.
-• b) Hàm số xác định với mọi $x \ne 1$. Đạo hàm:
-$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 3)}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}$$
-  + Cho $y' = 0 \Leftrightarrow x^2 - 2x - 1 = 0 \Leftrightarrow x = 1 - \sqrt{2}$ hoặc $x = 1 + \sqrt{2}$.
-  + Hàm số đạt cực đại tại $x = 1 - \sqrt{2}$ với giá trị cực đại $y(1 - \sqrt{2}) = 2 - 2\sqrt{2}$; đạt cực tiểu tại $x = 1 + \sqrt{2}$ với giá trị cực tiểu $y(1 + \sqrt{2}) = 2 + 2\sqrt{2}$.
+##
