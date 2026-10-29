@@ -46,7 +46,7 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 Định nghĩa các hàm số lượng giác:
 • Hàm số sin: Quy tắc đặt tương ứng mỗi số thực $x$ với số thực $\sin x$ được gọi là hàm số sin, kí hiệu là $y = \sin x$. Tập xác định là $D = \mathbb{R}$.
 • Hàm số côsin: Quy tắc đặt tương ứng mỗi số thực $x$ với số thực $\cos x$ được gọi là hàm số côsin, kí hiệu là $y = \cos x$. Tập xác định là $D = \mathbb{R}$.
-• Hàm số tang: Hàm số cho bằng công thức $y = \frac{\sin x}{\cos x}$ được gọi là hàm số tang, kí hiệu là $y = \tan x$. Tập xác định là $D = \mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \\,\middle|\\, k \in \mathbb{Z}\right\\}$.
+• Hàm số tang: Hàm số cho bằng công thức $y = \frac{\sin x}{\cos x}$ được gọi là hàm số tang, kí hiệu là $y = \tan x$. Tập xác định là $D = \mathbb{R} \setminus \left\{\frac{\pi}{2} + k\pi \\,\middle|\\, k \in \mathbb{Z}\right\}$.
 • Hàm số côtang: Hàm số cho bằng công thức $y = \frac{\cos x}{\sin x}$ được gọi là hàm số côtang, kí hiệu là $y = \cot x$. Tập xác định là $D = \mathbb{R} \setminus \\{k\pi \mid k \in \mathbb{Z}\\}$.
 
 ### b) Ví dụ và luyện tập về tập xác định
@@ -55,7 +55,7 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 Lời giải Ví dụ 1:
 • Biểu thức $\frac{1}{\cos x}$ có nghĩa khi và chỉ khi $\cos x \ne 0 \Leftrightarrow x \ne \frac{\pi}{2} + k\pi \quad (k \in \mathbb{Z})$.
-• Vậy tập xác định của hàm số là $D = \mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \\,\middle|\\, k \in \mathbb{Z}\right\\}$.
+• Vậy tập xác định của hàm số là $D = \mathbb{R} \setminus \left\{\frac{\pi}{2} + k\pi \\,\middle|\\, k \in \mathbb{Z}\right\}$.
 
 **Luyện tập 1:** Tìm tập xác định của hàm số $y = \frac{1}{\sin x}$.
 
@@ -106,7 +106,7 @@ Lời giải Ví dụ 3:
 **Luyện tập 3:** Xét tính tuần hoàn và tìm chu kì của hàm số $y = \tan 2x$.
 
 Lời giải Luyện tập 3:
-• Hàm số có tập xác định $D = \mathbb{R} \setminus \left\\{\frac{\pi}{4} + k\frac{\pi}{2} \\,\middle|\\, k \in \mathbb{Z}\right\\}$.
+• Hàm số có tập xác định $D = \mathbb{R} \setminus \left\{\frac{\pi}{4} + k\frac{\pi}{2} \\,\middle|\\, k \in \mathbb{Z}\right\}$.
 • Với mọi $x \in D$, ta có $\tan 2\left(x + \frac{\pi}{2}\right) = \tan(2x + \pi) = \tan 2x$.
 • Vậy hàm số $y = \tan 2x$ tuần hoàn với chu kì $T = \frac{\pi}{2}$.
 
@@ -149,7 +149,7 @@ a) Nhận giá trị bằng 0;
 b) Nhận giá trị âm.
 
 Lời giải Ví dụ 5:
-• a) Trên đoạn $\left[-\frac{3\pi}{2}; \frac{\pi}{2}\right]$, $\cos x = 0$ khi $x \in \left\\{-\frac{3\pi}{2}; -\frac{\pi}{2}; \frac{\pi}{2}\right\\}$.
+• a) Trên đoạn $\left[-\frac{3\pi}{2}; \frac{\pi}{2}\right]$, $\cos x = 0$ khi $x \in \left\{-\frac{3\pi}{2}; -\frac{\pi}{2}; \frac{\pi}{2}\right\}$.
 • b) Hàm số nhận giá trị âm khi đồ thị nằm dưới trục hoành: $x \in \left(-\frac{3\pi}{2}; -\frac{\pi}{2}\right)$.
 
 **Luyện tập 5:** Tìm tập giá trị của hàm số $y = -3\cos x$.
@@ -161,7 +161,7 @@ Lời giải Luyện tập 5:
 ### c) Hàm số y = tan x và y = cot x
 
 Hàm số $y = \tan x$:
-• Tập xác định: $D = \mathbb{R} \setminus \left\\{\frac{\pi}{2} + k\pi \\,\middle|\\, k \in \mathbb{Z}\right\\}$, tập giá trị: $T = \mathbb{R}$.
+• Tập xác định: $D = \mathbb{R} \setminus \left\{\frac{\pi}{2} + k\pi \\,\middle|\\, k \in \mathbb{Z}\right\}$, tập giá trị: $T = \mathbb{R}$.
 • Tính chất: Là hàm số lẻ và tuần hoàn với chu kì $\pi$.
 • Tính đơn điệu: Đồng biến trên mỗi khoảng $\left(-\frac{\pi}{2} + k\pi; \frac{\pi}{2} + k\pi\right)$ ($k \in \mathbb{Z}$).
 • Đồ thị đối xứng qua gốc toạ độ $O$.
@@ -180,7 +180,7 @@ Lời giải Ví dụ 6 & 7:
   + $\tan x > 0 \Leftrightarrow x \in \left(-\pi; -\frac{\pi}{2}\right) \cup \left(0; \frac{\pi}{2}\right) \cup \left(\pi; \frac{3\pi}{2}\right)$.
   + $\tan x < 0 \Leftrightarrow x \in \left(-\frac{\pi}{2}; 0\right) \cup \left(\frac{\pi}{2}; \pi\right)$.
 • Trên đoạn $\left[-\frac{\pi}{2}; 2\pi\right]$:
-  + $\cot x = 0 \Leftrightarrow x \in \left\\{-\frac{\pi}{2}; \frac{\pi}{2}; \frac{3\pi}{2}\right\\}$.
+  + $\cot x = 0 \Leftrightarrow x \in \left\{-\frac{\pi}{2}; \frac{\pi}{2}; \frac{3\pi}{2}\right\}$.
   + $\cot x < 0 \Leftrightarrow x \in \left(-\frac{\pi}{2}; 0\right) \cup \left(\frac{\pi}{2}; \pi\right) \cup \left(\frac{3\pi}{2}; 2\pi\right)$.
   + $\cot x > 0 \Leftrightarrow x \in \left(0; \frac{\pi}{2}\right) \cup \left(\pi; \frac{3\pi}{2}\right)$.
 
