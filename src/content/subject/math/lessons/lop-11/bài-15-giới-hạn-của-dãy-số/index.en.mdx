@@ -13,4 +13,203 @@ updatedDate: 2026-10-28T17:52:00
 draft: false
 ---
 
-abn
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Limit of a sequence ($\lim\_{n \to +\infty} u_n = a$, zero limit, finite limit)
+
+·       Infinite geometric series, sum of an infinite geometric series
+
+·       Infinite limit ($+\infty, -\infty$)
+
+### **Knowledge and Skills:**
+
+·       Recognize and understand the concept of the limit of a sequence as $n \to +\infty$.
+
+·       Master fundamental limits, finite limit algebraic rules, and rules for evaluating infinite limits.
+
+·       Compute the sum of an infinite geometric series and apply it to convert repeating decimals into fractions.
+
+·       Apply sequence limits to solve practical mathematical problems (resolving Zeno's paradox of Achilles and the tortoise, bouncing ball models, drug accumulation in the body, infinite polygonal paths).
+
+## Finite Limits of Sequences
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han_cua_day_so"/>
+
+### a) Zero Limit and Finite Limit Definitions
+
+Zero Limit Definition:
+• A sequence $(u_n)$ is said to have a limit of 0 as $n \to +\infty$ if $|u_n|$ can be made smaller than any arbitrarily small positive number for all $n$ sufficiently large, denoted by $\lim\_{n \to +\infty} u_n = 0$ or $u_n \to 0$ as $n \to +\infty$.
+• Fundamental Results:
+  + $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ (where $k$ is a positive integer);
+  + $\lim\_{n \to +\infty} q^n = 0$ (if $|q| < 1$).
+  + Squeeze Theorem for sequences: If $|u_n| \le v_n$ for all $n \ge 1$ and $\lim\_{n \to +\infty} v_n = 0$, then $\lim\_{n \to +\infty} u_n = 0$.
+
+Finite Limit Definition (Real Number $a$):
+• A sequence $(u_n)$ is said to have a limit equal to the real number $a$ as $n \to +\infty$ if $\lim\_{n \to +\infty} (u_n - a) = 0$, denoted by $\lim\_{n \to +\infty} u_n = a$ or $u_n \to a$ as $n \to +\infty$.
+• Remark: $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$. If $u_n = c$ (constant), then $\lim\_{n \to +\infty} u_n = c$.
+
+### b) Illustrative Examples and Practice on Finite Limits
+
+**Example 1:** Consider the sequence $(u_n)$ with $u_n = \frac{1}{n^2}$. Explain why this sequence has a limit of 0.
+
+Solution for Example 1:
+• We have $|u_n| = \frac{1}{n^2}$. As $n$ becomes sufficiently large, $\frac{1}{n^2}$ becomes arbitrarily small, falling below any prescribed positive tolerance $\varepsilon > 0$.
+• For instance, to ensure $|u_n| < 0.0001$, we require $\frac{1}{n^2} < \frac{1}{10\\,000} \Leftrightarrow n^2 > 10\\,000 \Leftrightarrow n > 100$. Thus, from the 101st term onward, all terms have absolute values less than $0.0001$. Therefore, $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
+
+**Practice 1:** Prove that $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+
+Solution for Practice 1:
+• We have $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$.
+• Since $|q| = \frac{1}{3} < 1$, the fundamental limit theorem gives $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Hence, $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+
+**Example 2:** Given the sequence $(u_n)$ with $u_n = \frac{2n + 1}{n}$. Prove that $\lim\_{n \to +\infty} u_n = 2$.
+
+Solution for Example 2:
+• We have $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{2n + 1 - 2n}{n} = \frac{1}{n}$.
+• Since $\lim\_{n \to +\infty} \frac{1}{n} = 0$, it follows that $\lim\_{n \to +\infty} (u_n - 2) = 0$, and thus $\lim\_{n \to +\infty} u_n = 2$.
+
+**Practice 2:** Given the sequence $(u_n)$ with $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Prove that $\lim\_{n \to +\infty} u_n = 3$.
+
+Solution for Practice 2:
+• We have $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = \frac{3 \cdot 2^n - 1 - 3 \cdot 2^n}{2^n} = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$.
+• Since $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ (as $|\frac{1}{2}| < 1$), we obtain $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
+
+## Theorems on Finite Limits of Sequences
+
+\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_ve_gioi_han_huu_han"/>
+
+### a) Algebraic Limit Laws
+
+Arithmetic Operations on Limits:
+If $\lim\_{n \to +\infty} u_n = a$ and $\lim\_{n \to +\infty} v_n = b$, then:
+1\. $\lim\_{n \to +\infty} (u_n + v_n) = a + b$
+2\. $\lim\_{n \to +\infty} (u_n - v_n) = a - b$
+3\. $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$
+4\. $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (provided $b \ne 0$).
+5\. If $u_n \ge 0$ for all $n$ and $\lim\_{n \to +\infty} u_n = a$, then $a \ge 0$ and $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
+
+### b) Illustrative Examples and Practice on Limit Laws
+
+**Example 3:** Evaluate $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
+
+Solution for Example 3:
+• Dividing both the numerator and denominator by the highest power of $n$, which is $n^2$:
+$$\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.$$
+
+**Practice 3:** Evaluate $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
+
+Solution for Practice 3:
+• Dividing both numerator and denominator by $n$ (noting that for $n > 0$, $\sqrt{n^2} = n$):
+$$\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.$$
+
+## Sum of an Infinite Geometric Series
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han"/>
+
+### a) Concept and Sum Formula
+
+Infinite Geometric Series:
+• An infinite geometric sequence $(u_n)$ with common ratio $q$ satisfying $|q| < 1$ is called an infinite geometric series (or a convergent geometric progression).
+• The sum of an infinite geometric series $(u_n)$ is defined as the limit of the partial sum $S_n$ of the first $n$ terms as $n \to +\infty$:
+$$S = \lim\_{n \to +\infty} S_n = \lim\_{n \to +\infty} \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1}{1 - q} \quad (|q| < 1)$
+
+### b) Illustrative Examples and Repeating Decimal Conversion
+
+**Example 4:** Compute the sum $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
+
+Solution for Example 4:
+• This is the sum of an infinite geometric series with first term $u_1 = 1$ and common ratio $q = -\frac{1}{2}$ (since $|q| < 1$).
+• The sum of the series is:
+$$S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{1}{\frac{3}{2}} = \frac{2}{3}.$$
+
+**Example 5:** Express the repeating decimal $2.222\dots$ as a fraction in lowest terms.
+
+Solution for Example 5:
+• We write $2.222\dots = 2 + 0.2 + 0.02 + 0.002 + \dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + 2 \cdot \frac{1}{10^3} + \dots$
+• Starting from the second term, this forms an infinite geometric series with $u_1 = 0.2 = \frac{2}{10}$ and $q = \frac{1}{10}$.
+• The sum of the repeating decimal portion is $\frac{2/10}{1 - 1/10} = \frac{2/10}{9/10} = \frac{2}{9}$.
+• Consequently: $2.222\dots = 2 + \frac{2}{9} = \frac{20}{9}$.
+
+**Luyện tập 4:** Compute the sum $S = 2 + \frac{2}{7} + \frac{2}{7^2} + \dots + \frac{2}{7^{n-1}} + \dots$
+
+Solution for Practice 4:
+• This is the sum of an infinite geometric series with first term $u_1 = 2$ and common ratio $q = \frac{1}{7}$.
+• The sum of the series is:
+$$S = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{7}} = \frac{2}{\frac{6}{7}} = 2 \cdot \frac{7}{6} = \frac{7}{3}.$$
+
+## Infinite Limits of Sequences
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_vo_cuc"/>
+
+### a) Definition of Infinite Limits
+
+Infinite Limits:
+• A sequence $(u_n)$ is said to approach positive infinity ($+\infty$) as $n \to +\infty$ if $u_n$ exceeds any arbitrarily large positive number for all $n$ sufficiently large, denoted by $\lim\_{n \to +\infty} u_n = +\infty$.
+• A sequence $(u_n)$ is said to approach negative infinity ($-\infty$) as $n \to +\infty$ if $\lim\_{n \to +\infty} (-u_n) = +\infty$, denoted by $\lim\_{n \to +\infty} u_n = -\infty$.
+• Fundamental Results:
+  + $\lim\_{n \to +\infty} n^k = +\infty$ (where $k$ is a positive integer);
+  + $\lim\_{n \to +\infty} q^n = +\infty$ (for $q > 1$).
+
+### b) Illustrative Examples and Practice on Infinite Limits
+
+**Example 6:** Evaluate $\lim\_{n \to +\infty} (n^2 - 2n)$.
+
+Solution for Example 6:
+• Factoring the expression: $n^2 - 2n = n^2\left(1 - \frac{2}{n}\right)$.
+• Since $\lim\_{n \to +\infty} n^2 = +\infty$ and $\lim\_{n \to +\infty} \left(1 - \frac{2}{n}\right) = 1 > 0$, by the rules of infinite limits, we obtain $\lim\_{n \to +\infty} (n^2 - 2n) = +\infty$.
+
+**Luyện tập 5:** Evaluate $\lim\_{n \to +\infty} (n - \sqrt{n})$.
+
+Solution for Practice 5:
+• Factoring: $n - \sqrt{n} = \sqrt{n}(\sqrt{n} - 1)$.
+• Since $\lim\_{n \to +\infty} \sqrt{n} = +\infty$ and $\lim\_{n \to +\infty} (\sqrt{n} - 1) = +\infty$, by the infinite limit rules we obtain $\lim\_{n \to +\infty} (n - \sqrt{n}) = +\infty$.
+
+## Applications and Exercises
+
+### a) Real-World Applications and Modeling
+
+**Application (Resolving Zeno's Paradox - Achilles and the Tortoise):** Suppose Achilles runs at $100\text{ km/h}$, the tortoise runs at $1\text{ km/h}$, and the initial head start is $a = 100\text{ km}$.
+a) Compute the time intervals $t_1, t_2, \dots, t_n, \dots$ required for Achilles to bridge each successive distance gap.
+b) Calculate the total cumulative time required for Achilles to catch the tortoise.
+c) Where lies the flaw in Zeno's reasoning?
+
+Solution for Application:
+• a) The time for Achilles to cover the initial $100\text{ km}$ gap is $t_1 = \frac{100}{100} = 1$ hour; during this time the tortoise crawls $1\text{ km}$. The subsequent gap requires $t_2 = \frac{1}{100}$ hours, and so on.
+• b) The total time is the sum of an infinite geometric series: $T = 1 + \frac{1}{100} + \frac{1}{100^2} + \dots = \frac{1}{1 - \frac{1}{100}} = \frac{100}{99}$ hours ($\approx 1.01$ hours).
+• c) Zeno's flaw was assuming that an infinite number of temporal intervals must sum to infinity. Modern mathematics proves that an infinite series of decreasing terms can converge to a finite sum.
+
+**Exercise 5.5 (Cumulative Drug Concentration in the Body):** A patient takes a $150\text{ mg}$ medication tablet daily. Before each subsequent dose, $5\\%$ of the residual drug from prior doses remains in the body. Calculate the total drug amount after taking the 5th tablet, and estimate the steady-state drug concentration under long-term administration.
+
+Solution for Exercise 5.5:
+• Drug amount after day 1: $150\text{ mg}$.
+• Drug amount after day 2: $150 + 150(0.05) = 150(1 + 0.05)$.
+• After taking the 5th tablet, the total accumulated drug is the sum of the first 5 terms of a geometric series with $u_1 = 150$ and common ratio $q = 0.05$:
+  $$S_5 = 150 \cdot \frac{1 - (0.05)^5}{1 - 0.05} = \frac{150(1 - 0.0000003125)}{0.95} \approx 157.89\text{ (mg).}$$
+• Under long-term administration ($n \to +\infty$), the drug quantity converges to the sum of an infinite geometric series:
+  $$S = \frac{150}{1 - 0.05} = \frac{150}{0.95} = \frac{3\000}{19} \approx 157.89\text{ (mg).}$$
+
+### b) Detailed Section Exercises
+
+**Exercise 5.1:** Evaluate the following limits:
+a) $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 + 1}$;
+b) $\lim\_{n \to +\infty} (\sqrt{n^2 + 2n} - n)$.
+
+Solution for Exercise 5.1:
+• a) Dividing both numerator and denominator by $n^2$:
+  $$\lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 + \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 + 0} = \frac{1}{2}.$$
+• b) Multiplying and dividing by the conjugate expression:
+  $$\lim\_{n \to +\infty} \frac{(\sqrt{n^2 + 2n} - n)(\sqrt{n^2 + 2n} + n)}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2n}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2}{\sqrt{1 + \frac{2}{n}} + 1} = \frac{2}{1 + 1} = 1.$$
+
+
+
+**Exercise 5.4:** Express the following repeating decimals as fractions in lowest terms:
+a) $1.(12) = 1.121212\dots$;
+b) $3.(102) = 3.102102102\dots$
+
+Solution for Exercise 5.4:
+• a) $1.(12) = 1 + \frac{12}{10^2} + \frac{12}{10^4} + \dots = 1 + \frac{12/100}{1 - 1/100} = 1 + \frac{12}{99} = 1 + \frac{4}{33} = \frac{37}{33}$.
+• b) $3.(102) = 3 + \frac{102}{10^3} + \frac{102}{10^6} + \dots = 3 + \frac{102/1\\,000}{1 - 1/1\\,000} = 3 + \frac{102}{999} = 3 + \frac{34}{333} = \frac{1\\,034}{333}$.
