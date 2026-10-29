@@ -1,0 +1,239 @@
+---
+title: 'Bài 4: Khảo sát sự biến thiên và vẽ đồ thị hàm số.'
+description: Hệ thống lý thuyết bài khảo sát sự biến thiên và vẽ đồ thị hàm số cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Sơ đồ khảo sát hàm số
+  - chiều biến thiên
+  - bảng biến thiên
+  - Cực trị
+  - tiệm cận
+  - Tâm đối xứng của đồ thị hàm số
+  - trục đối xứng của đồ thị hàm số
+grade: 12
+order: 4
+updatedDate: 2026-10-29T11:00:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Sơ đồ khảo sát hàm số, chiều biến thiên, bảng biến thiên
+
+·       Cực trị, tiệm cận (đứng, ngang, xiên)
+
+·       Tâm đối xứng, trục đối xứng của đồ thị hàm số
+
+### **Kiến thức, kĩ năng:**
+
+·       Nắm vững sơ đồ tổng quát để khảo sát sự biến thiên và vẽ đồ thị của hàm số.
+
+·       Khảo sát sự biến thiên và vẽ đồ thị của hàm đa thức bậc ba $y = ax^3 + bx^2 + cx + d$ ($a \ne 0$).
+
+·       Khảo sát sự biến thiên và vẽ đồ thị của hàm phân thức hữu tỉ bậc nhất trên bậc nhất $y = \frac{ax+b}{cx+d}$ ($c \ne 0, ad - bc \ne 0$).
+
+·       Khảo sát sự biến thiên và vẽ đồ thị của hàm phân thức hữu tỉ bậc hai trên bậc nhất $y = \frac{ax^2+bx+c}{px+q}$ ($a \ne 0, p \ne 0$).
+
+·       Nhận biết tâm đối xứng và trục đối xứng của đồ thị các hàm số đã học.
+
+·       Vận dụng đồ thị hàm số để giải quyết các bài toán kinh tế và khoa học thực tiễn (chi phí trung bình, nồng độ dung dịch pha loãng, điện trở tương đương mạch điện).
+
+## Sơ đồ khảo sát hàm số tổng quát
+
+\<Youtube url="https://www.youtube.com/watch?v=example_so_do_khao_sat_ham_so"/>
+
+### a) Các bước khảo sát sự biến thiên và vẽ đồ thị hàm số
+
+Sơ đồ tổng quát khảo sát hàm số $y = f(x)$ gồm 3 bước:
+1\. Tìm tập xác định của hàm số.
+2\. Khảo sát sự biến thiên của hàm số:
+   • Tính đạo hàm $y'$. Tìm các điểm tại đó $y' = 0$ hoặc đạo hàm không xác định.
+   • Xét dấu đạo hàm $y'$ để chỉ ra các khoảng đồng biến, nghịch biến của hàm số.
+   • Tìm các điểm cực trị và giá trị cực trị của hàm số.
+   • Tìm các giới hạn tại vô cực, giới hạn vô cực và xác định các đường tiệm cận của đồ thị (tiệm cận đứng, tiệm cận ngang, tiệm cận xiên nếu có).
+   • Lập bảng biến thiên tổng kết sự biến thiên của hàm số.
+3\. Vẽ đồ thị hàm số:
+   • Xác định các điểm đặc biệt của đồ thị: điểm cực trị, giao điểm với các trục toạ độ (nếu có và dễ tìm), tâm đối xứng.
+   • Vẽ các đường tiệm cận (nếu có).
+   • Vẽ đồ thị dựa vào bảng biến thiên và các điểm đặc biệt, chú ý tính đối xứng của đồ thị.
+
+## Khảo sát sự biến thiên và vẽ đồ thị hàm số đa thức bậc ba
+
+### a) Dạng tổng quát và tính chất đối xứng
+
+Hàm số bậc ba có dạng tổng quát: $y = ax^3 + bx^2 + cx + d$ ($a \ne 0$).
+• Tập xác định: $D = \mathbb{R}$.
+• Đạo hàm: $y' = 3ax^2 + 2bx + c$ (tam thức bậc hai).
+• Đồ thị hàm số bậc ba luôn có một tâm đối xứng là điểm uốn $I(x_0; y_0)$, trong đó hoành độ $x_0$ thoả mãn $y'' = 0$, tức là:
+$$x_0 = -\frac{b}{3a}$$
+• Đồ thị hàm số bậc ba không có tiệm cận.
+
+### b) Ví dụ khảo sát hàm số bậc ba
+
+**Ví dụ 1:** Khảo sát sự biến thiên và vẽ đồ thị của hàm số $y = -x^3 + 3x^2 - 4$.
+
+Lời giải Ví dụ 1:
+• 1. Tập xác định: $D = \mathbb{R}$.
+• 2. Sự biến thiên:
+  - Đạo hàm: $y' = -3x^2 + 6x = -3x(x - 2)$. Ta có $y' = 0 \iff x = 0$ hoặc $x = 2$.
+  - Dấu của $y'$: Trên khoảng $(0; 2)$, $y' > 0$ nên hàm số đồng biến. Trên các khoảng $(-\infty; 0)$ và $(2; +\infty)$, $y' < 0$ nên hàm số nghịch biến.
+  - Cực trị: Hàm số đạt cực tiểu tại $x = 0$ với $y\_{CT} = -4$; hàm số đạt cực đại tại $x = 2$ với $y\_{CĐ} = 0$.
+  - Giới hạn tại vô cực: $\lim\_{x \to -\infty} y = +\infty$; $\lim\_{x \to +\infty} y = -\infty$.
+  - Bảng biến thiên:
+    \* $x$ chạy từ $-\infty$ qua $0, 2$ đến $+\infty$.
+    \* $y'$ mang dấu: âm, 0, dương, 0, âm.
+    \* $y$ giảm từ $+\infty$ xuống $-4$, tăng lên $0$, rồi giảm xuống $-\infty$.
+• 3. Đồ thị:
+  - Giao điểm với trục tung: $(0; -4)$.
+  - Giao điểm với trục hoành: $y = 0 \iff -(x - 2)^2(x + 1) = 0 \iff x = -1$ hoặc $x = 2$, tức là các điểm $(-1; 0)$ và $(2; 0)$.
+  - Tâm đối xứng: Đạo hàm cấp hai $y'' = -6x + 6 = 0 \iff x = 1 \implies y(1) = -2$. Vậy tâm đối xứng là điểm $I(1; -2)$.
+
+**Ví dụ 2:** Khảo sát sự biến thiên và vẽ đồ thị của hàm số $y = x^3 - 2x^2 + 2x - 1$.
+
+Lời giải Ví dụ 2:
+• 1. Tập xác định: $D = \mathbb{R}$.
+• 2. Sự biến thiên:
+  - Đạo hàm: $y' = 3x^2 - 4x + 2$. Biệt thức $\Delta' = 4 - 6 = -2 < 0$ và hệ số $a = 3 > 0$, suy ra $y' > 0$ với mọi $x \in \mathbb{R}$.
+  - Hàm số luôn đồng biến trên $\mathbb{R}$ và không có cực trị.
+  - Giới hạn tại vô cực: $\lim\_{x \to -\infty} y = -\infty$; $\lim\_{x \to +\infty} y = +\infty$.
+  - Bảng biến thiên: $y'$ luôn mang dấu dương; $y$ tăng từ $-\infty$ lên $+\infty$.
+• 3. Đồ thị:
+  - Giao điểm với trục tung: $(0; -1)$.
+  - Giao điểm với trục hoành: $y = 0 \iff (x - 1)(x^2 - x + 1) = 0 \iff x = 1 \implies (1; 0)$.
+  - Tâm đối xứng: $y'' = 6x - 4 = 0 \iff x = \frac{2}{3} \implies y\left(\frac{2}{3}\right) = -\frac{7}{27}$. Tâm đối xứng là điểm $I\left(\frac{2}{3}; -\frac{7}{27}\right)$.
+
+## Khảo sát sự biến thiên và vẽ đồ thị hàm số phân thức hữu tỉ
+
+### a) Hàm số phân thức bậc nhất trên bậc nhất y = (ax + b)/(cx + d)
+
+Xét hàm số $y = \frac{ax+b}{cx+d}$ ($c \ne 0, ad - bc \ne 0$):
+• Tập xác định: $D = \mathbb{R} \setminus \left\\{-\frac{d}{c}\right\\}$.
+• Đạo hàm: $y' = \frac{ad - bc}{(cx + d)^2}$. Đạo hàm luôn cùng dấu với $ad - bc$ trên từng khoảng xác định, do đó hàm số luôn đồng biến (hoặc nghịch biến) trên từng khoảng xác định và không có cực trị.
+• Tiệm cận:
+  - Tiệm cận đứng: Đường thẳng $x = -\frac{d}{c}$.
+  - Tiệm cận ngang: Đường thẳng $y = \frac{a}{c}$.
+• Tính đối xứng: Đồ thị (hypebol) nhận giao điểm $I\left(-\frac{d}{c}; \frac{a}{c}\right)$ của hai đường tiệm cận làm tâm đối xứng, và nhận hai đường phân giác của các góc tạo bởi hai đường tiệm cận làm trục đối xứng.
+
+**Ví dụ 3:** Khảo sát sự biến thiên và vẽ đồ thị của hàm số $y = \frac{x+1}{x-2}$.
+
+Lời giải Ví dụ 3:
+• 1. Tập xác định: $D = \mathbb{R} \setminus \\{2\\}$.
+• 2. Sự biến thiên:
+  - Đạo hàm: $y' = \frac{(x - 2) - (x + 1)}{(x - 2)^2} = -\frac{3}{(x - 2)^2} < 0, \forall x \ne 2$.
+  - Hàm số nghịch biến trên từng khoảng $(-\infty; 2)$ và $(2; +\infty)$. Hàm số không có cực trị.
+  - Giới hạn và tiệm cận:
+    $$\lim\_{x \to 2^-} y = -\infty; \quad \lim\_{x \to 2^+} y = +\infty \implies \text{Tiệm cận đứng là } x = 2.$$
+    $$\lim\_{x \to \pm\infty} y = 1 \implies \text{Tiệm cận ngang là } y = 1.$$
+• 3. Đồ thị:
+  - Giao điểm với trục tung: $\left(0; -\frac{1}{2}\right)$. Giao điểm với trục hoành: $(-1; 0)$.
+  - Đồ thị nhận giao điểm hai tiệm cận $I(2; 1)$ làm tâm đối xứng và nhận hai đường phân giác của các góc tạo bởi hai tiệm cận làm các trục đối xứng.
+
+### b) Hàm số phân thức bậc hai trên bậc nhất y = (ax^2 + bx + c)/(px + q)
+
+Xét hàm số $y = \frac{ax^2+bx+c}{px+q}$ ($a \ne 0, p \ne 0$, đa thức tử không chia hết cho mẫu):
+• Tập xác định: $D = \mathbb{R} \setminus \left\\{-\frac{q}{p}\right\\}$.
+• Biểu diễn dạng: $y = Ax + B + \frac{R}{px + q}$ với $A \ne 0, R \ne 0$.
+• Tiệm cận:
+  - Tiệm cận đứng: Đường thẳng $x = -\frac{q}{p}$.
+  - Tiệm cận xiên: Đường thẳng $y = Ax + B$.
+• Tính đối xứng: Đồ thị nhận giao điểm $I$ của tiệm cận đứng và tiệm cận xiên làm tâm đối xứng, và nhận hai đường phân giác của các góc tạo bởi hai đường tiệm cận làm các trục đối xứng.
+
+**Ví dụ 4:** Khảo sát và vẽ đồ thị của hàm số $y = \frac{x^2 - x - 1}{x - 2}$.
+
+Lời giải Ví dụ 4:
+• 1. Tập xác định: $D = \mathbb{R} \setminus \\{2\\}$.
+• 2. Sự biến thiên:
+  - Viết lại hàm số: $y = x + 1 + \frac{1}{x - 2}$.
+  - Đạo hàm: $y' = 1 - \frac{1}{(x - 2)^2} = \frac{x^2 - 4x + 3}{(x - 2)^2}$.
+  - Cho $y' = 0 \iff x = 1$ hoặc $x = 3$.
+  - Chiều biến thiên: Đồng biến trên $(-\infty; 1)$ và $(3; +\infty)$; nghịch biến trên $(1; 2)$ và $(2; 3)$.
+  - Cực trị: Hàm số đạt cực đại tại $x = 1$, $y\_{CĐ} = 1$; đạt cực tiểu tại $x = 3$, $y\_{CT} = 5$.
+  - Tiệm cận: $\lim\_{x \to 2^-} y = -\infty$, $\lim\_{x \to 2^+} y = +\infty \implies$ Tiệm cận đứng $x = 2$.
+    Vì $\lim\_{x \to \pm\infty} [y - (x + 1)] = \lim\_{x \to \pm\infty} \frac{1}{x - 2} = 0 \implies$ Tiệm cận xiên $y = x + 1$.
+• 3. Đồ thị:
+  - Giao điểm với trục tung: $\left(0; \frac{1}{2}\right)$.
+  - Giao điểm với trục hoành: $y = 0 \iff x^2 - x - 1 = 0 \iff x = \frac{1 \pm \sqrt{5}}{2}$.
+  - Tâm đối xứng là giao điểm hai tiệm cận: $I(2; 3)$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 1 (Chi phí sản xuất trung bình):** Chi phí sản xuất $x$ đơn vị sản phẩm là $C(x) = 2x + 45$ (triệu đồng). Chi phí trung bình cho mỗi đơn vị sản phẩm là $y = f(x) = \frac{C(x)}{x} = 2 + \frac{45}{x}$ ($x \ge 1$). Giải thích tại sao chi phí trung bình giảm theo $x$ nhưng luôn lớn hơn 2 triệu đồng/sản phẩm.
+
+Lời giải Vận dụng 1:
+• Xét hàm số $f(x) = 2 + \frac{45}{x}$ với $x \ge 1$:
+  - Đạo hàm: $f'(x) = -\frac{45}{x^2} < 0, \forall x \ge 1$. Do đó hàm số luôn nghịch biến trên $[1; +\infty)$, nghĩa là chi phí trung bình giảm liên tục khi số lượng sản phẩm $x$ tăng.
+  - Vì $x > 0$ nên $\frac{45}{x} > 0 \implies f(x) = 2 + \frac{45}{x} > 2$ với mọi $x \ge 1$.
+  - Giới hạn: $\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \left(2 + \frac{45}{x}\right) = 2$.
+• Ý nghĩa hình học trên đồ thị: Đồ thị hàm số có tiệm cận ngang là đường thẳng $y = 2$. Khi $x$ tăng lên vô hạn, đường cong đồ thị hạ thấp dần và tiệm cận sát về đường thẳng $y = 2$ từ phía trên nhưng không bao giờ cắt đường $y = 2$.
+
+**Vận dụng 2 (Pha loãng dung dịch khử trùng):** Một bể ban đầu chứa 200 lít nước. Cứ mỗi phút bơm thêm 40 lít nước và 20 gam chất khử trùng vào bể.
+a) Tính nồng độ chất khử trùng $C(t)$ (gam/lít) trong bể sau $t$ phút ($t \ge 0$).
+b) Khảo sát sự biến thiên của hàm số $C(t)$ và giải thích tại sao nồng độ tăng theo thời gian nhưng không bao giờ vượt quá 0,5 gam/lít.
+
+Lời giải Vận dụng 2:
+• a) Sau $t$ phút:
+  - Thể tích nước trong bể: $V(t) = 200 + 40t$ (lít).
+  - Khối lượng chất khử trùng trong bể: $m(t) = 20t$ (gam).
+  - Nồng độ chất khử trùng là: $C(t) = \frac{m(t)}{V(t)} = \frac{20t}{200 + 40t} = \frac{t}{2t + 10}\text{ (gam/lít)} = \frac{1}{2} - \frac{5}{2t + 10}.$
+• b) Khảo sát sự biến thiên của $C(t)$ với $t \ge 0$:
+  - Đạo hàm: $C'(t) = \frac{10}{(2t + 10)^2} > 0, \forall t \ge 0$. Do đó hàm số luôn đồng biến trên $[0; +\infty)$, tức là nồng độ chất khử trùng luôn tăng theo thời gian.
+  - Giới hạn tại vô cực: $\lim\_{t \to +\infty} C(t) = \lim\_{t \to +\infty} \frac{t}{2t + 10} = \frac{1}{2} = 0{,}5\text{ (gam/lít)}$.
+  - Vì $2t + 10 > 0 \implies C(t) = 0{,}5 - \frac{5}{2t + 10} < 0{,}5$ với mọi $t \ge 0$.
+  - Như vậy đường tiệm cận ngang của đồ thị là $y = 0{,}5$. Nồng độ tăng dần nhưng không bao giờ vượt qua ngưỡng 0,5 gam/lít.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 1.21:** Khảo sát sự biến thiên và vẽ đồ thị của hàm số $y = -x^3 + 3x + 1$.
+
+Lời giải Bài 1.21:
+• 1. Tập xác định: $D = \mathbb{R}$.
+• 2. Sự biến thiên:
+  - $y' = -3x^2 + 3 = -3(x^2 - 1) = 0 \iff x = \pm 1$.
+  - Đồng biến trên khoảng $(-1; 1)$; nghịch biến trên các khoảng $(-\infty; -1)$ và $(1; +\infty)$.
+  - Cực trị: Đạt cực tiểu tại $x = -1, y\_{CT} = -1$; đạt cực đại tại $x = 1, y\_{CĐ} = 3$.
+  - Giới hạn: $\lim\_{x \to -\infty} y = +\infty; \lim\_{x \to +\infty} y = -\infty$.
+• 3. Đồ thị:
+  - Giao điểm với trục tung: $(0; 1)$.
+  - Tâm đối xứng là điểm uốn $I(0; 1)$ (do $y'' = -6x = 0 \iff x = 0$).
+
+**Bài 1.22:** Khảo sát sự biến thiên và vẽ đồ thị của hàm số $y = \frac{2x+1}{x+1}$.
+
+Lời giải Bài 1.22:
+• 1. Tập xác định: $D = \mathbb{R} \setminus \\{-1\\}$.
+• 2. Sự biến thiên:
+  - Đạo hàm: $y' = \frac{2(x + 1) - (2x + 1)}{(x + 1)^2} = \frac{1}{(x + 1)^2} > 0, \forall x \ne -1$.
+  - Hàm số đồng biến trên từng khoảng $(-\infty; -1)$ và $(-1; +\infty)$, không có cực trị.
+  - Tiệm cận đứng: $x = -1$ (vì $\lim\_{x \to -1^-} y = +\infty, \lim\_{x \to -1^+} y = -\infty$).
+  - Tiệm cận ngang: $y = 2$ (vì $\lim\_{x \to \pm\infty} y = 2$).
+• 3. Đồ thị:
+  - Giao điểm với trục tung: $(0; 1)$. Giao điểm với trục hoành: $\left(-\frac{1}{2}; 0\right)$.
+  - Tâm đối xứng là giao điểm hai tiệm cận $I(-1; 2)$.
+
+**Bài 1.23:** Khảo sát sự biến thiên và vẽ đồ thị của hàm số $y = \frac{2x^2 - x + 4}{x - 1}$.
+
+Lời giải Bài 1.23:
+• 1. Tập xác định: $D = \mathbb{R} \setminus \\{1\\}$.
+• 2. Sự biến thiên:
+  - Viết lại: $y = 2x + 1 + \frac{5}{x - 1}$.
+  - Đạo hàm: $y' = 2 - \frac{5}{(x - 1)^2} = \frac{2(x - 1)^2 - 5}{(x - 1)^2}$.
+  - Cho $y' = 0 \iff (x - 1)^2 = \frac{5}{2} \iff x = 1 \pm \frac{\sqrt{10}}{2}$.
+  - Đồng biến trên $\left(-\infty; 1 - \frac{\sqrt{10}}{2}\right)$ và $\left(1 + \frac{\sqrt{10}}{2}; +\infty\right)$;
+    Nghịch biến trên $\left(1 - \frac{\sqrt{10}}{2}; 1\right)$ và $\left(1; 1 + \frac{\sqrt{10}}{2}\right)$.
+  - Tiệm cận đứng: $x = 1$; Tiệm cận xiên: $y = 2x + 1$.
+• 3. Đồ thị nhận giao điểm hai đường tiệm cận $I(1; 3)$ làm tâm đối xứng.
+
+**Bài 1.25 (Điện trở tương đương của mạch song song):** Điện trở $8\\,\Omega$ mắc song song với một biến trở $x\\,\Omega$ ($x > 0$). Điện trở tương đương là $R(x) = \frac{8x}{x + 8}$. Khảo sát sự biến thiên của $R(x)$ và giải thích tại sao điện trở tương đương không bao giờ vượt quá $8\\,\Omega$.
+
+Lời giải Bài 1.25:
+• Xét hàm số $R(x) = \frac{8x}{x + 8} = 8 - \frac{64}{x + 8}$ với $x > 0$:
+  - Đạo hàm: $R'(x) = \frac{64}{(x + 8)^2} > 0, \forall x > 0$.
+  - Do đó hàm số $R(x)$ luôn đồng biến trên $(0; +\infty)$, tức là khi giá trị của biến trở $x$ tăng thì điện trở tương đương của mạch điện luôn tăng.
+  - Giới hạn tại vô cực: $\lim\_{x \to +\infty} R(x) = \lim\_{x \to +\infty} \frac{8x}{x + 8} = 8\\,(\Omega)$.
+  - Vì $x > 0 \implies x + 8 > 8 \implies \frac{64}{x + 8} > 0 \implies R(x) = 8 - \frac{64}{x + 8} < 8\\,(\Omega)$ với mọi $x > 0$.
+• Vậy điện trở tương đương của đoạn mạch song song tăng dần theo biến trở $x$ nhưng tiệm cận sát tới đường nằm ngang $y = 8$ và không bao giờ vượt quá $8\\,\Omega$.

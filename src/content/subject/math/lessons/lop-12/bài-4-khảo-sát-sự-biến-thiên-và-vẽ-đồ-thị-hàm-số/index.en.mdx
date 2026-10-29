@@ -1,0 +1,239 @@
+---
+title: 'Lesson 4: Lesson 4: Function Investigation and Curve Sketching.'
+description: Theoretical system for the lesson on Function Investigation and Curve Sketching with illustrative examples
+tags:
+  - grade 12
+  - Curve sketching
+  - monotonicity
+  - table of variations
+  - Local extrema
+  - asymptotes
+  - Center of symmetry
+  - axis of symmetry of a function's graph
+grade: 12
+order: 4
+updatedDate: 2026-10-29T11:00:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Curve sketching, monotonicity, table of variations
+
+·       Local extrema, asymptotes (vertical, horizontal, slant / oblique)
+
+·       Center of symmetry, axis of symmetry of a function's graph
+
+### **Knowledge and Skills:**
+
+·       Master the general procedure for curve sketching and graphing functions (finding the domain, analyzing monotonicity, finding extrema, determining asymptotes, constructing the table of variations, and plotting the graph).
+
+·       Analyze the variations and sketch the graphs of cubic polynomial functions $y = ax^3 + bx^2 + cx + d$ ($a \ne 0$).
+
+·       Analyze the variations and sketch the graphs of linear fractional rational functions $y = \frac{ax+b}{cx+d}$ ($c \ne 0, ad - bc \ne 0$).
+
+·       Analyze the variations and sketch the graphs of quadratic-over-linear rational functions $y = \frac{ax^2+bx+c}{px+q}$ ($a \ne 0, p \ne 0$).
+
+·       Identify the center of symmetry and axes of symmetry of the graphs of the studied functions.
+
+·       Apply function graphs to model and solve practical economic and scientific problems (average cost, chemical dilution concentrations, equivalent electrical resistance).
+
+## General Procedure for Curve Sketching
+
+\<Youtube url="https://www.youtube.com/watch?v=example_so_do_khao_sat_ham_so"/>
+
+### a) Steps in Analyzing Variations and Graphing Functions
+
+The general procedure for investigating and sketching the graph of a function $y = f(x)$ consists of three main stages:
+1\. Determine the domain of the function.
+2\. Investigate the variations of the function:
+   • Compute the derivative $y'$. Find the critical points where $y' = 0$ or where the derivative is undefined.
+   • Determine the sign of $y'$ to identify the intervals of increase and decrease (monotonicity).
+   • Find the local extreme points and local extreme values of the function.
+   • Evaluate limits at infinity and one-sided infinite limits to determine the asymptotes of the graph (vertical, horizontal, and slant/oblique asymptotes, if any).
+   • Construct the table of variations summarizing the behavior of the function.
+3\. Plot the graph of the function:
+   • Identify key geometric points: local extreme points, intercepts with the coordinate axes (if easily computable), inflection points, and centers of symmetry.
+   • Draw the asymptote lines (if any).
+   • Sketch the curves guided by the table of variations and key points, paying attention to symmetries.
+
+## Curve Sketching of Cubic Polynomial Functions
+
+### a) General Form and Symmetry Properties
+
+A cubic polynomial function has the general form: $y = ax^3 + bx^2 + cx + d$ ($a \ne 0$).
+• Domain: $D = \mathbb{R}$.
+• Derivative: $y' = 3ax^2 + 2bx + c$ (a quadratic polynomial).
+• The graph of a cubic polynomial always possesses a center of symmetry at its inflection point $I(x_0; y_0)$, where the abscissa $x_0$ satisfies $y'' = 0$, that is:
+$$x_0 = -\frac{b}{3a}$$
+• The graph of a cubic polynomial has no asymptotes.
+
+### b) Illustrative Examples of Cubic Functions
+
+**Example 1:** Investigate the variations and sketch the graph of the function $y = -x^3 + 3x^2 - 4$.
+
+Solution to Example 1:
+• 1. Domain: $D = \mathbb{R}$.
+• 2. Variations:
+  - Derivative: $y' = -3x^2 + 6x = -3x(x - 2)$. We have $y' = 0 \iff x = 0$ or $x = 2$.
+  - Sign of $y'$: On $(0; 2)$, $y' > 0$, so the function is strictly increasing. On $(-\infty; 0)$ and $(2; +\infty)$, $y' < 0$, so the function is strictly decreasing.
+  - Local extrema: The function attains a local minimum at $x = 0$ with $y\_{\min} = -4$; it attains a local maximum at $x = 2$ with $y\_{\max} = 0$.
+  - Limits at infinity: $\lim\_{x \to -\infty} y = +\infty$; $\lim\_{x \to +\infty} y = -\infty$.
+  - Table of variations:
+    \* $x$ ranges from $-\infty$ through $0, 2$ to $+\infty$.
+    \* $y'$ takes signs: negative, $0$, positive, $0$, negative.
+    \* $y$ decreases from $+\infty$ to $-4$, increases to $0$, and decreases to $-\infty$.
+• 3. Graph:
+  - $y$-intercept: $(0; -4)$.
+  - $x$-intercepts: $y = 0 \iff -(x - 2)^2(x + 1) = 0 \iff x = -1$ or $x = 2$, yielding $(-1; 0)$ and $(2; 0)$.
+  - Center of symmetry: Second derivative $y'' = -6x + 6 = 0 \iff x = 1 \implies y(1) = -2$. Thus, the center of symmetry is $I(1; -2)$.
+
+**Example 2:** Investigate the variations and sketch the graph of the function $y = x^3 - 2x^2 + 2x - 1$.
+
+Solution to Example 2:
+• 1. Domain: $D = \mathbb{R}$.
+• 2. Variations:
+  - Derivative: $y' = 3x^2 - 4x + 2$. The discriminant is $\Delta' = 4 - 6 = -2 < 0$ and $a = 3 > 0$, so $y' > 0$ for all $x \in \mathbb{R}$.
+  - The function is strictly increasing on $\mathbb{R}$ and has no local extrema.
+  - Limits at infinity: $\lim\_{x \to -\infty} y = -\infty$; $\lim\_{x \to +\infty} y = +\infty$.
+  - Table of variations: $y'$ is strictly positive; $y$ increases monotonically from $-\infty$ to $+\infty$.
+• 3. Graph:
+  - $y$-intercept: $(0; -1)$.
+  - $x$-intercept: $y = 0 \iff (x - 1)(x^2 - x + 1) = 0 \iff x = 1 \implies (1; 0)$.
+  - Center of symmetry: $y'' = 6x - 4 = 0 \iff x = \frac{2}{3} \implies y\left(\frac{2}{3}\right) = -\frac{7}{27}$. The center of symmetry is $I\left(\frac{2}{3}; -\frac{7}{27}\right)$.
+
+## Curve Sketching of Rational Functions
+
+### a) Linear Fractional Rational Functions y = (ax + b)/(cx + d)
+
+Consider the rational function $y = \frac{ax+b}{cx+d}$ ($c \ne 0, ad - bc \ne 0$):
+• Domain: $D = \mathbb{R} \setminus \left\\{-\frac{d}{c}\right\\}$.
+• Derivative: $y' = \frac{ad - bc}{(cx + d)^2}$. Since $y'$ maintains the constant sign of $ad - bc$ on each disconnected interval of its domain, the function is strictly monotonic on each interval and has no local extrema.
+• Asymptotes:
+  - Vertical asymptote: The vertical line $x = -\frac{d}{c}$.
+  - Horizontal asymptote: The horizontal line $y = \frac{a}{c}$.
+• Symmetries: The graph is a rectangular hyperbola having the intersection of its asymptotes $I\left(-\frac{d}{c}; \frac{a}{c}\right)$ as its center of symmetry, and the two angle bisectors of the asymptotes as its axes of symmetry.
+
+**Example 3:** Investigate the variations and sketch the graph of the function $y = \frac{x+1}{x-2}$.
+
+Solution to Example 3:
+• 1. Domain: $D = \mathbb{R} \setminus \\{2\\}$.
+• 2. Variations:
+  - Derivative: $y' = \frac{(x - 2) - (x + 1)}{(x - 2)^2} = -\frac{3}{(x - 2)^2} < 0, \forall x \ne 2$.
+  - The function is strictly decreasing on each interval $(-\infty; 2)$ and $(2; +\infty)$. It has no local extrema.
+  - Limits and asymptotes:
+    $$\lim\_{x \to 2^-} y = -\infty; \quad \lim\_{x \to 2^+} y = +\infty \implies \text{Vertical asymptote: } x = 2.$$
+    $$\lim\_{x \to \pm\infty} y = 1 \implies \text{Horizontal asymptote: } y = 1.$$
+• 3. Graph:
+  - Intercepts: $y$-intercept is $\left(0; -\frac{1}{2}\right)$; $x$-intercept is $(-1; 0)$.
+  - Center of symmetry is the asymptote intersection $I(2; 1)$; the axes of symmetry are the bisector lines passing through $I$.
+
+### b) Quadratic-Over-Linear Rational Functions y = (ax^2 + bx + c)/(px + q)
+
+Consider the rational function $y = \frac{ax^2+bx+c}{px+q}$ ($a \ne 0, p \ne 0$, numerator not divisible by denominator):
+• Domain: $D = \mathbb{R} \setminus \left\\{-\frac{q}{p}\right\\}$.
+• Algebraic decomposition: $y = Ax + B + \frac{R}{px + q}$ where $A \ne 0, R \ne 0$.
+• Asymptotes:
+  - Vertical asymptote: $x = -\frac{q}{p}$.
+  - Slant (oblique) asymptote: $y = Ax + B$.
+• Symmetries: The graph has the intersection $I$ of the vertical and slant asymptotes as its center of symmetry, and the two angle bisectors of the asymptotes as its axes of symmetry.
+
+**Example 4:** Investigate the variations and sketch the graph of the function $y = \frac{x^2 - x - 1}{x - 2}$.
+
+Solution to Example 4:
+• 1. Domain: $D = \mathbb{R} \setminus \\{2\\}$.
+• 2. Variations:
+  - Decomposition: $y = x + 1 + \frac{1}{x - 2}$.
+  - Derivative: $y' = 1 - \frac{1}{(x - 2)^2} = \frac{x^2 - 4x + 3}{(x - 2)^2}$.
+  - Critical points: $y' = 0 \iff x = 1$ or $x = 3$.
+  - Monotonicity: Increasing on $(-\infty; 1)$ and $(3; +\infty)$; decreasing on $(1; 2)$ and $(2; 3)$.
+  - Extrema: Local maximum at $x = 1$ with $y\_{\max} = 1$; local minimum at $x = 3$ with $y\_{\min} = 5$.
+  - Asymptotes: $\lim\_{x \to 2^-} y = -\infty$, $\lim\_{x \to 2^+} y = +\infty \implies$ Vertical asymptote: $x = 2$.
+    Since $\lim\_{x \to \pm\infty} [y - (x + 1)] = \lim\_{x \to \pm\infty} \frac{1}{x - 2} = 0 \implies$ Slant asymptote: $y = x + 1$.
+• 3. Graph:
+  - Intercepts: $y$-intercept is $\left(0; \frac{1}{2}\right)$; $x$-intercepts are $x = \frac{1 \pm \sqrt{5}}{2}$.
+  - Center of symmetry is the asymptote intersection: $I(2; 3)$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 1 (Average Production Cost):** The total cost to produce $x$ units of a product is $C(x) = 2x + 45$ (million VND). The average cost per unit is given by $y = f(x) = \frac{C(x)}{x} = 2 + \frac{45}{x}$ ($x \ge 1$). Explain why the average cost decreases as $x$ increases but always remains greater than 2 million VND/unit.
+
+Solution to Application 1:
+• Consider the function $f(x) = 2 + \frac{45}{x}$ for $x \ge 1$:
+  - Derivative: $f'(x) = -\frac{45}{x^2} < 0, \forall x \ge 1$. Hence, the average cost function is strictly decreasing on $[1; +\infty)$, showing that economies of scale reduce unit costs as output expands.
+  - Because $x > 0$, we have $\frac{45}{x} > 0 \implies f(x) = 2 + \frac{45}{x} > 2$ for all $x \ge 1$.
+  - Asymptotic behavior: $\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \left(2 + \frac{45}{x}\right) = 2$.
+• Geometric interpretation: The line $y = 2$ is a horizontal asymptote of the graph. As the production volume $x$ approaches infinity, the average cost curve approaches the line $y = 2$ from above but never intersects or drops below it.
+
+**Application 2 (Chemical Disinfectant Dilution):** A tank initially holds 200 liters of pure water. Starting at time $t = 0$, water is pumped into the tank at a rate of 40 liters per minute, and simultaneously 20 grams of dissolved disinfectant are added each minute.
+a) Determine the concentration of disinfectant $C(t)$ (in grams/liter) in the tank after $t$ minutes ($t \ge 0$).
+b) Analyze the variations of the concentration function $C(t)$ and explain why the concentration increases over time but never exceeds $0.5\text{ g/L}$.
+
+Solution to Application 2:
+• a) After $t$ minutes:
+  - Total volume of water in the tank: $V(t) = 200 + 40t$ (liters).
+  - Total mass of dissolved disinfectant: $m(t) = 20t$ (grams).
+  - The concentration function is:
+    $$C(t) = \frac{m(t)}{V(t)} = \frac{20t}{200 + 40t} = \frac{t}{2t + 10}\text{ (g/L)} = \frac{1}{2} - \frac{5}{2t + 10}.$$
+• b) Monotonicity and asymptotic limit for $t \ge 0$:
+  - Derivative: $C'(t) = \frac{10}{(2t + 10)^2} > 0, \forall t \ge 0$. Thus, $C(t)$ is strictly increasing on $[0; +\infty)$, meaning the chemical concentration rises continuously over time.
+  - Limit at infinity: $\lim\_{t \to +\infty} C(t) = \lim\_{t \to +\infty} \frac{t}{2t + 10} = \frac{1}{2} = 0.5\text{ (g/L)}$.
+  - Since $2t + 10 > 0$, we have $C(t) = 0.5 - \frac{5}{2t + 10} < 0.5$ for all $t \ge 0$.
+  - Consequently, the horizontal line $y = 0.5$ is a horizontal asymptote. The concentration approaches $0.5\text{ g/L}$ asymptotically from below but never exceeds this threshold.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 1.21:** Investigate the variations and sketch the graph of the function $y = -x^3 + 3x + 1$.
+
+Solution to Exercise 1.21:
+• 1. Domain: $D = \mathbb{R}$.
+• 2. Variations:
+  - Derivative: $y' = -3x^2 + 3 = -3(x^2 - 1) = 0 \iff x = \pm 1$.
+  - Increasing on $(-1; 1)$; decreasing on $(-\infty; -1)$ and $(1; +\infty)$.
+  - Extrema: Local minimum at $x = -1, y\_{\min} = -1$; local maximum at $x = 1, y\_{\max} = 3$.
+  - Limits: $\lim\_{x \to -\infty} y = +\infty; \lim\_{x \to +\infty} y = -\infty$.
+• 3. Graph:
+  - $y$-intercept: $(0; 1)$.
+  - Inflection point and center of symmetry: $I(0; 1)$ (since $y'' = -6x = 0 \iff x = 0$).
+
+**Exercise 1.22:** Investigate the variations and sketch the graph of the function $y = \frac{2x+1}{x+1}$.
+
+Solution to Exercise 1.22:
+• 1. Domain: $D = \mathbb{R} \setminus \\{-1\\}$.
+• 2. Variations:
+  - Derivative: $y' = \frac{2(x + 1) - (2x + 1)}{(x + 1)^2} = \frac{1}{(x + 1)^2} > 0, \forall x \ne -1$.
+  - The function is strictly increasing on $(-\infty; -1)$ and $(-1; +\infty)$, with no local extrema.
+  - Vertical asymptote: $x = -1$ (since $\lim\_{x \to -1^-} y = +\infty, \lim\_{x \to -1^+} y = -\infty$).
+  - Horizontal asymptote: $y = 2$ (since $\lim\_{x \to \pm\infty} y = 2$).
+• 3. Graph:
+  - Intercepts: $y$-intercept $(0; 1)$; $x$-intercept $\left(-\frac{1}{2}; 0\right)$.
+  - Center of symmetry: The intersection of the asymptotes $I(-1; 2)$.
+
+**Exercise 1.23:** Investigate the variations and sketch the graph of the function $y = \frac{2x^2 - x + 4}{x - 1}$.
+
+Solution to Exercise 1.23:
+• 1. Domain: $D = \mathbb{R} \setminus \\{1\\}$.
+• 2. Variations:
+  - Decomposition: $y = 2x + 1 + \frac{5}{x - 1}$.
+  - Derivative: $y' = 2 - \frac{5}{(x - 1)^2} = \frac{2(x - 1)^2 - 5}{(x - 1)^2}$.
+  - Setting $y' = 0 \iff (x - 1)^2 = \frac{5}{2} \iff x = 1 \pm \frac{\sqrt{10}}{2}$.
+  - Increasing on $\left(-\infty; 1 - \frac{\sqrt{10}}{2}\right)$ and $\left(1 + \frac{\sqrt{10}}{2}; +\infty\right)$;
+    Decreasing on $\left(1 - \frac{\sqrt{10}}{2}; 1\right)$ and $\left(1; 1 + \frac{\sqrt{10}}{2}\right)$.
+  - Asymptotes: Vertical asymptote $x = 1$; slant asymptote $y = 2x + 1$.
+• 3. Graph: The center of symmetry is the asymptote intersection $I(1; 3)$.
+
+**Exercise 1.25 (Equivalent Resistance in a Parallel Circuit):** A fixed resistor of $8\\,\Omega$ is connected in parallel with a variable resistor of $x\\,\Omega$ ($x > 0$). The equivalent resistance of the circuit is given by $R(x) = \frac{8x}{x + 8}$. Analyze the variations of $R(x)$ and explain why the equivalent resistance never exceeds $8\\,\Omega$.
+
+Solution to Exercise 1.25:
+• Consider the function $R(x) = \frac{8x}{x + 8} = 8 - \frac{64}{x + 8}$ for $x > 0$:
+  - Derivative: $R'(x) = \frac{64}{(x + 8)^2} > 0, \forall x > 0$.
+  - Therefore, $R(x)$ is strictly increasing on $(0; +\infty)$, showing that increasing the resistance of the variable resistor increases the equivalent resistance of the parallel circuit.
+  - Limit at infinity: $\lim\_{x \to +\infty} R(x) = \lim\_{x \to +\infty} \frac{8x}{x + 8} = 8\\,(\Omega)$.
+  - For all $x > 0$, we have $x + 8 > 8 \implies \frac{64}{x + 8} > 0 \implies R(x) = 8 - \frac{64}{x + 8} < 8\\,(\Omega)$.
+• Conclusion: As $x$ increases, the equivalent resistance increases asymptotically toward the horizontal asymptote line $y = 8$, but it can never exceed $8\\,\Omega$.
