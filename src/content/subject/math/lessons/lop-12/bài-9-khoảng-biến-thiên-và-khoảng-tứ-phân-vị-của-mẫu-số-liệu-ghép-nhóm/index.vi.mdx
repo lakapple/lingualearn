@@ -1,0 +1,239 @@
+---
+title: 'Bài 9: Khoảng biến thiên và khoảng tứ phân vị của mẫu số liệu ghép nhóm.'
+description: Hệ thống lý thuyết bài khoảng biến thiên và khoảng tứ phân vị của mẫu số liệu ghép nhóm cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Khoảng biến thiên của mẫu số liệu ghép nhóm
+  - Khoảng tứ phân vị của mẫu số liệu ghép nhóm
+  - Độ phân tán của mẫu số liệu
+  - Giá trị bất thường
+grade: 9
+order: 0
+updatedDate: 2026-10-29T13:04:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Khoảng biến thiên của mẫu số liệu ghép nhóm
+
+·       Khoảng tứ phân vị của mẫu số liệu ghép nhóm
+
+·       Độ phân tán của mẫu số liệu
+
+·       Giá trị bất thường
+
+### **Kiến thức, kĩ năng:**
+
+·       Tính khoảng biến thiên và khoảng tứ phân vị của mẫu số liệu ghép nhóm.
+
+·       Hiểu ý nghĩa và vai trò của khoảng biến thiên, khoảng tứ phân vị trong việc đo mức độ phân tán của mẫu số liệu.
+
+·       Nhận biết ưu điểm của khoảng tứ phân vị khi mẫu số liệu chứa giá trị bất thường.
+
+·       Vận dụng các số đặc trưng đo độ phân tán để so sánh, phân tích các hiện tượng thực tế (sự biến động nhiệt độ, phân bố thu nhập, thời gian chờ khám bệnh, thời gian đàm thoại).
+
+## Khoảng biến thiên
+
+\<Youtube url="https://www.youtube.com/watch?v=example_khoang_bien_thien"/>
+
+### a) Định nghĩa và ý nghĩa của khoảng biến thiên
+
+Cho mẫu số liệu ghép nhóm có $k$ nhóm:
+• Nhóm 1: $[a_1; a_2)$ với tần số $m_1 > 0$;
+• Nhóm $i$: $[a_i; a\_{i+1})$ với tần số $m_i$;
+• Nhóm $k$: $[a_k; a\_{k+1})$ với tần số $m_k > 0$;
+trong đó cỡ mẫu là $n = m_1 + m_2 + \dots + m_k$.
+Định nghĩa: Khoảng biến thiên của mẫu số liệu ghép nhóm trên, kí hiệu là $R$, là hiệu giữa đầu mút phải của nhóm cuối cùng chứa dữ liệu và đầu mút trái của nhóm đầu tiên chứa dữ liệu:
+$$R = a\_{k+1} - a_1$$
+Ý nghĩa:
+• Khoảng biến thiên của mẫu số liệu ghép nhóm là một giá trị xấp xỉ cho khoảng biến thiên của mẫu số liệu gốc.
+• Khoảng biến thiên được dùng để đo mức độ phân tán của mẫu số liệu ghép nhóm. Khoảng biến thiên càng lớn thì dữ liệu càng phân tán rộng.
+
+### b) Ví dụ và luyện tập về khoảng biến thiên
+
+**Ví dụ 1:** Thống kê thời gian sử dụng mạng xã hội trong ngày của các bạn Tổ 1 và Tổ 2 lớp 12A được kết quả như sau:
+• Tổ 1: $[0; 10)$ (4 bạn), $[10; 30)$ (2 bạn), $[30; 60)$ (3 bạn), $[60; 90)$ (1 bạn).
+• Tổ 2: $[0; 10)$ (5 bạn), $[10; 30)$ (1 bạn), $[30; 60)$ (3 bạn), $[60; 90)$ (0 bạn).
+Tìm khoảng biến thiên cho thời gian sử dụng mạng xã hội của học sinh mỗi tổ và giải thích ý nghĩa.
+
+Lời giải Ví dụ 1:
+• Với Tổ 1, nhóm đầu tiên chứa dữ liệu là $[0; 10)$ và nhóm cuối cùng chứa dữ liệu là $[60; 90)$.
+  Khoảng biến thiên của Tổ 1 là:
+  $$R_1 = 90 - 0 = 90\text{ (phút).}$$
+• Với Tổ 2, nhóm cuối cùng $[60; 90)$ có tần số bằng 0, nhóm cuối cùng thực tế chứa dữ liệu là $[30; 60)$.
+  Khoảng biến thiên của Tổ 2 là:
+  $$R_2 = 60 - 0 = 60\text{ (phút).}$$
+• Ý nghĩa: Do $R_1 > R_2$ ($90 > 60$) nên thời gian sử dụng mạng xã hội trong ngày của các bạn học sinh Tổ 1 có mức độ phân tán cao hơn so với Tổ 2.
+
+**Luyện tập 1:** Thời gian hoàn thành bài kiểm tra môn Toán của các bạn trong lớp 12C được cho như sau: $[25; 30)$ (8 học sinh), $[30; 35)$ (16 học sinh), $[35; 40)$ (4 học sinh), $[40; 45)$ (2 học sinh).
+a) Tính khoảng biến thiên $R$ cho mẫu số liệu ghép nhóm trên.
+b) Nếu biết học sinh hoàn thành bài kiểm tra sớm nhất mất 27 phút và muộn nhất mất 43 phút thì khoảng biến thiên của mẫu số liệu gốc là bao nhiêu?
+
+Lời giải Luyện tập 1:
+• a) Nhóm đầu tiên là $[25; 30)$ và nhóm cuối cùng là $[40; 45)$.
+  Khoảng biến thiên của mẫu số liệu ghép nhóm là:
+  $$R = 45 - 25 = 20\text{ (phút).}$$
+• b) Với mẫu số liệu gốc, giá trị nhỏ nhất là $x\_{\min} = 27$ phút và giá trị lớn nhất là $x\_{\max} = 43$ phút.
+  Khoảng biến thiên của mẫu số liệu gốc là:
+  $$R\_{\text{gốc}} = x\_{\max} - x\_{\min} = 43 - 27 = 16\text{ (phút).}$$
+  Nhận xét: Khoảng biến thiên của mẫu số liệu ghép nhóm ($R = 20$) lớn hơn khoảng biến thiên của mẫu số liệu gốc ($R\_{\text{gốc}} = 16$).
+
+## Khoảng tứ phân vị
+
+\<Youtube url="https://www.youtube.com/watch?v=example_khoang_tu_phan_vi"/>
+
+### a) Định nghĩa và công thức tính khoảng tứ phân vị
+
+Xét mẫu số liệu ghép nhóm với cỡ mẫu $n = m_1 + m_2 + \dots + m_k$.
+Công thức xác định tứ phân vị thứ $r$ ($r \in \\{1, 2, 3\\}$):
+$$Q_r = a_p + \frac{\frac{r \cdot n}{4} - (m_1 + m_2 + \dots + m\_{p-1})}{m_p} \cdot (a\_{p+1} - a_p)$$
+trong đó $[a_p; a\_{p+1})$ là nhóm chứa tứ phân vị thứ $r$.
+Định nghĩa: Khoảng tứ phân vị của mẫu số liệu ghép nhóm, kí hiệu là $\Delta_Q$, là hiệu giữa tứ phân vị thứ ba $Q_3$ và tứ phân vị thứ nhất $Q_1$ của mẫu số liệu đó:
+$$\Delta_Q = Q_3 - Q_1$$
+Ý nghĩa và nhận xét:
+• Khoảng tứ phân vị $\Delta_Q$ đo mức độ phân tán của 50% số liệu nằm ở phần giữa của mẫu số liệu.
+• $\Delta_Q$ càng lớn thì dữ liệu ở phần trung tâm càng phân tán.
+• Khoảng tứ phân vị không bị ảnh hưởng bởi các giá trị bất thường (quá lớn hoặc quá bé ở hai đầu), do đó là số đặc trưng rất tin cậy khi mẫu có chứa các sai số cực trị.
+
+### b) Ví dụ và luyện tập về khoảng tứ phân vị
+
+**Ví dụ 2:** Thời gian chờ khám bệnh của các bệnh nhân tại phòng khám X được cho trong bảng: $[0; 5)$ (3 bệnh nhân), $[5; 10)$ (12 bệnh nhân), $[10; 15)$ (15 bệnh nhân), $[15; 20)$ (8 bệnh nhân).
+a) Tìm khoảng tứ phân vị của mẫu số liệu ghép nhóm này.
+b) Tại phòng khám Y, người ta tính được khoảng tứ phân vị là 9,23 phút. Hỏi thời gian chờ của bệnh nhân tại phòng khám nào phân tán hơn?
+
+Lời giải Ví dụ 2:
+• a) Cỡ mẫu là $n = 3 + 12 + 15 + 8 = 38$.
+  - Tìm $Q_1$: Ta có $\frac{n}{4} = \frac{38}{4} = 9{,}5$. Tần số tích luỹ nhóm $[0; 5)$ là 3; nhóm $[5; 10)$ là $3 + 12 = 15 > 9{,}5$. Do đó nhóm chứa $Q_1$ là $[5; 10)$.
+    $$Q_1 = 5 + \frac{9{,}5 - 3}{12} \cdot (10 - 5) = 5 + \frac{6{,}5}{12} \cdot 5 \approx 7{,}71\text{ (phút).}$$
+  - Tìm $Q_3$: Ta có $\frac{3n}{4} = \frac{3 \cdot 38}{4} = 28{,}5$. Tần số tích luỹ nhóm $[10; 15)$ là $15 + 15 = 30 > 28{,}5$. Do đó nhóm chứa $Q_3$ là $[10; 15)$.
+    $$Q_3 = 10 + \frac{28{,}5 - 15}{15} \cdot (15 - 10) = 10 + \frac{13{,}5}{15} \cdot 5 = 14{,}5\text{ (phút).}$$
+  - Khoảng tứ phân vị phòng khám X là:
+    $$\Delta_Q = Q_3 - Q_1 \approx 14{,}5 - 7{,}71 = 6{,}79\text{ (phút).}$$
+• b) Vì $\Delta\_{Q(X)} = 6{,}79 < 9{,}23 = \Delta\_{Q(Y)}$ nên thời gian chờ khám bệnh tại phòng khám Y có độ phân tán lớn hơn (biến động nhiều hơn) so với phòng khám X.
+
+**Luyện tập 2:** Thời gian đàm thoại của một số cuộc gọi được ghi lại như sau:
+$[0; 1)$ (8 cuộc), $[1; 2)$ (17 cuộc), $[2; 3)$ (25 cuộc), $[3; 4)$ (20 cuộc), $[4; 5)$ (10 cuộc).
+Tính khoảng tứ phân vị của mẫu số liệu ghép nhóm trên.
+
+Lời giải Luyện tập 2:
+• Cỡ mẫu: $n = 8 + 17 + 25 + 20 + 10 = 80$.
+• Xác định $Q_1$: Ta có $\frac{n}{4} = \frac{80}{4} = 20$.
+  Tần số tích luỹ của nhóm $[0; 1)$ là 8; nhóm $[1; 2)$ là $8 + 17 = 25 > 20$. Vậy nhóm chứa $Q_1$ là $[1; 2)$.
+  $$Q_1 = 1 + \frac{20 - 8}{17} \cdot (2 - 1) = 1 + \frac{12}{17} \approx 1{,}71\text{ (phút).}$$
+• Xác định $Q_3$: Ta có $\frac{3n}{4} = \frac{3 \cdot 80}{4} = 60$.
+  Tần số tích luỹ đến nhóm $[2; 3)$ là $25 + 25 = 50$; nhóm $[3; 4)$ là $50 + 20 = 70 > 60$. Vậy nhóm chứa $Q_3$ là $[3; 4)$.
+  $$Q_3 = 3 + \frac{60 - 50}{20} \cdot (4 - 3) = 3 + \frac{10}{20} = 3{,}5\text{ (phút).}$$
+• Khoảng tứ phân vị là:
+  $$\Delta_Q = Q_3 - Q_1 = 3{,}5 - 1{,}71 = 1{,}79\text{ (phút).}$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng (Phân tích nhiệt độ cao nhất trong ngày tháng 6 tại Hà Nội):** Thống kê nhiệt độ cao nhất trong ngày của tháng 6/2021 và tháng 6/2022 tại Hà Nội ($n = 30$ ngày):
+• Tháng 6/2021: $[30; 32)$ (2 ngày), $[32; 34)$ (8 ngày), $[34; 36)$ (5 ngày), $[36; 38)$ (6 ngày), $[38; 40)$ (9 ngày).
+• Tháng 6/2022: $[28; 30)$ (2 ngày), $[30; 32)$ (3 ngày), $[32; 34)$ (4 ngày), $[34; 36)$ (11 ngày), $[36; 38)$ (8 ngày), $[38; 40)$ (2 ngày).
+Hỏi tháng Sáu năm nào ở Hà Nội nhiệt độ cao nhất trong ngày biến đổi nhiều hơn?
+
+Lời giải Vận dụng:
+• 1. Xét khoảng biến thiên $R$:
+  - Tháng 6/2021: Nhóm đầu chứa dữ liệu là $[30; 32)$, nhóm cuối là $[38; 40) \implies R\_{2021} = 40 - 30 = 10^{\circ}\text{C}$.
+  - Tháng 6/2022: Nhóm đầu là $[28; 30)$, nhóm cuối là $[38; 40) \implies R\_{2022} = 40 - 28 = 12^{\circ}\text{C}$.
+  - Nếu xét theo khoảng biến thiên toàn bộ thì tháng 6/2022 có biên độ phân tán lớn hơn ($12 > 10$).
+• 2. Xét khoảng tứ phân vị $\Delta_Q$ (đo độ phân tán 50% số ngày trung tâm):
+  - Tháng 6/2021 ($n = 30$):
+    + $\frac{n}{4} = 7{,}5 \implies$ Nhóm chứa $Q_1$ là $[32; 34)$:
+      $$Q_1 = 32 + \frac{7{,}5 - 2}{8} \cdot 2 = 32 + \frac{5{,}5}{4} = 33{,}375^{\circ}\text{C}.$$
+    + $\frac{3n}{4} = 22{,}5 \implies$ Nhóm chứa $Q_3$ là $[38; 40)$:
+      $$Q_3 = 38 + \frac{22{,}5 - 21}{9} \cdot 2 = 38 + \frac{3}{9} \approx 38{,}333^{\circ}\text{C}.$$
+    + $\Delta\_{Q(2021)} = Q_3 - Q_1 \approx 38{,}333 - 33{,}375 = 4{,}958^{\circ}\text{C}$.
+  - Tháng 6/2022 ($n = 30$):
+    + $\frac{n}{4} = 7{,}5 \implies$ Nhóm chứa $Q_1$ là $[32; 34)$:
+      $$Q_1 = 32 + \frac{7{,}5 - 5}{4} \cdot 2 = 32 + \frac{2{,}5}{2} = 33{,}25^{\circ}\text{C}.$$
+    + $\frac{3n}{4} = 22{,}5 \implies$ Nhóm chứa $Q_3$ là $[36; 38)$:
+      $$Q_3 = 36 + \frac{22{,}5 - 20}{8} \cdot 2 = 36 + \frac{2{,}5}{4} = 36{,}625^{\circ}\text{C}.$$
+    + $\Delta\_{Q(2022)} = Q_3 - Q_1 = 36{,}625 - 33{,}25 = 3{,}375^{\circ}\text{C}$.
+• Kết luận: Vì $\Delta\_{Q(2021)} \approx 4{,}96 > 3{,}38 = \Delta\_{Q(2022)}$, ta thấy rằng nhiệt độ của một nửa số ngày có nhiệt độ trung tâm trong tháng 6/2021 biến động và phân tán nhiều hơn so với tháng 6/2022.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 3.1:** Thống kê số thẻ vàng của 20 CLB Ngoại hạng Anh mùa 2021-2022: 101, 79, 79, 78, 75, 73, 68, 67, 67, 63, 63, 61, 60, 59, 57, 55, 55, 50, 47, 42.
+a) Ghép nhóm dãy số liệu thành các nhóm có độ dài bằng nhau với nhóm đầu tiên là $[40; 50)$.
+b) Tính khoảng biến thiên, khoảng tứ phân vị của mẫu số liệu gốc và mẫu số liệu ghép nhóm. Giá trị nào là chính xác, giá trị nào là xấp xỉ?
+
+Lời giải Bài 3.1:
+• a) Các nhóm độ dài bằng 10:
+  - $[40; 50)$: 42, 47 (tần số 2);
+  - $[50; 60)$: 50, 55, 55, 57, 59 (tần số 5);
+  - $[60; 70)$: 60, 61, 63, 63, 67, 67, 68 (tần số 7);
+  - $[70; 80)$: 73, 75, 78, 79, 79 (tần số 5);
+  - $[80; 90)$: tần số 0;
+  - $[90; 100)$: tần số 0;
+  - $[100; 110)$: 101 (tần số 1).
+• b) Mẫu số liệu gốc ($n = 20$):
+  - Sắp xếp tăng dần: 42, 47, 50, 55, 55, 57, 59, 60, 61, 63, 63, 67, 67, 68, 73, 75, 78, 79, 79, 101.
+  - Khoảng biến thiên chính xác: $R\_{\text{gốc}} = 101 - 42 = 59$.
+  - Tứ phân vị gốc: $Q_1 = \frac{55 + 57}{2} = 56$; $Q_3 = \frac{75 + 78}{2} = 76{,}5$.
+  - Khoảng tứ phân vị chính xác: $\Delta\_{Q(\text{gốc})} = 76{,}5 - 56 = 20{,}5$.
+• Mẫu số liệu ghép nhóm:
+  - Khoảng biến thiên xấp xỉ: $R = 110 - 40 = 70$.
+  - $\frac{n}{4} = 5 \implies$ Nhóm chứa $Q_1$ là $[50; 60) \implies Q_1 = 50 + \frac{5 - 2}{5} \cdot 10 = 56$.
+  - $\frac{3n}{4} = 15 \implies$ Tích luỹ đến $[60; 70)$ là $2 + 5 + 7 = 14$; nhóm chứa $Q_3$ là $[70; 80)$:
+    $$Q_3 = 70 + \frac{15 - 14}{5} \cdot 10 = 70 + 2 = 72.$$
+  - Khoảng tứ phân vị xấp xỉ: $\Delta_Q = 72 - 56 = 16$.
+• Kết luận: Các giá trị tính từ dãy số liệu gốc là giá trị chính xác; các giá trị tính từ bảng ghép nhóm là giá trị xấp xỉ.
+
+**Bài 3.2:** Thu nhập theo tháng của người lao động tại Nhà máy A ($n_A = 155$) và Nhà máy B ($n_B = 110$) theo các nhóm $[5; 8), [8; 11), [11; 14), [14; 17), [17; 20)$ (triệu đồng):
+• Nhà máy A: 20, 35, 45, 35, 20 người.
+• Nhà máy B: 17, 23, 30, 23, 17 người.
+Tính thu nhập trung bình và dựa vào khoảng tứ phân vị cho biết mức thu nhập của nhà máy nào biến động nhiều hơn.
+
+Lời giải Bài 3.2:
+• 1. Thu nhập trung bình (giá trị đại diện các nhóm là 6,5; 9,5; 12,5; 15,5; 18,5):
+  $$\bar{x}\_A = \frac{20(6{,}5) + 35(9{,}5) + 45(12{,}5) + 35(15{,}5) + 20(18{,}5)}{155} = \frac{1937{,}5}{155} = 12{,}5\text{ (triệu đồng).}$$
+  $$\bar{x}\_B = \frac{17(6{,}5) + 23(9{,}5) + 30(12{,}5) + 23(15{,}5) + 17(18{,}5)}{110} = \frac{1375}{110} = 12{,}5\text{ (triệu đồng).}$$
+  Thu nhập trung bình của hai nhà máy là hoàn toàn bằng nhau (12,5 triệu đồng/người).
+• 2. Khoảng tứ phân vị:
+  - Nhà máy A ($n = 155$):
+    + $\frac{n}{4} = 38{,}75 \implies$ Nhóm chứa $Q_1$ là $[8; 11)$:
+      $$Q_1 = 8 + \frac{38{,}75 - 20}{35} \cdot 3 = 8 + \frac{18{,}75}{35} \cdot 3 \approx 9{,}607.$$
+    + $\frac{3n}{4} = 116{,}25 \implies$ Nhóm chứa $Q_3$ là $[14; 17)$:
+      $$Q_3 = 14 + \frac{116{,}25 - 100}{35} \cdot 3 = 14 + \frac{16{,}25}{35} \cdot 3 \approx 15{,}393.$$
+    + Khoảng tứ phân vị: $\Delta\_{Q(A)} = Q_3 - Q_1 \approx 15{,}393 - 9{,}607 = 5{,}786\text{ (triệu đồng)}$.
+  - Nhà máy B ($n = 110$):
+    + $\frac{n}{4} = 27{,}5 \implies$ Nhóm chứa $Q_1$ là $[8; 11)$:
+      $$Q_1 = 8 + \frac{27{,}5 - 17}{23} \cdot 3 = 8 + \frac{10{,}5}{23} \cdot 3 \approx 9{,}370.$$
+    + $\frac{3n}{4} = 82{,}5 \implies$ Nhóm chứa $Q_3$ là $[14; 17)$:
+      $$Q_3 = 14 + \frac{82{,}5 - 70}{23} \cdot 3 = 14 + \frac{12{,}5}{23} \cdot 3 \approx 15{,}630.$$
+    + Khoảng tứ phân vị: $\Delta\_{Q(B)} = Q_3 - Q_1 \approx 15{,}630 - 9{,}370 = 6{,}260\text{ (triệu đồng)}$.
+• Kết luận: Vì $\Delta\_{Q(B)} \approx 6{,}26 > 5{,}79 \approx \Delta\_{Q(A)}$, nên mức thu nhập của người lao động ở Nhà máy B có độ biến động và phân tán cao hơn Nhà máy A.
+
+**Bài 3.3:** Chiều cao của học sinh hai lớp 12A và 12B theo các nhóm (cm):
+• Nhóm: $[150; 155), [155; 160), [160; 165), [165; 170), [170; 175)$.
+• Lớp 12A ($n_A = 43$): 15, 12, 1, 10, 5 học sinh.
+• Lớp 12B ($n_B = 42$): 17, 0, 10, 9, 6 học sinh.
+a) Tìm khoảng biến thiên, khoảng tứ phân vị cho chiều cao học sinh hai lớp.
+b) Để so sánh độ phân tán về chiều cao của hai lớp này ta nên dùng khoảng biến thiên hay khoảng tứ phân vị? Vì sao?
+
+Lời giải Bài 3.3:
+• a) Tính các số đặc trưng:
+  - Khoảng biến thiên:
+    + Cả hai lớp đều có nhóm đầu là $[150; 155)$ và nhóm cuối là $[170; 175)$.
+    + Do đó $R_A = R_B = 175 - 150 = 25\text{ (cm)}$.
+  - Khoảng tứ phân vị Lớp 12A ($n_A = 43$):
+    + $\frac{n}{4} = 10{,}75 \implies$ Nhóm chứa $Q_1$ là $[150; 155) \implies Q_1 = 150 + \frac{10{,}75 - 0}{15} \cdot 5 = 153{,}58\text{ cm}$.
+    + $\frac{3n}{4} = 32{,}25 \implies$ Nhóm chứa $Q_3$ là $[165; 170) \implies Q_3 = 165 + \frac{32{,}25 - 28}{10} \cdot 5 = 167{,}125\text{ cm}$.
+    + $\Delta\_{Q(A)} = 167{,}125 - 153{,}58 = 13{,}545\text{ cm}$.
+  - Khoảng tứ phân vị Lớp 12B ($n_B = 42$):
+    + $\frac{n}{4} = 10{,}5 \implies$ Nhóm chứa $Q_1$ là $[150; 155) \implies Q_1 = 150 + \frac{10{,}5 - 0}{17} \cdot 5 \approx 153{,}09\text{ cm}$.
+    + $\frac{3n}{4} = 31{,}5 \implies$ Tích luỹ đến $[160; 165)$ là $17 + 0 + 10 = 27$; nhóm chứa $Q_3$ là $[165; 170)$:
+      $$Q_3 = 165 + \frac{31{,}5 - 27}{9} \cdot 5 = 165 + 2{,}5 = 167{,}5\text{ cm}.$$
+    + $\Delta\_{Q(B)} = 167{,}5 - 153{,}09 = 14{,}41\text{ cm}$.
+• b) Để so sánh độ phân tán về chiều cao của học sinh hai lớp, ta nên dùng KHOẢNG TỨ PHÂN VỊ.
+  - Vì khoảng biến thiên của hai lớp bằng nhau ($R_A = R_B = 25\text{ cm}$), không phản ánh được sự khác biệt về cấu trúc phân bố dữ liệu bên trong.
+  - Khoảng tứ phân vị tập trung đo mức độ dàn trải của 50% số học sinh ở trung tâm và không bị phụ thuộc vào số học sinh cá biệt quá thấp hay quá cao ở hai biên.

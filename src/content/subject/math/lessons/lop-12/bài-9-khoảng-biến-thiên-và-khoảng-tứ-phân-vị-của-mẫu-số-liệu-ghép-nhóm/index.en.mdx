@@ -1,0 +1,239 @@
+---
+title: 'Lesson 9: Range and Interquartile Range of Grouped Data'
+description: Theoretical system for the lesson on Range and Interquartile Range of Grouped Data with illustrative examples
+tags:
+  - grade 12
+  - Range of grouped data
+  - Interquartile range of grouped data
+  - Degree of dispersion (variability) of data
+  - Outliers (anomalous values)
+grade: 9
+order: 0
+updatedDate: 2026-10-29T13:04:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Range of grouped data
+
+·       Interquartile range of grouped data
+
+·       Degree of dispersion (variability) of data
+
+·       Outliers (anomalous values)
+
+### **Knowledge and Skills:**
+
+·       Compute the range and interquartile range of grouped data.
+
+·       Understand the meaning and role of the range and interquartile range in measuring data dispersion.
+
+·       Recognize the advantage of the interquartile range when data contains outliers.
+
+·       Apply measures of dispersion to compare and analyze real-world phenomena (temperature fluctuations, income distribution, clinic waiting times, call durations).
+
+## Range
+
+\<Youtube url="https://www.youtube.com/watch?v=example_khoang_bien_thien"/>
+
+### a) Definition and Meaning of Range
+
+Consider grouped data with $k$ classes (groups):
+• Class 1: $[a_1; a_2)$ with frequency $m_1 > 0$;
+• Class $i$: $[a_i; a\_{i+1})$ with frequency $m_i$;
+• Class $k$: $[a_k; a\_{k+1})$ with frequency $m_k > 0$;
+where the sample size is $n = m_1 + m_2 + \dots + m_k$.
+Definition: The range of the grouped data above, denoted by $R$, is the difference between the upper boundary of the last class containing data and the lower boundary of the first class containing data:
+$$R = a\_{k+1} - a_1$$
+Meaning:
+• The range of grouped data provides an approximation of the range of the raw (ungrouped) data.
+• The range is used to measure the degree of dispersion of grouped data. A larger range indicates that the data is more widely spread out.
+
+### b) Examples and Practice on Range
+
+**Example 1:** Statistics on daily social media usage time of students in Group 1 and Group 2 of class 12A are recorded as follows:
+• Group 1: $[0; 10)$ (4 students), $[10; 30)$ (2 students), $[30; 60)$ (3 students), $[60; 90)$ (1 student).
+• Group 2: $[0; 10)$ (5 students), $[10; 30)$ (1 student), $[30; 60)$ (3 students), $[60; 90)$ (0 students).
+Find the range of social media usage time for students in each group and explain its meaning.
+
+Solution to Example 1:
+• For Group 1, the first class containing data is $[0; 10)$ and the last class containing data is $[60; 90)$.
+  The range for Group 1 is:
+  $$R_1 = 90 - 0 = 90\text{ (minutes).}$$
+• For Group 2, the class $[60; 90)$ has frequency 0, so the actual last class containing data is $[30; 60)$.
+  The range for Group 2 is:
+  $$R_2 = 60 - 0 = 60\text{ (minutes).}$$
+• Meaning: Since $R_1 > R_2$ ($90 > 60$), the daily social media usage time of students in Group 1 is more dispersed (varies more widely) than that of Group 2.
+
+**Practice 1:** The completion time of a Mathematics test by students in class 12C is given as follows: $[25; 30)$ (8 students), $[30; 35)$ (16 students), $[35; 40)$ (4 students), $[40; 45)$ (2 students).
+a) Compute the range $R$ for the grouped data above.
+b) If it is known that the earliest student finished in 27 minutes and the latest finished in 43 minutes, what is the range of the raw data?
+
+Solution to Practice 1:
+• a) The first class is $[25; 30)$ and the last class is $[40; 45)$.
+  The range of the grouped data is:
+  $$R = 45 - 25 = 20\text{ (minutes).}$$
+• b) For the raw data, the minimum value is $x\_{\min} = 27$ minutes and the maximum value is $x\_{\max} = 43$ minutes.
+  The range of the raw data is:
+  $$R\_{\text{raw}} = x\_{\max} - x\_{\min} = 43 - 27 = 16\text{ (minutes).}$$
+  Remark: The range of the grouped data ($R = 20$) is larger than the range of the raw data ($R\_{\text{raw}} = 16$).
+
+## Interquartile Range
+
+\<Youtube url="https://www.youtube.com/watch?v=example_khoang_tu_phan_vi"/>
+
+### a) Definition and Formula for the Interquartile Range
+
+Consider grouped data with sample size $n = m_1 + m_2 + \dots + m_k$.
+Formula for the $r$-th quartile $Q_r$ ($r \in \\{1, 2, 3\\}$):
+$$Q_r = a_p + \frac{\frac{r \cdot n}{4} - (m_1 + m_2 + \dots + m\_{p-1})}{m_p} \cdot (a\_{p+1} - a_p)$$
+where $[a_p; a\_{p+1})$ is the class containing the $r$-th quartile.
+Definition: The interquartile range of grouped data, denoted by $\Delta_Q$ (or $IQR$), is the difference between the third quartile $Q_3$ and the first quartile $Q_1$ of the data:
+$$\Delta_Q = Q_3 - Q_1$$
+Meaning and Remarks:
+• The interquartile range $\Delta_Q$ measures the dispersion of the middle 50% of the data values.
+• A larger $\Delta_Q$ indicates greater variability among the central observations.
+• The interquartile range is not influenced by extreme outliers at either tail, making it a robust and reliable measure of dispersion when data contains abnormal extreme values.
+
+### b) Examples and Practice on the Interquartile Range
+
+**Example 2:** The waiting times of patients at Clinic X are recorded in the table: $[0; 5)$ (3 patients), $[5; 10)$ (12 patients), $[10; 15)$ (15 patients), $[15; 20)$ (8 patients).
+a) Find the interquartile range of this grouped data.
+b) At Clinic Y, the calculated interquartile range of waiting times is 9.23 minutes. In which clinic is the patients' waiting time more dispersed?
+
+Solution to Example 2:
+• a) The sample size is $n = 3 + 12 + 15 + 8 = 38$.
+  - Finding $Q_1$: We have $\frac{n}{4} = \frac{38}{4} = 9.5$. The cumulative frequency of $[0; 5)$ is 3; of $[5; 10)$ is $3 + 12 = 15 > 9.5$. Thus, the class containing $Q_1$ is $[5; 10)$.
+    $$Q_1 = 5 + \frac{9.5 - 3}{12} \cdot (10 - 5) = 5 + \frac{6.5}{12} \cdot 5 \approx 7.71\text{ (minutes).}$$
+  - Finding $Q_3$: We have $\frac{3n}{4} = \frac{3 \cdot 38}{4} = 28.5$. The cumulative frequency up to $[10; 15)$ is $15 + 15 = 30 > 28.5$. Thus, the class containing $Q_3$ is $[10; 15)$.
+    $$Q_3 = 10 + \frac{28.5 - 15}{15} \cdot (15 - 10) = 10 + \frac{13.5}{15} \cdot 5 = 14.5\text{ (minutes).}$$
+  - The interquartile range for Clinic X is:
+    $$\Delta_Q = Q_3 - Q_1 \approx 14.5 - 7.71 = 6.79\text{ (minutes).}$$
+• b) Since $\Delta\_{Q(X)} = 6.79 < 9.23 = \Delta\_{Q(Y)}$, the waiting times of patients at Clinic Y are more dispersed (vary more widely) than at Clinic X.
+
+**Practice 2:** The duration of phone calls made by a user was recorded as follows:
+$[0; 1)$ (8 calls), $[1; 2)$ (17 calls), $[2; 3)$ (25 calls), $[3; 4)$ (20 calls), $[4; 5)$ (10 calls).
+Calculate the interquartile range of this grouped data.
+
+Solution to Practice 2:
+• Sample size: $n = 8 + 17 + 25 + 20 + 10 = 80$.
+• Determining $Q_1$: We have $\frac{n}{4} = \frac{80}{4} = 20$.
+  The cumulative frequency of $[0; 1)$ is 8; of $[1; 2)$ is $8 + 17 = 25 > 20$. Thus, the class containing $Q_1$ is $[1; 2)$.
+  $$Q_1 = 1 + \frac{20 - 8}{17} \cdot (2 - 1) = 1 + \frac{12}{17} \approx 1.71\text{ (minutes).}$$
+• Determining $Q_3$: We have $\frac{3n}{4} = \frac{3 \cdot 80}{4} = 60$.
+  The cumulative frequency up to $[2; 3)$ is $25 + 25 = 50$; of $[3; 4)$ is $50 + 20 = 70 > 60$. Thus, the class containing $Q_3$ is $[3; 4)$.
+  $$Q_3 = 3 + \frac{60 - 50}{20} \cdot (4 - 3) = 3 + \frac{10}{20} = 3.5\text{ (minutes).}$$
+• The interquartile range is:
+  $$\Delta_Q = Q_3 - Q_1 = 3.5 - 1.71 = 1.79\text{ (minutes).}$$
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Analysis of Daily Maximum June Temperatures in Hanoi):** Statistics on the daily maximum temperatures in June 2021 and June 2022 in Hanoi ($n = 30$ days):
+• June 2021: $[30; 32)$ (2 days), $[32; 34)$ (8 days), $[34; 36)$ (5 days), $[36; 38)$ (6 days), $[38; 40)$ (9 days).
+• June 2022: $[28; 30)$ (2 days), $[30; 32)$ (3 days), $[32; 34)$ (4 days), $[34; 36)$ (11 days), $[36; 38)$ (8 days), $[38; 40)$ (2 days).
+In which June did the daily maximum temperatures in Hanoi fluctuate more?
+
+Solution to Application:
+• 1. Range $R$:
+  - June 2021: First class containing data is $[30; 32)$, last class is $[38; 40) \implies R\_{2021} = 40 - 30 = 10^{\circ}\text{C}$.
+  - June 2022: First class is $[28; 30)$, last class is $[38; 40) \implies R\_{2022} = 40 - 28 = 12^{\circ}\text{C}$.
+  - Considering the overall range across all days, June 2022 had a larger range ($12 > 10$).
+• 2. Interquartile range $\Delta_Q$ (measuring the dispersion of the middle 50% of days):
+  - June 2021 ($n = 30$):
+    + $\frac{n}{4} = 7.5 \implies$ Class containing $Q_1$ is $[32; 34)$:
+      $$Q_1 = 32 + \frac{7.5 - 2}{8} \cdot 2 = 32 + \frac{5.5}{4} = 33.375^{\circ}\text{C}.$$
+    + $\frac{3n}{4} = 22.5 \implies$ Class containing $Q_3$ is $[38; 40)$:
+      $$Q_3 = 38 + \frac{22.5 - 21}{9} \cdot 2 = 38 + \frac{3}{9} \approx 38.333^{\circ}\text{C}.$$
+    + $\Delta\_{Q(2021)} = Q_3 - Q_1 \approx 38.333 - 33.375 = 4.958^{\circ}\text{C}$.
+  - June 2022 ($n = 30$):
+    + $\frac{n}{4} = 7.5 \implies$ Class containing $Q_1$ is $[32; 34)$:
+      $$Q_1 = 32 + \frac{7.5 - 5}{4} \cdot 2 = 32 + \frac{2.5}{2} = 33.25^{\circ}\text{C}.$$
+    + $\frac{3n}{4} = 22.5 \implies$ Class containing $Q_3$ is $[36; 38)$:
+      $$Q_3 = 36 + \frac{22.5 - 20}{8} \cdot 2 = 36 + \frac{2.5}{4} = 36.625^{\circ}\text{C}.$$
+    + $\Delta\_{Q(2022)} = Q_3 - Q_1 = 36.625 - 33.25 = 3.375^{\circ}\text{C}$.
+• Conclusion: Since $\Delta\_{Q(2021)} \approx 4.96 > 3.38 = \Delta\_{Q(2022)}$, the temperatures of the middle half of the days in June 2021 varied significantly more than those in June 2022.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 3.1:** The number of yellow cards received by 20 English Premier League clubs in the 2021-2022 season was: 101, 79, 79, 78, 75, 73, 68, 67, 67, 63, 63, 61, 60, 59, 57, 55, 55, 50, 47, 42.
+a) Group the data into classes of equal width with the first class being $[40; 50)$.
+b) Calculate the range and interquartile range for both the raw data and the grouped data. Which values are exact, and which are approximations?
+
+Solution to Exercise 3.1:
+• a) Grouped classes of width 10:
+  - $[40; 50)$: 42, 47 (frequency 2);
+  - $[50; 60)$: 50, 55, 55, 57, 59 (frequency 5);
+  - $[60; 70)$: 60, 61, 63, 63, 67, 67, 68 (frequency 7);
+  - $[70; 80)$: 73, 75, 78, 79, 79 (frequency 5);
+  - $[80; 90)$: frequency 0;
+  - $[90; 100)$: frequency 0;
+  - $[100; 110)$: 101 (frequency 1).
+• b) Raw data ($n = 20$):
+  - Sorted values: 42, 47, 50, 55, 55, 57, 59, 60, 61, 63, 63, 67, 67, 68, 73, 75, 78, 79, 79, 101.
+  - Exact range: $R\_{\text{raw}} = 101 - 42 = 59$.
+  - Raw quartiles: $Q_1 = \frac{55 + 57}{2} = 56$; $Q_3 = \frac{75 + 78}{2} = 76.5$.
+  - Exact interquartile range: $\Delta\_{Q(\text{raw})} = 76.5 - 56 = 20.5$.
+• Grouped data:
+  - Approximate range: $R = 110 - 40 = 70$.
+  - $\frac{n}{4} = 5 \implies$ Class containing $Q_1$ is $[50; 60) \implies Q_1 = 50 + \frac{5 - 2}{5} \cdot 10 = 56$.
+  - $\frac{3n}{4} = 15 \implies$ Cumulative frequency up to $[60; 70)$ is $2 + 5 + 7 = 14$; class containing $Q_3$ is $[70; 80)$:
+    $$Q_3 = 70 + \frac{15 - 14}{5} \cdot 10 = 70 + 2 = 72.$$
+  - Approximate interquartile range: $\Delta_Q = 72 - 56 = 16$.
+• Conclusion: The statistics obtained from the raw data are exact values; those calculated from the grouped frequency distribution are approximations.
+
+**Exercise 3.2:** The monthly income of workers at Factory A ($n_A = 155$) and Factory B ($n_B = 110$) across the classes $[5; 8), [8; 11), [11; 14), [14; 17), [17; 20)$ (million VND):
+• Factory A: 20, 35, 45, 35, 20 workers.
+• Factory B: 17, 23, 30, 23, 17 workers.
+Calculate the mean income for both factories. Based on the interquartile range, determine which factory exhibits greater variability in workers' incomes.
+
+Solution to Exercise 3.2:
+• 1. Mean monthly income (class midpoints: 6.5, 9.5, 12.5, 15.5, 18.5):
+  $$\bar{x}\_A = \frac{20(6.5) + 35(9.5) + 45(12.5) + 35(15.5) + 20(18.5)}{155} = \frac{1937.5}{155} = 12.5\text{ (million VND).}$$
+  $$\bar{x}\_B = \frac{17(6.5) + 23(9.5) + 30(12.5) + 23(15.5) + 17(18.5)}{110} = \frac{1375}{110} = 12.5\text{ (million VND).}$$
+  The mean income at both factories is identical (12.5 million VND/worker).
+• 2. Interquartile range:
+  - Factory A ($n = 155$):
+    + $\frac{n}{4} = 38.75 \implies$ Class containing $Q_1$ is $[8; 11)$:
+      $$Q_1 = 8 + \frac{38.75 - 20}{35} \cdot 3 = 8 + \frac{18.75}{35} \cdot 3 \approx 9.607.$$
+    + $\frac{3n}{4} = 116.25 \implies$ Class containing $Q_3$ is $[14; 17)$:
+      $$Q_3 = 14 + \frac{116.25 - 100}{35} \cdot 3 = 14 + \frac{16.25}{35} \cdot 3 \approx 15.393.$$
+    + Interquartile range: $\Delta\_{Q(A)} = Q_3 - Q_1 \approx 15.393 - 9.607 = 5.786\text{ (million VND)}$.
+  - Factory B ($n = 110$):
+    + $\frac{n}{4} = 27.5 \implies$ Class containing $Q_1$ is $[8; 11)$:
+      $$Q_1 = 8 + \frac{27.5 - 17}{23} \cdot 3 = 8 + \frac{10.5}{23} \cdot 3 \approx 9.370.$$
+    + $\frac{3n}{4} = 82.5 \implies$ Class containing $Q_3$ is $[14; 17)$:
+      $$Q_3 = 14 + \frac{82.5 - 70}{23} \cdot 3 = 14 + \frac{12.5}{23} \cdot 3 \approx 15.630.$$
+    + Interquartile range: $\Delta\_{Q(B)} = Q_3 - Q_1 \approx 15.630 - 9.370 = 6.260\text{ (million VND)}$.
+• Conclusion: Because $\Delta\_{Q(B)} \approx 6.26 > 5.79 \approx \Delta\_{Q(A)}$, the worker incomes at Factory B exhibit greater dispersion and variability than at Factory A.
+
+**Exercise 3.3:** The heights of students in classes 12A and 12B are grouped into classes (cm):
+• Classes: $[150; 155), [155; 160), [160; 165), [165; 170), [170; 175)$.
+• Class 12A ($n_A = 43$): 15, 12, 1, 10, 5 students.
+• Class 12B ($n_B = 42$): 17, 0, 10, 9, 6 students.
+a) Find the range and interquartile range of heights for students in both classes.
+b) To compare the dispersion of student heights between the two classes, should we use the range or the interquartile range? Why?
+
+Solution to Exercise 3.3:
+• a) Calculating statistics:
+  - Range:
+    + Both classes have the first class as $[150; 155)$ and the last class as $[170; 175)$.
+    + Therefore: $R_A = R_B = 175 - 150 = 25\text{ (cm)}$.
+  - Interquartile range for Class 12A ($n_A = 43$):
+    + $\frac{n}{4} = 10.75 \implies$ Class containing $Q_1$ is $[150; 155) \implies Q_1 = 150 + \frac{10.75 - 0}{15} \cdot 5 = 153.58\text{ cm}$.
+    + $\frac{3n}{4} = 32.25 \implies$ Class containing $Q_3$ is $[165; 170) \implies Q_3 = 165 + \frac{32.25 - 28}{10} \cdot 5 = 167.125\text{ cm}$.
+    + $\Delta\_{Q(A)} = 167.125 - 153.58 = 13.545\text{ cm}$.
+  - Interquartile range for Class 12B ($n_B = 42$):
+    + $\frac{n}{4} = 10.5 \implies$ Class containing $Q_1$ is $[150; 155) \implies Q_1 = 150 + \frac{10.5 - 0}{17} \cdot 5 \approx 153.09\text{ cm}$.
+    + $\frac{3n}{4} = 31.5 \implies$ Cumulative frequency up to $[160; 165)$ is $17 + 0 + 10 = 27$; class containing $Q_3$ is $[165; 170)$:
+      $$Q_3 = 165 + \frac{31.5 - 27}{9} \cdot 5 = 165 + 2.5 = 167.5\text{ cm}.$$
+    + $\Delta\_{Q(B)} = 167.5 - 153.09 = 14.41\text{ cm}$.
+• b) To compare the dispersion of heights between the two classes, we should use the INTERQUARTILE RANGE.
+  - The ranges for both classes are identical ($R_A = R_B = 25\text{ cm}$), thus failing to capture the differences in the internal distribution of heights.
+  - The interquartile range focuses specifically on the spread of the middle 50% of the students and is immune to the disproportionate influence of extreme heights at the outer boundaries.
