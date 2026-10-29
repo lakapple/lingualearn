@@ -1,0 +1,259 @@
+---
+title: 'Bài 16: Công thức tính góc trong không gian'
+description: Hệ thống lý thuyết bài công thức tính góc trong không gian cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Góc giữa đường thẳng và mặt phẳng
+  - Góc giữa hai đường thẳng trong không gian
+  - góc nghiêng của mặt phẳng thực tế
+  - Góc giữa hai mặt phẳng
+grade: 12
+order: 16
+updatedDate: 2026-10-29T16:28:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Góc giữa hai đường thẳng trong không gian
+
+·       Góc giữa đường thẳng và mặt phẳng
+
+·       Góc giữa hai mặt phẳng
+
+·       Góc nghiêng của mái nhà, góc nghiêng của mặt phẳng thực tế
+
+### **Kiến thức, kĩ năng:**
+
+·       Nắm vững các công thức toạ độ tính góc giữa hai đường thẳng, góc giữa đường thẳng và mặt phẳng, góc giữa hai mặt phẳng trong không gian Oxyz.
+
+·       Sử dụng thành thạo tích vô hướng của các vectơ chỉ phương và vectơ pháp tuyến để xác định côsin hoặc sin của các góc cần tìm.
+
+·       Quy đổi chính xác giữa giá trị lượng giác và số đo góc theo đơn vị độ (làm tròn đến hàng phần mười).
+
+·       Vận dụng kiến thức về góc để giải quyết các bài toán thực tiễn (tính góc nghiêng của mái nhà trên ba cột trụ, góc tạo bởi các tuyến đường tại nút giao thông, góc nhị diện giữa hai mặt bên kim tự tháp Kheops, góc nghiêng của đáy bể nước hình lập phương).
+
+## Công thức tính góc giữa hai đường thẳng
+
+\<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_duong_thang"/>
+
+### a) Mối quan hệ với góc giữa hai vectơ chỉ phương
+
+Định lí:
+Trong không gian $Oxyz$, cho hai đường thẳng $\Delta$ và $\Delta'$ tương ứng có vectơ chỉ phương $\vec{u} = (a; b; c)$ và $\vec{u}' = (a'; b'; c')$.
+Góc giữa hai đường thẳng $\Delta$ và $\Delta'$, kí hiệu là $(\Delta, \Delta')$, luôn thoả mãn $0^\circ \le (\Delta, \Delta') \le 90^\circ$.
+Côsin của góc giữa hai đường thẳng bằng giá trị tuyệt đối côsin của góc giữa hai vectơ chỉ phương của chúng:
+$$\cos(\Delta, \Delta') = |\cos(\vec{u}, \vec{u}')| = \frac{|\vec{u} \cdot \vec{u}'|}{|\vec{u}| \cdot |\vec{u}'|} = \frac{|aa' + bb' + cc'|}{\sqrt{a^2 + b^2 + c^2} \cdot \sqrt{a'^2 + b'^2 + c'^2}}$$
+Chú ý: Hai đường thẳng vuông góc với nhau khi và chỉ khi tích vô hướng của hai vectơ chỉ phương tương ứng bằng 0: $\Delta \perp \Delta' \iff aa' + bb' + cc' = 0$.
+
+### b) Ví dụ và luyện tập tính góc giữa hai đường thẳng
+
+**Ví dụ 1:** Trong không gian $Oxyz$, tính góc giữa hai đường thẳng:
+$$\Delta: \begin{cases} x = 1 + t \\\ y = -1 + t \\\ z = 2 \end{cases} \quad \text{và} \quad \Delta': \begin{cases} x = 1 + 2s \\\ y = -2 + 2s \\\ z = 3 + s \end{cases}$$
+
+Lời giải Ví dụ 1:
+• Hai đường thẳng $\Delta$ và $\Delta'$ tương ứng có các vectơ chỉ phương là $\vec{u} = (1; 1; 0)$ và $\vec{u}' = (2; 2; 1)$.
+• Khi đó:
+  $$\cos(\Delta, \Delta') = \frac{|1(2) + 1(2) + 0(1)|}{\sqrt{1^2 + 1^2 + 0^2} \cdot \sqrt{2^2 + 2^2 + 1^2}} = \frac{|2 + 2 + 0|}{\sqrt{2} \cdot \sqrt{9}} = \frac{4}{3\sqrt{2}} = \frac{2\sqrt{2}}{3}.$$
+• Suy ra $(\Delta, \Delta') \approx 19{,}5^\circ$.
+
+**Luyện tập 1:** Trong không gian $Oxyz$, tính góc giữa trục $Oz$ và đường thẳng $\Delta: \frac{x - 3}{1} = \frac{y + 1}{2} = \frac{z - 1}{-2}$.
+
+Lời giải Luyện tập 1:
+• Trục $Oz$ có vectơ chỉ phương $\vec{k} = (0; 0; 1)$.
+• Đường thẳng $\Delta$ có vectơ chỉ phương $\vec{u} = (1; 2; -2)$.
+• Ta có:
+  $$\cos(Oz, \Delta) = \frac{|\vec{k} \cdot \vec{u}|}{|\vec{k}| \cdot |\vec{u}|} = \frac{|0(1) + 0(2) + 1(-2)|}{\sqrt{0^2 + 0^2 + 1^2} \cdot \sqrt{1^2 + 2^2 + (-2)^2}} = \frac{|-2|}{1 \cdot \sqrt{9}} = \frac{2}{3}.$$
+• Do đó $(Oz, \Delta) = \arccos\left(\frac{2}{3}\right) \approx 48{,}2^\circ$.
+
+## Công thức tính góc giữa đường thẳng và mặt phẳng
+
+\<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_duong_thang_va_mat_phang"/>
+
+### a) Mối quan hệ với góc giữa VTCP và VTPT
+
+Định lí:
+Trong không gian $Oxyz$, cho đường thẳng $\Delta$ có vectơ chỉ phương $\vec{u} = (a; b; c)$ và mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n} = (A; B; C)$.
+Góc giữa đường thẳng $\Delta$ và mặt phẳng $(P)$, kí hiệu là $(\Delta, (P))$, thoả mãn $0^\circ \le (\Delta, (P)) \le 90^\circ$.
+Sin của góc giữa đường thẳng $\Delta$ và mặt phẳng $(P)$ bằng giá trị tuyệt đối côsin của góc giữa $\vec{u}$ và $\vec{n}$:
+$$\sin(\Delta, (P)) = |\cos(\vec{u}, \vec{n})| = \frac{|\vec{u} \cdot \vec{n}|}{|\vec{u}| \cdot |\vec{n}|} = \frac{|aA + bB + cC|}{\sqrt{a^2 + b^2 + c^2} \cdot \sqrt{A^2 + B^2 + C^2}}$$
+Chú ý: $\Delta \parallel (P)$ hoặc $\Delta \subset (P) \iff \sin(\Delta, (P)) = 0 \iff aA + bB + cC = 0$. Còn $\Delta \perp (P) \iff \sin(\Delta, (P)) = 1 \iff \vec{u}$ cùng phương với $\vec{n}$.
+
+### b) Ví dụ và luyện tập tính góc giữa đường thẳng và mặt phẳng
+
+**Ví dụ 2:** Trong không gian $Oxyz$, tính góc tạo bởi trục $Ox$ và mặt phẳng $(P): \sqrt{2}x - y + z + 2 = 0$.
+
+Lời giải Ví dụ 2:
+• Trục $Ox$ có vectơ chỉ phương $\vec{i} = (1; 0; 0)$.
+• Mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n} = (\sqrt{2}; -1; 1)$.
+• Ta có:
+  $$\sin(Ox, (P)) = \frac{|1(\sqrt{2}) + 0(-1) + 0(1)|}{\sqrt{1^2 + 0^2 + 0^2} \cdot \sqrt{(\sqrt{2})^2 + (-1)^2 + 1^2}} = \frac{\sqrt{2}}{1 \cdot \sqrt{2 + 1 + 1}} = \frac{\sqrt{2}}{\sqrt{4}} = \frac{\sqrt{2}}{2}.$$
+• Vậy góc giữa trục $Ox$ và mặt phẳng $(P)$ bằng $45^\circ$.
+
+**Luyện tập 2:** Trong không gian $Oxyz$, tính góc giữa đường thẳng $\Delta: \frac{x + 2}{-1} = \frac{y - 4}{2} = \frac{z + 1}{1}$ và mặt phẳng $(P): x - y + z - 1 = 0$.
+
+Lời giải Luyện tập 2:
+• Đường thẳng $\Delta$ có vectơ chỉ phương $\vec{u} = (-1; 2; 1)$.
+• Mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n} = (1; -1; 1)$.
+• Ta có:
+  $$\sin(\Delta, (P)) = \frac{|(-1)(1) + 2(-1) + 1(1)|}{\sqrt{(-1)^2 + 2^2 + 1^2} \cdot \sqrt{1^2 + (-1)^2 + 1^2}} = \frac{|-1 - 2 + 1|}{\sqrt{6} \cdot \sqrt{3}} = \frac{|-2|}{\sqrt{18}} = \frac{2}{3\sqrt{2}} = \frac{\sqrt{2}}{3}.$$
+• Suy ra $(\Delta, (P)) = \arcsin\left(\frac{\sqrt{2}}{3}\right) \approx 28{,}1^\circ$.
+
+## Công thức tính góc giữa hai mặt phẳng
+
+\<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_mat_phang"/>
+
+### a) Mối quan hệ với góc giữa hai vectơ pháp tuyến
+
+Định lí:
+Trong không gian $Oxyz$, cho hai mặt phẳng $(P)$ và $(Q)$ tương ứng có các vectơ pháp tuyến là $\vec{n} = (A; B; C)$ và $\vec{n}' = (A'; B'; C').
+Góc giữa hai mặt phẳng $(P)$ và $(Q)$, kí hiệu là $((P), (Q))$, thoả mãn $0^\circ \le ((P), (Q)) \le 90^\circ$.
+Côsin của góc giữa hai mặt phẳng bằng giá trị tuyệt đối côsin của góc giữa hai vectơ pháp tuyến của chúng:
+$$\cos((P), (Q)) = |\cos(\vec{n}, \vec{n}')| = \frac{|\vec{n} \cdot \vec{n}'|}{|\vec{n}| \cdot |\vec{n}'|} = \frac{|AA' + BB' + CC'|}{\sqrt{A^2 + B^2 + C^2} \cdot \sqrt{A'^2 + B'^2 + C'^2}}$$
+Chú ý: $(P) \perp (Q) \iff \vec{n} \perp \vec{n}' \iff AA' + BB' + CC' = 0$.
+
+### b) Ví dụ và luyện tập tính góc giữa hai mặt phẳng
+
+**Ví dụ 3:** Trong không gian $Oxyz$, tính góc giữa hai mặt phẳng $(P): x + 2y + 2z - 1 = 0$ và $(Q): x + y - z + 1 = 0$.
+
+Lời giải Ví dụ 3:
+• Các mặt phẳng $(P)$ và $(Q)$ tương ứng có vectơ pháp tuyến là $\vec{n} = (1; 2; 2)$ và $\vec{n}' = (1; 1; -1)$.
+• Khi đó:
+  $$\cos((P), (Q)) = \frac{|1(1) + 2(1) + 2(-1)|}{\sqrt{1^2 + 2^2 + 2^2} \cdot \sqrt{1^2 + 1^2 + (-1)^2}} = \frac{|1 + 2 - 2|}{\sqrt{9} \cdot \sqrt{3}} = \frac{1}{3\sqrt{3}} = \frac{\sqrt{3}}{9}.$$
+• Do đó $((P), (Q)) = \arccos\left(\frac{\sqrt{3}}{9}\right) \approx 78{,}9^\circ$.
+
+**Luyện tập 3:** Trong không gian $Oxyz$, tính góc giữa hai mặt phẳng $(P): x - \sqrt{2}y + z - 2 = 0$ và mặt phẳng toạ độ $(Oxz): y = 0$.
+
+Lời giải Luyện tập 3:
+• Mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n} = (1; -\sqrt{2}; 1)$.
+• Mặt phẳng toạ độ $(Oxz)$ có phương trình $y = 0$, nhận $\vec{j} = (0; 1; 0)$ làm vectơ pháp tuyến.
+• Ta có:
+  $$\cos((P), (Oxz)) = \frac{|1(0) + (-\sqrt{2})(1) + 1(0)|}{\sqrt{1^2 + (-\sqrt{2})^2 + 1^2} \cdot \sqrt{0^2 + 1^2 + 0^2}} = \frac{|-\sqrt{2}|}{\sqrt{4} \cdot 1} = \frac{\sqrt{2}}{2}.$$
+• Suy ra $((P), (Oxz)) = 45^\circ$.
+
+**Ví dụ 4:** Trong không gian $Oxyz$, cho $A(0; 0; 4), B(0; -3; 0), C(0; 3; 0), D(3; 0; 0)$. Tính góc giữa hai mặt phẳng $(ABD)$ và $(ACD)$.
+
+Lời giải Ví dụ 4:
+• Mặt phẳng $(ABD)$ có cặp vectơ chỉ phương $\vec{BD} = (3; 3; 0)$ và $\vec{AD} = (3; 0; -4)$.
+  Vectơ pháp tuyến của $(ABD)$ là $[\vec{BD}, \vec{AD}] = (-12; 12; -9)$. Chọn $\vec{n} = (-4; 4; -3)$.
+• Mặt phẳng $(ACD)$ có cặp vectơ chỉ phương $\vec{AC} = (0; 3; -4)$ và $\vec{AD} = (3; 0; -4)$.
+  Vectơ pháp tuyến của $(ACD)$ là $[\vec{AC}, \vec{AD}] = (-12; -12; -9)$. Chọn $\vec{m} = (4; 4; 3)$.
+• Gọi $\varphi$ là góc giữa hai mặt phẳng $(ABD)$ và $(ACD)$. Ta có:
+  $$\cos \varphi = \frac{|(-4)(4) + 4(4) + (-3)(3)|}{\sqrt{(-4)^2 + 4^2 + (-3)^2} \cdot \sqrt{4^2 + 4^2 + 3^2}} = \frac{|-16 + 16 - 9|}{\sqrt{41} \cdot \sqrt{41}} = \frac{9}{41}.$$
+• Vậy $\varphi = \arccos\left(\frac{9}{41}\right) \approx 77{,}3^\circ$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 1 (Độ nghiêng của mái nhà - Tình huống mở đầu):** Một mái nhà hình tròn được đặt trên ba cây cột trụ vuông góc với sàn nhà phẳng có chiều cao lần lượt là 7 m, 6 m, 5 m. Ba chân cột là ba đỉnh của tam giác đều cạnh 4 m trên sàn. Hỏi mái nhà nghiêng so với mặt sàn nhà một góc bao nhiêu độ?
+
+Lời giải Vận dụng 1:
+• Chọn hệ trục toạ độ $Oxyz$ có gốc $O$ là trung điểm cạnh $AC$ của tam giác đều $ABC$ trên mặt sàn $(Oxy)$:
+  - Đáy $AC$ nằm dọc theo trục $Oy$: vì $AC = 4\text{ m}$, ta có $A(0; -2; 0)$ và $C(0; 2; 0)$.
+  - Chiều cao tam giác đều $OB = \frac{4\sqrt{3}}{2} = 2\sqrt{3}\text{ m}$, đỉnh $B$ nằm trên tia $Ox \implies B(2\sqrt{3}; 0; 0)$.
+• Ba đỉnh cột đỡ mái nhà lần lượt là:
+  $$A'(0; -2; 7), \quad B'(2\sqrt{3}; 0; 6), \quad C'(0; 2; 5).$$
+• Mặt phẳng mái nhà là mặt phẳng $(A'B'C')$. Ta xác định hai vectơ chỉ phương:
+  $$\vec{A'C'} = (0; 4; -2), \quad \vec{A'B'} = (2\sqrt{3}; 2; -1).$$
+• Vectơ pháp tuyến của mặt phẳng mái nhà $(A'B'C')$ là:
+  $$\vec{n} = [\vec{A'C'}, \vec{A'B'}] = (4(-1) - (-2)(2); (-2)(2\sqrt{3}) - 0(-1); 0(2) - 4(2\sqrt{3})) = (0; -4\sqrt{3}; -8\sqrt{3}).$$
+  Chọn vectơ cùng phương tối giản: $\vec{n} = (0; 1; 2)$.
+• Mặt sàn nhà nằm trong mặt phẳng $(Oxy)$ nên có vectơ pháp tuyến là $\vec{k} = (0; 0; 1)$.
+• Gọi $\alpha$ là góc nghiêng giữa mái nhà và mặt sàn nhà, ta có:
+  $$\cos \alpha = \frac{|\vec{n} \cdot \vec{k}|}{|\vec{n}| \cdot |\vec{k}|} = \frac{|0(0) + 1(0) + 2(1)|}{\sqrt{0^2 + 1^2 + 2^2} \cdot 1} = \frac{2}{\sqrt{5}} = \frac{2\sqrt{5}}{5}.$$
+• Suy ra $\alpha = \arccos\left(\frac{2}{\sqrt{5}}\right) \approx 26{,}6^\circ$.
+• Vậy mái nhà nghiêng so với mặt sàn nhà một góc khoảng $26{,}6^\circ$.
+
+**Vận dụng 2 (Hai con đường tại nút giao thông):** Tại một nút giao thông trong không gian $Oxyz$, hai con đường tương ứng thuộc hai đường thẳng:
+$$\Delta_1: \begin{cases} x = 2 + t \\\ y = 1 + t \\\ z = 0 \end{cases} \quad \text{và} \quad \Delta_2: \begin{cases} x = 1 - 2s \\\ y = 2s \\\ z = 1 \end{cases}$$
+Hỏi hai con đường trên có vuông góc với nhau hay không?
+
+Lời giải Vận dụng 2:
+• Đường thẳng $\Delta_1$ có vectơ chỉ phương $\vec{u}\_1 = (1; 1; 0)$.
+• Đường thẳng $\Delta_2$ có vectơ chỉ phương $\vec{u}\_2 = (-2; 2; 0)$.
+• Xét tích vô hướng của hai vectơ chỉ phương:
+  $$\vec{u}\_1 \cdot \vec{u}\_2 = 1(-2) + 1(2) + 0(0) = -2 + 2 + 0 = 0.$$
+• Vì $\vec{u}\_1 \cdot \vec{u}\_2 = 0$ nên $\vec{u}\_1 \perp \vec{u}\_2$, suy ra $\Delta_1 \perp \Delta_2$.
+• Vậy hai con đường trên vuông góc với nhau.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 5.20:** Trong không gian $Oxyz$, tính góc giữa hai đường thẳng:
+$$\Delta_1: \begin{cases} x = 1 + 2t \\\ y = 1 - t \\\ z = 2 + 3t \end{cases} \quad \text{và} \quad \Delta_2: \frac{x - 2}{-1} = \frac{y + 1}{1} = \frac{z - 2}{2}.$$
+
+Lời giải Bài 5.20:
+• Đường thẳng $\Delta_1$ có vectơ chỉ phương $\vec{u}\_1 = (2; -1; 3)$.
+• Đường thẳng $\Delta_2$ có vectơ chỉ phương $\vec{u}\_2 = (-1; 1; 2)$.
+• Ta có:
+  $$\cos(\Delta_1, \Delta_2) = \frac{|\vec{u}\_1 \cdot \vec{u}\_2|}{|\vec{u}\_1| \cdot |\vec{u}\_2|} = \frac{|2(-1) + (-1)(1) + 3(2)|}{\sqrt{2^2 + (-1)^2 + 3^2} \cdot \sqrt{(-1)^2 + 1^2 + 2^2}} = \frac{|-2 - 1 + 6|}{\sqrt{14} \cdot \sqrt{6}} = \frac{3}{\sqrt{84}} = \frac{3}{2\sqrt{21}} = \frac{\sqrt{21}}{14}.$$
+• Do đó $(\Delta_1, \Delta_2) = \arccos\left(\frac{\sqrt{21}}{14}\right) \approx 70{,}9^\circ$.
+
+**Bài 5.21:** Trong không gian $Oxyz$, tính góc giữa trục $Oz$ và mặt phẳng $(P): x + 2y - z - 1 = 0$.
+
+Lời giải Bài 5.21:
+• Trục $Oz$ có vectơ chỉ phương $\vec{k} = (0; 0; 1)$.
+• Mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n} = (1; 2; -1)$.
+• Áp dụng công thức tính góc giữa đường thẳng và mặt phẳng:
+  $$\sin(Oz, (P)) = \frac{|\vec{k} \cdot \vec{n}|}{|\vec{k}| \cdot |\vec{n}|} = \frac{|0(1) + 0(2) + 1(-1)|}{\sqrt{0^2 + 0^2 + 1^2} \cdot \sqrt{1^2 + 2^2 + (-1)^2}} = \frac{|-1|}{1 \cdot \sqrt{6}} = \frac{1}{\sqrt{6}} = \frac{\sqrt{6}}{6}.$$
+• Suy ra $(Oz, (P)) = \arcsin\left(\frac{\sqrt{6}}{6}\right) \approx 24{,}1^\circ$.
+
+**Bài 5.22:** Tính góc giữa đường thẳng $\Delta: \frac{x + 1}{-1} = \frac{y - 3}{2} = \frac{z + 2}{3}$ và mặt phẳng $(P): x + y + z + 3 = 0$.
+
+Lời giải Bài 5.22:
+• Đường thẳng $\Delta$ có vectơ chỉ phương $\vec{u} = (-1; 2; 3)$.
+• Mặt phẳng $(P)$ có vectơ pháp tuyến $\vec{n} = (1; 1; 1)$.
+• Ta có:
+  $$\sin(\Delta, (P)) = \frac{|\vec{u} \cdot \vec{n}|}{|\vec{u}| \cdot |\vec{n}|} = \frac{|(-1)(1) + 2(1) + 3(1)|}{\sqrt{(-1)^2 + 2^2 + 3^2} \cdot \sqrt{1^2 + 1^2 + 1^2}} = \frac{|-1 + 2 + 3|}{\sqrt{14} \cdot \sqrt{3}} = \frac{4}{\sqrt{42}} = \frac{2\sqrt{42}}{21}.$$
+• Suy ra $(\Delta, (P)) = \arcsin\left(\frac{4}{\sqrt{42}}\right) \approx 38{,}1^\circ$.
+
+**Bài 5.23 (Góc nhị diện giữa hai mặt bên kim tự tháp Kheops):** Kim tự tháp Kheops ở Ai Cập có dạng hình chóp đều $S.ABCD$ với đáy là hình vuông cạnh dài 230 m, các cạnh bên bằng nhau và dài 219 m. Tính góc giữa hai mặt phẳng $(SAB)$ và $(SBC)$.
+
+Lời giải Bài 5.23:
+• Chọn hệ trục toạ độ $Oxyz$ có gốc $O$ là tâm của đáy hình vuông $ABCD$, trục $Oz$ vuông góc với mặt phẳng đáy hướng lên đỉnh $S$.
+• Đáy hình vuông $ABCD$ cạnh $a = 230\text{ m}$ có các trục toạ độ $Ox, Oy$ song song với các cạnh đáy:
+  $$A(-115; -115; 0), \quad B(115; -115; 0), \quad C(115; 115; 0), \quad D(-115; 115; 0).$$
+• Bán kính đường tròn ngoại tiếp đáy: $OA = \frac{230}{\sqrt{2}} = 115\sqrt{2}\text{ m}$.
+• Chiều cao hình chóp $SO$ được tính theo định lí Pythagore:
+  $$SO = \sqrt{SA^2 - OA^2} = \sqrt{219^2 - (115\sqrt{2})^2} = \sqrt{47\\,961 - 26\\,450} = \sqrt{21\\,511}\text{ (m)}.$$
+  Do đó $S(0; 0; \sqrt{21\\,511})$.
+• Xác định vectơ pháp tuyến của mặt phẳng $(SAB)$:
+  Đoạn $AB$ song song với trục $Ox$, có trung điểm là $M(0; -115; 0)$. Vectơ $\vec{SM} = (0; -115; -\sqrt{21\\,511})$.
+  Vectơ pháp tuyến $\vec{n}\_1$ của $(SAB)$ vuông góc với $\vec{AB} = (230; 0; 0)$ và $\vec{SM}$, do đó chọn:
+  $$\vec{n}\_1 = (0; -\sqrt{21\\,511}; 115).$$
+• Xác định vectơ pháp tuyến của mặt phẳng $(SBC)$:
+  Đoạn $BC$ song song với trục $Oy$, có trung điểm là $N(115; 0; 0)$. Vectơ $\vec{SN} = (115; 0; -\sqrt{21\\,511})$.
+  Vectơ pháp tuyến $\vec{n}\_2$ của $(SBC)$ vuông góc với $\vec{BC} = (0; 230; 0)$ và $\vec{SN}$, do đó chọn:
+  $$\vec{n}\_2 = (-\sqrt{21\\,511}; 0; 115).$$
+• Góc giữa hai mặt phẳng $(SAB)$ và $(SBC)$ thoả mãn:
+  $$\cos((SAB), (SBC)) = \frac{|\vec{n}\_1 \cdot \vec{n}\_2|}{|\vec{n}\_1| \cdot |\vec{n}\_2|} = \frac{|0 + 0 + 115^2|}{\sqrt{21\\,511 + 115^2} \cdot \sqrt{21\\,511 + 115^2}} = \frac{13\\,225}{21\\,511 + 13\\,225} = \frac{13\\,225}{34\\,736} \approx 0{,}3807.$$
+• Suy ra $((SAB), (SBC)) = \arccos\left(\frac{13\\,225}{34\\,736}\right) \approx 67{,}6^\circ$.
+
+**Bài 5.24 (Góc nghiêng đáy bể nước hình lập phương):** Trong một bể hình lập phương cạnh 1 m có chứa một lượng nước. Người ta đặt đáy bể nghiêng so với mặt phẳng nằm ngang. Khi đó, mặt nước có dạng hình bình hành $ABCD$ và khoảng cách từ $A, B, C$ đến đáy bể tương ứng là 40 cm, 44 cm, 48 cm.
+a) Khoảng cách từ điểm $D$ đến đáy bể bằng bao nhiêu centimét?
+b) Đáy bể nghiêng so với mặt phẳng nằm ngang một góc bao nhiêu độ?
+
+Lời giải Bài 5.24:
+• a) Chọn hệ trục toạ độ $Oxyz$ gắn với bể hình lập phương: mặt phẳng đáy bể là $(Oxy)$ ($z = 0$), các cạnh bên thẳng đứng theo phương trục $Oz$. Đơn vị đo là centimét (cạnh bể $1\text{ m} = 100\text{ cm}$).
+  Khi đó, khoảng cách từ mỗi điểm trên mặt nước đến đáy bể chính là cao độ $z$ của điểm đó: $z_A = 40, z_B = 44, z_C = 48$.
+  Vì mặt nước $ABCD$ là hình bình hành nên trung điểm đoạn chéo $AC$ trùng với trung điểm đoạn chéo $BD$:
+  $$z_A + z_C = z_B + z_D \implies 40 + 48 = 44 + z_D \iff z_D = 88 - 44 = 44\text{ (cm)}.$$
+  Vậy khoảng cách từ điểm $D$ đến đáy bể bằng $44\text{ cm}$.
+• b) Xác định toạ độ các đỉnh trên thành bể:
+  - Điểm $A(0; 0; 40)$;
+  - Điểm $B(0; 100; 44)$;
+  - Điểm $C(100; 100; 48)$;
+  - Điểm $D(100; 0; 44)$.
+  Mặt phẳng nước $(ABCD)$ có cặp vectơ chỉ phương: $\vec{AB} = (0; 100; 4)$ và $\vec{AD} = (100; 0; 4)$.
+  Vectơ pháp tuyến của mặt phẳng nước $(ABCD)$ là:
+  $$\vec{n}\_{\text{nước}} = [\vec{AB}, \vec{AD}] = (100(4) - 0; 4(100) - 0; 0 - 100(100)) = (400; 400; -10\\,000).$$
+  Rút gọn chia cho 400: $\vec{n}\_{\text{nước}} = (1; 1; -25)$.
+  Mặt phẳng đáy bể là $z = 0$, có vectơ pháp tuyến $\vec{k} = (0; 0; 1)$.
+  Mặt nước luôn nằm ngang theo trọng trường, nên góc nghiêng giữa đáy bể và mặt phẳng nằm ngang chính là góc $\beta$ giữa mặt phẳng đáy bể và mặt phẳng nước $(ABCD)$:
+  $$\cos \beta = \frac{|\vec{n}\_{\text{nước}} \cdot \vec{k}|}{|\vec{n}\_{\text{nước}}| \cdot |\vec{k}|} = \frac{|1(0) + 1(0) - 25(1)|}{\sqrt{1^2 + 1^2 + (-25)^2} \cdot 1} = \frac{25}{\sqrt{627}} \approx 0{,}9984.$$
+  Suy ra $\beta = \arccos\left(\frac{25}{\sqrt{627}}\right) \approx 3{,}2^\circ$.
+• Vậy đáy bể nghiêng so với mặt phẳng nằm ngang một góc khoảng $3{,}2^\circ$.

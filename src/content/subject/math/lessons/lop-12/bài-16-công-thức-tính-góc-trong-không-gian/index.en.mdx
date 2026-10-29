@@ -1,0 +1,259 @@
+---
+title: 'Lesson 16: Formulas of calculating angle in space'
+description: Theoretical system for the lesson on formulas of calculating angle in space with illustrative examples
+tags:
+  - grade 12
+  - Angle between two straight lines in space
+  - Angle between a straight line and a plane
+  - Angle between two planes
+  - inclination angle of a real-world plane
+grade: 12
+order: 16
+updatedDate: 2026-10-29T16:28:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Angle between two straight lines in space
+
+·       Angle between a straight line and a plane
+
+·       Angle between two planes
+
+·       Inclination angle of a roof, inclination angle of a real-world plane
+
+### **Knowledge and Skills:**
+
+·       Master coordinate formulas for calculating the angle between two straight lines, the angle between a straight line and a plane, and the angle between two planes in space Oxyz.
+
+·       Proficiently use the dot product of direction vectors and normal vectors to determine the cosine or sine of the required angles.
+
+·       Accurately convert between trigonometric values and angle measures in degrees (rounded to one decimal place).
+
+·       Apply angle formulas to solve practical problems (calculating the roof inclination angle supported by three pillars, angles between road alignments at a traffic interchange, the dihedral angle between two lateral faces of the Great Pyramid of Giza, the inclination angle of the bottom of a cubic water tank).
+
+## Angle Between Two Straight Lines
+
+\<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_duong_thang"/>
+
+### a) Relationship with the Angle Between Two Direction Vectors
+
+Theorem:
+In space $Oxyz$, let two lines $\Delta$ and $\Delta'$ have direction vectors $\vec{u} = (a; b; c)$ and $\vec{u}' = (a'; b'; c')$ respectively.
+The angle between two lines $\Delta$ and $\Delta'$, denoted by $(\Delta, \Delta')$, satisfies $0^\circ \le (\Delta, \Delta') \le 90^\circ$.
+The cosine of the angle between two lines is equal to the absolute value of the cosine of the angle between their direction vectors:
+$$\cos(\Delta, \Delta') = |\cos(\vec{u}, \vec{u}')| = \frac{|\vec{u} \cdot \vec{u}'|}{|\vec{u}| \cdot |\vec{u}'|} = \frac{|aa' + bb' + cc'|}{\sqrt{a^2 + b^2 + c^2} \cdot \sqrt{a'^2 + b'^2 + c'^2}}$$
+Note: Two lines are perpendicular if and only if the dot product of their direction vectors equals 0: $\Delta \perp \Delta' \iff aa' + bb' + cc' = 0$.
+
+### b) Illustrative Examples and Practice on the Angle Between Two Lines
+
+**Example 1:** In space $Oxyz$, compute the angle between two lines:
+$$\Delta: \begin{cases} x = 1 + t \\\ y = -1 + t \\\ z = 2 \end{cases} \quad \text{and} \quad \Delta': \begin{cases} x = 1 + 2s \\\ y = -2 + 2s \\\ z = 3 + s \end{cases}$$
+
+Solution for Example 1:
+• The two lines $\Delta$ and $\Delta'$ have direction vectors $\vec{u} = (1; 1; 0)$ and $\vec{u}' = (2; 2; 1)$ respectively.
+• Thus:
+  $$\cos(\Delta, \Delta') = \frac{|1(2) + 1(2) + 0(1)|}{\sqrt{1^2 + 1^2 + 0^2} \cdot \sqrt{2^2 + 2^2 + 1^2}} = \frac{|2 + 2 + 0|}{\sqrt{2} \cdot \sqrt{9}} = \frac{4}{3\sqrt{2}} = \frac{2\sqrt{2}}{3}.$$
+• Therefore, $(\Delta, \Delta') \approx 19.5^\circ$.
+
+**Practice 1:** In space $Oxyz$, compute the angle between the $Oz$-axis and the line $\Delta: \frac{x - 3}{1} = \frac{y + 1}{2} = \frac{z - 1}{-2}$.
+
+Solution for Practice 1:
+• The $Oz$-axis has unit direction vector $\vec{k} = (0; 0; 1)$.
+• Line $\Delta$ has direction vector $\vec{u} = (1; 2; -2)$.
+• We have:
+  $$\cos(Oz, \Delta) = \frac{|\vec{k} \cdot \vec{u}|}{|\vec{k}| \cdot |\vec{u}|} = \frac{|0(1) + 0(2) + 1(-2)|}{\sqrt{0^2 + 0^2 + 1^2} \cdot \sqrt{1^2 + 2^2 + (-2)^2}} = \frac{|-2|}{1 \cdot \sqrt{9}} = \frac{2}{3}.$$
+• Hence, $(Oz, \Delta) = \arccos\left(\frac{2}{3}\right) \approx 48.2^\circ$.
+
+## Angle Between a Straight Line and a Plane
+
+\<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_duong_thang_va_mat_phang"/>
+
+### a) Relationship with the Angle Between Direction and Normal Vectors
+
+Theorem:
+In space $Oxyz$, let line $\Delta$ have direction vector $\vec{u} = (a; b; c)$ and plane $(P)$ have normal vector $\vec{n} = (A; B; C)$.
+The angle between line $\Delta$ and plane $(P)$, denoted by $(\Delta, (P))$, satisfies $0^\circ \le (\Delta, (P)) \le 90^\circ$.
+The sine of the angle between line $\Delta$ and plane $(P)$ equals the absolute value of the cosine of the angle between $\vec{u}$ and $\vec{n}$:
+$$\sin(\Delta, (P)) = |\cos(\vec{u}, \vec{n})| = \frac{|\vec{u} \cdot \vec{n}|}{|\vec{u}| \cdot |\vec{n}|} = \frac{|aA + bB + cC|}{\sqrt{a^2 + b^2 + c^2} \cdot \sqrt{A^2 + B^2 + C^2}}$$
+Note: $\Delta \parallel (P)$ or $\Delta \subset (P) \iff \sin(\Delta, (P)) = 0 \iff aA + bB + cC = 0$. In addition, $\Delta \perp (P) \iff \sin(\Delta, (P)) = 1 \iff \vec{u}$ and $\vec{n}$ are collinear.
+
+### b) Illustrative Examples and Practice on the Angle Between a Line and a Plane
+
+**Example 2:** In space $Oxyz$, compute the angle between the $Ox$-axis and the plane $(P): \sqrt{2}x - y + z + 2 = 0$.
+
+Solution for Example 2:
+• The $Ox$-axis has direction vector $\vec{i} = (1; 0; 0)$.
+• Plane $(P)$ has normal vector $\vec{n} = (\sqrt{2}; -1; 1)$.
+• We compute:
+  $$\sin(Ox, (P)) = \frac{|1(\sqrt{2}) + 0(-1) + 0(1)|}{\sqrt{1^2 + 0^2 + 0^2} \cdot \sqrt{(\sqrt{2})^2 + (-1)^2 + 1^2}} = \frac{\sqrt{2}}{1 \cdot \sqrt{2 + 1 + 1}} = \frac{\sqrt{2}}{\sqrt{4}} = \frac{\sqrt{2}}{2}.$$
+• Thus, the angle between the $Ox$-axis and plane $(P)$ is $45^\circ$.
+
+**Practice 2:** In space $Oxyz$, compute the angle between line $\Delta: \frac{x + 2}{-1} = \frac{y - 4}{2} = \frac{z + 1}{1}$ and plane $(P): x - y + z - 1 = 0$.
+
+Solution for Practice 2:
+• Line $\Delta$ has direction vector $\vec{u} = (-1; 2; 1)$.
+• Plane $(P)$ has normal vector $\vec{n} = (1; -1; 1)$.
+• We have:
+  $$\sin(\Delta, (P)) = \frac{|(-1)(1) + 2(-1) + 1(1)|}{\sqrt{(-1)^2 + 2^2 + 1^2} \cdot \sqrt{1^2 + (-1)^2 + 1^2}} = \frac{|-1 - 2 + 1|}{\sqrt{6} \cdot \sqrt{3}} = \frac{|-2|}{\sqrt{18}} = \frac{2}{3\sqrt{2}} = \frac{\sqrt{2}}{3}.$$
+• Hence, $(\Delta, (P)) = \arcsin\left(\frac{\sqrt{2}}{3}\right) \approx 28.1^\circ$.
+
+## Angle Between Two Planes
+
+\<Youtube url="https://www.youtube.com/watch?v=example_goc_giua_hai_mat_phang"/>
+
+### a) Relationship with the Angle Between Two Normal Vectors
+
+Theorem:
+In space $Oxyz$, let planes $(P)$ and $(Q)$ have normal vectors $\vec{n} = (A; B; C)$ and $\vec{n}' = (A'; B'; C') respectively.
+The angle between two planes $(P)$ and $(Q)$, denoted by $((P), (Q))$, satisfies $0^\circ \le ((P), (Q)) \le 90^\circ$.
+The cosine of the angle between two planes equals the absolute value of the cosine of the angle between their normal vectors:
+$$\cos((P), (Q)) = |\cos(\vec{n}, \vec{n}')| = \frac{|\vec{n} \cdot \vec{n}'|}{|\vec{n}| \cdot |\vec{n}'|} = \frac{|AA' + BB' + CC'|}{\sqrt{A^2 + B^2 + C^2} \cdot \sqrt{A'^2 + B'^2 + C'^2}}$$
+Note: $(P) \perp (Q) \iff \vec{n} \perp \vec{n}' \iff AA' + BB' + CC' = 0$.
+
+### b) Illustrative Examples and Practice on the Angle Between Two Planes
+
+**Example 3:** In space $Oxyz$, compute the angle between two planes $(P): x + 2y + 2z - 1 = 0$ and $(Q): x + y - z + 1 = 0$.
+
+Solution for Example 3:
+• Planes $(P)$ and $(Q)$ have normal vectors $\vec{n} = (1; 2; 2)$ and $\vec{n}' = (1; 1; -1)$ respectively.
+• Thus:
+  $$\cos((P), (Q)) = \frac{|1(1) + 2(1) + 2(-1)|}{\sqrt{1^2 + 2^2 + 2^2} \cdot \sqrt{1^2 + 1^2 + (-1)^2}} = \frac{|1 + 2 - 2|}{\sqrt{9} \cdot \sqrt{3}} = \frac{1}{3\sqrt{3}} = \frac{\sqrt{3}}{9}.$$
+• Therefore, $((P), (Q)) = \arccos\left(\frac{\sqrt{3}}{9}\right) \approx 78.9^\circ$.
+
+**Practice 3:** In space $Oxyz$, compute the angle between plane $(P): x - \sqrt{2}y + z - 2 = 0$ and the coordinate plane $(Oxz): y = 0$.
+
+Solution for Practice 3:
+• Plane $(P)$ has normal vector $\vec{n} = (1; -\sqrt{2}; 1)$.
+• The coordinate plane $(Oxz)$ has equation $y = 0$, with normal vector $\vec{j} = (0; 1; 0)$.
+• We compute:
+  $$\cos((P), (Oxz)) = \frac{|1(0) + (-\sqrt{2})(1) + 1(0)|}{\sqrt{1^2 + (-\sqrt{2})^2 + 1^2} \cdot \sqrt{0^2 + 1^2 + 0^2}} = \frac{|-\sqrt{2}|}{\sqrt{4} \cdot 1} = \frac{\sqrt{2}}{2}.$$
+• Hence, $((P), (Oxz)) = 45^\circ$.
+
+**Example 4:** In space $Oxyz$, given $A(0; 0; 4), B(0; -3; 0), C(0; 3; 0)$, and $D(3; 0; 0)$. Compute the angle between planes $(ABD)$ and $(ACD)$.
+
+Solution for Example 4:
+• Plane $(ABD)$ has directional vectors $\vec{BD} = (3; 3; 0)$ and $\vec{AD} = (3; 0; -4)$.
+  The cross product is $[\vec{BD}, \vec{AD}] = (-12; 12; -9)$. We choose the simplified normal vector $\vec{n} = (-4; 4; -3)$.
+• Plane $(ACD)$ has directional vectors $\vec{AC} = (0; 3; -4)$ and $\vec{AD} = (3; 0; -4)$.
+  The cross product is $[\vec{AC}, \vec{AD}] = (-12; -12; -9)$. We choose the simplified normal vector $\vec{m} = (4; 4; 3)$.
+• Let $\varphi$ denote the angle between $(ABD)$ and $(ACD)$. We have:
+  $$\cos \varphi = \frac{|(-4)(4) + 4(4) + (-3)(3)|}{\sqrt{(-4)^2 + 4^2 + (-3)^2} \cdot \sqrt{4^2 + 4^2 + 3^2}} = \frac{|-16 + 16 - 9|}{\sqrt{41} \cdot \sqrt{41}} = \frac{9}{41}.$$
+• Thus, $\varphi = \arccos\left(\frac{9}{41}\right) \approx 77.3^\circ$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 1 (Roof Inclination Angle - Introductory Problem):** A circular roof is supported by three vertical pillars of heights 7 m, 6 m, and 5 m standing perpendicular to a flat horizontal floor. Their bases form an equilateral triangle of side length 4 m on the floor. At what angle is the roof inclined relative to the floor?
+
+Solution for Application 1:
+• Set up a Cartesian coordinate system $Oxyz$ where origin $O$ is the midpoint of side $AC$ of equilateral triangle $ABC$ on the horizontal floor $(Oxy)$:
+  - Base $AC$ lies along the $Oy$-axis: since $AC = 4\text{ m}$, we have $A(0; -2; 0)$ and $C(0; 2; 0)$.
+  - Altitude $OB = \frac{4\sqrt{3}}{2} = 2\sqrt{3}\text{ m}$, with vertex $B$ lying on the positive $Ox$-axis $\implies B(2\sqrt{3}; 0; 0)$.
+• The tops of the three pillars supporting the roof are:
+  $$A'(0; -2; 7), \quad B'(2\sqrt{3}; 0; 6), \quad C'(0; 2; 5).$$
+• The plane of the roof is $(A'B'C')$. We find two directional vectors in this plane:
+  $$\vec{A'C'} = (0; 4; -2), \quad \vec{A'B'} = (2\sqrt{3}; 2; -1).$$
+• A normal vector of plane $(A'B'C')$ is given by the cross product:
+  $$\vec{n} = [\vec{A'C'}, \vec{A'B'}] = (4(-1) - (-2)(2); (-2)(2\sqrt{3}) - 0(-1); 0(2) - 4(2\sqrt{3})) = (0; -4\sqrt{3}; -8\sqrt{3}).$$
+  Choosing the collinear simplified vector: $\vec{n} = (0; 1; 2)$.
+• The horizontal floor lies in the $(Oxy)$ plane with normal vector $\vec{k} = (0; 0; 1)$.
+• Let $\alpha$ denote the roof inclination angle relative to the floor:
+  $$\cos \alpha = \frac{|\vec{n} \cdot \vec{k}|}{|\vec{n}| \cdot |\vec{k}|} = \frac{|0(0) + 1(0) + 2(1)|}{\sqrt{0^2 + 1^2 + 2^2} \cdot 1} = \frac{2}{\sqrt{5}} = \frac{2\sqrt{5}}{5}.$$
+• Thus, $\alpha = \arccos\left(\frac{2}{\sqrt{5}}\right) \approx 26.6^\circ$.
+• The roof is inclined at an angle of approximately $26.6^\circ$ relative to the floor.
+
+**Application 2 (Two Roads at an Interchange):** At a traffic interchange in space $Oxyz$, two roads are modeled by the straight lines:
+$$\Delta_1: \begin{cases} x = 2 + t \\\ y = 1 + t \\\ z = 0 \end{cases} \quad \text{and} \quad \Delta_2: \begin{cases} x = 1 - 2s \\\ y = 2s \\\ z = 1 \end{cases}$$
+Are these two roads perpendicular to each other?
+
+Solution for Application 2:
+• Line $\Delta_1$ has direction vector $\vec{u}\_1 = (1; 1; 0)$.
+• Line $\Delta_2$ has direction vector $\vec{u}\_2 = (-2; 2; 0)$.
+• Taking the dot product of the direction vectors:
+  $$\vec{u}\_1 \cdot \vec{u}\_2 = 1(-2) + 1(2) + 0(0) = -2 + 2 + 0 = 0.$$
+• Since $\vec{u}\_1 \cdot \vec{u}\_2 = 0$, we have $\vec{u}\_1 \perp \vec{u}\_2$, which means $\Delta_1 \perp \Delta_2$.
+• Yes, the two roads are perpendicular to each other.
+
+### b) Detailed Section Exercises
+
+**Exercise 5.20:** In space $Oxyz$, compute the angle between the two lines:
+$$\Delta_1: \begin{cases} x = 1 + 2t \\\ y = 1 - t \\\ z = 2 + 3t \end{cases} \quad \text{and} \quad \Delta_2: \frac{x - 2}{-1} = \frac{y + 1}{1} = \frac{z - 2}{2}.$$
+
+Solution for Exercise 5.20:
+• Line $\Delta_1$ has direction vector $\vec{u}\_1 = (2; -1; 3)$.
+• Line $\Delta_2$ has direction vector $\vec{u}\_2 = (-1; 1; 2)$.
+• We compute:
+  $$\cos(\Delta_1, \Delta_2) = \frac{|\vec{u}\_1 \cdot \vec{u}\_2|}{|\vec{u}\_1| \cdot |\vec{u}\_2|} = \frac{|2(-1) + (-1)(1) + 3(2)|}{\sqrt{2^2 + (-1)^2 + 3^2} \cdot \sqrt{(-1)^2 + 1^2 + 2^2}} = \frac{|-2 - 1 + 6|}{\sqrt{14} \cdot \sqrt{6}} = \frac{3}{\sqrt{84}} = \frac{3}{2\sqrt{21}} = \frac{\sqrt{21}}{14}.$$
+• Therefore, $(\Delta_1, \Delta_2) = \arccos\left(\frac{\sqrt{21}}{14}\right) \approx 70.9^\circ$.
+
+**Exercise 5.21:** In space $Oxyz$, compute the angle between the $Oz$-axis and the plane $(P): x + 2y - z - 1 = 0$.
+
+Solution for Exercise 5.21:
+• The $Oz$-axis has direction vector $\vec{k} = (0; 0; 1)$.
+• Plane $(P)$ has normal vector $\vec{n} = (1; 2; -1)$.
+• Applying the angle formula between a line and a plane:
+  $$\sin(Oz, (P)) = \frac{|\vec{k} \cdot \vec{n}|}{|\vec{k}| \cdot |\vec{n}|} = \frac{|0(1) + 0(2) + 1(-1)|}{\sqrt{0^2 + 0^2 + 1^2} \cdot \sqrt{1^2 + 2^2 + (-1)^2}} = \frac{|-1|}{1 \cdot \sqrt{6}} = \frac{1}{\sqrt{6}} = \frac{\sqrt{6}}{6}.$$
+• Thus, $(Oz, (P)) = \arcsin\left(\frac{\sqrt{6}}{6}\right) \approx 24.1^\circ$.
+
+**Exercise 5.22:** Compute the angle between line $\Delta: \frac{x + 1}{-1} = \frac{y - 3}{2} = \frac{z + 2}{3}$ and plane $(P): x + y + z + 3 = 0$.
+
+Solution for Exercise 5.22:
+• Line $\Delta$ has direction vector $\vec{u} = (-1; 2; 3)$.
+• Plane $(P)$ has normal vector $\vec{n} = (1; 1; 1)$.
+• We compute:
+  $$\sin(\Delta, (P)) = \frac{|\vec{u} \cdot \vec{n}|}{|\vec{u}| \cdot |\vec{n}|} = \frac{|(-1)(1) + 2(1) + 3(1)|}{\sqrt{(-1)^2 + 2^2 + 3^2} \cdot \sqrt{1^2 + 1^2 + 1^2}} = \frac{|-1 + 2 + 3|}{\sqrt{14} \cdot \sqrt{3}} = \frac{4}{\sqrt{42}} = \frac{2\sqrt{42}}{21}.$$
+• Hence, $(\Delta, (P)) = \arcsin\left(\frac{4}{\sqrt{42}}\right) \approx 38.1^\circ$.
+
+**Exercise 5.23 (Dihedral Angle Between Lateral Faces of the Great Pyramid of Giza):** The Great Pyramid of Giza (Kheops) in Egypt is modeled as a regular square pyramid $S.ABCD$ with base side length 230 m and lateral edge length 219 m. Compute the angle between the two adjacent lateral faces $(SAB)$ and $(SBC)$.
+
+Solution for Exercise 5.23:
+• Choose a coordinate system $Oxyz$ where origin $O$ is the center of square base $ABCD$, and the positive $Oz$-axis points toward apex $S$.
+• Base square $ABCD$ with side length $a = 230\text{ m}$ has coordinates:
+  $$A(-115; -115; 0), \quad B(115; -115; 0), \quad C(115; 115; 0), \quad D(-115; 115; 0).$$
+• Distance from center to vertex: $OA = \frac{230}{\sqrt{2}} = 115\sqrt{2}\text{ m}$.
+• Altitude $SO$ of the pyramid:
+  $$SO = \sqrt{SA^2 - OA^2} = \sqrt{219^2 - (115\sqrt{2})^2} = \sqrt{47\\,961 - 26\\,450} = \sqrt{21\\,511}\text{ (m)}.$$
+  Therefore, $S(0; 0; \sqrt{21\\,511})$.
+• Normal vector of face $(SAB)$:
+  Base edge $AB$ is parallel to $Ox$, with midpoint $M(0; -115; 0)$. Vector $\vec{SM} = (0; -115; -\sqrt{21\\,511})$.
+  Normal vector $\vec{n}\_1$ of $(SAB)$ is orthogonal to $\vec{AB} = (230; 0; 0)$ and $\vec{SM}$:
+  $$\vec{n}\_1 = (0; -\sqrt{21\\,511}; 115).$$
+• Normal vector of face $(SBC)$:
+  Base edge $BC$ is parallel to $Oy$, with midpoint $N(115; 0; 0)$. Vector $\vec{SN} = (115; 0; -\sqrt{21\\,511})$.
+  Normal vector $\vec{n}\_2$ of $(SBC)$ is orthogonal to $\vec{BC} = (0; 230; 0)$ and $\vec{SN}$:
+  $$\vec{n}\_2 = (-\sqrt{21\\,511}; 0; 115).$$
+• The angle between faces $(SAB)$ and $(SBC)$ satisfies:
+  $$\cos((SAB), (SBC)) = \frac{|\vec{n}\_1 \cdot \vec{n}\_2|}{|\vec{n}\_1| \cdot |\vec{n}\_2|} = \frac{|0 + 0 + 115^2|}{\sqrt{21\\,511 + 115^2} \cdot \sqrt{21\\,511 + 115^2}} = \frac{13\\,225}{21\\,511 + 13\\,225} = \frac{13\\,225}{34\\,736} \approx 0.3807.$$
+• Hence, $((SAB), (SBC)) = \arccos\left(\frac{13\\,225}{34\\,736}\right) \approx 67.6^\circ$.
+
+**Exercise 5.24 (Inclination Angle of a Cubic Water Tank Bottom):** A cubic water tank of edge length 1 m contains water and has its bottom tilted relative to the horizontal floor. The water surface forms a parallelogram $ABCD$, and the distances from $A, B, C$ to the tank bottom are 40 cm, 44 cm, and 48 cm respectively.
+a) What is the distance from point $D$ to the bottom of the tank (in centimeters)?
+b) At what angle is the bottom of the tank tilted relative to the horizontal plane?
+
+Solution for Exercise 5.24:
+• a) Choose a coordinate system $Oxyz$ fixed to the cubic tank: the bottom of the tank lies in $(Oxy)$ ($z = 0$), and vertical edges align with the $Oz$-axis. Units are in centimeters (edge $1\text{ m} = 100\text{ cm}$).
+  The distance from each point on the water surface to the tank bottom is its vertical coordinate $z$: $z_A = 40, z_B = 44, z_C = 48$.
+  Since $ABCD$ is a parallelogram, diagonal $AC$ and diagonal $BD$ share the same midpoint:
+  $$z_A + z_C = z_B + z_D \implies 40 + 48 = 44 + z_D \iff z_D = 88 - 44 = 44\text{ (cm)}.$$
+  Thus, the distance from point $D$ to the tank bottom is $44\text{ cm}$.
+• b) Coordinates on the four vertical edges of the cube:
+  - Point $A(0; 0; 40)$;
+  - Point $B(0; 100; 44)$;
+  - Point $C(100; 100; 48)$;
+  - Point $D(100; 0; 44)$.
+  The water surface plane $(ABCD)$ has directional vectors: $\vec{AB} = (0; 100; 4)$ and $\vec{AD} = (100; 0; 4)$.
+  A normal vector to the water surface $(ABCD)$ is:
+  $$\vec{n}\_{\text{water}} = [\vec{AB}, \vec{AD}] = (100(4) - 0; 4(100) - 0; 0 - 100(100)) = (400; 400; -10\\,000).$$
+  Dividing by 400 yields: $\vec{n}\_{\text{water}} = (1; 1; -25)$.
+  The tank bottom has normal vector $\vec{k} = (0; 0; 1)$.
+  Because the water surface is always horizontal due to gravity, the tilt angle $\beta$ of the tank bottom relative to the horizontal plane equals the angle between the tank bottom plane and the water surface plane $(ABCD)$:
+  $$\cos \beta = \frac{|\vec{n}\_{\text{water}} \cdot \vec{k}|}{|\vec{n}\_{\text{water}}| \cdot |\vec{k}|} = \frac{|1(0) + 1(0) - 25(1)|}{\sqrt{1^2 + 1^2 + (-25)^2} \cdot 1} = \frac{25}{\sqrt{627}} \approx 0.9984.$$
+  Thus, $\beta = \arccos\left(\frac{25}{\sqrt{627}}\right) \approx 3.2^\circ$.
+• The bottom of the tank is tilted at an angle of approximately $3.2^\circ$ relative to the horizontal floor.
