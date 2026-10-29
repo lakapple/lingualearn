@@ -17,13 +17,13 @@ import GeoGebra from '@/components/GeoGebra.astro';
 
 import Youtube from '@/components/Youtube.astro';
 
-\# Lesson 15: Limits of Sequences
-
 \## Learning Objectives
 
 \*\*Terminology:\*\*
 
-\- Limit of a sequence ($\lim\_{n \to +\infty} u_n = a$, limit of 0, finite limit)
+\- Limit of a sequence ($\lim\_{n \to +\infty} u_n = a$, limit of $0$, finite limit)
+
+\- Operations on limits (Limit laws)
 
 \- Infinite geometric series, sum of an infinite geometric series
 
@@ -31,113 +31,133 @@ import Youtube from '@/components/Youtube.astro';
 
 \*\*Knowledge and Skills:\*\*
 
-\- Understand the definition and concept of limits of sequences as $n \to +\infty$.
+\- Understand and identify the concept of the limit of a sequence.
 
-\- Master basic standard limits, operational rules for finite limits, and rules for infinite limits.
+\- Explain fundamental standard limits.
 
-\- Compute the sum of an infinite geometric series and apply it to convert repeating decimals into fractions.
+\- Apply limit laws to evaluate limits of simple sequences.
 
-\- Apply limits to solve real-world problems (Zeno's paradox of Achilles and the tortoise, drug accumulation in the human body, etc.).
+\- Compute the sum of an infinite geometric series and apply this result to solve real-world problems and hypothetical scenarios.
+
+\---
+
+\## Warm-up: Zeno's Paradox of Achilles and the Tortoise
+
+\<Youtube url="https://www.youtube.com/watch?v=example_zeno_paradox" />
+
+Achilles (a hero in Greek mythology described as swift-footed as the wind) pursues a tortoise along a straight path. Achilles starts at position $A_1$, situated at an initial distance $a$ behind the tortoise's starting position $R_1$. Zeno argued that, although Achilles runs much faster, he can never overtake the tortoise.
+
+Indeed, Achilles must first reach the tortoise's starting point $A_2 = R_1$. During that time interval, the tortoise has moved ahead to a new position $R_2$. Next, Achilles must reach $A_3 = R_2$, by which time the tortoise has advanced to $R_3$, and so on. Continuing this reasoning indefinitely, Achilles would never catch up with the tortoise.
+
+Zeno of Elea (c. 490 – 429 BC) was a Greek philosopher. Among Zeno's paradoxes, the Achilles and the Tortoise paradox is recognized as having spurred the development of the mathematical concept of limits—a cornerstone of modern calculus and analysis.
 
 \---
 
 \## 1. Finite Limit of a Sequence
 
-\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han_cua_day_so" />
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han" />
 
-\### a) Limit of 0 and Finite Limits
+\### a) Sequences Converging to 0 (Limit of 0)
 
-\*\*Definition of a Limit of 0:\*\*
+\*\*Activity 1 (Identifying a sequence with limit 0):\*\*  
 
-\- A sequence $(u_n)$ is said to have a limit of $0$ as $n \to +\infty$ if $|u_n|$ can be made arbitrarily small from a certain index onward.
+Consider the sequence $(u_n)$ defined by $u_n = \frac{(-1)^n}{n}$.
 
-  Notation: $\lim\_{n \to +\infty} u_n = 0$ or $u_n \to 0$ as $n \to +\infty$.
+\- The first five terms of the sequence are: $u_1 = -1$; $u_2 = \frac{1}{2}$; $u_3 = -\frac{1}{3}$; $u_4 = \frac{1}{4}$; $u_5 = -\frac{1}{5}$.
 
-\- \*\*Fundamental Results:\*\*
+\- The distance from $u_n$ to $0$ is $|u_n| = \frac{1}{n}$. We have $|u_n| < 0.01 = \frac{1}{100} \Leftrightarrow n > 100$. Thus, from the 101st term onward, the distance from $u_n$ to $0$ is strictly less than $0.01$.
 
-  \- $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ (for any positive integer $k$);
+\*\*Definition of a Limit of 0:\*\*  
 
-  \- $\lim\_{n \to +\infty} q^n = 0$ (if $|q| < 1$).
+A sequence $(u_n)$ is said to have a limit of $0$ as $n$ tends to positive infinity if $|u_n|$ can be made arbitrarily small from a certain index onward.  
 
-  \- If $|u_n| \le v_n$ for all $n \ge 1$ and $\lim\_{n \to +\infty} v_n = 0$, then $\lim\_{n \to +\infty} u_n = 0$.
+Notation: $\lim\_{n \to +\infty} u_n = 0$ or $u_n \to 0$ as $n \to +\infty$.
 
-\*\*Definition of a Finite Limit (Real Number $a$):\*\*
+\*\*Notes (Fundamental Limits):\*\*
 
-\- A sequence $(u_n)$ has a limit of $a$ as $n \to +\infty$ if $\lim\_{n \to +\infty} (u_n - a) = 0$.
+\- $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$, where $k$ is any positive integer;
 
-  Notation: $\lim\_{n \to +\infty} u_n = a$ or $u_n \to a$ as $n \to +\infty$.
+\- $\lim\_{n \to +\infty} q^n = 0$ if $|q| < 1$;
 
-\- \*\*Notes:\*\*
+\- If $|u_n| \le v_n$ for all $n \ge 1$ and $\lim\_{n \to +\infty} v_n = 0$, then $\lim\_{n \to +\infty} u_n = 0$ (Squeeze Theorem).
 
-  \- $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$.
+\### b) Finite Limit of a Sequence
 
-  \- If $u_n = c$ (constant sequence) for all $n$, then $\lim\_{n \to +\infty} u_n = c$.
+\*\*Activity 2 (Identifying a sequence with a finite limit):\*\*  
 
-\### b) Examples and Practice
+Consider the sequence $(u_n)$ given by $u_n = \frac{n + (-1)^n}{n}$. Let $(v_n)$ be the sequence defined by $v_n = u_n - 1 = \frac{(-1)^n}{n}$. Then $\lim\_{n \to +\infty} v_n = 0$.
+
+\*\*Definition of a Finite Limit:\*\*  
+
+A sequence $(u_n)$ is said to have a limit of a real number $a$ as $n$ tends to positive infinity if $\lim\_{n \to +\infty} (u_n - a) = 0$.  
+
+Notation: $\lim\_{n \to +\infty} u_n = a$ or $u_n \to a$ as $n \to +\infty$.
+
+\*\*Notes:\*\*
+
+\- $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$.
+
+\- If $u_n = c$ (where $c$ is a constant) for all $n$, then $\lim\_{n \to +\infty} u_n = c$.
+
+\### c) Examples and Practice
 
 \*\*Example 1:\*\* Consider the sequence $(u_n)$ with $u_n = \frac{1}{n^2}$. Explain why the limit of this sequence is $0$.
 
-\*Solution:\*
+\*Solution:\*  
 
-\- We have $|u_n| = \frac{1}{n^2}$. As $n$ becomes arbitrarily large, $\frac{1}{n^2}$ becomes arbitrarily small and can be smaller than any given positive number $\varepsilon > 0$.
-
-\- For instance, to ensure $|u_n| < 0.0001$, we require:
-
-  $\frac{1}{n^2} < \frac{1}{10000} \Leftrightarrow n^2 > 10000 \Leftrightarrow n > 100$.
-
-  Thus, from the 101st term onward, all terms have an absolute value strictly less than $0.0001$. Therefore, $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
+This sequence has a limit of $0$ because $|u_n| = \frac{1}{n^2}$ can be made arbitrarily small for sufficiently large $n$. For example, to ensure that $|u_n| < 0.0001 = \frac{1}{10000}$, we need $n^2 > 10000 \Leftrightarrow n > 100$. Thus, from the 101st term onward, all terms have an absolute value strictly less than $0.0001$. Therefore, $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
 
 \*\*Practice 1:\*\* Prove that $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
 
-\*Solution:\*
+\*Solution:\*  
 
-\- We have $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$.
+We have $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$. Because $\left|\frac{1}{3}\right| < 1$, it follows from standard limits that $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Hence, $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
 
-\- Since $|q| = \frac{1}{3} < 1$, it follows from the basic result that $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Consequently, $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+\*\*Example 2:\*\* Consider the sequence $(u_n)$ with $u_n = \frac{2n + 1}{n}$. Prove that $\lim\_{n \to +\infty} u_n = 2$.
 
-\*\*Example 2:\*\* Let $(u_n)$ be the sequence defined by $u_n = \frac{2n + 1}{n}$. Prove that $\lim\_{n \to +\infty} u_n = 2$.
+\*Solution:\*  
 
-\*Solution:\*
+We have $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{1}{n}$. Since $\lim\_{n \to +\infty} \frac{1}{n} = 0$, we obtain $\lim\_{n \to +\infty} (u_n - 2) = 0$. Consequently, $\lim\_{n \to +\infty} u_n = 2$.
 
-\- Consider the difference: $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{2n + 1 - 2n}{n} = \frac{1}{n}$.
+\*\*Practice 2:\*\* Given the sequence $(u_n)$ with $u_n = \frac{3 \cdot 2^n - 1}{2^n}$, prove that $\lim\_{n \to +\infty} u_n = 3$.
 
-\- Since $\lim\_{n \to +\infty} \frac{1}{n} = 0$, we have $\lim\_{n \to +\infty} (u_n - 2) = 0$, which implies $\lim\_{n \to +\infty} u_n = 2$.
+\*Solution:\*  
 
-\*\*Practice 2:\*\* Let $(u_n)$ be the sequence defined by $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Prove that $\lim\_{n \to +\infty} u_n = 3$.
+We have $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$. Since $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$, it follows that $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
 
-\*Solution:\*
+\*\*Application 1:\*\* A rubber ball is dropped from a height of $5\text{ m}$ onto a flat floor. After each bounce, it rebounds to $\frac{2}{3}$ of its previous height. Assuming the ball continues bouncing indefinitely, prove that the sequence of rebound heights $(u_n)$ has a limit of $0$.
 
-\- We have $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$.
+\*Solution:\*  
 
-\- Since $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ (as $|\frac{1}{2}| < 1$), we obtain $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
+The height after the first bounce is $u_1 = 5 \cdot \frac{2}{3}$. After the $n$-th bounce, the height is given by $u_n = 5 \cdot \left(\frac{2}{3}\right)^n$. Since $\left|\frac{2}{3}\right| < 1$, we have $\lim\_{n \to +\infty} \left(\frac{2}{3}\right)^n = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 0$.
 
 \---
 
 \## 2. Limit Laws for Sequences
 
-\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_ve_gioi_han_huu_han" />
+\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_gioi_han" />
 
-\### a) Operational Rules
+\### a) Operational Rules (Limit Laws)
 
 If $\lim\_{n \to +\infty} u_n = a$ and $\lim\_{n \to +\infty} v_n = b$, then:
 
-1\. $\lim\_{n \to +\infty} (u_n + v_n) = a + b$
+\- $\lim\_{n \to +\infty} (u_n + v_n) = a + b$;
 
-2\. $\lim\_{n \to +\infty} (u_n - v_n) = a - b$
+\- $\lim\_{n \to +\infty} (u_n - v_n) = a - b$;
 
-3\. $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$
+\- $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$;
 
-4\. $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (provided $b \ne 0$)
+\- $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (provided that $b \ne 0$).
 
-5\. If $u_n \ge 0$ for all $n$ and $\lim\_{n \to +\infty} u_n = a$, then $a \ge 0$ and $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
+Furthermore, if $u_n \ge 0$ for all $n$ and $\lim\_{n \to +\infty} u_n = a$, then $a \ge 0$ and $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
 
 \### b) Examples and Practice
 
 \*\*Example 3:\*\* Evaluate $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
 
-\*Solution:\*
+\*Solution:\*  
 
-\- Divide both the numerator and the denominator by the highest power of $n$, which is $n^2$:
+Divide both the numerator and the denominator by the highest power of $n$, which is $n^2$:
 
 $$
 
@@ -147,9 +167,9 @@ $$
 
 \*\*Practice 3:\*\* Evaluate $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
 
-\*Solution:\*
+\*Solution:\*  
 
-\- Divide both the numerator and the denominator by $n$ (for $n > 0$, $\sqrt{n^2} = n$):
+Divide both the numerator and the denominator by $n$ (for $n > 0$, $\sqrt{n^2} = n$):
 
 $$
 
@@ -163,156 +183,42 @@ $$
 
 \<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han" />
 
-\### a) Concept and Sum Formula
+\### a) Concept and Formula
 
-\- An infinite geometric sequence $(u_n)$ with common ratio $q$ satisfying $|q| < 1$ is called a \*\*convergent (or infinite decreasing) geometric sequence\*\*.
+\- An infinite geometric sequence $(u_n)$ with common ratio $q$ satisfying $|q| < 1$ is called an \*\*infinite decreasing geometric sequence\*\* (convergent geometric sequence).
 
-\- The sum of this infinite geometric series is the limit of the partial sums $S_n$ as $n \to +\infty$:
-
-$$
-
-S = \lim\_{n \to +\infty} S_n = \lim\_{n \to +\infty} \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1}{1 - q} \quad (|q| < 1)
+\- The sum of the first $n$ terms is $S_n = \frac{u_1(1 - q^n)}{1 - q}$. Since $|q| < 1$, we have $\lim\_{n \to +\infty} q^n = 0$. Therefore:
 
 $$
 
-\### b) Examples and Representation of Repeating Decimals
+S = \lim\_{n \to +\infty} S_n = \frac{u_1}{1 - q} \quad (|q| < 1).
+
+$$
+
+\### b) Examples and Practice
 
 \*\*Example 4:\*\* Compute the sum $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
 
-\*Solution:\*
+\*Solution:\*  
 
-\- This is the sum of an infinite geometric series with first term $u_1 = 1$ and common ratio $q = -\frac{1}{2}$ ($|q| < 1$).
-
-\- The sum is:
+This is an infinite geometric series with initial term $u_1 = 1$ and common ratio $q = -\frac{1}{2}$. The sum is:
 
 $$
 
-S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{1}{\frac{3}{2}} = \frac{2}{3}.
+S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{2}{3}.
 
 $$
 
 \*\*Example 5:\*\* Express the repeating decimal $2.222\dots$ as a common fraction.
 
-\*Solution:\*
+\*Solution:\*  
 
-\- Notice that: $2.222\dots = 2 + 0.2 + 0.02 + 0.002 + \dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + \dots$
+We can write: $2.222\dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + \dots$  
 
-\- The fractional part is an infinite geometric series with $u_1 = 0.2 = \frac{2}{10}$ and $q = \frac{1}{10}$.
-
-\- The sum of the fractional part is: $\frac{2/10}{1 - 1/10} = \frac{2}{9}$.
-
-\- Therefore: $2.222\dots = 2 + \frac{2}{9} = \frac{20}{9}$.
-
-\*\*Practice 4:\*\* Find the sum $S = 2 + \frac{2}{7} + \frac{2}{7^2} + \dots + \frac{2}{7^{n-1}} + \dots$
-
-\*Solution:\*
-
-\- This is an infinite geometric series with $u_1 = 2$ and $q = \frac{1}{7}$.
-
-\- The sum is:
+This is an infinite geometric series with $u_1 = 2$ and $q = \frac{1}{10}$:
 
 $$
 
-S = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{7}} = \frac{2}{\frac{6}{7}} = \frac{7}{3}.
+2.222\dots = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{10}} = \frac{20}{9}.
 
 $$
-
-\---
-
-\## 4. Infinite Limits of Sequences
-
-\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_vo_cuc" />
-
-\### a) Definition of Infinite Limits
-
-\- A sequence $(u_n)$ is said to diverge to $+\infty$ as $n \to +\infty$ if $u_n$ can be made arbitrarily large from a certain index onward. Notation: $\lim\_{n \to +\infty} u_n = +\infty$.
-
-\- A sequence $(u_n)$ diverges to $-\infty$ as $n \to +\infty$ if $\lim\_{n \to +\infty} (-u_n) = +\infty$. Notation: $\lim\_{n \to +\infty} u_n = -\infty$.
-
-\- \*\*Fundamental Results:\*\*
-
-  \- $\lim\_{n \to +\infty} n^k = +\infty$ (for any positive integer $k$);
-
-  \- $\lim\_{n \to +\infty} q^n = +\infty$ (for $q > 1$).
-
-\### b) Examples and Practice
-
-\*\*Example 6:\*\* Evaluate $\lim\_{n \to +\infty} (n^2 - 2n)$.
-
-\*Solution:\*
-
-\- Factor the expression: $n^2 - 2n = n^2\left(1 - \frac{2}{n}\right)$.
-
-\- Since $\lim\_{n \to +\infty} n^2 = +\infty$ and $\lim\_{n \to +\infty} \left(1 - \frac{2}{n}\right) = 1 > 0$, by the product rule for infinite limits we conclude: $\lim\_{n \to +\infty} (n^2 - 2n) = +\infty$.
-
-\*\*Practice 5:\*\* Evaluate $\lim\_{n \to +\infty} (n - \sqrt{n})$.
-
-\*Solution:\*
-
-\- Factor the expression: $n - \sqrt{n} = \sqrt{n}(\sqrt{n} - 1)$.
-
-\- Because $\lim\_{n \to +\infty} \sqrt{n} = +\infty$ and $\lim\_{n \to +\infty} (\sqrt{n} - 1) = +\infty$, we have $\lim\_{n \to +\infty} (n - \sqrt{n}) = +\infty$.
-
-\---
-
-\## 5. Applications and Problem Solving
-
-\### a) Real-World Applications and Modeling
-
-\*\*Application (Resolving Zeno's Paradox - Achilles and the Tortoise):\*\*  
-
-Assume Achilles runs at $100\text{ km/h}$, the tortoise crawls at $1\text{ km/h}$, and the initial distance between them is $a = 100\text{ km}$.
-
-\- a) The time Achilles takes to cover the initial distance of $100\text{ km}$ is $t_1 = \frac{100}{100} = 1\text{ hour}$; in that time, the tortoise moves $1\text{ km}$. The time required to cover this new distance is $t_2 = \frac{1}{100}\text{ hour}$, and so on.
-
-\- b) The total time required to catch up with the tortoise is the sum of an infinite geometric series:
-
-$$
-
-T = 1 + \frac{1}{100} + \frac{1}{100^2} + \dots = \frac{1}{1 - \frac{1}{100}} = \frac{100}{99}\text{ hours} \approx 1.01\text{ hours}.
-
-$$
-
-\- c) \*\*Zeno's Fallacy:\*\* Zeno falsely assumed that the sum of infinitely many time intervals must be infinite. Modern mathematics demonstrates that an infinite series with decreasing positive terms can converge to a finite number.
-
-\*\*Exercise 5.5 (Drug Accumulation in the Body):\*\*  
-
-A patient takes a $150\text{ mg}$ dose of medication daily. Before each subsequent dose, $5\\%$ of the previous drug amount remains in the body.
-
-\- Amount after the 1st dose: $150\text{ mg}$.
-
-\- Immediately after the 5th dose, the accumulated amount is the sum of the first 5 terms of a geometric sequence ($u_1 = 150$, $q = 0.05$):
-
-$$
-
-S_5 = 150 \cdot \frac{1 - (0.05)^5}{1 - 0.05} \approx 157.89\text{ mg.}
-
-$$
-
-\- With long-term treatment ($n \to +\infty$), the drug concentration reaches a steady-state plateau:
-
-$$
-
-S = \frac{150}{1 - 0.05} = \frac{150}{0.95} = \frac{3000}{19} \approx 157.89\text{ mg.}
-
-$$
-
-\### b) Chapter Review Exercises
-
-\*\*Exercise 5.1:\*\* Evaluate the following limits:
-
-\- a) $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 + 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 + \frac{1}{n^2}} = \frac{1}{2}$.
-
-\- b) Multiply by the conjugate:
-
-$$
-
-\lim\_{n \to +\infty} (\sqrt{n^2 + 2n} - n) = \lim\_{n \to +\infty} \frac{2n}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2}{\sqrt{1 + \frac{2}{n}} + 1} = 1.
-
-$$
-
-\*\*Exercise 5.4:\*\* Convert the repeating decimals into fractions:
-
-\- a) $1.(12) = 1 + 0.1212\dots = 1 + \frac{12/100}{1 - 1/100} = 1 + \frac{12}{99} = \frac{37}{33}$.
-
-\- b) $3.(102) = 3 + 0.102102\dots = 3 + \frac{102/1000}{1 - 1/1000} = 3 + \frac{102}{999} = \frac{1034}{333}$.
