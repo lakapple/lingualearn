@@ -1,0 +1,235 @@
+---
+title: 'Bài 3: Đường tiệm cận của đồ thị hàm số.'
+description: Hệ thống lý thuyết bài Đường tiệm cận của đồ thị hàm số cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Đường tiệm cận ngang (tiệm cận ngang)
+  - Đường tiệm cận đứng (tiệm cận đứng)
+  - Đường tiệm cận xiên (tiệm cận xiên)
+grade: 12
+order: 3
+updatedDate: 2026-10-29T10:46:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Đường tiệm cận ngang (tiệm cận ngang)
+
+·       Đường tiệm cận đứng (tiệm cận đứng)
+
+·       Đường tiệm cận xiên (tiệm cận xiên)
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết hình ảnh hình học và bản chất giải tích của đường tiệm cận ngang, đường tiệm cận đứng, đường tiệm cận xiên của đồ thị hàm số.
+
+·       Nắm vững điều kiện và phương pháp tìm các đường tiệm cận của đồ thị hàm số thông qua giới hạn tại một điểm và giới hạn tại vô cực.
+
+·       Thành thạo kĩ năng xác định tiệm cận của các dạng hàm phân thức hữu tỉ: hàm phân thức bậc nhất trên bậc nhất và hàm phân thức bậc hai trên bậc nhất.
+
+·       Vận dụng kiến thức về đường tiệm cận vào giải quyết các bài toán thực tiễn (phân rã phóng xạ, chi phí xử lý môi trường, chi phí sản xuất trung bình, bài toán tối ưu hình học).
+
+## Đường tiệm cận ngang
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tiem_can_ngang"/>
+
+### a) Định nghĩa và ý nghĩa hình học
+
+Định nghĩa:
+Đường thẳng $y = y_0$ được gọi là đường tiệm cận ngang (gọi tắt là tiệm cận ngang) của đồ thị hàm số $y = f(x)$ nếu ít nhất một trong các điều kiện sau được thoả mãn:
+$$\lim\_{x \to +\infty} f(x) = y_0 \quad \text{hoặc} \quad \lim\_{x \to -\infty} f(x) = y_0$$
+Ý nghĩa hình học:
+Khi điểm $M(x; f(x))$ di chuyển trên đồ thị $(C)$ ra xa vô tận về phía bên phải ($x \to +\infty$) hoặc về phía bên trái ($x \to -\infty$), khoảng cách từ điểm $M$ đến đường thẳng $y = y_0$ dần tiến về 0.
+
+### b) Ví dụ và luyện tập về tiệm cận ngang
+
+**Ví dụ 1:** Tìm tiệm cận ngang của đồ thị hàm số $y = f(x) = \frac{3x - 2}{x + 1}$.
+
+Lời giải Ví dụ 1:
+• Ta có:
+  $$\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \frac{3x - 2}{x + 1} = \lim\_{x \to +\infty} \frac{3 - \frac{2}{x}}{1 + \frac{1}{x}} = 3.$$
+• Tương tự, $\lim\_{x \to -\infty} f(x) = 3$.
+• Vậy đồ thị hàm số $f(x)$ có đường tiệm cận ngang là đường thẳng $y = 3$.
+
+**Ví dụ 2:** Tìm các tiệm cận ngang của đồ thị hàm số $y = f(x) = \frac{\sqrt{x^2 + 1}}{x}$.
+
+Lời giải Ví dụ 2:
+• Khi $x \to +\infty$ ($x > 0$), ta có $\sqrt{x^2 + 1} = x\sqrt{1 + \frac{1}{x^2}}$:
+  $$\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \frac{x\sqrt{1 + \frac{1}{x^2}}}{x} = \lim\_{x \to +\infty} \sqrt{1 + \frac{1}{x^2}} = 1.$$
+• Khi $x \to -\infty$ ($x < 0$), ta có $\sqrt{x^2 + 1} = -x\sqrt{1 + \frac{1}{x^2}}$:
+  $$\lim\_{x \to -\infty} f(x) = \lim\_{x \to -\infty} \frac{-x\sqrt{1 + \frac{1}{x^2}}}{x} = \lim\_{x \to -\infty} \left(-\sqrt{1 + \frac{1}{x^2}}\right) = -1.$$
+• Vậy đồ thị hàm số có hai tiệm cận ngang là các đường thẳng $y = 1$ và $y = -1$.
+
+**Luyện tập 1:** Tìm tiệm cận ngang của đồ thị hàm số $y = f(x) = \frac{2x - 1}{x - 1}$.
+
+Lời giải Luyện tập 1:
+• Tập xác định: $D = \mathbb{R} \setminus \\{1\\}$.
+• Ta có: $\lim\_{x \to +\infty} \frac{2x - 1}{x - 1} = \lim\_{x \to +\infty} \frac{2 - \frac{1}{x}}{1 - \frac{1}{x}} = 2$.
+• Tương tự, $\lim\_{x \to -\infty} \frac{2x - 1}{x - 1} = 2$.
+• Vậy tiệm cận ngang của đồ thị hàm số là đường thẳng $y = 2$.
+
+**Vận dụng 1 (Phân rã chất phóng xạ):** Khối lượng còn lại của một chất phóng xạ sau $t$ ngày phân rã được cho bởi hàm số $y = m(t) = 15e^{-0{,}012t}$ ($t \ge 0$). Khối lượng $m(t)$ thay đổi ra sao khi $t \to +\infty$? Điều này thể hiện trên đồ thị như thế nào?
+
+Lời giải Vận dụng 1:
+• Ta có: $\lim\_{t \to +\infty} m(t) = \lim\_{t \to +\infty} 15e^{-0{,}012t} = \lim\_{t \to +\infty} \frac{15}{e^{0{,}012t}} = 0$.
+• Khi thời gian $t \to +\infty$, khối lượng chất phóng xạ còn lại dần tiệm cận về 0 (nhưng luôn dương).
+• Trên đồ thị, điều này thể hiện trục hoành $y = 0$ (trục $Ot$) là đường tiệm cận ngang của đồ thị hàm số $y = m(t)$ khi $t \to +\infty$.
+
+## Đường tiệm cận đứng
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tiem_can_dung"/>
+
+### a) Định nghĩa đường tiệm cận đứng
+
+Định nghĩa:
+Đường thẳng $x = x_0$ được gọi là đường tiệm cận đứng (gọi tắt là tiệm cận đứng) của đồ thị hàm số $y = f(x)$ nếu ít nhất một trong các điều kiện sau được thoả mãn:
+$$\lim\_{x \to x_0^+} f(x) = +\infty \quad \text{hoặc} \quad \lim\_{x \to x_0^+} f(x) = -\infty \quad \text{hoặc} \quad \lim\_{x \to x_0^-} f(x) = +\infty \quad \text{hoặc} \quad \lim\_{x \to x_0^-} f(x) = -\infty$$
+Phương pháp tìm tiệm cận đứng của hàm phân thức $y = \frac{P(x)}{Q(x)}$:
+1\. Tìm các nghiệm của mẫu số $Q(x) = 0$;
+2\. Với mỗi nghiệm $x_0$, tính các giới hạn một bên $\lim\_{x \to x_0^+} f(x)$ và $\lim\_{x \to x_0^-} f(x)$;
+3\. Nếu $P(x_0) \ne 0$ thì đường thẳng $x = x_0$ chắc chắn là tiệm cận đứng của đồ thị hàm số.
+
+### b) Ví dụ và luyện tập về tiệm cận đứng
+
+**Ví dụ 3:** Tìm tiệm cận đứng của đồ thị hàm số $y = f(x) = \frac{3 - x}{x + 2}$.
+
+Lời giải Ví dụ 3:
+• Mẫu số triệt tiêu khi $x + 2 = 0 \iff x = -2$.
+• Ta có:
+  $$\lim\_{x \to (-2)^+} \frac{3 - x}{x + 2} = +\infty \quad (\text{do } 3 - x \to 5 > 0 \text{ và } x + 2 > 0);$$
+  $$\lim\_{x \to (-2)^-} \frac{3 - x}{x + 2} = -\infty \quad (\text{do } 3 - x \to 5 > 0 \text{ và } x + 2 < 0).$$
+• Vậy đường thẳng $x = -2$ là tiệm cận đứng của đồ thị hàm số.
+
+**Ví dụ 4:** Tìm tiệm cận đứng của đồ thị hàm số $y = f(x) = \frac{x^2 + 2}{x}$.
+
+Lời giải Ví dụ 4:
+• Ta có $x = 0$ làm mẫu số bằng 0 và tử số bằng $2 \ne 0$.
+• Tính các giới hạn một bên: $\lim\_{x \to 0^+} \frac{x^2 + 2}{x} = +\infty$ và $\lim\_{x \to 0^-} \frac{x^2 + 2}{x} = -\infty$.
+• Vậy đồ thị hàm số có tiệm cận đứng là đường thẳng $x = 0$ (trục tung).
+
+**Luyện tập 2:** Tìm các tiệm cận ngang và tiệm cận đứng của đồ thị hàm số $y = f(x) = \frac{2x + 1}{x - 4}$.
+
+Lời giải Luyện tập 2:
+• Tiệm cận ngang: $\lim\_{x \to \pm\infty} \frac{2x + 1}{x - 4} = 2 \implies$ tiệm cận ngang là đường thẳng $y = 2$.
+• Tiệm cận đứng: Mẫu số $x - 4 = 0 \iff x = 4$. Khi $x \to 4$, tử số tiến tới $2(4) + 1 = 9 > 0$.
+  Ta có $\lim\_{x \to 4^+} \frac{2x + 1}{x - 4} = +\infty$ và $\lim\_{x \to 4^-} \frac{2x + 1}{x - 4} = -\infty$.
+  Vậy tiệm cận đứng là đường thẳng $x = 4$.
+
+## Đường tiệm cận xiên
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tiem_can_xien"/>
+
+### a) Định nghĩa và phương pháp xác định tiệm cận xiên
+
+Định nghĩa:
+Đường thẳng $y = ax + b$ ($a \ne 0$) được gọi là đường tiệm cận xiên (gọi tắt là tiệm cận xiên) của đồ thị hàm số $y = f(x)$ nếu ít nhất một trong các điều kiện sau được thoả mãn:
+$$\lim\_{x \to +\infty} [f(x) - (ax + b)] = 0 \quad \text{hoặc} \quad \lim\_{x \to -\infty} [f(x) - (ax + b)] = 0$$
+Quy tắc tìm hệ số $a$ và $b$:
+• Hệ số góc $a$: $a = \lim\_{x \to +\infty} \frac{f(x)}{x}$ (hoặc $\lim\_{x \to -\infty} \frac{f(x)}{x}$);
+• Hệ số tự do $b$: $b = \lim\_{x \to +\infty} [f(x) - ax]$ (hoặc $\lim\_{x \to -\infty} [f(x) - ax]$).
+Chú ý: Đối với hàm phân thức hữu tỉ có bậc của tử hơn bậc của mẫu đúng 1 bậc, ta thực hiện chia đa thức tử cho mẫu để đưa về dạng $f(x) = ax + b + \frac{R(x)}{Q(x)}$ với $\lim\_{x \to \pm\infty} \frac{R(x)}{Q(x)} = 0$. Khi đó đường thẳng $y = ax + b$ chính là tiệm cận xiên.
+
+### b) Ví dụ và luyện tập về tiệm cận xiên
+
+**Ví dụ 5:** Tìm tiệm cận xiên của đồ thị hàm số $y = f(x) = x + \frac{1}{x + 2}$.
+
+Lời giải Ví dụ 5:
+• Xét hiệu: $f(x) - x = \frac{1}{x + 2}$.
+• Ta có: $\lim\_{x \to +\infty} [f(x) - x] = \lim\_{x \to +\infty} \frac{1}{x + 2} = 0$.
+• Tương tự, $\lim\_{x \to -\infty} [f(x) - x] = 0$.
+• Vậy đồ thị hàm số có tiệm cận xiên là đường thẳng $y = x$.
+
+**Ví dụ 6:** Tìm tiệm cận xiên của đồ thị hàm số $y = f(x) = \frac{x^2 - x + 2}{x + 1}$.
+
+Lời giải Ví dụ 6:
+• Cách 1 (Áp dụng công thức giới hạn):
+  $$a = \lim\_{x \to \pm\infty} \frac{f(x)}{x} = \lim\_{x \to \pm\infty} \frac{x^2 - x + 2}{x^2 + x} = 1;$$
+  $$b = \lim\_{x \to \pm\infty} [f(x) - x] = \lim\_{x \to \pm\infty} \left(\frac{x^2 - x + 2}{x + 1} - x\right) = \lim\_{x \to \pm\infty} \frac{-2x + 2}{x + 1} = -2.$$
+• Cách 2 (Chia đa thức):
+  Thực hiện phép chia tử cho mẫu: $f(x) = x - 2 + \frac{4}{x + 1}$.
+  Vì $\lim\_{x \to \pm\infty} \frac{4}{x + 1} = 0$, nên đường thẳng $y = x - 2$ là tiệm cận xiên của đồ thị hàm số.
+
+**Luyện tập 3:** Tìm các tiệm cận đứng và tiệm cận xiên của đồ thị hàm số $y = f(x) = \frac{x^2 - 4x + 2}{1 - x}$.
+
+Lời giải Luyện tập 3:
+• Tiệm cận đứng: Mẫu số $1 - x = 0 \iff x = 1$. Vì tử số khi $x = 1$ là $1^2 - 4(1) + 2 = -1 \ne 0$, ta có $\lim\_{x \to 1^+} f(x) = +\infty$ và $\lim\_{x \to 1^-} f(x) = -\infty$. Do đó $x = 1$ là tiệm cận đứng.
+• Tiệm cận xiên: Chia tử cho mẫu ta được:
+  $$f(x) = \frac{-x^2 + 4x - 2}{x - 1} = -x + 3 + \frac{1}{x - 1}.$$
+  Vì $\lim\_{x \to \pm\infty} \frac{1}{x - 1} = 0$, nên đường thẳng $y = -x + 3$ là tiệm cận xiên của đồ thị hàm số.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 2 (Chi phí xử lý tảo độc):** Để loại bỏ $p\\%$ một loài tảo độc khỏi một hồ nước, chi phí ước tính là $C(p) = \frac{45p}{100 - p}$ (triệu đồng), với $0 \le p < 100$. Tìm tiệm cận đứng của đồ thị hàm số $C(p)$ và nêu ý nghĩa thực tiễn.
+
+Lời giải Vận dụng 2:
+• Ta có: $\lim\_{p \to 100^-} C(p) = \lim\_{p \to 100^-} \frac{45p}{100 - p} = +\infty$ (vì $45p \to 4\\,500 > 0$ và $100 - p > 0$ khi $p < 100$).
+• Do đó đường thẳng $p = 100$ là tiệm cận đứng của đồ thị hàm số $C(p)$.
+• Ý nghĩa thực tiễn: Khi tỉ lệ phần trăm tảo cần loại bỏ tiến gần tới $100\\%$ (loại bỏ hoàn toàn), chi phí xử lý sẽ tăng lên vô cùng lớn. Vì vậy, trên thực tế người ta không thể loại bỏ hoàn toàn $100\\%$ tảo độc mà chỉ làm giảm đến một tỉ lệ an toàn cho phép.
+
+**Bài 1.19 (Chi phí sản xuất trung bình):** Một công ty sản xuất đồ gia dụng ước tính chi phí sản xuất $x$ sản phẩm là $C(x) = 2x + 50$ (triệu đồng). Hàm số chi phí trung bình là $f(x) = \frac{C(x)}{x}$. Chứng tỏ rằng hàm số $f(x)$ giảm và $\lim\_{x \to +\infty} f(x) = 2$. Tính chất này nói lên điều gì?
+
+Lời giải Bài 1.19:
+• Ta có $f(x) = \frac{2x + 50}{x} = 2 + \frac{50}{x}$ với $x > 0$.
+• Đạo hàm: $f'(x) = -\frac{50}{x^2} < 0$ với mọi $x > 0$, do đó hàm số $f(x)$ nghịch biến (giảm) trên khoảng $(0; +\infty)$.
+• Giới hạn: $\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \left(2 + \frac{50}{x}\right) = 2 + 0 = 2$. Đường thẳng $y = 2$ là tiệm cận ngang.
+• Ý nghĩa kinh tế: Khi quy mô sản xuất càng mở rộng (số lượng sản phẩm $x$ tăng lên), chi phí trung bình trên mỗi đơn vị sản phẩm sẽ liên tục giảm xuống và tiệm cận về mức 2 triệu đồng/sản phẩm (hiệu quả kinh tế nhờ quy mô - economies of scale). Mức 2 triệu đồng này chính là chi phí biến đổi cho mỗi sản phẩm.
+
+**Bài 1.20 (Chu vi mảnh vườn hình chữ nhật):** Một mảnh vườn hình chữ nhật có diện tích $144\text{ m}^2$, một cạnh có độ dài là $x$ (m).
+a) Viết biểu thức tính chu vi $P(x)$ (mét) của mảnh vườn.
+b) Tìm các tiệm cận của đồ thị hàm số $y = P(x)$ và giải thích ý nghĩa thực tiễn.
+
+Lời giải Bài 1.20:
+• a) Vì diện tích $S = 144\text{ m}^2$ nên kích thước cạnh còn lại là $\frac{144}{x}$ (m) với $x > 0$.
+  Chu vi mảnh vườn là: $P(x) = 2\left(x + \frac{144}{x}\right) = 2x + \frac{288}{x}$ (m).
+• b) Tìm các tiệm cận của đồ thị hàm số $y = P(x)$ trên $(0; +\infty)$:
+
++ Tiệm cận đứng: $\lim\_{x \to 0^+} P(x) = \lim\_{x \to 0^+} \left(2x + \frac{288}{x}\right) = +\infty \implies x = 0$ (trục tung) là tiệm cận đứng.
++ Tiệm cận xiên: Xét hiệu $P(x) - 2x = \frac{288}{x}$, ta có $\lim\_{x \to +\infty} [P(x) - 2x] = \lim\_{x \to +\infty} \frac{288}{x} = 0$. Suy ra đường thẳng $y = 2x$ là tiệm cận xiên.
++ Ý nghĩa thực tiễn: Khi một cạnh của mảnh vườn quá nhỏ ($x \to 0^+$) hoặc quá dài ($x \to +\infty$), mảnh vườn bị kéo dài và dẹt lại, dẫn đến chu vi $P(x)$ tăng lên vô cùng lớn để cùng bao bọc diện tích $144\text{ m}^2$. Khi một cạnh rất lớn, chu vi xấp xỉ gấp đôi chiều dài cạnh đó ($P(x) \approx 2x$).
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 1.16:** Sử dụng đồ thị hàm số $y = f(x) = \frac{2x^2}{x^2 - 1}$ (Hình 1.26):
+a) Viết kết quả của các giới hạn: $\lim\_{x \to +\infty} f(x); \lim\_{x \to -\infty} f(x); \lim\_{x \to 1^+} f(x); \lim\_{x \to 1^-} f(x); \lim\_{x \to (-1)^+} f(x); \lim\_{x \to (-1)^-} f(x)$.
+b) Chỉ ra các tiệm cận của đồ thị hàm số đã cho.
+
+Lời giải Bài 1.16:
+• a) Quan sát đồ thị ta có:
+  $$\lim\_{x \to +\infty} f(x) = 2; \quad \lim\_{x \to -\infty} f(x) = 2;$$
+  $$\lim\_{x \to 1^+} f(x) = +\infty; \quad \lim\_{x \to 1^-} f(x) = -\infty;$$
+  $$\lim\_{x \to (-1)^+} f(x) = -\infty; \quad \lim\_{x \to (-1)^-} f(x) = +\infty.$$
+• b) Các tiệm cận của đồ thị:
+
++ Tiệm cận ngang: Đường thẳng $y = 2$;
++ Tiệm cận đứng: Hai đường thẳng $x = 1$ và $x = -1$.
+
+**Bài 1.17:** Đường thẳng $x = 1$ có phải là tiệm cận đứng của đồ thị hàm số $y = \frac{x^2 + 2x - 3}{x - 1}$ không?
+
+Lời giải Bài 1.17:
+• Tập xác định: $D = \mathbb{R} \setminus \\{1\\}$.
+• Ta biến đổi phân thức với $x \ne 1$:
+  $$y = \frac{(x - 1)(x + 3)}{x - 1} = x + 3.$$
+• Do đó: $\lim\_{x \to 1} y = \lim\_{x \to 1} (x + 3) = 4$ (giới hạn hữu hạn, không tiến tới vô cực).
+• Vậy đường thẳng $x = 1$ không phải là tiệm cận đứng của đồ thị hàm số đã cho.
+
+**Bài 1.18:** Tìm các tiệm cận của đồ thị các hàm số sau:
+a) $y = \frac{3 - x}{2x + 1}$;
+b) $y = \frac{2x^2 + x - 1}{x + 2}$.
+
+Lời giải Bài 1.18:
+• a) Xét hàm số $y = \frac{-x + 3}{2x + 1}$ ($D = \mathbb{R} \setminus \\{-\frac{1}{2}\\}$):
+
++ Tiệm cận ngang: $\lim\_{x \to \pm\infty} \frac{-x + 3}{2x + 1} = -\frac{1}{2} \implies y = -\frac{1}{2}$.
++ Tiệm cận đứng: $\lim\_{x \to (-\frac{1}{2})^+} y = +\infty, \lim\_{x \to (-\frac{1}{2})^-} y = -\infty \implies x = -\frac{1}{2}$.
+• b) Xét hàm số $y = \frac{2x^2 + x - 1}{x + 2}$ ($D = \mathbb{R} \setminus \\{-2\\}$):
++ Tiệm cận đứng: Mẫu số $x + 2 = 0 \iff x = -2$. Khi $x = -2$, tử số bằng $2(-2)^2 + (-2) - 1 = 5 \ne 0$. Suy ra $\lim\_{x \to (-2)^\pm} y = \pm\infty$, vậy $x = -2$ là tiệm cận đứng.
++ Tiệm cận xiên: Chia tử cho mẫu:
+    $$y = 2x - 3 + \frac{5}{x + 2}.$$
+    Vì $\lim\_{x \to \pm\infty} [y - (2x - 3)] = \lim\_{x \to \pm\infty} \frac{5}{x + 2} = 0$, nên đường thẳng $y = 2x - 3$ là tiệm cận xiên của đồ thị hàm số.

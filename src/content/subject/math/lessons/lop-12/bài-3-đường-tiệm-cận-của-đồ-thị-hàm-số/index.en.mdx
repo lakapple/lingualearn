@@ -1,0 +1,233 @@
+---
+title: 'Lesson 3: Asymptotes of a function graph.'
+description: Theoretical system for the lesson on Asymptotes of a function graph with illustrative examples.
+tags:
+  - grade 12
+  - Horizontal asymptote
+  - Vertical asymptote
+  - Slant asymptote (oblique asymptote)
+grade: 12
+order: 3
+updatedDate: 2026-10-29T10:46:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Horizontal asymptote
+
+·       Vertical asymptote
+
+·       Slant asymptote (oblique asymptote)
+
+### **Knowledge and Skills:**
+
+·       Recognize the geometric visual representation and analytical nature of horizontal, vertical, and slant asymptotes of a function's graph.
+
+·       Master the conditions and algebraic methods for determining asymptotes through limits at a point and limits at infinity.
+
+·       Proficiently find asymptotes of rational functions: linear fractional functions and quadratic-over-linear rational functions.
+
+·       Apply asymptote concepts to model and analyze real-world phenomena (radioactive decay, environmental cleanup cost, average production cost, geometric perimeter optimization).
+
+## Horizontal Asymptotes
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tiem_can_ngang"/>
+
+### a) Definition and Geometric Interpretation
+
+Definition:
+The horizontal line $y = y_0$ is called a horizontal asymptote of the graph of the function $y = f(x)$ if at least one of the following conditions is satisfied:
+$$\lim\_{x \to +\infty} f(x) = y_0 \quad \text{or} \quad \lim\_{x \to -\infty} f(x) = y_0$$
+Geometric Interpretation:
+As a point $M(x; f(x))$ moves along the curve $(C)$ infinitely far to the right ($x \to +\infty$) or to the left ($x \to -\infty$), the vertical distance $MH$ from point $M$ to the line $y = y_0$ approaches 0.
+
+### b) Illustrative Examples and Practice on Horizontal Asymptotes
+
+**Example 1:** Find the horizontal asymptote of the graph of the function $y = f(x) = \frac{3x - 2}{x + 1}$.
+
+Solution for Example 1:
+• We evaluate the limit as $x \to +\infty$:
+  $$\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \frac{3x - 2}{x + 1} = \lim\_{x \to +\infty} \frac{3 - \frac{2}{x}}{1 + \frac{1}{x}} = 3.$$
+• Similarly, $\lim\_{x \to -\infty} f(x) = 3$.
+• Therefore, the graph of $f(x)$ has a horizontal asymptote given by the line $y = 3$.
+
+**Example 2:** Find the horizontal asymptotes of the graph of the function $y = f(x) = \frac{\sqrt{x^2 + 1}}{x}$.
+
+Solution for Example 2:
+• For $x \to +\infty$ ($x > 0$), we have $\sqrt{x^2 + 1} = x\sqrt{1 + \frac{1}{x^2}}$:
+  $$\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \frac{x\sqrt{1 + \frac{1}{x^2}}}{x} = \lim\_{x \to +\infty} \sqrt{1 + \frac{1}{x^2}} = 1.$$
+• For $x \to -\infty$ ($x < 0$), we have $\sqrt{x^2 + 1} = -x\sqrt{1 + \frac{1}{x^2}}$:
+  $$\lim\_{x \to -\infty} f(x) = \lim\_{x \to -\infty} \frac{-x\sqrt{1 + \frac{1}{x^2}}}{x} = \lim\_{x \to -\infty} \left(-\sqrt{1 + \frac{1}{x^2}}\right) = -1.$$
+• Hence, the graph of $f(x)$ has two horizontal asymptotes: the lines $y = 1$ and $y = -1$.
+
+**Practice 1:** Find the horizontal asymptote of the graph of the function $y = f(x) = \frac{2x - 1}{x - 1}$.
+
+Solution for Practice 1:
+• Domain: $D = \mathbb{R} \setminus \\{1\\}$.
+• We evaluate: $\lim\_{x \to +\infty} \frac{2x - 1}{x - 1} = \lim\_{x \to +\infty} \frac{2 - \frac{1}{x}}{1 - \frac{1}{x}} = 2$.
+• Similarly, $\lim\_{x \to -\infty} \frac{2x - 1}{x - 1} = 2$.
+• Thus, the horizontal asymptote of the graph is the line $y = 2$.
+
+**Application 1 (Radioactive Decay Model):** The remaining mass of a radioactive substance after $t$ days of decay is modeled by $y = m(t) = 15e^{-0.012t}$ ($t \ge 0$, in grams). How does the mass $m(t)$ behave as $t \to +\infty$? How is this behavior reflected on the graph?
+
+Solution for Application 1:
+• We compute: $\lim\_{t \to +\infty} m(t) = \lim\_{t \to +\infty} 15e^{-0.012t} = \lim\_{t \to +\infty} \frac{15}{e^{0.012t}} = 0$.
+• As elapsed time $t \to +\infty$, the remaining mass asymptotically approaches 0 grams (while remaining strictly positive).
+• Geometrically, this indicates that the horizontal axis $y = 0$ (the $t$-axis) is the horizontal asymptote of the graph of $y = m(t)$ as $t \to +\infty$.
+
+## Vertical Asymptotes
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tiem_can_dung"/>
+
+### a) Definition of Vertical Asymptotes
+
+Definition:
+The vertical line $x = x_0$ is called a vertical asymptote of the graph of the function $y = f(x)$ if at least one of the following conditions is satisfied:
+$$\lim\_{x \to x_0^+} f(x) = +\infty \quad \text{or} \quad \lim\_{x \to x_0^+} f(x) = -\infty \quad \text{or} \quad \lim\_{x \to x_0^-} f(x) = +\infty \quad \text{or} \quad \lim\_{x \to x_0^-} f(x) = -\infty$$
+Method for Finding Vertical Asymptotes of Rational Functions $y = \frac{P(x)}{Q(x)}$:
+1\. Find the roots of the denominator $Q(x) = 0$;
+2\. For each root $x_0$, compute the one-sided limits $\lim\_{x \to x_0^+} f(x)$ and $\lim\_{x \to x_0^-} f(x)$;
+3\. If $P(x_0) \ne 0$, the line $x = x_0$ is definitively a vertical asymptote of the graph.
+
+### b) Illustrative Examples and Practice on Vertical Asymptotes
+
+**Example 3:** Find the vertical asymptote of the graph of the function $y = f(x) = \frac{3 - x}{x + 2}$.
+
+Solution for Example 3:
+• The denominator vanishes when $x + 2 = 0 \iff x = -2$.
+• Evaluating one-sided limits at $x = -2$:
+  $$\lim\_{x \to (-2)^+} \frac{3 - x}{x + 2} = +\infty \quad (\text{since } 3 - x \to 5 > 0 \text{ and } x + 2 > 0);$$
+  $$\lim\_{x \to (-2)^-} \frac{3 - x}{x + 2} = -\infty \quad (\text{since } 3 - x \to 5 > 0 \text{ and } x + 2 < 0).$$
+• Therefore, the line $x = -2$ is the vertical asymptote of the graph.
+
+**Example 4:** Find the vertical asymptote of the graph of the function $y = f(x) = \frac{x^2 + 2}{x}$.
+
+Solution for Example 4:
+• The value $x = 0$ makes the denominator 0 while the numerator equals $2 \ne 0$.
+• One-sided limits: $\lim\_{x \to 0^+} \frac{x^2 + 2}{x} = +\infty$ and $\lim\_{x \to 0^-} \frac{x^2 + 2}{x} = -\infty$.
+• Thus, the graph has a vertical asymptote given by the line $x = 0$ (the $y$-axis).
+
+**Practice 2:** Find the horizontal and vertical asymptotes of the graph of the function $y = f(x) = \frac{2x + 1}{x - 4}$.
+
+Solution for Practice 2:
+• Horizontal asymptote: $\lim\_{x \to \pm\infty} \frac{2x + 1}{x - 4} = 2 \implies$ the horizontal asymptote is the line $y = 2$.
+• Vertical asymptote: Setting $x - 4 = 0 \iff x = 4$. As $x \to 4$, the numerator approaches $2(4) + 1 = 9 > 0$.
+  We have $\lim\_{x \to 4^+} \frac{2x + 1}{x - 4} = +\infty$ and $\lim\_{x \to 4^-} \frac{2x + 1}{x - 4} = -\infty$.
+  Therefore, the vertical asymptote is the line $x = 4$.
+
+## Slant Asymptotes
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tiem_can_xien"/>
+
+### a) Definition and Methods for Determining Slant Asymptotes
+
+Definition:
+The non-horizontal straight line $y = ax + b$ ($a \ne 0$) is called a slant asymptote (oblique asymptote) of the graph of the function $y = f(x)$ if at least one of the following conditions is satisfied:
+$$\lim\_{x \to +\infty} [f(x) - (ax + b)] = 0 \quad \text{or} \quad \lim\_{x \to -\infty} [f(x) - (ax + b)] = 0$$
+Formulas for Coefficients $a$ and $b$:
+• Slope $a$: $a = \lim\_{x \to +\infty} \frac{f(x)}{x}$ (or $\lim\_{x \to -\infty} \frac{f(x)}{x}$);
+• $y$-Intercept $b$: $b = \lim\_{x \to +\infty} [f(x) - ax]$ (or $\lim\_{x \to -\infty} [f(x) - ax]$).
+Practical Note: For a rational function where the degree of the numerator exceeds that of the denominator by exactly 1, perform polynomial long division to express $f(x) = ax + b + \frac{R(x)}{Q(x)}$ with $\lim\_{x \to \pm\infty} \frac{R(x)}{Q(x)} = 0$. The linear quotient $y = ax + b$ is the slant asymptote.
+
+### b) Illustrative Examples and Practice on Slant Asymptotes
+
+**Example 5:** Find the slant asymptote of the graph of the function $y = f(x) = x + \frac{1}{x + 2}$.
+
+Solution for Example 5:
+• Consider the difference: $f(x) - x = \frac{1}{x + 2}$.
+• Evaluating limits: $\lim\_{x \to +\infty} [f(x) - x] = \lim\_{x \to +\infty} \frac{1}{x + 2} = 0$.
+• Similarly, $\lim\_{x \to -\infty} [f(x) - x] = 0$.
+• Hence, the graph has a slant asymptote given by the line $y = x$.
+
+**Example 6:** Find the slant asymptote of the graph of the function $y = f(x) = \frac{x^2 - x + 2}{x + 1}$.
+
+Solution for Example 6:
+• Method 1 (Using Limit Formulas):
+  $$a = \lim\_{x \to \pm\infty} \frac{f(x)}{x} = \lim\_{x \to \pm\infty} \frac{x^2 - x + 2}{x^2 + x} = 1;$$
+  $$b = \lim\_{x \to \pm\infty} [f(x) - x] = \lim\_{x \to \pm\infty} \left(\frac{x^2 - x + 2}{x + 1} - x\right) = \lim\_{x \to \pm\infty} \frac{-2x + 2}{x + 1} = -2.$$
+• Method 2 (Polynomial Division):
+  Dividing numerator by denominator yields: $f(x) = x - 2 + \frac{4}{x + 1}$.
+  Since $\lim\_{x \to \pm\infty} \frac{4}{x + 1} = 0$, the line $y = x - 2$ is the slant asymptote of the graph.
+
+**Practice 3:** Find the vertical and slant asymptotes of the graph of the function $y = f(x) = \frac{x^2 - 4x + 2}{1 - x}$.
+
+Solution for Practice 3:
+• Vertical asymptote: Denominator $1 - x = 0 \iff x = 1$. The numerator at $x = 1$ is $1^2 - 4(1) + 2 = -1 \ne 0$. One-sided limits yield $\lim\_{x \to 1^+} f(x) = +\infty$ and $\lim\_{x \to 1^-} f(x) = -\infty$. Thus, $x = 1$ is a vertical asymptote.
+• Slant asymptote: Dividing the polynomials:
+  $$f(x) = \frac{-x^2 + 4x - 2}{x - 1} = -x + 3 + \frac{1}{x - 1}.$$
+  Since $\lim\_{x \to \pm\infty} \frac{1}{x - 1} = 0$, the line $y = -x + 3$ is the slant asymptote of the graph.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 2 (Toxic Algae Removal Cost):** To eliminate $p\\%$ of a toxic algae species from a lake, the estimated cost is given by $C(p) = \frac{45p}{100 - p}$ (in million VND), with $0 \le p < 100$. Find the vertical asymptote of the graph of $C(p)$ and interpret its practical significance.
+
+Solution for Application 2:
+• We evaluate: $\lim\_{p \to 100^-} C(p) = \lim\_{p \to 100^-} \frac{45p}{100 - p} = +\infty$ (since $45p \to 4\\,500 > 0$ and $100 - p \to 0^+$ as $p \to 100^-$).
+• Thus, the vertical line $p = 100$ is the vertical asymptote of the graph of $C(p)$.
+• Practical Significance: As the percentage of algae targeted for removal approaches $100\\%$ (complete eradication), the financial cost escalates toward infinity. Therefore, complete $100\\%$ removal is practically infeasible; environmental management must target a realistic, high percentage threshold within budgetary constraints.
+
+**Exercise 1.19 (Average Production Cost):** A home appliance manufacturer estimates the total cost of producing $x$ units as $C(x) = 2x + 50$ (in million VND). The average cost per unit is $f(x) = \frac{C(x)}{x}$. Show that $f(x)$ is strictly decreasing and $\lim\_{x \to +\infty} f(x) = 2$. What economic principle does this demonstrate?
+
+Solution for Exercise 1.19:
+• We express $f(x) = \frac{2x + 50}{x} = 2 + \frac{50}{x}$ for $x > 0$.
+• First derivative: $f'(x) = -\frac{50}{x^2} < 0$ for all $x > 0$, confirming that $f(x)$ is strictly decreasing on $(0; +\infty)$.
+• Asymptotic behavior: $\lim\_{x \to +\infty} f(x) = \lim\_{x \to +\infty} \left(2 + \frac{50}{x}\right) = 2 + 0 = 2$. The line $y = 2$ is a horizontal asymptote.
+• Economic Principle: This illustrates economies of scale. As manufacturing output $x$ expands, fixed overhead ($50$ million VND) is distributed across more units, driving average cost down toward the baseline marginal/variable cost of $2$ million VND per unit.
+
+**Exercise 1.20 (Perimeter of a Rectangular Garden):** A rectangular garden has a fixed area of $144\text{ m}^2$, with one side length denoted by $x$ (m).
+a) Express the perimeter $P(x)$ (in meters) of the garden as a function of $x$.
+b) Find the asymptotes of the graph of $y = P(x)$ and interpret their geometric meaning.
+
+Solution for Exercise 1.20:
+• a) With area $S = 144\text{ m}^2$, the adjacent side length is $\frac{144}{x}$ (m) for $x > 0$.
+  The perimeter function is: $P(x) = 2\left(x + \frac{144}{x}\right) = 2x + \frac{288}{x}$ (m).
+• b) Asymptotes of $y = P(x)$ on $(0; +\infty)$:
+  + Vertical asymptote: $\lim\_{x \to 0^+} P(x) = \lim\_{x \to 0^+} \left(2x + \frac{288}{x}\right) = +\infty \implies x = 0$ (the $y$-axis) is a vertical asymptote.
+  + Slant asymptote: Considering $P(x) - 2x = \frac{288}{x}$, we find $\lim\_{x \to +\infty} [P(x) - 2x] = \lim\_{x \to +\infty} \frac{288}{x} = 0$. Hence, the line $y = 2x$ is a slant asymptote.
+  + Geometric Meaning: If one side becomes extremely narrow ($x \to 0^+$) or excessively long ($x \to +\infty$), the garden becomes severely elongated, requiring an arbitrarily large perimeter to enclose $144\text{ m}^2$. For very large $x$, the perimeter is dominated by and approximately equals twice that side length ($P(x) \approx 2x$).
+
+### b) Detailed Section Exercises
+
+**Exercise 1.16:** Given the graph of $y = f(x) = \frac{2x^2}{x^2 - 1}$ (Figure 1.26):
+a) Read and state the values of the following limits: $\lim\_{x \to +\infty} f(x); \lim\_{x \to -\infty} f(x); \lim\_{x \to 1^+} f(x); \lim\_{x \to 1^-} f(x); \lim\_{x \to (-1)^+} f(x); \lim\_{x \to (-1)^-} f(x)$.
+b) Identify all asymptotes of the graph.
+
+Solution for Exercise 1.16:
+• a) Inspecting the graph:
+  $$\lim\_{x \to +\infty} f(x) = 2; \quad \lim\_{x \to -\infty} f(x) = 2;$$
+  $$\lim\_{x \to 1^+} f(x) = +\infty; \quad \lim\_{x \to 1^-} f(x) = -\infty;$$
+  $$\lim\_{x \to (-1)^+} f(x) = -\infty; \quad \lim\_{x \to (-1)^-} f(x) = +\infty.$$
+• b) Asymptotes of the graph:
+  + Horizontal asymptote: Line $y = 2$;
+  + Vertical asymptotes: Lines $x = 1$ and $x = -1$.
+
+**Exercise 1.17:** Is the line $x = 1$ a vertical asymptote of the graph of the function $y = \frac{x^2 + 2x - 3}{x - 1}$?
+
+Solution for Exercise 1.17:
+• Domain: $D = \mathbb{R} \setminus \\{1\\}$.
+• Factoring the numerator for $x \ne 1$:
+  $$y = \frac{(x - 1)(x + 3)}{x - 1} = x + 3.$$
+• Evaluating the limit as $x \to 1$:
+  $$\lim\_{x \to 1} y = \lim\_{x \to 1} (x + 3) = 4.$$
+• Since the limit is a finite real number and does not approach $\pm\infty$, the line $x = 1$ is NOT a vertical asymptote of the graph.
+
+**Exercise 1.18:** Find all asymptotes of the graphs of the following functions:
+a) $y = \frac{3 - x}{2x + 1}$;
+b) $y = \frac{2x^2 + x - 1}{x + 2}$.
+
+Solution for Exercise 1.18:
+• a) For $y = \frac{-x + 3}{2x + 1}$ ($D = \mathbb{R} \setminus \\{-\frac{1}{2}\\}$):
+  + Horizontal asymptote: $\lim\_{x \to \pm\infty} \frac{-x + 3}{2x + 1} = -\frac{1}{2} \implies y = -\frac{1}{2}$.
+  + Vertical asymptote: $\lim\_{x \to (-\frac{1}{2})^+} y = +\infty, \lim\_{x \to (-\frac{1}{2})^-} y = -\infty \implies x = -\frac{1}{2}$.
+• b) For $y = \frac{2x^2 + x - 1}{x + 2}$ ($D = \mathbb{R} \setminus \\{-2\\}$):
+  + Vertical asymptote: Denominator $x + 2 = 0 \iff x = -2$. At $x = -2$, the numerator is $2(-2)^2 + (-2) - 1 = 5 \ne 0$. Thus, $\lim\_{x \to (-2)^\pm} y = \pm\infty \implies x = -2$ is a vertical asymptote.
+  + Slant asymptote: Performing polynomial long division:
+    $$y = 2x - 3 + \frac{5}{x + 2}.$$
+    Since $\lim\_{x \to \pm\infty} [y - (2x - 3)] = \lim\_{x \to \pm\infty} \frac{5}{x + 2} = 0$, the line $y = 2x - 3$ is the slant asymptote of the graph.
