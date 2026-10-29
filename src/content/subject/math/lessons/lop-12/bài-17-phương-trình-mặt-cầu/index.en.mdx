@@ -1,0 +1,258 @@
+---
+title: 'Lesson 17: Equation of a Sphere'
+description: 'Theoretical system for the lesson on Lesson 17: Equation of a Sphere with illustrative examples.'
+tags:
+  - grade 12
+  - Sphere
+  - Center and radius of a sphere
+  - Standard (canonical) equation of a sphere
+  - solid sphere
+  - General (expanded) equation of a sphere
+grade: 12
+order: 17
+updatedDate: 2026-10-29T16:47:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Sphere, solid sphere (ball) in space
+
+·       Center and radius of a sphere
+
+·       Standard (canonical) equation of a sphere
+
+·       General (expanded) equation of a sphere
+
+### **Knowledge and Skills:**
+
+·       Recognize the geometric definition and equations of a sphere in space Oxyz.
+
+·       Determine the center and radius of a sphere given its equation in standard or expanded general form.
+
+·       Formulate the equation of a sphere given its center and radius, given a diameter, or tangent to a plane.
+
+·       Determine the relative position of a point with respect to a sphere (interior, on the surface, or exterior).
+
+·       Apply sphere equations to solve practical problems (great-circle geodesic distances on Earth's surface, transmission coverage area, GPS satellite positioning principles).
+
+## Equation of a Sphere
+
+\<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_mat_cau"/>
+
+### a) Definition and Standard Equation of a Sphere
+
+• Definition: A sphere with center $I$ and radius $R$ ($R > 0$) is the set of all points $M$ in space whose distance to $I$ is equal to $R$.
+  - A point $M$ lies inside the sphere (in the interior) if $IM < R$.
+  - A point $M$ lies outside the sphere (in the exterior) if $IM > R$.
+  - A point $M$ lies on the sphere if $IM = R$.
+• Standard Equation: In space $Oxyz$, the sphere $(S)$ with center $I(a; b; c)$ and radius $R$ has the standard equation:
+$$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$
+• Position of point $M(x; y; z)$ relative to the sphere $(S)$:
+  - $M$ lies inside $(S) \iff (x - a)^2 + (y - b)^2 + (z - c)^2 < R^2$.
+  - $M$ lies outside $(S) \iff (x - a)^2 + (y - b)^2 + (z - c)^2 > R^2$.
+  - $M$ lies on $(S) \iff (x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$.
+
+**Example 1:** In space $Oxyz$, consider the sphere $(S)$ with equation $(x - 1)^2 + (y + 3)^2 + z^2 = 5$.
+a) Find the center and radius of $(S)$.
+b) Determine whether the origin $O(0; 0; 0)$ lies inside, outside, or on the sphere $(S)$.
+
+Solution to Example 1:
+• a) Rewriting the equation of $(S)$ in standard form:
+  $$(x - 1)^2 + [y - (-3)]^2 + (z - 0)^2 = (\sqrt{5})^2.$$
+  Thus, the sphere $(S)$ has center $I(1; -3; 0)$ and radius $R = \sqrt{5}$.
+• b) Computing the squared distance from the origin $O$ to the center $I$:
+  $$OI^2 = (0 - 1)^2 + (0 + 3)^2 + (0 - 0)^2 = 1 + 9 + 0 = 10.$$
+  Since $OI^2 = 10 > 5 = R^2$, we have $OI > R$.
+  Therefore, the origin $O(0; 0; 0)$ lies outside the sphere $(S)$.
+
+**Practice 1:** In space $Oxyz$, given the sphere $(S)$ with equation $(x + 2)^2 + y^2 + \left(z + \frac{1}{2}\right)^2 = \frac{9}{4}$.
+a) Find the center and radius of $(S)$.
+b) Determine whether the point $M(2; 0; 1)$ lies inside, outside, or on the sphere $(S)$.
+
+Solution to Practice 1:
+• a) Expressing the equation as $[x - (-2)]^2 + (y - 0)^2 + \left[z - \left(-\frac{1}{2}\right)\right]^2 = \left(\frac{3}{2}\right)^2$.
+  Thus, $(S)$ has center $I\left(-2; 0; -\frac{1}{2}\right)$ and radius $R = \frac{3}{2}$.
+• b) The squared distance from $M$ to $I$ is:
+  $$IM^2 = [2 - (-2)]^2 + (0 - 0)^2 + \left[1 - \left(-\frac{1}{2}\right)\right]^2 = 4^2 + 0^2 + \left(\frac{3}{2}\right)^2 = 16 + \frac{9}{4} = \frac{73}{4}.$$
+  Since $IM^2 = \frac{73}{4} > \frac{9}{4} = R^2$, the point $M(2; 0; 1)$ lies outside the sphere $(S)$.
+
+**Example 2:** In space $Oxyz$, write the equation of the sphere $(S)$ in each of the following cases:
+a) Center $I\left(\frac{3}{2}; 0; -3\right)$, radius $R = \frac{9}{4}$;
+b) Diameter $AB$, with $A(1; 2; 1)$ and $B(3; 1; 5)$.
+
+Solution to Example 2:
+• a) The sphere $(S)$ with center $I\left(\frac{3}{2}; 0; -3\right)$ and radius $R = \frac{9}{4}$ has the equation:
+  $$\left(x - \frac{3}{2}\right)^2 + y^2 + (z + 3)^2 = \left(\frac{9}{4}\right)^2 \iff \left(x - \frac{3}{2}\right)^2 + y^2 + (z + 3)^2 = \frac{81}{16}.$$
+• b) The center $J$ of the sphere is the midpoint of segment $AB$:
+  $$x_J = \frac{1 + 3}{2} = 2, \quad y_J = \frac{2 + 1}{2} = \frac{3}{2}, \quad z_J = \frac{1 + 5}{2} = 3 \implies J\left(2; \frac{3}{2}; 3\right).$$
+  The length of diameter $AB = \sqrt{(3 - 1)^2 + (1 - 2)^2 + (5 - 1)^2} = \sqrt{4 + 1 + 16} = \sqrt{21}$.
+  The radius is $R = \frac{AB}{2} = \frac{\sqrt{21}}{2} \implies R^2 = \frac{21}{4}$.
+  The equation of sphere $(S)$ is: $(x - 2)^2 + \left(y - \frac{3}{2}\right)^2 + (z - 3)^2 = \frac{21}{4}$.
+
+**Practice 2:** In space $Oxyz$, write the equation of the sphere $(S)$ in each of the following cases:
+a) Center is the origin $O(0; 0; 0)$, radius $R = 1$;
+b) Diameter $AB$, with $A(1; -1; 2)$ and $B(2; -3; -1)$.
+
+Solution to Practice 2:
+• a) The sphere with center $O(0; 0; 0)$ and radius $R = 1$ has the equation:
+  $$x^2 + y^2 + z^2 = 1.$$
+• b) The center $I$ is the midpoint of $AB$:
+  $$I\left(\frac{1 + 2}{2}; \frac{-1 - 3}{2}; \frac{2 - 1}{2}\right) \implies I\left(\frac{3}{2}; -2; \frac{1}{2}\right).$$
+  Diameter length $AB = \sqrt{(2 - 1)^2 + (-3 + 1)^2 + (-1 - 2)^2} = \sqrt{1 + 4 + 9} = \sqrt{14}$.
+  Radius $R = \frac{\sqrt{14}}{2} \implies R^2 = \frac{14}{4} = \frac{7}{2}$.
+  The equation of sphere $(S)$ is: $\left(x - \frac{3}{2}\right)^2 + (y + 2)^2 + \left(z - \frac{1}{2}\right)^2 = \frac{7}{2}$.
+
+### b) General (Expanded) Equation of a Sphere
+
+Expanding the standard equation $(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$ yields the form:
+$$x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$$
+where $d = a^2 + b^2 + c^2 - R^2$.
+• Theorem (Condition for a General Equation to Represent a Sphere): An equation of the form:
+$$x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$$
+represents a sphere $(S)$ if and only if:
+$$a^2 + b^2 + c^2 - d > 0$$
+When this condition holds, the sphere $(S)$ has:
+\- Center $I(a; b; c)$;
+\- Radius $R = \sqrt{a^2 + b^2 + c^2 - d}$.
+
+**Example 3:** Prove that the equation $x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$ represents a sphere. Find its center and radius.
+
+Solution to Example 3:
+• Completing the square for each variable:
+  $$(x^2 - 2x + 1) + (y^2 + 4y + 4) + (z^2 - 6z + 9) = 2 + 1 + 4 + 9$$
+  $$\iff (x - 1)^2 + (y + 2)^2 + (z - 3)^2 = 16 = 4^2.$$
+• Therefore, the given equation represents a sphere $(S)$ with center $I(1; -2; 3)$ and radius $R = 4$.
+
+**Practice 3:** Show that the equation $x^2 + y^2 + z^2 - 4x + 6y - 12 = 0$ represents a sphere and determine its center and radius.
+
+Solution to Practice 3:
+• The coefficients are: $a = 2, b = -3, c = 0, d = -12$.
+• Checking the condition: $a^2 + b^2 + c^2 - d = 2^2 + (-3)^2 + 0^2 - (-12) = 4 + 9 + 12 = 25 > 0$.
+• Hence, this is the equation of a sphere $(S)$ with center $I(2; -3; 0)$ and radius $R = \sqrt{25} = 5$.
+
+**Example 4:** Which of the following equations represents a sphere? Determine its center and radius if applicable:
+a) $x^2 + y^2 + z^2 - 2x + 3y - 8z + 100 = 0$;
+b) $x^2 + y^2 + z^2 - 4x + 5y - 2z - \frac{3}{4} = 0$;
+c) $x^2 + y^2 + z^2 - 2xy + 6y - 9z + 10 = 0$.
+
+Solution to Example 4:
+• a) Here $a = 1, b = -\frac{3}{2}, c = 4, d = 100$.
+  Evaluating $a^2 + b^2 + c^2 - d = 1^2 + \left(-\frac{3}{2}\right)^2 + 4^2 - 100 = 1 + \frac{9}{4} + 16 - 100 = -\frac{323}{4} < 0$.
+  Thus, this equation does not represent a sphere.
+• b) Here $a = 2, b = -\frac{5}{2}, c = 1, d = -\frac{3}{4}$.
+  Evaluating $a^2 + b^2 + c^2 - d = 2^2 + \left(-\frac{5}{2}\right)^2 + 1^2 - \left(-\frac{3}{4}\right) = 4 + \frac{25}{4} + 1 + \frac{3}{4} = 12 > 0$.
+  Thus, the equation represents a sphere with center $I\left(2; -\frac{5}{2}; 1\right)$ and radius $R = \sqrt{12} = 2\sqrt{3}$.
+• c) The equation contains the cross-product term $-2xy$, so it cannot represent a sphere.
+
+**Practice 4:** Determine the center and radius of the sphere $(S): x^2 + y^2 + z^2 + 4x - 5y + 6z + \frac{25}{4} = 0$.
+
+Solution to Practice 4:
+• The coefficients are: $a = -2, b = \frac{5}{2}, c = -3, d = \frac{25}{4}$.
+• We have: $a^2 + b^2 + c^2 - d = (-2)^2 + \left(\frac{5}{2}\right)^2 + (-3)^2 - \frac{25}{4} = 4 + \frac{25}{4} + 9 - \frac{25}{4} = 13 > 0$.
+• Hence, the sphere $(S)$ has center $I\left(-2; \frac{5}{2}; -3\right)$ and radius $R = \sqrt{13}$.
+
+## Practical Applications of the Sphere Equation
+
+### a) Coordinate Model on Earth's Surface
+
+In geodesy and mathematical modeling, Earth is approximated by a sphere of mean radius $R_0 = 6\\,371\text{ km}$.
+• Set up a Cartesian coordinate system $Oxyz$ where the origin $O$ is the Earth's center, the $Oz$-axis points toward the North Pole, the $Ox$-axis passes through the intersection of the Prime Meridian (Greenwich) and the Equator, and the $Oy$-axis intersects the Equator in the Eastern Hemisphere.
+• Normalizing 1 unit of length to equal $6\\,371\text{ km}$, Earth's surface corresponds to the unit sphere:
+$$x^2 + y^2 + z^2 = 1$$
+• Cartesian coordinates from latitude and longitude:
+  - A point $P$ at latitude $\alpha^\circ\text{N}$ and longitude $\beta^\circ\text{E}$ ($0 < \alpha < 90, 0 < \beta < 180$) has coordinates:
+    $$P(\cos\alpha^\circ \cos\beta^\circ; \cos\alpha^\circ \sin\beta^\circ; \sin\alpha^\circ)$$
+  - A point $Q$ at latitude $\alpha^\circ\text{N}$ and longitude $\beta^\circ\text{W}$ ($0 < \alpha < 90, 0 < \beta < 180$) has coordinates:
+    $$Q(\cos\alpha^\circ \cos\beta^\circ; -\cos\alpha^\circ \sin\beta^\circ; \sin\alpha^\circ)$$
+
+### b) Great-Circle Geodesic Distance Calculation
+
+**Example 5 (Distance on Earth's Surface - Introductory Problem):** Calculate the shortest geodesic distance on Earth's surface between $P(10^\circ\text{N}, 15^\circ\text{E})$ and $Q(80^\circ\text{N}, 70^\circ\text{E})$.
+
+Solution to Example 5:
+• The coordinates of $P$ and $Q$ on the unit sphere $x^2 + y^2 + z^2 = 1$ are:
+  $$P(\cos 10^\circ \cos 15^\circ; \cos 10^\circ \sin 15^\circ; \sin 10^\circ), \quad Q(\cos 80^\circ \cos 70^\circ; \cos 80^\circ \sin 70^\circ; \sin 80^\circ).$$
+• Computing the dot product $\vec{OP} \cdot \vec{OQ}$:
+  $$\vec{OP} \cdot \vec{OQ} = \cos 10^\circ \cos 15^\circ \cos 80^\circ \cos 70^\circ + \cos 10^\circ \sin 15^\circ \cos 80^\circ \sin 70^\circ + \sin 10^\circ \sin 80^\circ \approx 0.2691.$$
+• Since $|\vec{OP}| = |\vec{OQ}| = 1$, the central angle $\widehat{POQ}$ satisfies:
+  $$\cos \widehat{POQ} = \vec{OP} \cdot \vec{OQ} \approx 0.2691 \implies \widehat{POQ} \approx 74.3893^\circ.$$
+• The length of the minor great-circle arc $PQ$ (circumference $2\pi \approx 6.2832$) is:
+  $$L = \frac{74.3893^\circ}{360^\circ} \cdot 2\pi \approx 1.2983\text{ (units)}.$$
+• The actual surface distance on Earth is:
+  $$d = 1.2983 \cdot 6\\,371 \approx 8\\,271.47\text{ (km)}.$$
+• This closely matches the measured distance of $8\\,271.74\text{ km}$ on Google Maps.
+
+**Practice 5:** Compute the surface distance on Earth from location $A$ at the intersection of the Prime Meridian and Equator ($0^\circ\text{N}, 0^\circ\text{E}$) to location $B(45^\circ\text{N}, 30^\circ\text{E})$.
+
+Solution to Practice 5:
+• Point $A$ has coordinates $A(\cos 0^\circ \cos 0^\circ; \cos 0^\circ \sin 0^\circ; \sin 0^\circ) = A(1; 0; 0)$.
+• Point $B$ has coordinates $B(\cos 45^\circ \cos 30^\circ; \cos 45^\circ \sin 30^\circ; \sin 45^\circ) = B\left(\frac{\sqrt{6}}{4}; \frac{\sqrt{2}}{4}; \frac{\sqrt{2}}{2}\right)$.
+• Dot product: $\vec{OA} \cdot \vec{OB} = 1 \cdot \frac{\sqrt{6}}{4} + 0 + 0 = \frac{\sqrt{6}}{4} \approx 0.6124$.
+• Central angle $\widehat{AOB}$:
+  $$\cos \widehat{AOB} = \frac{\sqrt{6}}{4} \implies \widehat{AOB} = \arccos\left(\frac{\sqrt{6}}{4}\right) \approx 52.2388^\circ \approx 0.9117\text{ (rad)}.$$
+• The distance on Earth's surface is:
+  $$d = 0.9117 \cdot 6\\,371 \approx 5\\,808.4\text{ (km)}.$$
+
+## End-of-Lesson Exercises
+
+**Exercise 5.25:** In space $Oxyz$, given the sphere $(S)$ with equation $\left(x - \frac{1}{2}
+ight)^2 + (y + 1)^2 + z^2 = 9$. Find the center and radius of $(S)$.
+
+Solution to Exercise 5.25:
+• Rewriting the equation: $\left(x - \frac{1}{2}
+ight)^2 + [y - (-1)]^2 + (z - 0)^2 = 3^2$.
+• The center of the sphere is $I\left(\frac{1}{2}; -1; 0
+ight)$.
+• The radius of the sphere is $R = 3$.
+
+**Exercise 5.26:** Write the equation of the sphere $(S)$ with center $I(-2; 0; 5)$ and radius $R = 2$.
+
+Solution to Exercise 5.26:
+• The equation of the sphere $(S)$ is:
+  $$[x - (-2)]^2 + (y - 0)^2 + (z - 5)^2 = 2^2 \iff (x + 2)^2 + y^2 + (z - 5)^2 = 4.$$
+
+**Exercise 5.27:** Write the equation of the sphere $(S)$ with center $I(0; 3; -1)$ whose radius equals the distance from $I$ to the plane $(P): 3x + 2y - z = 0$.
+
+Solution to Exercise 5.27:
+• Computing the radius $R$ as the distance from $I$ to plane $(P)$:
+  $$R = d(I, (P)) = \frac{|3(0) + 2(3) - 1(-1)|}{\sqrt{3^2 + 2^2 + (-1)^2}} = \frac{|6 + 1|}{\sqrt{9 + 4 + 1}} = \frac{7}{\sqrt{14}} = \frac{\sqrt{14}}{2}.$$
+• Squared radius: $R^2 = \left(\frac{\sqrt{14}}{2}\right)^2 = \frac{14}{4} = \frac{7}{2}$.
+• The equation of sphere $(S)$ is:
+  $$(x - 0)^2 + (y - 3)^2 + [z - (-1)]^2 = \frac{7}{2} \iff x^2 + (y - 3)^2 + (z + 1)^2 = \frac{7}{2}.$$
+
+**Exercise 5.28:** Find the center and radius of the sphere $(S): x^2 + y^2 + z^2 + 2x - 2y + 8z - 18 = 0$.
+
+Solution to Exercise 5.28:
+• Dividing linear coefficients by $-2$: $a = -1, b = 1, c = -4, d = -18$.
+• Computing the discriminant: $a^2 + b^2 + c^2 - d = (-1)^2 + 1^2 + (-4)^2 - (-18) = 1 + 1 + 16 + 18 = 36 > 0$.
+• Hence, the sphere $(S)$ has center $I(-1; 1; -4)$ and radius $R = \sqrt{36} = 6$.
+
+**Exercise 5.29:** Which of the following equations represents a sphere? Determine its center and radius where applicable:
+a) $x^2 + y^2 + z^2 - 2x - 5z + 30 = 0$;
+b) $x^2 + y^2 + z^2 - 4x + 2y - 2z = 0$;
+c) $x^3 + y^3 + z^3 - 2x + 6y - 9z - 10 = 0$;
+d) $x^2 + y^2 + z^2 + 5 = 0$.
+
+Solution to Exercise 5.29:
+• a) Coefficients: $a = 1, b = 0, c = \frac{5}{2}, d = 30$.
+  $a^2 + b^2 + c^2 - d = 1^2 + 0^2 + \left(\frac{5}{2}\right)^2 - 30 = 1 + \frac{25}{4} - 30 = -\frac{91}{4} < 0 \implies$ Not a sphere equation.
+• b) Coefficients: $a = 2, b = -1, c = 1, d = 0$.
+  $a^2 + b^2 + c^2 - d = 2^2 + (-1)^2 + 1^2 - 0 = 4 + 1 + 1 = 6 > 0$.
+  This is a sphere equation with center $I(2; -1; 1)$ and radius $R = \sqrt{6}$.
+• c) Contains cubic terms $x^3, y^3, z^3 \implies$ Not a sphere equation.
+• d) $x^2 + y^2 + z^2 = -5 < 0 \implies$ No real solution, not a sphere equation.
+
+**Exercise 5.30 (Signal Transmitter Coverage):** A radio transmitter is located at position $A(2; 0; 0)$ in space $Oxyz$. The coverage range of the device has a radius of 1. Does the position $M(2; 1; 1)$ lie within the coverage area of the transmitter?
+
+Solution to Exercise 5.30:
+• The coverage area of the transmitter is the solid sphere centered at $A(2; 0; 0)$ with radius $R = 1$, described by:
+  $$(x - 2)^2 + y^2 + z^2 \le 1.$$
+• The distance from $M(2; 1; 1)$ to the transmitter location $A(2; 0; 0)$ is:
+  $$AM = \sqrt{(2 - 2)^2 + (1 - 0)^2 + (1 - 0)^2} = \sqrt{0 + 1 + 1} = \sqrt{2} \approx 1.414.$$
+• Since $AM = \sqrt{2} > 1 = R$, the point $M$ lies outside the coverage ball.
+• Conclusion: The position $M(2; 1; 1)$ does not lie within the signal coverage area of the transmitter.

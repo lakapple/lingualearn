@@ -1,0 +1,255 @@
+---
+title: 'Bài 17: Phương trình mặt cầu'
+description: Hệ thống lý thuyết bài Phương trình mặt cầu cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Mặt cầu
+  - khối cầu
+  - Tâm và bán kính của mặt cầu
+  - Phương trình chính tắc của mặt cầu
+  - Phương trình tổng quát (dạng khai triển) của mặt cầu
+grade: 12
+order: 17
+updatedDate: 2026-10-29T16:47:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Mặt cầu, khối cầu trong không gian
+
+·       Tâm và bán kính của mặt cầu
+
+·       Phương trình chính tắc của mặt cầu
+
+·       Phương trình tổng quát (dạng khai triển) của mặt cầu
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết định nghĩa và phương trình của mặt cầu trong không gian Oxyz.
+
+·       Xác định tâm và bán kính của mặt cầu khi biết phương trình ở dạng chính tắc hoặc dạng khai triển.
+
+·       Lập phương trình mặt cầu khi biết tâm và bán kính, biết đường kính, hoặc tiếp xúc với một mặt phẳng.
+
+·       Xác định vị trí tương đối của một điểm đối với mặt cầu (nằm trong, nằm trên hoặc nằm ngoài mặt cầu).
+
+·       Vận dụng kiến thức về mặt cầu vào giải quyết các bài toán thực tiễn (tính khoảng cách trắc địa trên bề mặt Trái Đất, xác định vùng phủ sóng của trạm phát sóng, nguyên lí định vị vệ tinh GPS).
+
+## Phương trình mặt cầu
+
+\<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_mat_cau"/>
+
+### a) Định nghĩa và phương trình chính tắc của mặt cầu
+
+• Định nghĩa: Mặt cầu tâm $I$, bán kính $R$ ($R > 0$) là tập hợp tất cả các điểm $M$ trong không gian cách điểm $I$ một khoảng bằng $R$.
+  - Điểm $M$ được gọi là nằm trong mặt cầu nếu $IM < R$.
+  - Điểm $M$ được gọi là nằm ngoài mặt cầu nếu $IM > R$.
+  - Điểm $M$ thuộc mặt cầu nếu $IM = R$.
+• Phương trình mặt cầu: Trong không gian $Oxyz$, mặt cầu $(S)$ có tâm $I(a; b; c)$ và bán kính $R$ có phương trình chính tắc là:
+$$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$
+• Vị trí của điểm $M(x; y; z)$ đối với mặt cầu $(S)$:
+  - $M$ nằm trong mặt cầu $(S) \iff (x - a)^2 + (y - b)^2 + (z - c)^2 < R^2$.
+  - $M$ nằm ngoài mặt cầu $(S) \iff (x - a)^2 + (y - b)^2 + (z - c)^2 > R^2$.
+  - $M$ nằm trên mặt cầu $(S) \iff (x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$.
+
+**Ví dụ 1:** Trong không gian $Oxyz$, cho mặt cầu $(S)$ có phương trình $(x - 1)^2 + (y + 3)^2 + z^2 = 5$.
+a) Xác định tâm và bán kính của $(S)$.
+b) Hỏi gốc toạ độ $O(0; 0; 0)$ nằm trong, nằm ngoài hay thuộc mặt cầu $(S)$?
+
+Lời giải Ví dụ 1:
+• a) Viết lại phương trình $(S)$ dưới dạng:
+  $$(x - 1)^2 + [y - (-3)]^2 + (z - 0)^2 = (\sqrt{5})^2.$$
+  Vậy mặt cầu $(S)$ có tâm $I(1; -3; 0)$ và bán kính $R = \sqrt{5}$.
+• b) Tính khoảng cách từ gốc toạ độ $O$ đến tâm $I$:
+  $$OI^2 = (0 - 1)^2 + (0 + 3)^2 + (0 - 0)^2 = 1 + 9 + 0 = 10.$$
+  Vì $OI^2 = 10 > 5 = R^2$ nên $OI > R$.
+  Do đó, gốc toạ độ $O(0; 0; 0)$ nằm ngoài mặt cầu $(S)$.
+
+**Luyện tập 1:** Trong không gian $Oxyz$, cho mặt cầu $(S)$ có phương trình $(x + 2)^2 + y^2 + \left(z + \frac{1}{2}\right)^2 = \frac{9}{4}$.
+a) Xác định tâm và bán kính của $(S)$.
+b) Hỏi điểm $M(2; 0; 1)$ nằm trong, nằm ngoài hay thuộc mặt cầu $(S)$?
+
+Lời giải Luyện tập 1:
+• a) Viết phương trình dưới dạng $[x - (-2)]^2 + (y - 0)^2 + \left[z - \left(-\frac{1}{2}\right)\right]^2 = \left(\frac{3}{2}\right)^2$.
+  Vậy $(S)$ có tâm $I\left(-2; 0; -\frac{1}{2}\right)$ và bán kính $R = \frac{3}{2}$.
+• b) Tính bình phương khoảng cách từ $M$ đến tâm $I$:
+  $$IM^2 = [2 - (-2)]^2 + (0 - 0)^2 + \left[1 - \left(-\frac{1}{2}\right)\right]^2 = 4^2 + 0^2 + \left(\frac{3}{2}\right)^2 = 16 + \frac{9}{4} = \frac{73}{4}.$$
+  Vì $IM^2 = \frac{73}{4} > \frac{9}{4} = R^2$ nên điểm $M(2; 0; 1)$ nằm ngoài mặt cầu $(S)$.
+
+**Ví dụ 2:** Trong không gian $Oxyz$, viết phương trình mặt cầu $(S)$ trong các trường hợp sau:
+a) Tâm $I\left(\frac{3}{2}; 0; -3\right)$, bán kính $R = \frac{9}{4}$;
+b) Đường kính $AB$, với $A(1; 2; 1)$ và $B(3; 1; 5)$.
+
+Lời giải Ví dụ 2:
+• a) Mặt cầu $(S)$ có tâm $I\left(\frac{3}{2}; 0; -3\right)$ và bán kính $R = \frac{9}{4}$ có phương trình:
+  $$\left(x - \frac{3}{2}\right)^2 + y^2 + (z + 3)^2 = \left(\frac{9}{4}\right)^2 \iff \left(x - \frac{3}{2}\right)^2 + y^2 + (z + 3)^2 = \frac{81}{16}.$$
+• b) Tâm $J$ của mặt cầu là trung điểm của đoạn thẳng $AB$:
+  $$x_J = \frac{1 + 3}{2} = 2, \quad y_J = \frac{2 + 1}{2} = \frac{3}{2}, \quad z_J = \frac{1 + 5}{2} = 3 \implies J\left(2; \frac{3}{2}; 3\right).$$
+  Độ dài đường kính $AB = \sqrt{(3 - 1)^2 + (1 - 2)^2 + (5 - 1)^2} = \sqrt{4 + 1 + 16} = \sqrt{21}$.
+  Bán kính mặt cầu: $R = \frac{AB}{2} = \frac{\sqrt{21}}{2} \implies R^2 = \frac{21}{4}$.
+  Phương trình mặt cầu $(S)$ là: $(x - 2)^2 + \left(y - \frac{3}{2}\right)^2 + (z - 3)^2 = \frac{21}{4}$.
+
+**Luyện tập 2:** Trong không gian $Oxyz$, viết phương trình mặt cầu $(S)$ trong các trường hợp sau:
+a) Tâm là gốc toạ độ $O(0; 0; 0)$, bán kính $R = 1$;
+b) Đường kính $AB$, với $A(1; -1; 2)$ và $B(2; -3; -1)$.
+
+Lời giải Luyện tập 2:
+• a) Mặt cầu tâm $O(0; 0; 0)$, bán kính $R = 1$ có phương trình:
+  $$x^2 + y^2 + z^2 = 1.$$
+• b) Tâm $I$ là trung điểm đoạn $AB$:
+  $$I\left(\frac{1 + 2}{2}; \frac{-1 - 3}{2}; \frac{2 - 1}{2}\right) \implies I\left(\frac{3}{2}; -2; \frac{1}{2}\right).$$
+  Độ dài đoạn $AB = \sqrt{(2 - 1)^2 + (-3 + 1)^2 + (-1 - 2)^2} = \sqrt{1 + 4 + 9} = \sqrt{14}$.
+  Bán kính $R = \frac{\sqrt{14}}{2} \implies R^2 = \frac{14}{4} = \frac{7}{2}$.
+  Phương trình mặt cầu $(S)$ là: $\left(x - \frac{3}{2}\right)^2 + (y + 2)^2 + \left(z - \frac{1}{2}\right)^2 = \frac{7}{2}$.
+
+### b) Phương trình tổng quát (dạng khai triển) của mặt cầu
+
+Khai triển phương trình chính tắc $(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$, ta được phương trình dạng:
+$$x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$$
+trong đó $d = a^2 + b^2 + c^2 - R^2$.
+• Định lí (Điều kiện là phương trình mặt cầu): Phương trình có dạng:
+$$x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$$
+là phương trình của một mặt cầu $(S)$ khi và chỉ khi:
+$$a^2 + b^2 + c^2 - d > 0$$
+Khi đó, mặt cầu $(S)$ có:
+\- Tâm $I(a; b; c)$;
+\- Bán kính $R = \sqrt{a^2 + b^2 + c^2 - d}$.
+
+**Ví dụ 3:** Chứng minh rằng phương trình $x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$ là phương trình của một mặt cầu. Xác định tâm và bán kính của mặt cầu đó.
+
+Lời giải Ví dụ 3:
+• Biến đổi phương trình về dạng tổng các bình phương:
+  $$(x^2 - 2x + 1) + (y^2 + 4y + 4) + (z^2 - 6z + 9) = 2 + 1 + 4 + 9$$
+  $$\iff (x - 1)^2 + (y + 2)^2 + (z - 3)^2 = 16 = 4^2.$$
+• Vậy phương trình đã cho biểu diễn một mặt cầu $(S)$ có tâm $I(1; -2; 3)$ và bán kính $R = 4$.
+
+**Luyện tập 3:** Cho phương trình $x^2 + y^2 + z^2 - 4x + 6y - 12 = 0$. Chứng minh đây là phương trình của một mặt cầu và xác định tâm, bán kính.
+
+Lời giải Luyện tập 3:
+• Phương trình có các hệ số: $a = 2, b = -3, c = 0, d = -12$.
+• Xét biểu thức: $a^2 + b^2 + c^2 - d = 2^2 + (-3)^2 + 0^2 - (-12) = 4 + 9 + 12 = 25 > 0$.
+• Do đó, đây là phương trình của mặt cầu $(S)$ có tâm $I(2; -3; 0)$ và bán kính $R = \sqrt{25} = 5$.
+
+**Ví dụ 4:** Phương trình nào sau đây là phương trình của một mặt cầu? Xác định tâm và bán kính nếu có:
+a) $x^2 + y^2 + z^2 - 2x + 3y - 8z + 100 = 0$;
+b) $x^2 + y^2 + z^2 - 4x + 5y - 2z - \frac{3}{4} = 0$;
+c) $x^2 + y^2 + z^2 - 2xy + 6y - 9z + 10 = 0$.
+
+Lời giải Ví dụ 4:
+• a) Ta có $a = 1, b = -\frac{3}{2}, c = 4, d = 100$.
+  Xét $a^2 + b^2 + c^2 - d = 1^2 + \left(-\frac{3}{2}\right)^2 + 4^2 - 100 = 1 + \frac{9}{4} + 16 - 100 = -\frac{323}{4} < 0$.
+  Vậy đây không phải là phương trình mặt cầu.
+• b) Ta có $a = 2, b = -\frac{5}{2}, c = 1, d = -\frac{3}{4}$.
+  Xét $a^2 + b^2 + c^2 - d = 2^2 + \left(-\frac{5}{2}\right)^2 + 1^2 - \left(-\frac{3}{4}\right) = 4 + \frac{25}{4} + 1 + \frac{3}{4} = 12 > 0$.
+  Vậy phương trình là mặt cầu có tâm $I\left(2; -\frac{5}{2}; 1\right)$ và bán kính $R = \sqrt{12} = 2\sqrt{3}$.
+• c) Xuất hiện số hạng tích chéo $-2xy$ nên phương trình không phải là phương trình mặt cầu.
+
+**Luyện tập 4:** Xác định tâm và bán kính của mặt cầu $(S): x^2 + y^2 + z^2 + 4x - 5y + 6z + \frac{25}{4} = 0$.
+
+Lời giải Luyện tập 4:
+• Các hệ số: $a = -2, b = \frac{5}{2}, c = -3, d = \frac{25}{4}$.
+• Ta có: $a^2 + b^2 + c^2 - d = (-2)^2 + \left(\frac{5}{2}\right)^2 + (-3)^2 - \frac{25}{4} = 4 + \frac{25}{4} + 9 - \frac{25}{4} = 13 > 0$.
+• Vậy mặt cầu $(S)$ có tâm $I\left(-2; \frac{5}{2}; -3\right)$ và bán kính $R = \sqrt{13}$.
+
+## Một số ứng dụng của phương trình mặt cầu trong thực tiễn
+
+### a) Mô hình toạ độ trên bề mặt Trái Đất
+
+Trong khoa học trắc địa và mô hình toán học, Trái Đất được coi là mặt cầu có bán kính trung bình $R_0 = 6\\,371\text{ km}$.
+• Chọn hệ trục toạ độ $Oxyz$ với gốc $O$ là tâm Trái Đất, tia $Oz$ hướng về cực Bắc, tia $Ox$ đi qua giao điểm của kinh tuyến gốc (Greenwich) với xích đạo, tia $Oy$ đi qua điểm xích đạo thuộc bán cầu Đông.
+• Chuẩn hoá 1 đơn vị dài bằng $6\\,371\text{ km}$, khi đó bề mặt Trái Đất có phương trình mặt cầu đơn vị:
+$$x^2 + y^2 + z^2 = 1$$
+• Toạ độ của một vị trí theo vĩ độ và kinh độ:
+  - Vị trí $P$ có vĩ độ $\alpha^\circ\text{N}$ và kinh độ $\beta^\circ\text{E}$ ($0 < \alpha < 90, 0 < \beta < 180$) có toạ độ Descartes là:
+    $$P(\cos\alpha^\circ \cos\beta^\circ; \cos\alpha^\circ \sin\beta^\circ; \sin\alpha^\circ)$$
+  - Vị trí $Q$ có vĩ độ $\alpha^\circ\text{N}$ và kinh độ $\beta^\circ\text{W}$ ($0 < \alpha < 90, 0 < \beta < 180$) có toạ độ Descartes là:
+    $$Q(\cos\alpha^\circ \cos\beta^\circ; -\cos\alpha^\circ \sin\beta^\circ; \sin\alpha^\circ)$$
+
+### b) Tính khoảng cách đường bay ngắn nhất (cung vòng lớn)
+
+**Ví dụ 5 (Khoảng cách trên bề mặt Trái Đất - Tình huống mở đầu):** Tính khoảng cách trên bề mặt Trái Đất giữa vị trí $P(10^\circ\text{N}, 15^\circ\text{E})$ và vị trí $Q(80^\circ\text{N}, 70^\circ\text{E})$.
+
+Lời giải Ví dụ 5:
+• Toạ độ của hai vị trí $P$ và $Q$ trên mặt cầu đơn vị $x^2 + y^2 + z^2 = 1$ là:
+  $$P(\cos 10^\circ \cos 15^\circ; \cos 10^\circ \sin 15^\circ; \sin 10^\circ), \quad Q(\cos 80^\circ \cos 70^\circ; \cos 80^\circ \sin 70^\circ; \sin 80^\circ).$$
+• Tính tích vô hướng $\vec{OP} \cdot \vec{OQ}$:
+  $$\vec{OP} \cdot \vec{OQ} = \cos 10^\circ \cos 15^\circ \cos 80^\circ \cos 70^\circ + \cos 10^\circ \sin 15^\circ \cos 80^\circ \sin 70^\circ + \sin 10^\circ \sin 80^\circ \approx 0{,}2691.$$
+• Do $|\vec{OP}| = |\vec{OQ}| = 1$, góc ở tâm $\widehat{POQ}$ thoả mãn:
+  $$\cos \widehat{POQ} = \vec{OP} \cdot \vec{OQ} \approx 0{,}2691 \implies \widehat{POQ} \approx 74{,}3893^\circ.$$
+• Độ dài cung nhỏ $PQ$ trên đường tròn lớn (chu vi $2\pi \approx 6{,}2832$) là:
+  $$L = \frac{74{,}3893^\circ}{360^\circ} \cdot 2\pi \approx 1{,}2983\text{ (đơn vị dài)}.$$
+• Khoảng cách thực tế trên bề mặt Trái Đất giữa $P$ và $Q$ là:
+  $$d = 1{,}2983 \cdot 6\\,371 \approx 8\\,271{,}47\text{ (km)}.$$
+• Kết quả này khớp với khoảng cách $8\\,271{,}74\text{ km}$ đo được trên phần mềm Google Maps.
+
+**Luyện tập 5:** Tính khoảng cách trên mặt đất từ vị trí $A$ là giao điểm giữa kinh tuyến gốc và xích đạo ($0^\circ\text{N}, 0^\circ\text{E}$) đến vị trí $B(45^\circ\text{N}, 30^\circ\text{E})$.
+
+Lời giải Luyện tập 5:
+• Điểm $A$ có toạ độ $A(\cos 0^\circ \cos 0^\circ; \cos 0^\circ \sin 0^\circ; \sin 0^\circ) = A(1; 0; 0)$.
+• Điểm $B$ có toạ độ $B(\cos 45^\circ \cos 30^\circ; \cos 45^\circ \sin 30^\circ; \sin 45^\circ) = B\left(\frac{\sqrt{6}}{4}; \frac{\sqrt{2}}{4}; \frac{\sqrt{2}}{2}\right)$.
+• Tích vô hướng: $\vec{OA} \cdot \vec{OB} = 1 \cdot \frac{\sqrt{6}}{4} + 0 + 0 = \frac{\sqrt{6}}{4} \approx 0{,}6124$.
+• Góc ở tâm $\widehat{AOB}$:
+  $$\cos \widehat{AOB} = \frac{\sqrt{6}}{4} \implies \widehat{AOB} = \arccos\left(\frac{\sqrt{6}}{4}\right) \approx 52{,}2388^\circ \approx 0{,}9117\text{ (rad)}.$$
+• Khoảng cách trên bề mặt Trái Đất là:
+  $$d = 0{,}9117 \cdot 6\\,371 \approx 5\\,808{,}4\text{ (km)}.$$
+
+## Hệ thống bài tập cuối bài
+
+**Bài 5.25:** Trong không gian $Oxyz$, cho mặt cầu $(S)$ có phương trình $\left(x - \frac{1}{2}\right)^2 + (y + 1)^2 + z^2 = 9$. Xác định tâm và bán kính của $(S)$.
+
+Lời giải Bài 5.25:
+• Viết lại phương trình: $\left(x - \frac{1}{2}\right)^2 + [y - (-1)]^2 + (z - 0)^2 = 3^2$.
+• Tâm của mặt cầu là $I\left(\frac{1}{2}; -1; 0\right)$.
+• Bán kính của mặt cầu là $R = 3$.
+
+**Bài 5.26:** Viết phương trình mặt cầu $(S)$ có tâm $I(-2; 0; 5)$ và bán kính $R = 2$.
+
+Lời giải Bài 5.26:
+• Phương trình mặt cầu $(S)$ là:
+  $$[x - (-2)]^2 + (y - 0)^2 + (z - 5)^2 = 2^2 \iff (x + 2)^2 + y^2 + (z - 5)^2 = 4.$$
+
+**Bài 5.27:** Viết phương trình mặt cầu $(S)$ có tâm $I(0; 3; -1)$ và bán kính bằng khoảng cách từ $I$ đến mặt phẳng $(P): 3x + 2y - z = 0$.
+
+Lời giải Bài 5.27:
+• Tính bán kính $R$ bằng khoảng cách từ $I$ đến mặt phẳng $(P)$:
+  $$R = d(I, (P)) = \frac{|3(0) + 2(3) - 1(-1)|}{\sqrt{3^2 + 2^2 + (-1)^2}} = \frac{|6 + 1|}{\sqrt{9 + 4 + 1}} = \frac{7}{\sqrt{14}} = \frac{\sqrt{14}}{2}.$$
+• Bình phương bán kính: $R^2 = \left(\frac{\sqrt{14}}{2}\right)^2 = \frac{14}{4} = \frac{7}{2}$.
+• Phương trình mặt cầu $(S)$ là:
+  $$(x - 0)^2 + (y - 3)^2 + [z - (-1)]^2 = \frac{7}{2} \iff x^2 + (y - 3)^2 + (z + 1)^2 = \frac{7}{2}.$$
+
+**Bài 5.28:** Xác định tâm và bán kính của mặt cầu $(S): x^2 + y^2 + z^2 + 2x - 2y + 8z - 18 = 0$.
+
+Lời giải Bài 5.28:
+• Chia các hệ số bậc nhất cho $-2$: $a = -1, b = 1, c = -4, d = -18$.
+• Tính biểu thức: $a^2 + b^2 + c^2 - d = (-1)^2 + 1^2 + (-4)^2 - (-18) = 1 + 1 + 16 + 18 = 36 > 0$.
+• Vậy mặt cầu $(S)$ có tâm $I(-1; 1; -4)$ và bán kính $R = \sqrt{36} = 6$.
+
+**Bài 5.29:** Phương trình nào sau đây là phương trình mặt cầu? Xác định tâm và bán kính tương ứng:
+a) $x^2 + y^2 + z^2 - 2x - 5z + 30 = 0$;
+b) $x^2 + y^2 + z^2 - 4x + 2y - 2z = 0$;
+c) $x^3 + y^3 + z^3 - 2x + 6y - 9z - 10 = 0$;
+d) $x^2 + y^2 + z^2 + 5 = 0$.
+
+Lời giải Bài 5.29:
+• a) Hệ số: $a = 1, b = 0, c = \frac{5}{2}, d = 30$.
+  $a^2 + b^2 + c^2 - d = 1^2 + 0^2 + \left(\frac{5}{2}\right)^2 - 30 = 1 + \frac{25}{4} - 30 = -\frac{91}{4} < 0 \implies$ Không phải phương trình mặt cầu.
+• b) Hệ số: $a = 2, b = -1, c = 1, d = 0$.
+  $a^2 + b^2 + c^2 - d = 2^2 + (-1)^2 + 1^2 - 0 = 4 + 1 + 1 = 6 > 0$.
+  Đây là phương trình mặt cầu có tâm $I(2; -1; 1)$ và bán kính $R = \sqrt{6}$.
+• c) Xuất hiện các biến bậc ba $x^3, y^3, z^3 \implies$ Không phải phương trình mặt cầu.
+• d) $x^2 + y^2 + z^2 = -5 < 0 \implies$ Phương trình vô nghiệm, không phải phương trình mặt cầu.
+
+**Bài 5.30 (Vùng phủ sóng của thiết bị phát sóng):** Một thiết bị phát sóng đặt tại vị trí $A(2; 0; 0)$ trong không gian $Oxyz$. Vùng phủ sóng của thiết bị có bán kính bằng 1. Hỏi vị trí $M(2; 1; 1)$ có thuộc vùng phủ sóng của thiết bị nói trên hay không?
+
+Lời giải Bài 5.30:
+• Vùng phủ sóng của thiết bị phát sóng là khối cầu tâm $A(2; 0; 0)$ bán kính $R = 1$, tập hợp các điểm thoả mãn:
+  $$(x - 2)^2 + y^2 + z^2 \le 1.$$
+• Tính khoảng cách từ điểm $M(2; 1; 1)$ đến vị trí đặt thiết bị $A(2; 0; 0)$:
+  $$AM = \sqrt{(2 - 2)^2 + (1 - 0)^2 + (1 - 0)^2} = \sqrt{0 + 1 + 1} = \sqrt{2} \approx 1{,}414.$$
+• Vì $AM = \sqrt{2} > 1 = R$ nên điểm $M$ nằm ngoài khối cầu vùng phủ sóng.
+• Kết luận: Vị trí $M(2; 1; 1)$ không thuộc vùng phủ sóng của thiết bị phát sóng.
