@@ -51,32 +51,8 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 ### a) Concept of Monotonicity and Relationship with the Sign of the Derivative
 
-Definition:
-Let $K$ be an open interval, a closed interval, or a half-open interval, and let $y = f(x)$ be a function defined on $K$.
-• The function $y = f(x)$ is said to be strictly increasing on $K$ if for all $x_1, x_2 \in K$ with $x_1 \lt x_2$, we have:
-$$f(x_1) \lt f(x_2)$$
-• The function $y = f(x)$ is said to be strictly decreasing on $K$ if for all $x_1, x_2 \in K$ with $x_1 \lt x_2$, we have:
-$$f(x_1) \gt f(x_2)$$
-• The graph of an increasing function rises from left to right; the graph of a decreasing function falls from left to right.
-Theorem (Sign of the Derivative and Monotonicity):
-Let the function $y = f(x)$ be differentiable on an open interval $K$.
-• If $f'(x) \gt 0$ for all $x \in K$, then the function $f(x)$ is strictly increasing on $K$.
-• If $f'(x) \lt 0$ for all $x \in K$, then the function $f(x)$ is strictly decreasing on $K$.
-• If $f'(x) \ge 0$ (or $f'(x) \le 0$) for all $x \in K$ and $f'(x) = 0$ holds only at a finite number of points in $K$, then the function $f(x)$ is strictly increasing (or strictly decreasing) on $K$.
-• If $f'(x) = 0$ for all $x \in K$, then the function $f(x)$ is constant on $K$.
-
-### 
-
 ## Extrema of a Function
 
 \<Youtube url="https://www.youtube.com/watch?v=example_cuc_tri_ham_so"/>
 
 ### a) Concept of Local Maxima, Local Minima, and Sufficient Conditions
-
-Theorem (Sufficient Conditions for Local Extrema):
-Suppose the function $y = f(x)$ is continuous on an open interval $(a; b)$ containing $x_0$ and is differentiable on the intervals $(a; x_0)$ and $(x_0; b)$. Then:
-• If $f'(x) \gt 0$ for all $x \in (a; x_0)$ and $f'(x) \lt 0$ for all $x \in (x_0; b)$ (the derivative changes sign from positive to negative as $x$ passes through $x_0$), then the function $f(x)$ attains a local maximum at $x_0$, with local maximum value $f(x_0)$.
-• If $f'(x) \lt 0$ for all $x \in (a; x_0)$ and $f'(x) \gt 0$ for all $x \in (x_0; b)$ (the derivative changes sign from negative to positive as $x$ passes through $x_0$), then the function $f(x)$ attains a local minimum at $x_0$, with local minimum value $f(x_0)$.
-• Local maximum points and local minimum points are collectively called local extreme points. If $f'(x)$ does not change sign as $x$ passes through $x_0$, then $x_0$ is not a local extreme point.
-
-###
