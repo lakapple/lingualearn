@@ -1,9 +1,250 @@
 ---
 title: 'Lesson 7: Coordinate system in Space'
-description: a
-grade: 12
+description: Theoretical system for the lesson on Coordinate system in Space with illustrative examples.
 tags:
   - grade 12
+  - Three-dimensional coordinate system
+  - Origin
+  - coordinate axes
+  - coordinate planes
+  - Coordinates of a point in space (abscissa, ordinate, applicate / x, y, z-coordinates)
+  - Coordinates of a vector in space
+grade: 12
+order: 7
+updatedDate: 2026-09-10
+draft: false
 ---
 
-c
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Three-dimensional coordinate system (Cartesian coordinate system Oxyz in space)
+
+·       Origin, coordinate axes, coordinate planes
+
+·       Coordinates of a point in space (abscissa, ordinate, applicate / x, y, z-coordinates)
+
+·       Coordinates of a vector in space
+
+### **Knowledge and Skills:**
+
+·       Recognize the Cartesian rectangular coordinate system Oxyz in space.
+
+·       Determine the coordinates of a point and of a vector relative to the coordinate system Oxyz.
+
+·       Express the coordinates of a vector in terms of the coordinates of its endpoints.
+
+·       Determine the coordinates of the orthogonal projections of a point onto the coordinate axes and coordinate planes.
+
+·       Apply coordinates of points and vectors to solve practical real-world problems (locating an object in a room, air traffic flight tracking models, motion along a runway).
+
+## Coordinate System in Space
+
+\<Youtube url="https://www.youtube.com/watch?v=example_he_truc_toa_do_khong_gian"/>
+
+### a) Definition of the Coordinate System Oxyz
+
+In space, consider three axes $Ox, Oy, Oz$ that are pairwise perpendicular at the common origin $O$ of each axis.
+Let $\vec{i}, \vec{j}, \vec{k}$ denote the unit vectors on the axes $Ox, Oy, Oz$, respectively (with $|\vec{i}| = |\vec{j}| = |\vec{k}| = 1$).
+• Such a system of three axes is called the Cartesian rectangular coordinate system $Oxyz$, or simply the coordinate system $Oxyz$.
+• The point $O$ is called the origin of coordinates.
+• The axes $Ox, Oy, Oz$ are called the x-axis (axis of abscissas), y-axis (axis of ordinates), and z-axis (axis of applicates), respectively.
+• The planes $(Oxy), (Oyz), (Ozx)$, which are pairwise perpendicular, are called the coordinate planes.
+• Space endowed with the coordinate system $Oxyz$ is called $Oxyz$ space (or Cartesian space).
+
+### b) Examples and Practice on the Coordinate System
+
+**Example 1:** Let $ABCD.A'B'C'D'$ be a cube with edge length 1. Can we set up a coordinate system $Oxyz$ with origin $O$ coinciding with vertex $B'$ and unit vectors $\vec{i}, \vec{j}, \vec{k}$ chosen as the vectors $\vec{B'A'}, \vec{B'C'}, \vec{B'B}$, respectively? Explain why.
+
+Solution to Example 1:
+• In the cube $ABCD.A'B'C'D'$, the three edges $B'A', B'C'$, and $B'B$ emanating from vertex $B'$ are pairwise perpendicular.
+• Because the cube has edge length 1, the vectors $\vec{B'A'}, \vec{B'C'}, \vec{B'B}$ share the common initial point $B'$ and all have length 1:
+  $$|\vec{B'A'}| = |\vec{B'C'}| = |\vec{B'B}| = 1.$$
+• Therefore, we can set up a coordinate system $Oxyz$ with origin $O$ at vertex $B'$ and unit vectors $\vec{i}, \vec{j}, \vec{k}$ equal to $\vec{B'A'}, \vec{B'C'}, \vec{B'B}$, respectively.
+
+**Practice 1:** Given a rectangular box $ABCD.A'B'C'D'$. Can we set up a coordinate system $Oxyz$ with origin $O$ at vertex $C$ and unit vectors $\vec{i}, \vec{j}, \vec{k}$ pointing in the same directions as the vectors $\vec{CB}, \vec{CD}, \vec{CC'}$, respectively? Explain why.
+
+Solution to Practice 1:
+• In the rectangular box $ABCD.A'B'C'D'$, the three line segments $CB, CD, CC'$ are pairwise perpendicular at vertex $C$.
+• Consequently, the three lines containing these segments are pairwise perpendicular at $C$.
+• Along the rays $CB, CD, CC'$, we can uniquely choose unit vectors $\vec{i}, \vec{j}, \vec{k}$ of length 1 pointing in the directions of $\vec{CB}, \vec{CD}, \vec{CC'}$, respectively.
+• Hence, we can establish a valid coordinate system $Oxyz$ with origin $O$ at vertex $C$.
+
+## Coordinates of a Point and Coordinates of a Vector in Space
+
+### a) Coordinates of a Point
+
+In space $Oxyz$, let $M$ be an arbitrary point.
+The unique ordered triple of real numbers $(x; y; z)$ such that:
+$$\vec{OM} = x\vec{i} + y\vec{j} + z\vec{k}$$
+is called the coordinates of the point $M$ relative to the coordinate system $Oxyz$. Denoted by $M = (x; y; z)$ or $M(x; y; z)$.
+• $x$ is called the abscissa (or x-coordinate) of $M$;
+• $y$ is called the ordinate (or y-coordinate) of $M$;
+• $z$ is called the applicate (or z-coordinate / height) of $M$.
+In particular: The origin $O$ has coordinates $O(0; 0; 0)$ since $\vec{OO} = 0\vec{i} + 0\vec{j} + 0\vec{k} = \vec{0}$.
+Remarks on orthogonal projections of $M(x; y; z)$:
+\- The orthogonal projections of $M$ onto the coordinate axes $Ox, Oy, Oz$ are $(x; 0; 0), (0; y; 0), (0; 0; z)$, respectively.
+\- The orthogonal projections of $M$ onto the coordinate planes $(Oxy), (Oyz), (Ozx)$ are $(x; y; 0), (0; y; z), (x; 0; z)$, respectively.
+
+**Example 3:** In space $Oxyz$, given a rectangular box $ABCD.A'B'C'D'$ with vertex $A'$ coinciding with the origin $O$, and vertices $D', B', A$ lying on the rays $Ox, Oy, Oz$, respectively. Suppose vertex $C$ has coordinates $(2; 3; 5)$. Find the coordinates of vertices $D', B', A$.
+
+Solution to Example 3:
+• Since $D' \in Ox, B' \in Oy, A \in Oz$, there exist positive real numbers $m, n, p$ such that $\vec{OD'} = m\vec{i}, \vec{OB'} = n\vec{j}, \vec{OA} = p\vec{k}$.
+• By the parallelepiped addition rule: $\vec{OC} = \vec{OD'} + \vec{OB'} + \vec{OA} = m\vec{i} + n\vec{j} + p\vec{k}$.
+• Since $C(2; 3; 5) \implies \vec{OC} = 2\vec{i} + 3\vec{j} + 5\vec{k}$, we identify $m = 2, n = 3, p = 5$.
+• Thus, the coordinates of the vertices are: $D'(2; 0; 0)$, $B'(0; 3; 0)$, and $A(0; 0; 5)$.
+
+**Practice 3:** In Example 3, determine the coordinates of points $B, D$, and $C'$.
+
+Solution to Practice 3:
+• Point $B$: The projection of $B$ onto the coordinate plane $(Oyz)$ is $B$ itself, and $\vec{OB} = \vec{OB'} + \vec{OA} = 3\vec{j} + 5\vec{k} \implies B(0; 3; 5)$.
+• Point $D$: $\vec{OD} = \vec{OD'} + \vec{OA} = 2\vec{i} + 5\vec{k} \implies D(2; 0; 5)$.
+• Point $C'$: The projection of $C$ onto the base plane $(Ox'y') \equiv (Oxy)$ is $C'$, giving $\vec{OC'} = \vec{OD'} + \vec{OB'} = 2\vec{i} + 3\vec{j} \implies C'(2; 3; 0)$.
+
+### b) Coordinates of a Vector
+
+In space $Oxyz$, let $\vec{a}$ be an arbitrary vector. The unique ordered triple of real numbers $(x; y; z)$ such that:
+$$\vec{a} = x\vec{i} + y\vec{j} + z\vec{k}$$
+is called the coordinates of the vector $\vec{a}$ relative to the coordinate system $Oxyz$. Denoted by $\vec{a} = (x; y; z)$ or $\vec{a}(x; y; z)$.
+Remarks:
+• The coordinates of vector $\vec{a}$ are precisely the coordinates of the point $M$ satisfying $\vec{OM} = \vec{a}$.
+• Two vectors are equal if and only if their corresponding coordinates are equal:
+  $$\vec{a}(x; y; z) = \vec{b}(x'; y'; z') \iff \begin{cases} x = x' \\\ y = y' \\\ z = z' \end{cases}$$
+• Coordinates of the unit coordinate vectors and the zero vector:
+  $$\vec{i} = (1; 0; 0), \quad \vec{j} = (0; 1; 0), \quad \vec{k} = (0; 0; 1), \quad \vec{0} = (0; 0; 0).$$
+
+**Practice 4:** In space $Oxyz$, determine the coordinates of the vector $\vec{u} = \vec{i} + 2\vec{j} + 5\vec{k}$.
+
+Solution to Practice 4:
+• Since $\vec{u} = 1\cdot\vec{i} + 2\cdot\vec{j} + 5\cdot\vec{k}$, the coordinates of vector $\vec{u}$ are $\vec{u} = (1; 2; 5)$.
+
+### c) Coordinates of a Vector from Endpoint Coordinates
+
+Theorem: In space $Oxyz$, given two points $M(x_M; y_M; z_M)$ and $N(x_N; y_N; z_N)$. Then:
+$$\vec{MN} = (x_N - x_M; y_N - y_M; z_N - z_M)$$
+Proof:
+We have $\vec{OM} = x_M\vec{i} + y_M\vec{j} + z_M\vec{k}$ and $\vec{ON} = x_N\vec{i} + y_N\vec{j} + z_N\vec{k}$.
+By the vector subtraction rule:
+$$\vec{MN} = \vec{ON} - \vec{OM} = (x_N - x_M)\vec{i} + (y_N - y_M)\vec{j} + (z_N - z_M)\vec{k}.$$
+Thus, the coordinates of $\vec{MN}$ are $(x_N - x_M; y_N - y_M; z_N - z_M)$.
+
+**Example 5:** In space $Oxyz$, given a triangular prism $ABC.A'B'C'$ with $A(1; 0; 2), B(3; 2; 5), C(7; -3; 9)$, and $A'(5; 0; 1)$.
+a) Find the coordinates of $\vec{AA'}$.
+b) Find the coordinates of vertices $B'$ and $C'$.
+
+Solution to Example 5:
+• a) The coordinates of vector $\vec{AA'}$ are:
+  $$\vec{AA'} = (x\_{A'} - x_A; y\_{A'} - y_A; z\_{A'} - z_A) = (5 - 1; 0 - 0; 1 - 2) = (4; 0; -1).$$
+• b) Let $B'(x; y; z)$, then $\vec{BB'} = (x - 3; y - 2; z - 5)$.
+  Since $ABB'A'$ is a parallelogram, $\vec{BB'} = \vec{AA'} = (4; 0; -1)$.
+  Hence:
+  $$\begin{cases} x - 3 = 4 \\\ y - 2 = 0 \\\ z - 5 = -1 \end{cases} \iff \begin{cases} x = 7 \\\ y = 2 \\\ z = 4 \end{cases} \implies B'(7; 2; 4).$$
+• Similarly, let $C'(x'; y'; z')$. Since $ACC'A'$ is a parallelogram, $\vec{CC'} = \vec{AA'} = (4; 0; -1)$.
+  We have $\vec{CC'} = (x' - 7; y' - (-3); z' - 9) = (x' - 7; y' + 3; z' - 9)$.
+  Hence:
+  $$\begin{cases} x' - 7 = 4 \\\ y' + 3 = 0 \\\ z' - 9 = -1 \end{cases} \iff \begin{cases} x' = 11 \\\ y' = -3 \\\ z' = 8 \end{cases} \implies C'(11; -3; 8).$$
+
+**Practice 5:** In Example 5, determine the coordinates of points $D$ and $D'$ such that $ABCD.A'B'C'D'$ forms a parallelepiped.
+
+Solution to Practice 5:
+• The base $ABCD$ is a parallelogram, so $\vec{AD} = \vec{BC}$.
+  We have $\vec{BC} = (7 - 3; -3 - 2; 9 - 5) = (4; -5; 4)$.
+  Let $D(x_D; y_D; z_D)$, then $\vec{AD} = (x_D - 1; y_D - 0; z_D - 2)$.
+  Thus: $\begin{cases} x_D - 1 = 4 \\\ y_D = -5 \\\ z_D - 2 = 4 \end{cases} \iff \begin{cases} x_D = 5 \\\ y_D = -5 \\\ z_D = 6 \end{cases} \implies D(5; -5; 6)$.
+• Since $ABCD.A'B'C'D'$ is a parallelepiped, $\vec{DD'} = \vec{AA'} = (4; 0; -1)$.
+  Let $D'(x\_{D'}; y\_{D'}; z\_{D'})$, then $\vec{DD'} = (x\_{D'} - 5; y\_{D'} + 5; z\_{D'} - 6)$.
+  Thus: $\begin{cases} x\_{D'} - 5 = 4 \\\ y\_{D'} + 5 = 0 \\\ z\_{D'} - 6 = -1 \end{cases} \iff \begin{cases} x\_{D'} = 9 \\\ y\_{D'} = -5 \\\ z\_{D'} = 5 \end{cases} \implies D'(9; -5; 5)$.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 1 (Locating a Light Bulb in a Room):** A light bulb is suspended 2 m above the floor, and at distances of 1 m and 1.5 m from two mutually perpendicular walls. Choose an appropriate coordinate system and determine the coordinates of the light bulb.
+
+Solution to Application 1:
+• Choose a Cartesian coordinate system $Oxyz$ where the origin $O$ is the intersection of the two perpendicular wall bases with the floor:
+  - The $Ox$-axis lies along the intersection line of the first wall with the floor;
+  - The $Oy$-axis lies along the intersection line of the second wall with the floor;
+  - The $Oz$-axis lies along the vertical corner line pointing toward the ceiling.
+• According to the problem, the bulb is at a distance of $y = 1.5\text{ m}$ from the first wall (plane $(Oxz)$), a distance of $x = 1\text{ m}$ from the second wall (plane $(Oyz)$), and at a vertical height $z = 2\text{ m}$ above the floor (plane $(Oxy)$).
+• Therefore, the coordinates of the light bulb are $M(1; 1.5; 2)$ (or $M(1.5; 1; 2)$ depending on the assignment of the two walls to axes $Ox$ and $Oy$).
+
+**Application 2 (Tracking Aircraft Motion):** A coordinate system $Oxyz$ has its origin $O$ at an air traffic control center, with the plane $(Oxy)$ representing the horizontal ground (the $Ox$-axis pointing west, $Oy$-axis pointing south, and $Oz$-axis pointing vertically upward, with units in kilometers). After reaching a stable cruising altitude, an aircraft flies south at a constant speed of $890\text{ km/h}$ for half an hour. Determine the displacement vector of the aircraft during this half hour.
+
+Solution to Application 2:
+• Over a duration of $t = 0.5\text{ hours}$, the aircraft flies uniformly south at $v = 890\text{ km/h}$.
+• The distance traveled by the aircraft is:
+  $$s = v \cdot t = 890 \cdot 0.5 = 445\text{ (km).}$$
+• Since the aircraft maintains a constant altitude and heads due south (the positive direction of the $Oy$-axis), the displacement along the $Ox$-axis is $0\text{ km}$, along the $Oy$-axis is $+445\text{ km}$, and along the $Oz$-axis is $0\text{ km}$.
+• Thus, the vector representing the aircraft's displacement is $\vec{d} = (0; 445; 0)$.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 2.13:** In space $Oxyz$, given three non-zero vectors $\vec{a}, \vec{b}, \vec{c}$ whose lines of action are pairwise perpendicular. Which of the following propositions are true?
+a) One can set up a coordinate system $Oxyz$ whose coordinate axes are parallel to the lines of action of $\vec{a}, \vec{b}, \vec{c}$, respectively.
+b) One can set up a coordinate system $Oxyz$ whose coordinate axes coincide with the lines of action of $\vec{a}, \vec{b}, \vec{c}$, respectively.
+c) One can set up a coordinate system $Oxyz$ whose unit vectors $\vec{i}, \vec{j}, \vec{k}$ equal the vectors $\vec{a}, \vec{b}, \vec{c}$, respectively.
+d) One can set up a coordinate system $Oxyz$ whose unit vectors $\vec{i}, \vec{j}, \vec{k}$ are collinear (parallel) to the vectors $\vec{a}, \vec{b}, \vec{c}$, respectively.
+
+Solution to Exercise 2.13:
+• Proposition a) is TRUE, because we can choose any arbitrary point $O$ as the origin and construct three axes through $O$ parallel to the lines of action of $\vec{a}, \vec{b}, \vec{c}$.
+• Proposition b) is FALSE, because the lines of action of the three vectors may be skew and might not intersect at a common point to serve as the origin $O$.
+• Proposition c) is FALSE, because the unit vectors $\vec{i}, \vec{j}, \vec{k}$ must have unit length ($|\vec{i}| = |\vec{j}| = |\vec{k}| = 1$), whereas the lengths of $\vec{a}, \vec{b}, \vec{c}$ are arbitrary.
+• Proposition d) is TRUE, because we can normalize the vectors by choosing $\vec{i} = \frac{\vec{a}}{|\vec{a}|}, \vec{j} = \frac{\vec{b}}{|\vec{b}|}, \vec{k} = \frac{\vec{c}}{|\vec{c}|}$, which are unit vectors collinear with $\vec{a}, \vec{b}, \vec{c}$.
+
+**Exercise 2.15:** In space $Oxyz$, determine the coordinates of the vector $\vec{AB}$ in each of the following cases:
+a) $A(0; 0; 0)$ and $B(4; 2; -5)$;
+b) $A(1; -3; 7)$ and $B(1; -3; 7)$;
+c) $A(5; 4; 9)$ and $B(-5; 7; 2)$.
+
+Solution to Exercise 2.15:
+• a) $\vec{AB} = (4 - 0; 2 - 0; -5 - 0) = (4; 2; -5)$.
+• b) $\vec{AB} = (1 - 1; -3 - (-3); 7 - 7) = (0; 0; 0) = \vec{0}$.
+• c) $\vec{AB} = (-5 - 5; 7 - 4; 2 - 9) = (-10; 3; -7)$.
+
+**Exercise 2.16:** In space $Oxyz$, determine the coordinates of point $A$ in each of the following cases:
+a) $A$ coincides with the origin;
+b) $A$ lies on the ray $Ox$ and $OA = 2$;
+c) $A$ lies on the opposite ray of $Oy$ and $OA = 3$.
+
+Solution to Exercise 2.16:
+• a) $A$ coincides with the origin $\implies A(0; 0; 0)$.
+• b) $A$ lies on ray $Ox$ and $OA = 2 \implies \vec{OA} = 2\vec{i} \implies A(2; 0; 0)$.
+• c) $A$ lies on the opposite ray of $Oy$ and $OA = 3 \implies \vec{OA} = -3\vec{j} \implies A(0; -3; 0)$.
+
+**Exercise 2.17:** In space $Oxyz$, given a rectangular box $ABCD.A'B'C'D'$ with vertex $A$ coinciding with the origin $O(0; 0; 0)$, and vertices $D, B, A'$ having coordinates $D(2; 0; 0), B(0; 4; 0), A'(0; 0; 3)$. Determine the coordinates of the remaining vertices of the rectangular box.
+
+Solution to Exercise 2.17:
+• Lower base $ABCD$ lies on the coordinate plane $(Oxy)$:
+  - $C$ is the fourth vertex of rectangle $ABCD \implies \vec{AC} = \vec{AD} + \vec{AB} = 2\vec{i} + 4\vec{j} \implies C(2; 4; 0)$.
+• Upper base $A'B'C'D'$ is obtained by translation along $\vec{AA'} = (0; 0; 3)$:
+  - $D'(x_D; y_D; z_D + 3) = D'(2; 0; 3)$.
+  - $B'(x_B; y_B; z_B + 3) = B'(0; 4; 3)$.
+  - $C'(x_C; y_C; z_C + 3) = C'(2; 4; 3)$.
+
+**Exercise 2.18:** In space $Oxyz$, given a parallelepiped $OABC.O'A'B'C'$ with $A(1; 1; -1), B(0; 3; 0), C'(2; -3; 6)$.
+a) Determine the coordinates of vertex $C$.
+b) Determine the coordinates of the remaining vertices of the parallelepiped.
+
+Solution to Exercise 2.18:
+• a) Since $OABC$ is a parallelogram, $\vec{OB} = \vec{OA} + \vec{OC} \implies \vec{OC} = \vec{OB} - \vec{OA}$.
+  With $\vec{OB} = (0; 3; 0)$ and $\vec{OA} = (1; 1; -1)$, we have:
+  $$\vec{OC} = (0 - 1; 3 - 1; 0 - (-1)) = (-1; 2; 1) \implies C(-1; 2; 1).$$
+• b) Determining the remaining vertices:
+  - Lateral edge vector $\vec{CC'} = (2 - (-1); -3 - 2; 6 - 1) = (3; -5; 5)$.
+  - Since $OABC.O'A'B'C'$ is a parallelepiped, $\vec{OO'} = \vec{AA'} = \vec{BB'} = \vec{CC'} = (3; -5; 5)$.
+  - Origin $O(0; 0; 0) \implies O'(3; -5; 5)$.
+  - $A'(x_A + 3; y_A - 5; z_A + 5) = (1 + 3; 1 - 5; -1 + 5) = A'(4; -4; 4)$.
+  - $B'(x_B + 3; y_B - 5; z_B + 5) = (0 + 3; 3 - 5; 0 + 5) = B'(3; -2; 5)$.
+
+**Exercise 2.19:** In Application 2, explain why at each moment the aircraft moves along the runway, its coordinates always have the form $(x; y; 0)$ for some real numbers $x, y$.
+
+Solution to Exercise 2.19:
+• In the coordinate system $Oxyz$ established in Application 2, the coordinate plane $(Oxy)$ represents the flat ground containing the airport runway.
+• The $Oz$-axis is perpendicular to the ground and indicates altitude (vertical elevation above ground level).
+• While the aircraft is taxiing or moving along the runway, it remains in direct contact with the ground, lying entirely within the plane $(Oxy)$.
+• Any point lying in the coordinate plane $(Oxy)$ has its z-coordinate (applicate) equal to zero ($z = 0$).
+• Therefore, at every instant the aircraft moves along the runway, its coordinates necessarily have the form $(x; y; 0)$.

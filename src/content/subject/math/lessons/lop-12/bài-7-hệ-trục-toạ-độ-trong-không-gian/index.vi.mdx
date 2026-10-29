@@ -1,12 +1,250 @@
 ---
 title: 'Bài 7: Hệ trục toạ độ trong không gian'
-description: a
+description: Hệ thống lý thuyết bài Hệ trục toạ độ trong không gian cùng ví dụ minh họa.
 tags:
   - lớp 12
+  - Hệ trục toạ độ trong không gian
+  - Gốc toạ độ
+  - các trục toạ độ
+  - các mặt phẳng toạ độ
+  - Toạ độ của điểm trong không gian
+  - Toạ độ của vectơ trong không gian
 grade: 12
-order: 0
+order: 7
 updatedDate: 2026-09-10
 draft: false
 ---
 
-b
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hệ trục toạ độ trong không gian (Hệ toạ độ Descartes Oxyz)
+
+·       Gốc toạ độ, các trục toạ độ, các mặt phẳng toạ độ
+
+·       Toạ độ của điểm trong không gian (hoành độ, tung độ, cao độ)
+
+·       Toạ độ của vectơ trong không gian
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết hệ trục toạ độ Descartes vuông góc Oxyz trong không gian.
+
+·       Xác định toạ độ của điểm và toạ độ của vectơ đối với hệ trục toạ độ Oxyz.
+
+·       Biểu diễn toạ độ của vectơ thông qua toạ độ của hai điểm đầu mút.
+
+·       Xác định toạ độ hình chiếu vuông góc của một điểm lên các trục toạ độ và các mặt phẳng toạ độ.
+
+·       Vận dụng toạ độ của điểm và vectơ để giải quyết một số bài toán liên quan đến thực tiễn (xác định vị trí vật thể trong phòng, mô hình kiểm soát đường bay không lưu, chuyển động trên đường băng).
+
+## Hệ trục toạ độ trong không gian
+
+\<Youtube url="https://www.youtube.com/watch?v=example_he_truc_toa_do_khong_gian"/>
+
+### a) Định nghĩa hệ toạ độ Oxyz
+
+Trong không gian, xét ba trục $Ox, Oy, Oz$ đôi một vuông góc với nhau tại gốc $O$ của mỗi trục.
+Gọi $\vec{i}, \vec{j}, \vec{k}$ lần lượt là các vectơ đơn vị trên các trục $Ox, Oy, Oz$ (với $|\vec{i}| = |\vec{j}| = |\vec{k}| = 1$).
+• Hệ ba trục như vậy được gọi là hệ trục toạ độ Descartes vuông góc $Oxyz$, hay đơn giản là hệ toạ độ $Oxyz$.
+• Điểm $O$ được gọi là gốc toạ độ.
+• Các trục $Ox, Oy, Oz$ lần lượt gọi là trục hoành, trục tung và trục cao.
+• Các mặt phẳng $(Oxy), (Oyz), (Ozx)$ đôi một vuông góc với nhau từng đôi một được gọi là các mặt phẳng toạ độ.
+• Không gian với hệ toạ độ $Oxyz$ được gọi là không gian $Oxyz$.
+
+### b) Ví dụ và luyện tập về hệ trục toạ độ
+
+**Ví dụ 1:** Cho hình lập phương $ABCD.A'B'C'D'$ có độ dài mỗi cạnh bằng 1. Có thể lập một hệ toạ độ $Oxyz$ có gốc $O$ trùng với đỉnh $B'$ và các vectơ $\vec{i}, \vec{j}, \vec{k}$ lần lượt là các vectơ $\vec{B'A'}, \vec{B'C'}, \vec{B'B}$ không? Giải thích vì sao.
+
+Lời giải Ví dụ 1:
+• Trong hình lập phương $ABCD.A'B'C'D'$, ba cạnh $B'A', B'C'$ và $B'B$ xuất phát từ đỉnh $B'$ đôi một vuông góc với nhau.
+• Vì hình lập phương có độ dài mỗi cạnh bằng 1 nên các vectơ $\vec{B'A'}, \vec{B'C'}, \vec{B'B}$ có cùng điểm đầu là $B'$ và đều có độ dài bằng 1:
+  $$|\vec{B'A'}| = |\vec{B'C'}| = |\vec{B'B}| = 1.$$
+• Do đó, hoàn toàn có thể lập một hệ toạ độ $Oxyz$ có gốc $O$ trùng với đỉnh $B'$ và các vectơ đơn vị $\vec{i}, \vec{j}, \vec{k}$ lần lượt là $\vec{B'A'}, \vec{B'C'}, \vec{B'B}$.
+
+**Luyện tập 1:** Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Có thể lập một hệ toạ độ $Oxyz$ có gốc $O$ trùng với đỉnh $C$ và các vectơ $\vec{i}, \vec{j}, \vec{k}$ lần lượt cùng hướng với các vectơ $\vec{CB}, \vec{CD}, \vec{CC'}$ không? Giải thích vì sao.
+
+Lời giải Luyện tập 1:
+• Trong hình hộp chữ nhật $ABCD.A'B'C'D'$, ba đoạn thẳng $CB, CD, CC'$ đôi một vuông góc với nhau tại đỉnh $C$.
+• Do đó, ba đường thẳng chứa ba đoạn thẳng này đôi một vuông góc với nhau tại $C$.
+• Trên các tia $CB, CD, CC'$, ta hoàn toàn có thể chọn lần lượt các vectơ $\vec{i}, \vec{j}, \vec{k}$ có độ dài bằng 1 và tương ứng cùng hướng với $\vec{CB}, \vec{CD}, \vec{CC'}$.
+• Vì vậy, ta có thể lập một hệ toạ độ $Oxyz$ có gốc $O$ trùng với đỉnh $C$ thoả mãn yêu cầu đề bài.
+
+## Toạ độ của điểm và toạ độ của vectơ trong không gian
+
+### a) Toạ độ của điểm
+
+Trong không gian $Oxyz$, cho một điểm $M$ tuỳ ý.
+Bộ ba số thực $(x; y; z)$ duy nhất sao cho:
+$$\vec{OM} = x\vec{i} + y\vec{j} + z\vec{k}$$
+được gọi là toạ độ của điểm $M$ đối với hệ toạ độ $Oxyz$. Kí hiệu là $M = (x; y; z)$ hoặc $M(x; y; z)$.
+• $x$ gọi là hoành độ của $M$;
+• $y$ gọi là tung độ của $M$;
+• $z$ gọi là cao độ của $M$.
+Đặc biệt: Gốc toạ độ $O$ có toạ độ là $O(0; 0; 0)$ vì $\vec{OO} = 0\vec{i} + 0\vec{j} + 0\vec{k} = \vec{0}$.
+Nhận xét về toạ độ hình chiếu vuông góc của điểm $M(x; y; z)$:
+\- Hình chiếu vuông góc của $M$ trên các trục toạ độ $Ox, Oy, Oz$ lần lượt là: $(x; 0; 0), (0; y; 0), (0; 0; z)$.
+\- Hình chiếu vuông góc của $M$ trên các mặt phẳng toạ độ $(Oxy), (Oyz), (Ozx)$ lần lượt là: $(x; y; 0), (0; y; z), (x; 0; z)$.
+
+**Ví dụ 3:** Trong không gian $Oxyz$, cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có đỉnh $A'$ trùng với gốc $O$ và các đỉnh $D', B', A$ lần lượt thuộc các tia $Ox, Oy, Oz$. Giả sử đỉnh $C$ có toạ độ là $(2; 3; 5)$. Hãy tìm toạ độ của các đỉnh $D', B', A$.
+
+Lời giải Ví dụ 3:
+• Vì $D' \in Ox, B' \in Oy, A \in Oz$ nên tồn tại các số thực dương $m, n, p$ sao cho $\vec{OD'} = m\vec{i}, \vec{OB'} = n\vec{j}, \vec{OA} = p\vec{k}$.
+• Theo quy tắc hình hộp: $\vec{OC} = \vec{OD'} + \vec{OB'} + \vec{OA} = m\vec{i} + n\vec{j} + p\vec{k}$.
+• Mặt khác, $C(2; 3; 5) \implies \vec{OC} = 2\vec{i} + 3\vec{j} + 5\vec{k}$, do đó $m = 2, n = 3, p = 5$.
+• Vậy toạ độ của các đỉnh là: $D'(2; 0; 0)$, $B'(0; 3; 0)$, và $A(0; 0; 5)$.
+
+**Luyện tập 3:** Trong Ví dụ 3, hãy xác định toạ độ của các điểm $B, D$ và $C'$.
+
+Lời giải Luyện tập 3:
+• Điểm $B$: Hình chiếu của $B$ trên mặt phẳng $(Oyz)$ chính là $B$, và $\vec{OB} = \vec{OB'} + \vec{OA} = 3\vec{j} + 5\vec{k} \implies B(0; 3; 5)$.
+• Điểm $D$: $\vec{OD} = \vec{OD'} + \vec{OA} = 2\vec{i} + 5\vec{k} \implies D(2; 0; 5)$.
+• Điểm $C'$: Là hình chiếu của $C$ lên mặt phẳng đáy $(Ox'y') \equiv (Oxy)$, ta có $\vec{OC'} = \vec{OD'} + \vec{OB'} = 2\vec{i} + 3\vec{j} \implies C'(2; 3; 0)$.
+
+### b) Toạ độ của vectơ
+
+Trong không gian $Oxyz$, cho vectơ $\vec{a}$ tuỳ ý. Bộ ba số thực $(x; y; z)$ duy nhất sao cho:
+$$\vec{a} = x\vec{i} + y\vec{j} + z\vec{k}$$
+được gọi là toạ độ của vectơ $\vec{a}$ đối với hệ toạ độ $Oxyz$. Kí hiệu là $\vec{a} = (x; y; z)$ hoặc $\vec{a}(x; y; z)$.
+Nhận xét:
+• Toạ độ của vectơ $\vec{a}$ chính là toạ độ của điểm $M$ thoả mãn $\vec{OM} = \vec{a}$.
+• Hai vectơ bằng nhau khi và chỉ khi các toạ độ tương ứng của chúng bằng nhau:
+  $$\vec{a}(x; y; z) = \vec{b}(x'; y'; z') \iff \begin{cases} x = x' \\\ y = y' \\\ z = z' \end{cases}$$
+• Toạ độ của các vectơ đơn vị:
+  $$\vec{i} = (1; 0; 0), \quad \vec{j} = (0; 1; 0), \quad \vec{k} = (0; 0; 1), \quad \vec{0} = (0; 0; 0).$$
+
+**Luyện tập 4:** Trong không gian $Oxyz$, hãy xác định toạ độ của vectơ $\vec{u} = \vec{i} + 2\vec{j} + 5\vec{k}$.
+
+Lời giải Luyện tập 4:
+• Vì $\vec{u} = 1\cdot\vec{i} + 2\cdot\vec{j} + 5\cdot\vec{k}$ nên toạ độ của vectơ $\vec{u}$ là $\vec{u} = (1; 2; 5)$.
+
+### c) Toạ độ của vectơ theo toạ độ hai đầu mút
+
+Định lí: Trong không gian $Oxyz$, cho hai điểm $M(x_M; y_M; z_M)$ và $N(x_N; y_N; z_N)$. Khi đó:
+$$\vec{MN} = (x_N - x_M; y_N - y_M; z_N - z_M)$$
+Chứng minh:
+Ta có $\vec{OM} = x_M\vec{i} + y_M\vec{j} + z_M\vec{k}$ và $\vec{ON} = x_N\vec{i} + y_N\vec{j} + z_N\vec{k}$.
+Theo quy tắc trừ vectơ:
+$$\vec{MN} = \vec{ON} - \vec{OM} = (x_N - x_M)\vec{i} + (y_N - y_M)\vec{j} + (z_N - z_M)\vec{k}.$$
+Vậy toạ độ của $\vec{MN}$ là $(x_N - x_M; y_N - y_M; z_N - z_M)$.
+
+**Ví dụ 5:** Trong không gian $Oxyz$, cho hình lăng trụ tam giác $ABC.A'B'C'$ có $A(1; 0; 2), B(3; 2; 5), C(7; -3; 9)$ và $A'(5; 0; 1)$.
+a) Tìm toạ độ của $\vec{AA'}$.
+b) Tìm toạ độ của các điểm $B'$ và $C'$.
+
+Lời giải Ví dụ 5:
+• a) Toạ độ vectơ $\vec{AA'}$ là:
+  $$\vec{AA'} = (x\_{A'} - x_A; y\_{A'} - y_A; z\_{A'} - z_A) = (5 - 1; 0 - 0; 1 - 2) = (4; 0; -1).$$
+• b) Gọi $B'(x; y; z)$, ta có $\vec{BB'} = (x - 3; y - 2; z - 5)$.
+  Vì $ABB'A'$ là hình bình hành nên $\vec{BB'} = \vec{AA'} = (4; 0; -1)$.
+  Suy ra:
+  $$\begin{cases} x - 3 = 4 \\\ y - 2 = 0 \\\ z - 5 = -1 \end{cases} \iff \begin{cases} x = 7 \\\ y = 2 \\\ z = 4 \end{cases} \implies B'(7; 2; 4).$$
+• Tương tự, gọi $C'(x'; y'; z')$, vì $ACC'A'$ là hình bình hành nên $\vec{CC'} = \vec{AA'} = (4; 0; -1)$.
+  Ta có $\vec{CC'} = (x' - 7; y' - (-3); z' - 9) = (x' - 7; y' + 3; z' - 9)$.
+  Suy ra:
+  $$\begin{cases} x' - 7 = 4 \\\ y' + 3 = 0 \\\ z' - 9 = -1 \end{cases} \iff \begin{cases} x' = 11 \\\ y' = -3 \\\ z' = 8 \end{cases} \implies C'(11; -3; 8).$$
+
+**Luyện tập 5:** Trong Ví dụ 5, xác định toạ độ của các điểm $D$ và $D'$ sao cho $ABCD.A'B'C'D'$ là hình hộp.
+
+Lời giải Luyện tập 5:
+• Đáy $ABCD$ là hình bình hành nên $\vec{AD} = \vec{BC}$.
+  Ta có $\vec{BC} = (7 - 3; -3 - 2; 9 - 5) = (4; -5; 4)$.
+  Gọi $D(x_D; y_D; z_D)$, ta có $\vec{AD} = (x_D - 1; y_D - 0; z_D - 2)$.
+  Do đó: $\begin{cases} x_D - 1 = 4 \\\ y_D = -5 \\\ z_D - 2 = 4 \end{cases} \iff \begin{cases} x_D = 5 \\\ y_D = -5 \\\ z_D = 6 \end{cases} \implies D(5; -5; 6)$.
+• Vì $ABCD.A'B'C'D'$ là hình hộp nên $\vec{DD'} = \vec{AA'} = (4; 0; -1)$.
+  Gọi $D'(x\_{D'}; y\_{D'}; z\_{D'})$, ta có $\vec{DD'} = (x\_{D'} - 5; y\_{D'} + 5; z\_{D'} - 6)$.
+  Do đó: $\begin{cases} x\_{D'} - 5 = 4 \\\ y\_{D'} + 5 = 0 \\\ z\_{D'} - 6 = -1 \end{cases} \iff \begin{cases} x\_{D'} = 9 \\\ y\_{D'} = -5 \\\ z\_{D'} = 5 \end{cases} \implies D'(9; -5; 5)$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 1 (Xác định toạ độ bóng đèn trong căn phòng):** Một chiếc bóng đèn được treo cách sàn nhà 2 m, cách hai bức tường vuông góc lần lượt là 1 m và 1,5 m. Hãy chọn một hệ toạ độ phù hợp và xác định toạ độ của bóng đèn.
+
+Lời giải Vận dụng 1:
+• Chọn hệ toạ độ $Oxyz$ có gốc $O$ là giao điểm của hai mép chân tường với sàn nhà:
+  - Trục $Ox$ nằm dọc theo giao tuyến của bức tường thứ nhất với sàn nhà;
+  - Trục $Oy$ nằm dọc theo giao tuyến của bức tường thứ hai với sàn nhà;
+  - Trục $Oz$ nằm dọc theo góc tường thẳng đứng hướng lên trần nhà.
+• Theo đề bài, bóng đèn cách bức tường thứ nhất ($mp(Oxz)$) khoảng cách $y = 1{,}5\text{ m}$, cách bức tường thứ hai ($mp(Oyz)$) khoảng cách $x = 1\text{ m}$, và cách mặt sàn ($mp(Oxy)$) độ cao $z = 2\text{ m}$.
+• Vậy toạ độ của chiếc bóng đèn là $M(1; 1{,}5; 2)$ (hoặc $M(1{,}5; 1; 2)$ tuỳ theo cách đặt tên hai bức tường đối với trục $Ox, Oy$).
+
+**Vận dụng 2 (Theo dõi chuyển động của máy bay):** Hệ toạ độ $Oxyz$ có gốc $O$ tại trạm kiểm soát không lưu, mặt phẳng $(Oxy)$ là mặt đất (trục $Ox$ hướng về phía tây, trục $Oy$ hướng về phía nam, trục $Oz$ hướng thẳng đứng lên trời, đơn vị đo là km). Sau khi đạt độ cao ổn định, máy bay bay về phía nam với tốc độ không đổi $890\text{ km/h}$ trong nửa giờ. Xác định toạ độ của vectơ độ dịch chuyển của máy bay.
+
+Lời giải Vận dụng 2:
+• Trong khoảng thời gian $t = 0{,}5\text{ giờ}$, máy bay bay thẳng đều về phía nam với tốc độ $v = 890\text{ km/h}$.
+• Quãng đường máy bay dịch chuyển được là:
+  $$s = v \cdot t = 890 \cdot 0{,}5 = 445\text{ (km).}$$
+• Vì máy bay duy trì độ cao không đổi và chỉ di chuyển theo hướng nam (hướng dương của trục $Oy$), nên độ dịch chuyển theo trục $Ox$ là $0\text{ km}$, theo trục $Oy$ là $+445\text{ km}$, và theo trục $Oz$ là $0\text{ km}$.
+• Vậy vectơ biểu diễn độ dịch chuyển của máy bay là $\vec{d} = (0; 445; 0)$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 2.13:** Trong không gian $Oxyz$, cho ba vectơ $\vec{a}, \vec{b}, \vec{c}$ đều khác $\vec{0}$ và có giá đôi một vuông góc. Những mệnh đề nào sau đây là đúng?
+a) Có thể lập một hệ toạ độ $Oxyz$ có các trục toạ độ lần lượt song song với giá của các vectơ $\vec{a}, \vec{b}, \vec{c}$.
+b) Có thể lập một hệ toạ độ $Oxyz$ có các trục toạ độ lần lượt trùng với giá của các vectơ $\vec{a}, \vec{b}, \vec{c}$.
+c) Có thể lập một hệ toạ độ $Oxyz$ có các vectơ $\vec{i}, \vec{j}, \vec{k}$ lần lượt bằng các vectơ $\vec{a}, \vec{b}, \vec{c}$.
+d) Có thể lập một hệ toạ độ $Oxyz$ có các vectơ $\vec{i}, \vec{j}, \vec{k}$ lần lượt cùng phương với các vectơ $\vec{a}, \vec{b}, \vec{c}$.
+
+Lời giải Bài 2.13:
+• Mệnh đề a) ĐÚNG, vì chỉ cần chọn gốc $O$ bất kì rồi kẻ ba trục qua $O$ song song với giá của $\vec{a}, \vec{b}, \vec{c}$.
+• Mệnh đề b) SAI, vì ba đường thẳng chứa giá của ba vectơ chưa chắc đã đồng quy tại một điểm để chọn làm gốc $O$.
+• Mệnh đề c) SAI, vì các vectơ đơn vị $\vec{i}, \vec{j}, \vec{k}$ bắt buộc phải có độ dài bằng 1, trong khi độ dài của $\vec{a}, \vec{b}, \vec{c}$ có thể khác 1.
+• Mệnh đề d) ĐÚNG, vì ta có thể chọn các vectơ đơn vị $\vec{i} = \frac{\vec{a}}{|\vec{a}|}, \vec{j} = \frac{\vec{b}}{|\vec{b}|}, \vec{k} = \frac{\vec{c}}{|\vec{c}|}$, khi đó chúng cùng phương với $\vec{a}, \vec{b}, \vec{c}$.
+
+**Bài 2.15:** Trong không gian $Oxyz$, xác định toạ độ của vectơ $\vec{AB}$ trong mỗi trường hợp sau:
+a) $A(0; 0; 0)$ và $B(4; 2; -5)$;
+b) $A(1; -3; 7)$ và $B(1; -3; 7)$;
+c) $A(5; 4; 9)$ và $B(-5; 7; 2)$.
+
+Lời giải Bài 2.15:
+• a) $\vec{AB} = (4 - 0; 2 - 0; -5 - 0) = (4; 2; -5)$.
+• b) $\vec{AB} = (1 - 1; -3 - (-3); 7 - 7) = (0; 0; 0) = \vec{0}$.
+• c) $\vec{AB} = (-5 - 5; 7 - 4; 2 - 9) = (-10; 3; -7)$.
+
+**Bài 2.16:** Trong không gian $Oxyz$, xác định toạ độ của điểm $A$ trong mỗi trường hợp sau:
+a) $A$ trùng với gốc toạ độ;
+b) $A$ nằm trên tia $Ox$ và $OA = 2$;
+c) $A$ nằm trên tia đối của tia $Oy$ và $OA = 3$.
+
+Lời giải Bài 2.16:
+• a) $A$ trùng với gốc toạ độ $\implies A(0; 0; 0)$.
+• b) $A$ thuộc tia $Ox$ và $OA = 2 \implies \vec{OA} = 2\vec{i} \implies A(2; 0; 0)$.
+• c) $A$ thuộc tia đối của tia $Oy$ và $OA = 3 \implies \vec{OA} = -3\vec{j} \implies A(0; -3; 0)$.
+
+**Bài 2.17:** Trong không gian $Oxyz$, cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có đỉnh $A$ trùng với gốc $O(0; 0; 0)$ và các đỉnh $D, B, A'$ có toạ độ lần lượt là $D(2; 0; 0), B(0; 4; 0), A'(0; 0; 3)$. Xác định toạ độ các đỉnh còn lại của hình hộp chữ nhật.
+
+Lời giải Bài 2.17:
+• Đáy $ABCD$ nằm trên mặt phẳng $(Oxy)$:
+  - $C$ là đỉnh thứ tư của hình chữ nhật $ABCD \implies \vec{AC} = \vec{AD} + \vec{AB} = 2\vec{i} + 4\vec{j} \implies C(2; 4; 0)$.
+• Mặt trên $A'B'C'D'$ tịnh tiến theo vectơ $\vec{AA'} = (0; 0; 3)$:
+  - $D'(x_D; y_D; z_D + 3) = D'(2; 0; 3)$.
+  - $B'(x_B; y_B; z_B + 3) = B'(0; 4; 3)$.
+  - $C'(x_C; y_C; z_C + 3) = C'(2; 4; 3)$.
+
+**Bài 2.18:** Trong không gian $Oxyz$, cho hình hộp $OABC.O'A'B'C'$ có $A(1; 1; -1), B(0; 3; 0), C'(2; -3; 6)$.
+a) Xác định toạ độ của điểm $C$.
+b) Xác định toạ độ các đỉnh còn lại của hình hộp.
+
+Lời giải Bài 2.18:
+• a) Vì $OABC$ là hình bình hành nên $\vec{OB} = \vec{OA} + \vec{OC} \implies \vec{OC} = \vec{OB} - \vec{OA}$.
+  Ta có $\vec{OB} = (0; 3; 0)$ và $\vec{OA} = (1; 1; -1)$, suy ra:
+  $$\vec{OC} = (0 - 1; 3 - 1; 0 - (-1)) = (-1; 2; 1) \implies C(-1; 2; 1).$$
+• b) Tìm các đỉnh còn lại:
+  - Vectơ cạnh bên $\vec{CC'} = (2 - (-1); -3 - 2; 6 - 1) = (3; -5; 5)$.
+  - Vì hình hộp nên $\vec{OO'} = \vec{AA'} = \vec{BB'} = \vec{CC'} = (3; -5; 5)$.
+  - Gốc $O(0; 0; 0) \implies O'(3; -5; 5)$.
+  - $A'(x_A + 3; y_A - 5; z_A + 5) = (1 + 3; 1 - 5; -1 + 5) = A'(4; -4; 4)$.
+  - $B'(x_B + 3; y_B - 5; z_B + 5) = (0 + 3; 3 - 5; 0 + 5) = B'(3; -2; 5)$.
+
+**Bài 2.19:** Trong Vận dụng 2, hãy giải thích vì sao tại mỗi thời điểm chiếc máy bay di chuyển trên đường băng thì toạ độ của nó luôn có dạng $(x; y; 0)$ với $x, y$ là hai số thực nào đó.
+
+Lời giải Bài 2.19:
+• Trong hệ toạ độ $Oxyz$ đã chọn ở Vận dụng 2, mặt phẳng toạ độ $(Oxy)$ được quy ước trùng với mặt đất phẳng chứa đường băng sân bay.
+• Trục $Oz$ vuông góc với mặt đất biểu thị cao độ (độ cao so với mặt đất).
+• Khi chiếc máy bay đang di chuyển trên đường băng thì nó nằm hoàn toàn trên mặt đất, tức là thuộc mặt phẳng $(Oxy)$.
+• Mọi điểm thuộc mặt phẳng toạ độ $(Oxy)$ đều có cao độ bằng $0$ ($z = 0$).
+• Do đó, tại mỗi thời điểm di chuyển trên đường băng, toạ độ của máy bay luôn có dạng $(x; y; 0)$.
