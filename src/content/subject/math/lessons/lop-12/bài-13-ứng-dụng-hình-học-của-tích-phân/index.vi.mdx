@@ -1,0 +1,231 @@
+---
+title: 'Bài 13: Ứng dụng hình học của tích phân'
+description: Hệ thống lý thuyết bài Ứng dụng hình học của tích phân cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Diện tích hình phẳng
+  - Thể tích vật thể
+  - Thể tích khối tròn xoay
+grade: 12
+order: 13
+updatedDate: 2026-10-29T13:41:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Diện tích hình phẳng
+
+·       Thể tích vật thể
+
+·       Thể tích khối tròn xoay
+
+### **Kiến thức, kĩ năng:**
+
+·       Sử dụng tích phân để tính diện tích của hình phẳng giới hạn bởi đồ thị hàm số và trục hoành.
+
+·       Sử dụng tích phân để tính diện tích của hình phẳng giới hạn bởi hai đồ thị hàm số.
+
+·       Sử dụng tích phân để tính thể tích của một vật thể bất kì khi biết diện tích thiết diện.
+
+·       Tính thể tích của khối tròn xoay sinh ra khi quay hình phẳng quanh trục hoành.
+
+·       Vận dụng tích phân giải quyết các bài toán thực tiễn và kinh tế (thặng dư tiêu dùng, thặng dư sản xuất, thể tích khối chỏm cầu, thể tích khối chóp và nón cụt).
+
+## Ứng dụng tích phân để tính diện tích hình phẳng
+
+\<Youtube url="https://www.youtube.com/watch?v=example_ung_dung_tich_phan_dien_tich"/>
+
+### a) Hình phẳng giới hạn bởi một đồ thị hàm số, trục hoành và hai đường thẳng x = a, x = b
+
+Định lí: Diện tích $S$ của hình phẳng giới hạn bởi đồ thị của hàm số $f(x)$ liên tục trên đoạn $[a; b]$, trục hoành ($y = 0$) và hai đường thẳng $x = a, x = b$ ($a < b$) được tính bằng công thức:
+$$S = \int\_{a}^{b} |f(x)| dx$$
+Phương pháp tính phá dấu giá trị tuyệt đối:
+• Tìm các nghiệm $x_1, x_2, \dots, x_k \in (a; b)$ của phương trình $f(x) = 0$.
+• Chia đoạn $[a; b]$ thành các đoạn nhỏ mà trên đó $f(x)$ không đổi dấu, khi đó:
+  $$S = \int_a^{x_1} |f(x)| dx + \int\_{x_1}^{x_2} |f(x)| dx + \dots + \int\_{x_k}^b |f(x)| dx = \left| \int_a^{x_1} f(x) dx \right| + \left| \int\_{x_1}^{x_2} f(x) dx \right| + \dots + \left| \int\_{x_k}^b f(x) dx \right|$$
+
+**Ví dụ 1:** Tính diện tích hình phẳng giới hạn bởi đồ thị của hàm số $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 2$.
+
+Lời giải Ví dụ 1:
+• Vì hàm số $y = x^3 \ge 0$ với mọi $x \in [0; 2]$, diện tích hình phẳng cần tính là:
+  $$S = \int\_{0}^{2} |x^3| dx = \int\_{0}^{2} x^3 dx = \frac{x^4}{4}\Bigg|\_{0}^{2} = \frac{2^4}{4} - 0 = 4.$$
+
+**Ví dụ 2:** Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = \sin x$, trục hoành và hai đường thẳng $x = 0, x = 2\pi$.
+
+Lời giải Ví dụ 2:
+• Nhận thấy $\sin x \ge 0$ trên $[0; \pi]$ và $\sin x \le 0$ trên $[\pi; 2\pi]$. Diện tích hình phẳng cần tính là:
+  $$S = \int\_{0}^{2\pi} |\sin x| dx = \int\_{0}^{\pi} |\sin x| dx + \int\_{\pi}^{2\pi} |\sin x| dx = \int\_{0}^{\pi} \sin x dx + \int\_{\pi}^{2\pi} (-\sin x) dx$$
+  $$= -\cos x\Big|\_{0}^{\pi} + \cos x\Big|\_{\pi}^{2\pi} = (-\cos \pi + \cos 0) + (\cos 2\pi - \cos \pi) = (1 + 1) + (1 - (-1)) = 4.$$
+
+**Luyện tập 1:** Tính diện tích hình phẳng giới hạn bởi parabol $y = x^2 - 4$, trục hoành và hai đường thẳng $x = 0, x = 3$.
+
+Lời giải Luyện tập 1:
+• Giải phương trình $x^2 - 4 = 0$ trên $[0; 3]$, ta được nghiệm $x = 2$.
+• Nhận xét: $x^2 - 4 \le 0$ trên $[0; 2]$ và $x^2 - 4 \ge 0$ trên $[2; 3]$.
+• Diện tích hình phẳng là:
+  $$S = \int\_{0}^{3} |x^2 - 4| dx = \int\_{0}^{2} (4 - x^2) dx + \int\_{2}^{3} (x^2 - 4) dx$$
+  $$= \left(4x - \frac{x^3}{3}\right)\Bigg|\_{0}^{2} + \left(\frac{x^3}{3} - 4x\right)\Bigg|\_{2}^{3} = \left(8 - \frac{8}{3}\right) + \left[(9 - 12) - \left(\frac{8}{3} - 8\right)\right] = \frac{16}{3} + \frac{7}{3} = \frac{23}{3}.$$
+
+### b) Hình phẳng giới hạn bởi hai đồ thị hàm số và hai đường thẳng x = a, x = b
+
+Định lí: Diện tích $S$ của hình phẳng giới hạn bởi đồ thị của hai hàm số $f(x), g(x)$ liên tục trên đoạn $[a; b]$ và hai đường thẳng $x = a, x = b$ ($a < b$) được tính bằng công thức:
+$$S = \int\_{a}^{b} |f(x) - g(x)| dx$$
+Chú ý:
+• Nếu hiệu $f(x) - g(x)$ không đổi dấu trên đoạn $[a; b]$ thì:
+  $$\int\_{a}^{b} |f(x) - g(x)| dx = \left| \int\_{a}^{b} [f(x) - g(x)] dx \right|$$
+• Khi hình phẳng giới hạn bởi hai đồ thị $y = f(x)$ và $y = g(x)$ không cho sẵn hai cận $x = a, x = b$, ta tìm hoành độ giao điểm bằng cách giải phương trình $f(x) = g(x)$ để lấy nghiệm nhỏ nhất làm cận dưới $a$ và nghiệm lớn nhất làm cận trên $b$.
+
+**Ví dụ 3:** Tính diện tích hình phẳng giới hạn bởi hai parabol $y = 4 - x^2$, $y = x^2$ và hai đường thẳng $x = -1, x = 1$.
+
+Lời giải Ví dụ 3:
+• Với mọi $x \in [-1; 1]$, ta có $(4 - x^2) - x^2 = 4 - 2x^2 \ge 2 > 0$.
+• Diện tích hình phẳng là:
+  $$S = \int\_{-1}^{1} |(4 - x^2) - x^2| dx = \int\_{-1}^{1} (4 - 2x^2) dx = \left(4x - \frac{2}{3}x^3\right)\Bigg|\_{-1}^{1} = \left(4 - \frac{2}{3}\right) - \left(-4 + \frac{2}{3}\right) = \frac{20}{3}.$$
+
+**Ví dụ 4:** Tính diện tích hình phẳng giới hạn bởi đồ thị hai hàm số $y = \sin x$, $y = \cos x$ và hai đường thẳng $x = 0, x = \frac{\pi}{4}$.
+
+Lời giải Ví dụ 4:
+• Trên đoạn $\left[0; \frac{\pi}{4}\right]$, ta có $\cos x \ge \sin x \implies \cos x - \sin x \ge 0$.
+• Diện tích hình phẳng là:
+  $$S = \int\_{0}^{\pi/4} |\sin x - \cos x| dx = \int\_{0}^{\pi/4} (\cos x - \sin x) dx = (\sin x + \cos x)\Bigg|\_{0}^{\pi/4} = \left(\frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2}\right) - (0 + 1) = \sqrt{2} - 1.$$
+
+**Luyện tập 2:** Tính diện tích hình phẳng giới hạn bởi đồ thị của các hàm số $y = \sqrt{x}$, $y = x - 2$ và hai đường thẳng $x = 1, x = 4$.
+
+Lời giải Luyện tập 2:
+• Xét hiệu $\sqrt{x} - (x - 2)$ trên $[1; 4]$.
+  Phương trình hoành độ giao điểm: $\sqrt{x} = x - 2 \iff x = (x - 2)^2$ (với $x \ge 2$) $\iff x^2 - 5x + 4 = 0 \iff x = 4$ (nghiệm $x = 1$ loại do $x \ge 2$).
+• Với mọi $x \in [1; 4]$, ta thấy $\sqrt{x} \ge x - 2$.
+• Diện tích hình phẳng là:
+  $$S = \int\_{1}^{4} [\sqrt{x} - (x - 2)] dx = \left(\frac{2}{3}x^{3/2} - \frac{x^2}{2} + 2x\right)\Bigg|\_{1}^{4} = \left(\frac{16}{3} - 8 + 8\right) - \left(\frac{2}{3} - \frac{1}{2} + 2\right) = \frac{16}{3} - \frac{13}{6} = \frac{19}{6}.$$
+
+## Ứng dụng tích phân để tính thể tích vật thể
+
+### a) Thể tích vật thể bất kì qua diện tích thiết diện S(x)
+
+Định lí: Cho một vật thể trong không gian $Oxyz$ giới hạn bởi hai mặt phẳng vuông góc với trục $Ox$ tại $x = a$ và $x = b$ ($a < b$). Cắt vật thể bởi một mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ $x \in [a; b]$ thu được thiết diện có diện tích là $S(x)$. Giả sử $S(x)$ là hàm số liên tục trên đoạn $[a; b]$. Khi đó thể tích $V$ của vật thể được tính bởi công thức:
+$$V = \int\_{a}^{b} S(x) dx$$
+
+**Ví dụ 5:** Tính thể tích của khối lăng trụ có diện tích đáy bằng $S$ và chiều cao bằng $h$.
+
+Lời giải Ví dụ 5:
+• Chọn trục $Ox$ song song với đường cao của khối lăng trụ sao cho hai đáy nằm trên hai mặt phẳng vuông góc với $Ox$ tại $x = 0$ và $x = h$.
+• Khi cắt khối lăng trụ bởi mặt phẳng vuông góc với trục $Ox$ tại hoành độ $x \in [0; h]$, thiết diện thu được luôn bằng đáy, tức là có diện tích không đổi $S(x) = S$.
+• Thể tích khối lăng trụ là:
+  $$V = \int\_{0}^{h} S(x) dx = \int\_{0}^{h} S dx = Sx\Big|\_{0}^{h} = Sh.$$
+
+**Ví dụ 6:** Tính thể tích của khối chóp đều có đáy là hình vuông cạnh $L$ và chiều cao là $h$.
+
+Lời giải Ví dụ 6:
+• Chọn trục $Ox$ đi qua đỉnh $O$ của khối chóp và vuông góc với mặt phẳng đáy tại tâm của đáy. Khi đó đáy của khối chóp nằm tại $x = h$.
+• Mặt phẳng vuông góc với $Ox$ tại $x \in [0; h]$ cắt khối chóp theo thiết diện là hình vuông đồng dạng với đáy có cạnh là $a$.
+• Theo định lí Thalès: $\frac{a}{L} = \frac{x}{h} \implies a = \frac{L}{h}x$.
+• Diện tích thiết diện tại vị trí $x$ là: $S(x) = a^2 = \frac{L^2}{h^2}x^2$.
+• Thể tích khối chóp là:
+  $$V = \int\_{0}^{h} S(x) dx = \int\_{0}^{h} \frac{L^2}{h^2}x^2 dx = \frac{L^2}{h^2} \cdot \frac{x^3}{3}\Bigg|\_{0}^{h} = \frac{L^2}{h^2} \cdot \frac{h^3}{3} = \frac{1}{3}L^2 h.$$
+
+### b) Thể tích khối tròn xoay quanh trục hoành
+
+Định nghĩa và công thức:
+Cho hàm số $f(x)$ liên tục và không âm trên đoạn $[a; b]$. Khi quay hình phẳng giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành ($y = 0$) và hai đường thẳng $x = a, x = b$ xung quanh trục hoành $Ox$, ta được một khối tròn xoay.
+• Khi cắt khối tròn xoay bởi mặt phẳng vuông góc với trục $Ox$ tại điểm $x \in [a; b]$, thiết diện thu được là một hình tròn bán kính $R = f(x)$, có diện tích là $S(x) = \pi f^2(x)$.
+• Thể tích của khối tròn xoay được tính theo công thức:
+$$V = \pi \int\_{a}^{b} f^2(x) dx$$
+
+**Ví dụ 7:** Tính thể tích khối tròn xoay sinh ra khi quay quanh trục $Ox$ hình phẳng giới hạn bởi đồ thị hàm số $y = \sqrt{x}$, trục hoành và hai đường thẳng $x = 0, x = 1$.
+
+Lời giải Ví dụ 7:
+• Áp dụng công thức thể tích khối tròn xoay:
+  $$V = \pi \int\_{0}^{1} (\sqrt{x})^2 dx = \pi \int\_{0}^{1} x dx = \frac{\pi x^2}{2}\Bigg|\_{0}^{1} = \frac{\pi}{2}.$$
+
+**Ví dụ 8:** Chứng minh công thức tính thể tích của khối cầu bán kính $R$.
+
+Lời giải Ví dụ 8:
+• Khối cầu bán kính $R$ là khối tròn xoay sinh ra khi quay nửa hình tròn giới hạn bởi đồ thị $y = \sqrt{R^2 - x^2}$ ($-R \le x \le R$), trục hoành và hai đường thẳng $x = -R, x = R$ quanh trục $Ox$.
+• Thể tích khối cầu là:
+  $$V = \pi \int\_{-R}^{R} (\sqrt{R^2 - x^2})^2 dx = \pi \int\_{-R}^{R} (R^2 - x^2) dx = \pi \left(R^2 x - \frac{x^3}{3}\right)\Bigg|\_{-R}^{R}$$
+  $$= \pi \left(R^3 - \frac{R^3}{3}\right) - \pi \left(-R^3 + \frac{R^3}{3}\right) = \pi \left(\frac{2R^3}{3} + \frac{2R^3}{3}\right) = \frac{4}{3}\pi R^3.$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế và kinh tế
+
+**Vận dụng 1 (Thặng dư tiêu dùng và thặng dư sản xuất):** Giả sử hàm cung và hàm cầu của một sản phẩm được mô hình hoá bởi:
+• Hàm cầu: $p = D(x) = -0{,}36x + 9$;
+• Hàm cung: $p = S(x) = 0{,}14x + 2$;
+trong đó $x$ là số đơn vị sản phẩm và $p$ là giá. Tìm thặng dư tiêu dùng ($CS$) và thặng dư sản xuất ($PS$) tại điểm cân bằng.
+
+Lời giải Vận dụng 1:
+• Điểm cân bằng $(x_0; p_0)$ là giao điểm của đồ thị hàm cầu và hàm cung:
+  $$-0{,}36x + 9 = 0{,}14x + 2 \iff 0{,}5x = 7 \iff x_0 = 14.$$
+  Thay vào hàm cung, ta được mức giá cân bằng: $p_0 = 0{,}14(14) + 2 = 1{,}96 + 2 = 3{,}96$.
+• Thặng dư tiêu dùng ($CS$) là diện tích hình phẳng giới hạn bởi đường cầu $p = D(x)$, đường thẳng $p = p_0$ và trục tung $x = 0$:
+  $$CS = \int\_{0}^{x_0} [D(x) - p_0] dx = \int\_{0}^{14} [(-0{,}36x + 9) - 3{,}96] dx = \int\_{0}^{14} (5{,}04 - 0{,}36x) dx$$
+  $$= \left(5{,}04x - 0{,}18x^2\right)\Bigg|\_{0}^{14} = 5{,}04(14) - 0{,}18(14^2) = 70{,}56 - 35{,}28 = 35{,}28.$$
+• Thặng dư sản xuất ($PS$) là diện tích hình phẳng giới hạn bởi đường $p = p_0$, đường cung $p = S(x)$ và trục tung $x = 0$:
+  $$PS = \int\_{0}^{x_0} [p_0 - S(x)] dx = \int\_{0}^{14} [3{,}96 - (0{,}14x + 2)] dx = \int\_{0}^{14} (1{,}96 - 0{,}14x) dx$$
+  $$= \left(1{,}96x - 0{,}07x^2\right)\Bigg|\_{0}^{14} = 1{,}96(14) - 0{,}07(14^2) = 27{,}44 - 13{,}72 = 13{,}72.$$
+
+**Vận dụng 2 (Thể tích khối chóp cụt đều):** Tính thể tích của khối chóp cụt đều có diện tích hai đáy là $S_0, S_1$ ($S_0 < S_1$) và chiều cao bằng $h$. Từ đó suy ra công thức thể tích khối chóp đều diện tích đáy $S$ và chiều cao $h$.
+
+Lời giải Vận dụng 2:
+• Chọn trục $Ox$ đi qua tâm hai đáy sao cho đáy nhỏ nằm tại $x = a$ và đáy lớn nằm tại $x = b$ với $h = b - a$. Đỉnh của hình chóp kéo dài là gốc $O$.
+• Theo tính chất đồng dạng, diện tích thiết diện tại vị trí $x$ tỉ lệ thuận với $x^2$: $S(x) = k x^2$.
+  Tại $x = a: S_0 = k a^2 \implies a = \sqrt{\frac{S_0}{k}}$.
+  Tại $x = b: S_1 = k b^2 \implies b = \sqrt{\frac{S_1}{k}}$.
+  Chiều cao $h = b - a = \frac{\sqrt{S_1} - \sqrt{S_0}}{\sqrt{k}} \implies \frac{1}{\sqrt{k}} = \frac{h}{\sqrt{S_1} - \sqrt{S_0}}$.
+• Thể tích chóp cụt là:
+  $$V = \int_a^b S(x) dx = k \int_a^b x^2 dx = \frac{k}{3}(b^3 - a^3) = \frac{k}{3}(b - a)(b^2 + ab + a^2)$$
+  $$= \frac{1}{3} \cdot \frac{h}{\sqrt{S_1} - \sqrt{S_0}} \cdot \left(\frac{S_1}{k} + \frac{\sqrt{S_0 S_1}}{k} + \frac{S_0}{k}\right) \cdot k = \frac{h}{3}(S_0 + \sqrt{S_0 S_1} + S_1).$$
+• Khi $S_0 = 0$ (khối chóp đều thông thường với đáy $S_1 = S$), công thức trở thành $V = \frac{1}{3}Sh$.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 4.14:** Tính diện tích của hình phẳng giới hạn bởi parabol $y = 5x - x^2$ và đường thẳng $y = x$.
+
+Lời giải Bài 4.14:
+• Phương trình hoành độ giao điểm: $5x - x^2 = x \iff x^2 - 4x = 0 \iff x = 0$ hoặc $x = 4$.
+• Trên đoạn $[0; 4]$, ta có $5x - x^2 \ge x$.
+• Diện tích hình phẳng cần tính là:
+  $$S = \int\_{0}^{4} [(5x - x^2) - x] dx = \int\_{0}^{4} (4x - x^2) dx = \left(2x^2 - \frac{x^3}{3}\right)\Bigg|\_{0}^{4} = 2(16) - \frac{64}{3} = 32 - \frac{64}{3} = \frac{32}{3}.$$
+
+**Bài 4.15:** Tính diện tích hình phẳng giới hạn bởi các đường sau:
+a) $y = e^x, y = x^2 - 1, x = -1, x = 1$;
+b) $y = \sin x, y = x, x = \frac{\pi}{2}, x = \pi$;
+c) $y = 9 - x^2, y = 2x^2, x = -\sqrt{3}, x = \sqrt{3}$;
+d) $y = \sqrt{x}, y = x^2, x = 0, x = 1$.
+
+Lời giải Bài 4.15:
+• a) Trên đoạn $[-1; 1]$, $e^x > 0$ và $x^2 - 1 \le 0 \implies e^x \ge x^2 - 1$.
+  $$S = \int\_{-1}^{1} [e^x - (x^2 - 1)] dx = \left(e^x - \frac{x^3}{3} + x\right)\Bigg|\_{-1}^{1} = \left(e - \frac{1}{3} + 1\right) - \left(e^{-1} + \frac{1}{3} - 1\right) = e - \frac{1}{e} + \frac{4}{3}.$$
+• b) Trên $\left[\frac{\pi}{2}; \pi\right]$, ta có $x > 1 \ge \sin x \implies x - \sin x > 0$.
+  $$S = \int\_{\pi/2}^{\pi} (x - \sin x) dx = \left(\frac{x^2}{2} + \cos x\right)\Bigg|\_{\pi/2}^{\pi} = \left(\frac{\pi^2}{2} - 1\right) - \left(\frac{\pi^2}{8} + 0\right) = \frac{3\pi^2}{8} - 1.$$
+• c) Với mọi $x \in [-\sqrt{3}; \sqrt{3}]$, $9 - x^2 \ge 2x^2 \iff 3x^2 \le 9 \iff x^2 \le 3$.
+  $$S = \int\_{-\sqrt{3}}^{\sqrt{3}} (9 - 3x^2) dx = \left(9x - x^3\right)\Bigg|\_{-\sqrt{3}}^{\sqrt{3}} = (9\sqrt{3} - 3\sqrt{3}) - (-9\sqrt{3} + 3\sqrt{3}) = 12\sqrt{3}.$$
+• d) Trên $[0; 1]$, $\sqrt{x} \ge x^2$.
+  $$S = \int\_{0}^{1} (\sqrt{x} - x^2) dx = \left(\frac{2}{3}x^{3/2} - \frac{x^3}{3}\right)\Bigg|\_{0}^{1} = \frac{2}{3} - \frac{1}{3} = \frac{1}{3}.$$
+
+**Bài 4.17:** Tính thể tích khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi đồ thị hàm số $y = 2x - x^2$ và trục hoành xung quanh trục $Ox$.
+
+Lời giải Bài 4.17:
+• Phương trình hoành độ giao điểm với trục hoành: $2x - x^2 = 0 \iff x = 0$ hoặc $x = 2$.
+• Thể tích khối tròn xoay là:
+  $$V = \pi \int\_{0}^{2} (2x - x^2)^2 dx = \pi \int\_{0}^{2} (4x^2 - 4x^3 + x^4) dx$$
+  $$= \pi \left(\frac{4x^3}{3} - x^4 + \frac{x^5}{5}\right)\Bigg|\_{0}^{2} = \pi \left(\frac{32}{3} - 16 + \frac{32}{5}\right) = \pi \left(\frac{160 - 240 + 96}{15}\right) = \frac{16\pi}{15}.$$
+
+**Bài 4.18 (Thể tích khối chỏm cầu):** Khối chỏm cầu bán kính $R$ và chiều cao $h$ ($0 < h \le R$) sinh ra khi quay hình phẳng giới hạn bởi cung tròn $y = \sqrt{R^2 - x^2}$, trục hoành và hai đường thẳng $x = R - h, x = R$ xung quanh trục $Ox$. Tính thể tích của khối chỏm cầu này.
+
+Lời giải Bài 4.18:
+• Thể tích khối tròn xoay được tính theo công thức:
+  $$V = \pi \int\_{R-h}^{R} (\sqrt{R^2 - x^2})^2 dx = \pi \int\_{R-h}^{R} (R^2 - x^2) dx = \pi \left(R^2 x - \frac{x^3}{3}\right)\Bigg|\_{R-h}^{R}$$
+• Thay cận vào biểu thức:
+  - Tại $x = R$: $R^2(R) - \frac{R^3}{3} = \frac{2R^3}{3}$.
+  - Tại $x = R - h$:
+    $$R^2(R - h) - \frac{(R - h)^3}{3} = R^3 - R^2 h - \frac{R^3 - 3R^2 h + 3Rh^2 - h^3}{3} = \frac{2R^3}{3} - Rh^2 + \frac{h^3}{3}.$$
+• Lấy hiệu hai giá trị:
+  $$V = \pi \left[\frac{2R^3}{3} - \left(\frac{2R^3}{3} - Rh^2 + \frac{h^3}{3}\right)\right] = \pi \left(Rh^2 - \frac{h^3}{3}\right) = \pi h^2 \left(R - \frac{h}{3}\right).$$
+• Vậy thể tích khối chỏm cầu bán kính $R$ chiều cao $h$ là $V = \pi h^2\left(R - \frac{h}{3}\right)$.
