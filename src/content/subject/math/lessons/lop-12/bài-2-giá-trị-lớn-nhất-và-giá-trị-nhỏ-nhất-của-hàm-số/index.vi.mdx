@@ -1,0 +1,237 @@
+---
+title: 'Bài 2: Giá trị lớn nhất và giá trị nhỏ nhất của hàm số.'
+description: Hệ thống lý thuyết bài Giá trị lớn nhất và giá trị nhỏ nhất của hàm số cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Giá trị lớn nhất của hàm số
+  - Giá trị nhỏ nhất của hàm số
+grade: 12
+order: 2
+updatedDate: 2026-10-29T10:30:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Giá trị lớn nhất của hàm số
+
+·       Giá trị nhỏ nhất của hàm số
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết giá trị lớn nhất, giá trị nhỏ nhất của hàm số trên một tập xác định cho trước.
+
+·       Xác định giá trị lớn nhất, giá trị nhỏ nhất của hàm số bằng đạo hàm và bảng biến thiên.
+
+·       Thực hiện thành thạo quy tắc tìm giá trị lớn nhất, giá trị nhỏ nhất của hàm số liên tục trên một đoạn $[a; b]$.
+
+·       Vận dụng kiến thức về giá trị lớn nhất, giá trị nhỏ nhất vào giải quyết các bài toán tối ưu thực tiễn (tối ưu hóa thể tích hộp carton, mô hình tốc độ lây lan của virus, cực tiểu hóa chi phí sản xuất vỏ hộp).
+
+## Định nghĩa giá trị lớn nhất và giá trị nhỏ nhất của hàm số
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gtln_gtnn_ham_so"/>
+
+### a) Định nghĩa
+
+Cho hàm số $y = f(x)$ xác định trên tập $D$.
+• Số $M$ được gọi là giá trị lớn nhất của hàm số $y = f(x)$ trên tập $D$ nếu $f(x) \le M$ với mọi $x \in D$ và tồn tại $x_0 \in D$ sao cho $f(x_0) = M$.
+  Kí hiệu: $M = \max\_{x \in D} f(x)$ hoặc $M = \max_D f(x)$.
+• Số $m$ được gọi là giá trị nhỏ nhất của hàm số $y = f(x)$ trên tập $D$ nếu $f(x) \ge m$ với mọi $x \in D$ và tồn tại $x_0 \in D$ sao cho $f(x_0) = m$.
+  Kí hiệu: $m = \min\_{x \in D} f(x)$ hoặc $m = \min_D f(x)$.
+Chú ý:
+\- Khi nói giá trị lớn nhất và giá trị nhỏ nhất của hàm số $f(x)$ mà không chỉ rõ tập $D$ thì ta hiểu đó là giá trị lớn nhất và nhỏ nhất trên toàn bộ tập xác định của hàm số.
+\- Để tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số trên tập $D$ tổng quát (khoảng, nửa khoảng, tập vô hạn), ta thường lập bảng biến thiên của hàm số trên tập $D$.
+
+### b) Ví dụ và luyện tập tìm GTLN, GTNN trên một tập
+
+**Ví dụ 1:** Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số $y = f(x) = \sqrt{1 - x^2}$.
+
+Lời giải Ví dụ 1:
+• Tập xác định: $D = [-1; 1]$.
+• Cách 1 (Đánh giá trực tiếp):
+  - Với mọi $x \in [-1; 1]$, ta có $1 - x^2 \ge 0 \implies f(x) = \sqrt{1 - x^2} \ge 0$. Dấu đẳng thức xảy ra khi $x = -1$ hoặc $x = 1$. Do đó: $\min\_{[-1; 1]} f(x) = f(-1) = f(1) = 0$.
+  - Mặt khác, $1 - x^2 \le 1 \implies f(x) = \sqrt{1 - x^2} \le 1$. Dấu đẳng thức xảy ra khi $x = 0$. Do đó: $\max\_{[-1; 1]} f(x) = f(0) = 1$.
+• Cách 2 (Sử dụng bảng biến thiên):
+  - Trên khoảng $(-1; 1)$: $y' = -\frac{x}{\sqrt{1 - x^2}}$. Ta có $y' = 0 \iff x = 0$.
+  - Tại hai đầu mút: $f(-1) = 0, f(1) = 0$; tại điểm dừng: $f(0) = 1$.
+  - Từ bảng biến thiên suy ra: $\max\_{[-1; 1]} y = 1$ tại $x = 0$ và $\min\_{[-1; 1]} y = 0$ tại $x = \pm 1$.
+
+**Ví dụ 2:** Tìm giá trị lớn nhất và giá trị nhỏ nhất (nếu có) của hàm số $y = x - 2 + \frac{1}{x}$ trên khoảng $(0; +\infty)$.
+
+Lời giải Ví dụ 2:
+• Với $x \in (0; +\infty)$, đạo hàm là:
+  $$y' = 1 - \frac{1}{x^2} = \frac{x^2 - 1}{x^2}.$$
+• Ta có $y' = 0 \iff x^2 - 1 = 0 \iff x = 1$ (do $x > 0$).
+• Xét giới hạn tại biên:
+  $$\lim\_{x \to 0^+} y = +\infty; \quad \lim\_{x \to +\infty} y = +\infty.$$
+• Bảng biến thiên:
+  - Trên $(0; 1)$: $y' < 0 \implies$ hàm số nghịch biến từ $+\infty$ xuống $y(1) = 0$.
+  - Trên $(1; +\infty)$: $y' > 0 \implies$ hàm số đồng biến từ $0$ lên $+\infty$.
+• Vậy: $\min\_{(0; +\infty)} y = y(1) = 0$; hàm số không có giá trị lớn nhất trên khoảng $(0; +\infty)$.
+
+**Luyện tập 1:** Tìm giá trị lớn nhất và giá trị nhỏ nhất (nếu có) của các hàm số sau:
+a) $y = \sqrt{2x - x^2}$;
+b) $y = -x + \frac{1}{x - 1}$ trên khoảng $(1; +\infty)$.
+
+Lời giải Luyện tập 1:
+• a) Điều kiện $2x - x^2 \ge 0 \iff x \in [0; 2]$.
+  Đạo hàm: $y' = \frac{1 - x}{\sqrt{2x - x^2}}$ với $x \in (0; 2)$. Ta có $y' = 0 \iff x = 1$.
+  Giá trị tại các điểm: $y(0) = 0, y(2) = 0, y(1) = 1$.
+  Do đó: $\max\_{[0; 2]} y = 1$ tại $x = 1$; $\min\_{[0; 2]} y = 0$ tại $x = 0$ và $x = 2$.
+• b) Với $x \in (1; +\infty)$, ta có: $y' = -1 - \frac{1}{(x - 1)^2} = -\frac{(x - 1)^2 + 1}{(x - 1)^2} < 0, \forall x > 1$.
+  Hàm số nghịch biến trên $(1; +\infty)$. Giới hạn: $\lim\_{x \to 1^+} y = +\infty$, $\lim\_{x \to +\infty} y = -\infty$.
+  Vậy hàm số không có giá trị lớn nhất và không có giá trị nhỏ nhất trên $(1; +\infty)$.
+
+## Cách tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số trên một đoạn
+
+### a) Quy tắc thực hành trên đoạn [a; b]
+
+Định lí: Mọi hàm số liên tục trên một đoạn $[a; b]$ đều đạt được giá trị lớn nhất và giá trị nhỏ nhất trên đoạn đó.
+Các bước tìm GTLN và GTNN của hàm số liên tục $f(x)$ trên đoạn $[a; b]$:
+1\. Tìm các điểm $x_1, x_2, \dots, x_n \in (a; b)$ mà tại đó $f'(x) = 0$ hoặc đạo hàm không tồn tại;
+2\. Tính các giá trị $f(a), f(b), f(x_1), f(x_2), \dots, f(x_n)$;
+3\. So sánh các giá trị tìm được. Số lớn nhất trong các số đó chính là $M = \max\_{[a; b]} f(x)$, số nhỏ nhất chính là $m = \min\_{[a; b]} f(x)$.
+
+### b) Ví dụ và luyện tập trên đoạn
+
+**Ví dụ 4:** Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số $y = x^4 - 4x^2 + 3$ trên đoạn $[0; 4]$.
+
+Lời giải Ví dụ 4:
+• Hàm số liên tục trên đoạn $[0; 4]$.
+• Đạo hàm: $y' = 4x^3 - 8x = 4x(x^2 - 2)$.
+• Cho $y' = 0 \iff x = 0$ hoặc $x = \pm\sqrt{2}$. Điểm thuộc khoảng $(0; 4)$ là $x = \sqrt{2}$.
+• Tính các giá trị:
+  $$y(0) = 3; \quad y(\sqrt{2}) = (\sqrt{2})^4 - 4(\sqrt{2})^2 + 3 = 4 - 8 + 3 = -1; \quad y(4) = 4^4 - 4(4^2) + 3 = 256 - 64 + 3 = 195.$$
+• So sánh: Số lớn nhất là 195, số nhỏ nhất là $-1$.
+• Vậy: $\max\_{[0; 4]} y = y(4) = 195$; $\min\_{[0; 4]} y = y(\sqrt{2}) = -1$.
+
+**Ví dụ 5:** Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số $y = \sin x + \cos x$ trên đoạn $[0; 2\pi]$.
+
+Lời giải Ví dụ 5:
+• Đạo hàm: $y' = \cos x - \sin x$.
+• Cho $y' = 0 \iff \cos x = \sin x \iff \tan x = 1$.
+  Các nghiệm thuộc $(0; 2\pi)$ là $x = \frac{\pi}{4}$ và $x = \frac{5\pi}{4}$.
+• Tính các giá trị:
+  $$y(0) = 1; \quad y(2\pi) = 1; \quad y\left(\frac{\pi}{4}\right) = \sqrt{2}; \quad y\left(\frac{5\pi}{4}\right) = -\sqrt{2}.$$
+• Vậy: $\max\_{[0; 2\pi]} y = y\left(\frac{\pi}{4}\right) = \sqrt{2}$; $\min\_{[0; 2\pi]} y = y\left(\frac{5\pi}{4}\right) = -\sqrt{2}$.
+
+**Luyện tập 2:** Tìm giá trị lớn nhất và giá trị nhỏ nhất của các hàm số sau:
+a) $y = 2x^3 - 3x^2 + 5x + 2$ trên đoạn $[0; 2]$;
+b) $y = (x + 1)e^{-x}$ trên đoạn $[-1; 1]$.
+
+Lời giải Luyện tập 2:
+• a) $y' = 6x^2 - 6x + 5$. Biệt thức $\Delta' = 9 - 30 = -21 < 0 \implies y' > 0, \forall x \in \mathbb{R}$.
+  Hàm số đồng biến trên $[0; 2]$. Ta có: $y(0) = 2; y(2) = 2(8) - 3(4) + 5(2) + 2 = 16 - 12 + 10 + 2 = 16$.
+  Vậy $\max\_{[0; 2]} y = 16$ tại $x = 2$; $\min\_{[0; 2]} y = 2$ tại $x = 0$.
+• b) Đạo hàm: $y' = 1 \cdot e^{-x} + (x + 1)(-e^{-x}) = -x e^{-x}$.
+  $y' = 0 \iff x = 0 \in (-1; 1)$.
+  Tính các giá trị:
+  $$y(-1) = 0; \quad y(0) = 1; \quad y(1) = 2e^{-1} = \frac{2}{e} \approx 0{,}736.$$
+  Vậy $\max\_{[-1; 1]} y = y(0) = 1$; $\min\_{[-1; 1]} y = y(-1) = 0$.
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 1 (Cắt góc tấm bìa carton tạo hộp có thể tích lớn nhất):** Từ một tấm bìa carton hình vuông cạnh 60 cm, cắt bốn hình vuông bằng nhau cạnh $x$ (cm) ở bốn góc rồi gập thành chiếc hộp chữ nhật không nắp. Tìm $x$ để thể tích chiếc hộp đạt giá trị lớn nhất.
+
+Lời giải Vận dụng 1:
+• Điều kiện của cạnh cắt: $0 < x < 30$.
+• Sau khi gập, chiếc hộp có đáy hình vuông cạnh $60 - 2x$ (cm) và chiều cao là $x$ (cm).
+• Thể tích chiếc hộp là:
+  $$V(x) = x(60 - 2x)^2 = 4x^3 - 240x^2 + 3\\,600x\text{ (cm}^3\text{).}$$
+• Đạo hàm:
+  $$V'(x) = 12x^2 - 480x + 3\\,600 = 12(x^2 - 40x + 300) = 12(x - 10)(x - 30).$$
+• Cho $V'(x) = 0 \iff x = 10$ (thoả mãn $0 < x < 30$) hoặc $x = 30$ (loại).
+• Bảng biến thiên trên $(0; 30)$:
+  - Trên $(0; 10)$: $V'(x) > 0 \implies V(x)$ tăng từ $0$ lên $V(10) = 10(40)^2 = 16\\,000$.
+  - Trên $(10; 30)$: $V'(x) < 0 \implies V(x)$ giảm từ $16\\,000$ xuống $0$.
+• Vậy thể tích lớn nhất của chiếc hộp là $16\\,000\text{ cm}^3$ khi độ dài cạnh hình vuông cắt bỏ là $x = 10\text{ cm}$.
+
+**Vận dụng 2 (Mô hình lây lan của virus):** Sự lây lan của một loại virus được mô hình hoá bởi hàm số $N(t) = -t^3 + 12t^2$ ($0 \le t \le 12$), trong đó $N$ là số người nhiễm bệnh (tính bằng trăm người) và $t$ là thời gian (tuần).
+a) Ước tính số người tối đa bị nhiễm bệnh ở địa phương đó.
+b) Đạo hàm $N'(t)$ biểu thị tốc độ lây lan của virus. Hỏi virus sẽ lây lan nhanh nhất khi nào?
+
+Lời giải Vận dụng 2:
+• a) Xét hàm số $N(t) = -t^3 + 12t^2$ trên đoạn $[0; 12]$:
+  - Đạo hàm: $N'(t) = -3t^2 + 24t = -3t(t - 8)$.
+  - Cho $N'(t) = 0 \iff t = 0$ hoặc $t = 8$.
+  - Tính các giá trị: $N(0) = 0; N(12) = -(12)^3 + 12(12)^2 = 0; N(8) = -(8)^3 + 12(8^2) = -512 + 768 = 256$.
+  - Vậy số người nhiễm bệnh tối đa là 256 trăm người, tức là $25\\,600$ người, đạt được vào tuần thứ 8.
+• b) Tốc độ lây lan là hàm số $v(t) = N'(t) = -3t^2 + 24t$ trên $[0; 12]$:
+  - Đạo hàm của tốc độ: $v'(t) = -6t + 24$.
+  - Cho $v'(t) = 0 \iff t = 4\text{ (tuần)}$.
+  - Đạo hàm $v'(t)$ đổi dấu từ dương sang âm qua $t = 4$, do đó tốc độ lây lan đạt cực đại tại $t = 4$ với $v(4) = -3(16) + 24(4) = 48$ (trăm người/tuần).
+  - Vậy virus sẽ lây lan nhanh nhất vào tuần thứ 4.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 1.10:** Tìm giá trị lớn nhất và giá trị nhỏ nhất (nếu có) của các hàm số sau:
+a) $y = -x^2 + 4x + 3$;
+b) $y = x^3 - 2x^2 + 1$ trên $[0; +\infty)$;
+c) $y = \frac{x^2 - 2x + 3}{x - 1}$ trên $(1; +\infty)$;
+d) $y = \sqrt{4x - 2x^2}$.
+
+Lời giải Bài 1.10:
+• a) $y = -(x - 2)^2 + 7 \le 7$. Đẳng thức xảy ra khi $x = 2$. Vậy $\max\_{\mathbb{R}} y = 7$, hàm số không có giá trị nhỏ nhất.
+• b) Xét trên $[0; +\infty)$: $y' = 3x^2 - 4x = x(3x - 4)$. $y' = 0 \iff x = 0$ hoặc $x = \frac{4}{3}$.
+  Ta có: $y(0) = 1, y\left(\frac{4}{3}\right) = -\frac{5}{27}, \lim\_{x \to +\infty} y = +\infty$.
+  Vậy $\min\_{[0; +\infty)} y = -\frac{5}{27}$ tại $x = \frac{4}{3}$; hàm số không có giá trị lớn nhất.
+• c) Với $x > 1$: $y = \frac{(x - 1)^2 + 2}{x - 1} = (x - 1) + \frac{2}{x - 1}$.
+  Theo bất đẳng thức Cauchy: $y \ge 2\sqrt{(x - 1) \cdot \frac{2}{x - 1}} = 2\sqrt{2}$.
+  Dấu "=" xảy ra khi $x - 1 = \frac{2}{x - 1} \iff x = 1 + \sqrt{2}$.
+  Vậy $\min\_{(1; +\infty)} y = 2\sqrt{2}$; hàm số không có giá trị lớn nhất.
+• d) Điều kiện $4x - 2x^2 \ge 0 \iff x \in [0; 2]$. Ta có $4x - 2x^2 = 2 - 2(x - 1)^2 \in [0; 2]$.
+  Do đó: $\max y = \sqrt{2}$ tại $x = 1$; $\min y = 0$ tại $x = 0$ hoặc $x = 2$.
+
+**Bài 1.12:** Tìm giá trị lớn nhất và giá trị nhỏ nhất của các hàm số sau:
+a) $y = 2x^3 - 6x + 3$ trên đoạn $[-1; 2]$;
+b) $y = x^4 - 3x^2 + 2$ trên đoạn $[0; 3]$;
+c) $y = x - \sin 2x$ trên đoạn $[0; \pi]$;
+d) $y = (x^2 - x)e^x$ trên đoạn $[0; 1]$.
+
+Lời giải Bài 1.12:
+• a) $y' = 6x^2 - 6 = 6(x^2 - 1) = 0 \iff x = \pm 1$. Điểm thuộc $(-1; 2)$ là $x = 1$.
+  Giá trị: $y(-1) = 7, y(1) = -1, y(2) = 7$.
+  Vậy $\max\_{[-1; 2]} y = 7$ (tại $x = -1, x = 2$); $\min\_{[-1; 2]} y = -1$ (tại $x = 1$).
+• b) $y' = 4x^3 - 6x = 2x(2x^2 - 3) = 0 \iff x = 0$ hoặc $x = \sqrt{\frac{3}{2}} \in (0; 3)$.
+  Giá trị: $y(0) = 2; y\left(\sqrt{\frac{3}{2}}\right) = -\frac{1}{4}; y(3) = 56$.
+  Vậy $\max\_{[0; 3]} y = 56$ (tại $x = 3$); $\min\_{[0; 3]} y = -\frac{1}{4}$ (tại $x = \sqrt{\frac{3}{2}}$).
+• c) $y' = 1 - 2\cos 2x = 0 \iff \cos 2x = \frac{1}{2} \iff 2x = \frac{\pi}{3}$ hoặc $2x = \frac{5\pi}{3} \iff x = \frac{\pi}{6}$ hoặc $x = \frac{5\pi}{6}$.
+  Tính giá trị: $y(0) = 0; y(\pi) = \pi; y\left(\frac{\pi}{6}\right) = \frac{\pi}{6} - \frac{\sqrt{3}}{2} \approx -0{,}34; y\left(\frac{5\pi}{6}\right) = \frac{5\pi}{6} + \frac{\sqrt{3}}{2} \approx 3{,}48$.
+  Vậy $\max\_{[0; \pi]} y = \frac{5\pi}{6} + \frac{\sqrt{3}}{2}$; $\min\_{[0; \pi]} y = \frac{\pi}{6} - \frac{\sqrt{3}}{2}$.
+• d) $y' = (2x - 1)e^x + (x^2 - x)e^x = (x^2 + x - 1)e^x$.
+  $y' = 0 \iff x^2 + x - 1 = 0 \iff x = \frac{-1 + \sqrt{5}}{2} \in (0; 1)$.
+  Tính giá trị: $y(0) = 0, y(1) = 0, y\left(\frac{-1+\sqrt{5}}{2}\right) = (2 - \sqrt{5}) e^{\frac{\sqrt{5}-1}{2}} \approx -0{,}44$.
+  Vậy $\max\_{[0; 1]} y = 0$ (tại $x = 0, x = 1$); $\min\_{[0; 1]} y = (2 - \sqrt{5}) e^{\frac{\sqrt{5}-1}{2}}$.
+
+**Bài 1.14 (Thiết kế hộp chữ nhật đáy vuông thể tích cực đại):** Một chiếc hộp hình hộp chữ nhật không có nắp, đáy hình vuông cạnh $x$ và chiều cao $h$, có tổng diện tích bề mặt bằng $108\text{ cm}^2$. Tìm các kích thước của chiếc hộp để thể tích hộp là lớn nhất.
+
+Lời giải Bài 1.14:
+• Diện tích bề mặt chiếc hộp không nắp gồm 1 mặt đáy và 4 mặt bên:
+  $$S = x^2 + 4xh = 108 \implies h = \frac{108 - x^2}{4x} \quad (0 < x < \sqrt{108} = 6\sqrt{3}).$$
+• Thể tích chiếc hộp là:
+  $$V(x) = x^2 h = x^2 \cdot \frac{108 - x^2}{4x} = \frac{1}{4}(108x - x^3).$$
+• Đạo hàm:
+  $$V'(x) = \frac{1}{4}(108 - 3x^2) = \frac{3}{4}(36 - x^2).$$
+• Cho $V'(x) = 0 \iff x = 6$ (do $x > 0$).
+• Với $x = 6$, ta có $h = \frac{108 - 36}{24} = \frac{72}{24} = 3\text{ (cm)}$.
+• Đạo hàm $V'(x)$ đổi dấu từ dương sang âm khi qua $x = 6$, do đó thể tích đạt giá trị lớn nhất tại $x = 6\text{ cm}$ và $h = 3\text{ cm}$, với $V\_{\max} = 6^2 \cdot 3 = 108\text{ cm}^3$.
+
+**Bài 1.15 (Tối ưu chi phí sản xuất bình hình trụ):** Một chiếc bình hình trụ có dung tích $1\\,000\text{ cm}^3$. Giá vật liệu làm hai đáy (mặt trên và mặt dưới) là 1,2 nghìn đồng/cm$^2$, giá vật liệu làm mặt xung quanh là 0,75 nghìn đồng/cm$^2$. Tìm bán kính đáy $r$ và chiều cao $h$ để chi phí sản xuất mỗi bình là nhỏ nhất.
+
+Lời giải Bài 1.15:
+• Thể tích hình trụ: $V = \pi r^2 h = 1\\,000 \implies h = \frac{1\\,000}{\pi r^2}$ ($r > 0$).
+• Diện tích hai đáy là $2\pi r^2$; diện tích xung quanh là $2\pi r h = 2\pi r \cdot \frac{1\\,000}{\pi r^2} = \frac{2\\,000}{r}$.
+• Tổng chi phí sản xuất là:
+  $$C(r) = 1{,}2 \cdot (2\pi r^2) + 0{,}75 \cdot \left(\frac{2\\,000}{r}\right) = 2{,}4\pi r^2 + \frac{1\\,500}{r}\text{ (nghìn đồng).}$$
+• Đạo hàm:
+  $$C'(r) = 4{,}8\pi r - \frac{1\\,500}{r^2} = \frac{4{,}8\pi r^3 - 1\\,500}{r^2}.$$
+• Cho $C'(r) = 0 \iff r^3 = \frac{1\\,500}{4{,}8\pi} = \frac{312{,}5}{\pi} \implies r = \sqrt[3]{\frac{312{,}5}{\pi}} \approx 4{,}63\text{ (cm)}$.
+• Chiều cao tương ứng:
+  $$h = \frac{1\\,000}{\pi r^2} = \frac{1\\,000}{\pi \left(\frac{312{,}5}{\pi}\right)^{2/3}} = \frac{1\\,000}{\pi^{1/3} (312{,}5)^{2/3}} \approx 14{,}82\text{ (cm)} = 3{,}2r.$$
+• Đạo hàm $C'(r)$ đổi dấu từ âm sang dương khi qua $r = \sqrt[3]{\frac{312{,}5}{\pi}}$, do đó chi phí đạt giá trị nhỏ nhất tại các kích thước này.

@@ -1,0 +1,237 @@
+---
+title: 'Lesson 2: Maximum value and minimum value of a function.'
+description: Theoretical system for the lesson on Maximum value and minimum value of a function with illustrative examples.
+tags:
+  - grade 12
+  - Maximum value of a function
+  - Minimum value of a function
+grade: 12
+order: 2
+updatedDate: 2026-10-29T10:30:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Maximum value of a function (Absolute / Global maximum)
+
+·       Minimum value of a function (Absolute / Global minimum)
+
+### **Knowledge and Skills:**
+
+·       Recognize the maximum and minimum values of a function on a given domain.
+
+·       Determine the maximum and minimum values of a function using derivatives and tables of variations.
+
+·       Master the procedure for finding the maximum and minimum values of a continuous function on a closed interval $[a; b]$.
+
+·       Apply maximum and minimum value concepts to solve practical optimization problems (maximizing the volume of a cardboard box, modeling virus spread rates, minimizing container manufacturing costs).
+
+## Definition of Maximum and Minimum Values of a Function
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gtln_gtnn_ham_so"/>
+
+### a) Definition
+
+Let the function $y = f(x)$ be defined on a set $D$.
+• A real number $M$ is called the maximum value (or absolute maximum) of the function $y = f(x)$ on $D$ if $f(x) \le M$ for all $x \in D$ and there exists $x_0 \in D$ such that $f(x_0) = M$.
+  Notation: $M = \max\_{x \in D} f(x)$ or $M = \max_D f(x)$.
+• A real number $m$ is called the minimum value (or absolute minimum) of the function $y = f(x)$ on $D$ if $f(x) \ge m$ for all $x \in D$ and there exists $x_0 \in D$ such that $f(x_0) = m$.
+  Notation: $m = \min\_{x \in D} f(x)$ or $m = \min_D f(x)$.
+Notes:
+\- When referring to the maximum and minimum values of a function $f(x)$ without specifying a set $D$, it is understood to be on the entire natural domain of the function.
+\- To find the maximum and minimum values of a function on a general set $D$ (open interval, half-open interval, unbounded set), we typically construct the table of variations of the function on $D$.
+
+### b) Examples and Practice on Finding Extrema on a Set
+
+**Example 1:** Find the maximum and minimum values of the function $y = f(x) = \sqrt{1 - x^2}$.
+
+Solution to Example 1:
+• Domain: $D = [-1; 1]$.
+• Method 1 (Direct algebraic inequality):
+  - For all $x \in [-1; 1]$, we have $1 - x^2 \ge 0 \implies f(x) = \sqrt{1 - x^2} \ge 0$. Equality holds when $x = -1$ or $x = 1$. Thus: $\min\_{[-1; 1]} f(x) = f(-1) = f(1) = 0$.
+  - On the other hand, $1 - x^2 \le 1 \implies f(x) = \sqrt{1 - x^2} \le 1$. Equality holds when $x = 0$. Thus: $\max\_{[-1; 1]} f(x) = f(0) = 1$.
+• Method 2 (Using a table of variations):
+  - On the open interval $(-1; 1)$: $y' = -\frac{x}{\sqrt{1 - x^2}}$. We have $y' = 0 \iff x = 0$.
+  - Function values at endpoints: $f(-1) = 0, f(1) = 0$; at the critical point: $f(0) = 1$.
+  - From the table of variations: $\max\_{[-1; 1]} y = 1$ at $x = 0$ and $\min\_{[-1; 1]} y = 0$ at $x = \pm 1$.
+
+**Example 2:** Find the maximum and minimum values (if any) of the function $y = x - 2 + \frac{1}{x}$ on the interval $(0; +\infty)$.
+
+Solution to Example 2:
+• For $x \in (0; +\infty)$, the derivative is:
+  $$y' = 1 - \frac{1}{x^2} = \frac{x^2 - 1}{x^2}.$$
+• Setting $y' = 0 \iff x^2 - 1 = 0 \iff x = 1$ (since $x > 0$).
+• Limits at the boundary points:
+  $$\lim\_{x \to 0^+} y = +\infty; \quad \lim\_{x \to +\infty} y = +\infty.$$
+• Table of variations:
+  - On $(0; 1)$: $y' < 0 \implies$ the function decreases from $+\infty$ to $y(1) = 0$.
+  - On $(1; +\infty)$: $y' > 0 \implies$ the function increases from $0$ to $+\infty$.
+• Conclusion: $\min\_{(0; +\infty)} y = y(1) = 0$; the function has no maximum value on $(0; +\infty)$.
+
+**Practice 1:** Find the maximum and minimum values (if any) of the following functions:
+a) $y = \sqrt{2x - x^2}$;
+b) $y = -x + \frac{1}{x - 1}$ on the interval $(1; +\infty)$.
+
+Solution to Practice 1:
+• a) Domain condition $2x - x^2 \ge 0 \iff x \in [0; 2]$.
+  Derivative: $y' = \frac{1 - x}{\sqrt{2x - x^2}}$ for $x \in (0; 2)$. We have $y' = 0 \iff x = 1$.
+  Values at critical points and endpoints: $y(0) = 0, y(2) = 0, y(1) = 1$.
+  Therefore: $\max\_{[0; 2]} y = 1$ at $x = 1$; $\min\_{[0; 2]} y = 0$ at $x = 0$ and $x = 2$.
+• b) For $x \in (1; +\infty)$, we have: $y' = -1 - \frac{1}{(x - 1)^2} = -\frac{(x - 1)^2 + 1}{(x - 1)^2} < 0, \forall x > 1$.
+  The function is strictly decreasing on $(1; +\infty)$. Limits: $\lim\_{x \to 1^+} y = +\infty$, $\lim\_{x \to +\infty} y = -\infty$.
+  Thus, the function has neither a maximum nor a minimum value on $(1; +\infty)$.
+
+## Finding the Maximum and Minimum Values of a Continuous Function on a Closed Interval
+
+### a) Practical Procedure on [a; b]
+
+Extreme Value Theorem: Every continuous function on a closed bounded interval $[a; b]$ attains both an absolute maximum and an absolute minimum value on that interval.
+Steps to find the maximum and minimum values of a continuous function $f(x)$ on $[a; b]$:
+1\. Find all critical points $x_1, x_2, \dots, x_n \in (a; b)$ where $f'(x) = 0$ or where the derivative does not exist;
+2\. Compute the function values $f(a), f(b), f(x_1), f(x_2), \dots, f(x_n)$;
+3\. Compare the computed values. The greatest of these values is $M = \max\_{[a; b]} f(x)$, and the least is $m = \min\_{[a; b]} f(x)$.
+
+### b) Examples and Practice on Closed Intervals
+
+**Example 4:** Find the maximum and minimum values of the function $y = x^4 - 4x^2 + 3$ on the interval $[0; 4]$.
+
+Solution to Example 4:
+• The function is continuous on $[0; 4]$.
+• Derivative: $y' = 4x^3 - 8x = 4x(x^2 - 2)$.
+• Set $y' = 0 \iff x = 0$ or $x = \pm\sqrt{2}$. The interior point in $(0; 4)$ is $x = \sqrt{2}$.
+• Compute the values:
+  $$y(0) = 3; \quad y(\sqrt{2}) = (\sqrt{2})^4 - 4(\sqrt{2})^2 + 3 = 4 - 8 + 3 = -1; \quad y(4) = 4^4 - 4(4^2) + 3 = 256 - 64 + 3 = 195.$$
+• Comparison: The largest value is 195, and the smallest value is $-1$.
+• Conclusion: $\max\_{[0; 4]} y = y(4) = 195$; $\min\_{[0; 4]} y = y(\sqrt{2}) = -1$.
+
+**Example 5:** Find the maximum and minimum values of the function $y = \sin x + \cos x$ on the interval $[0; 2\pi]$.
+
+Solution to Example 5:
+• Derivative: $y' = \cos x - \sin x$.
+• Setting $y' = 0 \iff \cos x = \sin x \iff \tan x = 1$.
+  Solutions in $(0; 2\pi)$ are $x = \frac{\pi}{4}$ and $x = \frac{5\pi}{4}$.
+• Evaluate function values:
+  $$y(0) = 1; \quad y(2\pi) = 1; \quad y\left(\frac{\pi}{4}\right) = \sqrt{2}; \quad y\left(\frac{5\pi}{4}\right) = -\sqrt{2}.$$
+• Conclusion: $\max\_{[0; 2\pi]} y = y\left(\frac{\pi}{4}\right) = \sqrt{2}$; $\min\_{[0; 2\pi]} y = y\left(\frac{5\pi}{4}\right) = -\sqrt{2}$.
+
+**Practice 2:** Find the maximum and minimum values of the following functions:
+a) $y = 2x^3 - 3x^2 + 5x + 2$ on $[0; 2]$;
+b) $y = (x + 1)e^{-x}$ on $[-1; 1]$.
+
+Solution to Practice 2:
+• a) $y' = 6x^2 - 6x + 5$. Discriminant $\Delta' = 9 - 30 = -21 < 0 \implies y' > 0, \forall x \in \mathbb{R}$.
+  The function is strictly increasing on $[0; 2]$. Values: $y(0) = 2; y(2) = 2(8) - 3(4) + 5(2) + 2 = 16 - 12 + 10 + 2 = 16$.
+  Thus: $\max\_{[0; 2]} y = 16$ at $x = 2$; $\min\_{[0; 2]} y = 2$ at $x = 0$.
+• b) Derivative: $y' = 1 \cdot e^{-x} + (x + 1)(-e^{-x}) = -x e^{-x}$.
+  $y' = 0 \iff x = 0 \in (-1; 1)$.
+  Evaluate function values:
+  $$y(-1) = 0; \quad y(0) = 1; \quad y(1) = 2e^{-1} = \frac{2}{e} \approx 0.736.$$
+  Thus: $\max\_{[-1; 1]} y = y(0) = 1$; $\min\_{[-1; 1]} y = y(-1) = 0$.
+
+## Applications and Exercises
+
+### a) Real-World Optimization Problems
+
+**Application 1 (Maximizing the Volume of a Cardboard Box):** From a square piece of cardboard with side length 60 cm, four congruent squares of side length $x$ (cm) are cut from the corners, and the flaps are folded up to form an open rectangular box. Find $x$ such that the volume of the box is maximized.
+
+Solution to Application 1:
+• Domain constraint for the cut square: $0 < x < 30$.
+• After folding, the open box has a square base of side $60 - 2x$ (cm) and height $x$ (cm).
+• The volume function of the box is:
+  $$V(x) = x(60 - 2x)^2 = 4x^3 - 240x^2 + 3\\,600x\text{ (cm}^3\text{).}$$
+• Derivative:
+  $$V'(x) = 12x^2 - 480x + 3\\,600 = 12(x^2 - 40x + 300) = 12(x - 10)(x - 30).$$
+• Set $V'(x) = 0 \iff x = 10$ (satisfies $0 < x < 30$) or $x = 30$ (rejected).
+• Table of variations on $(0; 30)$:
+  - On $(0; 10)$: $V'(x) > 0 \implies V(x)$ increases from $0$ to $V(10) = 10(40)^2 = 16\\,000$.
+  - On $(10; 30)$: $V'(x) < 0 \implies V(x)$ decreases from $16\\,000$ to $0$.
+• Conclusion: The maximum volume of the box is $16\\,000\text{ cm}^3$, achieved when the cut side length is $x = 10\text{ cm}$.
+
+**Application 2 (Epidemic Virus Spread Model):** The spread of a virus in a community is modeled by the function $N(t) = -t^3 + 12t^2$ ($0 \le t \le 12$), where $N$ is the number of infected individuals (in hundreds of people) and $t$ is time (in weeks).
+a) Estimate the maximum number of infected individuals in the community.
+b) The derivative $N'(t)$ represents the transmission rate (rate of spread) of the virus. When will the virus spread at the fastest rate?
+
+Solution to Application 2:
+• a) Consider the function $N(t) = -t^3 + 12t^2$ on the closed interval $[0; 12]$:
+  - Derivative: $N'(t) = -3t^2 + 24t = -3t(t - 8)$.
+  - Set $N'(t) = 0 \iff t = 0$ or $t = 8$.
+  - Values: $N(0) = 0; N(12) = -(12)^3 + 12(12)^2 = 0; N(8) = -(8)^3 + 12(8^2) = -512 + 768 = 256$.
+  - Therefore, the maximum number of infected individuals is 256 hundred people, or $25\\,600$ people, occurring at week 8.
+• b) The rate of spread is given by $v(t) = N'(t) = -3t^2 + 24t$ on $[0; 12]$:
+  - Derivative of rate: $v'(t) = -6t + 24$.
+  - Set $v'(t) = 0 \iff t = 4\text{ (weeks)}$.
+  - As $t$ passes through $4$, $v'(t)$ changes sign from positive to negative; hence the transmission rate reaches its maximum at $t = 4$, with $v(4) = -3(16) + 24(4) = 48$ (hundred people/week).
+  - Therefore, the virus spreads fastest at week 4.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 1.10:** Find the maximum and minimum values (if any) of the following functions:
+a) $y = -x^2 + 4x + 3$;
+b) $y = x^3 - 2x^2 + 1$ on $[0; +\infty)$;
+c) $y = \frac{x^2 - 2x + 3}{x - 1}$ on $(1; +\infty)$;
+d) $y = \sqrt{4x - 2x^2}$.
+
+Solution to Exercise 1.10:
+• a) $y = -(x - 2)^2 + 7 \le 7$. Equality holds when $x = 2$. Thus $\max\_{\mathbb{R}} y = 7$; the function has no minimum value.
+• b) On $[0; +\infty)$: $y' = 3x^2 - 4x = x(3x - 4)$. $y' = 0 \iff x = 0$ or $x = \frac{4}{3}$.
+  Values: $y(0) = 1, y\left(\frac{4}{3}\right) = -\frac{5}{27}, \lim\_{x \to +\infty} y = +\infty$.
+  Thus $\min\_{[0; +\infty)} y = -\frac{5}{27}$ at $x = \frac{4}{3}$; the function has no maximum value.
+• c) For $x > 1$: $y = \frac{(x - 1)^2 + 2}{x - 1} = (x - 1) + \frac{2}{x - 1}$.
+  By the AM-GM inequality: $y \ge 2\sqrt{(x - 1) \cdot \frac{2}{x - 1}} = 2\sqrt{2}$.
+  Equality holds when $x - 1 = \frac{2}{x - 1} \iff x = 1 + \sqrt{2}$.
+  Thus $\min\_{(1; +\infty)} y = 2\sqrt{2}$; the function has no maximum value.
+• d) Domain condition $4x - 2x^2 \ge 0 \iff x \in [0; 2]$. We have $4x - 2x^2 = 2 - 2(x - 1)^2 \in [0; 2]$.
+  Therefore: $\max y = \sqrt{2}$ at $x = 1$; $\min y = 0$ at $x = 0$ or $x = 2$.
+
+**Exercise 1.12:** Find the maximum and minimum values of the following functions:
+a) $y = 2x^3 - 6x + 3$ on the interval $[-1; 2]$;
+b) $y = x^4 - 3x^2 + 2$ on the interval $[0; 3]$;
+c) $y = x - \sin 2x$ on the interval $[0; \pi]$;
+d) $y = (x^2 - x)e^x$ on the interval $[0; 1]$.
+
+Solution to Exercise 1.12:
+• a) $y' = 6x^2 - 6 = 6(x^2 - 1) = 0 \iff x = \pm 1$. The interior critical point is $x = 1$.
+  Values: $y(-1) = 7, y(1) = -1, y(2) = 7$.
+  Thus $\max\_{[-1; 2]} y = 7$ (at $x = -1, x = 2$); $\min\_{[-1; 2]} y = -1$ (at $x = 1$).
+• b) $y' = 4x^3 - 6x = 2x(2x^2 - 3) = 0 \iff x = 0$ or $x = \sqrt{\frac{3}{2}} \in (0; 3)$.
+  Values: $y(0) = 2; y\left(\sqrt{\frac{3}{2}}\right) = -\frac{1}{4}; y(3) = 56$.
+  Thus $\max\_{[0; 3]} y = 56$ (at $x = 3$); $\min\_{[0; 3]} y = -\frac{1}{4}$ (at $x = \sqrt{\frac{3}{2}}$).
+• c) $y' = 1 - 2\cos 2x = 0 \iff \cos 2x = \frac{1}{2} \iff 2x = \frac{\pi}{3}$ or $2x = \frac{5\pi}{3} \iff x = \frac{\pi}{6}$ or $x = \frac{5\pi}{6}$.
+  Values: $y(0) = 0; y(\pi) = \pi; y\left(\frac{\pi}{6}\right) = \frac{\pi}{6} - \frac{\sqrt{3}}{2} \approx -0.34; y\left(\frac{5\pi}{6}\right) = \frac{5\pi}{6} + \frac{\sqrt{3}}{2} \approx 3.48$.
+  Thus $\max\_{[0; \pi]} y = \frac{5\pi}{6} + \frac{\sqrt{3}}{2}$; $\min\_{[0; \pi]} y = \frac{\pi}{6} - \frac{\sqrt{3}}{2}$.
+• d) $y' = (2x - 1)e^x + (x^2 - x)e^x = (x^2 + x - 1)e^x$.
+  $y' = 0 \iff x^2 + x - 1 = 0 \iff x = \frac{-1 + \sqrt{5}}{2} \in (0; 1)$.
+  Values: $y(0) = 0, y(1) = 0, y\left(\frac{-1+\sqrt{5}}{2}\right) = (2 - \sqrt{5}) e^{\frac{\sqrt{5}-1}{2}} \approx -0.44$.
+  Thus $\max\_{[0; 1]} y = 0$ (at $x = 0, x = 1$); $\min\_{[0; 1]} y = (2 - \sqrt{5}) e^{\frac{\sqrt{5}-1}{2}}$.
+
+**Exercise 1.14 (Designing an Open Box with Square Base and Maximum Volume):** A manufacturer wishes to design an open-top rectangular box with a square base of side length $x$ and height $h$, having a total surface area of $108\text{ cm}^2$. Find the dimensions of the box to maximize its volume.
+
+Solution to Exercise 1.14:
+• The surface area of the open-top box consists of 1 base and 4 sides:
+  $$S = x^2 + 4xh = 108 \implies h = \frac{108 - x^2}{4x} \quad (0 < x < \sqrt{108} = 6\sqrt{3}).$$
+• The volume of the box is:
+  $$V(x) = x^2 h = x^2 \cdot \frac{108 - x^2}{4x} = \frac{1}{4}(108x - x^3).$$
+• Derivative:
+  $$V'(x) = \frac{1}{4}(108 - 3x^2) = \frac{3}{4}(36 - x^2).$$
+• Setting $V'(x) = 0 \iff x = 6$ (since $x > 0$).
+• For $x = 6$, we obtain $h = \frac{108 - 36}{24} = \frac{72}{24} = 3\text{ (cm)}$.
+• Since $V'(x)$ changes sign from positive to negative as $x$ passes through $6$, the volume achieves its absolute maximum at $x = 6\text{ cm}$ and $h = 3\text{ cm}$, with $V\_{\max} = 6^2 \cdot 3 = 108\text{ cm}^3$.
+
+**Exercise 1.15 (Cost Minimization for a Cylindrical Container):** A manufacturer produces cylindrical cans with a capacity of $1\\,000\text{ cm}^3$. The material for the top and bottom covers costs 1.2 thousand VND/cm$^2$, while the material for the lateral surface costs 0.75 thousand VND/cm$^2$. Find the radius $r$ and height $h$ that minimize the material cost per can.
+
+Solution to Exercise 1.15:
+• Cylinder volume: $V = \pi r^2 h = 1\\,000 \implies h = \frac{1\\,000}{\pi r^2}$ ($r > 0$).
+• The area of the two circular bases is $2\pi r^2$; the lateral area is $2\pi r h = 2\pi r \cdot \frac{1\\,000}{\pi r^2} = \frac{2\\,000}{r}$.
+• The total production cost function is:
+  $$C(r) = 1.2 \cdot (2\pi r^2) + 0.75 \cdot \left(\frac{2\\,000}{r}\right) = 2.4\pi r^2 + \frac{1\\,500}{r}\text{ (thousand VND).}$$
+• Derivative:
+  $$C'(r) = 4.8\pi r - \frac{1\\,500}{r^2} = \frac{4.8\pi r^3 - 1\\,500}{r^2}.$$
+• Setting $C'(r) = 0 \iff r^3 = \frac{1\\,500}{4.8\pi} = \frac{312.5}{\pi} \implies r = \sqrt[3]{\frac{312.5}{\pi}} \approx 4.63\text{ (cm)}$.
+• The corresponding height is:
+  $$h = \frac{1\\,000}{\pi r^2} = \frac{1\\,000}{\pi \left(\frac{312.5}{\pi}\right)^{2/3}} = \frac{1\\,000}{\pi^{1/3} (312.5)^{2/3}} \approx 14.82\text{ (cm)} = 3.2r.$$
+• Since $C'(r)$ changes sign from negative to positive as $r$ passes through $\sqrt[3]{\frac{312.5}{\pi}}$, the cost achieves its absolute minimum at these dimensions.
