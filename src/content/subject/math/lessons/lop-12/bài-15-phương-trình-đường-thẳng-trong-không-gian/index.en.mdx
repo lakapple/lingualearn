@@ -1,0 +1,281 @@
+---
+title: 'Lesson 15: Equations of a line in space'
+description: Theoretical system for the lesson on equations of a line in space with illustrative examples.
+tags:
+  - grade 12
+  - Direction vector of a line in space
+  - Parametric equations of a line
+  - Symmetric (canonical) equations of a line
+  - Relative positions between two lines
+grade: 12
+order: 15
+updatedDate: 2026-10-29T16:14:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Direction vector of a line in space
+
+·       Parametric equations of a line
+
+·       Symmetric (canonical) equations of a line
+
+·       Relative positions between two lines (parallel, coincident, intersecting, skew, perpendicular)
+
+### **Knowledge and Skills:**
+
+·       Recognize direction vectors, parametric equations, and symmetric equations of a line in space.
+
+·       Formulate parametric and symmetric equations of a line passing through a given point with a known direction vector, or passing through two distinct points.
+
+·       Determine the condition for two lines to be perpendicular using the dot product of their direction vectors.
+
+·       Identify and analyze the relative position between two lines in space using vector methods and systems of equations.
+
+·       Apply equations of lines to solve real-world problems (line-of-sight and visual obstacles, collision detection in motion, trajectory of light rays and flagpole shadows).
+
+## Equations of a Line in Space
+
+\<Youtube url="https://www.youtube.com/watch?v=example_phuong_trinh_duong_thang"/>
+
+### a) Direction Vector of a Line
+
+• A non-zero vector $\vec{u} \ne \vec{0}$ is called a direction vector of a line $\Delta$ if the line of action of $\vec{u}$ is parallel to or coincides with $\Delta$.
+• Notes:
+  - A line is completely determined when a point through which it passes and one of its direction vectors are known.
+  - If $\vec{u}$ is a direction vector of $\Delta$, then $k\vec{u}$ ($k \ne 0$) is also a direction vector of $\Delta$.
+
+**Example 1:** Given a parallelepiped $ABCD.A'B'C'D'$. Identify the direction vectors of the line $BC'$ whose initial and terminal points are vertices of the parallelepiped.
+
+Solution to Example 1:
+• In the parallelepiped $ABCD.A'B'C'D'$, the line $BC'$ passes through vertices $B$ and $C'$, so it admits $\vec{BC'}$ and $\vec{C'B}$ as direction vectors.
+• Furthermore, quadrilateral $ABC'D'$ is a parallelogram, which implies $\vec{AD'} = \vec{BC'}$ and $\vec{D'A} = \vec{C'B}$. Thus, the lines of action of $\vec{AD'}$ and $\vec{D'A}$ are also parallel to the line $BC'$.
+• Therefore, the required direction vectors are: $\vec{BC'}, \vec{C'B}, \vec{AD'}, \vec{D'A}$.
+
+### b) Parametric Equations of a Line
+
+In space $Oxyz$, let $\Delta$ be a line passing through the point $A(x_0; y_0; z_0)$ with direction vector $\vec{u} = (a; b; c)$.
+• The system of equations:
+$$\begin{cases} x = x_0 + at \\\ y = y_0 + bt \\\ z = z_0 + ct \end{cases} \quad (t \in \mathbb{R})$$
+is called the parametric equations of the line $\Delta$, where $t$ is the parameter.
+• Note: Each specific real value of the parameter $t$ determines a unique point $M(x; y; z)$ on $\Delta$, and conversely, each point on $\Delta$ corresponds to a unique value of $t$.
+
+**Example 2:** In space $Oxyz$, consider the line $\Delta: \begin{cases} x = -1 + 3t \\\ y = 1 \\\ z = 2t \end{cases}$.
+a) Specify a point lying on $\Delta$ and a direction vector of $\Delta$.
+b) Write the parametric equations of the line $\Delta'$ passing through $A(2; 1; 0)$ with direction vector $\vec{v} = (3; 0; 2)$.
+
+Solution to Example 2:
+• a) Rewriting the equations of $\Delta$ as $\begin{cases} x = -1 + 3t \\\ y = 1 + 0t \\\ z = 0 + 2t \end{cases}$, we observe that the point $M(-1; 1; 0)$ lies on $\Delta$ and $\vec{u} = (3; 0; 2)$ is a direction vector of $\Delta$.
+• b) The line $\Delta'$ passing through $A(2; 1; 0)$ with direction vector $\vec{v} = (3; 0; 2)$ has parametric equations:
+  $$\begin{cases} x = 2 + 3s \\\ y = 1 \\\ z = 2s \end{cases} \quad (s \in \mathbb{R}).$$
+
+### c) Symmetric (Canonical) Equations of a Line
+
+In space $Oxyz$, let $\Delta$ be a line passing through the point $A(x_0; y_0; z_0)$ with direction vector $\vec{u} = (a; b; c)$, where $a, b, c$ are all non-zero ($abc \ne 0$).
+• The system of double equalities:
+$$\frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}$$
+is called the symmetric (or canonical) equations of the line $\Delta$.
+• Note: If at least one of the components $a, b, c$ of the direction vector is zero, the line does not possess symmetric equations.
+
+**Example 4:** Write the parametric and symmetric equations of the line $\Delta$ passing through $M(1; -2; 4)$ with direction vector $\vec{u} = (3; -5; 1)$.
+
+Solution to Example 4:
+• The parametric equations of $\Delta$ are:
+  $$\begin{cases} x = 1 + 3t \\\ y = -2 - 5t \\\ z = 4 + t \end{cases} \quad (t \in \mathbb{R}).$$
+• Since all coordinates of $\vec{u}$ are non-zero, the symmetric equations of $\Delta$ are:
+  $$\frac{x - 1}{3} = \frac{y + 2}{-5} = \frac{z - 4}{1}.$$
+
+### d) Formulating Equations of a Line Passing Through Two Points
+
+In space $Oxyz$, given two distinct points $A_1(x_1; y_1; z_1)$ and $A_2(x_2; y_2; z_2)$.
+• The line $A_1 A_2$ passes through $A_1$ and admits $\vec{A_1 A_2} = (x_2 - x_1; y_2 - y_1; z_2 - z_1)$ as a direction vector.
+• The parametric equations of the line $A_1 A_2$ are:
+  $$\begin{cases} x = x_1 + (x_2 - x_1)t \\\ y = y_1 + (y_2 - y_1)t \\\ z = z_1 + (z_2 - z_1)t \end{cases} \quad (t \in \mathbb{R}).$$
+• When $x_1 \ne x_2, y_1 \ne y_2, z_1 \ne z_2$, the symmetric equations are:
+  $$\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1} = \frac{z - z_1}{z_2 - z_1}.$$
+
+**Example 6:** Write the parametric and symmetric equations of the line passing through two points $A(1; 2; -1)$ and $B(2; 4; 0)$.
+
+Solution to Example 6:
+• A direction vector is $\vec{AB} = (2 - 1; 4 - 2; 0 - (-1)) = (1; 2; 1)$.
+• The parametric equations of line $AB$ passing through $A(1; 2; -1)$ are:
+  $$\begin{cases} x = 1 + t \\\ y = 2 + 2t \\\ z = -1 + t \end{cases} \quad (t \in \mathbb{R}).$$
+• The symmetric equations of line $AB$ are:
+  $$\frac{x - 1}{1} = \frac{y - 2}{2} = \frac{z + 1}{1}.$$
+
+## Perpendicular Lines in Space
+
+### a) Condition for Two Lines to Be Perpendicular
+
+In space $Oxyz$, let $\Delta_1, \Delta_2$ be two lines with direction vectors $\vec{u}\_1 = (a_1; b_1; c_1)$ and $\vec{u}\_2 = (a_2; b_2; c_2)$, respectively.
+• Theorem: The lines $\Delta_1$ and $\Delta_2$ are perpendicular if and only if the dot product of their direction vectors equals zero:
+$$\Delta_1 \perp \Delta_2 \iff \vec{u}\_1 \cdot \vec{u}\_2 = 0 \iff a_1 a_2 + b_1 b_2 + c_1 c_2 = 0$$
+
+**Example 7:** Prove that the following two lines are perpendicular:
+$$\Delta_1: \begin{cases} x = 1 + 2t \\\ y = -1 - 3t \\\ z = 2 - t \end{cases} \quad \text{and} \quad \Delta_2: \begin{cases} x = 2 + s \\\ y = 1 - 2s \\\ z = 8s \end{cases}$$
+
+Solution to Example 7:
+• The direction vectors of $\Delta_1$ and $\Delta_2$ are $\vec{u}\_1 = (2; -3; -1)$ and $\vec{u}\_2 = (1; -2; 8)$, respectively.
+• Their dot product is:
+  $$\vec{u}\_1 \cdot \vec{u}\_2 = 2(1) + (-3)(-2) + (-1)(8) = 2 + 6 - 8 = 0.$$
+• Since $\vec{u}\_1 \cdot \vec{u}\_2 = 0$, we conclude that $\Delta_1 \perp \Delta_2$.
+
+## Relative Positions Between Two Lines
+
+### a) Classification of Relative Positions
+
+In space $Oxyz$, let $\Delta_1$ be the line passing through $A_1(x_1; y_1; z_1)$ with direction vector $\vec{u}\_1 = (a_1; b_1; c_1)$ and $\Delta_2$ be the line passing through $A_2(x_2; y_2; z_2)$ with direction vector $\vec{u}\_2 = (a_2; b_2; c_2)$:
+• $\Delta_1 \parallel \Delta_2 \iff \vec{u}\_1$ is collinear with $\vec{u}\_2$ ($[\vec{u}\_1, \vec{u}\_2] = \vec{0}$) and $A_1 \notin \Delta_2$.
+• $\Delta_1 \equiv \Delta_2 \iff \vec{u}\_1$ is collinear with $\vec{u}\_2$ ($[\vec{u}\_1, \vec{u}\_2] = \vec{0}$) and $A_1 \in \Delta_2$.
+• $\Delta_1$ and $\Delta_2$ intersect $\iff [\vec{u}\_1, \vec{u}\_2] \ne \vec{0}$ and $\vec{A_1 A_2} \cdot [\vec{u}\_1, \vec{u}\_2] = 0$.
+• $\Delta_1$ and $\Delta_2$ are skew $\iff \vec{A_1 A_2} \cdot [\vec{u}\_1, \vec{u}\_2] \ne 0$.
+
+Method using parametric systems:
+Consider the system of 3 linear equations in two parameters $t, s$:
+$$\begin{cases} x_1 + a_1 t = x_2 + a_2 s \\\ y_1 + b_1 t = y_2 + b_2 s \\\ z_1 + c_1 t = z_2 + c_2 s \end{cases} \quad (\*)$$
+\- The system (\*) has a unique solution $(t; s) \iff \Delta_1$ intersects $\Delta_2$ at the corresponding point.
+\- The system (\*) has no solution and $\vec{u}\_1, \vec{u}\_2$ are collinear $\iff \Delta_1 \parallel \Delta_2$.
+\- The system (\*) has no solution and $\vec{u}\_1, \vec{u}\_2$ are non-collinear $\iff \Delta_1$ and $\Delta_2$ are skew.
+\- The system (\*) has infinitely many solutions $\iff \Delta_1 \equiv \Delta_2$.
+
+**Example 8:** Prove that the following two lines are perpendicular and skew:
+$$\Delta_1: \begin{cases} x = 1 + t \\\ y = 2 - t \\\ z = -1 + 2t \end{cases} \quad \text{and} \quad \Delta_2: \frac{x - 4}{3} = \frac{y + 1}{1} = \frac{z}{-1}.$$
+
+Solution to Example 8:
+• The line $\Delta_1$ passes through $A_1(1; 2; -1)$ with direction vector $\vec{u}\_1 = (1; -1; 2)$.
+  The line $\Delta_2$ passes through $A_2(4; -1; 0)$ with direction vector $\vec{u}\_2 = (3; 1; -1)$.
+• Dot product: $\vec{u}\_1 \cdot \vec{u}\_2 = 1(3) + (-1)(1) + 2(-1) = 3 - 1 - 2 = 0 \implies \Delta_1 \perp \Delta_2$.
+• Skewness test: $\vec{A_1 A_2} = (4 - 1; -1 - 2; 0 - (-1)) = (3; -3; 1)$.
+  Cross product: $[\vec{u}\_1, \vec{u}\_2] = ((-1)(-1) - 2(1); 2(3) - 1(-1); 1(1) - (-1)(3)) = (-1; 7; 4)$.
+  Scalar triple product: $\vec{A_1 A_2} \cdot [\vec{u}\_1, \vec{u}\_2] = 3(-1) + (-3)(7) + 1(4) = -3 - 21 + 4 = -20 \ne 0$.
+• Hence, $\Delta_1$ and $\Delta_2$ are both perpendicular and skew.
+
+**Example 9:** Prove that the following two lines intersect:
+$$\Delta_1: \begin{cases} x = 1 - t \\\ y = 2 + t \\\ z = -1 + 2t \end{cases} \quad \text{and} \quad \Delta_2: \begin{cases} x = -6 + s \\\ y = 5 + s \\\ z = 5 + 2s \end{cases}$$
+
+Solution to Example 9:
+• $\Delta_1$ passes through $A_1(1; 2; -1)$ with $\vec{u}\_1 = (-1; 1; 2)$; $\Delta_2$ passes through $A_2(-6; 5; 5)$ with $\vec{u}\_2 = (1; 1; 2)$.
+• Setting up the system to find the intersection point:
+  $$\begin{cases} 1 - t = -6 + s \\\ 2 + t = 5 + s \\\ -1 + 2t = 5 + 2s \end{cases} \iff \begin{cases} s + t = 7 \\\ s - t = -3 \\\ 2s - 2t = -6 \end{cases} \iff \begin{cases} s = 2 \\\ t = 5 \end{cases}$$
+• The system yields a unique solution $(t; s) = (5; 2)$.
+• Substituting $t = 5$ into $\Delta_1$ gives the point of intersection $(-4; 7; 9)$. Thus, $\Delta_1$ and $\Delta_2$ intersect.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 1 (Line-of-Sight and Visual Obstacle):** An observer's eye is located at $M(2; 3; -4)$, and an object to be observed is positioned at $N(-1; 0; 8)$. An opaque circular screen centered at $O(0; 0; 0)$ with radius $R = 3$ lies in the plane $(Oxy)$. Does the screen obstruct the observer's view of the object at $N$?
+
+Solution to Application 1:
+• The ray of light traveling from $N$ to $M$ lies along the line $MN$, which passes through $M(2; 3; -4)$ and has direction vector $\vec{MN} = (-3; -3; 12) = -3(1; 1; -4)$.
+  Its parametric equations are: $\begin{cases} x = 2 + t \\\ y = 3 + t \\\ z = -4 - 4t \end{cases} \quad (t \in \mathbb{R})$.
+• Finding the intersection $D$ of the line $MN$ with the plane $(Oxy)$ ($z = 0$):
+  $$-4 - 4t = 0 \iff t = -1 \implies D(2 - 1; 3 - 1; 0) = D(1; 2; 0).$$
+• Checking whether $D$ lies between $M$ and $N$: We have $\vec{MD} = (-1; -1; 4) = \frac{1}{3}\vec{MN}$, confirming that $D$ lies strictly between $M$ and $N$.
+• Distance from the center of the circular disk $O(0; 0; 0)$ to the intersection point $D$:
+  $$OD = \sqrt{1^2 + 2^2 + 0^2} = \sqrt{5} \approx 2.236 < 3 = R.$$
+• Since $OD < R$, the point $D$ falls strictly inside the circular screen.
+• Conclusion: The screen obstructs the observer's view of the object at $N$.
+
+**Application 2 (Perpendicular Road Intersection Design):** Two roadways are designed in space $Oxyz$ along two lines:
+$$\Delta_1: \begin{cases} x = 2 + t \\\ y = 1 + t \\\ z = 0 \end{cases} \quad \text{and} \quad \Delta_2: \begin{cases} x = 1 - 2s \\\ y = 2s \\\ z = 1 \end{cases}$$
+Are these two roadways perpendicular to each other?
+
+Solution to Application 2:
+• Direction vectors are $\vec{u}\_1 = (1; 1; 0)$ for $\Delta_1$ and $\vec{u}\_2 = (-2; 2; 0)$ for $\Delta_2$.
+• Calculating their dot product:
+  $$\vec{u}\_1 \cdot \vec{u}\_2 = 1(-2) + 1(2) + 0(0) = -2 + 2 + 0 = 0.$$
+• Since $\vec{u}\_1 \cdot \vec{u}\_2 = 0$, the lines $\Delta_1$ and $\Delta_2$ are perpendicular.
+• Thus, the two roadways are perpendicular to each other.
+
+**Application 3 (Collision Detection in Motion):** Two objects depart simultaneously at time $t = 0$ from positions $A(1; 2; 0)$ and $B(3; 5; 0)$ with constant velocity vectors $\vec{v}\_1 = (2; 1; 3)$ and $\vec{v}\_2 = (1; 2; 1)$, respectively (distances in meters, time in seconds). Will the two objects collide during their motion?
+
+Solution to Application 3:
+• At time $t$ ($t \ge 0$), the position of the first object is $M_1(1 + 2t; 2 + t; 3t)$ and that of the second object is $M_2(3 + t; 5 + 2t; t)$.
+• For a collision to occur, both objects must occupy the exact same position at the exact same instant $t$, leading to the system:
+  $$\begin{cases} 1 + 2t = 3 + t \\\ 2 + t = 5 + 2t \\\ 3t = t \end{cases} \iff \begin{cases} t = 2 \\\ t = -3 \\\ t = 0 \end{cases}$$
+• This system is inconsistent, as no single value of $t$ satisfies all three equations simultaneously.
+• Conclusion: The two objects will never collide during their motion.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 5.11:** Write the parametric and symmetric equations of the line $\Delta$ passing through $A(1; 1; 2)$ and parallel to the line $d: \frac{x - 3}{2} = \frac{y - 1}{1} = \frac{z + 5}{3}$.
+
+Solution to Exercise 5.11:
+• Line $d$ has direction vector $\vec{u}\_d = (2; 1; 3)$. Since $\Delta \parallel d$, $\Delta$ admits $\vec{u} = (2; 1; 3)$ as its direction vector.
+• The parametric equations of $\Delta$ passing through $A(1; 1; 2)$ are:
+  $$\begin{cases} x = 1 + 2t \\\ y = 1 + t \\\ z = 2 + 3t \end{cases} \quad (t \in \mathbb{R}).$$
+• The symmetric equations of $\Delta$ are:
+  $$\frac{x - 1}{2} = \frac{y - 1}{1} = \frac{z - 2}{3}.$$
+
+**Exercise 5.12:** Write the parametric and symmetric equations of the line $\Delta$ passing through $A(2; -1; 4)$ and perpendicular to the plane $(P): x + 3y - z - 1 = 0$.
+
+Solution to Exercise 5.12:
+• Plane $(P)$ has normal vector $\vec{n}\_P = (1; 3; -1)$. Because $\Delta \perp (P)$, the line $\Delta$ admits $\vec{u} = \vec{n}\_P = (1; 3; -1)$ as its direction vector.
+• The parametric equations of $\Delta$ are:
+  $$\begin{cases} x = 2 + t \\\ y = -1 + 3t \\\ z = 4 - t \end{cases} \quad (t \in \mathbb{R}).$$
+• The symmetric equations of $\Delta$ are:
+  $$\frac{x - 2}{1} = \frac{y + 1}{3} = \frac{z - 4}{-1}.$$
+
+**Exercise 5.14:** Given two lines $\Delta_1: \begin{cases} x = 1 + 2t \\\ y = 3 - t \\\ z = 2 + 3t \end{cases}$ and $\Delta_2: \frac{x - 8}{-1} = \frac{y + 2}{1} = \frac{z - 2}{2}$.
+a) Prove that $\Delta_1$ and $\Delta_2$ intersect.
+b) Write the equation of the plane $(P)$ containing both $\Delta_1$ and $\Delta_2$.
+
+Solution to Exercise 5.14:
+• a) $\Delta_1$ passes through $A_1(1; 3; 2)$ with $\vec{u}\_1 = (2; -1; 3)$. Line $\Delta_2$ has parametric equations $\begin{cases} x = 8 - s \\\ y = -2 + s \\\ z = 2 + 2s \end{cases}$.
+  Setting up the intersection system:
+  $$\begin{cases} 1 + 2t = 8 - s \\\ 3 - t = -2 + s \\\ 2 + 3t = 2 + 2s \end{cases} \iff \begin{cases} 2t + s = 7 \\\ t + s = 5 \\\ 3t - 2s = 0 \end{cases} \iff \begin{cases} t = 2 \\\ s = 3 \end{cases}$$
+  The system yields the unique solution $(t; s) = (2; 3)$, so $\Delta_1$ and $\Delta_2$ intersect at point $I(5; 1; 8)$.
+• b) The plane $(P)$ containing both lines admits $\vec{u}\_1$ and $\vec{u}\_2 = (-1; 1; 2)$ as direction vectors.
+  A normal vector of $(P)$ is:
+  $$\vec{n}\_P = [\vec{u}\_1, \vec{u}\_2] = ((-1)(2) - 3(1); 3(-1) - 2(2); 2(1) - (-1)(-1)) = (-5; -7; 1).$$
+  Plane $(P)$ passing through $I(5; 1; 8)$ has the equation:
+  $$-5(x - 5) - 7(y - 1) + 1(z - 8) = 0 \iff -5x - 7y + z + 24 = 0 \iff 5x + 7y - z - 24 = 0.$$
+
+**Exercise 5.15:** Given two lines $\Delta_1: \frac{x - 1}{3} = \frac{y - 3}{1} = \frac{z - 2}{2}$ and $\Delta_2: \frac{x - 1}{3} = \frac{y + 1}{1} = \frac{z}{2}$.
+a) Prove that $\Delta_1$ and $\Delta_2$ are parallel.
+b) Write the equation of the plane $(P)$ containing both $\Delta_1$ and $\Delta_2$.
+
+Solution to Exercise 5.15:
+• a) $\Delta_1$ passes through $A_1(1; 3; 2)$ with $\vec{u}\_1 = (3; 1; 2)$. $\Delta_2$ passes through $A_2(1; -1; 0)$ with $\vec{u}\_2 = (3; 1; 2)$.
+  We have $\vec{u}\_1 = \vec{u}\_2$. Substituting the coordinates of $A_1(1; 3; 2)$ into $\Delta_2$:
+  $$\frac{1 - 1}{3} = 0, \quad \frac{3 + 1}{1} = 4 \implies 0 \ne 4 \implies A_1 \notin \Delta_2.$$
+  Therefore, $\Delta_1 \parallel \Delta_2$.
+• b) We form the vector $\vec{A_2 A_1} = (1 - 1; 3 - (-1); 2 - 0) = (0; 4; 2)$.
+  A normal vector of plane $(P)$ is:
+  $$\vec{n} = [\vec{u}\_1, \vec{A_2 A_1}] = (1(2) - 2(4); 2(0) - 3(2); 3(4) - 1(0)) = (-6; -6; 12) = -6(1; 1; -2).$$
+  The equation of plane $(P)$ passing through $A_2(1; -1; 0)$ with normal vector $\vec{n}' = (1; 1; -2)$ is:
+  $$1(x - 1) + 1(y + 1) - 2(z - 0) = 0 \iff x + y - 2z = 0.$$
+
+**Exercise 5.17:** On an engineering design in space $Oxyz$, two roadways follow two straight lines:
+$$\Delta_1: \frac{x - 1}{2} = \frac{y}{-1} = \frac{z + 1}{3} \quad \text{and} \quad \Delta_2: \frac{x - 3}{-1} = \frac{y + 1}{1} = \frac{z}{1}$$
+a) Are these two roadways perpendicular?
+b) Is this an interchange at different grade levels (grade-separated interchange with skew lines)?
+
+Solution to Exercise 5.17:
+• a) Direction vectors are $\vec{u}\_1 = (2; -1; 3)$ and $\vec{u}\_2 = (-1; 1; 1)$.
+  Dot product: $\vec{u}\_1 \cdot \vec{u}\_2 = 2(-1) + (-1)(1) + 3(1) = -2 - 1 + 3 = 0$.
+  Thus, the two roadways are perpendicular.
+• b) $\Delta_1$ passes through $A_1(1; 0; -1)$, and $\Delta_2$ passes through $A_2(3; -1; 0) \implies \vec{A_1 A_2} = (2; -1; 1)$.
+  Cross product: $[\vec{u}\_1, \vec{u}\_2] = ((-1)(1) - 3(1); 3(-1) - 2(1); 2(1) - (-1)(-1)) = (-4; -5; 1)$.
+  Scalar triple product: $\vec{A_1 A_2} \cdot [\vec{u}\_1, \vec{u}\_2] = 2(-4) + (-1)(-5) + 1(1) = -8 + 5 + 1 = -2 \ne 0$.
+  Since the scalar triple product is non-zero, the lines $\Delta_1$ and $\Delta_2$ are skew and do not intersect.
+• Therefore, this intersection is indeed a grade-separated interchange (overpass/underpass).
+
+**Exercise 5.19:** A vertical pole of height 6 m stands perpendicular to the horizontal ground at origin $O$. Under sunlight, the shadow of the pole's top on the ground is 3 m from the base in the direction $S60^\circ E$ (making an angle of $60^\circ$ with South and $30^\circ$ with East). Set up a coordinate system $Oxyz$ where $O$ is the base, $Ox$ points South, $Oy$ points East, and $Oz$ points vertically upward along the pole (in meters). Write the equation of the line containing the sunbeam passing through the top of the pole.
+
+Solution to Exercise 5.19:
+• The pole lies along the $Oz$-axis with height 6 m, so its apex is $A(0; 0; 6)$.
+• The shadow point $A'$ lies on the ground plane $(Oxy)$ with $z\_{A'} = 0$ at distance $OA' = 3\text{ m}$.
+  Ray $OA'$ makes an angle of $60^\circ$ with $Ox$ (South) and $30^\circ$ with $Oy$ (East). The coordinates of $A'$ are:
+  $$x\_{A'} = OA' \cdot \cos 60^\circ = 3 \cdot \frac{1}{2} = \frac{3}{2}; \quad y\_{A'} = OA' \cdot \cos 30^\circ = 3 \cdot \frac{\sqrt{3}}{2} = \frac{3\sqrt{3}}{2}; \quad z\_{A'} = 0.$$
+  Thus, $A'\left(\frac{3}{2}; \frac{3\sqrt{3}}{2}; 0\right)$.
+• The sunbeam travels through the top of the pole $A$ and reaches the ground at $A'$, so the line passes through $A(0; 0; 6)$ with direction vector $\vec{AA'}$:
+  $$\vec{AA'} = \left(\frac{3}{2} - 0; \frac{3\sqrt{3}}{2} - 0; 0 - 6\right) = \left(\frac{3}{2}; \frac{3\sqrt{3}}{2}; -6\right) = \frac{3}{2}(1; \sqrt{3}; -4).$$
+• Selecting direction vector $\vec{u} = (1; \sqrt{3}; -4)$, the symmetric equations of the line representing the sunbeam are:
+  $$\frac{x}{1} = \frac{y}{\sqrt{3}} = \frac{z - 6}{-4}.$$
