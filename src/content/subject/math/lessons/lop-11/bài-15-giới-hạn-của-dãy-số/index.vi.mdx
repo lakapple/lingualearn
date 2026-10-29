@@ -19,189 +19,197 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 **Thuật ngữ:**
 
-·       Bảng biến thiên
+·       Giới hạn của dãy số ($\lim\_{n \to +\infty} u_n = a$, giới hạn 0, giới hạn hữu hạn)
 
-·       Đồng biến, nghịch biến, tính đơn điệu của hàm số
+·       Cấp số nhân lùi vô hạn, tổng của cấp số nhân lùi vô hạn
 
-·       Điểm cực đại, điểm cực tiểu, cực trị của hàm số
-
-·       Giá trị cực đại, giá trị cực tiểu, điểm cực trị của đồ thị hàm số
+·       Giới hạn vô cực ($+\infty, -\infty$)
 
 **Kiến thức, kĩ năng:**
 
-·       Nhận biết tính đồng biến, nghịch biến của một hàm số trên một khoảng dựa vào dấu của đạo hàm cấp một.
+·       Nhận biết và hiểu rõ khái niệm giới hạn của dãy số khi $n \to +\infty$.
 
-·       Thể hiện tính đồng biến, nghịch biến của hàm số trên bảng biến thiên.
+·       Nắm vững các giới hạn cơ bản và các phép toán giới hạn hữu hạn, quy tắc tính giới hạn vô cực.
 
-·       Nhận biết tính đơn điệu của hàm số thông qua bảng biến thiên hoặc thông qua hình ảnh hình học của đồ thị hàm số.
+·       Tính tổng của một cấp số nhân lùi vô hạn và vận dụng để biểu diễn số thập phân vô hạn tuần hoàn dưới dạng phân số.
 
-·       Nhận biết điểm cực trị, giá trị cực trị của hàm số thông qua bảng biến thiên hoặc qua hình ảnh hình học của đồ thị.
+·       Vận dụng kiến thức giới hạn vào giải quyết các bài toán thực tiễn (giải thích nghịch lí Zeno về Achilles đuổi rùa, bài toán nảy bóng, lượng thuốc trong cơ thể, độ dài đường gấp khúc vô hạn).
 
-·       Vận dụng tính đơn điệu và cực trị của hàm số vào giải quyết các bài toán thực tiễn (chuyển động của chất điểm, độ cao cực đại của vật phóng, mô hình tốc độ bán hàng).
+## Giới hạn hữu hạn của dãy số
 
-## Tính đơn điệu của hàm số
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han_cua_day_so"/>
 
-\<Youtube url="https://www.youtube.com/watch?v=example_tinh_don_dieu_ham_so"/>
+### a) Giới hạn 0 và giới hạn hữu hạn
 
-### a) Khái niệm tính đơn điệu và mối quan hệ với dấu đạo hàm
+Định nghĩa giới hạn 0:
+• Ta nói dãy số $(u_n)$ có giới hạn là 0 khi $n \to +\infty$ nếu $|u_n|$ có thể nhỏ hơn một số dương bé tuỳ ý, kể từ một số hạng nào đó trở đi, kí hiệu là $\lim\_{n \to +\infty} u_n = 0$ hay $u_n \to 0$ khi $n \to +\infty$.
+• Các kết quả cơ bản:
+  + $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ (với $k$ là số nguyên dương);
+  + $\lim\_{n \to +\infty} q^n = 0$ (nếu $|q| < 1$).
+  + Nếu $|u_n| \le v_n$ với mọi $n \ge 1$ và $\lim\_{n \to +\infty} v_n = 0$ thì $\lim\_{n \to +\infty} u_n = 0$.
 
-Định nghĩa:
-Giả sử $K$ là một khoảng, một đoạn hoặc một nửa khoảng và $y = f(x)$ là hàm số xác định trên $K$.
-• Hàm số $y = f(x)$ được gọi là đồng biến (tăng) trên $K$ nếu với mọi $x_1, x_2 \in K$ mà $x_1 \lt x_2$ thì:
-$$f(x_1) \lt f(x_2)$$
-• Hàm số $y = f(x)$ được gọi là nghịch biến (giảm) trên $K$ nếu với mọi $x_1, x_2 \in K$ mà $x_1 \lt x_2$ thì:
-$$f(x_1) \gt f(x_2)$$
-• Đồ thị của hàm số đồng biến đi lên từ trái sang phải; đồ thị của hàm số nghịch biến đi xuống từ trái sang phải.
-Định lí (Dấu của đạo hàm và tính đơn điệu):
-Cho hàm số $y = f(x)$ có đạo hàm trên khoảng $K$.
-• Nếu $f'(x) \gt 0$ với mọi $x \in K$ thì hàm số $f(x)$ đồng biến trên khoảng $K$.
-• Nếu $f'(x) \lt 0$ với mọi $x \in K$ thì hàm số $f(x)$ nghịch biến trên khoảng $K$.
-• Nếu $f'(x) \ge 0$ (hoặc $f'(x) \le 0$) với mọi $x \in K$ và $f'(x) = 0$ chỉ tại một số hữu hạn điểm của $K$ thì hàm số $f(x)$ đồng biến (hoặc nghịch biến) trên khoảng $K$.
-• Nếu $f'(x) = 0$ với mọi $x \in K$ thì hàm số $f(x)$ không đổi (hằng số) trên khoảng $K$.
+Định nghĩa giới hạn hữu hạn (số thực $a$):
+• Ta nói dãy số $(u_n)$ có giới hạn là số thực $a$ khi $n \to +\infty$ nếu $\lim\_{n \to +\infty} (u_n - a) = 0$, kí hiệu $\lim\_{n \to +\infty} u_n = a$ hoặc $u_n \to a$ khi $n \to +\infty$.
+• Chú ý: $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$. Nếu $u_n = c$ (hằng số) thì $\lim\_{n \to +\infty} u_n = c$.
 
-### b) Ví dụ và luyện tập về tính đơn điệu của hàm số
+### b) Ví dụ và luyện tập về giới hạn hữu hạn
 
-**Ví dụ 1:** Tìm các khoảng đồng biến, khoảng nghịch biến của hàm số $y = x^2 - 4x + 2$.
+**Ví dụ 1:** Xét dãy số $(u_n)$ với $u_n = \frac{1}{n^2}$. Giải thích vì sao dãy số này có giới hạn là 0.
 
 Lời giải Ví dụ 1:
-• Tập xác định của hàm số là $D = \mathbb{R}$.
-• Ta có đạo hàm $y' = 2x - 4$. Cho $y' = 0 \Leftrightarrow 2x - 4 = 0 \Leftrightarrow x = 2$.
-• Dấu của đạo hàm: $y' \gt 0$ với mọi $x \in (2; +\infty)$ và $y' \lt 0$ với mọi $x \in (-\infty; 2)$.
-• Vậy hàm số đồng biến trên khoảng $(2; +\infty)$ và nghịch biến trên khoảng $(-\infty; 2)$.
+• Ta có $|u_n| = \frac{1}{n^2}$. Khi $n$ đủ lớn, $\frac{1}{n^2}$ trở nên rất nhỏ và có thể nhỏ hơn bất kỳ số dương $\varepsilon > 0$ nào cho trước.
+• Chẳng hạn, để $|u_n| < 0{,}0001$, ta cần $\frac{1}{n^2} < \frac{1}{10\\,000} \Leftrightarrow n^2 > 10\\,000 \Leftrightarrow n > 100$. Vậy kể từ số hạng thứ 101, các số hạng của dãy đều có giá trị tuyệt đối nhỏ hơn $0{,}0001$. Do đó $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
 
-**Ví dụ 2:** Tìm các khoảng đơn điệu của hàm số $y = \frac{x^2 - 2x + 5}{x - 1}$.
-
-Lời giải Ví dụ 2:
-• Hàm số xác định khi $x \ne 1$, tức là trên các khoảng $(-\infty; 1)$ và $(1; +\infty)$.
-• Đạo hàm của hàm số là:
-$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 5)}{(x - 1)^2} = \frac{x^2 - 2x - 3}{(x - 1)^2}$$
-• Giải phương trình $y' = 0 \Leftrightarrow x^2 - 2x - 3 = 0 \Leftrightarrow x = -1$ hoặc $x = 3$.
-• Xét dấu đạo hàm $y'$ trên từng khoảng xác định:
-  + Trên các khoảng $(-\infty; -1)$ và $(3; +\infty)$, ta có $y' \gt 0$ nên hàm số đồng biến.
-  + Trên các khoảng $(-1; 1)$ và $(1; 3)$, ta có $y' \lt 0$ nên hàm số nghịch biến.
-• Vậy hàm số đồng biến trên các khoảng $(-\infty; -1)$ và $(3; +\infty)$; nghịch biến trên các khoảng $(-1; 1)$ và $(1; 3)$.
-
-**Luyện tập 1:** Xét chiều biến thiên của hàm số $y = \frac{x - 2}{x + 1}$.
+**Luyện tập 1:** Chứng minh rằng $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
 
 Lời giải Luyện tập 1:
-• Hàm số xác định với mọi $x \ne -1$, tức là trên hai khoảng $(-\infty; -1)$ và $(-1; +\infty)$.
-• Ta có đạo hàm:
-$$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} \gt 0$$
-• Vì $y' \gt 0$ với mọi $x \ne -1$ nên hàm số đồng biến trên từng khoảng $(-\infty; -1)$ và $(-1; +\infty)$.
+• Ta có $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$.
+• Vì $|q| = \frac{1}{3} < 1$, nên theo kết quả cơ bản ta có $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Suy ra $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
 
-## Cực trị của hàm số
+**Ví dụ 2:** Cho dãy số $(u_n)$ với $u_n = \frac{2n + 1}{n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 2$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_cuc_tri_ham_so"/>
+Lời giải Ví dụ 2:
+• Ta có $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{2n + 1 - 2n}{n} = \frac{1}{n}$.
+• Vì $\lim\_{n \to +\infty} \frac{1}{n} = 0$, nên $\lim\_{n \to +\infty} (u_n - 2) = 0$, do đó $\lim\_{n \to +\infty} u_n = 2$.
 
-### a) Khái niệm cực đại, cực tiểu và điều kiện đủ
-
-Định lí (Điều kiện đủ để hàm số có cực trị):
-Giả sử hàm số $y = f(x)$ liên tục trên khoảng $(a; b)$ chứa điểm $x_0$ và có đạo hàm trên các khoảng $(a; x_0)$ và $(x_0; b)$. Khi đó:
-• Nếu $f'(x) \gt 0$ với mọi $x \in (a; x_0)$ và $f'(x) \lt 0$ với mọi $x \in (x_0; b)$ (đạo hàm đổi dấu từ dương sang âm khi $x$ đi qua $x_0$) thì hàm số $f(x)$ đạt cực đại tại điểm $x_0$, giá trị cực đại là $f(x_0)$.
-• Nếu $f'(x) \lt 0$ với mọi $x \in (a; x_0)$ và $f'(x) \gt 0$ với mọi $x \in (x_0; b)$ (đạo hàm đổi dấu từ âm sang dương khi $x$ đi qua $x_0$) thì hàm số $f(x)$ đạt cực tiểu tại điểm $x_0$, giá trị cực tiểu là $f(x_0)$.
-• Điểm cực đại và điểm cực tiểu được gọi chung là điểm cực trị của hàm số. Nếu $f'(x)$ không đổi dấu khi $x$ đi qua $x_0$ thì $x_0$ không phải là điểm cực trị của hàm số.
-
-### b) Ví dụ và luyện tập về cực trị của hàm số
-
-**Ví dụ 3:** Tìm cực trị của hàm số $y = x^3 - 6x^2 + 9x + 30$.
-
-Lời giải Ví dụ 3:
-• Tập xác định của hàm số là $D = \mathbb{R}$.
-• Đạo hàm: $y' = 3x^2 - 12x + 9 = 3(x - 1)(x - 3)$.
-• Cho $y' = 0 \Leftrightarrow x = 1$ hoặc $x = 3$.
-• Xét dấu của đạo hàm $y'$:
-  + Khi $x$ đi qua điểm $x = 1$, đạo hàm $y'$ đổi dấu từ dương sang âm nên hàm số đạt cực đại tại $x = 1$ và giá trị cực đại là $y(1) = 34$.
-  + Khi $x$ đi qua điểm $x = 3$, đạo hàm $y'$ đổi dấu từ âm sang dương nên hàm số đạt cực tiểu tại $x = 3$ và giá trị cực tiểu là $y(3) = 30$.
-
-**Ví dụ 4:** Tìm cực trị của hàm số $y = \frac{x^2 - 2x + 9}{x - 2}$.
-
-Lời giải Ví dụ 4:
-• Hàm số xác định với mọi $x \ne 2$.
-• Ta có đạo hàm:
-$$y' = \frac{(2x - 2)(x - 2) - (x^2 - 2x + 9)}{(x - 2)^2} = \frac{x^2 - 4x - 5}{(x - 2)^2}$$
-• Cho $y' = 0 \Leftrightarrow x^2 - 4x - 5 = 0 \Leftrightarrow x = -1$ hoặc $x = 5$.
-• Xét dấu của đạo hàm $y'$:
-  + Khi $x$ đi qua điểm $x = -1$, đạo hàm $y'$ đổi dấu từ dương sang âm nên hàm số đạt cực đại tại $x = -1$ và giá trị cực đại là $y(-1) = -4$.
-  + Khi $x$ đi qua điểm $x = 5$, đạo hàm $y'$ đổi dấu từ âm sang dương nên hàm số đạt cực tiểu tại $x = 5$ và giá trị cực tiểu là $y(5) = 8$.
-
-**Luyện tập 2:** Tìm các điểm cực trị của hàm số $y = x^4 - 4x^2 + 2$.
+**Luyện tập 2:** Cho dãy số $(u_n)$ với $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 3$.
 
 Lời giải Luyện tập 2:
-• Tập xác định của hàm số là $D = \mathbb{R}$.
-• Đạo hàm: $y' = 4x^3 - 8x = 4x(x^2 - 2)$. Cho $y' = 0 \Leftrightarrow x = 0$ hoặc $x = \pm\sqrt{2}$.
-• Hàm số đạt cực đại tại $x = 0$ với giá trị cực đại $y(0) = 2$; hàm số đạt cực tiểu tại $x = -\sqrt{2}$ và $x = \sqrt{2}$ với cùng giá trị cực tiểu $y(\pm\sqrt{2}) = -2$.
+• Ta có $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = \frac{3 \cdot 2^n - 1 - 3 \cdot 2^n}{2^n} = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$.
+• Vì $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ (do $|\frac{1}{2}| < 1$), nên $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
+
+## Định lí về giới hạn hữu hạn của dãy số
+
+\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_ve_gioi_han_huu_han"/>
+
+### a) Các quy tắc tính giới hạn
+
+Quy tắc tính giới hạn hữu hạn:
+Nếu $\lim\_{n \to +\infty} u_n = a$ và $\lim\_{n \to +\infty} v_n = b$, thì:
+1\. $\lim\_{n \to +\infty} (u_n + v_n) = a + b$
+2\. $\lim\_{n \to +\infty} (u_n - v_n) = a - b$
+3\. $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$
+4\. $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (nếu $b \ne 0$).
+5\. Nếu $u_n \ge 0$ với mọi $n$ và $\lim\_{n \to +\infty} u_n = a$, thì $a \ge 0$ và $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
+
+### b) Ví dụ và luyện tập về quy tắc tính giới hạn
+
+**Ví dụ 3:** Tìm $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
+
+Solution for Example 3:
+• Chia cả tử và mẫu cho luỹ thừa cao nhất của $n$ là $n^2$:
+$$\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.$$
+
+**Luyện tập 3:** Tìm $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
+
+Lời giải Luyện tập 3:
+• Chia cả tử và mẫu cho $n$ (với $n > 0$, ta có $\sqrt{n^2} = n$):
+$$\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.$$
+
+## Tổng của cấp số nhân lùi vô hạn
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han"/>
+
+### a) Khái niệm và công thức tổng
+
+Cấp số nhân lùi vô hạn:
+• Cấp số nhân vô hạn $(u_n)$ có công bội $q$ với $|q| < 1$ được gọi là cấp số nhân lùi vô hạn.
+• Tổng của cấp số nhân lùi vô hạn $(u_n)$ là giới hạn của tổng $n$ số hạng đầu $S_n$ khi $n \to +\infty$:
+$$S = \lim\_{n \to +\infty} S_n = \lim\_{n \to +\infty} \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1}{1 - q} \quad (|q| < 1)$
+
+### b) Ví dụ và ứng dụng biểu diễn số thập phân tuần hoàn
+
+**Ví dụ 4:** Tính tổng $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
+
+Lời giải Ví dụ 4:
+• Đây là tổng của cấp số nhân lùi vô hạn với số hạng đầu $u_1 = 1$ và công bội $q = -\frac{1}{2}$ (vì $|q| < 1$).
+• Tổng của cấp số nhân lùi vô hạn là:
+$$S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{1}{\frac{3}{2}} = \frac{2}{3}.$$
+
+**Ví dụ 5:** Biểu diễn số thập phân vô hạn tuần hoàn $2{,}222\dots$ dưới dạng phân số.
+
+Lời giải Ví dụ 5:
+• Ta có $2{,}222\dots = 2 + 0{,}2 + 0{,}02 + 0{,}002 + \dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + 2 \cdot \frac{1}{10^3} + \dots$
+• Từ số hạng thứ hai trở đi, đây là cấp số nhân lùi vô hạn với $u_1 = 0{,}2 = \frac{2}{10}$ và $q = \frac{1}{10}$.
+• Tổng phần thập phân vô hạn tuần hoàn là $\frac{2/10}{1 - 1/10} = \frac{2/10}{9/10} = \frac{2}{9}$.
+• Do đó: $2{,}222\dots = 2 + \frac{2}{9} = \frac{20}{9}$.
+
+**Luyện tập 4:** Tính tổng $S = 2 + \frac{2}{7} + \frac{2}{7^2} + \dots + \frac{2}{7^{n-1}} + \dots$
+
+Lời giải Luyện tập 4:
+• Đây là tổng của cấp số nhân lùi vô hạn có số hạng đầu $u_1 = 2$ và công bội $q = \frac{1}{7}$.
+• Tổng của cấp số nhân là:
+$$S = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{7}} = \frac{2}{\frac{6}{7}} = 2 \cdot \frac{7}{6} = \frac{7}{3}. $$
+
+## Giới hạn vô cực của dãy số
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_vo_cuc"/>
+
+### a) Định nghĩa giới hạn vô cực
+
+Định nghĩa:
+• Dãy số $(u_n)$ được gọi là có giới hạn $+\infty$ khi $n \to +\infty$ nếu $u_n$ lớn hơn một số dương bất kì, kể từ một số hạng nào đó trở đi, kí hiệu $\lim\_{n \to +\infty} u_n = +\infty$.
+• Dãy số $(u_n)$ được gọi là có giới hạn $-\infty$ khi $n \to +\infty$ nếu $\lim\_{n \to +\infty} (-u_n) = +\infty$, kí hiệu $\lim\_{n \to +\infty} u_n = -\infty$.
+• Các kết quả cơ bản:
+  + $\lim\_{n \to +\infty} n^k = +\infty$ (với $k$ là số nguyên dương);
+  + $\lim\_{n \to +\infty} q^n = +\infty$ (với $q > 1$).
+
+### b) Ví dụ và luyện tập về giới hạn vô cực
+
+**Ví dụ 6:** Tính $\lim\_{n \to +\infty} (n^2 - 2n)$.
+
+Lời giải Ví dụ 6:
+• Biến đổi biểu thức: $n^2 - 2n = n^2\left(1 - \frac{2}{n}\right)$.
+• Vì $\lim\_{n \to +\infty} n^2 = +\infty$ và $\lim\_{n \to +\infty} \left(1 - \frac{2}{n}\right) = 1 > 0$, nên theo quy tắc nhân giới hạn vô cực, ta có $\lim\_{n \to +\infty} (n^2 - 2n) = +\infty$.
+
+**Luyện tập 5:** Tính $\lim\_{n \to +\infty} (n - \sqrt{n})$.
+
+Lời giải Luyện tập 5:
+• Biến đổi: $n - \sqrt{n} = \sqrt{n}(\sqrt{n} - 1)$.
+• Vì $\lim\_{n \to +\infty} \sqrt{n} = +\infty$ và $\lim\_{n \to +\infty} (\sqrt{n} - 1) = +\infty$, nên theo quy tắc nhân giới hạn vô cực ta có $\lim\_{n \to +\infty} (n - \sqrt{n}) = +\infty$.
 
 ## Ứng dụng và bài tập rèn luyện
 
-### a) Bài toán thực tế
+### a) Bài toán thực tế và mô hình hoá
 
-**Vận dụng 1 (Chuyển động của chất điểm):** Vị trí của một chất điểm trên trục số tại thời điểm $t$ giây ($t \ge 0$) được cho bởi công thức $s(t) = t^3 - 9t^2 + 15t$ (mét). Trong khoảng thời gian nào chất điểm chuyển động sang phải, trong khoảng thời gian nào chuyển động sang trái?
+**Vận dụng (Giải thích nghịch lí Zeno - Achilles đuổi rùa):** Giả sử Achilles chạy $100\text{ km/h}$, rùa chạy $1\text{ km/h}$, khoảng cách ban đầu $a = 100\text{ km}$.
+a) Tính thời gian $t_1, t_2, \dots, t_n, \dots$ để Achilles vượt qua các khoảng cách đuổi theo.
+b) Tính tổng thời gian cần thiết để Achilles đuổi kịp rùa.
+c) Sai lầm trong lập luận của Zeno ở đâu?
 
-Lời giải Vận dụng 1:
-• Vận tốc tức thời của chất điểm tại thời điểm $t$ là:
-$$v(t) = s'(t) = 3t^2 - 18t + 15 = 3(t - 1)(t - 5)$$
-• Chất điểm chuyển động sang phải khi $v(t) \gt 0$, tức là $t \in [0; 1)$ hoặc $t \in (5; +\infty)$.
-• Chất điểm chuyển động sang trái khi $v(t) \lt 0$, tức là $t \in (1; 5)$.
-• Vậy chất điểm chuyển động sang phải trong khoảng thời gian từ 0 đến 1 giây và sau giây thứ 5; chuyển động sang trái từ giây thứ 1 đến giây thứ 5.
+Lời giải Vận dụng:
+• a) Thời gian để Achilles chạy hết khoảng cách đầu tiên $100\text{ km}$ là $t_1 = \frac{100}{100} = 1$ giờ; trong lúc đó rùa chạy được $1\text{ km}$. Khoảng cách tiếp theo rùa chạy là $t_2 = \frac{1}{100}$ giờ, và cứ thế tiếp diễn.
+• b) Tổng thời gian là tổng của cấp số nhân lùi vô hạn: $T = 1 + \frac{1}{100} + \frac{1}{100^2} + \dots = \frac{1}{1 - \frac{1}{100}} = \frac{100}{99}$ giờ ($\approx 1{,}01$ giờ).
+• c) Sai lầm của Zeno là cho rằng tổng của vô hạn khoảng thời gian nhỏ thì phải bằng vô hạn. Toán học hiện đại chứng minh tổng của một chuỗi vô hạn các số hạng giảm dần có thể hội tụ về một số hữu hạn.
 
-**Vận dụng 2 (Độ cao cực đại của vật phóng thẳng đứng):** Một vật được phóng thẳng đứng lên trên từ độ cao 2 m với vận tốc ban đầu $24{,}5\text{ m/s}$. Độ cao của vật sau $t$ giây là $h(t) = 2 + 24{,}5t - 4{,}9t^2$ (mét). Hỏi tại thời điểm nào thì vật đạt độ cao lớn nhất?
+**Bài 5.5 (Tích lũy nồng độ thuốc trong cơ thể):** Bệnh nhân uống mỗi ngày một viên thuốc $150\text{ mg}$. Trước mỗi lần uống, hàm lượng thuốc cũ trong cơ thể còn lại $5\\%$. Tính lượng thuốc sau khi uống viên thứ 5 và ước tính lượng thuốc trong cơ thể nếu dùng lâu dài.
 
-Lời giải Vận dụng 2:
-• Vận tốc của vật tại thời điểm $t$ là: $v(t) = h'(t) = 24{,}5 - 9{,}8t$.
-• Cho $h'(t) = 0 \Leftrightarrow 24{,}5 - 9{,}8t = 0 \Leftrightarrow t = \frac{24{,}5}{9{,}8} = 2{,}5\text{ (giây)}$.
-• Vì đạo hàm $h'(t)$ đổi dấu từ dương sang âm khi $t$ đi qua $2{,}5$ nên hàm số $h(t)$ đạt cực đại tại $t = 2{,}5$.
-• Độ cao lớn nhất mà vật đạt được là:
-$$h(2{,}5) = 2 + 24{,}5 \cdot 2{,}5 - 4{,}9 \cdot (2{,}5)^2 = 32{,}625\text{ (m).}$$
-• Vậy sau 2,5 giây kể từ lúc phóng thì vật đạt độ cao lớn nhất.
-
-**Bài 1.9 (Mô hình tốc độ bán hàng):** Doanh số bán hàng của một sản phẩm mới tuân theo hàm số logistic $f(t) = \frac{5\\,000}{1 + 5e^{-t}}$ ($t \ge 0$, thời gian tính bằng năm). Tốc độ bán hàng được biểu thị bởi đạo hàm $f'(t)$. Sau bao nhiêu năm kể từ khi phát hành thì tốc độ bán hàng đạt mức lớn nhất?
-
-Lời giải Bài 1.9:
-• Đạo hàm biểu thị tốc độ bán hàng tại thời điểm $t$ là:
-$$f'(t) = \frac{25\\,000 e^{-t}}{(1 + 5e^{-t})^2}$$
-• Để tìm điểm cực trị của hàm tốc độ bán hàng $f'(t)$, ta tính đạo hàm cấp hai $f''(t)$:
-$$f''(t) = \frac{25\\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}$$
-• Cho $f''(t) = 0 \Leftrightarrow 5e^{-t} - 1 = 0 \Leftrightarrow e^t = 5 \Leftrightarrow t = \ln 5 \approx 1{,}61\text{ (năm)}$.
-• Khi $t$ đi qua giá trị $\ln 5$, đạo hàm $f''(t)$ đổi dấu từ dương sang âm nên $f'(t)$ đạt cực đại tại $t = \ln 5$.
-• Vậy sau khoảng 1,61 năm thì tốc độ bán hàng đạt mức lớn nhất.
+Lời giải Bài 5.5:
+• Lượng thuốc sau ngày thứ 1: $150\text{ mg}$.
+• Lượng thuốc sau ngày thứ 2: $150 + 150(0{,}05) = 150(1 + 0{,}05)$.
+• Sau khi uống viên thứ 5, tổng lượng thuốc tích lũy là tổng 5 số hạng đầu của cấp số nhân với $u_1 = 150$ và công bội $q = 0{,}05$:
+  $$S_5 = 150 \cdot \frac{1 - (0{,}05)^5}{1 - 0{,}05} = \frac{150(1 - 0{,}0000003125)}{0{,}95} \approx 157{,}89\text{ (mg).}$$
+• Khi sử dụng lâu dài ($n \to +\infty$), lượng thuốc hội tụ về giới hạn của cấp số nhân lùi vô hạn:
+  $$S = \frac{150}{1 - 0{,}05} = \frac{150}{0{,}95} = \frac{3\000}{19} \approx 157{,}89\text{ (mg).}$$
 
 ### b) Hệ thống bài tập cuối bài
 
-**Bài 1.2:** Tìm các khoảng đồng biến, khoảng nghịch biến của các hàm số sau:
-a) $y = \frac{1}{3}x^3 - 2x^2 + 3x + 1$;
-b) $y = -x^3 + 2x^2 - 5x + 3$.
+**Bài 5.1:** Tìm các giới hạn sau:
+a) $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 + 1}$;
+b) $\lim\_{n \to +\infty} (\sqrt{n^2 + 2n} - n)$.
 
-Lời giải Bài 1.2:
-• a) Tập xác định $D = \mathbb{R}$. Đạo hàm $y' = x^2 - 4x + 3 = (x - 1)(x - 3)$.
-  + Cho $y' = 0 \Leftrightarrow x = 1$ hoặc $x = 3$.
-  + Ta có $y' \gt 0$ trên các khoảng $(-\infty; 1)$ và $(3; +\infty)$; $y' \lt 0$ trên khoảng $(1; 3)$.
-  + Vậy hàm số đồng biến trên các khoảng $(-\infty; 1)$ và $(3; +\infty)$; nghịch biến trên khoảng $(1; 3)$.
-• b) Tập xác định $D = \mathbb{R}$. Đạo hàm $y' = -3x^2 + 4x - 5 = -3\left(x - \frac{2}{3}\right)^2 - \frac{11}{3} \lt 0$ với mọi $x \in \mathbb{R}$.
-  + Vậy hàm số luôn nghịch biến trên $\mathbb{R}$.
+Lời giải Bài 5.1:
+• a) Chia cả tử và mẫu cho $n^2$:
+  $$\lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 + \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 + 0} = \frac{1}{2}.$$
+• b) Nhân lượng liên hợp:
+  $$\lim\_{n \to +\infty} \frac{(\sqrt{n^2 + 2n} - n)(\sqrt{n^2 + 2n} + n)}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2n}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2}{\sqrt{1 + \frac{2}{n}} + 1} = \frac{2}{1 + 1} = 1.$$
 
-**Bài 1.3:** Xét chiều biến thiên của các hàm số sau:
-a) $y = \frac{2x - 1}{x + 2}$;
-b) $y = \frac{x^2 + x + 4}{x - 3}$.
 
-Lời giải Bài 1.3:
-• a) Hàm số xác định với mọi $x \ne -2$.
-  + Đạo hàm: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} \gt 0$ với mọi $x \ne -2$.
-  + Vậy hàm số đồng biến trên từng khoảng $(-\infty; -2)$ và $(-2; +\infty)$.
-• b) Hàm số xác định với mọi $x \ne 3$.
-  + Đạo hàm:
-$$y' = \frac{(2x + 1)(x - 3) - (x^2 + x + 4)}{(x - 3)^2} = \frac{x^2 - 6x - 7}{(x - 3)^2}$$
-  + Cho $y' = 0 \Leftrightarrow x^2 - 6x - 7 = 0 \Leftrightarrow x = -1$ hoặc $x = 7$.
-  + Vậy hàm số đồng biến trên các khoảng $(-\infty; -1)$ và $(7; +\infty)$; nghịch biến trên các khoảng $(-1; 3)$ và $(3; 7)$.
 
-**Bài 1.7:** Tìm cực trị của các hàm số sau:
-a) $y = 2x^3 - 9x^2 + 12x - 5$;
-b) $y = \frac{x^2 - 2x + 3}{x - 1}$.
+**Bài 5.4:** Viết các số thập phân vô hạn tuần hoàn dưới dạng phân số:
+a) $1,(12) = 1{,}121212\dots$;
+b) $3,(102) = 3{,}102102102\dots$
 
-Lời giải Bài 1.7:
-• a) Tập xác định $D = \mathbb{R}$. Đạo hàm $y' = 6x^2 - 18x + 12 = 6(x - 1)(x - 2)$.
-  + Cho $y' = 0 \Leftrightarrow x = 1$ hoặc $x = 2$.
-  + Hàm số đạt cực đại tại $x = 1$ với giá trị cực đại $y(1) = 0$; đạt cực tiểu tại $x = 2$ với giá trị cực tiểu $y(2) = -1$.
-• b) Hàm số xác định với mọi $x \ne 1$. Đạo hàm:
-$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 3)}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}$$
-  + Cho $y' = 0 \Leftrightarrow x^2 - 2x - 1 = 0 \Leftrightarrow x = 1 - \sqrt{2}$ hoặc $x = 1 + \sqrt{2}$.
-  + Hàm số đạt cực đại tại $x = 1 - \sqrt{2}$ với giá trị cực đại $y(1 - \sqrt{2}) = 2 - 2\sqrt{2}$; đạt cực tiểu tại $x = 1 + \sqrt{2}$ với giá trị cực tiểu $y(1 + \sqrt{2}) = 2 + 2\sqrt{2}$.
+Lời giải Bài 5.4:
+• a) $1,(12) = 1 + \frac{12}{10^2} + \frac{12}{10^4} + \dots = 1 + \frac{12/100}{1 - 1/100} = 1 + \frac{12}{99} = 1 + \frac{4}{33} = \frac{37}{33}$.
+• b) $3,(102) = 3 + \frac{102}{10^3} + \frac{102}{10^6} + \dots = 3 + \frac{102/1\\,000}{1 - 1/1\\,000} = 3 + \frac{102}{999} = 3 + \frac{34}{333} = \frac{1\\,034}{333}$.

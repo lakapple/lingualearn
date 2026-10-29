@@ -19,189 +19,197 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 **Terminology:**
 
-·       Variation table (table of signs and variations)
+·       Limit of a sequence ($\lim\_{n \to +\infty} u_n = a$, zero limit, finite limit)
 
-·       Strictly increasing, strictly decreasing, monotonicity of a function
+·       Infinite geometric series, sum of an infinite geometric series
 
-·       Local maximum point, local minimum point, local extrema of a function
-
-·       Local maximum value, local minimum value, extreme points of a function graph
+·       Infinite limit ($+\infty, -\infty$)
 
 **Knowledge and Skills:**
 
-·       Recognize the strictly increasing and decreasing intervals of a function based on the sign of its first derivative.
+·       Recognize and understand the concept of the limit of a sequence as $n \to +\infty$.
 
-·       Represent the monotonicity of a function using a variation table.
+·       Master fundamental limits, finite limit algebraic rules, and rules for evaluating infinite limits.
 
-·       Identify the monotonicity of a function from its variation table or the geometric behavior of its graph.
+·       Compute the sum of an infinite geometric series and apply it to convert repeating decimals into fractions.
 
-·       Identify local extreme points and local extreme values of a function from its variation table or graph.
+·       Apply sequence limits to solve practical mathematical problems (resolving Zeno's paradox of Achilles and the tortoise, bouncing ball models, drug accumulation in the body, infinite polygonal paths).
 
-·       Apply monotonicity and local extrema to solve real-world problems (rectilinear motion of a particle, maximum height of a vertically projected object, sales rate in a logistic growth model).
+## Finite Limits of Sequences
 
-## Monotonicity of a Function
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han_cua_day_so"/>
 
-\<Youtube url="https://www.youtube.com/watch?v=example_tinh_don_dieu_ham_so"/>
+### a) Zero Limit and Finite Limit Definitions
 
-### a) Concept of Monotonicity and Relationship with the Sign of the Derivative
+Zero Limit Definition:
+• A sequence $(u_n)$ is said to have a limit of 0 as $n \to +\infty$ if $|u_n|$ can be made smaller than any arbitrarily small positive number for all $n$ sufficiently large, denoted by $\lim\_{n \to +\infty} u_n = 0$ or $u_n \to 0$ as $n \to +\infty$.
+• Fundamental Results:
+  + $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ (where $k$ is a positive integer);
+  + $\lim\_{n \to +\infty} q^n = 0$ (if $|q| < 1$).
+  + Squeeze Theorem for sequences: If $|u_n| \le v_n$ for all $n \ge 1$ and $\lim\_{n \to +\infty} v_n = 0$, then $\lim\_{n \to +\infty} u_n = 0$.
 
-Definition:
-Let $K$ be an open interval, a closed interval, or a half-open interval, and let $y = f(x)$ be a function defined on $K$.
-• The function $y = f(x)$ is said to be strictly increasing on $K$ if for all $x_1, x_2 \in K$ with $x_1 \lt x_2$, we have:
-$$f(x_1) \lt f(x_2)$$
-• The function $y = f(x)$ is said to be strictly decreasing on $K$ if for all $x_1, x_2 \in K$ with $x_1 \lt x_2$, we have:
-$$f(x_1) \gt f(x_2)$$
-• The graph of an increasing function rises from left to right; the graph of a decreasing function falls from left to right.
-Theorem (Sign of the Derivative and Monotonicity):
-Let the function $y = f(x)$ be differentiable on an open interval $K$.
-• If $f'(x) \gt 0$ for all $x \in K$, then the function $f(x)$ is strictly increasing on $K$.
-• If $f'(x) \lt 0$ for all $x \in K$, then the function $f(x)$ is strictly decreasing on $K$.
-• If $f'(x) \ge 0$ (or $f'(x) \le 0$) for all $x \in K$ and $f'(x) = 0$ holds only at a finite number of points in $K$, then the function $f(x)$ is strictly increasing (or strictly decreasing) on $K$.
-• If $f'(x) = 0$ for all $x \in K$, then the function $f(x)$ is constant on $K$.
+Finite Limit Definition (Real Number $a$):
+• A sequence $(u_n)$ is said to have a limit equal to the real number $a$ as $n \to +\infty$ if $\lim\_{n \to +\infty} (u_n - a) = 0$, denoted by $\lim\_{n \to +\infty} u_n = a$ or $u_n \to a$ as $n \to +\infty$.
+• Remark: $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$. If $u_n = c$ (constant), then $\lim\_{n \to +\infty} u_n = c$.
 
-### b) Illustrative Examples and Practice on Monotonicity
+### b) Illustrative Examples and Practice on Finite Limits
 
-**Example 1:** Find the intervals where the function $y = x^2 - 4x + 2$ is strictly increasing and strictly decreasing.
+**Example 1:** Consider the sequence $(u_n)$ with $u_n = \frac{1}{n^2}$. Explain why this sequence has a limit of 0.
 
 Solution for Example 1:
-• The domain of the function is $D = \mathbb{R}$.
-• We have the derivative $y' = 2x - 4$. Setting $y' = 0 \Leftrightarrow 2x - 4 = 0 \Leftrightarrow x = 2$.
-• Sign of the derivative: $y' \gt 0$ for all $x \in (2; +\infty)$ and $y' \lt 0$ for all $x \in (-\infty; 2)$.
-• Therefore, the function is strictly increasing on $(2; +\infty)$ and strictly decreasing on $(-\infty; 2)$.
+• We have $|u_n| = \frac{1}{n^2}$. As $n$ becomes sufficiently large, $\frac{1}{n^2}$ becomes arbitrarily small, falling below any prescribed positive tolerance $\varepsilon > 0$.
+• For instance, to ensure $|u_n| < 0.0001$, we require $\frac{1}{n^2} < \frac{1}{10\\,000} \Leftrightarrow n^2 > 10\\,000 \Leftrightarrow n > 100$. Thus, from the 101st term onward, all terms have absolute values less than $0.0001$. Therefore, $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
 
-**Example 2:** Find the intervals of monotonicity of the function $y = \frac{x^2 - 2x + 5}{x - 1}$.
-
-Solution for Example 2:
-• The function is defined for all $x \ne 1$, that is, on the intervals $(-\infty; 1)$ and $(1; +\infty)$.
-• The derivative of the function is:
-$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 5)}{(x - 1)^2} = \frac{x^2 - 2x - 3}{(x - 1)^2}$$
-• Solving $y' = 0 \Leftrightarrow x^2 - 2x - 3 = 0 \Leftrightarrow x = -1$ or $x = 3$.
-• Analyzing the sign of $y'$ on each interval of the domain:
-  + On the intervals $(-\infty; -1)$ and $(3; +\infty)$, we have $y' \gt 0$, so the function is strictly increasing.
-  + On the intervals $(-1; 1)$ and $(1; 3)$, we have $y' \lt 0$, so the function is strictly decreasing.
-• Thus, the function is strictly increasing on $(-\infty; -1)$ and $(3; +\infty)$; strictly decreasing on $(-1; 1)$ and $(1; 3)$.
-
-**Practice 1:** Determine the intervals of monotonicity of the function $y = \frac{x - 2}{x + 1}$.
+**Practice 1:** Prove that $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
 
 Solution for Practice 1:
-• The function is defined for all $x \ne -1$, that is, on $(-\infty; -1)$ and $(-1; +\infty)$.
-• We compute the derivative:
-$$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} \gt 0$$
-• Since $y' \gt 0$ for all $x \ne -1$, the function is strictly increasing on each interval $(-\infty; -1)$ and $(-1; +\infty)$.
+• We have $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$.
+• Since $|q| = \frac{1}{3} < 1$, the fundamental limit theorem gives $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Hence, $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
 
-## Extrema of a Function
+**Example 2:** Given the sequence $(u_n)$ with $u_n = \frac{2n + 1}{n}$. Prove that $\lim\_{n \to +\infty} u_n = 2$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_cuc_tri_ham_so"/>
+Solution for Example 2:
+• We have $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{2n + 1 - 2n}{n} = \frac{1}{n}$.
+• Since $\lim\_{n \to +\infty} \frac{1}{n} = 0$, it follows that $\lim\_{n \to +\infty} (u_n - 2) = 0$, and thus $\lim\_{n \to +\infty} u_n = 2$.
 
-### a) Concept of Local Maxima, Local Minima, and Sufficient Conditions
-
-Theorem (Sufficient Conditions for Local Extrema):
-Suppose the function $y = f(x)$ is continuous on an open interval $(a; b)$ containing $x_0$ and is differentiable on the intervals $(a; x_0)$ and $(x_0; b)$. Then:
-• If $f'(x) \gt 0$ for all $x \in (a; x_0)$ and $f'(x) \lt 0$ for all $x \in (x_0; b)$ (the derivative changes sign from positive to negative as $x$ passes through $x_0$), then the function $f(x)$ attains a local maximum at $x_0$, with local maximum value $f(x_0)$.
-• If $f'(x) \lt 0$ for all $x \in (a; x_0)$ and $f'(x) \gt 0$ for all $x \in (x_0; b)$ (the derivative changes sign from negative to positive as $x$ passes through $x_0$), then the function $f(x)$ attains a local minimum at $x_0$, with local minimum value $f(x_0)$.
-• Local maximum points and local minimum points are collectively called local extreme points. If $f'(x)$ does not change sign as $x$ passes through $x_0$, then $x_0$ is not a local extreme point.
-
-### b) Illustrative Examples and Practice on Local Extrema
-
-**Example 3:** Find the local extrema of the function $y = x^3 - 6x^2 + 9x + 30$.
-
-Solution for Example 3:
-• The domain of the function is $D = \mathbb{R}$.
-• Derivative: $y' = 3x^2 - 12x + 9 = 3(x - 1)(x - 3)$.
-• Setting $y' = 0 \Leftrightarrow x = 1$ or $x = 3$.
-• Analyzing the sign of the derivative $y'$:
-  + As $x$ passes through $x = 1$, the derivative $y'$ changes sign from positive to negative, so the function attains a local maximum at $x = 1$ with local maximum value $y(1) = 34$.
-  + As $x$ passes through $x = 3$, the derivative $y'$ changes sign from negative to positive, so the function attains a local minimum at $x = 3$ with local minimum value $y(3) = 30$.
-
-**Example 4:** Find the local extrema of the function $y = \frac{x^2 - 2x + 9}{x - 2}$.
-
-Solution for Example 4:
-• The function is defined for all $x \ne 2$.
-• We have the derivative:
-$$y' = \frac{(2x - 2)(x - 2) - (x^2 - 2x + 9)}{(x - 2)^2} = \frac{x^2 - 4x - 5}{(x - 2)^2}$$
-• Setting $y' = 0 \Leftrightarrow x^2 - 4x - 5 = 0 \Leftrightarrow x = -1$ or $x = 5$.
-• Analyzing the sign of the derivative $y'$:
-  + As $x$ passes through $x = -1$, the derivative $y'$ changes sign from positive to negative, so the function attains a local maximum at $x = -1$ with local maximum value $y(-1) = -4$.
-  + As $x$ passes through $x = 5$, the derivative $y'$ changes sign from negative to positive, so the function attains a local minimum at $x = 5$ with local minimum value $y(5) = 8$.
-
-**Practice 2:** Find the local extreme points of the function $y = x^4 - 4x^2 + 2$.
+**Practice 2:** Given the sequence $(u_n)$ with $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Prove that $\lim\_{n \to +\infty} u_n = 3$.
 
 Solution for Practice 2:
-• The domain of the function is $D = \mathbb{R}$.
-• Derivative: $y' = 4x^3 - 8x = 4x(x^2 - 2)$. Setting $y' = 0 \Leftrightarrow x = 0$ or $x = \pm\sqrt{2}$.
-• The function attains a local maximum at $x = 0$ with local maximum value $y(0) = 2$; it attains local minima at $x = -\sqrt{2}$ and $x = \sqrt{2}$ with the same local minimum value $y(\pm\sqrt{2}) = -2$.
+• We have $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = \frac{3 \cdot 2^n - 1 - 3 \cdot 2^n}{2^n} = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$.
+• Since $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ (as $|\frac{1}{2}| < 1$), we obtain $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
+
+## Theorems on Finite Limits of Sequences
+
+\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_ve_gioi_han_huu_han"/>
+
+### a) Algebraic Limit Laws
+
+Arithmetic Operations on Limits:
+If $\lim\_{n \to +\infty} u_n = a$ and $\lim\_{n \to +\infty} v_n = b$, then:
+1\. $\lim\_{n \to +\infty} (u_n + v_n) = a + b$
+2\. $\lim\_{n \to +\infty} (u_n - v_n) = a - b$
+3\. $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$
+4\. $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (provided $b \ne 0$).
+5\. If $u_n \ge 0$ for all $n$ and $\lim\_{n \to +\infty} u_n = a$, then $a \ge 0$ and $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
+
+### b) Illustrative Examples and Practice on Limit Laws
+
+**Example 3:** Evaluate $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
+
+Solution for Example 3:
+• Dividing both the numerator and denominator by the highest power of $n$, which is $n^2$:
+$$\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.$$
+
+**Practice 3:** Evaluate $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
+
+Solution for Practice 3:
+• Dividing both numerator and denominator by $n$ (noting that for $n > 0$, $\sqrt{n^2} = n$):
+$$\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.$$
+
+## Sum of an Infinite Geometric Series
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han"/>
+
+### a) Concept and Sum Formula
+
+Infinite Geometric Series:
+• An infinite geometric sequence $(u_n)$ with common ratio $q$ satisfying $|q| < 1$ is called an infinite geometric series (or a convergent geometric progression).
+• The sum of an infinite geometric series $(u_n)$ is defined as the limit of the partial sum $S_n$ of the first $n$ terms as $n \to +\infty$:
+$$S = \lim\_{n \to +\infty} S_n = \lim\_{n \to +\infty} \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1}{1 - q} \quad (|q| < 1)$
+
+### b) Illustrative Examples and Repeating Decimal Conversion
+
+**Example 4:** Compute the sum $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
+
+Solution for Example 4:
+• This is the sum of an infinite geometric series with first term $u_1 = 1$ and common ratio $q = -\frac{1}{2}$ (since $|q| < 1$).
+• The sum of the series is:
+$$S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{1}{\frac{3}{2}} = \frac{2}{3}.$$
+
+**Example 5:** Express the repeating decimal $2.222\dots$ as a fraction in lowest terms.
+
+Solution for Example 5:
+• We write $2.222\dots = 2 + 0.2 + 0.02 + 0.002 + \dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + 2 \cdot \frac{1}{10^3} + \dots$
+• Starting from the second term, this forms an infinite geometric series with $u_1 = 0.2 = \frac{2}{10}$ and $q = \frac{1}{10}$.
+• The sum of the repeating decimal portion is $\frac{2/10}{1 - 1/10} = \frac{2/10}{9/10} = \frac{2}{9}$.
+• Consequently: $2.222\dots = 2 + \frac{2}{9} = \frac{20}{9}$.
+
+**Luyện tập 4:** Compute the sum $S = 2 + \frac{2}{7} + \frac{2}{7^2} + \dots + \frac{2}{7^{n-1}} + \dots$
+
+Solution for Practice 4:
+• This is the sum of an infinite geometric series with first term $u_1 = 2$ and common ratio $q = \frac{1}{7}$.
+• The sum of the series is:
+$$S = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{7}} = \frac{2}{\frac{6}{7}} = 2 \cdot \frac{7}{6} = \frac{7}{3}.$$
+
+## Infinite Limits of Sequences
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_vo_cuc"/>
+
+### a) Definition of Infinite Limits
+
+Infinite Limits:
+• A sequence $(u_n)$ is said to approach positive infinity ($+\infty$) as $n \to +\infty$ if $u_n$ exceeds any arbitrarily large positive number for all $n$ sufficiently large, denoted by $\lim\_{n \to +\infty} u_n = +\infty$.
+• A sequence $(u_n)$ is said to approach negative infinity ($-\infty$) as $n \to +\infty$ if $\lim\_{n \to +\infty} (-u_n) = +\infty$, denoted by $\lim\_{n \to +\infty} u_n = -\infty$.
+• Fundamental Results:
+  + $\lim\_{n \to +\infty} n^k = +\infty$ (where $k$ is a positive integer);
+  + $\lim\_{n \to +\infty} q^n = +\infty$ (for $q > 1$).
+
+### b) Illustrative Examples and Practice on Infinite Limits
+
+**Example 6:** Evaluate $\lim\_{n \to +\infty} (n^2 - 2n)$.
+
+Solution for Example 6:
+• Factoring the expression: $n^2 - 2n = n^2\left(1 - \frac{2}{n}\right)$.
+• Since $\lim\_{n \to +\infty} n^2 = +\infty$ and $\lim\_{n \to +\infty} \left(1 - \frac{2}{n}\right) = 1 > 0$, by the rules of infinite limits, we obtain $\lim\_{n \to +\infty} (n^2 - 2n) = +\infty$.
+
+**Luyện tập 5:** Evaluate $\lim\_{n \to +\infty} (n - \sqrt{n})$.
+
+Solution for Practice 5:
+• Factoring: $n - \sqrt{n} = \sqrt{n}(\sqrt{n} - 1)$.
+• Since $\lim\_{n \to +\infty} \sqrt{n} = +\infty$ and $\lim\_{n \to +\infty} (\sqrt{n} - 1) = +\infty$, by the infinite limit rules we obtain $\lim\_{n \to +\infty} (n - \sqrt{n}) = +\infty$.
 
 ## Applications and Exercises
 
-### a) Real-World Applications
+### a) Real-World Applications and Modeling
 
-**Application 1 (Rectilinear Motion of a Particle):** The position of a particle moving along a coordinate axis at time $t$ seconds ($t \ge 0$) is given by $s(t) = t^3 - 9t^2 + 15t$ (in meters). During which time intervals does the particle move to the right, and during which intervals does it move to the left?
+**Application (Resolving Zeno's Paradox - Achilles and the Tortoise):** Suppose Achilles runs at $100\text{ km/h}$, the tortoise runs at $1\text{ km/h}$, and the initial head start is $a = 100\text{ km}$.
+a) Compute the time intervals $t_1, t_2, \dots, t_n, \dots$ required for Achilles to bridge each successive distance gap.
+b) Calculate the total cumulative time required for Achilles to catch the tortoise.
+c) Where lies the flaw in Zeno's reasoning?
 
-Solution for Application 1:
-• The instantaneous velocity of the particle at time $t$ is:
-$$v(t) = s'(t) = 3t^2 - 18t + 15 = 3(t - 1)(t - 5)$$
-• The particle moves to the right when $v(t) \gt 0$, which corresponds to $t \in [0; 1)$ or $t \in (5; +\infty)$.
-• The particle moves to the left when $v(t) \lt 0$, which corresponds to $t \in (1; 5)$.
-• Thus, the particle moves to the right from 0 to 1 second and after 5 seconds; it moves to the left between 1 and 5 seconds.
+Solution for Application:
+• a) The time for Achilles to cover the initial $100\text{ km}$ gap is $t_1 = \frac{100}{100} = 1$ hour; during this time the tortoise crawls $1\text{ km}$. The subsequent gap requires $t_2 = \frac{1}{100}$ hours, and so on.
+• b) The total time is the sum of an infinite geometric series: $T = 1 + \frac{1}{100} + \frac{1}{100^2} + \dots = \frac{1}{1 - \frac{1}{100}} = \frac{100}{99}$ hours ($\approx 1.01$ hours).
+• c) Zeno's flaw was assuming that an infinite number of temporal intervals must sum to infinity. Modern mathematics proves that an infinite series of decreasing terms can converge to a finite sum.
 
-**Application 2 (Maximum Height of a Vertically Projected Object):** An object is projected vertically upward from an initial height of 2 m with an initial velocity of $24.5\text{ m/s}$. Its height after $t$ seconds is $h(t) = 2 + 24.5t - 4.9t^2$ (in meters). At what time does the object reach its maximum height?
+**Exercise 5.5 (Cumulative Drug Concentration in the Body):** A patient takes a $150\text{ mg}$ medication tablet daily. Before each subsequent dose, $5\\%$ of the residual drug from prior doses remains in the body. Calculate the total drug amount after taking the 5th tablet, and estimate the steady-state drug concentration under long-term administration.
 
-Solution for Application 2:
-• The velocity of the object at time $t$ is: $v(t) = h'(t) = 24.5 - 9.8t$.
-• Setting $h'(t) = 0 \Leftrightarrow 24.5 - 9.8t = 0 \Leftrightarrow t = \frac{24.5}{9.8} = 2.5\text{ (seconds)}$.
-• Since the derivative $h'(t)$ changes sign from positive to negative as $t$ passes through $2.5$, the height function $h(t)$ attains its maximum at $t = 2.5$.
-• The maximum height reached by the object is:
-$$h(2.5) = 2 + 24.5 \cdot 2.5 - 4.9 \cdot (2.5)^2 = 32.625\text{ (m).}$$
-• Therefore, the object reaches its maximum height 2.5 seconds after launch.
-
-**Exercise 1.9 (Product Sales Rate Model):** The cumulative sales volume of a new product follows the logistic function $f(t) = \frac{5\\,000}{1 + 5e^{-t}}$ ($t \ge 0$, time measured in years). The rate of sales is given by the derivative $f'(t)$. After how many years from launch is the sales rate maximized?
-
-Solution for Exercise 1.9:
-• The derivative representing the sales rate at time $t$ is:
-$$f'(t) = \frac{25\\,000 e^{-t}}{(1 + 5e^{-t})^2}$$
-• To find the extreme point of the sales rate function $f'(t)$, we compute the second derivative $f''(t)$:
-$$f''(t) = \frac{25\\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}$$
-• Setting $f''(t) = 0 \Leftrightarrow 5e^{-t} - 1 = 0 \Leftrightarrow e^t = 5 \Leftrightarrow t = \ln 5 \approx 1.61\text{ (years)}$.
-• As $t$ passes through $\ln 5$, the second derivative $f''(t)$ changes sign from positive to negative, so $f'(t)$ attains its maximum at $t = \ln 5$.
-• Thus, the sales rate reaches its maximum after approximately 1.61 years.
+Solution for Exercise 5.5:
+• Drug amount after day 1: $150\text{ mg}$.
+• Drug amount after day 2: $150 + 150(0.05) = 150(1 + 0.05)$.
+• After taking the 5th tablet, the total accumulated drug is the sum of the first 5 terms of a geometric series with $u_1 = 150$ and common ratio $q = 0.05$:
+  $$S_5 = 150 \cdot \frac{1 - (0.05)^5}{1 - 0.05} = \frac{150(1 - 0.0000003125)}{0.95} \approx 157.89\text{ (mg).}$$
+• Under long-term administration ($n \to +\infty$), the drug quantity converges to the sum of an infinite geometric series:
+  $$S = \frac{150}{1 - 0.05} = \frac{150}{0.95} = \frac{3\000}{19} \approx 157.89\text{ (mg).}$$
 
 ### b) Detailed Section Exercises
 
-**Exercise 1.2:** Find the intervals where the following functions are strictly increasing and strictly decreasing:
-a) $y = \frac{1}{3}x^3 - 2x^2 + 3x + 1$;
-b) $y = -x^3 + 2x^2 - 5x + 3$.
+**Exercise 5.1:** Evaluate the following limits:
+a) $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 + 1}$;
+b) $\lim\_{n \to +\infty} (\sqrt{n^2 + 2n} - n)$.
 
-Solution for Exercise 1.2:
-• a) Domain $D = \mathbb{R}$. Derivative $y' = x^2 - 4x + 3 = (x - 1)(x - 3)$.
-  + Setting $y' = 0 \Leftrightarrow x = 1$ or $x = 3$.
-  + We have $y' \gt 0$ on $(-\infty; 1)$ and $(3; +\infty)$; $y' \lt 0$ on $(1; 3)$.
-  + Thus, the function is strictly increasing on $(-\infty; 1)$ and $(3; +\infty)$; strictly decreasing on $(1; 3)$.
-• b) Domain $D = \mathbb{R}$. Derivative $y' = -3x^2 + 4x - 5 = -3\left(x - \frac{2}{3}\right)^2 - \frac{11}{3} \lt 0$ for all $x \in \mathbb{R}$.
-  + Thus, the function is strictly decreasing on $\mathbb{R}$.
+Solution for Exercise 5.1:
+• a) Dividing both numerator and denominator by $n^2$:
+  $$\lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 + \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 + 0} = \frac{1}{2}.$$
+• b) Multiplying and dividing by the conjugate expression:
+  $$\lim\_{n \to +\infty} \frac{(\sqrt{n^2 + 2n} - n)(\sqrt{n^2 + 2n} + n)}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2n}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2}{\sqrt{1 + \frac{2}{n}} + 1} = \frac{2}{1 + 1} = 1.$$
 
-**Exercise 1.3:** Determine the intervals of monotonicity of the following functions:
-a) $y = \frac{2x - 1}{x + 2}$;
-b) $y = \frac{x^2 + x + 4}{x - 3}$.
 
-Solution for Exercise 1.3:
-• a) The function is defined for all $x \ne -2$.
-  + Derivative: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} \gt 0$ for all $x \ne -2$.
-  + Thus, the function is strictly increasing on each interval $(-\infty; -2)$ and $(-2; +\infty)$.
-• b) The function is defined for all $x \ne 3$.
-  + Derivative:
-$$y' = \frac{(2x + 1)(x - 3) - (x^2 + x + 4)}{(x - 3)^2} = \frac{x^2 - 6x - 7}{(x - 3)^2}$$
-  + Setting $y' = 0 \Leftrightarrow x^2 - 6x - 7 = 0 \Leftrightarrow x = -1$ or $x = 7$.
-  + Thus, the function is strictly increasing on $(-\infty; -1)$ and $(7; +\infty)$; strictly decreasing on $(-1; 3)$ and $(3; 7)$.
 
-**Exercise 1.7:** Find the local extrema of the following functions:
-a) $y = 2x^3 - 9x^2 + 12x - 5$;
-b) $y = \frac{x^2 - 2x + 3}{x - 1}$.
+**Exercise 5.4:** Express the following repeating decimals as fractions in lowest terms:
+a) $1.(12) = 1.121212\dots$;
+b) $3.(102) = 3.102102102\dots$
 
-Solution for Exercise 1.7:
-• a) Domain $D = \mathbb{R}$. Derivative $y' = 6x^2 - 18x + 12 = 6(x - 1)(x - 2)$.
-  + Setting $y' = 0 \Leftrightarrow x = 1$ or $x = 2$.
-  + The function attains a local maximum at $x = 1$ with local maximum value $y(1) = 0$; it attains a local minimum at $x = 2$ with local minimum value $y(2) = -1$.
-• b) The function is defined for all $x \ne 1$. Derivative:
-$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 3)}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}$$
-  + Setting $y' = 0 \Leftrightarrow x^2 - 2x - 1 = 0 \Leftrightarrow x = 1 - \sqrt{2}$ or $x = 1 + \sqrt{2}$.
-  + The function attains a local maximum at $x = 1 - \sqrt{2}$ with local maximum value $y(1 - \sqrt{2}) = 2 - 2\sqrt{2}$; it attains a local minimum at $x = 1 + \sqrt{2}$ with local minimum value $y(1 + \sqrt{2}) = 2 + 2\sqrt{2}$.
+Solution for Exercise 5.4:
+• a) $1.(12) = 1 + \frac{12}{10^2} + \frac{12}{10^4} + \dots = 1 + \frac{12/100}{1 - 1/100} = 1 + \frac{12}{99} = 1 + \frac{4}{33} = \frac{37}{33}$.
+• b) $3.(102) = 3 + \frac{102}{10^3} + \frac{102}{10^6} + \dots = 3 + \frac{102/1\\,000}{1 - 1/1\\,000} = 3 + \frac{102}{999} = 3 + \frac{34}{333} = \frac{1\\,034}{333}$.
