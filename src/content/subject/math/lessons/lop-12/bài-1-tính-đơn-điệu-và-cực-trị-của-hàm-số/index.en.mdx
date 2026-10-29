@@ -31,11 +31,11 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 ·       Local maximum point, local minimum point, local extrema of a function
 
-·       Local maximum value ($y\_{\text{max}}$), local minimum value ($y\_{\text{min}}$), extreme points of a function's graph
+·       Local maximum value, local minimum value, extreme points of a function graph
 
 **Knowledge and Skills:**
 
-·       Recognize the strictly increasing and decreasing intervals of a function based on the sign of its first derivative $f'(x)$.
+·       Recognize the strictly increasing and decreasing intervals of a function based on the sign of its first derivative.
 
 ·       Represent the monotonicity of a function using a variation table.
 
@@ -53,55 +53,47 @@ import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/compon
 
 Definition:
 Let $K$ be an open interval, a closed interval, or a half-open interval, and let $y = f(x)$ be a function defined on $K$.
-• The function $y = f(x)$ is said to be strictly increasing on $K$ if:
-$$\forall x_1, x_2 \in K, x_1 < x_2 \Rightarrow f(x_1) < f(x_2)$$
-• The function $y = f(x)$ is said to be strictly decreasing on $K$ if:
-$$\forall x_1, x_2 \in K, x_1 < x_2 \Rightarrow f(x_1) > f(x_2)$$
+• The function $y = f(x)$ is said to be strictly increasing on $K$ if for all $x_1, x_2 \in K$ with $x_1 \lt x_2$, we have:
+$$f(x_1) \lt f(x_2)$$
+• The function $y = f(x)$ is said to be strictly decreasing on $K$ if for all $x_1, x_2 \in K$ with $x_1 \lt x_2$, we have:
+$$f(x_1) \gt f(x_2)$$
 • The graph of an increasing function rises from left to right; the graph of a decreasing function falls from left to right.
 Theorem (Sign of the Derivative and Monotonicity):
 Let the function $y = f(x)$ be differentiable on an open interval $K$.
-• If $f'(x) > 0$ for all $x \in K$, then the function $f(x)$ is strictly increasing on $K$.
-• If $f'(x) < 0$ for all $x \in K$, then the function $f(x)$ is strictly decreasing on $K$.
-• Extended Criterion: If $f'(x) \ge 0$ (or $f'(x) \le 0$) for all $x \in K$ and $f'(x) = 0$ holds only at a finite number of points in $K$, then the function $f(x)$ is strictly increasing (or strictly decreasing) on $K$.
+• If $f'(x) \gt 0$ for all $x \in K$, then the function $f(x)$ is strictly increasing on $K$.
+• If $f'(x) \lt 0$ for all $x \in K$, then the function $f(x)$ is strictly decreasing on $K$.
+• If $f'(x) \ge 0$ (or $f'(x) \le 0$) for all $x \in K$ and $f'(x) = 0$ holds only at a finite number of points in $K$, then the function $f(x)$ is strictly increasing (or strictly decreasing) on $K$.
 • If $f'(x) = 0$ for all $x \in K$, then the function $f(x)$ is constant on $K$.
 
 ### b) Illustrative Examples and Practice on Monotonicity
 
-Procedure for Determining the Intervals of Monotonicity of $y = f(x)$:
-• Step 1: Find the domain of the function.
-• Step 2: Compute the derivative $f'(x)$. Find all critical points $x_i$ where $f'(x) = 0$ or $f'(x)$ is undefined.
-• Step 3: Arrange the points $x_i$ in ascending order and construct a variation table showing the sign of $f'(x)$.
-• Step 4: State the conclusion regarding the intervals where the function is strictly increasing and strictly decreasing.
+**Example 1:** Find the intervals where the function $y = x^2 - 4x + 2$ is strictly increasing and strictly decreasing.
 
-**Example 2:** Find the intervals where the function $y = x^2 - 4x + 2$ is strictly increasing and strictly decreasing.
+Solution for Example 1:
+• The domain of the function is $D = \mathbb{R}$.
+• We have the derivative $y' = 2x - 4$. Setting $y' = 0 \Leftrightarrow 2x - 4 = 0 \Leftrightarrow x = 2$.
+• Sign of the derivative: $y' \gt 0$ for all $x \in (2; +\infty)$ and $y' \lt 0$ for all $x \in (-\infty; 2)$.
+• Therefore, the function is strictly increasing on $(2; +\infty)$ and strictly decreasing on $(-\infty; 2)$.
+
+**Example 2:** Find the intervals of monotonicity of the function $y = \frac{x^2 - 2x + 5}{x - 1}$.
 
 Solution for Example 2:
-• Domain: $D = \mathbb{R}$.
-• Derivative: $y' = 2x - 4$. We have $y' = 0 \Leftrightarrow 2x - 4 = 0 \Leftrightarrow x = 2$.
-• Sign of the derivative: $y' > 0$ for $x \in (2; +\infty)$ and $y' < 0$ for $x \in (-\infty; 2)$.
-• Therefore, the function is strictly increasing on the interval $(2; +\infty)$ and strictly decreasing on the interval $(-\infty; 2)$.
-
-**Example 3:** Find the intervals of monotonicity of the function $y = \frac{x^2 - 2x + 5}{x - 1}$.
-
-Solution for Example 3:
-• Domain: $D = \mathbb{R} \setminus \\{1\\}$.
-• Derivative:
+• The function is defined for all $x \ne 1$, that is, on the intervals $(-\infty; 1)$ and $(1; +\infty)$.
+• The derivative of the function is:
 $$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 5)}{(x - 1)^2} = \frac{x^2 - 2x - 3}{(x - 1)^2}$$
 • Solving $y' = 0 \Leftrightarrow x^2 - 2x - 3 = 0 \Leftrightarrow x = -1$ or $x = 3$.
-• Variation analysis:
-  + On $(-\infty; -1)$: $y' > 0 \Rightarrow$ the function is strictly increasing.
-  + On $(-1; 1)$: $y' < 0 \Rightarrow$ the function is strictly decreasing.
-  + On $(1; 3)$: $y' < 0 \Rightarrow$ the function is strictly decreasing.
-  + On $(3; +\infty)$: $y' > 0 \Rightarrow$ the function is strictly increasing.
-• Conclusion: The function is strictly increasing on the intervals $(-\infty; -1)$ and $(3; +\infty)$; strictly decreasing on the intervals $(-1; 1)$ and $(1; 3)$.
+• Analyzing the sign of $y'$ on each interval of the domain:
+  + On the intervals $(-\infty; -1)$ and $(3; +\infty)$, we have $y' \gt 0$, so the function is strictly increasing.
+  + On the intervals $(-1; 1)$ and $(1; 3)$, we have $y' \lt 0$, so the function is strictly decreasing.
+• Thus, the function is strictly increasing on $(-\infty; -1)$ and $(3; +\infty)$; strictly decreasing on $(-1; 1)$ and $(1; 3)$.
 
-**Example 4:** Determine the intervals of monotonicity of the function $y = \frac{x - 2}{x + 1}$.
+**Practice 1:** Determine the intervals of monotonicity of the function $y = \frac{x - 2}{x + 1}$.
 
-Solution for Example 4:
-• Domain: $D = \mathbb{R} \setminus \\{-1\\}$.
-• Derivative:
-$$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} > 0, \quad \forall x \ne -1$$
-• Thus, the function is strictly increasing on each interval of its domain: $(-\infty; -1)$ and $(-1; +\infty)$.
+Solution for Practice 1:
+• The function is defined for all $x \ne -1$, that is, on $(-\infty; -1)$ and $(-1; +\infty)$.
+• We compute the derivative:
+$$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} \gt 0$$
+• Since $y' \gt 0$ for all $x \ne -1$, the function is strictly increasing on each interval $(-\infty; -1)$ and $(-1; +\infty)$.
 
 ## Extrema of a Function
 
@@ -109,128 +101,113 @@ $$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} > 0, \quad \for
 
 ### a) Concept of Local Maxima, Local Minima, and Sufficient Conditions
 
-Definition:
-Let the function $y = f(x)$ be defined and continuous on an open interval $(a; b)$ containing the point $x_0$.
-• If there exists a number $h > 0$ such that $f(x) < f(x_0)$ for all $x \in (x_0 - h; x_0 + h) \setminus \\{x_0\\}$, then the function attains a local maximum at $x_0$.
-  + $x_0$ is called a local maximum point of the function;
-  + $f(x_0)$ (or $y\_{\text{max}}$) is called the local maximum value of the function;
-  + The point $M_0(x_0; f(x_0))$ is called a local maximum point of the graph of the function.
-• If there exists a number $h > 0$ such that $f(x) > f(x_0)$ for all $x \in (x_0 - h; x_0 + h) \setminus \\{x_0\\}$, then the function attains a local minimum at $x_0$.
-  + $x_0$ is called a local minimum point of the function;
-  + $f(x_0)$ (or $y\_{\text{min}}$) is called the local minimum value of the function;
-  + The point $M_0(x_0; f(x_0))$ is called a local minimum point of the graph of the function.
-• Local maximum points and local minimum points are collectively referred to as local extreme points (or extrema) of the function.
 Theorem (Sufficient Conditions for Local Extrema):
-Suppose $y = f(x)$ is continuous on $(a; b)$ containing $x_0$ and is differentiable on $(a; x_0)$ and $(x_0; b)$:
-• If $f'(x) > 0$ on $(a; x_0)$ and $f'(x) < 0$ on $(x_0; b)$ (the derivative changes sign from positive to negative as $x$ passes through $x_0$), then the function attains a local maximum at $x_0$.
-• If $f'(x) < 0$ on $(a; x_0)$ and $f'(x) > 0$ on $(x_0; b)$ (the derivative changes sign from negative to positive as $x$ passes through $x_0$), then the function attains a local minimum at $x_0$.
-• Note: If $f'(x)$ does not change sign as $x$ passes through $x_0$, then $x_0$ is not an extreme point of the function.
+Suppose the function $y = f(x)$ is continuous on an open interval $(a; b)$ containing $x_0$ and is differentiable on the intervals $(a; x_0)$ and $(x_0; b)$. Then:
+• If $f'(x) \gt 0$ for all $x \in (a; x_0)$ and $f'(x) \lt 0$ for all $x \in (x_0; b)$ (the derivative changes sign from positive to negative as $x$ passes through $x_0$), then the function $f(x)$ attains a local maximum at $x_0$, with local maximum value $f(x_0)$.
+• If $f'(x) \lt 0$ for all $x \in (a; x_0)$ and $f'(x) \gt 0$ for all $x \in (x_0; b)$ (the derivative changes sign from negative to positive as $x$ passes through $x_0$), then the function $f(x)$ attains a local minimum at $x_0$, with local minimum value $f(x_0)$.
+• Local maximum points and local minimum points are collectively called local extreme points. If $f'(x)$ does not change sign as $x$ passes through $x_0$, then $x_0$ is not a local extreme point.
 
 ### b) Illustrative Examples and Practice on Local Extrema
 
-**Example 6:** Find the local extrema of the function $y = x^3 - 6x^2 + 9x + 30$.
+**Example 3:** Find the local extrema of the function $y = x^3 - 6x^2 + 9x + 30$.
 
-Solution for Example 6:
-• Domain: $D = \mathbb{R}$.
+Solution for Example 3:
+• The domain of the function is $D = \mathbb{R}$.
 • Derivative: $y' = 3x^2 - 12x + 9 = 3(x - 1)(x - 3)$.
 • Setting $y' = 0 \Leftrightarrow x = 1$ or $x = 3$.
-• Analyzing the sign of the derivative:
-  + As $x$ passes through $x = 1$, $y'$ changes sign from positive to negative $\Rightarrow$ the function attains a local maximum at $x = 1$, with local maximum value $y\_{\text{max}} = y(1) = 34$.
-  + As $x$ passes through $x = 3$, $y'$ changes sign from negative to positive $\Rightarrow$ the function attains a local minimum at $x = 3$, with local minimum value $y\_{\text{min}} = y(3) = 30$.
+• Analyzing the sign of the derivative $y'$:
+  + As $x$ passes through $x = 1$, the derivative $y'$ changes sign from positive to negative, so the function attains a local maximum at $x = 1$ with local maximum value $y(1) = 34$.
+  + As $x$ passes through $x = 3$, the derivative $y'$ changes sign from negative to positive, so the function attains a local minimum at $x = 3$ with local minimum value $y(3) = 30$.
 
-**Example 7:** Find the local extrema of the function $y = \frac{x^2 - 2x + 9}{x - 2}$.
+**Example 4:** Find the local extrema of the function $y = \frac{x^2 - 2x + 9}{x - 2}$.
 
-Solution for Example 7:
-• Domain: $D = \mathbb{R} \setminus \\{2\\}$.
-• Derivative:
+Solution for Example 4:
+• The function is defined for all $x \ne 2$.
+• We have the derivative:
 $$y' = \frac{(2x - 2)(x - 2) - (x^2 - 2x + 9)}{(x - 2)^2} = \frac{x^2 - 4x - 5}{(x - 2)^2}$$
 • Setting $y' = 0 \Leftrightarrow x^2 - 4x - 5 = 0 \Leftrightarrow x = -1$ or $x = 5$.
-• Analyzing the sign of the derivative:
-  + Passing through $x = -1$, $y'$ changes sign from positive to negative $\Rightarrow$ the function attains a local maximum at $x = -1$, with local maximum value $y\_{\text{max}} = y(-1) = -4$.
-  + Passing through $x = 5$, $y'$ changes sign from negative to positive $\Rightarrow$ the function attains a local minimum at $x = 5$, with local minimum value $y\_{\text{min}} = y(5) = 8$.
+• Analyzing the sign of the derivative $y'$:
+  + As $x$ passes through $x = -1$, the derivative $y'$ changes sign from positive to negative, so the function attains a local maximum at $x = -1$ with local maximum value $y(-1) = -4$.
+  + As $x$ passes through $x = 5$, the derivative $y'$ changes sign from negative to positive, so the function attains a local minimum at $x = 5$ with local minimum value $y(5) = 8$.
+
+**Practice 2:** Find the local extreme points of the function $y = x^4 - 4x^2 + 2$.
+
+Solution for Practice 2:
+• The domain of the function is $D = \mathbb{R}$.
+• Derivative: $y' = 4x^3 - 8x = 4x(x^2 - 2)$. Setting $y' = 0 \Leftrightarrow x = 0$ or $x = \pm\sqrt{2}$.
+• The function attains a local maximum at $x = 0$ with local maximum value $y(0) = 2$; it attains local minima at $x = -\sqrt{2}$ and $x = \sqrt{2}$ with the same local minimum value $y(\pm\sqrt{2}) = -2$.
 
 ## Applications and Exercises
 
 ### a) Real-World Applications
 
-**Application 1 (Rectilinear Motion of a Particle):** The position of a particle moving along a coordinate line at time $t$ seconds ($t \ge 0$) is given by $s(t) = t^3 - 9t^2 + 15t$ (in meters). During which time intervals does the particle move to the right (positive direction), and during which intervals does it move to the left?
+**Application 1 (Rectilinear Motion of a Particle):** The position of a particle moving along a coordinate axis at time $t$ seconds ($t \ge 0$) is given by $s(t) = t^3 - 9t^2 + 15t$ (in meters). During which time intervals does the particle move to the right, and during which intervals does it move to the left?
 
 Solution for Application 1:
 • The instantaneous velocity of the particle at time $t$ is:
 $$v(t) = s'(t) = 3t^2 - 18t + 15 = 3(t - 1)(t - 5)$$
-• The particle moves to the right when $v(t) > 0 \Leftrightarrow t \in [0; 1) \cup (5; +\infty)$.
-• The particle moves to the left when $v(t) < 0 \Leftrightarrow t \in (1; 5)$.
+• The particle moves to the right when $v(t) \gt 0$, which corresponds to $t \in [0; 1)$ or $t \in (5; +\infty)$.
+• The particle moves to the left when $v(t) \lt 0$, which corresponds to $t \in (1; 5)$.
 • Thus, the particle moves to the right from 0 to 1 second and after 5 seconds; it moves to the left between 1 and 5 seconds.
 
-**Application 2 (Maximum Height of a Vertically Projected Object):** An object is projected vertically upward from an initial height of 2 m with an initial velocity $v_0 = 24.5\text{ m/s}$. Its height after $t$ seconds is $h(t) = 2 + 24.5t - 4.9t^2$ (in meters). At what time does the object reach its maximum height?
+**Application 2 (Maximum Height of a Vertically Projected Object):** An object is projected vertically upward from an initial height of 2 m with an initial velocity of $24.5\text{ m/s}$. Its height after $t$ seconds is $h(t) = 2 + 24.5t - 4.9t^2$ (in meters). At what time does the object reach its maximum height?
 
 Solution for Application 2:
 • The velocity of the object at time $t$ is: $v(t) = h'(t) = 24.5 - 9.8t$.
 • Setting $h'(t) = 0 \Leftrightarrow 24.5 - 9.8t = 0 \Leftrightarrow t = \frac{24.5}{9.8} = 2.5\text{ (seconds)}$.
-• The derivative $h'(t)$ changes sign from positive to negative as $t$ passes through $t = 2.5$, so the height function attains its maximum at $t = 2.5$.
-• The maximum height reached is:
-$$h(2.5) = 2 + 24.5(2.5) - 4.9(2.5)^2 = 32.625\text{ (m).}$$
+• Since the derivative $h'(t)$ changes sign from positive to negative as $t$ passes through $2.5$, the height function $h(t)$ attains its maximum at $t = 2.5$.
+• The maximum height reached by the object is:
+$$h(2.5) = 2 + 24.5 \cdot 2.5 - 4.9 \cdot (2.5)^2 = 32.625\text{ (m).}$$
 • Therefore, the object reaches its maximum height 2.5 seconds after launch.
 
-**Logistic Growth Model (Product Sales Volume):** The cumulative sales volume of a new product follows the logistic model $f(t) = \frac{5\\,000}{1 + 5e^{-t}}$ ($t \ge 0$, in years). The rate of sales is given by the derivative $f'(t)$. After how many years is the rate of sales maximized?
+**Exercise 1.9 (Product Sales Rate Model):** The cumulative sales volume of a new product follows the logistic function $f(t) = \frac{5\\,000}{1 + 5e^{-t}}$ ($t \ge 0$, time measured in years). The rate of sales is given by the derivative $f'(t)$. After how many years from launch is the sales rate maximized?
 
-Solution:
-• Compute the sales rate function $f'(t)$:
-$$f'(t) = 5\\,000 \cdot \frac{-(1 + 5e^{-t})'}{(1 + 5e^{-t})^2} = \frac{25\\,000 e^{-t}}{(1 + 5e^{-t})^2}$$
-• To find when $f'(t)$ attains its maximum, examine the second derivative $f''(t)$:
-$$f''(t) = 25\\,000 \cdot \frac{-e^{-t}(1 + 5e^{-t})^2 - e^{-t} \cdot 2(1 + 5e^{-t})(-5e^{-t})}{(1 + 5e^{-t})^4} = \frac{25\\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}$$
+Solution for Exercise 1.9:
+• The derivative representing the sales rate at time $t$ is:
+$$f'(t) = \frac{25\\,000 e^{-t}}{(1 + 5e^{-t})^2}$$
+• To find the extreme point of the sales rate function $f'(t)$, we compute the second derivative $f''(t)$:
+$$f''(t) = \frac{25\\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}$$
 • Setting $f''(t) = 0 \Leftrightarrow 5e^{-t} - 1 = 0 \Leftrightarrow e^t = 5 \Leftrightarrow t = \ln 5 \approx 1.61\text{ (years)}$.
-• As $t$ passes through $\ln 5$, $f''(t)$ changes sign from positive to negative, confirming that the sales rate $f'(t)$ reaches its maximum at $t = \ln 5$.
-• Thus, the sales rate is maximized after approximately 1.61 years (about 1 year and 7 months).
+• As $t$ passes through $\ln 5$, the second derivative $f''(t)$ changes sign from positive to negative, so $f'(t)$ attains its maximum at $t = \ln 5$.
+• Thus, the sales rate reaches its maximum after approximately 1.61 years.
 
 ### b) Detailed Section Exercises
 
-**Exercise 1.2:** Determine the intervals where the following functions are strictly increasing and strictly decreasing:
+**Exercise 1.2:** Find the intervals where the following functions are strictly increasing and strictly decreasing:
 a) $y = \frac{1}{3}x^3 - 2x^2 + 3x + 1$;
 b) $y = -x^3 + 2x^2 - 5x + 3$.
 
 Solution for Exercise 1.2:
-• a) Domain: $D = \mathbb{R}$.
-  + Derivative: $y' = x^2 - 4x + 3 = (x - 1)(x - 3)$.
+• a) Domain $D = \mathbb{R}$. Derivative $y' = x^2 - 4x + 3 = (x - 1)(x - 3)$.
   + Setting $y' = 0 \Leftrightarrow x = 1$ or $x = 3$.
-  + Sign of $y'$: $y' > 0$ for $x \in (-\infty; 1) \cup (3; +\infty)$; $y' < 0$ for $x \in (1; 3)$.
-  + Conclusion: The function is strictly increasing on $(-\infty; 1)$ and $(3; +\infty)$; strictly decreasing on $(1; 3)$.
-• b) Domain: $D = \mathbb{R}$.
-  + Derivative: $y' = -3x^2 + 4x - 5$.
-  + Reduced discriminant $\Delta' = 2^2 - (-3)(-5) = 4 - 15 = -11 < 0$ and leading coefficient $a = -3 < 0$.
-  + Consequently, $y' < 0$ for all $x \in \mathbb{R}$.
-  + Conclusion: The function is strictly decreasing on $\mathbb{R}$.
+  + We have $y' \gt 0$ on $(-\infty; 1)$ and $(3; +\infty)$; $y' \lt 0$ on $(1; 3)$.
+  + Thus, the function is strictly increasing on $(-\infty; 1)$ and $(3; +\infty)$; strictly decreasing on $(1; 3)$.
+• b) Domain $D = \mathbb{R}$. Derivative $y' = -3x^2 + 4x - 5 = -3\left(x - \frac{2}{3}\right)^2 - \frac{11}{3} \lt 0$ for all $x \in \mathbb{R}$.
+  + Thus, the function is strictly decreasing on $\mathbb{R}$.
 
-**Exercise 1.3:** Find the intervals of monotonicity of the following functions:
+**Exercise 1.3:** Determine the intervals of monotonicity of the following functions:
 a) $y = \frac{2x - 1}{x + 2}$;
 b) $y = \frac{x^2 + x + 4}{x - 3}$.
 
 Solution for Exercise 1.3:
-• a) Domain: $D = \mathbb{R} \setminus \\{-2\\}$.
-  + Derivative: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} > 0, \forall x \ne -2$.
-  + Conclusion: The function is strictly increasing on each interval $(-\infty; -2)$ and $(-2; +\infty)$.
-• b) Domain: $D = \mathbb{R} \setminus \\{3\\}$.
+• a) The function is defined for all $x \ne -2$.
+  + Derivative: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} \gt 0$ for all $x \ne -2$.
+  + Thus, the function is strictly increasing on each interval $(-\infty; -2)$ and $(-2; +\infty)$.
+• b) The function is defined for all $x \ne 3$.
   + Derivative:
 $$y' = \frac{(2x + 1)(x - 3) - (x^2 + x + 4)}{(x - 3)^2} = \frac{x^2 - 6x - 7}{(x - 3)^2}$$
   + Setting $y' = 0 \Leftrightarrow x^2 - 6x - 7 = 0 \Leftrightarrow x = -1$ or $x = 7$.
-  + Conclusion: The function is strictly increasing on $(-\infty; -1)$ and $(7; +\infty)$; strictly decreasing on $(-1; 3)$ and $(3; 7)$.
+  + Thus, the function is strictly increasing on $(-\infty; -1)$ and $(7; +\infty)$; strictly decreasing on $(-1; 3)$ and $(3; 7)$.
 
 **Exercise 1.7:** Find the local extrema of the following functions:
 a) $y = 2x^3 - 9x^2 + 12x - 5$;
-b) $y = x^4 - 4x^2 + 2$;
-c) $y = \frac{x^2 - 2x + 3}{x - 1}$.
+b) $y = \frac{x^2 - 2x + 3}{x - 1}$.
 
 Solution for Exercise 1.7:
 • a) Domain $D = \mathbb{R}$. Derivative $y' = 6x^2 - 18x + 12 = 6(x - 1)(x - 2)$.
-  + $y' = 0 \Leftrightarrow x = 1$ or $x = 2$.
-  + The function attains a local maximum at $x = 1$, $y\_{\text{max}} = y(1) = 0$.
-  + The function attains a local minimum at $x = 2$, $y\_{\text{min}} = y(2) = -1$.
-• b) Domain $D = \mathbb{R}$. Derivative $y' = 4x^3 - 8x = 4x(x^2 - 2)$.
-  + $y' = 0 \Leftrightarrow x = 0$ or $x = \pm\sqrt{2}$.
-  + The function attains a local maximum at $x = 0$, $y\_{\text{max}} = y(0) = 2$.
-  + The function attains a local minimum at $x = \pm\sqrt{2}$, $y\_{\text{min}} = y(\pm\sqrt{2}) = -2$.
-• c) Domain $D = \mathbb{R} \setminus \\{1\\}$. Derivative:
+  + Setting $y' = 0 \Leftrightarrow x = 1$ or $x = 2$.
+  + The function attains a local maximum at $x = 1$ with local maximum value $y(1) = 0$; it attains a local minimum at $x = 2$ with local minimum value $y(2) = -1$.
+• b) The function is defined for all $x \ne 1$. Derivative:
 $$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 3)}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}$$
-  + $y' = 0 \Leftrightarrow x^2 - 2x - 1 = 0 \Leftrightarrow x = 1 - \sqrt{2}$ or $x = 1 + \sqrt{2}$.
-  + The function attains a local maximum at $x = 1 - \sqrt{2}$, $y\_{\text{max}} = 2 - 2\sqrt{2}$.
-  + The function attains a local minimum at $x = 1 + \sqrt{2}$, $y\_{\text{min}} = 2 + 2\sqrt{2}$.
+  + Setting $y' = 0 \Leftrightarrow x^2 - 2x - 1 = 0 \Leftrightarrow x = 1 - \sqrt{2}$ or $x = 1 + \sqrt{2}$.
+  + The function attains a local maximum at $x = 1 - \sqrt{2}$ with local maximum value $y(1 - \sqrt{2}) = 2 - 2\sqrt{2}$; it attains a local minimum at $x = 1 + \sqrt{2}$ with local minimum value $y(1 + \sqrt{2}) = 2 + 2\sqrt{2}$.
