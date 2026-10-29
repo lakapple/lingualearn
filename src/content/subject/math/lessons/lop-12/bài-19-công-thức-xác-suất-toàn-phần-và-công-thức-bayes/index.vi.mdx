@@ -1,0 +1,183 @@
+---
+title: 'Bài 19: Công thức xác suất toàn phần và công thức Bayes'
+description: Hệ thống lý thuyết bài công thức xác suất toàn phần và công thức Bayes cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Công thức xác suất toàn phần
+  - Sơ đồ hình cây
+  - Công thức Bayes
+grade: 12
+order: 19
+updatedDate: 2026-10-29T18:59:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Công thức xác suất toàn phần
+
+·       Sơ đồ hình cây
+
+·       Công thức Bayes
+
+### **Kiến thức, kĩ năng:**
+
+·       Mô tả và biết vận dụng công thức xác suất toàn phần vào các tình huống có nội dung thực tiễn.
+
+·       Nắm được và biết vận dụng công thức Bayes vào các tình huống có nội dung thực tiễn.
+
+·       Biểu diễn thí nghiệm ngẫu nhiên nhiều giai đoạn và xác suất có điều kiện bằng sơ đồ hình cây.
+
+·       Vận dụng công thức xác suất toàn phần và công thức Bayes để giải quyết các bài toán thực tế phức tạp (dự báo thời tiết ảnh hưởng doanh thu vé, mô hình di truyền học đậu Hà Lan, độ chính xác xét nghiệm y học và dương tính/âm tính giả, bộ lọc thư rác email).
+
+## Công thức xác suất toàn phần
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_xac_suat_toan_phan"/>
+
+### a) Phát biểu và thiết lập công thức xác suất toàn phần
+
+Định lí (Công thức xác suất toàn phần cho hai biến cố): Cho hai biến cố $A$ và $B$ trong một phép thử, với $P(A) > 0$ và $P(\overline{A}) > 0$. Khi đó xác suất của biến cố $B$ được tính bởi công thức:
+$$P(B) = P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})$$
+Ý nghĩa và ứng dụng:
+• Công thức xác suất toàn phần cho phép ta tính xác suất tổng thể của một biến cố $B$ bằng cách chia không gian mẫu thành các kịch bản xung khắc (biến cố $A$ và biến cố đối $\overline{A}$) rồi tính tổng các xác suất có điều kiện của $B$ trong từng trường hợp.
+
+### b) Ví dụ và luyện tập về xác suất toàn phần
+
+**Ví dụ 1:** Ông An hằng ngày đi làm bằng xe máy hoặc xe buýt. Nếu hôm nay ông đi làm bằng xe buýt thì xác suất để hôm sau ông đi làm bằng xe máy là 0,4. Nếu hôm nay ông đi làm bằng xe máy thì xác suất để hôm sau ông đi làm bằng xe buýt là 0,7. Xét một tuần mà thứ Hai ông An đi làm bằng xe buýt. Tính xác suất để thứ Tư trong tuần đó, ông An đi làm bằng xe máy.
+
+Lời giải Ví dụ 1:
+• Gọi $A$ là biến cố: "Thứ Ba, ông An đi làm bằng xe máy"; $B$ là biến cố: "Thứ Tư, ông An đi làm bằng xe máy". Ta cần tính $P(B)$.
+• Theo công thức xác suất toàn phần, ta có:
+  $$P(B) = P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A}).$$
+• Tính $P(A)$: Vì thứ Hai ông An đi làm bằng xe buýt nên xác suất để thứ Ba (hôm sau) ông đi làm bằng xe máy là 0,4. Vậy $P(A) = 0,4$.
+• Tính $P(\overline{A})$: Ta có $P(\overline{A}) = 1 - 0{,}4 = 0{,}6$.
+• Tính $P(B|A)$: Đây là xác suất để thứ Tư ông đi làm bằng xe máy nếu thứ Ba ông đi làm bằng xe máy. Theo giả thiết, nếu hôm nay đi xe máy thì hôm sau đi xe buýt với xác suất 0,7, suy ra xác suất hôm sau đi xe máy là $1 - 0{,}7 = 0{,}3$. Vậy $P(B|A) = 0{,}3$.
+• Tính $P(B|\overline{A})$: Đây là xác suất để thứ Tư ông đi làm bằng xe máy nếu thứ Ba ông đi làm bằng xe buýt. Theo giả thiết, nếu hôm nay đi xe buýt thì hôm sau đi xe máy với xác suất 0,4. Suy ra $P(B|\overline{A}) = 0{,}4$.
+• Thay các giá trị vào công thức:
+  $$P(B) = 0{,}4 \cdot 0{,}3 + 0{,}6 \cdot 0{,}4 = 0{,}12 + 0{,}24 = 0{,}36.$$
+• Vậy xác suất để thứ Tư ông An đi làm bằng xe máy là 0,36.
+
+**Biểu diễn bằng sơ đồ hình cây:** Sơ đồ hình cây là phương pháp mô tả trực quan các thí nghiệm ngẫu nhiên nhiều giai đoạn. Mỗi nhánh cây biểu thị một xác suất có điều kiện, và xác suất của một kết quả giao các biến cố bằng tích các xác suất trên đường đi tương ứng.
+
+## Công thức Bayes
+
+### a) Phát biểu và công thức Bayes
+
+Định lí (Công thức Bayes): Cho $A$ và $B$ là hai biến cố với $P(A) > 0$ và $P(B) > 0$. Khi đó:
+$$P(A|B) = \frac{P(A) \cdot P(B|A)}{P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})} = \frac{P(A) \cdot P(B|A)}{P(B)}$$
+Ý nghĩa và ứng dụng:
+• Công thức Bayes giúp cập nhật xác suất ban đầu (xác suất tiền nghiệm $P(A)$) dưới ánh sáng của thông tin mới (sự kiện $B$ đã xảy ra) để thu được xác suất hậu nghiệm $P(A|B)$.
+• Đây là nền tảng cốt lõi trong suy luận thống kê, học máy, chẩn đoán y học và ra quyết định dưới sự bất định.
+
+### b) Ví dụ và luyện tập về công thức Bayes
+
+**Ví dụ 2:** Trong một kì thi tốt nghiệp trung học phổ thông, một tỉnh X có 80% học sinh lựa chọn tổ hợp A00 (Toán, Vật lí, Hoá học). Biết rằng nếu một học sinh chọn tổ hợp A00 thì xác suất đỗ đại học là 0,6; còn nếu không chọn A00 thì xác suất đỗ đại học là 0,7. Chọn ngẫu nhiên một học sinh đã tốt nghiệp của tỉnh X. Biết rằng học sinh này đã đỗ đại học, tính xác suất để học sinh đó đã chọn tổ hợp A00.
+
+Lời giải Ví dụ 2:
+• Gọi $A$ là biến cố: "Học sinh đó chọn tổ hợp A00"; $B$ là biến cố: "Học sinh đó đỗ đại học". Ta cần tính $P(A|B)$.
+• Theo đề bài:
+  - $P(A) = 0{,}8 \implies P(\overline{A}) = 1 - 0{,}8 = 0{,}2$.
+  - $P(B|A) = 0.6$ (xác suất đỗ đại học với điều kiện chọn A00).
+  - $P(B|\overline{A}) = 0{,}7$ (xác suất đỗ đại học với điều kiện không chọn A00).
+• Áp dụng công thức Bayes:
+  $$P(A|B) = \frac{P(A) \cdot P(B|A)}{P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})} = \frac{0{,}8 \cdot 0{,}6}{0{,}8 \cdot 0{,}6 + 0{,}2 \cdot 0{,}7} = \frac{0{,}48}{0{,}48 + 0.14} = \frac{0{,}48}{0{,}62} \approx 0{,}7742.$$
+• Vậy xác suất để học sinh đã chọn tổ hợp A00 biết rằng đã đỗ đại học là khoảng 0,7742.
+
+**Ví dụ 3 (Chẩn đoán y học và dương tính giả):** Ông M đi xét nghiệm bệnh hiểm nghèo X. Biết rằng nếu một người mắc bệnh X thì xác suất xét nghiệm dương tính là 0,95; nếu không mắc bệnh X thì xác suất xét nghiệm dương tính là 0,01. Giả tỷ lệ dân số mắc bệnh hiểm nghèo X là 0,2% ($0{,}002$). Nếu xét nghiệm của ông M cho kết quả dương tính, hãy tính xác suất chính xác để ông M thực sự mắc bệnh.
+
+Lời giải Ví dụ 3:
+• Gọi $A$ là biến cố: "Ông M mắc bệnh hiểm nghèo X"; $B$ là biến cố: "Xét nghiệm cho kết quả dương tính". Ta cần tính $P(A|B)$.
+• Dữ liệu bài toán:
+  - Tỉ lệ mắc bệnh (tiền nghiệm): $P(A) = p = 0{,}002 \implies P(\overline{A}) = 0{,}998$.
+  - Xác suất dương tính khi mắc bệnh: $P(B|A) = 0{,}95$.
+  - Xác suất dương tính giả (không mắc bệnh vẫn dương tính): $P(B|\overline{A}) = 0{,}01$.
+• Áp dụng công thức Bayes:
+  $$P(A|B) = \frac{P(A) \cdot P(B|A)}{P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})} = \frac{0{,}002 \cdot 0{,}95}{0{,}002 \cdot 0{,}95 + 0{,}998 \cdot 0{,}01}$$
+  $$= \frac{0{,}0019}{0{,}0019 + 0{,}00998} = \frac{0{,}0019}{0{,}01188} \approx 0{,}1599.$$
+• Kết luận: Mặc dù xét nghiệm có độ chính xác 95% đối với người bệnh, nhưng do bệnh rất hiếm trong cộng đồng, một kết quả dương tính chỉ mang lại khoảng 16% xác suất thực sự mắc bệnh (do ảnh hưởng áp đảo của số lượng người không bệnh sinh ra kết quả dương tính giả).
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng (Lọc thư rác - Spam Email Filtering):** Một bộ lọc thư rác chặn 95% thư rác gửi đến. Một thư hợp lệ (không phải thư rác) bị chặn nhầm với xác suất 0,01. Thống kê cho thấy 3% tổng số thư gửi đến là thư rác.
+a) Chọn ngẫu nhiên một bức thư bị chặn. Tính xác suất để đó thực sự là thư rác.
+b) Trong số các thư bị chặn, có bao nhiêu phần trăm là thư hợp lệ (chặn nhầm)?
+
+Lời giải Vận dụng:
+• Gọi $S$ là biến cố: "Thư là thư rác"; $B$ là biến cố: "Thư bị chặn bởi bộ lọc".
+• Dữ liệu bài toán:
+  - $P(S) = 0{,}03 \implies P(\overline{S}) = 0{,}97$.
+  - $P(B|S) = 0{,}95$ (xác suất thư rác bị chặn).
+  - $P(B|\overline{S}) = 0{,}01$ (xác suất thư hợp lệ bị chặn nhầm).
+• a) Xác suất để thư bị chặn thực sự là thư rác ($P(S|B)$):
+  $$P(S|B) = \frac{P(S) \cdot P(B|S)}{P(S) \cdot P(B|S) + P(\overline{S}) \cdot P(B|\overline{S})} = \frac{0{,}03 \cdot 0{,}95}{0{,}03 \cdot 0{,}95 + 0{,}97 \cdot 0{,}01}$$
+  $$= \frac{0{,}0285}{0{,}0285 + 0{,}0097} = \frac{0{,}0285}{0{,}0382} \approx 0{,}7461.$$
+  Vậy khoảng 74,61% thư bị chặn trong hộp thư rác thực sự là thư rác.
+• b) Tỉ lệ phần trăm thư hợp lệ trong số các thư bị chặn (dương tính giả trên tổng số bị chặn) là:
+  $$P(\overline{S}|B) = 1 - P(S|B) = 1 - 0{,}7461 = 0{,}2539 = 25{,}39\\%.$$
+  Vậy có khoảng 25,39% số thư trong mục thư rác thực chất là thư hợp lệ bị chặn nhầm.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.7:** Trong quân sự, máy bay chiến đấu đối phương xuất hiện ở vị trí $X$ với xác suất 0,55; nếu không ở $X$ thì xuất hiện ở $Y$. Bệ phóng tên lửa bố trí tại $X$ (bắn 2 quả) và $Y$ (bắn 1 quả). Mỗi quả tên lửa có xác suất bắn trúng 0,8 và hoạt động độc lập. Máy bay bị hạ nếu trúng ít nhất 1 quả tên lửa. Tính xác suất bắn hạ máy bay đối phương theo phương án tác chiến trên.
+
+Lời giải Bài 6.7:
+• Gọi $X$ là biến cố: "Máy bay xuất hiện ở vị trí $X$" ($P(X) = 0{,}55$); $Y$ là biến cố: "Máy bay xuất hiện ở vị trí $Y$" ($P(Y) = 1 - 0{,}55 = 0{,}45$).
+• Gọi $D$ là biến cố: "Máy bay bị bắn hạ". Ta dùng công thức xác suất toàn phần:
+  $$P(D) = P(X) \cdot P(D|X) + P(Y) \cdot P(D|Y).$$
+• Trường hợp 1: Máy bay xuất hiện ở $X$ (bắn 2 quả tên lửa).
+  Xác suất trượt cả 2 quả là $(1 - 0{,}8)^2 = 0{,}2^2 = 0{,}04$.
+  Xác suất bị bắn hạ là $P(D|X) = 1 - 0{,}04 = 0{,}96$.
+• Trường hợp 2: Máy bay xuất hiện ở $Y$ (bắn 1 quả tên lửa).
+  Xác suất trúng mục tiêu là $P(D|Y) = 0{,}8$.
+• Tổng xác suất bắn hạ máy bay là:
+  $$P(D) = 0{,}55 \cdot 0{,}96 + 0{,}45 \cdot 0{,}8 = 0{,}528 + 0{,}36 = 0{,}888.$$
+• Vậy xác suất bắn hạ máy bay đối phương là 0,888 (hay 88,8%).
+
+**Bài 6.8:** Có hai chuồng thỏ. Chuồng I có 5 thỏ đen, 10 thỏ trắng. Chuồng II có 7 thỏ đen, 3 thỏ trắng. Lấy ngẫu nhiên 1 con thỏ từ chuồng II cho vào chuồng I. Sau đó lấy ngẫu nhiên 1 con thỏ từ chuồng I. Tính xác suất để con thỏ lấy ra cuối cùng là thỏ trắng.
+
+Lời giải Bài 6.8:
+• Gọi $W\_{II}$ là biến cố: "Lấy được thỏ trắng từ chuồng II chuyển sang chuồng I"; $B\_{II}$ là biến cố: "Lấy được thỏ đen từ chuồng II chuyển sang chuồng I".
+  Từ chuồng II (7 đen, 3 trắng, tổng 10 con): $P(W\_{II}) = \frac{3}{10} = 0{,}3$; $P(B\_{II}) = \frac{7}{10} = 0{,}7$.
+• Gọi $W$ là biến cố: "Con thỏ lấy ra từ chuồng I là thỏ trắng". Áp dụng công thức xác suất toàn phần:
+  $$P(W) = P(W\_{II}) \cdot P(W|W\_{II}) + P(B\_{II}) \cdot P(W|B\_{II}).$$
+• TH1 ($W\_{II}$ xảy ra): Chuồng I có 5 thỏ đen và $10 + 1 = 11$ thỏ trắng (tổng 16 con) $\implies P(W|W\_{II}) = \frac{11}{16}$.
+• TH2 ($B\_{II}$ xảy ra): Chuồng I có $5 + 1 = 6$ thỏ đen và 10 thỏ trắng (tổng 16 con) $\implies P(W|B\_{II}) = \frac{10}{16} = \frac{5}{8}$.
+• Tổng xác suất lấy được thỏ trắng là:
+  $$P(W) = 0{,}3 \cdot \frac{11}{16} + 0{,}7 \cdot \frac{5}{8} = \frac{3{,}3}{16} + \frac{3{,}5}{8} = \frac{3{,}3 + 7{,}0}{16} = \frac{10{,}3}{16} = \frac{103}{160} = 0{,}64375.$$
+
+**Bài 6.9:** Tại nhà máy X, tỉ lệ sản phẩm đạt tiêu chuẩn là 80%. Linh kiện đạt chuẩn được đóng dấu OTK với xác suất 0,99; linh kiện không đạt chuẩn không được đóng dấu OTK với xác suất 0,95. Chọn ngẫu nhiên một linh kiện trên thị trường.
+a) Tính xác suất để linh kiện đó được đóng dấu OTK.
+b) Dùng sơ đồ hình cây mô tả xác suất linh kiện không được đóng dấu OTK.
+
+Lời giải Bài 6.9:
+• Gọi $C$ là biến cố: "Linh kiện đạt tiêu chuẩn" ($P(C) = 0{,}8, P(\overline{C}) = 0{,}2$).
+  Gọi $S$ là biến cố: "Linh kiện được đóng dấu OTK".
+• Dữ liệu bài toán:
+  - $P(S|C) = 0{,}99 \implies P(\overline{S}|C) = 0{,}01$.
+  - $P(\overline{S}|\overline{C}) = 0{,}95 \implies P(S|\overline{C}) = 1 - 0{,}95 = 0{,}05$.
+• a) Xác suất linh kiện được đóng dấu OTK ($P(S)$):
+  $$P(S) = P(C) \cdot P(S|C) + P(\overline{C}) \cdot P(S|\overline{C}) = 0{,}8 \cdot 0{,}99 + 0{,}2 \cdot 0{,}05 = 0{,}792 + 0{,}01 = 0{,}802.$$
+• b) Xác suất linh kiện không được đóng dấu OTK ($P(\overline{S})$):
+  $$P(\overline{S}) = P(C) \cdot P(\overline{S}|C) + P(\overline{C}) \cdot P(\overline{S}|\overline{C}) = 0{,}8 \cdot 0{,}01 + 0{,}2 \cdot 0{,}95 = 0{,}008 + 0{,}19 = 0{,}198.$$
+
+**Bài 6.10:** Hai đội bắn súng thi đấu. Đội I có 5 VĐV, đội II có 7 VĐV. Xác suất đạt huy chương vàng của mỗi VĐV đội I và đội II lần lượt là 0,65 và 0,55. Chọn ngẫu nhiên một VĐV.
+a) Tính xác suất để VĐV đó đạt huy chương vàng.
+b) Giả sử VĐV được chọn đạt huy chương vàng. Tính xác suất để VĐV đó thuộc đội I.
+
+Lời giải Bài 6.10:
+• Tổng số VĐV: $N = 5 + 7 = 12$.
+  Xác suất chọn VĐV đội I: $P(T_1) = \frac{5}{12}$; xác suất chọn VĐV đội II: $P(T_2) = \frac{7}{12}$.
+• Gọi $G$ là biến cố: "VĐV đạt huy chương vàng".
+  - $P(G|T_1) = 0{,}65$;
+  - $P(G|T_2) = 0{,}55$.
+• a) Xác suất VĐV đạt huy chương vàng:
+  $$P(G) = P(T_1) \cdot P(G|T_1) + P(T_2) \cdot P(G|T_2) = \frac{5}{12} \cdot 0{,}65 + \frac{7}{12} \cdot 0{,}55$$
+  $$= \frac{3{,}25}{12} + \frac{3{,}85}{12} = \frac{7{,}10}{12} = \frac{71}{120} \approx 0{,}5917.$$
+• b) Biết VĐV đạt huy chương vàng, xác suất VĐV đó thuộc đội I (áp dụng công thức Bayes):
+  $$P(T_1|G) = \frac{P(T_1) \cdot P(G|T_1)}{P(G)} = \frac{\frac{3}{12} \text{ (sai, sửa thành } \frac{3{,}25}{12})}{\frac{7{,}10}{12}} = \frac{3{,}25}{7{,}10} = \frac{325}{710} = \frac{65}{142} \approx 0{,}4577.$$

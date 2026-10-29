@@ -1,0 +1,187 @@
+---
+title: "Lesson 19: Law of Total Probability and Bayes' Theorem"
+description: Theoretical system for the lesson on Law of Total Probability and Bayes' Theorem with illustrative examples.
+tags:
+  - grade 12
+  - Law of Total Probability (Total probability formula)
+  - Probability tree diagram
+  - Bayes' theorem (Bayes' formula)
+grade: 12
+order: 19
+updatedDate: 2026-10-29T18:59:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Law of Total Probability (Total probability formula)
+
+·       Probability tree diagram
+
+·       Bayes' theorem (Bayes' formula)
+
+### **Knowledge and Skills:**
+
+·       Understand and apply the law of total probability to real-world probabilistic scenarios.
+
+·       Master and apply Bayes' theorem to practical situations and decision-making problems.
+
+·       Represent multi-stage random experiments and conditional probabilities using probability tree diagrams.
+
+·       Apply total probability and Bayes' formulas to solve complex real-world problems (weather forecasting impact on event ticket sales, genetic inheritance models in pea plants, medical diagnostic testing accuracy and false positives/negatives, spam email filtering).
+
+## Law of Total Probability
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_xac_suat_toan_phan"/>
+
+### a) Formulating the Law of Total Probability
+
+Theorem (Law of Total Probability for two events): Let $A$ and $B$ be two events in a random experiment, with $P(A) > 0$ and $P(\overline{A}) > 0$. Then the probability of event $B$ can be computed as:
+$$P(B) = P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})$$
+Meaning and Application:
+• The law of total probability allows us to compute the overall probability of an event $B$ by partitioning the sample space into mutually exclusive scenarios (an event $A$ and its complement $\overline{A}$) and weighting the conditional probabilities of $B$ under each scenario.
+
+### b) Examples and Practice on Total Probability
+
+**Ví dụ 1:** Mr. An commutes to work every day either by motorcycle or by bus. If he commutes by bus today, the probability that he commutes by motorcycle tomorrow is 0.4. If he commutes by motorcycle today, the probability that he commutes by bus tomorrow is 0.7. Consider a week where Mr. An commutes by bus on Monday. Find the probability that he commutes by motorcycle on Wednesday.
+
+Lời giải Ví dụ 1:
+• Let $A$ be the event: "Mr. An commutes by motorcycle on Tuesday"; let $B$ be the event: "Mr. An commutes by motorcycle on Wednesday". We need to compute $P(B)$.
+• By the law of total probability:
+  $$P(B) = P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A}).$$
+• Computing $P(A)$: Since Mr. An commutes by bus on Monday, the probability that he commutes by motorcycle on Tuesday (the next day) is 0.4. Thus, $P(A) = 0.4$.
+• Computing $P(\overline{A})$: $P(\overline{A}) = 1 - 0.4 = 0.6$.
+• Computing $P(B|A)$: This is the probability that he commutes by motorcycle on Wednesday given that he commutes by motorcycle on Tuesday. Given that if he uses a motorcycle today, the probability he uses a bus tomorrow is 0.7, hence the probability he uses a motorcycle tomorrow is $1 - 0.7 = 0.3$. Thus, $P(B|A) = 0.3$.
+• Computing $P(B|\overline{A})$: This is the probability that he commutes by motorcycle on Wednesday given that he commutes by bus on Tuesday. Given that if he uses a bus today, the probability he uses a motorcycle tomorrow is 0.4. Thus, $P(B|\overline{A}) = 0.4$.
+• Substituting the values into the formula:
+  $$P(B) = 0.4 \cdot 0.3 + 0.6 \cdot 0.4 = 0.12 + 0.24 = 0.36.$$
+• Thus, the probability that Mr. An commutes by motorcycle on Wednesday is 0.36.
+
+**Tree Diagram Representation:** Probability tree diagrams provide a visual method for illustrating multi-stage experiments and applying the law of total probability. Each branch represents a conditional probability, and the total probability of an event is the sum of the probabilities of all paths leading to that event.
+
+## Bayes' Theorem
+
+### a) Statement and Formula of Bayes' Theorem
+
+Theorem (Bayes' Theorem): Let $A$ and $B$ be two events with $P(A) > 0$ and $P(B) > 0$. Then the conditional probability of $A$ given $B$ is given by:
+$$P(A|B) = \frac{P(A) \cdot P(B|A)}{P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})}=\frac{P(A) \cdot P(B|A)}{P(B)}$$
+Significance and Interpretation:
+• Bayes' theorem updates our prior belief $P(A)$ (prior probability) about an event $A$ in light of new evidence $B$ (calculating the posterior probability $P(A|B)$).
+• It is fundamental in statistical inference, machine learning, medical diagnostics, and probabilistic reasoning.
+
+### b) Examples and Practice on Bayes' Theorem
+
+**Ví dụ 2:** In a national high school graduation examination, 80% of students in province X choose subject combination A00 (Mathematics, Physics, Chemistry). It is known that if a student chooses A00, the probability of passing university entrance exams is 0.6; if a student does not choose A00, the probability of passing is 0.7. Randomly select a graduated student from province X. Given that this student has passed the university entrance exams, find the probability that they chose combination A00.
+
+Lời giải Ví dụ 2:
+• Let $A$ be the event: "The student chooses combination A00"; let $B$ be the event: "The student passes the university entrance exams". We need to compute $P(A|B)$.
+• From the problem statement:
+  - $P(A) = 0.8 \implies P(\overline{A}) = 1 - 0.8 = 0.2$.
+  - $P(B|A) = 0.6$ (probability of passing given choice A00).
+  - $P(B|\overline{A}) = 0.7$ (probability of passing given non-choice A00).
+• Applying Bayes' theorem:
+  $$P(A|B) = \frac{P(A) \cdot P(B|A)}{P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})} = \frac{0.8 \cdot 0.6}{0.8 \cdot 0.6 + 0.2 \cdot 0.7} = \frac{0.48}{0.48 + 0.14} = \frac{0.48}{0.62} \approx 0.7742.$$
+• Thus, the probability that the student chose combination A00 given that they passed is approximately 0.7742.
+
+**Ví dụ 3 (Medical Diagnostic Testing and False Positives):** A patient undergoes a medical diagnostic test for a serious disease $X$. If a person has disease $X$, the test yields a positive result with probability 0.95 (true positive rate). If a person does not have disease $X$, the test yields a positive result with probability 0.01 (false positive rate). Suppose the prevalence rate of disease $X$ in the population is 0.2% ($0.002$). If a randomly tested person tests positive, what is the exact probability that they actually have disease $X$?
+
+Lời giải Ví dụ 3:
+• Let $A$ be the event: "The patient has disease $X$"; let $B$ be the event: "The diagnostic test yields a positive result". We need to compute $P(A|B)$.
+• Given data:
+  - Prior probability of disease: $P(A) = p = 0.002 \implies P(\overline{A}) = 0.998$.
+  - True positive probability: $P(B|A) = 0.95$.
+  - False positive probability: $P(B|\overline{A}) = 0.01$.
+• Applying Bayes' theorem:
+  $$P(A|B) = \frac{P(A) \cdot P(B|A)}{P(A) \cdot P(B|A) + P(\overline{A}) \cdot P(B|\overline{A})} = \frac{0.002 \cdot 0.95}{0.002 \cdot 0.95 + 0.998 \cdot 0.01}$$
+  $$= \frac{0.0019}{0.0019 + 0.00998} = \frac{0.0019}{0.01188} \approx 0.1599.$$
+• Conclusion: Even though the test has a 95% accuracy rate for sick individuals, because the disease is rare in the general population, a positive test result only gives about a 16% true probability of having the disease due to the impact of false positives.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Spam Email Filtering):** A spam filter is used to block spam emails. A spam email is blocked with probability 0.95, while a legitimate (non-spam) email is incorrectly blocked with probability 0.01. Statistical data shows that 3% of all incoming emails are spam.
+a) Choose a random blocked email. What is the probability that it is actually spam?
+b) Among blocked emails, what percentage are legitimate emails (false blocks)?
+
+Solution to Application:
+• Let $S$ be the event: "The email is spam"; let $B$ be the event: "The email is blocked by the filter".
+• Given data:
+  - $P(S) = 0.03 \implies P(\overline{S}) = 0.97$.
+  - $P(B|S) = 0.95$ (probability a spam email is blocked).
+  - $P(B|\overline{S}) = 0.01$ (probability a legitimate email is incorrectly blocked).
+• a) We need to compute $P(S|B)$ (probability a blocked email is actually spam):
+  $$P(S|B) = \frac{P(S) \cdot P(B|S)}{P(S) \cdot P(B|S) + P(\overline{S}) \cdot P(B|\overline{S})} = \frac{0.03 \cdot 0.95}{0.03 \cdot 0.95 + 0.97 \cdot 0.01}$$
+  $$= \frac{0.0285}{0.0285 + 0.0097} = \frac{0.0285}{0.0382} \approx 0.7461.$$
+  Thus, about 74.61% of blocked emails are indeed spam.
+• b) The percentage of blocked emails that are legitimate (false positives among blocked emails) is:
+  $$P(\overline{S}|B) = 1 - P(S|B) = 1 - 0.7461 = 0.2539 = 25.39\\%.$$
+  Thus, roughly 25.39% of filtered emails in the blocked folder are legitimate messages.
+
+### b) End-of-Lesson Exercises
+
+**Exercise 6.7:** In a military tactical simulation, an enemy fighter jet appears at position $X$ with probability 0.55. If the jet does not appear at position $X$, it appears at position $Y$. Defense missile batteries are positioned at $X$ and $Y$. If the jet appears at $X$, 2 missiles are fired; if it appears at $Y$, 1 missile is fired. Each missile has a hit probability of 0.8, operating independently. The jet is shot down if it is hit by at least 1 missile. Compute the probability of shooting down the enemy fighter jet in this operational strategy.
+
+Solution to Exercise 6.7:
+• Let $X$ be the event: "The jet appears at position $X$" ($P(X) = 0.55$); let $Y$ be the event: "The jet appears at position $Y$" ($P(Y) = 1 - 0.55 = 0.45$).
+• Let $D$ be the event: "The jet is successfully shot down". We use the law of total probability:
+  $$P(D) = P(X) \cdot P(D|X) + P(Y) \cdot P(D|Y).$$
+• Case 1: The jet appears at $X$ ($2$ missiles fired).
+  The probability of missing both independent missiles is $(1 - 0.8)^2 = 0.2^2 = 0.04$.
+  The probability of being hit by at least one missile is $P(D|X) = 1 - 0.04 = 0.96$.
+• Case 2: The jet appears at $Y$ ($1$ missile fired).
+  The probability of hitting the target is $P(D|Y) = 0.8$.
+• Total probability of shooting down the jet:
+  $$P(D) = 0.55 \cdot 0.96 + 0.45 \cdot 0.8 = 0.528 + 0.36 = 0.888.$$
+• Thus, the probability of shooting down the enemy fighter jet is 0.888 (or 88.8%).
+
+**Exercise 6.8:** There are two rabbit hutches. Hutch I contains 5 black rabbits and 10 white rabbits. Hutch II contains 7 black rabbits and 3 white rabbits. First, 1 rabbit is drawn at random from Hutch II and placed into Hutch I. Then, 1 rabbit is drawn at random from Hutch I. Find the probability that the final rabbit drawn is white.
+
+Solution to Exercise 6.8:
+• Let $W\_{II}$ be the event: "A white rabbit is transferred from Hutch II to Hutch I"; let $B\_{II}$ be the event: "A black rabbit is transferred from Hutch II to Hutch I".
+  From Hutch II ($7$ black, $3$ white, total $10$):
+  $$P(W\_{II}) = \frac{3}{10} = 0.3, \quad P(B\_{II}) = \frac{7}{10} = 0.7.$$
+• Let $W$ be the event: "The rabbit drawn from Hutch I is white". We apply the law of total probability conditioning on the transferred rabbit:
+  $$P(W) = P(W\_{II}) \cdot P(W|W\_{II}) + P(B\_{II}) \cdot P(W|B\_{II}).$$
+• Case 1 ($W\_{II}$ occurs): Hutch I now contains 5 black rabbits and $10 + 1 = 11$ white rabbits (total $16$ rabbits).
+  $$P(W|W\_{II}) = \frac{11}{16}.$$
+• Case 2 ($B\_{II}$ occurs): Hutch I now contains $5 + 1 = 6$ black rabbits and 10 white rabbits (total $16$ rabbits).
+  $$P(W|B\_{II}) = \frac{10}{16} = \frac{5}{8}.$$
+• Total probability of drawing a white rabbit:
+  $$P(W) = 0.3 \cdot \frac{11}{16} + 0.7 \cdot \frac{5}{8} = \frac{3.3}{16} + \frac{3.5}{8} = \frac{3.3 + 7.0}{16} = \frac{10.3}{16} = \frac{103}{160} = 0.64375.$$
+
+**Exercise 6.9:** At electronics factory X, the proportion of standard-compliant components is 80%. Before factory release, all components undergo quality inspection and receive an OTK quality stamp if passed. Because inspection is not 100% flawless, a compliant component receives the OTK stamp with probability 0.99, whereas a non-compliant component fails inspection and does not receive the OTK stamp with probability 0.95. Choose a random component of factory X on the market.
+a) Find the probability that the component carries the OTK stamp.
+b) Use a tree diagram to describe the calculation of the probability that the selected component does not carry the OTK stamp.
+
+Solution to Exercise 6.9:
+• Let $C$ be the event: "The component is standard-compliant" ($P(C) = 0.8$, $P(\overline{C}) = 0.2$).
+  Let $S$ be the event: "The component receives the OTK stamp".
+• Given conditional probabilities:
+  - $P(S|C) = 0.99$ (compliant component gets stamped) $\implies P(\overline{S}|C) = 0.01$.
+  - $P(\overline{S}|\overline{C}) = 0.95$ (non-compliant component does not get stamped) $\implies P(S|\overline{C}) = 1 - 0.95 = 0.05$.
+• a) Probability that a component carries the OTK stamp ($P(S)$):
+  $$P(S) = P(C) \cdot P(S|C) + P(\overline{C}) \cdot P(S|\overline{C}) = 0.8 \cdot 0.99 + 0.2 \cdot 0.05 = 0.792 + 0.01 = 0.802.$$
+• b) Probability that a component does not carry the OTK stamp ($P(\overline{S})$):
+  $$P(\overline{S}) = P(C) \cdot P(\overline{S}|C) + P(\overline{C}) \cdot P(\overline{S}|\overline{C}) = 0.8 \cdot 0.01 + 0.2 \cdot 0.95 = 0.008 + 0.19 = 0.198.$$
+
+**Exercise 6.10:** Two shooting teams compete. Team I has 5 athletes, Team II has 7 athletes. The probabilities of winning a gold medal for each athlete in Team I and Team II are 0.65 and 0.55, respectively. Choose an athlete at random.
+a) Find the probability that this athlete wins a gold medal.
+b) Given that the selected athlete wins a gold medal, find the probability that this athlete belongs to Team I.
+
+Solution to Exercise 6.10:
+• Total number of athletes: $N = 5 + 7 = 12$.
+  Probability of choosing an athlete from Team I: $P(T_1) = \frac{5}{12}$.
+  Probability of choosing an athlete from Team II: $P(T_2) = \frac{7}{12}$.
+• Let $G$ be the event: "The athlete wins a gold medal".
+  - $P(G|T_1) = 0.65$.
+  - $P(G|T_2) = 0.55$.
+• a) Probability that the chosen athlete wins a gold medal:
+  $$P(G) = P(T_1) \cdot P(G|T_1) + P(T_2) \cdot P(G|T_2) = \frac{5}{12} \cdot 0.65 + \frac{7}{12} \cdot 0.55$$
+  $$= \frac{3.25}{12} + \frac{3.85}{12} = \frac{7.10}{12} = \frac{71}{120} \approx 0.5917.$$
+• b) Given that the athlete wins a gold medal, the probability that they belong to Team I is computed using Bayes' theorem:
+  $$P(T_1|G) = \frac{P(T_1) \cdot P(G|T_1)}{P(G)} = \frac{\frac{3.25}{12}}{\frac{7.10}{12}} = \frac{3.25}{7.10} = \frac{325}{710} = \frac{65}{142} \approx 0.4577.$$
