@@ -1,0 +1,224 @@
+---
+title: 'Lesson 14: The equation of a plane'
+description: Theoretical system for the lesson on the equation of a plane with illustrative examples.
+tags:
+  - grade 12
+  - Normal vector of a plane
+  - Pair of direction vectors of a plane
+  - cross product of two vectors
+  - General equation of a plane
+  - intercept form of a plane equation
+  - Conditions for two planes to be parallel
+  - Distance from a point to a plane
+  - Conditions for two planes to be perpendicular
+grade: 12
+order: 14
+updatedDate: 2026-10-29T15:59:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Lesson Objectives
+
+### **Terminology:**
+
+·       Normal vector of a plane
+
+·       Pair of direction vectors of a plane, cross product of two vectors
+
+·       General equation of a plane, intercept form of a plane equation
+
+·       Conditions for two planes to be parallel or perpendicular
+
+·       Distance from a point to a plane
+
+### **Knowledge and Skills:**
+
+·       Recognize the normal vector, pair of direction vectors, and general equation of a plane.
+
+·       Write the equation of a plane in standard cases: passing through a point with a given normal vector; passing through a point with a given pair of direction vectors; passing through three non-collinear points.
+
+·       Identify and apply the conditions for two planes to be parallel or perpendicular.
+
+·       Compute the distance from a point to a plane and the distance between two parallel planes.
+
+·       Apply the equations of planes to solve practical problems (trajectory of a moving object, camera field of view, torque / moment of force in mechanics).
+
+## Normal Vector and Pair of Direction Vectors of a Plane
+
+\<Youtube url="https://www.youtube.com/watch?v=example_vecto_phap_tuyen_mat_phang"/>
+
+### a) Concept of Normal Vector and Cross Product of Two Vectors
+
+• A non-zero vector $\vec{n} \ne \vec{0}$ is called a normal vector of a plane $(\alpha)$ if its line of action is perpendicular to $(\alpha)$.
+  - Note: If $\vec{n}$ is a normal vector of $(\alpha)$, then $k\vec{n}$ ($k \ne 0$) is also a normal vector of $(\alpha)$.
+• Cross product of two vectors: In space $Oxyz$, given two vectors $\vec{u} = (a; b; c)$ and $\vec{v} = (a'; b'; c')$.
+  The vector $\vec{n} = [\vec{u}, \vec{v}]$ is defined in coordinate form by:
+  $$[\vec{u}, \vec{v}] = \left( \begin{vmatrix} b & c \\\ b' & c' \end{vmatrix}; \begin{vmatrix} c & a \\\ c' & a' \end{vmatrix}; \begin{vmatrix} a & b \\\ a' & b' \end{vmatrix} \right) = (bc' - b'c; ca' - c'a; ab' - a'b)$$
+  The vector $[\vec{u}, \vec{v}]$ is orthogonal to both $\vec{u}$ and $\vec{v}$.
+  In particular, $[\vec{u}, \vec{v}] = \vec{0}$ if and only if $\vec{u}$ and $\vec{v}$ are collinear (parallel).
+
+### b) Pair of Direction Vectors of a Plane
+
+Two non-collinear vectors $\vec{u}, \vec{v}$ are called a pair of direction vectors of a plane $(P)$ if their lines of action are parallel to or lie within $(P)$.
+• If $\vec{u}, \vec{v}$ is a pair of direction vectors of $(P)$, then $\vec{n} = [\vec{u}, \vec{v}]$ is a normal vector of $(P)$.
+
+**Example 2:** In space $Oxyz$, given $\vec{u} = (1; -2; 0)$ and $\vec{v} = (3; 1; -4)$. Compute $[\vec{u}, \vec{v}]$.
+
+Solution to Example 2:
+• Evaluating the $2 \times 2$ determinants:
+  $$[\vec{u}, \vec{v}] = \left( \begin{vmatrix} -2 & 0 \\\ 1 & -4 \end{vmatrix}; \begin{vmatrix} 0 & 1 \\\ -4 & 3 \end{vmatrix}; \begin{vmatrix} 1 & -2 \\\ 3 & 1 \end{vmatrix} \right) = (8; 4; 7).$$
+
+**Practice 3:** In space $Oxyz$, given three non-collinear points $A(1; -2; 1), B(-2; 1; 0), C(-2; 3; 2)$. Find a normal vector of the plane $(ABC)$.
+
+Solution to Practice 3:
+• A pair of direction vectors for plane $(ABC)$ is:
+  $$\vec{AB} = (-3; 3; -1); \quad \vec{AC} = (-3; 5; 1).$$
+• A normal vector of plane $(ABC)$ is given by their cross product:
+  $$\vec{n} = [\vec{AB}, \vec{AC}] = \left( \begin{vmatrix} 3 & -1 \\\ 5 & 1 \end{vmatrix}; \begin{vmatrix} -1 & -3 \\\ 1 & -3 \end{vmatrix}; \begin{vmatrix} -3 & 3 \\\ -3 & 5 \end{vmatrix} \right) = (8; 6; -6).$$
+• We can also choose the simplified collinear vector $\vec{n}' = (4; 3; -3)$.
+
+## General Equation of a Plane
+
+### a) Definition of the General Equation
+
+In space $Oxyz$, every plane has an equation of the form:
+$$Ax + By + Cz + D = 0$$
+where $A, B, C$ are not all zero ($A^2 + B^2 + C^2 > 0$). This is called the general equation of the plane.
+• The plane defined by $Ax + By + Cz + D = 0$ admits $\vec{n} = (A; B; C)$ as a normal vector.
+• The equation of a plane passing through a point $M_0(x_0; y_0; z_0)$ with normal vector $\vec{n} = (A; B; C)$ is:
+$$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 \iff Ax + By + Cz + D = 0$$
+where $D = -(Ax_0 + By_0 + Cz_0)$.
+
+### b) Formulating Plane Equations in Standard Cases
+
+**Example 6:** In space $Oxyz$, write the equation of the plane $(\alpha)$ passing through $M(2; -1; 0)$ with normal vector $\vec{n} = (3; -4; 6)$.
+
+Solution to Example 6:
+• The plane $(\alpha)$ passing through $M(2; -1; 0)$ with normal vector $\vec{n} = (3; -4; 6)$ has the equation:
+  $$3(x - 2) - 4(y + 1) + 6(z - 0) = 0 \iff 3x - 4y + 6z - 10 = 0.$$
+
+**Example 8:** In space $Oxyz$, given three points $A(2; 1; -1), B(3; 2; 1), C(3; 1; 4)$. Write the equation of the plane $(ABC)$.
+
+Solution to Example 8:
+• Two direction vectors: $\vec{AB} = (1; 1; 2)$ and $\vec{AC} = (1; 0; 5)$.
+• A normal vector of plane $(ABC)$ is:
+  $$\vec{n} = [\vec{AB}, \vec{AC}] = (1 \cdot 5 - 0 \cdot 2; 2 \cdot 1 - 5 \cdot 1; 1 \cdot 0 - 1 \cdot 1) = (5; -3; -1).$$
+• Plane $(ABC)$ passing through $A(2; 1; -1)$ has the equation:
+  $$5(x - 2) - 3(y - 1) - 1(z + 1) = 0 \iff 5x - 3y - z - 8 = 0.$$
+
+**Intercept Form of the Plane Equation:** A plane intersecting the three coordinate axes $Ox, Oy, Oz$ at points $A(a; 0; 0), B(0; b; 0), C(0; 0; c)$ ($a, b, c \ne 0$) has the equation:
+$$\frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1$$
+
+## Relative Positions of Two Planes
+
+### a) Condition for Perpendicular Planes
+
+Given two planes $(\alpha): Ax + By + Cz + D = 0$ and $(\beta): A'x + B'y + C'z + D' = 0$ with normal vectors $\vec{n} = (A; B; C)$ and $\vec{n}' = (A'; B'; C')$, respectively. Then:
+$$(\alpha) \perp (\beta) \iff \vec{n} \perp \vec{n}' \iff AA' + BB' + CC' = 0$$
+
+**Example 10:** Write the equation of the plane $(P)$ passing through two points $A(1; 2; -2), B(2; 4; 1)$ and perpendicular to the plane $(Q): x + 3y + z - 1 = 0$.
+
+Solution to Example 10:
+• We have $\vec{AB} = (1; 2; 3)$ and a normal vector of $(Q)$ is $\vec{n}\_Q = (1; 3; 1)$.
+• Since $(P)$ contains line $AB$ and $(P) \perp (Q)$, the plane $(P)$ admits $\vec{AB}$ and $\vec{n}\_Q$ as a pair of direction vectors. Thus, a normal vector of $(P)$ is:
+  $$\vec{n}\_P = [\vec{AB}, \vec{n}\_Q] = (2 \cdot 1 - 3 \cdot 3; 3 \cdot 1 - 1 \cdot 1; 1 \cdot 3 - 2 \cdot 1) = (-7; 2; 1).$$
+• Plane $(P)$ passing through $A(1; 2; -2)$ has the equation:
+  $$-7(x - 1) + 2(y - 2) + 1(z + 2) = 0 \iff -7x + 2y + z + 5 = 0 \iff 7x - 2y - z - 5 = 0.$$
+
+### b) Conditions for Parallel or Coincident Planes
+
+Given two planes $(\alpha): Ax + By + Cz + D = 0$ and $(\beta): A'x + B'y + C'z + D' = 0$ with normal vectors $\vec{n} = (A; B; C)$ and $\vec{n}' = (A'; B'; C')$.
+• $(\alpha) \parallel (\beta) \iff \vec{n}' = k\vec{n}$ and $D' \ne kD$ (for some scalar $k \ne 0$).
+• $(\alpha) \equiv (\beta) \iff \vec{n}' = k\vec{n}$ and $D' = kD$ (for some scalar $k \ne 0$).
+
+## Distance from a Point to a Plane
+
+### a) Distance Formula
+
+In space $Oxyz$, the distance from a point $M(x_0; y_0; z_0)$ to a plane $(P): Ax + By + Cz + D = 0$ is given by:
+$$d(M, (P)) = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}$$
+The distance between two parallel planes $(P): Ax + By + Cz + D = 0$ and $(Q): Ax + By + Cz + D' = 0$ ($D \ne D'$) is:
+$$d((P), (Q)) = \frac{|D - D'|}{\sqrt{A^2 + B^2 + C^2}}$$
+
+**Example 12:** Compute the distance from the point $M(1; 2; -1)$ to the plane $(P): x + 2y - 2z + 5 = 0$.
+
+Solution to Example 12:
+• Applying the distance formula:
+  $$d(M, (P)) = \frac{|1(1) + 2(2) - 2(-1) + 5|}{\sqrt{1^2 + 2^2 + (-2)^2}} = \frac{|1 + 4 + 2 + 5|}{\sqrt{1 + 4 + 4}} = \frac{12}{3} = 4.$$
+
+### b) Practical Applications
+
+**Application 2 (Trajectory of an Object in Space):** An object moves in space $Oxyz$. At each time $t$, the position of the object is $M(\cos t - \sin t; \cos t + \sin t; \cos t)$. Prove that the object moves within a fixed plane.
+
+Solution to Application 2:
+• Consider the coordinates of point $M(x; y; z)$ at time $t$:
+  $$x = \cos t - \sin t, \quad y = \cos t + \sin t, \quad z = \cos t.$$
+• Adding the $x$- and $y$-coordinates yields:
+  $$x + y = (\cos t - \sin t) + (\cos t + \sin t) = 2\cos t.$$
+• Since $z = \cos t$, we obtain a linear relation independent of time $t$:
+  $$x + y = 2z \iff x + y - 2z = 0.$$
+• This equation defines a fixed plane in space $Oxyz$ passing through the origin $O$ with normal vector $\vec{n} = (1; 1; -2)$.
+• Hence, the object always moves within the fixed plane $x + y - 2z = 0$.
+
+**Application 5 (Field of View of a Camera):** A surveillance camera with a horizontal viewing angle of $115^\circ$ is positioned at point $C(1; 2; 4)$ and aimed perpendicularly toward the floor plane $(P): x + 2y + 2z + 3 = 0$. What is the radius of the circular field of view on plane $(P)$? (Round the result to one decimal place).
+
+Solution to Application 5:
+• The distance from the camera location $C(1; 2; 4)$ to the floor plane $(P)$ is the altitude $h$ of the conical viewing field:
+  $$h = d(C, (P)) = \frac{|1 + 2(2) + 2(4) + 3|}{\sqrt{1^2 + 2^2 + 2^2}} = \frac{|1 + 4 + 8 + 3|}{\sqrt{9}} = \frac{16}{3}\text{ (m)}.$$
+• The apex angle of the viewing cone is $2\alpha = 115^\circ \implies \alpha = 57.5^\circ$.
+• The radius of the circular field of view on plane $(P)$ is:
+  $$R = h \cdot \tan \alpha = \frac{16}{3} \cdot \tan(57.5^\circ) \approx 5.333 \cdot 1.5697 \approx 8.4\text{ (m)}.$$
+• Therefore, the field of view on plane $(P)$ is a circle with a radius of approximately $8.4\text{ m}$.
+
+## End-of-Lesson Exercises
+
+**Exercise 5.1:** In space $Oxyz$, write the equation of the plane passing through $M(1; 2; -1)$ and perpendicular to the $Ox$-axis.
+
+Solution to Exercise 5.1:
+• The $Ox$-axis has direction vector $\vec{i} = (1; 0; 0)$. Being perpendicular to $Ox$, the plane admits $\vec{i}$ as its normal vector.
+• The equation of the plane passing through $M(1; 2; -1)$ is:
+  $$1(x - 1) + 0(y - 2) + 0(z + 1) = 0 \iff x - 1 = 0.$$
+
+**Exercise 5.3:** Write the equation of the plane $(P)$ passing through $M(1; -1; 5)$ and perpendicular to both planes $(Q): 3x + 2y - z = 0$ and $(R): x + y - z = 0$.
+
+Solution to Exercise 5.3:
+• The normal vectors of $(Q)$ and $(R)$ are $\vec{n}\_Q = (3; 2; -1)$ and $\vec{n}\_R = (1; 1; -1)$, respectively.
+• Since $(P) \perp (Q)$ and $(P) \perp (R)$, plane $(P)$ admits $\vec{n}\_Q$ and $\vec{n}\_R$ as direction vectors. Its normal vector is:
+  $$\vec{n}\_P = [\vec{n}\_Q, \vec{n}\_R] = (2(-1) - (-1)(1); (-1)(1) - 3(-1); 3(1) - 2(1)) = (-1; 2; 1).$$
+• Plane $(P)$ passing through $M(1; -1; 5)$ has the equation:
+  $$-1(x - 1) + 2(y + 1) + 1(z - 5) = 0 \iff -x + 2y + z - 2 = 0 \iff x - 2y - z + 2 = 0.$$
+
+**Exercise 5.4:** Write the equation of the plane passing through $M(2; 3; -1)$, parallel to the $Ox$-axis, and perpendicular to the plane $(Q): x + 2y - 3z + 1 = 0$.
+
+Solution to Exercise 5.4:
+• The $Ox$-axis has direction vector $\vec{i} = (1; 0; 0)$ and plane $(Q)$ has normal vector $\vec{n}\_Q = (1; 2; -3)$.
+• Being parallel to $Ox$ and perpendicular to $(Q)$, the required plane admits $\vec{i}$ and $\vec{n}\_Q$ as direction vectors. Its normal vector is:
+  $$\vec{n} = [\vec{i}, \vec{n}\_Q] = (0(-3) - 0(2); 0(1) - 1(-3); 1(2) - 0(1)) = (0; 3; 2).$$
+• Equation of the plane passing through $M(2; 3; -1)$:
+  $$0(x - 2) + 3(y - 3) + 2(z + 1) = 0 \iff 3y + 2z - 7 = 0.$$
+
+**Exercise 5.6:** Given two planes $(P): x + y + z + 2 = 0$ and $(Q): x + y + z + 6 = 0$. Prove that $(P) \parallel (Q)$ and calculate the distance between them.
+
+Solution to Exercise 5.6:
+• Both planes share the same normal vector $\vec{n} = (1; 1; 1)$ with different constant terms $D = 2 \ne 6 = D'$, hence $(P) \parallel (Q)$.
+• The distance between the parallel planes is:
+  $$d((P), (Q)) = \frac{|6 - 2|}{\sqrt{1^2 + 1^2 + 1^2}} = \frac{4}{\sqrt{3}} = \frac{4\sqrt{3}}{3}.$$
+
+**Exercise 5.7:** In space $Oxyz$, given two planes $(P): x + 3y - z = 0$ and $(Q): x - y - 2z + 1 = 0$.
+a) Prove that $(P)$ and $(Q)$ are perpendicular.
+b) Find the point(s) $M$ on the $Ox$-axis equidistant from $(P)$ and $(Q)$.
+
+Solution to Exercise 5.7:
+• a) The normal vectors are $\vec{n}\_P = (1; 3; -1)$ and $\vec{n}\_Q = (1; -1; -2)$.
+  Their dot product is: $\vec{n}\_P \cdot \vec{n}\_Q = 1(1) + 3(-1) + (-1)(-2) = 1 - 3 + 2 = 0$.
+  Since $\vec{n}\_P \perp \vec{n}\_Q$, planes $(P)$ and $(Q)$ are perpendicular.
+• b) Point $M$ lies on $Ox$, so $M(t; 0; 0)$.
+  The distances from $M$ to $(P)$ and $(Q)$ are:
+  $$d(M, (P)) = \frac{|t + 3(0) - 0|}{\sqrt{1^2 + 3^2 + (-1)^2}} = \frac{|t|}{\sqrt{11}}$$
+  $$d(M, (Q)) = \frac{|t - 0 - 2(0) + 1|}{\sqrt{1^2 + (-1)^2 + (-2)^2}} = \frac{|t + 1|}{\sqrt{6}}$$
+  Setting $d(M, (P)) = d(M, (Q))$:
+  $$\frac{|t|}{\sqrt{11}} = \frac{|t + 1|}{\sqrt{6}} \iff 6t^2 = 11(t + 1)^2 \iff 5t^2 + 22t + 11 = 0.$$
+  Solving the quadratic equation: $\Delta' = 11^2 - 5(11) = 66 > 0$, giving $t = \frac{-11 \pm \sqrt{66}}{5}$.
+• Thus, there are two equidistant points: $M_1\left(\frac{-11 + \sqrt{66}}{5}; 0; 0\right)$ and $M_2\left(\frac{-11 - \sqrt{66}}{5}; 0; 0\right)$.

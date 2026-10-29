@@ -1,0 +1,224 @@
+---
+title: 'Bài 14: Phương trình của mặt phẳng'
+description: Hệ thống lý thuyết bài phương trình của mặt phẳng cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Vectơ pháp tuyến của mặt phẳng
+  - Cặp vectơ chỉ phương của mặt phẳng
+  - tích có hướng của hai vectơ
+  - Khoảng cách từ một điểm đến một mặt phẳng
+  - Phương trình tổng quát của mặt phẳng, phương trình mặt phẳng theo đoạn chắn
+  - Điều kiện hai mặt phẳng song song
+  - Điều kiện hai mặt phẳng vuông góc
+grade: 12
+order: 14
+updatedDate: 2026-10-29T15:59:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Vectơ pháp tuyến của mặt phẳng
+
+·       Cặp vectơ chỉ phương của mặt phẳng, tích có hướng của hai vectơ
+
+·       Phương trình tổng quát của mặt phẳng, phương trình mặt phẳng theo đoạn chắn
+
+·       Điều kiện hai mặt phẳng song song, vuông góc
+
+·       Khoảng cách từ một điểm đến một mặt phẳng
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết vectơ pháp tuyến, cặp vectơ chỉ phương và phương trình tổng quát của mặt phẳng.
+
+·       Viết phương trình mặt phẳng trong các trường hợp: qua một điểm và biết vectơ pháp tuyến; qua một điểm và biết cặp vectơ chỉ phương; đi qua ba điểm không thẳng hàng.
+
+·       Nhận biết và vận dụng điều kiện để hai mặt phẳng song song hoặc vuông góc với nhau.
+
+·       Tính khoảng cách từ một điểm đến một mặt phẳng và khoảng cách giữa hai mặt phẳng song song.
+
+·       Vận dụng kiến thức về phương trình mặt phẳng vào các bài toán thực tiễn (quỹ đạo chuyển động của vật thể, vùng quan sát camera, moment lực trong cơ học).
+
+## Vectơ pháp tuyến và cặp vectơ chỉ phương của mặt phẳng
+
+\<Youtube url="https://www.youtube.com/watch?v=example_vecto_phap_tuyen_mat_phang"/>
+
+### a) Khái niệm vectơ pháp tuyến và tích có hướng của hai vectơ
+
+• Vectơ $\vec{n} \ne \vec{0}$ được gọi là vectơ pháp tuyến của mặt phẳng $(\alpha)$ nếu giá của $\vec{n}$ vuông góc với $(\alpha)$.
+  - Chú ý: Nếu $\vec{n}$ là một vectơ pháp tuyến của $(\alpha)$ thì $k\vec{n}$ ($k \ne 0$) cũng là một vectơ pháp tuyến của $(\alpha)$.
+• Tích có hướng của hai vectơ: Trong không gian $Oxyz$, cho hai vectơ $\vec{u} = (a; b; c)$ và $\vec{v} = (a'; b'; c')$.
+  Vectơ $\vec{n} = [\vec{u}, \vec{v}]$ được xác định bởi công thức toạ độ:
+  $$[\vec{u}, \vec{v}] = \left( \begin{vmatrix} b & c \\\ b' & c' \end{vmatrix}; \begin{vmatrix} c & a \\\ c' & a' \end{vmatrix}; \begin{vmatrix} a & b \\\ a' & b' \end{vmatrix} \right) = (bc' - b'c; ca' - c'a; ab' - a'b)$$
+  Vectơ $[\vec{u}, \vec{v}]$ vuông góc với cả hai vectơ $\vec{u}$ và $\vec{v}$.
+  Đặc biệt, $[\vec{u}, \vec{v}] = \vec{0}$ khi và chỉ khi $\vec{u}$ và $\vec{v}$ cùng phương.
+
+### b) Cặp vectơ chỉ phương của mặt phẳng
+
+Hai vectơ $\vec{u}, \vec{v}$ không cùng phương được gọi là cặp vectơ chỉ phương của mặt phẳng $(P)$ nếu giá của chúng song song hoặc nằm trong $(P)$.
+• Nếu $\vec{u}, \vec{v}$ là cặp vectơ chỉ phương của $(P)$ thì $\vec{n} = [\vec{u}, \vec{v}]$ là một vectơ pháp tuyến của $(P)$.
+
+**Ví dụ 2:** Trong không gian $Oxyz$, cho $\vec{u} = (1; -2; 0)$ và $\vec{v} = (3; 1; -4)$. Tính $[\vec{u}, \vec{v}]$.
+
+Lời giải Ví dụ 2:
+• Ta tính các định thức cấp hai:
+  $$[\vec{u}, \vec{v}] = \left( \begin{vmatrix} -2 & 0 \\\ 1 & -4 \end{vmatrix}; \begin{vmatrix} 0 & 1 \\\ -4 & 3 \end{vmatrix}; \begin{vmatrix} 1 & -2 \\\ 3 & 1 \end{vmatrix} \right) = (8; 4; 7).$$
+
+**Luyện tập 3:** Trong không gian $Oxyz$, cho ba điểm không thẳng hàng $A(1; -2; 1), B(-2; 1; 0), C(-2; 3; 2)$. Hãy chỉ ra một vectơ pháp tuyến của mặt phẳng $(ABC)$.
+
+Lời giải Luyện tập 3:
+• Ta có cặp vectơ chỉ phương của mặt phẳng $(ABC)$ là:
+  $$\vec{AB} = (-3; 3; -1); \quad \vec{AC} = (-3; 5; 1).$$
+• Một vectơ pháp tuyến của mặt phẳng $(ABC)$ là:
+  $$\vec{n} = [\vec{AB}, \vec{AC}] = \left( \begin{vmatrix} 3 & -1 \\\ 5 & 1 \end{vmatrix}; \begin{vmatrix} -1 & -3 \\\ 1 & -3 \end{vmatrix}; \begin{vmatrix} -3 & 3 \\\ -3 & 5 \end{vmatrix} \right) = (8; 6; -6).$$
+• Ta cũng có thể chọn vectơ cùng phương tối giản là $\vec{n}' = (4; 3; -3)$.
+
+## Phương trình tổng quát của mặt phẳng
+
+### a) Định nghĩa phương trình tổng quát
+
+Trong không gian $Oxyz$, mỗi mặt phẳng đều có phương trình dạng:
+$$Ax + By + Cz + D = 0$$
+trong đó $A, B, C$ không đồng thời bằng 0 ($A^2 + B^2 + C^2 > 0$). Phương trình này được gọi là phương trình tổng quát của mặt phẳng.
+• Mặt phẳng xác định bởi phương trình $Ax + By + Cz + D = 0$ nhận vectơ $\vec{n} = (A; B; C)$ làm một vectơ pháp tuyến.
+• Phương trình mặt phẳng đi qua điểm $M_0(x_0; y_0; z_0)$ nhận $\vec{n} = (A; B; C)$ làm vectơ pháp tuyến là:
+$$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 \iff Ax + By + Cz + D = 0$$
+với $D = -(Ax_0 + By_0 + Cz_0)$.
+
+### b) Lập phương trình mặt phẳng trong các trường hợp cơ bản
+
+**Ví dụ 6:** Trong không gian $Oxyz$, viết phương trình mặt phẳng $(\alpha)$ đi qua điểm $M(2; -1; 0)$ và có vectơ pháp tuyến $\vec{n} = (3; -4; 6)$.
+
+Lời giải Ví dụ 6:
+• Mặt phẳng $(\alpha)$ đi qua $M(2; -1; 0)$ và nhận $\vec{n} = (3; -4; 6)$ làm vectơ pháp tuyến có phương trình:
+  $$3(x - 2) - 4(y + 1) + 6(z - 0) = 0 \iff 3x - 4y + 6z - 10 = 0.$$
+
+**Ví dụ 8:** Trong không gian $Oxyz$, cho ba điểm $A(2; 1; -1), B(3; 2; 1), C(3; 1; 4)$. Viết phương trình mặt phẳng $(ABC)$.
+
+Lời giải Ví dụ 8:
+• Hai vectơ chỉ phương: $\vec{AB} = (1; 1; 2)$ và $\vec{AC} = (1; 0; 5)$.
+• Vectơ pháp tuyến của mặt phẳng $(ABC)$ là:
+  $$\vec{n} = [\vec{AB}, \vec{AC}] = (1 \cdot 5 - 0 \cdot 2; 2 \cdot 1 - 5 \cdot 1; 1 \cdot 0 - 1 \cdot 1) = (5; -3; -1).$$
+• Mặt phẳng $(ABC)$ đi qua điểm $A(2; 1; -1)$ có phương trình:
+  $$5(x - 2) - 3(y - 1) - 1(z + 1) = 0 \iff 5x - 3y - z - 8 = 0.$$
+
+**Phương trình mặt phẳng theo đoạn chắn:** Mặt phẳng cắt ba trục toạ độ $Ox, Oy, Oz$ lần lượt tại các điểm $A(a; 0; 0), B(0; b; 0), C(0; 0; c)$ ($a, b, c \ne 0$) có phương trình là:
+$$\frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1$$
+
+## Vị trí tương đối giữa hai mặt phẳng
+
+### a) Điều kiện hai mặt phẳng vuông góc
+
+Cho hai mặt phẳng $(\alpha): Ax + By + Cz + D = 0$ và $(\beta): A'x + B'y + C'z + D' = 0$ với hai vectơ pháp tuyến tương ứng là $\vec{n} = (A; B; C)$ và $\vec{n}' = (A'; B'; C')$. Khi đó:
+$$(\alpha) \perp (\beta) \iff \vec{n} \perp \vec{n}' \iff AA' + BB' + CC' = 0$$
+
+**Ví dụ 10:** Viết phương trình mặt phẳng $(P)$ đi qua hai điểm $A(1; 2; -2), B(2; 4; 1)$ và vuông góc với mặt phẳng $(Q): x + 3y + z - 1 = 0$.
+
+Lời giải Ví dụ 10:
+• Ta có $\vec{AB} = (1; 2; 3)$ và vectơ pháp tuyến của $(Q)$ là $\vec{n}\_Q = (1; 3; 1)$.
+• Vì $(P)$ chứa $AB$ và $(P) \perp (Q)$ nên $(P)$ nhận $\vec{AB}$ và $\vec{n}\_Q$ làm cặp vectơ chỉ phương. Do đó vectơ pháp tuyến của $(P)$ là:
+  $$\vec{n}\_P = [\vec{AB}, \vec{n}\_Q] = (2 \cdot 1 - 3 \cdot 3; 3 \cdot 1 - 1 \cdot 1; 1 \cdot 3 - 2 \cdot 1) = (-7; 2; 1).$$
+• Mặt phẳng $(P)$ đi qua $A(1; 2; -2)$ có phương trình:
+  $$-7(x - 1) + 2(y - 2) + 1(z + 2) = 0 \iff -7x + 2y + z + 5 = 0 \iff 7x - 2y - z - 5 = 0.$$
+
+### b) Điều kiện hai mặt phẳng song song hoặc trùng nhau
+
+Cho hai mặt phẳng $(\alpha): Ax + By + Cz + D = 0$ và $(\beta): A'x + B'y + C'z + D' = 0$ có các vectơ pháp tuyến $\vec{n} = (A; B; C)$ và $\vec{n}' = (A'; B'; C')$.
+• $(\alpha) \parallel (\beta) \iff \vec{n}' = k\vec{n}$ và $D' \ne kD$ (với số thực $k \ne 0$).
+• $(\alpha) \equiv (\beta) \iff \vec{n}' = k\vec{n}$ và $D' = kD$ (với số thực $k \ne 0$).
+
+## Khoảng cách từ một điểm đến một mặt phẳng
+
+### a) Công thức tính khoảng cách
+
+Trong không gian $Oxyz$, khoảng cách từ điểm $M(x_0; y_0; z_0)$ đến mặt phẳng $(P): Ax + By + Cz + D = 0$ được tính bằng công thức:
+$$d(M, (P)) = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}$$
+Khoảng cách giữa hai mặt phẳng song song $(P): Ax + By + Cz + D = 0$ và $(Q): Ax + By + Cz + D' = 0$ ($D \ne D'$) là:
+$$d((P), (Q)) = \frac{|D - D'|}{\sqrt{A^2 + B^2 + C^2}}$$
+
+**Ví dụ 12:** Tính khoảng cách từ điểm $M(1; 2; -1)$ đến mặt phẳng $(P): x + 2y - 2z + 5 = 0$.
+
+Lời giải Ví dụ 12:
+• Áp dụng công thức tính khoảng cách:
+  $$d(M, (P)) = \frac{|1(1) + 2(2) - 2(-1) + 5|}{\sqrt{1^2 + 2^2 + (-2)^2}} = \frac{|1 + 4 + 2 + 5|}{\sqrt{1 + 4 + 4}} = \frac{12}{3} = 4.$$
+
+### b) Ứng dụng thực tiễn
+
+**Vận dụng 2 (Quỹ đạo chuyển động của vật thể trong không gian):** Một vật thể chuyển động trong không gian $Oxyz$. Tại mỗi thời điểm $t$, vị trí của vật thể là điểm $M(\cos t - \sin t; \cos t + \sin t; \cos t)$. Chứng minh rằng vật thể luôn chuyển động trong một mặt phẳng cố định.
+
+Lời giải Vận dụng 2:
+• Xét toạ độ của điểm $M(x; y; z)$ tại thời điểm $t$:
+  $$x = \cos t - \sin t, \quad y = \cos t + \sin t, \quad z = \cos t.$$
+• Cộng hai toạ độ $x$ và $y$, ta có:
+  $$x + y = (\cos t - \sin t) + (\cos t + \sin t) = 2\cos t.$$
+• Vì $z = \cos t$ nên ta suy ra hệ thức liên hệ độc lập với thời gian $t$:
+  $$x + y = 2z \iff x + y - 2z = 0.$$
+• Phương trình này biểu diễn một mặt phẳng cố định trong không gian $Oxyz$ đi qua gốc toạ độ $O$ và có vectơ pháp tuyến $\vec{n} = (1; 1; -2)$.
+• Vậy vật thể luôn chuyển động trong mặt phẳng cố định có phương trình $x + y - 2z = 0$.
+
+**Vận dụng 5 (Vùng quan sát của camera):** Một camera có góc quan sát ngang là $115^\circ$ đặt tại điểm $C(1; 2; 4)$ và chiếu thẳng vuông góc về phía mặt phẳng sàn $(P): x + 2y + 2z + 3 = 0$. Hỏi vùng quan sát được trên mặt phẳng $(P)$ là hình tròn có bán kính xấp xỉ bằng bao nhiêu mét?
+
+Lời giải Vận dụng 5:
+• Khoảng cách từ vị trí đặt camera $C(1; 2; 4)$ đến mặt phẳng sàn $(P)$ là chiều cao $h$ của hình nón quan sát:
+  $$h = d(C, (P)) = \frac{|1 + 2(2) + 2(4) + 3|}{\sqrt{1^2 + 2^2 + 2^2}} = \frac{|1 + 4 + 8 + 3|}{\sqrt{9}} = \frac{16}{3}\text{ (m)}.$$
+• Góc mở ở đỉnh của nón quan sát là $2\alpha = 115^\circ \implies \alpha = 57{,}5^\circ$.
+• Bán kính hình tròn vùng quan sát trên mặt phẳng $(P)$ là:
+  $$R = h \cdot \tan \alpha = \frac{16}{3} \cdot \tan(57{,}5^\circ) \approx 5{,}333 \cdot 1{,}5697 \approx 8{,}4\text{ (m)}.$$
+• Vậy vùng quan sát trên mặt phẳng $(P)$ là hình tròn có bán kính xấp xỉ $8{,}4\text{ m}$.
+
+## Hệ thống bài tập cuối bài
+
+**Bài 5.1:** Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $M(1; 2; -1)$ và vuông góc với trục $Ox$.
+
+Lời giải Bài 5.1:
+• Trục $Ox$ có vectơ chỉ phương là $\vec{i} = (1; 0; 0)$. Mặt phẳng vuông góc với $Ox$ nên nhận $\vec{i}$ làm vectơ pháp tuyến.
+• Mặt phẳng đi qua $M(1; 2; -1)$ có phương trình:
+  $$1(x - 1) + 0(y - 2) + 0(z + 1) = 0 \iff x - 1 = 0.$$
+
+**Bài 5.3:** Viết phương trình mặt phẳng $(P)$ đi qua điểm $M(1; -1; 5)$ và vuông góc với hai mặt phẳng $(Q): 3x + 2y - z = 0$ và $(R): x + y - z = 0$.
+
+Lời giải Bài 5.3:
+• Vectơ pháp tuyến của $(Q)$ và $(R)$ lần lượt là $\vec{n}\_Q = (3; 2; -1)$ và $\vec{n}\_R = (1; 1; -1)$.
+• Vì $(P) \perp (Q)$ và $(P) \perp (R)$ nên $(P)$ nhận $\vec{n}\_Q$ và $\vec{n}\_R$ làm cặp vectơ chỉ phương. Vectơ pháp tuyến của $(P)$ là:
+  $$\vec{n}\_P = [\vec{n}\_Q, \vec{n}\_R] = (2(-1) - (-1)(1); (-1)(1) - 3(-1); 3(1) - 2(1)) = (-1; 2; 1).$$
+• Mặt phẳng $(P)$ đi qua $M(1; -1; 5)$ có phương trình:
+  $$-1(x - 1) + 2(y + 1) + 1(z - 5) = 0 \iff -x + 2y + z - 2 = 0 \iff x - 2y - z + 2 = 0.$$
+
+**Bài 5.4:** Viết phương trình mặt phẳng đi qua $M(2; 3; -1)$, song song với trục $Ox$ và vuông góc với mặt phẳng $(Q): x + 2y - 3z + 1 = 0$.
+
+Lời giải Bài 5.4:
+• Trục $Ox$ có vectơ chỉ phương $\vec{i} = (1; 0; 0)$ và mặt phẳng $(Q)$ có vectơ pháp tuyến $\vec{n}\_Q = (1; 2; -3)$.
+• Mặt phẳng cần tìm song song với $Ox$ và vuông góc với $(Q)$ nên nhận $\vec{i}$ và $\vec{n}\_Q$ làm cặp vectơ chỉ phương. Vectơ pháp tuyến là:
+  $$\vec{n} = [\vec{i}, \vec{n}\_Q] = (0(-3) - 0(2); 0(1) - 1(-3); 1(2) - 0(1)) = (0; 3; 2).$$
+• Phương trình mặt phẳng đi qua $M(2; 3; -1)$:
+  $$0(x - 2) + 3(y - 3) + 2(z + 1) = 0 \iff 3y + 2z - 7 = 0.$$
+
+**Bài 5.6:** Cho hai mặt phẳng $(P): x + y + z + 2 = 0$ và $(Q): x + y + z + 6 = 0$. Chứng minh $(P) \parallel (Q)$ và tính khoảng cách giữa hai mặt phẳng đó.
+
+Lời giải Bài 5.6:
+• Cả hai mặt phẳng có cùng vectơ pháp tuyến $\vec{n} = (1; 1; 1)$ và hệ số tự do $D = 2 \ne 6 = D'$, do đó $(P) \parallel (Q)$.
+• Khoảng cách giữa hai mặt phẳng song song là:
+  $$d((P), (Q)) = \frac{|6 - 2|}{\sqrt{1^2 + 1^2 + 1^2}} = \frac{4}{\sqrt{3}} = \frac{4\sqrt{3}}{3}.$$
+
+**Bài 5.7:** Trong không gian $Oxyz$, cho hai mặt phẳng $(P): x + 3y - z = 0$ và $(Q): x - y - 2z + 1 = 0$.
+a) Chứng minh rằng hai mặt phẳng $(P)$ và $(Q)$ vuông góc với nhau.
+b) Tìm điểm $M$ thuộc trục $Ox$ và cách đều hai mặt phẳng $(P)$ và $(Q)$.
+
+Lời giải Bài 5.7:
+• a) Vectơ pháp tuyến của hai mặt phẳng là $\vec{n}\_P = (1; 3; -1)$ và $\vec{n}\_Q = (1; -1; -2)$.
+  Tích vô hướng: $\vec{n}\_P \cdot \vec{n}\_Q = 1(1) + 3(-1) + (-1)(-2) = 1 - 3 + 2 = 0$.
+  Vì $\vec{n}\_P \perp \vec{n}\_Q$ nên hai mặt phẳng $(P)$ và $(Q)$ vuông góc với nhau.
+• b) Điểm $M$ thuộc trục $Ox$ nên có toạ độ $M(t; 0; 0)$.
+  Khoảng cách từ $M$ đến hai mặt phẳng:
+  $$d(M, (P)) = \frac{|t + 3(0) - 0|}{\sqrt{1^2 + 3^2 + (-1)^2}} = \frac{|t|}{\sqrt{11}}$$
+  $$d(M, (Q)) = \frac{|t - 0 - 2(0) + 1|}{\sqrt{1^2 + (-1)^2 + (-2)^2}} = \frac{|t + 1|}{\sqrt{6}}$$
+  Vì $d(M, (P)) = d(M, (Q))$ nên:
+  $$\frac{|t|}{\sqrt{11}} = \frac{|t + 1|}{\sqrt{6}} \iff 6t^2 = 11(t + 1)^2 \iff 6t^2 = 11(t^2 + 2t + 1) \iff 5t^2 + 22t + 11 = 0.$$
+  Giải phương trình bậc hai: $\Delta' = 11^2 - 5(11) = 121 - 55 = 66 > 0$.
+  Ta được hai giá trị của $t$: $t = \frac{-11 \pm \sqrt{66}}{5}$.
+• Vậy có hai điểm thoả mãn là $M_1\left(\frac{-11 + \sqrt{66}}{5}; 0; 0\right)$ và $M_2\left(\frac{-11 - \sqrt{66}}{5}; 0; 0\right)$.
