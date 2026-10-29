@@ -1,0 +1,255 @@
+---
+title: 'Bài 18: Xác suất có điều kiện'
+description: Hệ thống lý thuyết bài Xác suất có điều kiện cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Xác suất có điều kiện
+  - Công thức nhân xác suất
+  - Sơ đồ hình cây trong tính toán xác suất
+  - Biến cố độc lập và xác suất có điều kiện
+grade: 12
+order: 0
+updatedDate: 2026-10-29T18:54:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Xác suất có điều kiện ($P(A|B)$)
+
+·       Công thức nhân xác suất
+
+·       Bảng dữ liệu thống kê $2 \times 2$
+
+·       Sơ đồ hình cây trong tính toán xác suất
+
+·       Biến cố độc lập và xác suất có điều kiện
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết khái niệm xác suất có điều kiện và hiểu rõ mối liên hệ giữa xác suất có điều kiện và xác suất thông thường.
+
+·       Tính thành thạo xác suất có điều kiện bằng cả định nghĩa trực tiếp, công thức tỉ số xác suất và khai thác từ bảng dữ liệu thống kê $2 \times 2$.
+
+·       Nắm vững và vận dụng thành thạo công thức nhân xác suất cho hai biến cố bất kì và sử dụng sơ đồ hình cây để trực quan hoá các giai đoạn ngẫu nhiên.
+
+·       Giải thích ý nghĩa của xác suất có điều kiện trong các tình huống thực tiễn (phân tích hiệu quả thắt dây an toàn khi tai nạn, thử nghiệm lâm sàng dược phẩm, giải thích chiến lược tối ưu trong nghịch lí ô cửa bí mật Monty Hall, công nghệ cập nhật Bayesian).
+
+## Xác suất có điều kiện
+
+\<Youtube url="https://www.youtube.com/watch?v=example_xac_suat_co_dieu_kien"/>
+
+### a) Định nghĩa và công thức tính xác suất có điều kiện
+
+Định nghĩa:
+Cho hai biến cố $A$ và $B$. Xác suất của biến cố $A$, được tính khi biết biến cố $B$ đã xảy ra, được gọi là xác suất của $A$ với điều kiện $B$ (hay xác suất có điều kiện của $A$ khi biết $B$), kí hiệu là $P(A|B)$.
+
+Công thức tính xác suất có điều kiện:
+Cho hai biến cố $A$ và $B$ bất kì, với $P(B) > 0$. Khi đó:
+$$P(A|B) = \frac{P(AB)}{P(B)}$$
+Nếu các kết quả của không gian mẫu là đồng khả năng thì:
+$$P(A|B) = \frac{n(AB)}{n(B)}$$
+trong đó $n(B)$ là số kết quả thuận lợi cho biến cố $B$, $n(AB)$ là số kết quả thuận lợi cho cả hai biến cố $A$ và $B$.
+
+Tính chất biến cố độc lập:
+Nếu $A$ và $B$ là hai biến cố độc lập với $P(A) > 0, P(B) > 0$ thì việc biến cố này xảy ra không làm thay đổi xác suất xảy ra biến cố kia:
+$$P(A|B) = P(A) \quad \text{và} \quad P(B|A) = P(B)$$
+Đồng thời ta cũng có: $P(\overline{A}|B) = P(\overline{A})$ và $P(A|\overline{B}) = P(A)$.
+
+### b) Ví dụ và luyện tập về xác suất có điều kiện
+
+**Ví dụ 1:** Một hộp có 20 viên bi trắng và 10 viên bi đen. Bạn Bình lấy ngẫu nhiên một viên bi trong hộp, không trả lại. Sau đó bạn An lấy ngẫu nhiên một viên bi từ các viên còn lại. Gọi $A$ là biến cố: "An lấy được viên bi trắng"; $B$ là biến cố: "Bình lấy được viên bi trắng". Tính $P(A|B)$ bằng định nghĩa và bằng công thức.
+
+Lời giải Ví dụ 1:
+• Cách 1 (Theo định nghĩa):
+  Biến cố $B$ xảy ra nghĩa là Bình đã lấy được một viên bi trắng. Khi đó trong hộp còn lại $20 + 10 - 1 = 29$ viên bi, gồm 19 viên bi trắng và 10 viên bi đen.
+  Xác suất để An lấy được viên bi trắng trong điều kiện đó là:
+  $$P(A|B) = \frac{19}{29}.$$
+• Cách 2 (Bằng công thức):
+  Số cách Bình lấy 1 viên bi là 30, sau đó An lấy 1 viên bi trong 29 viên còn lại, nên số phần tử không gian mẫu là $n(\Omega) = 30 \times 29 = 870$.
+  Số cách Bình lấy được bi trắng là 20, An lấy 1 viên bất kì trong 29 viên còn lại, nên $n(B) = 20 \times 29 = 580$.
+  Biến cố $AB$ là "Cả Bình và An đều lấy được bi trắng": Bình có 20 cách chọn bi trắng, An có 19 cách chọn bi trắng từ 19 viên còn lại $\implies n(AB) = 20 \times 19 = 380$.
+  Áp dụng công thức:
+  $$P(A|B) = \frac{P(AB)}{P(B)} = \frac{n(AB)}{n(B)} = \frac{20 \times 19}{20 \times 29} = \frac{19}{29}.$$
+
+**Luyện tập 1:** Trở lại tình huống ở Ví dụ 1. Tính $P(A|\overline{B})$ bằng định nghĩa và bằng công thức.
+
+Lời giải Luyện tập 1:
+• Biến cố $\overline{B}$ là: "Bình lấy được viên bi đen".
+• Cách 1 (Theo định nghĩa):
+  Khi $\overline{B}$ đã xảy ra, Bình lấy được 1 viên bi đen. Trong hộp còn lại 29 viên bi, trong đó nguyên vẹn 20 viên bi trắng và $10 - 1 = 9$ viên bi đen.
+  Xác suất An lấy được bi trắng là: $P(A|\overline{B}) = \frac{20}{29}$.
+• Cách 2 (Bằng công thức):
+  Số cách Bình lấy bi đen và An lấy 1 viên bất kì là $n(\overline{B}) = 10 \times 29 = 290$.
+  Biến cố $A\overline{B}$ là "Bình lấy bi đen và An lấy bi trắng": Bình có 10 cách chọn, An có 20 cách chọn $\implies n(A\overline{B}) = 10 \times 20 = 200$.
+  Vậy: $P(A|\overline{B}) = \frac{n(A\overline{B})}{n(\overline{B})} = \frac{10 \times 20}{10 \times 29} = \frac{20}{29}$.
+
+**Ví dụ 3 (Bảng dữ liệu thống kê $2 \times 2$ - Thắt dây an toàn khi lái xe):** Nghiên cứu về 577 006 người lái xe bị tai nạn giao thông được thống kê trong bảng $2 \times 2$ như sau:
+• Không thắt dây an toàn: 1 601 người tử vong, 162 527 người sống sót (tổng 164 128 người).
+• Có thắt dây an toàn: 510 người tử vong, 412 368 người sống sót (tổng 412 878 người).
+a) Tính xác suất để một người tử vong trong trường hợp không thắt dây an toàn.
+b) Tính xác suất để một người tử vong trong trường hợp có thắt dây an toàn.
+c) So sánh hai xác suất và rút ra kết luận thực tiễn.
+
+Lời giải Ví dụ 3:
+• Gọi $A$ là biến cố "Người lái xe tử vong khi xảy ra tai nạn"; $B$ là biến cố "Người lái xe không thắt dây an toàn".
+• a) Xác suất người lái xe tử vong khi không thắt dây an toàn là $P(A|B)$:
+  $$P(A|B) = \frac{n(AB)}{n(B)} = \frac{1\\,601}{164\\,128} \approx 0{,}009755.$$
+• b) Xác suất người lái xe tử vong khi có thắt dây an toàn là $P(A|\overline{B})$:
+  $$P(A|\overline{B}) = \frac{n(A\overline{B})}{n(\overline{B})} = \frac{510}{412\\,878} \approx 0{,}001235.$$
+• c) Tỉ số giữa hai xác suất là:
+  $$\frac{P(A|B)}{P(A|\overline{B})} \approx \frac{0{,}009755}{0{,}001235} \approx 7{,}9.$$
+• Kết luận: Xác suất tử vong khi bị tai nạn ở người không thắt dây an toàn cao gấp khoảng 7,9 lần so với người có thắt dây an toàn. Việc thắt dây an toàn làm giảm nguy cơ tử vong gần 8 lần.
+
+**Luyện tập 3:** Thử nghiệm điều trị bệnh X trên 4 000 bệnh nhân: 2 400 người dùng thuốc M (1 600 khỏi, 800 không khỏi); 1 600 người dùng thuốc N (1 200 khỏi, 400 không khỏi). Chọn ngẫu nhiên một bệnh nhân. Tính xác suất để bệnh nhân đó:
+a) Uống thuốc M, biết rằng bệnh nhân đó đã khỏi bệnh.
+b) Uống thuốc N, biết rằng bệnh nhân đó không khỏi bệnh.
+
+Lời giải Luyện tập 3:
+• Tổng số bệnh nhân khỏi bệnh: $1\\,600 + 1\\,200 = 2\\,800$ người.
+• Tổng số bệnh nhân không khỏi bệnh: $800 + 400 = 1\\,200$ người.
+• a) Xác suất bệnh nhân uống thuốc M biết rằng đã khỏi bệnh:
+  $$P(M|\text{Khỏi}) = \frac{n(M \cap \text{Khỏi})}{n(\text{Khỏi})} = \frac{1\\,600}{2\\,800} = \frac{4}{7} \approx 0{,}5714.$$
+• b) Xác suất bệnh nhân uống thuốc N biết rằng không khỏi bệnh:
+  $$P(N|\text{Không khỏi}) = \frac{n(N \cap \text{Không khỏi})}{n(\text{Không khỏi})} = \frac{400}{1\\,200} = \frac{1}{3} \approx 0{,}3333.$$
+
+## Công thức nhân xác suất
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_nhan_xac_suat"/>
+
+### a) Công thức nhân xác suất tổng quát và sơ đồ hình cây
+
+Định lí công thức nhân xác suất:
+Với hai biến cố $A$ và $B$ bất kì, ta có:
+$$P(AB) = P(B) \cdot P(A|B) \quad (\text{nếu } P(B) > 0)$$
+$$P(AB) = P(A) \cdot P(B|A) \quad (\text{nếu } P(A) > 0)$$
+Đặc biệt, nếu $A$ và $B$ là hai biến cố độc lập thì $P(AB) = P(A) \cdot P(B)$.
+
+Mô tả trực quan bằng sơ đồ hình cây:
+Khi phép thử diễn ra qua nhiều giai đoạn nối tiếp nhau:
+• Nhánh thứ nhất biểu thị xác suất các biến cố ở giai đoạn 1 ($P(A)$ và $P(\overline{A})$).
+• Các nhánh kế tiếp từ mỗi nút biểu thị xác suất có điều kiện ở giai đoạn 2 ($P(B|A), P(\overline{B}|A), \dots$).
+• Xác suất của một kết quả liên tiếp (giao các biến cố) bằng tích các xác suất trên các nhánh của đường đi tương ứng.
+
+### b) Ví dụ và luyện tập về công thức nhân xác suất
+
+**Ví dụ 4:** Hộp kín có 7 bút bi xanh và 5 bút bi đen. Sơn lấy ngẫu nhiên 1 bút không hoàn lại, sau đó Tùng lấy ngẫu nhiên 1 trong 11 bút còn lại. Tính xác suất để Sơn lấy được bút bi đen và Tùng lấy được bút bi xanh.
+
+Lời giải Ví dụ 4:
+• Gọi $A$ là biến cố "Sơn lấy được bút bi đen"; $B$ là biến cố "Tùng lấy được bút bi xanh". Biến cố cần tính xác suất là $AB$.
+• Ban đầu có 12 chiếc bút, gồm 5 bút đen $\implies P(A) = \frac{5}{12}$.
+• Khi $A$ đã xảy ra, trong hộp còn 11 chiếc bút với nguyên vẹn 7 bút xanh $\implies P(B|A) = \frac{7}{11}$.
+• Theo công thức nhân xác suất:
+  $$P(AB) = P(A) \cdot P(B|A) = \frac{5}{12} \cdot \frac{7}{11} = \frac{35}{132}.$$
+
+**Luyện tập 4:** Trở lại tình huống ở Ví dụ 4. Tính xác suất để:
+a) Sơn lấy được bút bi xanh và Tùng lấy được bút bi đen.
+b) Hai chiếc bút lấy ra có cùng màu.
+
+Lời giải Luyện tập 4:
+• a) Gọi $X$ là biến cố "Sơn lấy được bút bi xanh", $D$ là biến cố "Tùng lấy được bút bi đen".
+  Ta có $P(X) = \frac{7}{12}$. Khi Sơn đã lấy 1 bút xanh, hộp còn 11 chiếc gồm 5 bút đen $\implies P(D|X) = \frac{5}{11}$.
+  Xác suất cần tính là: $P(XD) = P(X) \cdot P(D|X) = \frac{7}{12} \cdot \frac{5}{11} = \frac{35}{132}$.
+• b) Biến cố "Hai chiếc bút có cùng màu" là tổng của hai biến cố xung khắc: $C = (\text{ĐĐ}) \cup (\text{XX})$.
+  - Cả hai cùng đen: $P(\text{ĐĐ}) = \frac{5}{12} \cdot \frac{4}{11} = \frac{20}{132}$.
+  - Cả hai cùng xanh: $P(\text{XX}) = \frac{7}{12} \cdot \frac{6}{11} = \frac{42}{132}$.
+  - Xác suất hai chiếc bút có cùng màu là:
+    $$P(C) = P(\text{ĐĐ}) + P(\text{XX}) = \frac{20}{132} + \frac{42}{132} = \frac{62}{132} = \frac{31}{66}.$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng (Giải bài toán Ô cửa bí mật Monty Hall - Tình huống mở đầu):** Trò chơi gồm 3 cánh cửa (1 xe ô tô, 2 con lừa). Người chơi chọn cửa số 1. Người quản trò mở cửa số 3 lộ ra một con lừa. Kí hiệu $E_1, E_2, E_3$ là các biến cố ô tô ở cửa 1, 2, 3; $H$ là biến cố người quản trò mở cửa số 3 thấy con lừa.
+a) Chứng minh rằng $P(E_1) = P(E_2) = P(E_3) = \frac{1}{3}$; $P(H|E_1) = \frac{1}{2}$ và $P(H|E_2) = 1$.
+b) Chứng minh $P(E_1|H) = \frac{P(E_1)P(H|E_1)}{P(H)}$ và $P(E_2|H) = \frac{P(E_2)P(H|E_2)}{P(H)}$.
+c) Chứng minh $P(E_2|H) = 2P(E_1|H)$ và đưa ra lời khuyên cho người chơi.
+
+Lời giải Vận dụng:
+• a) Vì ô tô được đặt ngẫu nhiên sau 1 trong 3 cánh cửa nên $P(E_1) = P(E_2) = P(E_3) = \frac{1}{3}$.
+  - Nếu $E_1$ xảy ra (ô tô ở cửa 1 người chơi đã chọn), cả cửa 2 và 3 đều là lừa. Người quản trò chọn ngẫu nhiên mở 1 trong 2 cửa này, nên xác suất mở trúng cửa 3 là $P(H|E_1) = \frac{1}{2}$.
+  - Nếu $E_2$ xảy ra (ô tô ở cửa 2), người chơi chọn cửa 1, người quản trò bắt buộc phải mở cửa số 3 (vì không được mở ô tô và không được mở cửa người chơi chọn), do đó $P(H|E_2) = 1$.
+  - Nếu $E_3$ xảy ra (ô tô ở cửa 3), người quản trò không thể mở cửa 3, nên $P(H|E_3) = 0$.
+• b) Theo công thức xác suất có điều kiện và công thức nhân xác suất:
+  $$P(E_1|H) = \frac{P(E_1 H)}{P(H)} = \frac{P(E_1) \cdot P(H|E_1)}{P(H)}; \qquad P(E_2|H) = \frac{P(E_2 H)}{P(H)} = \frac{P(E_2) \cdot P(H|E_2)}{P(H)}.$$
+• c) Ta có: $P(E_1) \cdot P(H|E_1) = \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{6}$ và $P(E_2) \cdot P(H|E_2) = \frac{1}{3} \cdot 1 = \frac{1}{3}$.
+  Vì $P(E_2) \cdot P(H|E_2) = 2 \left[P(E_1) \cdot P(H|E_1)\right]$ nên suy ra:
+  $$P(E_2|H) = 2 P(E_1|H).$$
+  Cụ thể, $P(H) = \frac{1}{6} + \frac{1}{3} = \frac{1}{2} \implies P(E_1|H) = \frac{1/6}{1/2} = \frac{1}{3}$ và $P(E_2|H) = \frac{1/3}{1/2} = \frac{2}{3}$.
+• Lời khuyên cho người chơi: Người chơi NÊN CHUYỂN SANG CỬA SỐ 2, vì việc đổi cửa sẽ tăng gấp đôi cơ hội trúng ô tô (từ $\frac{1}{3} \approx 33{,}3\\%$ lên $\frac{2}{3} \approx 66{,}7\\%$).
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 6.1:** Hộp đựng 20 tấm thẻ đánh số từ 1 đến 20. Rút ngẫu nhiên một thẻ và được thông báo thẻ mang số chẵn. Tính xác suất để rút được thẻ số 10.
+
+Lời giải Bài 6.1:
+• Gọi $B$ là biến cố "Thẻ rút ra mang số chẵn"; $A$ là biến cố "Rút được thẻ số 10".
+• Tập hợp các số chẵn từ 1 đến 20 là $\\{2, 4, 6, 8, 10, 12, 14, 16, 18, 20\\} \implies n(B) = 10$.
+• Trong các số chẵn, chỉ có duy nhất số 10 thoả mãn biến cố $A \implies n(AB) = 1$.
+• Xác suất cần tính là: $P(A|B) = \frac{n(AB)}{n(B)} = \frac{1}{10} = 0{,}1$.
+
+**Bài 6.2:** Cho hai biến cố $A$ và $B$ thoả mãn $P(A) = 0{,}2; P(B) = 0{,}51$ và $P(B|A) = 0{,}8$. Tính $P(A|B)$.
+
+Lời giải Bài 6.2:
+• Theo công thức nhân xác suất: $P(AB) = P(A) \cdot P(B|A) = 0{,}2 \cdot 0{,}8 = 0{,}16$.
+• Áp dụng công thức tính xác suất có điều kiện $P(A|B)$:
+  $$P(A|B) = \frac{P(AB)}{P(B)} = \frac{0{,}16}{0{,}51} = \frac{16}{51} \approx 0{,}3137.$$
+
+**Bài 6.3:** Gieo hai con xúc xắc cân đối, đồng chất. Tính xác suất để:
+a) Tổng số chấm bằng 7 nếu biết rằng ít nhất có một con xúc xắc xuất hiện mặt 5 chấm.
+b) Có ít nhất một con xúc xắc xuất hiện mặt 5 chấm nếu biết rằng tổng số chấm bằng 7.
+
+Lời giải Bài 6.3:
+• Không gian mẫu có $n(\Omega) = 6 \times 6 = 36$ kết quả đồng khả năng.
+• Gọi $A$ là biến cố "Tổng số chấm bằng 7": $A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\} \implies n(A) = 6$.
+• Gọi $B$ là biến cố "Có ít nhất một con xúc xắc xuất hiện mặt 5 chấm":
+  $B = \\{(5,1), (5,2), (5,3), (5,4), (5,5), (5,6), (1,5), (2,5), (3,5), (4,5), (6,5)\\} \implies n(B) = 11$.
+• Biến cố $AB$ là "Tổng bằng 7 và có ít nhất một con 5": $AB = \\{(2,5), (5,2)\\} \implies n(AB) = 2$.
+• a) Xác suất tổng bằng 7 biết có ít nhất một mặt 5: $P(A|B) = \frac{n(AB)}{n(B)} = \frac{2}{11}$.
+• b) Xác suất có ít nhất một mặt 5 biết tổng bằng 7: $P(B|A) = \frac{n(AB)}{n(A)} = \frac{2}{6} = \frac{1}{3}$.
+
+**Bài 6.4:** Gieo hai con xúc xắc cân đối, đồng chất. Tính xác suất để tổng số chấm không nhỏ hơn 10 nếu biết rằng có ít nhất một con xúc xắc xuất hiện mặt 5 chấm.
+
+Lời giải Bài 6.4:
+• Gọi $B$ là biến cố "Có ít nhất một con xúc xắc xuất hiện mặt 5 chấm" $\implies n(B) = 11$ kết quả.
+• Gọi $C$ là biến cố "Tổng số chấm không nhỏ hơn 10" (tổng $\ge 10$).
+• Biến cố $CB$ gồm các cặp có mặt 5 và tổng $\ge 10$:
+  - Cặp có tổng bằng 10: $(5, 5)$;
+  - Cặp có tổng bằng 11: $(5, 6)$ và $(6, 5)$.
+  Vậy $CB = \\{(5, 5), (5, 6), (6, 5)\\} \implies n(CB) = 3$.
+• Xác suất cần tính là: $P(C|B) = \frac{n(CB)}{n(B)} = \frac{3}{11}$.
+
+**Bài 6.5:** Thực hiện hai thí nghiệm liên tiếp. Thí nghiệm 1 có xác suất thành công là 0,7. Nếu thí nghiệm 1 thành công thì thí nghiệm 2 có xác suất thành công là 0,9. Nếu thí nghiệm 1 thất bại thì thí nghiệm 2 có xác suất thành công là 0,4. Tính xác suất để:
+a) Cả hai thí nghiệm đều thành công.
+b) Cả hai thí nghiệm đều không thành công.
+c) Thí nghiệm thứ nhất thành công và thí nghiệm thứ hai không thành công.
+
+Lời giải Bài 6.5:
+• Kí hiệu $A_1, A_2$ lần lượt là các biến cố thí nghiệm thứ nhất và thứ hai thành công.
+  Theo giả thiết: $P(A_1) = 0{,}7 \implies P(\overline{A}\_1) = 0{,}3$.
+  $P(A_2|A_1) = 0{,}9 \implies P(\overline{A}\_2|A_1) = 1 - 0{,}9 = 0{,}1$.
+  $P(A_2|\overline{A}\_1) = 0{,}4 \implies P(\overline{A}\_2|\overline{A}\_1) = 1 - 0{,}4 = 0{,}6$.
+• a) Cả hai thí nghiệm đều thành công:
+  $$P(A_1 A_2) = P(A_1) \cdot P(A_2|A_1) = 0{,}7 \cdot 0{,}9 = 0{,}63.$$
+• b) Cả hai thí nghiệm đều không thành công:
+  $$P(\overline{A}\_1 \overline{A}\_2) = P(\overline{A}\_1) \cdot P(\overline{A}\_2|\overline{A}\_1) = 0{,}3 \cdot 0{,}6 = 0{,}18.$$
+• c) Thí nghiệm 1 thành công và thí nghiệm 2 không thành công:
+  $$P(A_1 \overline{A}\_2) = P(A_1) \cdot P(\overline{A}\_2|A_1) = 0{,}7 \cdot 0{,}1 = 0{,}07.$$
+
+**Bài 6.6:** Trong một túi có 6 chiếc kẹo màu cam, còn lại là kẹo màu vàng. Hà lấy ngẫu nhiên 1 chiếc kẹo không trả lại, sau đó lại lấy ngẫu nhiên thêm 1 chiếc kẹo khác. Biết rằng xác suất để Hà lấy được cả hai chiếc kẹo màu cam là $\frac{1}{3}$. Hỏi ban đầu trong túi có bao nhiêu chiếc kẹo?
+
+Lời giải Bài 6.6:
+• Gọi $N$ là tổng số chiếc kẹo ban đầu trong túi ($N \ge 6, N \in \mathbb{N}^\*$).
+• Xác suất lấy được kẹo cam ở lần thứ nhất là: $P(C_1) = \frac{6}{N}$.
+• Sau khi lấy 1 kẹo cam, trong túi còn $N - 1$ chiếc kẹo với 5 chiếc kẹo màu cam.
+  Xác suất lấy tiếp được kẹo cam ở lần thứ hai là: $P(C_2|C_1) = \frac{5}{N - 1}$.
+• Theo công thức nhân xác suất, xác suất cả hai kẹo lấy ra đều màu cam là:
+  $$P(C_1 C_2) = P(C_1) \cdot P(C_2|C_1) = \frac{6}{N} \cdot \frac{5}{N - 1} = \frac{30}{N(N - 1)}.$$
+• Theo đề bài, xác suất này bằng $\frac{1}{3}$, ta có phương trình:
+  $$\frac{30}{N(N - 1)} = \frac{1}{3} \iff N(N - 1) = 90 \iff N^2 - N - 90 = 0.$$
+• Giải phương trình bậc hai: $(N - 10)(N + 9) = 0 \iff N = 10$ (loại nghiệm $N = -9$).
+• Vậy ban đầu trong túi có 10 chiếc kẹo (gồm 6 kẹo màu cam và 4 kẹo màu vàng).

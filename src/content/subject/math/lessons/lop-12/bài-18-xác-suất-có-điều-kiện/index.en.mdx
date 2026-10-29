@@ -1,0 +1,257 @@
+---
+title: 'Lesson 18: Conditional probability'
+description: Theoretical system for the lesson on …, with illustrative examples
+tags:
+  - grade 12
+  - Conditional probability
+  - Multiplication rule of probability
+  - Probability tree diagram
+  - Independent events and conditional probability
+grade: 12
+order: 0
+updatedDate: 2026-10-29T18:54:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Conditional probability ($P(A|B)$)
+
+·       Multiplication rule of probability
+
+·       $2 \times 2$ contingency table (statistical data table)
+
+·       Probability tree diagram
+
+·       Independent events and conditional probability
+
+### **Knowledge and Skills:**
+
+·       Recognize the concept of conditional probability and understand its relationship with unconditional probability.
+
+·       Compute conditional probabilities proficiently using direct definitions, ratio formulas, and $2 \times 2$ contingency tables.
+
+·       Master and apply the multiplication rule of probability for arbitrary events, and utilize probability tree diagrams to visualize multi-stage random experiments.
+
+·       Explain the significance of conditional probability in real-world scenarios (analyzing seatbelt effectiveness in traffic accidents, pharmaceutical clinical trials, optimal strategies in the Monty Hall paradox, and Bayesian updating technology).
+
+## Conditional Probability
+
+\<Youtube url="https://www.youtube.com/watch?v=example_xac_suat_co_dieu_kien"/>
+
+### a) Definition and Formula for Conditional Probability
+
+Definition:
+For two events $A$ and $B$, the probability of event $A$ given that event $B$ has already occurred is called the conditional probability of $A$ given $B$, denoted by $P(A|B)$.
+
+Formula for Conditional Probability:
+For any two events $A$ and $B$ with $P(B) > 0$,
+$$P(A|B) = \frac{P(AB)}{P(B)}$$
+If the sample space consists of equally likely outcomes, then:
+$$P(A|B) = \frac{n(AB)}{n(B)}$$
+where $n(B)$ is the number of favorable outcomes for event $B$, and $n(AB)$ is the number of favorable outcomes for both events $A$ and $B$.
+
+Properties of Independent Events:
+If $A$ and $B$ are two independent events with $P(A) > 0, P(B) > 0$, the occurrence of one event does not affect the probability of the other:
+$$P(A|B) = P(A) \quad \text{and} \quad P(B|A) = P(B)$$
+Consequently, we also have: $P(\overline{A}|B) = P(\overline{A})$ and $P(A|\overline{B}) = P(A)$.
+
+### b) Illustrative Examples and Practice on Conditional Probability
+
+**Example 1:** An urn contains 20 white balls and 10 black balls. Bình draws one ball at random without replacement, followed by An drawing one ball at random from the remaining balls. Let $A$ be the event "An draws a white ball", and $B$ be the event "Bình draws a white ball". Compute $P(A|B)$ using both definition and formula.
+
+Solution for Example 1:
+• Method 1 (By Definition):
+  If $B$ occurs, Bình has drawn a white ball. There remain $20 + 10 - 1 = 29$ balls in the urn, consisting of 19 white balls and 10 black balls.
+  The conditional probability that An draws a white ball is:
+  $$P(A|B) = \frac{19}{29}.$$
+• Method 2 (By Formula):
+  The total number of sample outcomes is $n(\Omega) = 30 \times 29 = 870$.
+  The number of favorable outcomes for $B$ is $n(B) = 20 \times 29 = 580$.
+  Event $AB$ ("both Bình and An draw white balls") has $n(AB) = 20 \times 19 = 380$ outcomes.
+  Applying the formula:
+  $$P(A|B) = \frac{P(AB)}{P(B)} = \frac{n(AB)}{n(B)} = \frac{20 \times 19}{20 \times 29} = \frac{19}{29}.$$
+
+**Practice 1:** Under the setup of Example 1, compute $P(A|\overline{B})$ using definition and formula.
+
+Solution for Practice 1:
+• Event $\overline{B}$ is "Bình draws a black ball".
+• Method 1 (By Definition):
+  When $\overline{B}$ occurs, Bình has drawn 1 black ball. There remain 29 balls in the urn, retaining all 20 white balls and $10 - 1 = 9$ black balls.
+  The probability that An draws a white ball is $P(A|\overline{B}) = \frac{20}{29}$.
+• Method 2 (By Formula):
+  $n(\overline{B}) = 10 \times 29 = 290$.
+  Event $A\overline{B}$ ("Bình draws black, An draws white") has $n(A\overline{B}) = 10 \times 20 = 200$.
+  Thus: $P(A|\overline{B}) = \frac{n(A\overline{B})}{n(\overline{B})} = \frac{10 \times 20}{10 \times 29} = \frac{20}{29}$.
+
+**Example 3 ($2 \times 2$ Contingency Table - Seatbelt Safety Study):** A study of 577,006 car accident victims yielded the following $2 \times 2$ contingency table data:
+• Unbelted drivers: 1,601 fatalities, 162,527 survivors (total 164,128).
+• Belted drivers: 510 fatalities, 412,368 survivors (total 412,878).
+a) Find the probability of fatality given an unbelted driver.
+b) Find the probability of fatality given a belted driver.
+c) Compare the two probabilities and draw a practical conclusion.
+
+Solution for Example 3:
+• Let $A$ be the event "Driver is a fatality in an accident"; $B$ be the event "Driver is unbelted".
+• a) The probability of fatality given an unbelted driver is $P(A|B)$:
+  $$P(A|B) = \frac{n(AB)}{n(B)} = \frac{1\\,601}{164\\,128} \approx 0.009755.$$
+• b) The probability of fatality given a belted driver is $P(A|\overline{B})$:
+  $$P(A|\overline{B}) = \frac{n(A\overline{B})}{n(\overline{B})} = \frac{510}{412\\,878} \approx 0.001235.$$
+• c) The ratio of the two probabilities is:
+  $$\frac{P(A|B)}{P(A|\overline{B})} \approx \frac{0.009755}{0.001235} \approx 7.9.$$
+• Conclusion: The fatality rate for unbelted drivers in traffic accidents is approximately 7.9 times higher than that for belted drivers. Wearing a seatbelt reduces the risk of fatal injury by nearly 800%.
+
+**Practice 3:** A pharmaceutical clinical trial tested treatment efficacy of drugs M and N on 4,000 patients: 2,400 patients received drug M (1,600 cured, 800 not cured); 1,600 patients received drug N (1,200 cured, 400 not cured). Choose a random patient. Find the probability that:
+a) The patient took drug M, given that they were cured.
+b) The patient took drug N, given that they were not cured.
+
+Solution for Practice 3:
+• Total cured patients: $1\\,600 + 1\\,200 = 2\\,800$.
+• Total uncured patients: $800 + 400 = 1\\,200$.
+• a) Probability of taking drug M given the patient is cured:
+  $$P(M|\text{Cured}) = \frac{n(M \cap \text{Cured})}{n(\text{Cured})} = \frac{1\\,600}{2\\,800} = \frac{4}{7} \approx 0.5714.$$
+• b) Probability of taking drug N given the patient is uncured:
+  $$P(N|\text{Uncured}) = \frac{n(N \cap \text{Uncured})}{n(\text{Uncured})} = \frac{400}{1\\,200} = \frac{1}{3} \approx 0.3333.$$
+
+
+
+## Multiplication Rule of Probability
+
+\<Youtube url="https://www.youtube.com/watch?v=example_cong_thuc_nhan_xac_suat"/>
+
+### a) General Multiplication Rule and Probability Tree Diagrams
+
+Multiplication Rule Theorem:
+For any two events $A$ and $B$, we have:
+$$P(AB) = P(B) \cdot P(A|B) \quad (\text{if } P(B) > 0)$$
+$$P(AB) = P(A) \cdot P(B|A) \quad (\text{if } P(A) > 0)
+$$
+In particular, if $A$ and $B$ are independent events, then $P(AB) = P(A) \cdot P(B)$.
+
+Visualizing with Probability Tree Diagrams:
+When a random experiment proceeds in sequential stages:
+• The first-level branches represent stage 1 probabilities ($P(A)$ and $P(\overline{A})$).
+• Subsequent branches stemming from each node represent conditional probabilities at stage 2 ($P(B|A), P(\overline{B}|A), \dots$).
+• The probability of a compound sequential outcome (intersection of events) equals the product of probabilities along the corresponding path.
+
+### b) Illustrative Examples and Practice on the Multiplication Rule
+
+**Example 4:** An urn contains 7 blue pens and 5 black pens. Sơn draws 1 pen at random without replacement, followed by Tùng drawing 1 pen from the remaining 11. Find the probability that Sơn draws a black pen and Tùng draws a blue pen.
+
+Solution for Example 4:
+• Let $A$ be the event "Sơn draws a black pen"; $B$ be the event "Tùng draws a blue pen". We seek $P(AB)$.
+• Initially, there are 12 pens, with 5 black pens $\implies P(A) = \frac{5}{12}$.
+• Given that $A$ occurred, 11 pens remain, including 7 blue pens $\implies P(B|A) = \frac{7}{11}$.
+• By the multiplication rule:
+  $$P(AB) = P(A) \cdot P(B|A) = \frac{5}{12} \cdot \frac{7}{11} = \frac{35}{132}.$$
+
+**Practice 4:** Under the setup of Example 4, compute the probability that:
+a) Sơn draws a blue pen and Tùng draws a black pen.
+b) Both drawn pens have the same color.
+
+Solution for Practice 4:
+• a) Let $X$ be the event "Sơn draws a blue pen", $D$ be the event "Tùng draws a black pen".
+  We have $P(X) = \frac{7}{12}$. Once a blue pen is removed, 11 pens remain, including 5 black pens $\implies P(D|X) = \frac{5}{11}$.
+  The required probability is $P(XD) = P(X) \cdot P(D|X) = \frac{7}{12} \cdot \frac{5}{11} = \frac{35}{132}$.
+• b) The event "Both pens have the same color" is the union of two mutually exclusive events: $C = (\text{Black, Black}) \cup (\text{Blue, Blue})$.
+  - Both black: $P(\text{Black, Black}) = \frac{5}{12} \cdot \frac{4}{11} = \frac{20}{132}$.
+  - Both blue: $P(\text{Blue, Blue}) = \frac{7}{12} \cdot \frac{6}{11} = \frac{42}{132}$.
+  - The total probability is:
+    $$P(C) = \frac{20}{132} + \frac{42}{132} = \frac{62}{132} = \frac{31}{66}.$$
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Resolving the Monty Hall Paradox - Introductory Problem):** The game show features 3 doors (1 car, 2 goats). The contestant chooses door 1. The host opens door 3 to reveal a goat. Let $E_1, E_2, E_3$ be the events that the car is behind doors 1, 2, 3 respectively; $H$ is the event that the host opens door 3 to reveal a goat.
+a) Prove $P(E_1) = P(E_2) = P(E_3) = \frac{1}{3}$; $P(H|E_1) = \frac{1}{2}$, and $P(H|E_2) = 1$.
+b) Prove $P(E_1|H) = \frac{P(E_1)P(H|E_1)}{P(H)}$ and $P(E_2|H) = \frac{P(E_2)P(H|E_2)}{P(H)}$.
+c) Prove $P(E_2|H) = 2P(E_1|H)$ and provide strategic advice for the contestant.
+
+Solution for Application:
+• a) Because the car is randomly placed behind one of the 3 doors, $P(E_1) = P(E_2) = P(E_3) = \frac{1}{3}$.
+  - If $E_1$ occurs (car is behind door 1), both doors 2 and 3 conceal goats. The host chooses randomly between doors 2 and 3, so $P(H|E_1) = \frac{1}{2}$.
+  - If $E_2$ occurs (car is behind door 2), the contestant chose door 1, forcing the host to open door 3, so $P(H|E_2) = 1$.
+  - If $E_3$ occurs (car is behind door 3), the host cannot open door 3, so $P(H|E_3) = 0$.
+• b) By Bayes' theorem / conditional probability definition:
+  $$P(E_1|H) = \frac{P(E_1 H)}{P(H)} = \frac{P(E_1) \cdot P(H|E_1)}{P(H)}; \qquad P(E_2|H) = \frac{P(E_2 H)}{P(H)} = \frac{P(E_2) \cdot P(H|E_2)}{P(H)}.$$
+• c) We have: $P(E_1) \cdot P(H|E_1) = \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{6}$ and $P(E_2) \cdot P(H|E_2) = \frac{1}{3} \cdot 1 = \frac{1}{3}$.
+  Since $P(E_2) \cdot P(H|E_2) = 2 \left[P(E_1) \cdot P(H|E_1)\right]$, it follows that:
+  $$P(E_2|H) = 2 P(E_1|H).$$
+  Specifically, $P(H) = \frac{1}{6} + \frac{1}{3} = \frac{1}{2} \implies P(E_1|H) = \frac{1/6}{1/2} = \frac{1}{3}$ and $P(E_2|H) = \frac{1/3}{1/2} = \frac{2}{3}$.
+• Strategic Advice: The contestant SHOULD SWITCH TO DOOR 2, because switching doubles their winning probability from $\frac{1}{3}$ ($33.3\\%$) to $\frac{2}{3}$ ($66.7\\%$).
+
+### b) Detailed Section Exercises
+
+**Exercise 6.1:** An urn contains 20 numbered cards from 1 to 20. A card is drawn at random and announced to be an even number. Find the probability that the drawn card is number 10.
+
+Solution for Exercise 6.1:
+• Let $B$ be the event "The drawn card is even"; $A$ be the event "The drawn card is number 10".
+• The even numbers from 1 to 20 are $\\{2, 4, 6, 8, 10, 12, 14, 16, 18, 20\\} \implies n(B) = 10$.
+• Among even numbers, only number 10 satisfies event $A \implies n(AB) = 1$.
+• The required probability is $P(A|B) = \frac{n(AB)}{n(B)} = \frac{1}{10} = 0.1$.
+
+**Exercise 6.2:** Given two events $A$ and $B$ such that $P(A) = 0.2, P(B) = 0.51$, and $P(B|A) = 0.8$. Compute $P(A|B)$.
+
+Solution for Exercise 6.2:
+• By the multiplication rule: $P(AB) = P(A) \cdot P(B|A) = 0.2 \cdot 0.8 = 0.16$.
+• Applying the conditional probability formula for $P(A|B)$:
+  $$P(A|B) = \frac{P(AB)}{P(B)} = \frac{0.16}{0.51} = \frac{16}{51} \approx 0.3137.$$
+
+
+
+**Exercise 6.3:** Roll two fair, standard dice. Find the probability that:
+a) The sum of the rolled numbers equals 7 given that at least one die shows a 5.
+b) At least one die shows a 5 given that the sum of the rolled numbers equals 7.
+
+Solution for Exercise 6.3:
+• Sample space size: $n(\Omega) = 6 \times 6 = 36$.
+• Let $A$ be the event "Sum equals 7": $A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\} \implies n(A) = 6$.
+• Let $B$ be the event "At least one die shows a 5":
+  $B = \\{(5,1), (5,2), (5,3), (5,4), (5,5), (5,6), (1,5), (2,5), (3,5), (4,5), (6,5)\\} \implies n(B) = 11$.
+• Event $AB$ ("Sum is 7 and at least one 5"): $AB = \\{(2,5), (5,2)\\} \implies n(AB) = 2$.
+• a) $P(A|B) = \frac{n(AB)}{n(B)} = \frac{2}{11}$.
+• b) $P(B|A) = \frac{n(AB)}{n(A)} = \frac{2}{6} = \frac{1}{3}$.
+
+**Exercise 6.4:** Roll two fair dice. Find the probability that the sum of the rolled numbers is at least 10 given that at least one die shows a 5.
+
+Solution for Exercise 6.4:
+• Let $B$ be the event "At least one die shows a 5" $\implies n(B) = 11$.
+• Let $C$ be the event "Sum is at least 10" (sum $\ge 10$).
+• Event $CB$ (outcomes containing a 5 and summing to $\ge 10$):
+  - Sum 10: $(5,5)$;
+  - Sum 11: $(5,6)$ and $(6,5)$.
+  Thus, $CB = \\{(5,5), (5,6), (6,5)\\} \implies n(CB) = 3$.
+• Required probability: $P(C|B) = \frac{n(CB)}{n(B)} = \frac{3}{11}$.
+
+**Exercise 6.5:** An experimenter performs two sequential trials. Trial 1 has a success probability of 0.7. If trial 1 succeeds, trial 2 has a success probability of 0.9. If trial 1 fails, trial 2 has a success probability of 0.4. Find the probability that:
+a) Both trials succeed.
+b) Both trials fail.
+c) Trial 1 succeeds and trial 2 fails.
+
+Solution for Exercise 6.5:
+• Let $A_1, A_2$ denote success on trials 1 and 2 respectively.
+  Given: $P(A_1) = 0.7 \implies P(\overline{A}\_1) = 0.3$.
+  $P(A_2|A_1) = 0.9 \implies P(\overline{A}\_2|A_1) = 0.1$.
+  $P(A_2|\overline{A}\_1) = 0.4 \implies P(\overline{A}\_2|\overline{A}\_1) = 0.6$.
+• a) Both succeed: $P(A_1 A_2) = P(A_1) \cdot P(A_2|A_1) = 0.7 \cdot 0.9 = 0.63$.
+• b) Both fail: $P(\overline{A}\_1 \overline{A}\_2) = P(\overline{A}\_1) \cdot P(\overline{A}\_2|\overline{A}\_1) = 0.3 \cdot 0.6 = 0.18$.
+• c) Trial 1 succeeds, trial 2 fails: $P(A_1 \overline{A}\_2) = P(A_1) \cdot P(\overline{A}\_2|A_1) = 0.7 \cdot 0.1 = 0.07$.
+
+**Exercise 6.6:** A bag contains 6 orange candies and some yellow candies. Hà draws 1 candy at random without replacement, then draws a second candy. Given that the probability of drawing two orange candies is $\frac{1}{3}$, how many candies were initially in the bag?
+
+Solution for Exercise 6.6:
+• Let $N$ be the initial total number of candies in the bag ($N \ge 6, N \in \mathbb{N}^\*$).
+• Probability of drawing an orange candy on the first draw: $P(C_1) = \frac{6}{N}$.
+• After removing 1 orange candy, there remain $N - 1$ candies with 5 orange candies left.
+  Conditional probability of drawing an orange candy on the second draw: $P(C_2|C_1) = \frac{5}{N - 1}$.
+• By the multiplication rule, the probability of drawing two orange candies is:
+  $$P(C_1 C_2) = P(C_1) \cdot P(C_2|C_1) = \frac{6}{N} \cdot \frac{5}{N - 1} = \frac{30}{N(N - 1)}.$$
+• Setting this equal to $\frac{1}{3}$, we obtain:
+  $$\frac{30}{N(N - 1)} = \frac{1}{3} \iff N(N - 1) = 90 \iff N^2 - N - 90 = 0.$$
+• Factoring the quadratic: $(N - 10)(N + 9) = 0 \iff N = 10$ (discarding $N = -9$).
+• Thus, there were initially 10 candies in the bag (6 orange and 4 yellow).
