@@ -1,0 +1,319 @@
+---
+title: 'Lesson 12: Integrals'
+description: Theoretical system for the lesson on Integrals with illustrative examples.
+tags:
+  - grade 12
+  - Curvilinear trapezoid
+  - area of a curvilinear trapezoid
+  - Definite integral
+  - integral sign
+  - integration limits (upper and lower limits)
+  - Integrand
+  - mean value of a function
+  - expression under the integral sign
+  - Geometric interpretation of the definite integral
+grade: 12
+order: 12
+updatedDate: 2026-10-29T13:34:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Curvilinear trapezoid, area of a curvilinear trapezoid
+
+·       Definite integral, integral sign, integration limits (upper and lower limits)
+
+·       Integrand, expression under the integral sign
+
+·       Geometric interpretation of the definite integral, mean value of a function
+
+### **Knowledge and Skills:**
+
+·       Recognize the definition of the definite integral of a continuous function and understand its fundamental connection to antiderivatives.
+
+·       Understand the geometric interpretation of the definite integral as the area of a curvilinear trapezoid bounded by a non-negative function graph, the $x$-axis, and two vertical lines.
+
+·       Master and proficiently apply basic properties of definite integrals: scalar multiplication, additivity of the integral (sum, difference, and interval additivity).
+
+·       Accurately compute definite integrals of standard elementary functions (powers, trigonometric functions, exponential functions) and integrals of absolute value functions.
+
+·       Apply definite integrals to solve real-world problems (displacement and distance of variable motion, net profit variation, average velocity of blood flow in arteries, daily mean temperature).
+
+## Concept of the Definite Integral
+
+\<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_tich_phan"/>
+
+### a) Area of a Curvilinear Trapezoid
+
+Concept of a Curvilinear Trapezoid:
+A plane region bounded by the graph of a continuous function $y = f(x)$, the $x$-axis, and two vertical lines $x = a$ and $x = b$ ($a < b$), where $f(x)$ is continuous and non-negative on $[a; b]$, is called a curvilinear trapezoid.
+
+Theorem on the Area of a Curvilinear Trapezoid:
+If the function $f(x)$ is continuous and non-negative on $[a; b]$, then the area $S$ of the curvilinear trapezoid bounded by the graph $y = f(x)$, the $x$-axis, and the lines $x = a$ and $x = b$ is given by:
+$$S = F(b) - F(a)$$
+where $F(x)$ is any antiderivative of $f(x)$ on the interval $[a; b]$.
+
+**Example 1:** Determine whether the planar regions bounded by the following curves are curvilinear trapezoids:
+a) The graph of $y = x^2$, the $x$-axis, and the lines $x = 1, x = 2$.
+b) The graph of $y = x^3$, the $x$-axis, and the lines $x = 0, x = 1$.
+
+Solution for Example 1:
+• a) The function $f(x) = x^2$ is continuous and non-negative on $[1; 2]$. Therefore, the region bounded by the graph of $y = x^2$, the $x$-axis, and the lines $x = 1, x = 2$ is a curvilinear trapezoid.
+• b) The function $f(x) = x^3$ is continuous and non-negative on $[0; 1]$. Therefore, the region bounded by the graph of $y = x^3$, the $x$-axis, and the lines $x = 0, x = 1$ is a curvilinear trapezoid.
+
+**Example 2:** Find the area $S$ of the curvilinear trapezoid bounded by the graph of $y = f(x) = x^3$, the $x$-axis, and the lines $x = 1, x = 2$.
+
+Solution for Example 2:
+• An antiderivative of $f(x) = x^3$ on $[1; 2]$ is $F(x) = \frac{x^4}{4}$.
+• By the theorem on the area of a curvilinear trapezoid, we have:
+  $$S = F(2) - F(1) = \frac{2^4}{4} - \frac{1^4}{4} = 4 - \frac{1}{4} = \frac{15}{4}.$$
+
+### b) Definition and Geometric Interpretation of the Definite Integral
+
+Definition of the Definite Integral:
+Let $f(x)$ be a continuous function on $[a; b]$. If $F(x)$ is an antiderivative of $f(x)$ on $[a; b]$, then the difference $F(b) - F(a)$ is called the definite integral of $f(x)$ from $a$ to $b$, denoted by:
+$$\int\_{a}^{b} f(x) dx$$
+We denote $F(b) - F(a) = F(x)\Big|\_{a}^{b}$. Thus:
+$$\int\_{a}^{b} f(x) dx = F(x)\Big|\_{a}^{b} = F(b) - F(a)$$
+Conventions and Distinctive Properties:
+• $a$ is called the lower limit, $b$ is the upper limit, $f(x)$ is the integrand, and $f(x)dx$ is the expression under the integral sign.
+• Conventions: $\int\_{a}^{a} f(x) dx = 0$ and $\int\_{a}^{b} f(x) dx = -\int\_{b}^{a} f(x) dx$.
+• The definite integral depends solely on the integrand $f$ and the limits $a, b$, and is independent of the choice of the integration variable:
+  $$\int\_{a}^{b} f(x) dx = \int\_{a}^{b} f(t) dt = \int\_{a}^{b} f(u) du$$
+
+Geometric Interpretation of the Definite Integral:
+If $f(x)$ is continuous and non-negative on $[a; b]$, then the definite integral $\int\_{a}^{b} f(x) dx$ represents the exact area $S$ of the curvilinear trapezoid bounded by the graph $y = f(x)$, the $x$-axis, and the lines $x = a, x = b$:
+$$S = \int\_{a}^{b} f(x) dx$$
+
+**Example 3:** Evaluate the following definite integrals:
+a) $\int\_{-1}^{3} x^2 dx$;
+b) $\int\_{0}^{\frac{\pi}{6}} \cos t dt$;
+c) $\int\_{0}^{\frac{\pi}{4}} \frac{du}{\cos^2 u}$;
+d) $\int\_{1}^{2} 2^x dx$.
+
+Solution for Example 3:
+• a) $\int\_{-1}^{3} x^2 dx = \frac{x^3}{3}\Big|\_{-1}^{3} = \frac{3^3}{3} - \frac{(-1)^3}{3} = 9 - \left(-\frac{1}{3}
+ight) = \frac{28}{3}$.
+• b) $\int\_{0}^{\frac{\pi}{6}} \cos t dt = \sin t\Big|\_{0}^{\frac{\pi}{6}} = \sin\frac{\pi}{6} - \sin 0 = \frac{1}{2} - 0 = \frac{1}{2}$.
+• c) $\int\_{0}^{\frac{\pi}{4}} \frac{du}{\cos^2 u} = \tan u\Big|\_{0}^{\frac{\pi}{4}} = \tan\frac{\pi}{4} - \tan 0 = 1 - 0 = 1$.
+• d) $\int\_{1}^{2} 2^x dx = \frac{2^x}{\ln 2}\Big|\_{1}^{2} = \frac{2^2}{\ln 2} - \frac{2^1}{\ln 2} = \frac{4 - 2}{\ln 2} = \frac{2}{\ln 2}$.
+
+**Practice 1:** Evaluate the following definite integrals:
+a) $\int\_{0}^{1} e^x dx$;
+b) $\int\_{1}^{e} \frac{1}{x} dx$;
+c) $\int\_{0}^{\frac{\pi}{2}} \sin x dx$;
+d) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{3}} \frac{dx}{\sin^2 x}$.
+
+Solution for Practice 1:
+• a) $\int\_{0}^{1} e^x dx = e^x\Big|\_{0}^{1} = e^1 - e^0 = e - 1$.
+• b) $\int\_{1}^{e} \frac{1}{x} dx = \ln|x|\Big|\_{1}^{e} = \ln e - \ln 1 = 1 - 0 = 1$.
+• c) $\int\_{0}^{\frac{\pi}{2}} \sin x dx = -\cos x\Big|\_{0}^{\frac{\pi}{2}} = -\cos\frac{\pi}{2} - (-\cos 0) = 0 - (-1) = 1$.
+• d) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{3}} \frac{dx}{\sin^2 x} = -\cot x\Big|\_{\frac{\pi}{6}}^{\frac{\pi}{3}} = -\cot\frac{\pi}{3} - \left(-\cot\frac{\pi}{6}\right) = -\frac{\sqrt{3}}{3} + \sqrt{3} = \frac{2\sqrt{3}}{3}$.
+
+**Example 4:** Using the geometric interpretation of the definite integral, compute:
+a) $\int\_{0}^{1} (x + 1) dx$;
+b) $\int\_{-1}^{1} \sqrt{1 - x^2} dx$.
+
+Solution for Example 4:
+• a) The function $y = x + 1$ is continuous and positive on $[0; 1]$.
+  The integral represents the area of a right trapezoid bounded by $y = x + 1$, the $x$-axis, and the lines $x = 0, x = 1$.
+  The trapezoid has lower base $f(0) = 1$, upper base $f(1) = 2$, and height $h = 1 - 0 = 1$.
+  Therefore: $\int\_{0}^{1} (x + 1) dx = S = \frac{1 + 2}{2} \cdot 1 = \frac{3}{2}$.
+• b) The curve $y = \sqrt{1 - x^2}$ on $[-1; 1]$ forms the upper half of a circle centered at $O(0; 0)$ with radius $R = 1$.
+  The integral $\int\_{-1}^{1} \sqrt{1 - x^2} dx$ equals the area of this semi-circle.
+  Thus: $\int\_{-1}^{1} \sqrt{1 - x^2} dx = \frac{1}{2}\pi R^2 = \frac{1}{2}\pi \cdot 1^2 = \frac{\pi}{2}$.
+
+**Practice 2:** Using the geometric interpretation of the definite integral, compute:
+a) $\int\_{1}^{3} (2x + 1) dx$;
+b) $\int\_{-2}^{2} \sqrt{4 - x^2} dx$.
+
+Solution for Practice 2:
+• a) The graph of $y = 2x + 1$ on $[1; 3]$ forms a non-negative line segment.
+  The corresponding region is a right trapezoid with bases $y(1) = 3, y(3) = 7$ and height $h = 3 - 1 = 2$.
+  Applying the trapezoidal area formula:
+  $$\int\_{1}^{3} (2x + 1) dx = S = \frac{3 + 7}{2} \cdot 2 = 10.$$
+• b) The function $y = \sqrt{4 - x^2}$ defines the upper semi-circle centered at $O(0; 0)$ with radius $R = \sqrt{4} = 2$.
+  The integral equals the area of this semi-circle of radius 2:
+  $$\int\_{-2}^{2} \sqrt{4 - x^2} dx = \frac{1}{2}\pi R^2 = \frac{1}{2}\pi (2^2) = 2\pi.$$
+
+**Application 1 (Car Braking Distance - Introductory Problem):** A car is traveling at $20\text{ m/s}$ when the driver applies the brakes. Following braking, the car decelerates according to velocity $v(t) = -40t + 20\text{ (m/s)}$, where $t$ is measured in seconds. How far does the car travel from the moment the brakes are applied until it comes to a complete stop?
+
+Solution for Application 1:
+• The car comes to a complete stop when its velocity reaches zero: $v(t) = 0 \iff -40t + 20 = 0 \iff t = \frac{20}{40} = 0.5\text{ (seconds)}$.
+• The distance traveled by the car from braking ($t = 0$) until coming to a stop ($t = 0.5\text{ s}$) is:
+  $$S = \int\_{0}^{0.5} v(t) dt = \int\_{0}^{0.5} (-40t + 20) dt = \left(-20t^2 + 20t\right)\Big|\_{0}^{0.5} = -20(0.5)^2 + 20(0.5) - 0 = -5 + 10 = 5\text{ (m)}.$$
+• Thus, the car travels an additional $5\text{ meters}$ before stopping completely.
+
+## Properties of Definite Integrals
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_tich_phan"/>
+
+### a) Basic Properties
+
+Let $f(x)$ and $g(x)$ be continuous functions on $[a; b]$, and let $k$ be a real constant. Then:
+1\. Scalar multiplication: $\int\_{a}^{b} k f(x) dx = k \int\_{a}^{b} f(x) dx$
+2\. Additivity (Sum): $\int\_{a}^{b} [f(x) + g(x)] dx = \int\_{a}^{b} f(x) dx + \int\_{a}^{b} g(x) dx$
+3\. Additivity (Difference): $\int\_{a}^{b} [f(x) - g(x)] dx = \int\_{a}^{b} f(x) dx - \int\_{a}^{b} g(x) dx$
+4\. Interval additivity (Chasles' relation): For any $c$ (with $c \in (a; b)$ or any arbitrary real numbers $a, b, c$ within the domain):
+$$\int\_{a}^{b} f(x) dx = \int\_{a}^{c} f(x) dx + \int\_{c}^{b} f(x) dx$$
+
+### b) Illustrative Examples and Practice on Definite Integral Properties
+
+**Example 5:** Evaluate:
+a) $\int\_{1}^{4} (x^3 + 3\sqrt{x}) dx$;
+b) $\int\_{0}^{\frac{\pi}{2}} (e^x - 2\cos x) dx$;
+c) $\int\_{1}^{4} \left(2^x - \frac{3}{x^2}\right) dx$.
+
+Solution for Example 5:
+• a) $\int\_{1}^{4} (x^3 + 3\sqrt{x}) dx = \int\_{1}^{4} x^3 dx + 3\int\_{1}^{4} x^{1/2} dx = \frac{x^4}{4}\Big|\_{1}^{4} + 3 \cdot \frac{2}{3}x^{3/2}\Big|\_{1}^{4}$
+  $$= \frac{1}{4}(4^4 - 1^4) + 2(4^{3/2} - 1^{3/2}) = \frac{255}{4} + 2(8 - 1) = \frac{255}{4} + 14 = \frac{311}{4}.$$
+• b) $\int\_{0}^{\frac{\pi}{2}} (e^x - 2\cos x) dx = \int\_{0}^{\frac{\pi}{2}} e^x dx - 2\int\_{0}^{\frac{\pi}{2}} \cos x dx = e^x\Big|\_{0}^{\frac{\pi}{2}} - 2\sin x\Big|\_{0}^{\frac{\pi}{2}}$
+  $$= \left(e^{\frac{\pi}{2}} - e^0\right) - 2(\sin\frac{\pi}{2} - \sin 0) = e^{\frac{\pi}{2}} - 1 - 2(1) = e^{\frac{\pi}{2}} - 3.$$
+• c) $\int\_{1}^{4} \left(2^x - \frac{3}{x^2}\right) dx = \int\_{1}^{4} 2^x dx - 3\int\_{1}^{4} x^{-2} dx = \frac{2^x}{\ln 2}\Big|\_{1}^{4} + \frac{3}{x}\Big|\_{1}^{4}$
+  $$= \frac{2^4 - 2^1}{\ln 2} + 3\left(\frac{1}{4} - 1\right) = \frac{14}{\ln 2} - \frac{9}{4}.$$
+
+
+
+**Practice 3:** Evaluate the following definite integrals:
+a) $\int\_{0}^{2\pi} (2x + \cos x) dx$;
+b) $\int\_{1}^{2} \left(3^x - \frac{3}{x}\right) dx$;
+c) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{4}} \left(\frac{1}{\cos^2 x} - \frac{1}{\sin^2 x}\right) dx$.
+
+Solution for Practice 3:
+• a) $\int\_{0}^{2\pi} (2x + \cos x) dx = (x^2 + \sin x)\Big|\_{0}^{2\pi} = \left[(2\pi)^2 + \sin(2\pi)\right] - (0 + \sin 0) = 4\pi^2$.
+• b) $\int\_{1}^{2} \left(3^x - \frac{3}{x}\right) dx = \left(\frac{3^x}{\ln 3} - 3\ln|x|\right)\Big|\_{1}^{2} = \left(\frac{9}{\ln 3} - 3\ln 2\right) - \left(\frac{3}{\ln 3} - 0\right) = \frac{6}{\ln 3} - 3\ln 2$.
+• c) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{4}} \left(\frac{1}{\cos^2 x} - \frac{1}{\sin^2 x}\right) dx = (\tan x + \cot x)\Big|\_{\frac{\pi}{6}}^{\frac{\pi}{4}}$
+  $$= \left(\tan\frac{\pi}{4} + \cot\frac{\pi}{4}\right) - \left(\tan\frac{\pi}{6} + \cot\frac{\pi}{6}\right) = (1 + 1) - \left(\frac{\sqrt{3}}{3} + \sqrt{3}\right) = 2 - \frac{4\sqrt{3}}{3}.$$
+
+
+
+**Example 6:** Evaluate the definite integral: $\int\_{0}^{3} |x - 2| dx$.
+
+Solution for Example 6:
+• Determine the sign of $x - 2$ on $[0; 3]$: $x - 2 \le 0$ on $[0; 2]$ and $x - 2 \ge 0$ on $[2; 3]$.
+• Applying the interval additivity property with splitting point $c = 2$:
+  $$\int\_{0}^{3} |x - 2| dx = \int\_{0}^{2} |x - 2| dx + \int\_{2}^{3} |x - 2| dx = \int\_{0}^{2} (2 - x) dx + \int\_{2}^{3} (x - 2) dx$$
+  $$= \left(2x - \frac{x^2}{2}\right)\Big|\_{0}^{2} + \left(\frac{x^2}{2} - 2x\right)\Big|\_{2}^{3} = (4 - 2) + \left[\left(\frac{9}{2} - 6\right) - (2 - 4)\right] = 2 + \left(-\frac{3}{2} + 2\right) = 2 + \frac{1}{2} = \frac{5}{2}.$$
+
+**Practice 4:** Evaluate the definite integral: $\int\_{0}^{2} |2x - 3| dx$.
+
+Solution for Practice 4:
+• Root of the linear binomial: $2x - 3 = 0 \iff x = \frac{3}{2} = 1.5 \in [0; 2]$.
+• On $[0; 1.5]$, $2x - 3 \le 0 \implies |2x - 3| = 3 - 2x$.
+• On $[1.5; 2]$, $2x - 3 \ge 0 \implies |2x - 3| = 2x - 3$.
+• Splitting the integral at $x = 1.5$:
+  $$\int\_{0}^{2} |2x - 3| dx = \int\_{0}^{1.5} (3 - 2x) dx + \int\_{1.5}^{2} (2x - 3) dx$$
+  $$= \left(3x - x^2\right)\Big|\_{0}^{1.5} + \left(x^2 - 3x\right)\Big|\_{1.5}^{2} = \left(3(1.5) - 1.5^2\right) + \left[(4 - 6) - (1.5^2 - 3(1.5))
+ight]$$
+  $$= (4.5 - 2.25) + [-2 - (2.25 - 4.5)] = 2.25 + (-2 + 2.25) = 2.25 + 0.25 = 2.5 = \frac{5}{2}.$$
+
+
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application 2 (Daily Mean Temperature):** The mean value of a continuous function $f(x)$ on $[a; b]$ is defined as $\frac{1}{b - a}\int\_{a}^{b} f(x) dx$. Temperature ($^\circ\text{C}$) at time $t$ (hours) from 6:00 AM to 12:00 PM in a locality is modeled by $T(t) = 20 + 1.5(t - 6)$ for $6 \le t \le 12$. Find the mean temperature during this time interval.
+
+Solution for Application 2:
+• The time interval from 6 AM to 12 PM corresponds to $[6; 12]$, with duration $b - a = 12 - 6 = 6$ hours.
+• The mean temperature is:
+  $$\overline{T} = \frac{1}{12 - 6}\int\_{6}^{12} [20 + 1.5(t - 6)] dt = \frac{1}{6}\int\_{6}^{12} (1.5t + 11) dt$$
+  $$= \frac{1}{6}\left(0.75t^2 + 11t\right)\Big|\_{6}^{12} = \frac{1}{6}\left[(0.75 \cdot 144 + 11 \cdot 12) - (0.75 \cdot 36 + 11 \cdot 6)\right]$$
+  $$= \frac{1}{6}\left[(108 + 132) - (27 + 66)\right] = \frac{1}{6}(240 - 93) = \frac{147}{6} = 24.5^\circ\text{C}.$$
+• Thus, the mean temperature from 6:00 AM to 12:00 PM is $24.5^\circ\text{C}$.
+
+**Exercise 4.11 (Rectilinear Motion - Displacement and Total Distance):** A particle moves along a straight line with velocity at time $t$ seconds given by $v(t) = t^2 - t - 6\text{ (m/s)}$.
+a) Find the displacement of the particle over time interval $1 \le t \le 4$, i.e., compute $\int\_{1}^{4} v(t) dt$.
+b) Find the total distance traveled by the particle over time interval $1 \le t \le 4$, i.e., compute $\int\_{1}^{4} |v(t)| dt$.
+
+Solution for Exercise 4.11:
+• a) The displacement of the particle is:
+  $$\Delta s = \int\_{1}^{4} (t^2 - t - 6) dt = \left(\frac{t^3}{3} - \frac{t^2}{2} - 6t\right)\Big|\_{1}^{4}$$
+  At $t = 4$: $\frac{64}{3} - 8 - 24 = \frac{64}{3} - 32 = -\frac{32}{3}$.
+  At $t = 1$: $\frac{1}{3} - \frac{1}{2} - 6 = -\frac{37}{6}$.
+  $$\Delta s = -\frac{32}{3} - \left(-\frac{37}{6}\right) = -\frac{64}{6} + \frac{37}{6} = -\frac{27}{6} = -4.5\text{ (m)}.$$
+  (Negative displacement indicates the particle is located $4.5\text{ m}$ behind its starting position).
+• b) Examining the sign of $v(t) = t^2 - t - 6 = (t - 3)(t + 2)$.
+  On $[1; 3]$: $v(t) \le 0 \implies |v(t)| = -t^2 + t + 6$.
+  On $[3; 4]$: $v(t) \ge 0 \implies |v(t)| = t^2 - t - 6$.
+  The total actual distance traveled is:
+  $$S = \int\_{1}^{4} |v(t)| dt = \int\_{1}^{3} (-t^2 + t + 6) dt + \int\_{3}^{4} (t^2 - t - 6) dt$$
+  $$\int\_{1}^{3} (-t^2 + t + 6) dt = \left(-\frac{t^3}{3} + \frac{t^2}{2} + 6t\right)\Big|\_{1}^{3} = \left(-9 + \frac{9}{2} + 18\right) - \left(-\frac{1}{3} + \frac{1}{2} + 6\right) = \frac{27}{2} - \frac{37}{6} = \frac{44}{6} = \frac{22}{3}.$$
+  $$\int\_{3}^{4} (t^2 - t - 6) dt = \left(\frac{t^3}{3} - \frac{t^2}{2} - 6t\right)\Big|\_{3}^{4} = -\frac{32}{3} - \left(-\frac{27}{2}\right) = -\frac{32}{3} + \frac{27}{2} = \frac{17}{6}.$$
+  $$S = \frac{44}{6} + \frac{17}{6} = \frac{61}{6} \approx 10.17\text{ (m)}.$$
+  Thus, the total distance traveled is $\frac{61}{6}\text{ m} \approx 10.17\text{ m}$.
+
+**Exercise 4.12 (Profit Variation from Marginal Profit):** The marginal profit (in million VND) of a product is modeled by $P'(x) = -0.0005x + 12.2$, where $x$ is the sales volume.
+a) Find the change in profit when sales increase from 100 to 101 units.
+b) Find the change in profit when sales increase from 100 to 110 units.
+
+Solution for Exercise 4.12:
+• The change in profit when sales increase from $a$ to $b$ is $\Delta P = P(b) - P(a) = \int\_{a}^{b} P'(x) dx$.
+• a) When sales increase from 100 to 101 units:
+  $$\Delta P_1 = \int\_{100}^{101} (-0.0005x + 12.2) dx = \left(-0.00025x^2 + 12.2x\right)\Big|\_{100}^{101}$$
+  $$= -0.00025(101^2 - 100^2) + 12.2(101 - 100) = -0.00025(201) + 12.2 = -0.05025 + 12.2 = 12.14975\text{ (million VND)}.$$
+• b) When sales increase from 100 to 110 units:
+  $$\Delta P_2 = \int\_{100}^{110} (-0.0005x + 12.2) dx = \left(-0.00025x^2 + 12.2x\right)\Big|\_{100}^{110}$$
+  $$= -0.00025(110^2 - 100^2) + 12.2(110 - 100) = -0.00025(2\\,100) + 122 = -0.525 + 122 = 121.475\text{ (million VND)}.$$
+
+
+
+**Exercise 4.13 (Blood Velocity in an Artery):** The blood velocity $v$ at distance $r$ from the central axis of a cylindrical artery of radius $R$ is modeled by $v(r) = k(R^2 - r^2)$ ($0 \le r \le R$, $k$ is a positive constant). Find the mean velocity of blood flow across the cross-section of the artery and compare it with the maximum velocity.
+
+Solution for Exercise 4.13:
+• The mean blood velocity across radius $r$ on interval $[0; R]$ is:
+  $$\overline{v} = \frac{1}{R - 0}\int\_{0}^{R} k(R^2 - r^2) dr = \frac{k}{R}\left(R^2 r - \frac{r^3}{3}\right)\Big|\_{0}^{R} = \frac{k}{R}\left(R^3 - \frac{R^3}{3}\right) = \frac{k}{R} \cdot \frac{2}{3}R^3 = \frac{2}{3}kR^2.$$
+• The maximum blood velocity occurs at the central axis ($r = 0$):
+  $$v\_{\max} = v(0) = k(R^2 - 0^2) = kR^2.$$
+• Comparison: We have $\overline{v} = \frac{2}{3}v\_{\max}$. Thus, the mean velocity of blood flow equals $\frac{2}{3}$ of the maximum velocity at the center of the artery.
+
+### b) Detailed Section Exercises
+
+**Exercise 4.8:** Using the geometric interpretation of the definite integral, compute:
+a) $\int\_{1}^{2} (2x + 1) dx$;
+b) $\int\_{-3}^{3} \sqrt{9 - x^2} dx$.
+
+Solution for Exercise 4.8:
+• a) The function $y = 2x + 1$ on $[1; 2]$ forms a right trapezoid with bases $y(1) = 3, y(2) = 5$ and height $h = 2 - 1 = 1$.
+  $$\int\_{1}^{2} (2x + 1) dx = S = \frac{3 + 5}{2} \cdot 1 = 4.$$
+• b) The curve $y = \sqrt{9 - x^2}$ on $[-3; 3]$ is the upper half of a circle centered at $O$ with radius $R = 3$.
+  The integral equals the area of this semi-circle:
+  $$\int\_{-3}^{3} \sqrt{9 - x^2} dx = \frac{1}{2}\pi R^2 = \frac{1}{2}\pi (3^2) = \frac{9\pi}{2}.$$
+
+
+
+**Exercise 4.9:** Given $\int\_{0}^{3} f(x) dx = 5$ and $\int\_{0}^{3} g(x) dx = 2$. Evaluate:
+a) $\int\_{0}^{3} [f(x) + g(x)] dx$;
+b) $\int\_{0}^{3} [f(x) - g(x)] dx$;
+c) $\int\_{0}^{3} 3f(x) dx$;
+d) $\int\_{0}^{3} [2f(x) - 3g(x)] dx$.
+
+Solution for Exercise 4.9:
+• a) $\int\_{0}^{3} [f(x) + g(x)] dx = \int\_{0}^{3} f(x) dx + \int\_{0}^{3} g(x) dx = 5 + 2 = 7$.
+• b) $\int\_{0}^{3} [f(x) - g(x)] dx = \int\_{0}^{3} f(x) dx - \int\_{0}^{3} g(x) dx = 5 - 2 = 3$.
+• c) $\int\_{0}^{3} 3f(x) dx = 3\int\_{0}^{3} f(x) dx = 3(5) = 15$.
+• d) $\int\_{0}^{3} [2f(x) - 3g(x)] dx = 2\int\_{0}^{3} f(x) dx - 3\int\_{0}^{3} g(x) dx = 2(5) - 3(2) = 10 - 6 = 4$.
+
+**Exercise 4.10:** Evaluate the following definite integrals:
+a) $\int\_{0}^{1} (3x - 1)^2 dx$;
+b) $\int\_{0}^{\frac{\pi}{2}} (1 + \sin x) dx$;
+c) $\int\_{0}^{1} (e^{2x} + 3x^2) dx$;
+d) $\int\_{-1}^{2} |2x + 1| dx$.
+
+Solution for Exercise 4.10:
+• a) Expanding the integrand: $(3x - 1)^2 = 9x^2 - 6x + 1$.
+  $$\int\_{0}^{1} (3x - 1)^2 dx = \left(3x^3 - 3x^2 + x\right)\Big|\_{0}^{1} = (3 - 3 + 1) - 0 = 1.$$
+• b) $\int\_{0}^{\frac{\pi}{2}} (1 + \sin x) dx = (x - \cos x)\Big|\_{0}^{\frac{\pi}{2}} = \left(\frac{\pi}{2} - \cos\frac{\pi}{2}\right) - (0 - \cos 0) = \left(\frac{\pi}{2} - 0\right) - (-1) = \frac{\pi}{2} + 1$.
+• c) $\int\_{0}^{1} (e^{2x} + 3x^2) dx = \left(\frac{1}{2}e^{2x} + x^3\right)\Big|\_{0}^{1} = \left(\frac{1}{2}e^2 + 1\right) - \left(\frac{1}{2}e^0 + 0\right) = \frac{1}{2}e^2 + 1 - \frac{1}{2} = \frac{e^2 + 1}{2}$.
+• d) Analyzing the sign of $2x + 1$: $2x + 1 = 0 \iff x = -\frac{1}{2} \in [-1; 2]$.
+  Splitting the integral into $[-1; -0.5]$ and $[-0.5; 2]$:
+  $$\int\_{-1}^{2} |2x + 1| dx = \int\_{-1}^{-1/2} (-2x - 1) dx + \int\_{-1/2}^{2} (2x + 1) dx$$
+  $$= \left(-x^2 - x\right)\Big|\_{-1}^{-1/2} + \left(x^2 + x\right)\Big|\_{-1/2}^{2}$$
+  $$= \left[\left(-\frac{1}{4} + \frac{1}{2}\right) - (-1 + 1)\right] + \left[(4 + 2) - \left(\frac{1}{4} - \frac{1}{2}\right)\right]$$
+  $$= \frac{1}{4} + \left(6 + \frac{1}{4}\right) = \frac{1}{4} + 6.25 = 6.5 = \frac{13}{2}.$$

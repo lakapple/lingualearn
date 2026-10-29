@@ -1,0 +1,307 @@
+---
+title: 'Bài 12: Tích phân'
+description: Hệ thống lý thuyết bài Tích phân cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Hình thang cong
+  - diện tích hình thang cong
+  - Tích phân
+  - dấu tích phân
+  - cận tích phân (cận trên, cận dưới)
+  - Biểu thức dưới dấu tích phân
+  - giá trị trung bình của hàm số
+  - hàm số dưới dấu tích phân
+  - Ý nghĩa hình học của tích phân
+grade: 12
+order: 12
+updatedDate: 2026-10-29T13:34:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Hình thang cong, diện tích hình thang cong
+
+·       Tích phân, dấu tích phân, cận tích phân (cận trên, cận dưới)
+
+·       Biểu thức dưới dấu tích phân, hàm số dưới dấu tích phân
+
+·       Ý nghĩa hình học của tích phân, giá trị trung bình của hàm số
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết định nghĩa tích phân của một hàm số liên tục và hiểu rõ mối liên hệ giữa tích phân với nguyên hàm.
+
+·       Hiểu ý nghĩa hình học của tích phân như là diện tích của hình thang cong giới hạn bởi đồ thị hàm số không âm, trục hoành và hai đường thẳng thẳng đứng.
+
+·       Nắm vững và vận dụng thành thạo các tính chất cơ bản của tích phân: nhân với hằng số, tích phân của tổng và hiệu, tính chất chèn cận.
+
+·       Tính thành thạo tích phân của các hàm số sơ cấp cơ bản (luỹ thừa, lượng giác, mũ) và tích phân của hàm số chứa dấu giá trị tuyệt đối.
+
+·       Vận dụng tích phân để giải quyết các bài toán liên quan đến thực tiễn (quãng đường và độ dịch chuyển của chuyển động biến đổi, sự thay đổi của lợi nhuận, vận tốc trung bình của dòng máu trong động mạch, nhiệt độ trung bình trong ngày).
+
+## Khái niệm tích phân
+
+\<Youtube url="https://www.youtube.com/watch?v=example_khai_niem_tich_phan"/>
+
+### a) Diện tích hình thang cong
+
+Khái niệm hình thang cong:
+Hình phẳng giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành và hai đường thẳng $x = a, x = b$ ($a < b$), trong đó $f(x)$ là hàm số liên tục và không âm trên đoạn $[a; b]$, được gọi là một hình thang cong.
+
+Định lí về diện tích hình thang cong:
+Nếu hàm số $f(x)$ liên tục và không âm trên đoạn $[a; b]$, thì diện tích $S$ của hình thang cong giới hạn bởi đồ thị $y = f(x)$, trục hoành và hai đường thẳng $x = a, x = b$ được tính theo công thức:
+$$S = F(b) - F(a)$$
+trong đó $F(x)$ là một nguyên hàm tuỳ ý của hàm số $f(x)$ trên đoạn $[a; b]$.
+
+**Ví dụ 1:** Hình phẳng giới hạn bởi các đường sau có phải là hình thang cong không?
+a) Đồ thị hàm số $y = x^2$, trục hoành và hai đường thẳng $x = 1, x = 2$.
+b) Đồ thị hàm số $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 1$.
+
+Lời giải Ví dụ 1:
+• a) Hàm số $f(x) = x^2$ liên tục và không âm trên đoạn $[1; 2]$. Do đó hình phẳng giới hạn bởi đồ thị $y = x^2$, trục hoành và hai đường thẳng $x = 1, x = 2$ là một hình thang cong.
+• b) Hàm số $f(x) = x^3$ liên tục và không âm trên đoạn $[0; 1]$. Do đó hình phẳng giới hạn bởi đồ thị $y = x^3$, trục hoành và hai đường thẳng $x = 0, x = 1$ là một hình thang cong.
+
+**Ví dụ 2:** Tính diện tích $S$ của hình thang cong giới hạn bởi đồ thị hàm số $y = f(x) = x^3$, trục hoành và hai đường thẳng $x = 1, x = 2$.
+
+Lời giải Ví dụ 2:
+• Một nguyên hàm của hàm số $f(x) = x^3$ trên đoạn $[1; 2]$ là $F(x) = \frac{x^4}{4}$.
+• Theo định lí diện tích hình thang cong, ta có:
+  $$S = F(2) - F(1) = \frac{2^4}{4} - \frac{1^4}{4} = 4 - \frac{1}{4} = \frac{15}{4}.$$
+
+### b) Định nghĩa và ý nghĩa hình học của tích phân
+
+Định nghĩa tích phân:
+Cho hàm số $f(x)$ liên tục trên đoạn $[a; b]$. Nếu $F(x)$ là một nguyên hàm của $f(x)$ trên $[a; b]$ thì hiệu số $F(b) - F(a)$ được gọi là tích phân từ $a$ đến $b$ của hàm số $f(x)$, kí hiệu là:
+$$\int\_{a}^{b} f(x) dx$$
+Ta kí hiệu: $F(b) - F(a) = F(x)\Big|\_{a}^{b}$. Khi đó:
+$$\int\_{a}^{b} f(x) dx = F(x)\Big|\_{a}^{b} = F(b) - F(a)$$
+Các quy ước và tính chất đặc trưng:
+• $a$ được gọi là cận dưới, $b$ được gọi là cận trên, $f(x)$ là hàm số dưới dấu tích phân, $f(x)dx$ là biểu thức dưới dấu tích phân.
+• Quy ước: $\int\_{a}^{a} f(x) dx = 0$ và $\int\_{a}^{b} f(x) dx = -\int\_{b}^{a} f(x) dx$.
+• Tích phân chỉ phụ thuộc vào hàm số $f$ và hai cận $a, b$, không phụ thuộc vào kí hiệu biến số:
+  $$\int\_{a}^{b} f(x) dx = \int\_{a}^{b} f(t) dt = \int\_{a}^{b} f(u) du$$
+
+Ý nghĩa hình học của tích phân:
+Nếu hàm số $f(x)$ liên tục và không âm trên đoạn $[a; b]$, thì tích phân $\int\_{a}^{b} f(x) dx$ chính là diện tích $S$ của hình thang cong giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành và hai đường thẳng $x = a, x = b$:
+$$S = \int\_{a}^{b} f(x) dx$$
+
+**Ví dụ 3:** Tính các tích phân sau:
+a) $\int\_{-1}^{3} x^2 dx$;
+b) $\int\_{0}^{\frac{\pi}{6}} \cos t dt$;
+c) $\int\_{0}^{\frac{\pi}{4}} \frac{du}{\cos^2 u}$;
+d) $\int\_{1}^{2} 2^x dx$.
+
+Lời giải Ví dụ 3:
+• a) $\int\_{-1}^{3} x^2 dx = \frac{x^3}{3}\Big|\_{-1}^{3} = \frac{3^3}{3} - \frac{(-1)^3}{3} = 9 - \left(-\frac{1}{3}\right) = \frac{28}{3}$.
+• b) $\int\_{0}^{\frac{\pi}{6}} \cos t dt = \sin t\Big|\_{0}^{\frac{\pi}{6}} = \sin\frac{\pi}{6} - \sin 0 = \frac{1}{2} - 0 = \frac{1}{2}$.
+• c) $\int\_{0}^{\frac{\pi}{4}} \frac{du}{\cos^2 u} = \tan u\Big|\_{0}^{\frac{\pi}{4}} = \tan\frac{\pi}{4} - \tan 0 = 1 - 0 = 1$.
+• d) $\int\_{1}^{2} 2^x dx = \frac{2^x}{\ln 2}\Big|\_{1}^{2} = \frac{2^2}{\ln 2} - \frac{2^1}{\ln 2} = \frac{4 - 2}{\ln 2} = \frac{2}{\ln 2}$.
+
+**Luyện tập 1:** Tính các tích phân sau:
+a) $\int\_{0}^{1} e^x dx$;
+b) $\int\_{1}^{e} \frac{1}{x} dx$;
+c) $\int\_{0}^{\frac{\pi}{2}} \sin x dx$;
+d) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{3}} \frac{dx}{\sin^2 x}$.
+
+Lời giải Luyện tập 1:
+• a) $\int\_{0}^{1} e^x dx = e^x\Big|\_{0}^{1} = e^1 - e^0 = e - 1$.
+• b) $\int\_{1}^{e} \frac{1}{x} dx = \ln|x|\Big|\_{1}^{e} = \ln e - \ln 1 = 1 - 0 = 1$.
+• c) $\int\_{0}^{\frac{\pi}{2}} \sin x dx = -\cos x\Big|\_{0}^{\frac{\pi}{2}} = -\cos\frac{\pi}{2} - (-\cos 0) = 0 - (-1) = 1$.
+• d) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{3}} \frac{dx}{\sin^2 x} = -\cot x\Big|\_{\frac{\pi}{6}}^{\frac{\pi}{3}} = -\cot\frac{\pi}{3} - \left(-\cot\frac{\pi}{6}\right) = -\frac{\sqrt{3}}{3} + \sqrt{3} = \frac{2\sqrt{3}}{3}$.
+
+**Ví dụ 4:** Sử dụng ý nghĩa hình học của tích phân, tính:
+a) $\int\_{0}^{1} (x + 1) dx$;
+b) $\int\_{-1}^{1} \sqrt{1 - x^2} dx$.
+
+Lời giải Ví dụ 4:
+• a) Hàm số $y = x + 1$ liên tục và dương trên đoạn $[0; 1]$.
+  Tích phân cần tính là diện tích hình thang vuông giới hạn bởi $y = x + 1$, trục hoành và hai đường thẳng $x = 0, x = 1$.
+  Hình thang có đáy nhỏ là $f(0) = 1$, đáy lớn là $f(1) = 2$ và chiều cao $h = 1 - 0 = 1$.
+  Do đó: $\int\_{0}^{1} (x + 1) dx = S = \frac{1 + 2}{2} \cdot 1 = \frac{3}{2}$.
+• b) Đường cong $y = \sqrt{1 - x^2}$ trên đoạn $[-1; 1]$ là nửa phía trên trục hoành của đường tròn tâm $O(0; 0)$ bán kính $R = 1$.
+  Tích phân $\int\_{-1}^{1} \sqrt{1 - x^2} dx$ chính là diện tích nửa hình tròn bán kính $R = 1$.
+  Vậy: $\int\_{-1}^{1} \sqrt{1 - x^2} dx = \frac{1}{2}\pi R^2 = \frac{1}{2}\pi \cdot 1^2 = \frac{\pi}{2}$.
+
+**Luyện tập 2:** Sử dụng ý nghĩa hình học của tích phân, tính:
+a) $\int\_{1}^{3} (2x + 1) dx$;
+b) $\int\_{-2}^{2} \sqrt{4 - x^2} dx$.
+
+Lời giải Luyện tập 2:
+• a) Đồ thị hàm số $y = 2x + 1$ trên $[1; 3]$ là đoạn thẳng không âm.
+  Hình phẳng tương ứng là hình thang vuông với đáy nhỏ $y(1) = 3$, đáy lớn $y(3) = 7$ và chiều cao $h = 3 - 1 = 2$.
+  Áp dụng công thức diện tích hình thang:
+  $$\int\_{1}^{3} (2x + 1) dx = S = \frac{3 + 7}{2} \cdot 2 = 10.$$
+• b) Hàm số $y = \sqrt{4 - x^2}$ xác định nửa đường tròn tâm $O(0; 0)$ bán kính $R = \sqrt{4} = 2$ nằm phía trên trục hoành.
+  Tích phân là diện tích của nửa hình tròn bán kính 2:
+  $$\int\_{-2}^{2} \sqrt{4 - x^2} dx = \frac{1}{2}\pi R^2 = \frac{1}{2}\pi (2^2) = 2\pi.$$
+
+**Vận dụng 1 (Quãng đường hãm phanh của ô tô - Tình huống mở đầu):** Một ô tô đang chạy với vận tốc $20\text{ m/s}$ thì người lái đạp phanh. Sau khi đạp phanh, ô tô chuyển động chậm dần đều với vận tốc $v(t) = -40t + 20\text{ (m/s)}$, trong đó $t$ tính bằng giây. Hỏi từ lúc đạp phanh đến khi dừng hẳn, ô tô còn di chuyển được bao nhiêu mét?
+
+Lời giải Vận dụng 1:
+• Ô tô dừng hẳn khi vận tốc triệt tiêu: $v(t) = 0 \iff -40t + 20 = 0 \iff t = \frac{20}{40} = 0{,}5\text{ (giây)}$.
+• Quãng đường ô tô di chuyển từ lúc đạp phanh ($t = 0$) đến khi dừng hẳn ($t = 0{,}5\text{ s}$) là:
+  $$S = \int\_{0}^{0{,}5} v(t) dt = \int\_{0}^{0{,}5} (-40t + 20) dt = \left(-20t^2 + 20t\right)\Big|\_{0}^{0{,}5} = -20(0{,}5)^2 + 20(0{,}5) - 0 = -5 + 10 = 5\text{ (m)}.$$
+• Vậy từ lúc đạp phanh đến khi dừng hẳn, ô tô còn di chuyển thêm $5\text{ m}$.
+
+## Tính chất của tích phân
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tinh_chat_tich_phan"/>
+
+### a) Các tính chất cơ bản
+
+Cho $f(x)$ và $g(x)$ là các hàm số liên tục trên đoạn $[a; b]$, $k$ là một hằng số thực. Khi đó:
+1\. Nhân với hằng số: $\int\_{a}^{b} k f(x) dx = k \int\_{a}^{b} f(x) dx$
+2\. Tích phân của tổng: $\int\_{a}^{b} [f(x) + g(x)] dx = \int\_{a}^{b} f(x) dx + \int\_{a}^{b} g(x) dx$
+3\. Tích phân của hiệu: $\int\_{a}^{b} [f(x) - g(x)] dx = \int\_{a}^{b} f(x) dx - \int\_{a}^{b} g(x) dx$
+4\. Tính chất chèn cận: Với $c \in (a; b)$ (hoặc $a, b, c$ tuỳ ý thuộc tập xác định), ta có:
+$$\int\_{a}^{b} f(x) dx = \int\_{a}^{c} f(x) dx + \int\_{c}^{b} f(x) dx$$
+
+### b) Ví dụ và luyện tập tính chất tích phân
+
+**Ví dụ 5:** Tính:
+a) $\int\_{1}^{4} (x^3 + 3\sqrt{x}) dx$;
+b) $\int\_{0}^{\frac{\pi}{2}} (e^x - 2\cos x) dx$;
+c) $\int\_{1}^{4} \left(2^x - \frac{3}{x^2}\right) dx$.
+
+Lời giải Ví dụ 5:
+• a) $\int\_{1}^{4} (x^3 + 3\sqrt{x}) dx = \int\_{1}^{4} x^3 dx + 3\int\_{1}^{4} x^{1/2} dx = \frac{x^4}{4}\Big|\_{1}^{4} + 3 \cdot \frac{2}{3}x^{3/2}\Big|\_{1}^{4}$
+  $$= \frac{1}{4}(4^4 - 1^4) + 2(4^{3/2} - 1^{3/2}) = \frac{255}{4} + 2(8 - 1) = \frac{255}{4} + 14 = \frac{311}{4}.$$
+• b) $\int\_{0}^{\frac{\pi}{2}} (e^x - 2\cos x) dx = \int\_{0}^{\frac{\pi}{2}} e^x dx - 2\int\_{0}^{\frac{\pi}{2}} \cos x dx = e^x\Big|\_{0}^{\frac{\pi}{2}} - 2\sin x\Big|\_{0}^{\frac{\pi}{2}}$
+  $$= \left(e^{\frac{\pi}{2}} - e^0\right) - 2(\sin\frac{\pi}{2} - \sin 0) = e^{\frac{\pi}{2}} - 1 - 2(1) = e^{\frac{\pi}{2}} - 3.$$
+• c) $\int\_{1}^{4} \left(2^x - \frac{3}{x^2}\right) dx = \int\_{1}^{4} 2^x dx - 3\int\_{1}^{4} x^{-2} dx = \frac{2^x}{\ln 2}\Big|\_{1}^{4} + \frac{3}{x}\Big|\_{1}^{4}$
+  $$= \frac{2^4 - 2^1}{\ln 2} + 3\left(\frac{1}{4} - 1\right) = \frac{14}{\ln 2} - \frac{9}{4}.$$
+
+**Luyện tập 3:** Tính các tích phân sau:
+a) $\int\_{0}^{2\pi} (2x + \cos x) dx$;
+b) $\int\_{1}^{2} \left(3^x - \frac{3}{x}\right) dx$;
+c) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{4}} \left(\frac{1}{\cos^2 x} - \frac{1}{\sin^2 x}\right) dx$.
+
+Lời giải Luyện tập 3:
+• a) $\int\_{0}^{2\pi} (2x + \cos x) dx = (x^2 + \sin x)\Big|\_{0}^{2\pi} = \left[(2\pi)^2 + \sin(2\pi)\right] - (0 + \sin 0) = 4\pi^2$.
+• b) $\int\_{1}^{2} \left(3^x - \frac{3}{x}\right) dx = \left(\frac{3^x}{\ln 3} - 3\ln|x|\right)\Big|\_{1}^{2} = \left(\frac{9}{\ln 3} - 3\ln 2\right) - \left(\frac{3}{\ln 3} - 0\right) = \frac{6}{\ln 3} - 3\ln 2$.
+• c) $\int\_{\frac{\pi}{6}}^{\frac{\pi}{4}} \left(\frac{1}{\cos^2 x} - \frac{1}{\sin^2 x}\right) dx = (\tan x + \cot x)\Big|\_{\frac{\pi}{6}}^{\frac{\pi}{4}}$
+  $$= \left(\tan\frac{\pi}{4} + \cot\frac{\pi}{4}\right) - \left(\tan\frac{\pi}{6} + \cot\frac{\pi}{6}\right) = (1 + 1) - \left(\frac{\sqrt{3}}{3} + \sqrt{3}\right) = 2 - \frac{4\sqrt{3}}{3}.$$
+
+**Ví dụ 6:** Tính tích phân: $\int\_{0}^{3} |x - 2| dx$.
+
+Lời giải Ví dụ 6:
+• Xét dấu biểu thức $x - 2$ trên đoạn $[0; 3]$: $x - 2 \le 0$ trên $[0; 2]$ và $x - 2 \ge 0$ trên $[2; 3]$.
+• Áp dụng tính chất chèn cận $c = 2$:
+  $$\int\_{0}^{3} |x - 2| dx = \int\_{0}^{2} |x - 2| dx + \int\_{2}^{3} |x - 2| dx = \int\_{0}^{2} (2 - x) dx + \int\_{2}^{3} (x - 2) dx$$
+  $$= \left(2x - \frac{x^2}{2}\right)\Big|\_{0}^{2} + \left(\frac{x^2}{2} - 2x\right)\Big|\_{2}^{3} = (4 - 2) + \left[\left(\frac{9}{2} - 6\right) - (2 - 4)\right] = 2 + \left(-\frac{3}{2} + 2\right) = 2 + \frac{1}{2} = \frac{5}{2}.$$
+
+**Luyện tập 4:** Tính tích phân: $\int\_{0}^{2} |2x - 3| dx$.
+
+Lời giải Luyện tập 4:
+• Nghiệm của nhị thức: $2x - 3 = 0 \iff x = \frac{3}{2} = 1{,}5 \in [0; 2]$.
+• Trên $[0; 1{,}5]$ thì $2x - 3 \le 0 \implies |2x - 3| = 3 - 2x$.
+• Trên $[1{,}5; 2]$ thì $2x - 3 \ge 0 \implies |2x - 3| = 2x - 3$.
+• Tách tích phân tại cận $x = 1{,}5$:
+  $$\int\_{0}^{2} |2x - 3| dx = \int\_{0}^{1{,}5} (3 - 2x) dx + \int\_{1{,}5}^{2} (2x - 3) dx$$
+  $$= \left(3x - x^2\right)\Big|\_{0}^{1{,}5} + \left(x^2 - 3x\right)\Big|\_{1{,}5}^{2} = \left(3(1{,}5) - 1{,}5^2\right) + \left[(4 - 6) - (1{,}5^2 - 3(1{,}5))\right]$$
+  $$= (4{,}5 - 2{,}25) + [-2 - (2{,}25 - 4{,}5)] = 2{,}25 + (-2 + 2{,}25) = 2{,}25 + 0{,}25 = 2{,}5 = \frac{5}{2}.$$
+
+## Ứng dụng và bài tập rèn luyện
+
+### a) Bài toán thực tế
+
+**Vận dụng 2 (Nhiệt độ trung bình trong ngày):** Giá trị trung bình của hàm số liên tục $f(x)$ trên đoạn $[a; b]$ được định nghĩa là $\frac{1}{b - a}\int\_{a}^{b} f(x) dx$. Nhiệt độ ($^\circ\text{C}$) tại thời điểm $t$ giờ từ 6 giờ sáng đến 12 giờ trưa tại một địa phương được mô hình hoá bởi $T(t) = 20 + 1{,}5(t - 6)$ với $6 \le t \le 12$. Tìm nhiệt độ trung bình trong khoảng thời gian này.
+
+Lời giải Vận dụng 2:
+• Khoảng thời gian từ 6 giờ đến 12 giờ ứng với đoạn $[6; 12]$, độ dài khoảng thời gian là $b - a = 12 - 6 = 6$ giờ.
+• Nhiệt độ trung bình là:
+  $$\overline{T} = \frac{1}{12 - 6}\int\_{6}^{12} [20 + 1{,}5(t - 6)] dt = \frac{1}{6}\int\_{6}^{12} (1{,}5t + 11) dt$$
+  $$= \frac{1}{6}\left(0{,}75t^2 + 11t\right)\Big|\_{6}^{12} = \frac{1}{6}\left[(0{,}75 \cdot 144 + 11 \cdot 12) - (0{,}75 \cdot 36 + 11 \cdot 6)\right]$$
+  $$= \frac{1}{6}\left[(108 + 132) - (27 + 66)\right] = \frac{1}{6}(240 - 93) = \frac{147}{6} = 24{,}5^\circ\text{C}.$$
+• Vậy nhiệt độ trung bình từ 6 giờ sáng đến 12 giờ trưa là $24{,}5^\circ\text{C}$.
+
+**Bài 4.11 (Chuyển động thẳng - Độ dịch chuyển và quãng đường):** Một vật chuyển động trên đường thẳng với vận tốc tại thời điểm $t$ giây là $v(t) = t^2 - t - 6\text{ (m/s)}$.
+a) Tìm độ dịch chuyển của vật trong khoảng thời gian $1 \le t \le 4$, tức tính $\int\_{1}^{4} v(t) dt$.
+b) Tìm tổng quãng đường vật đi được trong khoảng thời gian $1 \le t \le 4$, tức tính $\int\_{1}^{4} |v(t)| dt$.
+
+Lời giải Bài 4.11:
+• a) Độ dịch chuyển của vật là:
+  $$\Delta s = \int\_{1}^{4} (t^2 - t - 6) dt = \left(\frac{t^3}{3} - \frac{t^2}{2} - 6t\right)\Big|\_{1}^{4}$$
+  Tại $t = 4$: $\frac{64}{3} - 8 - 24 = \frac{64}{3} - 32 = -\frac{32}{3}$.
+  Tại $t = 1$: $\frac{1}{3} - \frac{1}{2} - 6 = -\frac{37}{6}$.
+  $$\Delta s = -\frac{32}{3} - \left(-\frac{37}{6}\right) = -\frac{64}{6} + \frac{37}{6} = -\frac{27}{6} = -4{,}5\text{ (m)}.$$
+  (Độ dịch chuyển âm nghĩa là vật lùi về phía âm $4{,}5\text{ m}$ so với vị trí ban đầu).
+• b) Xét dấu $v(t) = t^2 - t - 6 = (t - 3)(t + 2)$.
+  Trên $[1; 3]$: $v(t) \le 0 \implies |v(t)| = -t^2 + t + 6$.
+  Trên $[3; 4]$: $v(t) \ge 0 \implies |v(t)| = t^2 - t - 6$.
+  Tổng quãng đường thực tế vật di chuyển được là:
+  $$S = \int\_{1}^{4} |v(t)| dt = \int\_{1}^{3} (-t^2 + t + 6) dt + \int\_{3}^{4} (t^2 - t - 6) dt$$
+  $$\int\_{1}^{3} (-t^2 + t + 6) dt = \left(-\frac{t^3}{3} + \frac{t^2}{2} + 6t\right)\Big|\_{1}^{3} = \left(-9 + \frac{9}{2} + 18\right) - \left(-\frac{1}{3} + \frac{1}{2} + 6\right) = \frac{27}{2} - \frac{37}{6} = \frac{44}{6} = \frac{22}{3}.$$
+  $$\int\_{3}^{4} (t^2 - t - 6) dt = \left(\frac{t^3}{3} - \frac{t^2}{2} - 6t\right)\Big|\_{3}^{4} = -\frac{32}{3} - \left(-\frac{27}{2}\right) = -\frac{32}{3} + \frac{27}{2} = \frac{17}{6}.$$
+  $$S = \frac{44}{6} + \frac{17}{6} = \frac{61}{6} \approx 10{,}17\text{ (m)}.$$
+  Vậy tổng quãng đường vật đi được là $\frac{61}{6}\text{ m} \approx 10{,}17\text{ m}$.
+
+**Bài 4.12 (Sự thay đổi của lợi nhuận từ lợi nhuận biên):** Lợi nhuận biên (triệu đồng) của một sản phẩm được mô hình hoá bởi $P'(x) = -0{,}0005x + 12{,}2$, trong đó $x$ là số lượng sản phẩm bán ra.
+a) Tìm sự thay đổi của lợi nhuận khi doanh số tăng từ 100 lên 101 sản phẩm.
+b) Tìm sự thay đổi của lợi nhuận khi doanh số tăng từ 100 lên 110 sản phẩm.
+
+Lời giải Bài 4.12:
+• Sự thay đổi của lợi nhuận khi doanh số tăng từ $a$ lên $b$ là $\Delta P = P(b) - P(a) = \int\_{a}^{b} P'(x) dx$.
+• a) Khi doanh số tăng từ 100 lên 101 sản phẩm:
+  $$\Delta P_1 = \int\_{100}^{101} (-0{,}0005x + 12{,}2) dx = \left(-0{,}00025x^2 + 12{,}2x\right)\Big|\_{100}^{101}$$
+  $$= -0{,}00025(101^2 - 100^2) + 12{,}2(101 - 100) = -0{,}00025(201) + 12{,}2 = -0{,}05025 + 12{,}2 = 12{,}14975\text{ (triệu đồng)}.$$
+• b) Khi doanh số tăng từ 100 lên 110 sản phẩm:
+  $$\Delta P_2 = \int\_{100}^{110} (-0{,}0005x + 12{,}2) dx = \left(-0{,}00025x^2 + 12{,}2x\right)\Big|\_{100}^{110}$$
+  $$= -0{,}00025(110^2 - 100^2) + 12{,}2(110 - 100) = -0{,}00025(2\\,100) + 122 = -0{,}525 + 122 = 121{,}475\text{ (triệu đồng)}.$$
+
+**Bài 4.13 (Vận tốc dòng máu trong động mạch):** Vận tốc $v$ của dòng máu ở khoảng cách $r$ tính từ tâm của động mạch hình trụ bán kính $R$ được mô hình hoá bởi $v(r) = k(R^2 - r^2)$ ($0 \le r \le R$, $k$ là hằng số dương). Tìm vận tốc trung bình của dòng máu qua tiết diện động mạch và so sánh với vận tốc lớn nhất.
+
+Lời giải Bài 4.13:
+• Vận tốc trung bình của dòng máu theo bán kính $r$ trên đoạn $[0; R]$ là:
+  $$\overline{v} = \frac{1}{R - 0}\int\_{0}^{R} k(R^2 - r^2) dr = \frac{k}{R}\left(R^2 r - \frac{r^3}{3}\right)\Big|\_{0}^{R} = \frac{k}{R}\left(R^3 - \frac{R^3}{3}\right) = \frac{k}{R} \cdot \frac{2}{3}R^3 = \frac{2}{3}kR^2.$$
+• Vận tốc lớn nhất của dòng máu đạt được tại tâm động mạch ($r = 0$):
+  $$v\_{\max} = v(0) = k(R^2 - 0^2) = kR^2.$$
+• So sánh: Ta có $\overline{v} = \frac{2}{3}v\_{\max}$. Vậy vận tốc trung bình của dòng máu bằng $\frac{2}{3}$ vận tốc lớn nhất tại tâm động mạch.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 4.8:** Sử dụng ý nghĩa hình học của tích phân, tính:
+a) $\int\_{1}^{2} (2x + 1) dx$;
+b) $\int\_{-3}^{3} \sqrt{9 - x^2} dx$.
+
+Lời giải Bài 4.8:
+• a) Hàm số $y = 2x + 1$ trên $[1; 2]$ tạo thành một hình thang vuông có hai đáy là $y(1) = 3, y(2) = 5$ và chiều cao $h = 2 - 1 = 1$.
+  $$\int\_{1}^{2} (2x + 1) dx = S = \frac{3 + 5}{2} \cdot 1 = 4.$$
+• b) Đường cong $y = \sqrt{9 - x^2}$ trên $[-3; 3]$ là nửa phía trên trục hoành của đường tròn tâm $O$ bán kính $R = 3$.
+  Tích phân chính là diện tích nửa hình tròn:
+  $$\int\_{-3}^{3} \sqrt{9 - x^2} dx = \frac{1}{2}\pi R^2 = \frac{1}{2}\pi (3^2) = \frac{9\pi}{2}.$$
+
+**Bài 4.9:** Cho $\int\_{0}^{3} f(x) dx = 5$ và $\int\_{0}^{3} g(x) dx = 2$. Tính:
+a) $\int\_{0}^{3} [f(x) + g(x)] dx$;
+b) $\int\_{0}^{3} [f(x) - g(x)] dx$;
+c) $\int\_{0}^{3} 3f(x) dx$;
+d) $\int\_{0}^{3} [2f(x) - 3g(x)] dx$.
+
+Lời giải Bài 4.9:
+• a) $\int\_{0}^{3} [f(x) + g(x)] dx = \int\_{0}^{3} f(x) dx + \int\_{0}^{3} g(x) dx = 5 + 2 = 7$.
+• b) $\int\_{0}^{3} [f(x) - g(x)] dx = \int\_{0}^{3} f(x) dx - \int\_{0}^{3} g(x) dx = 5 - 2 = 3$.
+• c) $\int\_{0}^{3} 3f(x) dx = 3\int\_{0}^{3} f(x) dx = 3(5) = 15$.
+• d) $\int\_{0}^{3} [2f(x) - 3g(x)] dx = 2\int\_{0}^{3} f(x) dx - 3\int\_{0}^{3} g(x) dx = 2(5) - 3(2) = 10 - 6 = 4$.
+
+**Bài 4.10:** Tính các tích phân sau:
+a) $\int\_{0}^{1} (3x - 1)^2 dx$;
+b) $\int\_{0}^{\frac{\pi}{2}} (1 + \sin x) dx$;
+c) $\int\_{0}^{1} (e^{2x} + 3x^2) dx$;
+d) $\int\_{-1}^{2} |2x + 1| dx$.
+
+Lời giải Bài 4.10:
+• a) Khai triển hằng đẳng thức: $(3x - 1)^2 = 9x^2 - 6x + 1$.
+  $$\int\_{0}^{1} (3x - 1)^2 dx = \left(3x^3 - 3x^2 + x\right)\Big|\_{0}^{1} = (3 - 3 + 1) - 0 = 1.$$
+• b) $\int\_{0}^{\frac{\pi}{2}} (1 + \sin x) dx = (x - \cos x)\Big|\_{0}^{\frac{\pi}{2}} = \left(\frac{\pi}{2} - \cos\frac{\pi}{2}\right) - (0 - \cos 0) = \left(\frac{\pi}{2} - 0\right) - (-1) = \frac{\pi}{2} + 1$.
+• c) $\int\_{0}^{1} (e^{2x} + 3x^2) dx = \left(\frac{1}{2}e^{2x} + x^3\right)\Big|\_{0}^{1} = \left(\frac{1}{2}e^2 + 1\right) - \left(\frac{1}{2}e^0 + 0\right) = \frac{1}{2}e^2 + 1 - \frac{1}{2} = \frac{e^2 + 1}{2}$.
+• d) Xét dấu nhị thức $2x + 1$: $2x + 1 = 0 \iff x = -\frac{1}{2} \in [-1; 2]$.
+  Tách tích phân thành hai đoạn $[-1; -0{,}5]$ và $[-0{,}5; 2]$:
+  $$\int\_{-1}^{2} |2x + 1| dx = \int\_{-1}^{-1/2} (-2x - 1) dx + \int\_{-1/2}^{2} (2x + 1) dx$$
+  $$= \left(-x^2 - x\right)\Big|\_{-1}^{-1/2} + \left(x^2 + x\right)\Big|\_{-1/2}^{2}$$
+  $$= \left[\left(-\frac{1}{4} + \frac{1}{2}\right) - (-1 + 1)\right] + \left[(4 + 2) - \left(\frac{1}{4} - \frac{1}{2}\right)\right]$$
+  $$= \frac{1}{4} + \left(6 + \frac{1}{4}\right) = \frac{1}{4} + 6{,}25 = 6{,}5 = \frac{13}{2}.$$
