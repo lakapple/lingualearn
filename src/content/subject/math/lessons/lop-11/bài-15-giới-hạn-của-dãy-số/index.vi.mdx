@@ -13,203 +13,288 @@ updatedDate: 2026-10-28T17:52:00
 draft: false
 ---
 
-import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+import GeoGebra from '@/components/GeoGebra.astro';
 
-## Mục tiêu bài học
+import Youtube from '@/components/Youtube.astro';
 
-**Thuật ngữ:**
+\# Bài 15: Giới hạn của dãy số
 
-·       Giới hạn của dãy số ($\lim\_{n \to +\infty} u_n = a$, giới hạn 0, giới hạn hữu hạn)
+\## Mục tiêu bài học
 
-·       Cấp số nhân lùi vô hạn, tổng của cấp số nhân lùi vô hạn
+\*\*Thuật ngữ:\*\*
 
-·       Giới hạn vô cực ($+\infty, -\infty$)
+\- Giới hạn của dãy số ($\lim\_{n \to +\infty} u_n = a$, giới hạn 0, giới hạn hữu hạn)
 
-**Kiến thức, kĩ năng:**
+\- Cấp số nhân lùi vô hạn, tổng của cấp số nhân lùi vô hạn
 
-·       Nhận biết và hiểu rõ khái niệm giới hạn của dãy số khi $n \to +\infty$.
+\- Giới hạn vô cực ($+\infty, -\infty$)
 
-·       Nắm vững các giới hạn cơ bản và các phép toán giới hạn hữu hạn, quy tắc tính giới hạn vô cực.
+\*\*Kiến thức, kĩ năng:\*\*
 
-·       Tính tổng của một cấp số nhân lùi vô hạn và vận dụng để biểu diễn số thập phân vô hạn tuần hoàn dưới dạng phân số.
+\- Nhận biết và hiểu rõ khái niệm giới hạn của dãy số khi $n \to +\infty$.
 
-·       Vận dụng kiến thức giới hạn vào giải quyết các bài toán thực tiễn (giải thích nghịch lí Zeno về Achilles đuổi rùa, bài toán nảy bóng, lượng thuốc trong cơ thể, độ dài đường gấp khúc vô hạn).
+\- Nắm vững các giới hạn cơ bản và các phép toán giới hạn hữu hạn, quy tắc tính giới hạn vô cực.
 
-## Giới hạn hữu hạn của dãy số
+\- Tính tổng của một cấp số nhân lùi vô hạn và vận dụng để biểu diễn số thập phân vô hạn tuần hoàn dưới dạng phân số.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han_cua_day_so"/>
+\- Vận dụng kiến thức giới hạn vào giải quyết các bài toán thực tiễn (giải thích nghịch lí Zeno về Achilles đuổi rùa, sự tích lũy nồng độ thuốc trong cơ thể,...).
 
-### a) Giới hạn 0 và giới hạn hữu hạn
+\---
 
-Định nghĩa giới hạn 0:
-• Ta nói dãy số $(u_n)$ có giới hạn là 0 khi $n \to +\infty$ nếu $|u_n|$ có thể nhỏ hơn một số dương bé tuỳ ý, kể từ một số hạng nào đó trở đi, kí hiệu là $\lim\_{n \to +\infty} u_n = 0$ hay $u_n \to 0$ khi $n \to +\infty$.
-• Các kết quả cơ bản:
-  + $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ (với $k$ là số nguyên dương);
-  + $\lim\_{n \to +\infty} q^n = 0$ (nếu $|q| < 1$).
-  + Nếu $|u_n| \le v_n$ với mọi $n \ge 1$ và $\lim\_{n \to +\infty} v_n = 0$ thì $\lim\_{n \to +\infty} u_n = 0$.
+\## 1. Giới hạn hữu hạn của dãy số
 
-Định nghĩa giới hạn hữu hạn (số thực $a$):
-• Ta nói dãy số $(u_n)$ có giới hạn là số thực $a$ khi $n \to +\infty$ nếu $\lim\_{n \to +\infty} (u_n - a) = 0$, kí hiệu $\lim\_{n \to +\infty} u_n = a$ hoặc $u_n \to a$ khi $n \to +\infty$.
-• Chú ý: $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$. Nếu $u_n = c$ (hằng số) thì $\lim\_{n \to +\infty} u_n = c$.
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han_cua_day_so" />
 
-### b) Ví dụ và luyện tập về giới hạn hữu hạn
+\### a) Giới hạn 0 và giới hạn hữu hạn
 
-**Ví dụ 1:** Xét dãy số $(u_n)$ với $u_n = \frac{1}{n^2}$. Giải thích vì sao dãy số này có giới hạn là 0.
+\*\*Định nghĩa giới hạn 0:\*\*
 
-Lời giải Ví dụ 1:
-• Ta có $|u_n| = \frac{1}{n^2}$. Khi $n$ đủ lớn, $\frac{1}{n^2}$ trở nên rất nhỏ và có thể nhỏ hơn bất kỳ số dương $\varepsilon > 0$ nào cho trước.
-• Chẳng hạn, để $|u_n| < 0{,}0001$, ta cần $\frac{1}{n^2} < \frac{1}{10\\,000} \Leftrightarrow n^2 > 10\\,000 \Leftrightarrow n > 100$. Vậy kể từ số hạng thứ 101, các số hạng của dãy đều có giá trị tuyệt đối nhỏ hơn $0{,}0001$. Do đó $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
+\- Ta nói dãy số $(u_n)$ có giới hạn là $0$ khi $n \to +\infty$ nếu $|u_n|$ có thể nhỏ hơn một số dương bé tuỳ ý, kể từ một số hạng nào đó trở đi, kí hiệu là $\lim\_{n \to +\infty} u_n = 0$ hay $u_n \to 0$ khi $n \to +\infty$.
 
-**Luyện tập 1:** Chứng minh rằng $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+\- \*\*Các kết quả cơ bản:\*\*
 
-Lời giải Luyện tập 1:
-• Ta có $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$.
-• Vì $|q| = \frac{1}{3} < 1$, nên theo kết quả cơ bản ta có $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Suy ra $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+  \- $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ (với $k$ là số nguyên dương);
 
-**Ví dụ 2:** Cho dãy số $(u_n)$ với $u_n = \frac{2n + 1}{n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 2$.
+  \- $\lim\_{n \to +\infty} q^n = 0$ (nếu $|q| < 1$).
 
-Lời giải Ví dụ 2:
-• Ta có $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{2n + 1 - 2n}{n} = \frac{1}{n}$.
-• Vì $\lim\_{n \to +\infty} \frac{1}{n} = 0$, nên $\lim\_{n \to +\infty} (u_n - 2) = 0$, do đó $\lim\_{n \to +\infty} u_n = 2$.
+  \- Nếu $|u_n| \le v_n$ với mọi $n \ge 1$ và $\lim\_{n \to +\infty} v_n = 0$ thì $\lim\_{n \to +\infty} u_n = 0$.
 
-**Luyện tập 2:** Cho dãy số $(u_n)$ với $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 3$.
+\*\*Định nghĩa giới hạn hữu hạn (số thực $a$):\*\*
 
-Lời giải Luyện tập 2:
-• Ta có $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = \frac{3 \cdot 2^n - 1 - 3 \cdot 2^n}{2^n} = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$.
-• Vì $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ (do $|\frac{1}{2}| < 1$), nên $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
+\- Ta nói dãy số $(u_n)$ có giới hạn là số thực $a$ khi $n \to +\infty$ nếu $\lim\_{n \to +\infty} (u_n - a) = 0$, kí hiệu $\lim\_{n \to +\infty} u_n = a$ hoặc $u_n \to a$ khi $n \to +\infty$.
 
-## Định lí về giới hạn hữu hạn của dãy số
+\- \*\*Chú ý:\*\* $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$. Nếu $u_n = c$ (hằng số) thì $\lim\_{n \to +\infty} u_n = c$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_ve_gioi_han_huu_han"/>
+\### b) Ví dụ và luyện tập về giới hạn hữu hạn
 
-### a) Các quy tắc tính giới hạn
+\*\*Ví dụ 1:\*\* Xét dãy số $(u_n)$ với $u_n = \frac{1}{n^2}$. Giải thích vì sao dãy số này có giới hạn là $0$.
 
-Quy tắc tính giới hạn hữu hạn:
+\*Lời giải:\*
+
+\- Ta có $|u_n| = \frac{1}{n^2}$. Khi $n$ đủ lớn, $\frac{1}{n^2}$ trở nên rất nhỏ và có thể nhỏ hơn bất kỳ số dương $\varepsilon > 0$ nào cho trước.
+
+\- Chẳng hạn, để $|u_n| < 0.0001$, ta cần $\frac{1}{n^2} < \frac{1}{10000} \Leftrightarrow n^2 > 10000 \Leftrightarrow n > 100$. Vậy kể từ số hạng thứ 101, các số hạng của dãy đều có giá trị tuyệt đối nhỏ hơn $0.0001$. Do đó $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
+
+\*\*Luyện tập 1:\*\* Chứng minh rằng $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+
+\*Lời giải:\*
+
+\- Ta có $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$.
+
+\- Vì $|q| = \frac{1}{3} < 1$, nên theo kết quả cơ bản ta có $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Suy ra $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+
+\*\*Ví dụ 2:\*\* Cho dãy số $(u_n)$ với $u_n = \frac{2n + 1}{n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 2$.
+
+\*Lời giải:\*
+
+\- Ta có $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{2n + 1 - 2n}{n} = \frac{1}{n}$.
+
+\- Vì $\lim\_{n \to +\infty} \frac{1}{n} = 0$, nên $\lim\_{n \to +\infty} (u_n - 2) = 0$, do đó $\lim\_{n \to +\infty} u_n = 2$.
+
+\*\*Luyện tập 2:\*\* Cho dãy số $(u_n)$ với $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 3$.
+
+\*Lời giải:\*
+
+\- Ta có $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$.
+
+\- Vì $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ (do $|\frac{1}{2}| < 1$), nên $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
+
+\---
+
+\## 2. Định lí về giới hạn hữu hạn của dãy số
+
+\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_ve_gioi_han_huu_han" />
+
+\### a) Các quy tắc tính giới hạn
+
 Nếu $\lim\_{n \to +\infty} u_n = a$ và $\lim\_{n \to +\infty} v_n = b$, thì:
+
 1\. $\lim\_{n \to +\infty} (u_n + v_n) = a + b$
+
 2\. $\lim\_{n \to +\infty} (u_n - v_n) = a - b$
+
 3\. $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$
+
 4\. $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (nếu $b \ne 0$).
+
 5\. Nếu $u_n \ge 0$ với mọi $n$ và $\lim\_{n \to +\infty} u_n = a$, thì $a \ge 0$ và $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
 
-### b) Ví dụ và luyện tập về quy tắc tính giới hạn
+\### b) Ví dụ và luyện tập về quy tắc tính giới hạn
 
-**Ví dụ 3:** Tìm $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
+\*\*Ví dụ 3:\*\* Tìm $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
 
-Solution for Example 3:
-• Chia cả tử và mẫu cho luỹ thừa cao nhất của $n$ là $n^2$:
-$$\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.$$
+\*Lời giải:\*
 
-**Luyện tập 3:** Tìm $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
+\- Chia cả tử và mẫu cho luỹ thừa cao nhất của $n$ là $n^2$:
 
-Lời giải Luyện tập 3:
-• Chia cả tử và mẫu cho $n$ (với $n > 0$, ta có $\sqrt{n^2} = n$):
-$$\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.$$
+$$
 
-## Tổng của cấp số nhân lùi vô hạn
+\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han"/>
+$$
 
-### a) Khái niệm và công thức tổng
+\*\*Luyện tập 3:\*\* Tìm $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
 
-Cấp số nhân lùi vô hạn:
-• Cấp số nhân vô hạn $(u_n)$ có công bội $q$ với $|q| < 1$ được gọi là cấp số nhân lùi vô hạn.
-• Tổng của cấp số nhân lùi vô hạn $(u_n)$ là giới hạn của tổng $n$ số hạng đầu $S_n$ khi $n \to +\infty$:
-$$S = \lim\_{n \to +\infty} S_n = \lim\_{n \to +\infty} \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1}{1 - q} \quad (|q| < 1)$
+\*Lời giải:\*
 
-### b) Ví dụ và ứng dụng biểu diễn số thập phân tuần hoàn
+\- Chia cả tử và mẫu cho $n$ (với $n > 0$, ta có $\sqrt{n^2} = n$):
 
-**Ví dụ 4:** Tính tổng $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
+$$
 
-Lời giải Ví dụ 4:
-• Đây là tổng của cấp số nhân lùi vô hạn với số hạng đầu $u_1 = 1$ và công bội $q = -\frac{1}{2}$ (vì $|q| < 1$).
-• Tổng của cấp số nhân lùi vô hạn là:
-$$S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{1}{\frac{3}{2}} = \frac{2}{3}.$$
+\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.
 
-**Ví dụ 5:** Biểu diễn số thập phân vô hạn tuần hoàn $2{,}222\dots$ dưới dạng phân số.
+$$
 
-Lời giải Ví dụ 5:
-• Ta có $2{,}222\dots = 2 + 0{,}2 + 0{,}02 + 0{,}002 + \dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + 2 \cdot \frac{1}{10^3} + \dots$
-• Từ số hạng thứ hai trở đi, đây là cấp số nhân lùi vô hạn với $u_1 = 0{,}2 = \frac{2}{10}$ và $q = \frac{1}{10}$.
-• Tổng phần thập phân vô hạn tuần hoàn là $\frac{2/10}{1 - 1/10} = \frac{2/10}{9/10} = \frac{2}{9}$.
-• Do đó: $2{,}222\dots = 2 + \frac{2}{9} = \frac{20}{9}$.
+\---
 
-**Luyện tập 4:** Tính tổng $S = 2 + \frac{2}{7} + \frac{2}{7^2} + \dots + \frac{2}{7^{n-1}} + \dots$
+\## 3. Tổng của cấp số nhân lùi vô hạn
 
-Lời giải Luyện tập 4:
-• Đây là tổng của cấp số nhân lùi vô hạn có số hạng đầu $u_1 = 2$ và công bội $q = \frac{1}{7}$.
-• Tổng của cấp số nhân là:
-$$S = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{7}} = \frac{2}{\frac{6}{7}} = 2 \cdot \frac{7}{6} = \frac{7}{3}. $$
+\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han" />
 
-## Giới hạn vô cực của dãy số
+\### a) Khái niệm và công thức tổng
 
-\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_vo_cuc"/>
+\- Cấp số nhân vô hạn $(u_n)$ có công bội $q$ thoả mãn $|q| < 1$ được gọi là \*\*cấp số nhân lùi vô hạn\*\*.
 
-### a) Định nghĩa giới hạn vô cực
+\- Tổng của cấp số nhân lùi vô hạn $(u_n)$ là giới hạn của tổng $n$ số hạng đầu $S_n$ khi $n \to +\infty$:
 
-Định nghĩa:
-• Dãy số $(u_n)$ được gọi là có giới hạn $+\infty$ khi $n \to +\infty$ nếu $u_n$ lớn hơn một số dương bất kì, kể từ một số hạng nào đó trở đi, kí hiệu $\lim\_{n \to +\infty} u_n = +\infty$.
-• Dãy số $(u_n)$ được gọi là có giới hạn $-\infty$ khi $n \to +\infty$ nếu $\lim\_{n \to +\infty} (-u_n) = +\infty$, kí hiệu $\lim\_{n \to +\infty} u_n = -\infty$.
-• Các kết quả cơ bản:
-  + $\lim\_{n \to +\infty} n^k = +\infty$ (với $k$ là số nguyên dương);
-  + $\lim\_{n \to +\infty} q^n = +\infty$ (với $q > 1$).
+$$
 
-### b) Ví dụ và luyện tập về giới hạn vô cực
+S = \lim\_{n \to +\infty} S_n = \lim\_{n \to +\infty} \frac{u_1(1 - q^n)}{1 - q} = \frac{u_1}{1 - q} \quad (|q| < 1)
 
-**Ví dụ 6:** Tính $\lim\_{n \to +\infty} (n^2 - 2n)$.
+$$
 
-Lời giải Ví dụ 6:
-• Biến đổi biểu thức: $n^2 - 2n = n^2\left(1 - \frac{2}{n}\right)$.
-• Vì $\lim\_{n \to +\infty} n^2 = +\infty$ và $\lim\_{n \to +\infty} \left(1 - \frac{2}{n}\right) = 1 > 0$, nên theo quy tắc nhân giới hạn vô cực, ta có $\lim\_{n \to +\infty} (n^2 - 2n) = +\infty$.
+\### b) Ví dụ và ứng dụng biểu diễn số thập phân tuần hoàn
 
-**Luyện tập 5:** Tính $\lim\_{n \to +\infty} (n - \sqrt{n})$.
+\*\*Ví dụ 4:\*\* Tính tổng $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
 
-Lời giải Luyện tập 5:
-• Biến đổi: $n - \sqrt{n} = \sqrt{n}(\sqrt{n} - 1)$.
-• Vì $\lim\_{n \to +\infty} \sqrt{n} = +\infty$ và $\lim\_{n \to +\infty} (\sqrt{n} - 1) = +\infty$, nên theo quy tắc nhân giới hạn vô cực ta có $\lim\_{n \to +\infty} (n - \sqrt{n}) = +\infty$.
+\*Lời giải:\*
 
-## Ứng dụng và bài tập rèn luyện
+\- Đây là tổng của cấp số nhân lùi vô hạn với số hạng đầu $u_1 = 1$ và công bội $q = -\frac{1}{2}$ (vì $|q| < 1$).
 
-### a) Bài toán thực tế và mô hình hoá
+\- Tổng của cấp số nhân lùi vô hạn là:
 
-**Vận dụng (Giải thích nghịch lí Zeno - Achilles đuổi rùa):** Giả sử Achilles chạy $100\text{ km/h}$, rùa chạy $1\text{ km/h}$, khoảng cách ban đầu $a = 100\text{ km}$.
-a) Tính thời gian $t_1, t_2, \dots, t_n, \dots$ để Achilles vượt qua các khoảng cách đuổi theo.
-b) Tính tổng thời gian cần thiết để Achilles đuổi kịp rùa.
-c) Sai lầm trong lập luận của Zeno ở đâu?
+$$
 
-Lời giải Vận dụng:
-• a) Thời gian để Achilles chạy hết khoảng cách đầu tiên $100\text{ km}$ là $t_1 = \frac{100}{100} = 1$ giờ; trong lúc đó rùa chạy được $1\text{ km}$. Khoảng cách tiếp theo rùa chạy là $t_2 = \frac{1}{100}$ giờ, và cứ thế tiếp diễn.
-• b) Tổng thời gian là tổng của cấp số nhân lùi vô hạn: $T = 1 + \frac{1}{100} + \frac{1}{100^2} + \dots = \frac{1}{1 - \frac{1}{100}} = \frac{100}{99}$ giờ ($\approx 1{,}01$ giờ).
-• c) Sai lầm của Zeno là cho rằng tổng của vô hạn khoảng thời gian nhỏ thì phải bằng vô hạn. Toán học hiện đại chứng minh tổng của một chuỗi vô hạn các số hạng giảm dần có thể hội tụ về một số hữu hạn.
+S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{1}{\frac{3}{2}} = \frac{2}{3}.
 
-**Bài 5.5 (Tích lũy nồng độ thuốc trong cơ thể):** Bệnh nhân uống mỗi ngày một viên thuốc $150\text{ mg}$. Trước mỗi lần uống, hàm lượng thuốc cũ trong cơ thể còn lại $5\\%$. Tính lượng thuốc sau khi uống viên thứ 5 và ước tính lượng thuốc trong cơ thể nếu dùng lâu dài.
+$$
 
-Lời giải Bài 5.5:
-• Lượng thuốc sau ngày thứ 1: $150\text{ mg}$.
-• Lượng thuốc sau ngày thứ 2: $150 + 150(0{,}05) = 150(1 + 0{,}05)$.
-• Sau khi uống viên thứ 5, tổng lượng thuốc tích lũy là tổng 5 số hạng đầu của cấp số nhân với $u_1 = 150$ và công bội $q = 0{,}05$:
-  $$S_5 = 150 \cdot \frac{1 - (0{,}05)^5}{1 - 0{,}05} = \frac{150(1 - 0{,}0000003125)}{0{,}95} \approx 157{,}89\text{ (mg).}$$
-• Khi sử dụng lâu dài ($n \to +\infty$), lượng thuốc hội tụ về giới hạn của cấp số nhân lùi vô hạn:
-  $$S = \frac{150}{1 - 0{,}05} = \frac{150}{0{,}95} = \frac{3\000}{19} \approx 157{,}89\text{ (mg).}$$
+\*\*Ví dụ 5:\*\* Biểu diễn số thập phân vô hạn tuần hoàn $2.222\dots$ dưới dạng phân số.
 
-### b) Hệ thống bài tập cuối bài
+\*Lời giải:\*
 
-**Bài 5.1:** Tìm các giới hạn sau:
-a) $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 + 1}$;
-b) $\lim\_{n \to +\infty} (\sqrt{n^2 + 2n} - n)$.
+\- Ta có: $2.222\dots = 2 + 0.2 + 0.02 + 0.002 + \dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + \dots$
 
-Lời giải Bài 5.1:
-• a) Chia cả tử và mẫu cho $n^2$:
-  $$\lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 + \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 + 0} = \frac{1}{2}.$$
-• b) Nhân lượng liên hợp:
-  $$\lim\_{n \to +\infty} \frac{(\sqrt{n^2 + 2n} - n)(\sqrt{n^2 + 2n} + n)}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2n}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2}{\sqrt{1 + \frac{2}{n}} + 1} = \frac{2}{1 + 1} = 1.$$
+\- Phần thập phân là cấp số nhân lùi vô hạn với $u_1 = 0.2 = \frac{2}{10}$ và $q = \frac{1}{10}$.
 
+\- Tổng phần thập phân là: $\frac{2/10}{1 - 1/10} = \frac{2}{9}$.
 
+\- Do đó: $2.222\dots = 2 + \frac{2}{9} = \frac{20}{9}$.
 
-**Bài 5.4:** Viết các số thập phân vô hạn tuần hoàn dưới dạng phân số:
-a) $1,(12) = 1{,}121212\dots$;
-b) $3,(102) = 3{,}102102102\dots$
+\*\*Luyện tập 4:\*\* Tính tổng $S = 2 + \frac{2}{7} + \frac{2}{7^2} + \dots + \frac{2}{7^{n-1}} + \dots$
 
-Lời giải Bài 5.4:
-• a) $1,(12) = 1 + \frac{12}{10^2} + \frac{12}{10^4} + \dots = 1 + \frac{12/100}{1 - 1/100} = 1 + \frac{12}{99} = 1 + \frac{4}{33} = \frac{37}{33}$.
-• b) $3,(102) = 3 + \frac{102}{10^3} + \frac{102}{10^6} + \dots = 3 + \frac{102/1\\,000}{1 - 1/1\\,000} = 3 + \frac{102}{999} = 3 + \frac{34}{333} = \frac{1\\,034}{333}$.
+\*Lời giải:\*
+
+\- Cấp số nhân lùi vô hạn có số hạng đầu $u_1 = 2$ và công bội $q = \frac{1}{7}$.
+
+\- Tổng là:
+
+$$
+
+S = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{7}} = \frac{2}{\frac{6}{7}} = \frac{7}{3}.
+
+$$
+
+\---
+
+\## 4. Giới hạn vô cực của dãy số
+
+\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_vo_cuc" />
+
+\### a) Định nghĩa giới hạn vô cực
+
+\- Dãy số $(u_n)$ được gọi là có giới hạn $+\infty$ khi $n \to +\infty$ nếu $u_n$ lớn hơn một số dương bất kì, kể từ một số hạng nào đó trở đi, kí hiệu $\lim\_{n \to +\infty} u_n = +\infty$.
+
+\- Dãy số $(u_n)$ được gọi là có giới hạn $-\infty$ khi $n \to +\infty$ nếu $\lim\_{n \to +\infty} (-u_n) = +\infty$, kí hiệu $\lim\_{n \to +\infty} u_n = -\infty$.
+
+\- \*\*Các kết quả cơ bản:\*\*
+
+  \- $\lim\_{n \to +\infty} n^k = +\infty$ (với $k$ là số nguyên dương);
+
+  \- $\lim\_{n \to +\infty} q^n = +\infty$ (với $q > 1$).
+
+\### b) Ví dụ và luyện tập về giới hạn vô cực
+
+\*\*Ví dụ 6:\*\* Tính $\lim\_{n \to +\infty} (n^2 - 2n)$.
+
+\*Lời giải:\*
+
+\- Biến đổi biểu thức: $n^2 - 2n = n^2\left(1 - \frac{2}{n}\right)$.
+
+\- Vì $\lim\_{n \to +\infty} n^2 = +\infty$ và $\lim\_{n \to +\infty} \left(1 - \frac{2}{n}\right) = 1 > 0$, nên theo quy tắc nhân ta có $\lim\_{n \to +\infty} (n^2 - 2n) = +\infty$.
+
+\*\*Luyện tập 5:\*\* Tính $\lim\_{n \to +\infty} (n - \sqrt{n})$.
+
+\*Lời giải:\*
+
+\- Biến đổi: $n - \sqrt{n} = \sqrt{n}(\sqrt{n} - 1)$.
+
+\- Vì $\lim\_{n \to +\infty} \sqrt{n} = +\infty$ và $\lim\_{n \to +\infty} (\sqrt{n} - 1) = +\infty$, nên ta có $\lim\_{n \to +\infty} (n - \sqrt{n}) = +\infty$.
+
+\---
+
+\## 5. Ứng dụng và bài tập rèn luyện
+
+\### a) Bài toán thực tế và mô hình hoá
+
+\*\*Vận dụng (Giải thích nghịch lí Zeno - Achilles đuổi rùa):\*\*  
+
+Giả sử Achilles chạy $100\text{ km/h}$, rùa chạy $1\text{ km/h}$, khoảng cách ban đầu $a = 100\text{ km}$.
+
+\- a) Thời gian để Achilles chạy hết khoảng cách đầu tiên $100\text{ km}$ là $t_1 = \frac{100}{100} = 1$ giờ; trong lúc đó rùa chạy được $1\text{ km}$. Khoảng cách tiếp theo Achilles đuổi là $t_2 = \frac{1}{100}$ giờ, và cứ thế tiếp diễn.
+
+\- b) Tổng thời gian là tổng của cấp số nhân lùi vô hạn:
+
+$$
+
+T = 1 + \frac{1}{100} + \frac{1}{100^2} + \dots = \frac{1}{1 - \frac{1}{100}} = \frac{100}{99}\text{ giờ } (\approx 1.01\text{ giờ}).
+
+$$
+
+\- c) \*\*Sai lầm của Zeno:\*\* Cho rằng tổng của vô hạn khoảng thời gian nhỏ thì phải bằng vô hạn. Toán học hiện đại chứng minh chuỗi vô hạn các số hạng giảm dần hoàn toàn có thể hội tụ về một số hữu hạn.
+
+\*\*Bài 5.5 (Tích lũy nồng độ thuốc trong cơ thể):\*\*  
+
+Bệnh nhân uống mỗi ngày một viên thuốc $150\text{ mg}$. Trước mỗi lần uống, hàm lượng thuốc cũ trong cơ thể còn lại $5\\%$.
+
+\- Lượng thuốc sau liều thứ 1: $150\text{ mg}$.
+
+\- Sau khi uống viên thứ 5, tổng lượng thuốc tích lũy là tổng 5 số hạng đầu của cấp số nhân ($u_1 = 150$, $q = 0.05$):
+
+$$
+
+S_5 = 150 \cdot \frac{1 - (0.05)^5}{1 - 0.05} \approx 157.89\text{ (mg).}
+
+$$
+
+\- Khi sử dụng lâu dài ($n \to +\infty$), lượng thuốc trong cơ thể đạt trạng thái bão hòa:
+
+$$
+
+S = \frac{150}{1 - 0.05} = \frac{150}{0.95} = \frac{3000}{19} \approx 157.89\text{ (mg).}
+
+$$
+
+\### b) Hệ thống bài tập cuối bài
+
+\*\*Bài 5.1:\*\* Tìm các giới hạn sau:
+
+\- a) $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 + 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 + \frac{1}{n^2}} = \frac{1}{2}$.
+
+\- b) $\lim\_{n \to +\infty} (\sqrt{n^2 + 2n} - n) = \lim\_{n \to +\infty} \frac{2n}{\sqrt{n^2 + 2n} + n} = \lim\_{n \to +\infty} \frac{2}{\sqrt{1 + \frac{2}{n}} + 1} = 1$.
+
+\*\*Bài 5.4:\*\* Viết các số thập phân vô hạn tuần hoàn dưới dạng phân số:
+
+\- a) $1.(12) = 1 + \frac{12}{10^2} + \frac{12}{10^4} + \dots = 1 + \frac{12/100}{1 - 1/100} = 1 + \frac{12}{99} = \frac{37}{33}$.
+
+\- b) $3.(102) = 3 + \frac{102}{10^3} + \frac{102}{10^6} + \dots = 3 + \frac{102/1000}{1 - 1/1000} = 3 + \frac{102}{999} = \frac{1034}{333}$.
