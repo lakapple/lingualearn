@@ -1,0 +1,259 @@
+---
+title: 'Bài 8: Biểu thức tọa độ các phép toán của véc tơ trong không gian.'
+description: Hệ thống lý thuyết bài Biểu thức tọa độ các phép toán của véc tơ trong không gian cùng ví dụ minh họa.
+tags:
+  - lớp 12
+  - Biểu thức toạ độ của phép cộng, trừ vectơ và nhân vectơ với một số
+  - Toạ độ trung điểm đoạn thẳng
+  - toạ độ trọng tâm tam giác
+  - Biểu thức toạ độ của tích vô hướng
+  - Biểu thức toạ độ của độ dài vectơ
+  - Biểu thức toạ độ của khoảng cách giữa hai điểm
+  - Góc giữa hai vectơ
+  - điều kiện vuông góc của hai vectơ
+grade: 12
+order: 8
+updatedDate: 2026-10-29T12:52:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Mục tiêu bài học
+
+### **Thuật ngữ:**
+
+·       Biểu thức toạ độ của phép cộng, trừ vectơ và nhân vectơ với một số
+
+·       Toạ độ trung điểm đoạn thẳng, toạ độ trọng tâm tam giác
+
+·       Biểu thức toạ độ của tích vô hướng, độ dài vectơ, khoảng cách giữa hai điểm
+
+·       Góc giữa hai vectơ, điều kiện vuông góc của hai vectơ
+
+### **Kiến thức, kĩ năng:**
+
+·       Nhận biết và vận dụng thành thạo biểu thức toạ độ của các phép toán vectơ trong không gian Oxyz: cộng, trừ vectơ, nhân số với vectơ, tích vô hướng.
+
+·       Tính độ dài của một vectơ, khoảng cách giữa hai điểm khi biết toạ độ; xác định góc giữa hai vectơ và chứng minh hai vectơ vuông góc.
+
+·       Xác định toạ độ trung điểm của đoạn thẳng, toạ độ trọng tâm của tam giác.
+
+·       Thiết lập hệ toạ độ Oxyz thích hợp để mô hình hoá và giải quyết các bài toán thực tiễn (kích thước nhà gỗ lăng trụ, quỹ đạo chuyển động của máy bay, vị trí và khoảng cách giữa các khinh khí cầu, toạ độ điểm treo đèn, phạm vi quét radar trên giàn khoan biển).
+
+## Biểu thức toạ độ của phép cộng, trừ vectơ và nhân một số với vectơ
+
+\<Youtube url="https://www.youtube.com/watch?v=example_phep_toan_vecto_oxyz"/>
+
+### a) Công thức toạ độ của các phép toán tuyến tính và tính chất cùng phương
+
+Trong không gian $Oxyz$, cho hai vectơ $\vec{a} = (x; y; z)$ và $\vec{b} = (x'; y'; z') và số thực $k$:
+• Phép cộng hai vectơ: $\vec{a} + \vec{b} = (x + x'; y + y'; z + z')$.
+• Phép trừ hai vectơ: $\vec{a} - \vec{b} = (x - x'; y - y'; z - z')$.
+• Phép nhân một số với vectơ: $k\vec{a} = (kx; ky; kz)$.
+• Vectơ đối của $\vec{a} = (x; y; z)$ là $-\vec{a} = (-x; -y; -z)$.
+• Điều kiện cùng phương: Vectơ $\vec{a} = (x; y; z)$ cùng phương với vectơ $\vec{b} = (x'; y'; z') \ne \vec{0}$ khi và chỉ khi tồn tại số thực $k$ sao cho:
+$$\begin{cases} x = kx' \\\ y = ky' \\\ z = kz' \end{cases} \iff \frac{x}{x'} = \frac{y}{y'} = \frac{z}{z'} \quad (\text{nếu } x', y', z' \ne 0).$$
+
+### b) Toạ độ trung điểm đoạn thẳng và trọng tâm tam giác
+
+Cho ba điểm $A(x_A; y_A; z_A), B(x_B; y_B; z_B)$ và $C(x_C; y_C; z_C)$:
+• Toạ độ trung điểm $M$ của đoạn thẳng $AB$ là:
+$$M\left(\frac{x_A + x_B}{2}; \frac{y_A + y_B}{2}; \frac{z_A + z_B}{2}\right)$$
+• Toạ độ trọng tâm $G$ của tam giác $ABC$ là:
+$$G\left(\frac{x_A + x_B + x_C}{3}; \frac{y_A + y_B + y_C}{3}; \frac{z_A + z_B + z_C}{3}\right)$$
+
+**Ví dụ 1:** Trong không gian $Oxyz$, cho hai vectơ $\vec{a} = (2; 1; 5)$ và $\vec{b} = (2; 2; 1)$. Tìm toạ độ của mỗi vectơ: a) $\vec{a} - \vec{b}$; b) $3\vec{a} + 2\vec{b}$.
+
+Lời giải Ví dụ 1:
+• a) $\vec{a} - \vec{b} = (2 - 2; 1 - 2; 5 - 1) = (0; -1; 4)$.
+• b) Ta có $3\vec{a} = (6; 3; 15)$ và $2\vec{b} = (4; 4; 2)$, suy ra $3\vec{a} + 2\vec{b} = (6 + 4; 3 + 4; 15 + 2) = (10; 7; 17)$.
+
+**Luyện tập 1:** Trong không gian $Oxyz$, cho ba vectơ $\vec{u} = (1; 8; 6), \vec{v} = (-1; 3; -2)$ và $\vec{w} = (0; 5; 4)$. Tìm toạ độ của vectơ $\vec{u} - 2\vec{v} + \vec{w}$.
+
+Lời giải Luyện tập 1:
+• Ta có $-2\vec{v} = (2; -6; 4)$.
+• Do đó: $\vec{u} - 2\vec{v} + \vec{w} = (1 + 2 + 0; 8 - 6 + 5; 6 + 4 + 4) = (3; 7; 14)$.
+
+**Ví dụ 2:** Trong không gian $Oxyz$, cho ba điểm $A(1; 2; 3), B(3; 2; 1)$ và $C(2; -1; 5)$. Tìm toạ độ trung điểm $M$ của đoạn thẳng $AB$ và trọng tâm $G$ của tam giác $ABC$.
+
+Lời giải Ví dụ 2:
+• Toạ độ trung điểm $M$ của $AB$: $M\left(\frac{1 + 3}{2}; \frac{2 + 2}{2}; \frac{3 + 1}{2}\right) \implies M(2; 2; 2)$.
+• Toạ độ trọng tâm $G$ của $\triangle ABC$: $G\left(\frac{1 + 3 + 2}{3}; \frac{2 + 2 + (-1)}{3}; \frac{3 + 1 + 5}{3}\right) \implies G(2; 1; 3)$.
+
+**Luyện tập 2:** Trong không gian $Oxyz$, cho ba điểm $A(2; 9; -1), B(9; 4; 5)$ và $G(3; 0; 4)$. Tìm toạ độ điểm $C$ sao cho tam giác $ABC$ nhận $G$ làm trọng tâm.
+
+Lời giải Luyện tập 2:
+• Vì $G$ là trọng tâm của $\triangle ABC$, ta có hệ thức:
+  $$\begin{cases} x_C = 3x_G - x_A - x_B = 3(3) - 2 - 9 = -2 \\\ y_C = 3y_G - y_A - y_B = 3(0) - 9 - 4 = -13 \\\ z_C = 3z_G - z_A - z_B = 3(4) - (-1) - 5 = 8 \end{cases}$$
+• Vậy toạ độ điểm $C$ là $C(-2; -13; 8)$.
+
+## Biểu thức toạ độ của tích vô hướng và ứng dụng hình học
+
+\<Youtube url="https://www.youtube.com/watch?v=example_tich_vo_huong_oxyz"/>
+
+### a) Công thức tích vô hướng, độ dài vectơ và khoảng cách
+
+Biểu thức toạ độ của tích vô hướng:
+Cho hai vectơ $\vec{a} = (x; y; z)$ và $\vec{b} = (x'; y'; z'). Tích vô hướng được xác định bởi:
+$$\vec{a} \cdot \vec{b} = xx' + yy' + zz'$$
+Các hệ quả hình học quan trọng:
+• Điều kiện vuông góc: $\vec{a} \perp \vec{b} \iff \vec{a} \cdot \vec{b} = 0 \iff xx' + yy' + zz' = 0$.
+• Độ dài của vectơ: $|\vec{a}| = \sqrt{\vec{a} \cdot \vec{a}} = \sqrt{x^2 + y^2 + z^2}$.
+• Khoảng cách giữa hai điểm: Với $A(x_A; y_A; z_A)$ và $B(x_B; y_B; z_B)$:
+$$AB = |\vec{AB}| = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2 + (z_B - z_A)^2}$$
+• Góc giữa hai vectơ: Với $\vec{a}, \vec{b} \ne \vec{0}$:
+$$\cos(\vec{a}, \vec{b}) = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|} = \frac{xx' + yy' + zz'}{\sqrt{x^2 + y^2 + z^2} \cdot \sqrt{x'^2 + y'^2 + z'^2}}$$
+
+### b) Ví dụ và luyện tập về tích vô hướng
+
+**Ví dụ 3:** Trong không gian $Oxyz$, cho hai vectơ $\vec{a} = (1; 4; 2)$ và $\vec{b} = (-4; 1; 0)$.
+a) Tính $\vec{a} \cdot \vec{b}$ và cho biết $\vec{a}$ và $\vec{b}$ có vuông góc với nhau hay không.
+b) Tính độ dài của vectơ $\vec{a}$.
+
+Lời giải Ví dụ 3:
+• a) $\vec{a} \cdot \vec{b} = 1(-4) + 4(1) + 2(0) = -4 + 4 + 0 = 0$. Vì tích vô hướng bằng 0 nên $\vec{a} \perp \vec{b}$.
+• b) $|\vec{a}| = \sqrt{1^2 + 4^2 + 2^2} = \sqrt{1 + 16 + 4} = \sqrt{21}$.
+
+**Luyện tập 3:** Trong Ví dụ 3, tính $(\vec{a} + \vec{b})^2$.
+
+Lời giải Luyện tập 3:
+• Ta có $\vec{a} + \vec{b} = (1 - 4; 4 + 1; 2 + 0) = (-3; 5; 2)$.
+• Khi đó: $(\vec{a} + \vec{b})^2 = |\vec{a} + \vec{b}|^2 = (-3)^2 + 5^2 + 2^2 = 9 + 25 + 4 = 38$.
+• (Cách khác: Vì $\vec{a} \perp \vec{b} \implies \vec{a} \cdot \vec{b} = 0$, nên $(\vec{a} + \vec{b})^2 = |\vec{a}|^2 + 2\vec{a} \cdot \vec{b} + |\vec{b}|^2 = 21 + 0 + (16 + 1) = 38$).
+
+**Ví dụ 4:** Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật, $SA \perp (ABCD)$ với $SA = 2, AB = 3, AD = 4$. Chọn hệ toạ độ $Oxyz$ với $O \equiv A$, các tia $Ox, Oy, Oz$ lần lượt trùng các tia $AB, AD, AS$.
+a) Xác định toạ độ các đỉnh của hình chóp.
+b) Tính độ dài các đoạn thẳng $BD$ và $SC$.
+c) Tính số đo góc $(\vec{BD}, \vec{SC})$.
+
+Lời giải Ví dụ 4:
+• a) $A(0; 0; 0), B(3; 0; 0), D(0; 4; 0), S(0; 0; 2), C(3; 4; 0)$.
+• b) $\vec{BD} = (-3; 4; 0) \implies BD = \sqrt{(-3)^2 + 4^2 + 0^2} = 5$.
+  $\vec{SC} = (3; 4; -2) \implies SC = \sqrt{3^2 + 4^2 + (-2)^2} = \sqrt{29}$.
+• c) $\cos(\vec{BD}, \vec{SC}) = \frac{\vec{BD} \cdot \vec{SC}}{|\vec{BD}| \cdot |\vec{SC}|} = \frac{(-3)(3) + 4(4) + 0(-2)}{5\sqrt{29}} = \frac{7}{5\sqrt{29}} \approx 0{,}26 \implies (\vec{BD}, \vec{SC}) \approx 74{,}9^\circ$.
+
+**Luyện tập 4:** Trong không gian $Oxyz$, cho ba điểm $A(0; 2; 1), B(3; -2; 1)$ và $C(-2; 5; 7)$.
+a) Tính chu vi tam giác $ABC$.
+b) Tính số đo góc $\widehat{BAC}$.
+
+Lời giải Luyện tập 4:
+• a) Tính các vectơ cạnh: $\vec{AB} = (3; -4; 0) \implies AB = \sqrt{3^2 + (-4)^2 + 0^2} = 5$.
+  $\vec{AC} = (-2; 3; 6) \implies AC = \sqrt{(-2)^2 + 3^2 + 6^2} = 7$.
+  $\vec{BC} = (-5; 7; 6) \implies BC = \sqrt{(-5)^2 + 7^2 + 6^2} = \sqrt{110} \approx 10{,}49$.
+  Chu vi tam giác $ABC$ là: $P = AB + AC + BC = 5 + 7 + \sqrt{110} = 12 + \sqrt{110} \approx 22{,}49$.
+• b) Ta có $\cos \widehat{BAC} = \frac{\vec{AB} \cdot \vec{AC}}{|\vec{AB}| \cdot |\vec{AC}|} = \frac{3(-2) + (-4)(3) + 0(6)}{5 \times 7} = \frac{-18}{35} \approx -0{,}5143$.
+  Suy ra $\widehat{BAC} \approx 120{,}95^\circ$ (hoặc $120^\circ 57'$).
+
+## Ứng dụng toạ độ vectơ vào các bài toán thực tiễn
+
+\<Youtube url="https://www.youtube.com/watch?v=example_ung_dung_thuc_te_vecto_oxyz"/>
+
+### a) Bài toán chuyển động và không gian định vị
+
+**Ví dụ 5 (Quỹ đạo chuyển động của máy bay):** Radar phát hiện máy bay bay thẳng đều từ $A(800; 500; 7)$ đến $B(940; 550; 8)$ trong 10 phút. Nếu tiếp tục bay theo hướng và vận tốc đó, tìm toạ độ máy bay sau 5 phút tiếp theo.
+
+Lời giải Ví dụ 5:
+• Gọi $C(x; y; z)$ là vị trí sau 5 phút tiếp theo. Vì vận tốc và hướng không đổi nên $\vec{BC} = \frac{1}{2}\vec{AB}$.
+• Ta có $\vec{AB} = (140; 50; 1) \implies \vec{BC} = (70; 25; 0{,}5)$.
+• Suy ra: $\begin{cases} x - 940 = 70 \\\ y - 550 = 25 \\\ z - 8 = 0{,}5 \end{cases} \iff \begin{cases} x = 1\\,010 \\\ y = 575 \\\ z = 8{,}5 \end{cases}$.
+• Vậy toạ độ của máy bay sau 5 phút tiếp theo là $C(1\\,010; 575; 8{,}5)$.
+
+**Luyện tập 5:** Trong Ví dụ 5, xác định toạ độ của máy bay sau 10 phút tiếp theo tính từ điểm $B$.
+
+Lời giải Luyện tập 5:
+• Gọi $D(x; y; z)$ là toạ độ máy bay sau 10 phút tiếp theo tính từ $B$.
+• Vì thời gian bay từ $B$ đến $D$ bằng thời gian bay từ $A$ đến $B$ (10 phút) nên $\vec{BD} = \vec{AB} = (140; 50; 1)$.
+• Suy ra: $\begin{cases} x - 940 = 140 \\\ y - 550 = 50 \\\ z - 8 = 1 \end{cases} \iff \begin{cases} x = 1\\,080 \\\ y = 600 \\\ z = 9 \end{cases} \implies D(1\\,080; 600; 9)$.
+
+**Ví dụ 6 (Kích thước căn nhà gỗ lăng trụ - Bài toán mở đầu):** Căn nhà gỗ dạng lăng trụ đứng tam giác $OAB.O'A'B'$. Hệ toạ độ $Oxyz$ (cm) có $A'(240; 450; 0)$ và $B'(120; 450; 300)$. Tính kích thước mỗi chiều của căn nhà.
+
+Lời giải Ví dụ 6:
+• Chiều dài nhà: Chiều dài lăng trụ chính là độ dài đoạn $OA = O'A' = 450\text{ cm}$.
+• Chiều rộng nhà: Độ dài cạnh đáy $OA'$ trên trục $Ox$ là $240\text{ cm}$ (vì $A'(240; 450; 0)$ và $O'(0; 450; 0)$).
+• Độ dài cạnh mái nhà: $\vec{A'B'} = (-120; 0; 300) \implies A'B' = \sqrt{(-120)^2 + 0^2 + 300^2} = 60\sqrt{29} \approx 323\text{ cm}$.
+• Chiều cao chóp nhà tính từ mặt đất là cao độ của $B'$ bằng $300\text{ cm}$.
+
+**Luyện tập 6:** Trong tình huống mở đầu, tính độ lớn của góc $\alpha$ tạo bởi mặt bên mái nhà và mặt đất.
+
+Lời giải Luyện tập 6:
+• Mặt đất nằm trong mặt phẳng $(Oxy)$ có vectơ nằm ngang $\vec{A'O'} = (-240; 0; 0)$.
+• Vectơ chỉ phương cạnh mái là $\vec{A'B'} = (-120; 0; 300)$.
+• Góc $\alpha$ giữa mặt bên và mặt đất chính là góc $\widehat{B'A'O'}$:
+  $$\cos \alpha = \frac{\vec{A'O'} \cdot \vec{A'B'}}{|\vec{A'O'}| \cdot |\vec{A'B'}|} = \frac{(-240)(-120) + 0 + 0}{240 \times 60\sqrt{29}} = \frac{28\\,800}{240 \times 323{,}11} = \frac{120}{60\sqrt{29}} = \frac{2}{\sqrt{29}} \approx 0{,}3714.$$
+• Suy ra $\alpha = \arccos\left(\frac{2}{\sqrt{29}}\right) \approx 68{,}2^\circ$.
+
+**Ví dụ 7 (Khoảng cách giữa hai khinh khí cầu):** Chọn hệ toạ độ $Oxyz$ (đơn vị km) với gốc $O$ tại bãi xuất phát: $Ox$ hướng nam, $Oy$ hướng đông, $Oz$ thẳng đứng. Khinh khí cầu 1 ở cách $O$ 2 km về phía nam, 1 km về phía đông, cao 0,5 km. Khinh khí cầu 2 ở cách $O$ 1 km về phía bắc, 1,5 km về phía tây, cao 0,8 km. Tính khoảng cách giữa hai khinh khí cầu.
+
+Lời giải Ví dụ 7:
+• Toạ độ khinh khí cầu 1: $M_1(2; 1; 0{,}5)$.
+• Toạ độ khinh khí cầu 2: Đi về phía bắc là chiều âm của $Ox$ ($-1$), phía tây là chiều âm của $Oy$ ($-1{,}5$), cao $0{,}8 \implies M_2(-1; -1{,}5; 0{,}8)$.
+• Khoảng cách giữa hai khinh khí cầu:
+  $$d = M_1M_2 = \sqrt{(-1 - 2)^2 + (-1{,}5 - 1)^2 + (0{,}8 - 0{,}5)^2} = \sqrt{9 + 6{,}25 + 0{,}09} = \sqrt{15{,}34} \approx 3{,}92\text{ (km)}.$$
+
+**Luyện tập 7:** Trong Ví dụ 7, khinh khí cầu thứ nhất hay thứ hai ở xa điểm xuất phát hơn?
+
+Lời giải Luyện tập 7:
+• Khoảng cách từ khinh khí cầu 1 đến gốc $O$: $OM_1 = \sqrt{2^2 + 1^2 + 0{,}5^2} = \sqrt{4 + 1 + 0{,}25} = \sqrt{5{,}25} \approx 2{,}29\text{ km}$.
+• Khoảng cách từ khinh khí cầu 2 đến gốc $O$: $OM_2 = \sqrt{(-1)^2 + (-1{,}5)^2 + 0{,}8^2} = \sqrt{1 + 2{,}25 + 0{,}64} = \sqrt{3{,}89} \approx 1{,}97\text{ km}$.
+• Vì $OM_1 > OM_2$ ($2{,}29\text{ km} > 1{,}97\text{ km}$), nên khinh khí cầu thứ nhất ở xa điểm xuất phát hơn.
+
+### b) Hệ thống bài tập cuối bài
+
+**Bài 2.20:** Trong không gian $Oxyz$, cho ba vectơ $\vec{a} = (3; 1; 2), \vec{b} = (-3; 0; 4)$ và $\vec{c} = (6; -1; 0)$.
+a) Tìm toạ độ của $\vec{a} + \vec{b} + \vec{c}$ và $2\vec{a} - 3\vec{b} - 5\vec{c}$.
+b) Tính các tích vô hướng $\vec{a} \cdot (-\vec{b})$ và $(2\vec{a}) \cdot \vec{c}$.
+
+Lời giải Bài 2.20:
+• a) $\vec{a} + \vec{b} + \vec{c} = (3 - 3 + 6; 1 + 0 - 1; 2 + 4 + 0) = (6; 0; 6)$.
+  $2\vec{a} = (6; 2; 4)$, $-3\vec{b} = (9; 0; -12)$, $-5\vec{c} = (-30; 5; 0)$.
+  $2\vec{a} - 3\vec{b} - 5\vec{c} = (6 + 9 - 30; 2 + 0 + 5; 4 - 12 + 0) = (-15; 7; -8)$.
+• b) $\vec{a} \cdot \vec{b} = 3(-3) + 1(0) + 2(4) = -9 + 0 + 8 = -1 \implies \vec{a} \cdot (-\vec{b}) = -(\vec{a} \cdot \vec{b}) = 1$.
+  $(2\vec{a}) \cdot \vec{c} = 2(\vec{a} \cdot \vec{c}) = 2[3(6) + 1(-1) + 2(0)] = 2(18 - 1) = 34$.
+
+**Bài 2.21:** Trong không gian $Oxyz$, cho ba điểm $M(-4; 3; 3), N(4; -4; 2)$ và $P(3; 6; -1)$.
+a) Tìm toạ độ $\vec{MN}, \vec{MP}$, chứng minh $M, N, P$ không thẳng hàng.
+b) Tìm $\vec{NM} + \vec{NP}$, suy ra toạ độ $Q$ để $MNPQ$ là hình bình hành.
+c) Tính chu vi hình bình hành $MNPQ$.
+
+Lời giải Bài 2.21:
+• a) $\vec{MN} = (8; -7; -1)$ và $\vec{MP} = (7; 3; -4)$.
+  Vì $\frac{8}{7} \ne \frac{-7}{3}$, nên $\vec{MN}$ và $\vec{MP}$ không cùng phương. Do đó $M, N, P$ không thẳng hàng.
+• b) Ta có $\vec{NM} = (-8; 7; 1)$ và $\vec{NP} = (3 - 4; 6 - (-4); -1 - 2) = (-1; 10; -3)$.
+  Suy ra $\vec{NM} + \vec{NP} = (-9; 17; -2)$.
+  Để $MNPQ$ là hình bình hành thì $\vec{NQ} = \vec{NM} + \vec{NP} \implies \begin{cases} x_Q - 4 = -9 \\\ y_Q - (-4) = 17 \\\ z_Q - 2 = -2 \end{cases} \iff \begin{cases} x_Q = -5 \\\ y_Q = 13 \\\ z_Q = 0 \end{cases} \implies Q(-5; 13; 0)$.
+• c) Độ dài các cạnh: $MN = \sqrt{8^2 + (-7)^2 + (-1)^2} = \sqrt{64 + 49 + 1} = \sqrt{114}$.
+  $NP = \sqrt{(-1)^2 + 10^2 + (-3)^2} = \sqrt{1 + 100 + 9} = \sqrt{110}$.
+  Chu vi hình bình hành $MNPQ$: $C = 2(MN + NP) = 2(\sqrt{114} + \sqrt{110}) \approx 42{,}33$.
+
+**Bài 2.22:** Cho tam giác $ABC$ có $A(1; 0; 1), B(0; -3; 1)$ và $C(4; -1; 4)$.
+a) Tìm toạ độ trọng tâm tam giác $ABC$.
+b) Chứng minh rằng $\widehat{BAC} = 90^\circ$.
+c) Tính góc $\widehat{ABC}$.
+
+Lời giải Bài 2.22:
+• a) Trọng tâm $G$: $x_G = \frac{1 + 0 + 4}{3} = \frac{5}{3}, y_G = \frac{0 - 3 - 1}{3} = -\frac{4}{3}, z_G = \frac{1 + 1 + 4}{3} = 2 \implies G\left(\frac{5}{3}; -\frac{4}{3}; 2\right)$.
+• b) $\vec{AB} = (-1; -3; 0)$ và $\vec{AC} = (3; -1; 3)$.
+  Tích vô hướng: $\vec{AB} \cdot \vec{AC} = (-1)(3) + (-3)(-1) + 0(3) = -3 + 3 + 0 = 0$.
+  Vì $\vec{AB} \cdot \vec{AC} = 0 \implies AB \perp AC \implies \widehat{BAC} = 90^\circ$.
+• c) Tam giác $ABC$ vuông tại $A$ nên $\tan \widehat{ABC} = \frac{AC}{AB}$.
+  Ta có $AB = \sqrt{(-1)^2 + (-3)^2 + 0^2} = \sqrt{10}$, $AC = \sqrt{3^2 + (-1)^2 + 3^2} = \sqrt{19}$.
+  Do đó $\cos \widehat{ABC} = \frac{AB}{BC} = \frac{AB}{\sqrt{AB^2 + AC^2}} = \frac{\sqrt{10}}{\sqrt{10 + 19}} = \sqrt{\frac{10}{29}} \approx 0{,}5872$.
+  Suy ra $\widehat{ABC} \approx 54{,}04^\circ$ (hoặc $54^\circ 2'$).
+
+**Bài 2.23 (Toạ độ điểm treo đèn lớp học):** Phòng học hình hộp chữ nhật dài 8 m (trục $Ox$), rộng 6 m (trục $Oy$), cao 3 m (trục $Oz$). Gốc $O$ ở một góc phòng, sàn là mặt phẳng $(Oxy)$. Đèn treo tại chính giữa trần nhà. Tìm toạ độ điểm treo đèn.
+
+Lời giải Bài 2.23:
+• Trần nhà nằm trên mặt phẳng có cao độ $z = 3\text{ m}$.
+• Chiều dài phòng dọc theo $Ox$ là 8 m, chiều rộng dọc theo $Oy$ là 6 m.
+• Vị trí chính giữa trần nhà có hình chiếu xuống mặt sàn là tâm của hình chữ nhật đáy:
+  $$x = \frac{8}{2} = 4\text{ (m)}, \quad y = \frac{6}{2} = 3\text{ (m)}, \quad z = 3\text{ (m)}.$$
+• Vậy toạ độ điểm treo đèn là $I(4; 3; 3)$.
+
+**Bài 2.24 (Phạm vi quét radar giàn khoan biển):** Hệ toạ độ $Oxyz$ (đơn vị km) có gốc $O$ tại giàn khoan trên biển, mặt biển là $(Oxy)$ với $Ox$ hướng tây, $Oy$ hướng nam, $Oz$ hướng thẳng đứng lên trời. Radar giàn khoan có bán kính theo dõi 30 km. Radar có phát hiện được tàu thám hiểm có toạ độ $(25; 15; -10)$ hay không? Giải thích.
+
+Lời giải Bài 2.24:
+• Khoảng cách từ radar tại gốc $O(0; 0; 0)$ đến tàu thám hiểm tại $M(25; 15; -10)$ (với cao độ âm thể hiện tàu lặn dưới mực nước biển) là:
+  $$d = OM = \sqrt{25^2 + 15^2 + (-10)^2} = \sqrt{625 + 225 + 100} = \sqrt{950} \approx 30{,}82\text{ (km)}.$$
+• So sánh với phạm vi theo dõi của radar: $d \approx 30{,}82\text{ km} > 30\text{ km}$.
+• Kết luận: Vì khoảng cách từ giàn khoan đến tàu vượt quá bán kính quét 30 km, nên radar không thể phát hiện được chiếc tàu thám hiểm này.
