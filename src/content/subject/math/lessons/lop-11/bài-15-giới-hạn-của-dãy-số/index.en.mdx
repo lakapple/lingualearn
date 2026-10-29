@@ -13,212 +13,104 @@ updatedDate: 2026-10-28T17:52:00
 draft: false
 ---
 
-import GeoGebra from '@/components/GeoGebra.astro';
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
 
-import Youtube from '@/components/Youtube.astro';
+**Lesson 15. Limits of Sequences**
 
-\## Learning Objectives
+**Terminology:**
 
-\*\*Terminology:\*\*
+Limit of a sequence
 
-\- Limit of a sequence ($\lim\_{n \to +\infty} u_n = a$, limit of $0$, finite limit)
+Limit operations
 
-\- Operations on limits (Limit laws)
+Infinite geometric series
 
-\- Infinite geometric series, sum of an infinite geometric series
+Sum of an infinite geometric series
 
-\- Infinite limits ($+\infty, -\infty$)
+**Knowledge and skills:**
 
-\*\*Knowledge and Skills:\*\*
+Recognize the concept of the limit of a sequence.
 
-\- Understand and identify the concept of the limit of a sequence.
+Explain some basic limits.
 
-\- Explain fundamental standard limits.
+Apply limit operations to find the limits of simple sequences.
 
-\- Apply limit laws to evaluate limits of simple sequences.
+Calculate the sum of an infinite geometric series and apply this result to solve hypothetical or practical real-world situations.
 
-\- Compute the sum of an infinite geometric series and apply this result to solve real-world problems and hypothetical scenarios.
+**1. Finite Limits of Sequences**
 
-\---
+**a) Recognizing Sequences with a Limit of 0**
 
-\## Warm-up: Zeno's Paradox of Achilles and the Tortoise
+We say that a sequence $(u_n)$ has a limit of $0$ as $n$ tends to positive infinity if $|u_n|$ can be made smaller than any arbitrarily small positive number from a certain term onwards, denoted as $\lim\_{n\to+\infty} u_n = 0$ or $u_n \to 0$ as $n \to +\infty$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_zeno_paradox" />
+**Note:** From the definition of a sequence having a limit of $0$, we obtain the following results:
 
-Achilles (a hero in Greek mythology described as swift-footed as the wind) pursues a tortoise along a straight path. Achilles starts at position $A_1$, situated at an initial distance $a$ behind the tortoise's starting position $R_1$. Zeno argued that, although Achilles runs much faster, he can never overtake the tortoise.
+• $\lim\_{n\to+\infty} \frac{1}{n^k} = 0$ where $k$ is a positive integer;
 
-Indeed, Achilles must first reach the tortoise's starting point $A_2 = R_1$. During that time interval, the tortoise has moved ahead to a new position $R_2$. Next, Achilles must reach $A_3 = R_2$, by which time the tortoise has advanced to $R_3$, and so on. Continuing this reasoning indefinitely, Achilles would never catch up with the tortoise.
+• $\lim\_{n\to+\infty} q^n = 0$ if $|q| < 1$.
 
-Zeno of Elea (c. 490 – 429 BC) was a Greek philosopher. Among Zeno's paradoxes, the Achilles and the Tortoise paradox is recognized as having spurred the development of the mathematical concept of limits—a cornerstone of modern calculus and analysis.
+• If $|u_n| \le v_n$ for all $n \ge 1$ and $\lim\_{n\to+\infty} v_n = 0$, then $\lim\_{n\to+\infty} u_n = 0$.
 
-\---
+**b) Recognizing Sequences with Finite Limits**
 
-\## 1. Finite Limit of a Sequence
+We say that a sequence $(u_n)$ has a limit equal to the real number $a$ as $n$ tends to positive infinity if $\lim\_{n\to+\infty} (u_n - a) = 0$, denoted as $\lim\_{n\to+\infty} u_n = a$ or $u_n \to a$ as $n \to +\infty$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han" />
+**Note:** If $u_n = c$ ($c$ is a constant), then $\lim\_{n\to+\infty} u_n = c$.
 
-\### a) Sequences Converging to 0 (Limit of 0)
+We have the equivalent relation: $\lim\_{n\to+\infty} u_n = a \Leftrightarrow \lim\_{n\to+\infty} (u_n - a) = 0$.
 
-\*\*Activity 1 (Identifying a sequence with limit 0):\*\*  
+**2. Theorems on Finite Limits of Sequences**
 
-Consider the sequence $(u_n)$ defined by $u_n = \frac{(-1)^n}{n}$.
+**a) Rules for Limit Calculations**
 
-\- The first five terms of the sequence are: $u_1 = -1$; $u_2 = \frac{1}{2}$; $u_3 = -\frac{1}{3}$; $u_4 = \frac{1}{4}$; $u_5 = -\frac{1}{5}$.
+In general, we have the following limit calculation rules:
 
-\- The distance from $u_n$ to $0$ is $|u_n| = \frac{1}{n}$. We have $|u_n| < 0.01 = \frac{1}{100} \Leftrightarrow n > 100$. Thus, from the 101st term onward, the distance from $u_n$ to $0$ is strictly less than $0.01$.
+a) If $\lim\_{n\to+\infty} u_n = a$ and $\lim\_{n\to+\infty} v_n = b$, then:
 
-\*\*Definition of a Limit of 0:\*\*  
+• $\lim\_{n\to+\infty} (u_n + v_n) = a + b$;
 
-A sequence $(u_n)$ is said to have a limit of $0$ as $n$ tends to positive infinity if $|u_n|$ can be made arbitrarily small from a certain index onward.  
+• $\lim\_{n\to+\infty} (u_n - v_n) = a - b$;
 
-Notation: $\lim\_{n \to +\infty} u_n = 0$ or $u_n \to 0$ as $n \to +\infty$.
+• $\lim\_{n\to+\infty} (u_n \cdot v_n) = a \cdot b$;
 
-\*\*Notes (Fundamental Limits):\*\*
+• $\lim\_{n\to+\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (if $b \neq 0$).
 
-\- $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$, where $k$ is any positive integer;
+b) If $u_n \ge 0$ for all $n$ and $\lim\_{n\to+\infty} u_n = a$, then $a \ge 0$ and $\lim\_{n\to+\infty} \sqrt{u_n} = \sqrt{a}$.
 
-\- $\lim\_{n \to +\infty} q^n = 0$ if $|q| < 1$;
+**Method:** To find the limit of a fractional sequence, divide both the numerator and the denominator by the highest power of $n$, then apply the limit calculation rules.
 
-\- If $|u_n| \le v_n$ for all $n \ge 1$ and $\lim\_{n \to +\infty} v_n = 0$, then $\lim\_{n \to +\infty} u_n = 0$ (Squeeze Theorem).
+**3. Sum of an Infinite Geometric Series**
 
-\### b) Finite Limit of a Sequence
+**a) Concept of an Infinite Geometric Series**
 
-\*\*Activity 2 (Identifying a sequence with a finite limit):\*\*  
+An infinite geometric sequence $(u_n)$ with common ratio $q$ satisfying $|q| < 1$ is called an infinite geometric series (or infinite decreasing geometric progression).
 
-Consider the sequence $(u_n)$ given by $u_n = \frac{n + (-1)^n}{n}$. Let $(v_n)$ be the sequence defined by $v_n = u_n - 1 = \frac{(-1)^n}{n}$. Then $\lim\_{n \to +\infty} v_n = 0$.
+**b) Sum Formula**
 
-\*\*Definition of a Finite Limit:\*\*  
+Given an infinite geometric series $(u_n)$ with common ratio $q$ ($|q| < 1$). The sum of the infinite geometric series is determined by the formula:
 
-A sequence $(u_n)$ is said to have a limit of a real number $a$ as $n$ tends to positive infinity if $\lim\_{n \to +\infty} (u_n - a) = 0$.  
+$$S = u_1 + u_2 + \dots + u_n + \dots = \frac{u_1}{1 - q}$$
 
-Notation: $\lim\_{n \to +\infty} u_n = a$ or $u_n \to a$ as $n \to +\infty$.
+**4. Infinite Limits of Sequences**
 
-\*\*Notes:\*\*
+**a) Definition of Infinite Limits**
 
-\- $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$.
+• A sequence $(u_n)$ is said to have a limit of $+\infty$ as $n \to +\infty$ if $u_n$ can be made greater than any arbitrary positive number from a certain term onwards, denoted as $\lim\_{n\to+\infty} u_n = +\infty$ or $u_n \to +\infty$ as $n \to +\infty$.
 
-\- If $u_n = c$ (where $c$ is a constant) for all $n$, then $\lim\_{n \to +\infty} u_n = c$.
+• A sequence $(u_n)$ is said to have a limit of $-\infty$ as $n \to +\infty$ if $\lim\_{n\to+\infty} (-u_n) = +\infty$, denoted as $\lim\_{n\to+\infty} u_n = -\infty$ or $u_n \to -\infty$ as $n \to +\infty$.
 
-\### c) Examples and Practice
+**b) Commonly Used Basic Limits**
 
-\*\*Example 1:\*\* Consider the sequence $(u_n)$ with $u_n = \frac{1}{n^2}$. Explain why the limit of this sequence is $0$.
+• $\lim\_{n\to+\infty} n^k = +\infty$ where $k$ is a positive integer;
 
-\*Solution:\*  
+• $\lim\_{n\to+\infty} q^n = +\infty$ where $q > 1$.
 
-This sequence has a limit of $0$ because $|u_n| = \frac{1}{n^2}$ can be made arbitrarily small for sufficiently large $n$. For example, to ensure that $|u_n| < 0.0001 = \frac{1}{10000}$, we need $n^2 > 10000 \Leftrightarrow n > 100$. Thus, from the 101st term onward, all terms have an absolute value strictly less than $0.0001$. Therefore, $\lim\_{n \to +\infty} \frac{1}{n^2} = 0$.
+**c) Rules for Infinite Limits**
 
-\*\*Practice 1:\*\* Prove that $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+Regarding infinite limits of sequences, we have the following rules:
 
-\*Solution:\*  
+• If $\lim\_{n\to+\infty} u_n = a$ and $\lim\_{n\to+\infty} v_n = \pm\infty$, then $\lim\_{n\to+\infty} \frac{u_n}{v_n} = 0$.
 
-We have $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$. Because $\left|\frac{1}{3}\right| < 1$, it follows from standard limits that $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Hence, $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+• If $\lim\_{n\to+\infty} u_n = a > 0$, $\lim\_{n\to+\infty} v_n = 0$, and $v_n > 0$ for all $n$, then $\lim\_{n\to+\infty} \frac{u_n}{v_n} = +\infty$.
 
-\*\*Example 2:\*\* Consider the sequence $(u_n)$ with $u_n = \frac{2n + 1}{n}$. Prove that $\lim\_{n \to +\infty} u_n = 2$.
-
-\*Solution:\*  
-
-We have $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{1}{n}$. Since $\lim\_{n \to +\infty} \frac{1}{n} = 0$, we obtain $\lim\_{n \to +\infty} (u_n - 2) = 0$. Consequently, $\lim\_{n \to +\infty} u_n = 2$.
-
-\*\*Practice 2:\*\* Given the sequence $(u_n)$ with $u_n = \frac{3 \cdot 2^n - 1}{2^n}$, prove that $\lim\_{n \to +\infty} u_n = 3$.
-
-\*Solution:\*  
-
-We have $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$. Since $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$, it follows that $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
-
-\*\*Application 1:\*\* A rubber ball is dropped from a height of $5\text{ m}$ onto a flat floor. After each bounce, it rebounds to $\frac{2}{3}$ of its previous height. Assuming the ball continues bouncing indefinitely, prove that the sequence of rebound heights $(u_n)$ has a limit of $0$.
-
-\*Solution:\*  
-
-The height after the first bounce is $u_1 = 5 \cdot \frac{2}{3}$. After the $n$-th bounce, the height is given by $u_n = 5 \cdot \left(\frac{2}{3}\right)^n$. Since $\left|\frac{2}{3}\right| < 1$, we have $\lim\_{n \to +\infty} \left(\frac{2}{3}\right)^n = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 0$.
-
-\---
-
-\## 2. Limit Laws for Sequences
-
-\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_gioi_han" />
-
-\### a) Operational Rules (Limit Laws)
-
-If $\lim\_{n \to +\infty} u_n = a$ and $\lim\_{n \to +\infty} v_n = b$, then:
-
-\- $\lim\_{n \to +\infty} (u_n + v_n) = a + b$;
-
-\- $\lim\_{n \to +\infty} (u_n - v_n) = a - b$;
-
-\- $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$;
-
-\- $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (provided that $b \ne 0$).
-
-Furthermore, if $u_n \ge 0$ for all $n$ and $\lim\_{n \to +\infty} u_n = a$, then $a \ge 0$ and $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
-
-\### b) Examples and Practice
-
-\*\*Example 3:\*\* Evaluate $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
-
-\*Solution:\*  
-
-Divide both the numerator and the denominator by the highest power of $n$, which is $n^2$:
-
-$$
-
-\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.
-
-$$
-
-\*\*Practice 3:\*\* Evaluate $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
-
-\*Solution:\*  
-
-Divide both the numerator and the denominator by $n$ (for $n > 0$, $\sqrt{n^2} = n$):
-
-$$
-
-\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.
-
-$$
-
-\---
-
-\## 3. Sum of an Infinite Geometric Series
-
-\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han" />
-
-\### a) Concept and Formula
-
-\- An infinite geometric sequence $(u_n)$ with common ratio $q$ satisfying $|q| < 1$ is called an \*\*infinite decreasing geometric sequence\*\* (convergent geometric sequence).
-
-\- The sum of the first $n$ terms is $S_n = \frac{u_1(1 - q^n)}{1 - q}$. Since $|q| < 1$, we have $\lim\_{n \to +\infty} q^n = 0$. Therefore:
-
-$$
-
-S = \lim\_{n \to +\infty} S_n = \frac{u_1}{1 - q} \quad (|q| < 1).
-
-$$
-
-\### b) Examples and Practice
-
-\*\*Example 4:\*\* Compute the sum $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
-
-\*Solution:\*  
-
-This is an infinite geometric series with initial term $u_1 = 1$ and common ratio $q = -\frac{1}{2}$. The sum is:
-
-$$
-
-S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{2}{3}.
-
-$$
-
-\*\*Example 5:\*\* Express the repeating decimal $2.222\dots$ as a common fraction.
-
-\*Solution:\*  
-
-We can write: $2.222\dots = 2 + 2 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10^2} + \dots$  
-
-This is an infinite geometric series with $u_1 = 2$ and $q = \frac{1}{10}$:
-
-$$
-
-2.222\dots = \frac{u_1}{1 - q} = \frac{2}{1 - \frac{1}{10}} = \frac{20}{9}.
-
-$$
+• If $\lim\_{n\to+\infty} u_n = +\infty$ and $\lim\_{n\to+\infty} v_n = a > 0$, then $\lim\_{n\to+\infty} (u_n \cdot v_n) = +\infty$.

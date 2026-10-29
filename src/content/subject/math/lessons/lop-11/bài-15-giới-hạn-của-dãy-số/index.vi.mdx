@@ -13,198 +13,104 @@ updatedDate: 2026-10-28T17:52:00
 draft: false
 ---
 
-import GeoGebra from '@/components/GeoGebra.astro';
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
 
-import Youtube from '@/components/Youtube.astro';
+**Bài 15. Giới hạn của dãy số**
 
-\## Mục tiêu bài học
+**Thuật ngữ:**
 
-\*\*Thuật ngữ:\*\*
+Giới hạn của dãy số
 
-\- Giới hạn của dãy số ($\lim\_{n \to +\infty} u_n = a$, giới hạn $0$, giới hạn hữu hạn)
+Các phép toán giới hạn
 
-\- Các phép toán giới hạn
+Cấp số nhân lùi vô hạn
 
-\- Cấp số nhân lùi vô hạn, tổng của cấp số nhân lùi vô hạn
+Tổng của cấp số nhân lùi vô hạn
 
-\- Giới hạn vô cực ($+\infty, -\infty$)
+**Kiến thức, kĩ năng:**
 
-\*\*Kiến thức, kĩ năng:\*\*
+Nhận biết khái niệm giới hạn của dãy số.
 
-\- Nhận biết khái niệm giới hạn của dãy số.
+Giải thích một số giới hạn cơ bản.
 
-\- Giải thích một số giới hạn cơ bản.
+Vận dụng các phép toán giới hạn để tìm giới hạn của một số dãy số đơn giản.
 
-\- Vận dụng các phép toán giới hạn để tìm giới hạn của một số dãy số đơn giản.
+Tính tổng của một cấp số nhân lùi vô hạn và vận dụng được kết quả đó để giải quyết một số tình huống thực tiễn giả định hoặc liên quan đến thực tiễn.
 
-\- Tính tổng của một cấp số nhân lùi vô hạn và vận dụng được kết quả đó để giải quyết một số tình huống thực tiễn giả định hoặc liên quan đến thực tiễn.
+**1. Giới hạn hữu hạn của dãy số**
 
-\---
+**a) Nhận biết dãy số có giới hạn là 0**
 
-\## Khởi động: Nghịch lí Zeno về Achilles và con rùa
+Ta nói dãy số $(u_n)$ có giới hạn là $0$ khi $n$ dần tới dương vô cực, nếu $|u_n|$ có thể nhỏ hơn một số dương bé tuỳ ý, kể từ một số hạng nào đó trở đi, kí hiệu $\lim\_{n\to+\infty} u_n = 0$ hay $u_n \to 0$ khi $n \to +\infty$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_zeno_paradox" />
+**Chú ý:** Từ định nghĩa dãy số có giới hạn $0$, ta có các kết quả sau:
 
-Achilles (A-sin, một nhân vật trong thần thoại Hy Lạp, được mô tả là có thể chạy nhanh như gió) đuổi theo một con rùa trên một đường thẳng. Vị trí xuất phát của Achilles là $A_1$, cách vị trí xuất phát $R_1$ của rùa một quãng đường có chiều dài là $a$. Zeno lí luận rằng, mặc dù chạy nhanh hơn nhưng Achilles không bao giờ đuổi kịp rùa.
+• $\lim\_{n\to+\infty} \frac{1}{n^k} = 0$ với $k$ là một số nguyên dương;
 
-Thật vậy, trước tiên Achilles phải đến được vị trí $A_2 = R_1$, và trong khoảng thời gian này, rùa đã di chuyển đến vị trí $R_2$. Sau đó, Achilles phải đến được vị trí $A_3 = R_2$, lúc này rùa đã di chuyển đến vị trí $R_3$,... Cứ như vậy, Achilles không bao giờ đuổi kịp rùa.
+• $\lim\_{n\to+\infty} q^n = 0$ nếu $|q| < 1$.
 
-Zeno (490 – 429 trước Công nguyên) là một triết gia Hy Lạp. Trong số các nghịch lí của Zeno, nghịch lí Achilles đuổi rùa được coi là đã thúc đẩy sự hình thành khái niệm giới hạn, một công cụ thiết yếu của toán học hiện đại.
+• Nếu $|u_n| \le v_n$ với mọi $n \ge 1$ và $\lim\_{n\to+\infty} v_n = 0$ thì $\lim\_{n\to+\infty} u_n = 0$.
 
-\---
+**b) Nhận biết dãy số có giới hạn hữu hạn**
 
-\## 1. Giới hạn hữu hạn của dãy số
+Ta nói dãy số $(u_n)$ có giới hạn là số thực $a$ khi $n$ dần tới dương vô cực nếu $\lim\_{n\to+\infty} (u_n - a) = 0$, kí hiệu $\lim\_{n\to+\infty} u_n = a$ hay $u_n \to a$ khi $n \to +\infty$.
 
-\<Youtube url="https://www.youtube.com/watch?v=example_gioi_han_huu_han" />
+**Chú ý:** Nếu $u_n = c$ ($c$ là hằng số) thì $\lim\_{n\to+\infty} u_n = c$.
 
-\### a) Giới hạn 0 của dãy số
+Ta có hệ thức tương đương: $\lim\_{n\to+\infty} u_n = a \Leftrightarrow \lim\_{n\to+\infty} (u_n - a) = 0$.
 
-\*\*HĐ1 (Nhận biết dãy số có giới hạn là 0):\*\*  
+**2. Định lí về giới hạn hữu hạn của dãy số**
 
-Cho dãy số $(u_n)$ với $u_n = \frac{(-1)^n}{n}$.
+**a) Các quy tắc tính giới hạn**
 
-\- Năm số hạng đầu của dãy: $u_1 = -1$; $u_2 = \frac{1}{2}$; $u_3 = -\frac{1}{3}$; $u_4 = \frac{1}{4}$; $u_5 = -\frac{1}{5}$.
+Tổng quát, ta có các quy tắc tính giới hạn sau đây:
 
-\- Khoảng cách từ $u_n$ đến $0$ là $|u_n| = \frac{1}{n}$. Để $|u_n| < 0.01 = \frac{1}{100} \Leftrightarrow n > 100$. Vậy kể từ số hạng thứ $101$, khoảng cách từ $u_n$ đến $0$ nhỏ hơn $0.01$.
+a) Nếu $\lim\_{n\to+\infty} u_n = a$ và $\lim\_{n\to+\infty} v_n = b$ thì:
 
-\*\*Định nghĩa giới hạn 0:\*\*  
+• $\lim\_{n\to+\infty} (u_n + v_n) = a + b$;
 
-Ta nói dãy số $(u_n)$ có giới hạn là $0$ khi $n$ dần tới dương vô cực, nếu $|u_n|$ có thể nhỏ hơn một số dương bé tuỳ ý, kể từ một số hạng nào đó trở đi, kí hiệu $\lim\_{n \to +\infty} u_n = 0$ hay $u_n \to 0$ khi $n \to +\infty$.
+• $\lim\_{n\to+\infty} (u_n - v_n) = a - b$;
 
-\*\*Chú ý (Các giới hạn cơ bản):\*\*
+• $\lim\_{n\to+\infty} (u_n \cdot v_n) = a \cdot b$;
 
-\- $\lim\_{n \to +\infty} \frac{1}{n^k} = 0$ với $k$ là một số nguyên dương;
+• $\lim\_{n\to+\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (nếu $b \neq 0$).
 
-\- $\lim\_{n \to +\infty} q^n = 0$ nếu $|q| < 1$;
+b) Nếu $u_n \ge 0$ với mọi $n$ và $\lim\_{n\to+\infty} u_n = a$ thì $a \ge 0$ và $\lim\_{n\to+\infty} \sqrt{u_n} = \sqrt{a}$.
 
-\- Nếu $|u_n| \le v_n$ với mọi $n \ge 1$ và $\lim\_{n \to +\infty} v_n = 0$ thì $\lim\_{n \to +\infty} u_n = 0$.
+**Phương pháp:** Để tính giới hạn của dãy số dạng phân thức, ta chia cả tử thức và mẫu thức cho luỹ thừa cao nhất của $n$, rồi áp dụng các quy tắc tính giới hạn.
 
-\### b) Giới hạn hữu hạn của dãy số
+**3. Tổng của cấp số nhân lùi vô hạn**
 
-\*\*HĐ2 (Nhận biết dãy số có giới hạn hữu hạn):\*\*  
+**a) Khái niệm cấp số nhân lùi vô hạn**
 
-Cho dãy số $(u_n)$ với $u_n = \frac{n + (-1)^n}{n}$. Xét dãy số $(v_n)$ xác định bởi $v_n = u_n - 1 = \frac{(-1)^n}{n}$. Khi đó $\lim\_{n \to +\infty} v_n = 0$.
+Cấp số nhân vô hạn $(u_n)$ có công bội $q$ với $|q| < 1$ được gọi là cấp số nhân lùi vô hạn.
 
-\*\*Định nghĩa giới hạn hữu hạn:\*\*  
+**b) Công thức tính tổng**
 
-Ta nói dãy số $(u_n)$ có giới hạn là số thực $a$ khi $n$ dần tới dương vô cực nếu $\lim\_{n \to +\infty} (u_n - a) = 0$, kí hiệu $\lim\_{n \to +\infty} u_n = a$ hay $u_n \to a$ khi $n \to +\infty$.
+Cho cấp số nhân lùi vô hạn $(u_n)$ với công bội $q$ ($|q| < 1$). Khi đó tổng của cấp số nhân lùi vô hạn được xác định bởi công thức:
 
-\*\*Chú ý:\*\*
+$$S = u_1 + u_2 + \dots + u_n + \dots = \frac{u_1}{1 - q}$$
 
-\- $\lim\_{n \to +\infty} u_n = a \iff \lim\_{n \to +\infty} (u_n - a) = 0$.
+**4. Giới hạn vô cực của dãy số**
 
-\- Nếu $u_n = c$ ($c$ là hằng số) thì $\lim\_{n \to +\infty} u_n = c$.
+**a) Định nghĩa giới hạn vô cực**
 
-\### c) Ví dụ và Luyện tập
+• Dãy số $(u_n)$ được gọi là có giới hạn $+\infty$ khi $n \to +\infty$ nếu $u_n$ có thể lớn hơn một số dương bất kì, kể từ một số hạng nào đó trở đi, kí hiệu $\lim\_{n\to+\infty} u_n = +\infty$ hay $u_n \to +\infty$ khi $n \to +\infty$.
 
-\*\*Ví dụ 1:\*\* Xét dãy số $(u_n)$ với $u_n = \frac{1}{n^2}$. Giải thích vì sao dãy số này có giới hạn là $0$.
+• Dãy số $(u_n)$ được gọi là có giới hạn $-\infty$ khi $n \to +\infty$ nếu $\lim\_{n\to+\infty} (-u_n) = +\infty$, kí hiệu $\lim\_{n\to+\infty} u_n = -\infty$ hay $u_n \to -\infty$ khi $n \to +\infty$.
 
-\*Lời giải:\*  
+**b) Các giới hạn cơ bản thường dùng**
 
-Dãy số này có giới hạn là $0$, bởi vì $|u_n| = \frac{1}{n^2}$ có thể nhỏ hơn một số dương bé tuỳ ý khi $n$ đủ lớn. Chẳng hạn, để $|u_n| < 0.0001 = \frac{1}{10000}$, ta cần $n^2 > 10000 \Leftrightarrow n > 100$. Như vậy, kể từ số hạng thứ $101$, các số hạng đều có giá trị tuyệt đối nhỏ hơn $0.0001$.
+• $\lim\_{n\to+\infty} n^k = +\infty$ với $k$ là số nguyên dương;
 
-\*\*Luyện tập 1:\*\* Chứng minh rằng $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+• $\lim\_{n\to+\infty} q^n = +\infty$ với $q > 1$.
 
-\*Lời giải:\*  
+**c) Một số quy tắc tính giới hạn vô cực**
 
-Ta có $\left| \frac{(-1)^{n-1}}{3^n} \right| = \frac{1}{3^n} = \left(\frac{1}{3}\right)^n$. Vì $\left|\frac{1}{3}\right| < 1$ nên $\lim\_{n \to +\infty} \left(\frac{1}{3}\right)^n = 0$. Suy ra $\lim\_{n \to +\infty} \frac{(-1)^{n-1}}{3^n} = 0$.
+Liên quan đến giới hạn vô cực của dãy số, ta có một số quy tắc sau đây:
 
-\*\*Ví dụ 2:\*\* Xét dãy số $(u_n)$ với $u_n = \frac{2n + 1}{n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 2$.
+• Nếu $\lim\_{n\to+\infty} u_n = a$ và $\lim\_{n\to+\infty} v_n = \pm\infty$ thì $\lim\_{n\to+\infty} \frac{u_n}{v_n} = 0$.
 
-\*Lời giải:\*  
+• Nếu $\lim\_{n\to+\infty} u_n = a > 0$, $\lim\_{n\to+\infty} v_n = 0$ và $v_n > 0$ với mọi $n$ thì $\lim\_{n\to+\infty} \frac{u_n}{v_n} = +\infty$.
 
-Ta có $u_n - 2 = \frac{2n + 1}{n} - 2 = \frac{1}{n}$. Vì $\lim\_{n \to +\infty} \frac{1}{n} = 0$ nên $\lim\_{n \to +\infty} (u_n - 2) = 0$. Do vậy $\lim\_{n \to +\infty} u_n = 2$.
-
-\*\*Luyện tập 2:\*\* Cho dãy số $(u_n)$ với $u_n = \frac{3 \cdot 2^n - 1}{2^n}$. Chứng minh rằng $\lim\_{n \to +\infty} u_n = 3$.
-
-\*Lời giải:\*  
-
-Ta có $u_n - 3 = \frac{3 \cdot 2^n - 1}{2^n} - 3 = -\frac{1}{2^n} = -\left(\frac{1}{2}\right)^n$. Vì $\lim\_{n \to +\infty} \left(\frac{1}{2}\right)^n = 0$ nên $\lim\_{n \to +\infty} (u_n - 3) = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 3$.
-
-\*\*Vận dụng 1:\*\* Một quả bóng cao su được thả từ độ cao $5\text{ m}$ xuống một mặt sàn. Sau mỗi lần chạm sàn, quả bóng nảy lên độ cao bằng $\frac{2}{3}$ độ cao trước đó. Chứng minh rằng dãy số độ cao $(u_n)$ có giới hạn là $0$.
-
-\*Lời giải:\*  
-
-Độ cao sau lần nảy thứ nhất là $u_1 = 5 \cdot \frac{2}{3}$. Sau lần thứ $n$ là $u_n = 5 \cdot \left(\frac{2}{3}\right)^n$. Vì $\left|\frac{2}{3}\right| < 1$ nên $\lim\_{n \to +\infty} \left(\frac{2}{3}\right)^n = 0 \Rightarrow \lim\_{n \to +\infty} u_n = 0$.
-
-\---
-
-\## 2. Định lí về giới hạn hữu hạn của dãy số
-
-\<Youtube url="https://www.youtube.com/watch?v=example_dinh_li_gioi_han" />
-
-\### a) Các quy tắc tính giới hạn
-
-Nếu $\lim\_{n \to +\infty} u_n = a$ và $\lim\_{n \to +\infty} v_n = b$ thì:
-
-\- $\lim\_{n \to +\infty} (u_n + v_n) = a + b$;
-
-\- $\lim\_{n \to +\infty} (u_n - v_n) = a - b$;
-
-\- $\lim\_{n \to +\infty} (u_n \cdot v_n) = a \cdot b$;
-
-\- $\lim\_{n \to +\infty} \frac{u_n}{v_n} = \frac{a}{b}$ (với điều kiện $b \ne 0$).
-
-Nếu $u_n \ge 0$ với mọi $n$ và $\lim\_{n \to +\infty} u_n = a$ thì $a \ge 0$ và $\lim\_{n \to +\infty} \sqrt{u_n} = \sqrt{a}$.
-
-\### b) Ví dụ và Luyện tập
-
-\*\*Ví dụ 3:\*\* Tìm $\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1}$.
-
-\*Lời giải:\*  
-
-Chia cả tử và mẫu cho $n^2$:
-
-$$
-
-\lim\_{n \to +\infty} \frac{n^2 + n + 1}{2n^2 - 1} = \lim\_{n \to +\infty} \frac{1 + \frac{1}{n} + \frac{1}{n^2}}{2 - \frac{1}{n^2}} = \frac{1 + 0 + 0}{2 - 0} = \frac{1}{2}.
-
-$$
-
-\*\*Luyện tập 3:\*\* Tìm $\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1}$.
-
-\*Lời giải:\*  
-
-Chia cả tử và mẫu cho $n$ ($n > 0 \Rightarrow \sqrt{n^2} = n$):
-
-$$
-
-\lim\_{n \to +\infty} \frac{\sqrt{2n^2 + 1}}{n + 1} = \lim\_{n \to +\infty} \frac{\sqrt{2 + \frac{1}{n^2}}}{1 + \frac{1}{n}} = \frac{\sqrt{2 + 0}}{1 + 0} = \sqrt{2}.
-
-$$
-
-\---
-
-\## 3. Tổng của cấp số nhân lùi vô hạn
-
-\<Youtube url="https://www.youtube.com/watch?v=example_cap_so_nhan_lui_vo_han" />
-
-\### a) Khái niệm và công thức
-
-\- Cấp số nhân vô hạn $(u_n)$ có công bội $q$ thỏa mãn $|q| < 1$ được gọi là \*\*cấp số nhân lùi vô hạn\*\*.
-
-\- Tổng $n$ số hạng đầu: $S_n = \frac{u_1(1 - q^n)}{1 - q}$. Vì $|q| < 1$ nên $\lim\_{n \to +\infty} q^n = 0$. Do đó:
-
-$$
-
-S = \lim\_{n \to +\infty} S_n = \frac{u_1}{1 - q} \quad (|q| < 1).
-
-$$
-
-\### b) Ví dụ và Luyện tập
-
-\*\*Ví dụ 4:\*\* Tính tổng $S = 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \dots + \left(-\frac{1}{2}\right)^{n-1} + \dots$
-
-\*Lời giải:\*  
-
-Cấp số nhân lùi vô hạn có $u_1 = 1$ và $q = -\frac{1}{2}$. Tổng là:
-
-$$
-
-S = \frac{u_1}{1 - q} = \frac{1}{1 - \left(-\frac{1}{2}\right)} = \frac{2}{3}.
-
-$$
-
-\*\*Ví dụ 5:\*\* Biểu diễn số thập phân vô hạn tuần hoàn $2.222\dots$ dưới dạng phân số.
-
-\*
+• Nếu $\lim\_{n\to+\infty} u_n = +\infty$ và $\lim\_{n\to+\infty} v_n = a > 0$ thì $\lim\_{n\to+\infty} (u_n \cdot v_n) = +\infty$.
