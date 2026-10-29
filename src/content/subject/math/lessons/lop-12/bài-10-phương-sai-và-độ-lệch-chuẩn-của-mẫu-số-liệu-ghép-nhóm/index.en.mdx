@@ -1,0 +1,278 @@
+---
+title: 'Lesson 10: Variance and Standard Deviation of Grouped Data'
+description: Theoretical system for the lesson on Variance and Standard Deviatio.n of Grouped Data with illustrative examples
+tags:
+  - grade 12
+  - Variance of grouped data
+  - Standard deviation of grouped data
+  - Degree of dispersion around the mean
+  - Measurement of financial investment risk
+  - Coefficient of variation
+grade: 12
+order: 0
+updatedDate: 2026-10-29T13:10:00
+draft: false
+---
+
+import GeoGebra from '@/components/GeoGebra.astro';import Youtube from '@/components/Youtube.astro';
+
+## Learning Objectives
+
+### **Terminology:**
+
+·       Variance of grouped data ($s^2$)
+
+·       Standard deviation of grouped data ($s$)
+
+·       Degree of dispersion around the mean
+
+·       Measurement of financial investment risk
+
+·       Coefficient of variation ($CV$)
+
+### **Knowledge and Skills:**
+
+·       Proficiently calculate the variance and standard deviation of grouped data using both the definition formula and the computational shortcut formula.
+
+·       Understand the statistical meaning and role of variance and standard deviation in quantifying data dispersion around the mean value.
+
+·       Apply standard deviation to evaluate and compare the risk levels of financial investment strategies, and understand the limitations of standard deviation when mean values differ substantially.
+
+·       Utilize variance and standard deviation to solve practical statistical problems (testing measurement stability of hygrometers, assessing athletic training consistency, controlling industrial manufacturing quality).
+
+## Variance and Standard Deviation of Grouped Data
+
+\<Youtube url="https://www.youtube.com/watch?v=example_phuong_sai_va_do_lech_chuan"/>
+
+### a) Formulas for Variance and Standard Deviation
+
+Let a grouped dataset consist of $k$ class intervals $[a_i; a\_{i+1})$ with corresponding frequencies $m_i$ ($i = 1, 2, \dots, k$) and total sample size $n = m_1 + m_2 + \dots + m_k$.
+• The midpoint (class mark) of the interval $[a_i; a\_{i+1})$ is: $x_i = \frac{a_i + a\_{i+1}}{2}$.
+• The sample mean of the grouped data is given by:
+$$\overline{x} = \frac{m_1 x_1 + m_2 x_2 + \dots + m_k x_k}{n}$$
+Definition of Variance:
+The variance of the grouped data, denoted by $s^2$, is computed as:
+$$s^2 = \frac{m_1(x_1 - \overline{x})^2 + m_2(x_2 - \overline{x})^2 + \dots + m_k(x_k - \overline{x})^2}{n}$$
+Computational Shortcut Formula for Variance:
+$$s^2 = \frac{1}{n}\left(m_1 x_1^2 + m_2 x_2^2 + \dots + m_k x_k^2\right) - (\overline{x})^2$$
+Standard Deviation:
+The standard deviation of the grouped data, denoted by $s$, is the non-negative square root of the variance:
+$$s = \sqrt{s^2}$$
+Statistical Meaning:
+• The variance and standard deviation of grouped data are approximations of the variance and standard deviation of the underlying raw dataset.
+• They measure the degree of dispersion (spread) of the data points around their mean. Larger values of variance and standard deviation indicate greater spread and higher volatility.
+• The standard deviation has the same measurement unit as the original data.
+Note: In inferential statistics, the sample-adjusted variance is also used: $\hat{s}^2 = \frac{n}{n-1}s^2 = \frac{1}{n-1}\sum\_{i=1}^k m_i(x_i - \overline{x})^2$.
+
+### b) Illustrative Examples and Practice on Variance and Standard Deviation
+
+**Example 1:** Tracking the weight change (in kg) after three months on a dietary plan for a group of men and women yielded the following data:
+• Weight change intervals: $[-1; 0), [0; 1), [1; 2), [2; 3), [3; 4)$.
+• Number of men: 2, 3, 5, 3, 2.
+• Number of women: 2, 7, 12, 7, 2.
+Calculate the mean, variance, and standard deviation, and compare the weight changes between men and women.
+
+Solution for Example 1:
+• The class midpoints for the intervals are: $-0.5; 0.5; 1.5; 2.5; 3.5$.
+• 1. For the male group ($n_1 = 2 + 3 + 5 + 3 + 2 = 15$):
+  - Mean weight loss:
+    $$\overline{x}\_1 = \frac{2(-0.5) + 3(0.5) + 5(1.5) + 3(2.5) + 2(3.5)}{15} = \frac{22.5}{15} = 1.5\text{ (kg).}$$
+  - Variance:
+    $$s_1^2 = \frac{1}{15}\left[2(-0.5)^2 + 3(0.5)^2 + 5(1.5)^2 + 3(2.5)^2 + 2(3.5)^2\right] - (1.5)^2 = \frac{55.5}{15} - 2.25 = 3.7 - 2.25 = 1.45.$$
+  - Standard deviation: $s_1 = \sqrt{1.45} \approx 1.21\text{ (kg)}$.
+• 2. For the female group ($n_2 = 2 + 7 + 12 + 7 + 2 = 30$):
+  - Mean weight loss:
+    $$\overline{x}\_2 = \frac{2(-0.5) + 7(0.5) + 12(1.5) + 7(2.5) + 2(3.5)}{30} = \frac{45}{30} = 1.5\text{ (kg).}$$
+  - Variance:
+    $$s_2^2 = \frac{1}{30}\left[2(-0.5)^2 + 7(0.5)^2 + 12(1.5)^2 + 7(2.5)^2 + 2(3.5)^2\right] - (1.5)^2 = \frac{97.5}{30} - 2.25 = 3.25 - 2.25 = 1.$$
+  - Standard deviation: $s_2 = \sqrt{1} = 1\text{ (kg)}$.
+• Conclusion: On average, men and women achieved the same weight loss after 3 months ($1.5\text{ kg}$). However, since $s_2 = 1 < 1.21 \approx s_1$, the weight loss among women exhibits lower dispersion and is more uniform than that among men.
+
+**Practice:** An athlete recorded the completion times for a 100-meter sprint across 20 training trials as follows:
+• $[10.2; 10.4)$: 3 trials;
+• $[10.4; 10.6)$: 7 trials;
+• $[10.6; 10.8)$: 8 trials;
+• $[10.8; 11)$: 2 trials.
+Find the variance and standard deviation of this grouped dataset. What information do these metrics provide?
+
+Solution for Practice:
+• The class midpoints are: $x_1 = 10.3; x_2 = 10.5; x_3 = 10.7; x_4 = 10.9$.
+• Sample size: $n = 3 + 7 + 8 + 2 = 20$.
+• Mean sprint time:
+  $$\overline{x} = \frac{3(10.3) + 7(10.5) + 8(10.7) + 2(10.9)}{20} = \frac{30.9 + 73.5 + 85.6 + 21.8}{20} = \frac{211.8}{20} = 10.59\text{ (seconds).}$$
+• Variance of the grouped data:
+  $$s^2 = \frac{1}{20}\left[3(10.3)^2 + 7(10.5)^2 + 8(10.7)^2 + 2(10.9)^2\right] - (10.59)^2$$
+  $$s^2 = \frac{1}{20}(318.27 + 771.75 + 915.92 + 237.62) - 112.1481 = \frac{2\\,243.56}{20} - 112.1481 = 112.178 - 112.1481 = 0.0299\text{ (seconds}^2\text{).}$$
+• Standard deviation of the grouped data:
+  $$s = \sqrt{s^2} = \sqrt{0.0299} \approx 0.1729\text{ (seconds).}$$
+• Interpretation: The variance and standard deviation indicate the spread of the athlete's 100m sprint times around the mean of $10.59$ seconds. The small standard deviation ($s \approx 0.173\text{ s}$) shows that the athlete's performance is highly consistent and stable.
+
+## Using Variance and Standard Deviation to Measure Risk
+
+\<Youtube url="https://www.youtube.com/watch?v=example_do_do_rui_ro_tai_chinh"/>
+
+### a) Meaning in Finance and Business
+
+Application in Financial Investment Analysis:
+• In corporate finance and portfolio management, the standard deviation of returns serves as a fundamental quantitative metric of risk.
+• The expected (mean) return reflects profitability, while the standard deviation measures the volatility and uncertainty of returns around the mean. An investment option with a larger standard deviation is regarded as carrying higher risk.
+Limitations and the Coefficient of Variation ($CV$):
+• Comparing risk via standard deviation is only valid when the investment options have comparable mean returns.
+• When the mean returns differ substantially or different measurement units are used, the Coefficient of Variation ($CV$) is utilized:
+$$CV = \frac{s}{\overline{x}}$$
+The option with the larger coefficient of variation possesses higher relative risk per unit of expected return.
+
+### b) Illustrative Examples and Notes on Risk Comparison
+
+**Example 2:** An invested equal amounts of capital into two business sectors A and B over a 60-month period:
+• Monthly return intervals: $[5; 10), [10; 15), [15; 20), [20; 25), [25; 30)$ (million VND).
+• Number of months in sector A: 5, 10, 30, 10, 5 months.
+• Number of months in sector B: 20, 5, 10, 5, 20 months.
+Compare the mean and standard deviation of monthly returns. Which sector is riskier?
+
+Solution for Example 2:
+• Class midpoints: $7.5; 12.5; 17.5; 22.5; 27.5$.
+• Mean monthly returns ($n = 60$ months):
+  $$\overline{x}\_A = \frac{5(7.5) + 10(12.5) + 30(17.5) + 10(22.5) + 5(27.5)}{60} = \frac{1\\,050}{60} = 17.5\text{ (million VND).}$$
+  $$\overline{x}\_B = \frac{20(7.5) + 5(12.5) + 10(17.5) + 5(22.5) + 20(27.5)}{60} = \frac{1\\,050}{60} = 17.5\text{ (million VND).}$$
+  On average, both sectors yield identical monthly returns ($17.5$ million VND/month).
+• Standard deviation of monthly returns:
+  $$s_A = \sqrt{\frac{1}{60}\left[5(7.5)^2 + 10(12.5)^2 + 30(17.5)^2 + 10(22.5)^2 + 5(27.5)^2\right] - (17.5)^2} = \sqrt{331.25 - 306.25} = \sqrt{25} = 5\text{ (million VND).}$$
+  $$s_B = \sqrt{\frac{1}{60}\left[20(7.5)^2 + 5(12.5)^2 + 10(17.5)^2 + 5(22.5)^2 + 20(27.5)^2\right] - (17.5)^2} = \sqrt{377.083 - 306.25} = \sqrt{70.833} \approx 8.42\text{ (million VND).}$$
+• Conclusion: Because $s_B \approx 8.42 > 5 = s_A$, returns in sector B exhibit much greater volatility than in sector A. Therefore, investing in sector B is riskier.
+
+**Example 3:** Monthly profits (in million VND) over 20 months for two investors are summarized as follows:
+• Small-scale investor: $[10; 20)$ (2), $[20; 30)$ (4), $[30; 40)$ (8), $[40; 50)$ (4), $[50; 60)$ (2).
+• Large-scale investor: $[510; 520)$ (4), $[520; 530)$ (3), $[530; 540)$ (6), $[540; 550)$ (3), $[550; 560)$ (4).
+Calculate the standard deviation of both grouped datasets. Should standard deviation alone be used to compare their investment risk?
+
+Solution for Example 3:
+• 1. Small-scale investor ($n = 20$, midpoints $15, 25, 35, 45, 55$):
+  - Mean profit: $\overline{x}\_A = \frac{2(15) + 4(25) + 8(35) + 4(45) + 2(55)}{20} = \frac{700}{20} = 35\text{ (million VND).}$
+  - Standard deviation: $s_A = \sqrt{\frac{1}{20}\left[2(15^2) + 4(25^2) + 8(35^2) + 4(45^2) + 2(55^2)\right] - 35^2} = \sqrt{1\\,345 - 1\\,225} = \sqrt{120} \approx 10.95\text{ (million VND).}$
+• 2. Large-scale investor ($n = 20$, midpoints $515, 525, 535, 545, 555$):
+  - Mean profit: $\overline{x}\_B = \frac{4(515) + 3(525) + 6(535) + 3(545) + 4(555)}{20} = \frac{10\\,700}{20} = 535\text{ (million VND).}$
+  - Standard deviation: $s_B = \sqrt{\frac{1}{20}\left[4(515^2) + 3(525^2) + 6(535^2) + 3(545^2) + 4(555^2)\right] - 535^2} = \sqrt{286\\,415 - 286\\,225} = \sqrt{190} \approx 13.78\text{ (million VND).}$
+• Remark: Although $s_B > s_A$ ($13.78 > 10.95$), one SHOULD NOT rely solely on standard deviation to compare risk between these two investors, because their mean profit scales differ drastically ($535$ million VND vs. $35$ million VND).
+  Examining the relative Coefficient of Variation ($CV$):
+  $$CV_A = \frac{s_A}{\overline{x}\_A} = \frac{10.95}{35} \approx 31.3\\%; \qquad CV_B = \frac{s_B}{\overline{x}\_B} = \frac{13.78}{535} \approx 2.58\\%.$$
+  The profits of the small-scale investor are far more volatile relative to their capital base.
+
+## Applications and Exercises
+
+### a) Real-World Applications
+
+**Application (Testing Hygrometer Measurement Stability - Introductory Problem):** To evaluate the stability of an electronic hygrometer, a technician performs 20 repeated humidity measurements. If the standard deviation of the measurements exceeds 0.15%, the instrument must be sent for recalibration. The grouped sample data obtained is:
+• $[52; 52.1)$: 1 measurement;
+• $[52.1; 52.2)$: 5 measurements;
+• $[52.2; 52.3)$: 8 measurements;
+• $[52.3; 52.4)$: 4 measurements;
+• $[52.4; 52.5)$: 2 measurements.
+Does this hygrometer need to be sent for recalibration/repair?
+
+Solution for Application:
+• The class midpoints are: $52.05; 52.15; 52.25; 52.35; 52.45$.
+• Sample size: $n = 1 + 5 + 8 + 4 + 2 = 20$.
+• Mean measured humidity:
+  $$\overline{x} = \frac{1(52.05) + 5(52.15) + 8(52.25) + 4(52.35) + 2(52.45)}{20} = \frac{1\\,045.1}{20} = 52.255\text{ (\\%).}$$
+• Variance of the grouped data:
+  $$s^2 = \frac{1}{20}\left[1(52.05)^2 + 5(52.15)^2 + 8(52.25)^2 + 4(52.35)^2 + 2(52.45)^2\right] - (52.255)^2$$
+  $$s^2 = \frac{54\\,611.735}{20} - 2\\,730.585025 = 2\\,730.58675 - 2\\,730.585025 = 0.010475.$$
+• Standard deviation of the grouped data:
+  $$s = \sqrt{s^2} = \sqrt{0.010475} \approx 0.1023\text{ (\\%).}$$
+• Conclusion: Because $s \approx 0.1023\\% < 0.15\\%$, the hygrometer satisfies the required precision and stability standard; recalibration is NOT required.
+
+### b) Detailed Section Exercises
+
+**Exercise 3.4:** Quality control inspection of the net weight of 30 cement bags (in kg) before factory dispatch:
+49.5, 51.1, 50.8, 50.2, 48.7, 49.6, 51.3, 51.4, 50.1, 50.5,
+48.9, 49.3, 50.7, 48.8, 49.8, 48.8, 51.2, 50.4, 50.0, 51.2,
+51.4, 48.7, 51.2, 50.6, 50.9, 49.2, 50.7, 51.1, 48.6, 49.6.
+a) Group the dataset into classes $[48.5; 49), [49; 49.5), [49.5; 50), [50; 50.5), [50.5; 51), [51; 51.5)$.
+b) Compute the variance and standard deviation of the raw dataset and the grouped dataset. Which values are exact, and which are approximations?
+
+Solution for Exercise 3.4:
+• a) Grouped frequency distribution table ($n = 30$ bags):
+  - $[48.5; 49)$: 48.7, 48.9, 48.8, 48.8, 48.7, 48.6 $\implies$ Frequency: 6;
+  - $[49; 49.5)$: 49.3, 49.2 $\implies$ Frequency: 2;
+  - $[49.5; 50)$: 49.5, 49.6, 49.8, 49.6 $\implies$ Frequency: 4;
+  - $[50; 50.5)$: 50.2, 50.1, 50.4, 50.0 $\implies$ Frequency: 4;
+  - $[50.5; 51)$: 50.8, 50.5, 50.7, 50.6, 50.9, 50.7 $\implies$ Frequency: 6;
+  - $[51; 51.5)$: 51.1, 51.3, 51.4, 51.2, 51.2, 51.4, 51.1, 51.2 $\implies$ Frequency: 8.
+• b) Computing dispersion statistics:
+  - Raw dataset ($n = 30$):
+    Sum $\sum x_i = 1\\,504.3 \implies \overline{x}\_{\text{raw}} = \frac{1\\,504.3}{30} \approx 50.1433\text{ kg}$.
+    Exact variance: $s\_{\text{raw}}^2 = \frac{1}{30}\sum x_i^2 - (\overline{x}\_{\text{raw}})^2 \approx 0.8718\text{ (kg}^2\text{)}$.
+    Exact standard deviation: $s\_{\text{raw}} = \sqrt{0.8718} \approx 0.9337\text{ kg}$.
+  - Grouped dataset ($n = 30$):
+    Class midpoints: $48.75; 49.25; 49.75; 50.25; 50.75; 51.25$.
+    Grouped mean: $\overline{x}\_{\text{grouped}} = \frac{6(48.75) + 2(49.25) + 4(49.75) + 4(50.25) + 6(50.75) + 8(51.25)}{30} = \frac{1\\,505.5}{30} \approx 50.1833\text{ kg}$.
+    Approximate variance: $s\_{\text{grouped}}^2 = \frac{1}{30}\sum m_i x_i^2 - (\overline{x}\_{\text{grouped}})^2 \approx 0.8622\text{ (kg}^2\text{)}$.
+    Approximate standard deviation: $s\_{\text{grouped}} = \sqrt{0.8622} \approx 0.9286\text{ kg}$.
+  - Conclusion: The values computed directly from the raw data ($s^2 \approx 0.8718; s \approx 0.9337$) are exact; the values derived from the grouped frequency table ($s^2 \approx 0.8622; s \approx 0.9286$) are approximations.
+
+**Exercise 3.5:** Operational lifespan (in years) of electronic components manufactured by two workshops:
+• Lifespan intervals: $[1.5; 2), [2; 2.5), [2.5; 3), [3; 3.5), [3.5; 4)$.
+• Workshop 1 ($n_1 = 40$): 4, 9, 13, 8, 6 components.
+• Workshop 2 ($n_2 = 40$): 2, 8, 20, 7, 3 components.
+Calculate the variance and standard deviation for each workshop and compare component lifespan consistency.
+
+Solution for Exercise 3.5:
+• Class midpoints: $1.75; 2.25; 2.75; 3.25; 3.75$.
+• 1. Workshop 1 ($n_1 = 40$):
+  - Mean lifespan: $\overline{x}\_1 = \frac{4(1.75) + 9(2.25) + 13(2.75) + 8(3.25) + 6(3.75)}{40} = \frac{111.5}{40} = 2.7875\text{ (years).}$
+  - Variance: $s_1^2 = \frac{1}{40}\left[4(1.75^2) + 9(2.25^2) + 13(2.75^2) + 8(3.25^2) + 6(3.75^2)\right] - (2.7875)^2 = \frac{325}{40} - 7.770156 = 8.125 - 7.770156 \approx 0.3548\text{ (years}^2\text{).}$
+  - Standard deviation: $s_1 = \sqrt{0.3548} \approx 0.5957\text{ (years).}$
+• 2. Workshop 2 ($n_2 = 40$):
+  - Mean lifespan: $\overline{x}\_2 = \frac{2(1.75) + 8(2.25) + 20(2.75) + 7(3.25) + 3(3.75)}{40} = \frac{110.5}{40} = 2.7625\text{ (years).}$
+  - Variance: $s_2^2 = \frac{1}{40}\left[2(1.75^2) + 8(2.25^2) + 20(2.75^2) + 7(3.25^2) + 3(3.75^2)\right] - (2.7625)^2 = \frac{314}{40} - 7.631406 = 7.85 - 7.631406 \approx 0.2186\text{ (years}^2\text{).}$
+  - Standard deviation: $s_2 = \sqrt{0.2186} \approx 0.4675\text{ (years).}$
+• Comparison: The mean lifespan is almost identical between both workshops (about 2.79 vs. 2.76 years). However, since $s_2 \approx 0.47 < 0.60 \approx s_1$, components produced by Workshop 2 exhibit lower dispersion and higher quality consistency than those from Workshop 1.
+
+**Exercise 3.6:** A group of 20 biology students measured the diameter of a cell nucleus using a calibrated microscope:
+• $[4.5; 5)$: 3 students;
+• $[5; 5.5)$: 8 students;
+• $[5.5; 6)$: 7 students;
+• $[6; 6.5)$: 2 students.
+a) Compute the mean and standard deviation of this grouped dataset.
+b) What practical information do the mean and standard deviation convey?
+
+Solution for Exercise 3.6:
+• a) Class midpoints: $4.75; 5.25; 5.75; 6.25$ (in $\mu\text{m}$), $n = 20$.
+  - Mean diameter:
+    $$\overline{x} = \frac{3(4.75) + 8(5.25) + 7(5.75) + 2(6.25)}{20} = \frac{14.25 + 42 + 40.25 + 12.5}{20} = \frac{109}{20} = 5.45\text{ (}\mu\text{m).}$$
+  - Variance:
+    $$s^2 = \frac{1}{20}\left[3(4.75^2) + 8(5.25^2) + 7(5.75^2) + 2(6.25^2)\right] - (5.45)^2 = \frac{597.75}{20} - 29.7025 = 29.8875 - 29.7025 = 0.185\text{ (}\mu\text{m}^2\text{).}$$
+  - Standard deviation:
+    $$s = \sqrt{0.185} \approx 0.4301\text{ (}\mu\text{m).}$$
+• b) Interpretation:
+  - The mean $\overline{x} = 5.45\text{ }\mu\text{m}$ represents the central expected size of the cell nucleus.
+  - The standard deviation $s \approx 0.43\text{ }\mu\text{m}$ indicates the experimental dispersion and measurement error across the 20 students around this central estimate.
+
+**Exercise 3.7:** 100m sprint training times for two athletes A and B:
+• Time intervals: $[10; 10.3), [10.3; 10.6), [10.6; 10.9), [10.9; 11.2)$ (seconds).
+• Number of sprints for Athlete A ($n_A = 20$): 2, 10, 5, 3.
+• Number of sprints for Athlete B ($n_B = 25$): 3, 7, 9, 6.
+Based on standard deviation, which athlete demonstrates more consistent performance?
+
+Solution for Exercise 3.7:
+• Class midpoints: $10.15; 10.45; 10.75; 11.05$.
+• 1. Athlete A ($n_A = 20$):
+  - Mean sprint time: $\overline{x}\_A = \frac{2(10.15) + 10(10.45) + 5(10.75) + 3(11.05)}{20} = \frac{211.7}{20} = 10.585\text{ (seconds).}$
+  - Variance: $s_A^2 = \frac{1}{20}\left[2(10.15^2) + 10(10.45^2) + 5(10.75^2) + 3(11.05^2)\right] - (10.585)^2 = \frac{2\\,242.195}{20} - 112.042225 = 112.10975 - 112.042225 = 0.067525\text{ (seconds}^2\text{).}$
+  - Standard deviation: $s_A = \sqrt{0.067525} \approx 0.2599\text{ (seconds).}$
+• 2. Athlete B ($n_B = 25$):
+  - Mean sprint time: $\overline{x}\_B = \frac{3(10.15) + 7(10.45) + 9(10.75) + 6(11.05)}{25} = \frac{266.65}{25} = 10.666\text{ (seconds).}$
+  - Variance: $s_B^2 = \frac{1}{25}\left[3(10.15^2) + 7(10.45^2) + 9(10.75^2) + 6(11.05^2)\right] - (10.666)^2 = \frac{2\\,846.1625}{25} - 113.763556 = 113.8465 - 113.763556 = 0.082944\text{ (seconds}^2\text{).}$
+  - Standard deviation: $s_B = \sqrt{0.082944} \approx 0.2880\text{ (seconds).}$
+• Conclusion: Since $s_A \approx 0.260 < 0.288 \approx s_B$, Athlete A has a smaller standard deviation, demonstrating greater competitive stability and consistency.
+
+**Exercise 3.8:** Should variance (or standard deviation) be used to compare data dispersion in each of the following scenarios? Explain why.
+a) National graduation Mathematics exam scores of students from two high schools of comparable academic quality.
+b) Revenue of 100 small grocery retailers versus revenue of 100 large supermarket chains.
+
+Solution for Exercise 3.8:
+• a) For the graduation exam scores of two high schools of comparable quality: YES, standard deviation SHOULD BE USED.
+  Since both schools have comparable academic standards and are evaluated on the same 10-point scale, their mean scores are very close. Therefore, standard deviation provides an accurate, fair comparison of score consistency and student performance variance.
+• b) For the revenue of 100 small retailers versus 100 large supermarkets: NO, standard deviation SHOULD NOT BE USED.
+  Supermarket revenue operates on an incomparably larger scale than small corner stores (the means differ by orders of magnitude). Due to absolute scaling, supermarkets will inevitably show a vastly larger standard deviation regardless of relative consistency. In this scenario, the Coefficient of Variation ($CV = \frac{s}{\overline{x}}$) must be used to compare relative dispersion.
