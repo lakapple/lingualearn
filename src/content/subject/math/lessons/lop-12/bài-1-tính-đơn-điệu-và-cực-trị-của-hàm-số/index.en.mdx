@@ -49,21 +49,17 @@ Suppose $K$ is an open interval, a closed interval, or a half-open interval, and
 
 - The function $y = f(x)$ is said to be increasing (strictly increasing) on $K$ if:
 
-$$
-\forall x_1, x_2 \in K, \quad x_1 < x_2 \Rightarrow f(x_1) < f(x_2)
-$$
+$$\forall x_1, x_2 \in K, \quad x_1 \lt x_2 \Rightarrow f(x_1) \lt f(x_2)$$
 
 - The function $y = f(x)$ is said to be decreasing (strictly decreasing) on $K$ if:
 
-$$
-\forall x_1, x_2 \in K, \quad x_1 < x_2 \Rightarrow f(x_1) > f(x_2)
-$$
+$$\forall x_1, x_2 \in K, \quad x_1 \lt x_2 \Rightarrow f(x_1) \gt f(x_2)$$
 
 - The graph of an increasing function goes up from left to right; the graph of a decreasing function goes down from left to right.
 
 **Theorem (Sign of the Derivative and Monotonicity):** Let $y = f(x)$ be a function that is differentiable on an open interval $K$.
-- If $f'(x) > 0$ for all $x \in K$, then the function $f(x)$ is increasing on the interval $K$.
-- If $f'(x) < 0$ for all $x \in K$, then the function $f(x)$ is decreasing on the interval $K$.
+- If $f'(x) \gt 0$ for all $x \in K$, then the function $f(x)$ is increasing on the interval $K$.
+- If $f'(x) \lt 0$ for all $x \in K$, then the function $f(x)$ is decreasing on the interval $K$.
 - **Extension:** If $f'(x) \ge 0$ ($f'(x) \le 0$) for all $x \in K$ and $f'(x) = 0$ at only a finite number of points in $K$, then the function $f(x)$ is increasing (decreasing) on the interval $K$.
 - If $f'(x) = 0$ for all $x \in K$, then the function $f(x)$ is constant on the interval $K$.
 
@@ -80,36 +76,32 @@ $$
 **Solution to Example 2:**
 - Domain: $D = \mathbb{R}$.
 - Derivative: $y' = 2x - 4$. We have $y' = 0 \Leftrightarrow 2x - 4 = 0 \Leftrightarrow x = 2$.
-- Sign of the derivative: $y' > 0$ when $x \in (2, +\infty)$ and $y' < 0$ when $x \in (-\infty, 2)$.
+- Sign of the derivative: $y' \gt 0$ when $x \in (2, +\infty)$ and $y' \lt 0$ when $x \in (-\infty, 2)$.
 - Thus, the function is increasing on the interval $(2, +\infty)$ and decreasing on the interval $(-\infty, 2)$.
 
 **Example 3:** Find the intervals of monotonicity of the function $y = \frac{x^2 - 2x + 5}{x - 1}$.
 
 **Solution to Example 3:**
-- Domain: $D = \mathbb{R} \setminus \{1\}$.
+- Domain: $D = \mathbb{R} \setminus \lbrace 1 \rbrace$.
 - Derivative:
 
-$$
-y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 5)}{(x - 1)^2} = \frac{x^2 - 2x - 3}{(x - 1)^2}.
-$$
+$$y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 5)}{(x - 1)^2} = \frac{x^2 - 2x - 3}{(x - 1)^2}.$$
 
 - Solve the derivative equation: $y' = 0 \Leftrightarrow x^2 - 2x - 3 = 0 \Leftrightarrow x = -1$ or $x = 3$.
 - Variation analysis:
-  + On $(-\infty, -1)$: $y' > 0 \Rightarrow$ the function is increasing.
-  + On $(-1, 1)$: $y' < 0 \Rightarrow$ the function is decreasing.
-  + On $(1, 3)$: $y' < 0 \Rightarrow$ the function is decreasing.
-  + On $(3, +\infty)$: $y' > 0 \Rightarrow$ the function is increasing.
+  + On $(-\infty, -1)$: $y' \gt 0 \Rightarrow$ the function is increasing.
+  + On $(-1, 1)$: $y' \lt 0 \Rightarrow$ the function is decreasing.
+  + On $(1, 3)$: $y' \lt 0 \Rightarrow$ the function is decreasing.
+  + On $(3, +\infty)$: $y' \gt 0 \Rightarrow$ the function is increasing.
 - Conclusion: The function is increasing on the intervals $(-\infty, -1)$ and $(3, +\infty)$; it is decreasing on the intervals $(-1, 1)$ and $(1, 3)$.
 
 **Example 4:** Determine the monotonicity of the function $y = \frac{x - 2}{x + 1}$.
 
 **Solution to Example 4:**
-- Domain: $D = \mathbb{R} \setminus \{-1\}$.
+- Domain: $D = \mathbb{R} \setminus \lbrace -1 \rbrace$.
 - Derivative:
 
-$$
-y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} > 0, \quad \forall x \ne -1.
-$$
+$$y' = \frac{(x + 1) - (x - 2)}{(x + 1)^2} = \frac{3}{(x + 1)^2} \gt 0, \quad \forall x \ne -1.$$
 
 - Thus, the function is increasing on each interval of its domain: $(-\infty, -1)$ and $(-1, +\infty)$.
 
@@ -122,11 +114,11 @@ $$
 ### a) Concepts of Local Maximum and Local Minimum
 
 Let the function $y = f(x)$ be defined and continuous on an open interval $(a, b)$ containing the point $x_0$.
-- If there exists a number $h > 0$ such that $f(x) < f(x_0)$ for all $x \in (x_0 - h, x_0 + h) \setminus \{x_0\}$, then the function attains a local maximum at $x_0$.
+- If there exists a number $h \gt 0$ such that $f(x) \lt f(x_0)$ for all $x \in (x_0 - h, x_0 + h) \setminus \lbrace x_0 \rbrace$, then the function attains a local maximum at $x_0$.
   + $x_0$ is called a local maximum point of the function;
   + $f(x_0)$ (or $y_{\text{max}}$) is called a local maximum value of the function;
   + $M_0(x_0, f(x_0))$ is called a local maximum point of the graph of the function.
-- If there exists a number $h > 0$ such that $f(x) > f(x_0)$ for all $x \in (x_0 - h, x_0 + h) \setminus \{x_0\}$, then the function attains a local minimum at $x_0$.
+- If there exists a number $h \gt 0$ such that $f(x) \gt f(x_0)$ for all $x \in (x_0 - h, x_0 + h) \setminus \lbrace x_0 \rbrace$, then the function attains a local minimum at $x_0$.
   + $x_0$ is called a local minimum point of the function;
   + $f(x_0)$ (or $y_{\text{min}}$) is called a local minimum value of the function;
   + $M_0(x_0, f(x_0))$ is called a local minimum point of the graph of the function.
@@ -135,8 +127,8 @@ Let the function $y = f(x)$ be defined and continuous on an open interval $(a, b
 ### b) Sufficient Conditions for Local Extrema and Rules for Finding Extrema
 
 Suppose the function $y = f(x)$ is continuous on an open interval $(a, b)$ containing $x_0$ and is differentiable on $(a, x_0)$ and $(x_0, b)$:
-- If $f'(x) > 0$ on $(a, x_0)$ and $f'(x) < 0$ on $(x_0, b)$ (the derivative changes sign from positive to negative as $x$ passes through $x_0$), then the function attains a local maximum at $x_0$.
-- If $f'(x) < 0$ on $(a, x_0)$ and $f'(x) > 0$ on $(x_0, b)$ (the derivative changes sign from negative to positive as $x$ passes through $x_0$), then the function attains a local minimum at $x_0$.
+- If $f'(x) \gt 0$ on $(a, x_0)$ and $f'(x) \lt 0$ on $(x_0, b)$ (the derivative changes sign from positive to negative as $x$ passes through $x_0$), then the function attains a local maximum at $x_0$.
+- If $f'(x) \lt 0$ on $(a, x_0)$ and $f'(x) \gt 0$ on $(x_0, b)$ (the derivative changes sign from negative to positive as $x$ passes through $x_0$), then the function attains a local minimum at $x_0$.
 - **Note:** If $f'(x)$ does not change sign as $x$ passes through $x_0$, then $x_0$ is not a local extreme point of the function (for example, $y = x^3$ has $y' = 3x^2 \ge 0$ and $y'(0) = 0$, but it has no local extrema).
 
 **Example 6:** Find the local extrema of the function $y = x^3 - 6x^2 + 9x + 30$.
@@ -152,12 +144,10 @@ Suppose the function $y = f(x)$ is continuous on an open interval $(a, b)$ conta
 **Example 7:** Find the local extrema of the function $y = \frac{x^2 - 2x + 9}{x - 2}$.
 
 **Solution to Example 7:**
-- Domain: $D = \mathbb{R} \setminus \{2\}$.
+- Domain: $D = \mathbb{R} \setminus \lbrace 2 \rbrace$.
 - Derivative:
 
-$$
-y' = \frac{(2x - 2)(x - 2) - (x^2 - 2x + 9)}{(x - 2)^2} = \frac{x^2 - 4x - 5}{(x - 2)^2}.
-$$
+$$y' = \frac{(2x - 2)(x - 2) - (x^2 - 2x + 9)}{(x - 2)^2} = \frac{x^2 - 4x - 5}{(x - 2)^2}.$$
 
 - $y' = 0 \Leftrightarrow x^2 - 4x - 5 = 0 \Leftrightarrow x = -1$ or $x = 5$.
 - Analyze the sign of the derivative:
@@ -175,12 +165,10 @@ $$
 **Solution to Application 1:**
 - The instantaneous velocity of the particle at time $t$ is:
 
-$$
-v(t) = s'(t) = 3t^2 - 18t + 15 = 3(t - 1)(t - 5).
-$$
+$$v(t) = s'(t) = 3t^2 - 18t + 15 = 3(t - 1)(t - 5).$$
 
-- The particle moves to the right when $v(t) > 0 \Leftrightarrow t \in [0, 1) \cup (5, +\infty)$.
-- The particle moves to the left when $v(t) < 0 \Leftrightarrow t \in (1, 5)$.
+- The particle moves to the right when $v(t) \gt 0 \Leftrightarrow t \in [0, 1) \cup (5, +\infty)$.
+- The particle moves to the left when $v(t) \lt 0 \Leftrightarrow t \in (1, 5)$.
 - Thus, the particle moves to the right from $0$ to $1\text{ second}$ and after $5\text{ seconds}$; it moves to the left between $1$ and $5\text{ seconds}$.
 
 **Application 2 (Maximum Height of a Vertically Projected Object):** An object is launched vertically upward from an initial height of $2\text{ m}$ with an initial velocity of $v_0 = 24.5\text{ m/s}$. Its height after $t$ seconds is given by $h(t) = 2 + 24.5t - 4.9t^2$ (meters). At what time does the object reach its maximum height?
@@ -197,15 +185,11 @@ $$
 **Solution:**
 - Let $u = 1 + 5e^{-t}$, we have:
 
-$$
-f'(t) = 5\,000 \cdot \frac{-(1 + 5e^{-t})'}{(1 + 5e^{-t})^2} = \frac{25\,000 e^{-t}}{(1 + 5e^{-t})^2}.
-$$
+$$f'(t) = 5\,000 \cdot \frac{-(1 + 5e^{-t})'}{(1 + 5e^{-t})^2} = \frac{25\,000 e^{-t}}{(1 + 5e^{-t})^2}.$$
 
 - To find when the sales rate $f'(t)$ reaches its maximum, consider the second derivative $f''(t)$:
 
-$$
-f''(t) = 25\,000 \cdot \frac{-e^{-t}(1 + 5e^{-t})^2 - e^{-t} \cdot 2(1 + 5e^{-t})(-5e^{-t})}{(1 + 5e^{-t})^4} = \frac{25\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}.
-$$
+$$f''(t) = 25\,000 \cdot \frac{-e^{-t}(1 + 5e^{-t})^2 - e^{-t} \cdot 2(1 + 5e^{-t})(-5e^{-t})}{(1 + 5e^{-t})^4} = \frac{25\,000 e^{-t}(5e^{-t} - 1)}{(1 + 5e^{-t})^3}.$$
 
 - Set $f''(t) = 0 \Leftrightarrow 5e^{-t} - 1 = 0 \Leftrightarrow e^t = 5 \Leftrightarrow t = \ln 5 \approx 1.61\text{ (years)}$.
 - As $t$ passes through $\ln 5$, $f''(t)$ changes sign from positive to negative, so the rate of sales $f'(t)$ attains its maximum at $t = \ln 5$.
@@ -221,12 +205,12 @@ $$
 - **a)** Domain: $D = \mathbb{R}$.
   + Derivative: $y' = x^2 - 4x + 3 = (x - 1)(x - 3)$.
   + $y' = 0 \Leftrightarrow x = 1$ or $x = 3$.
-  + Sign of $y'$: $y' > 0$ when $x \in (-\infty, 1) \cup (3, +\infty)$; $y' < 0$ when $x \in (1, 3)$.
+  + Sign of $y'$: $y' \gt 0$ when $x \in (-\infty, 1) \cup (3, +\infty)$; $y' \lt 0$ when $x \in (1, 3)$.
   + Conclusion: The function is increasing on the intervals $(-\infty, 1)$ and $(3, +\infty)$; it is decreasing on the interval $(1, 3)$.
 - **b)** Domain: $D = \mathbb{R}$.
   + Derivative: $y' = -3x^2 + 4x - 5$.
-  + Reduced discriminant: $\Delta' = 2^2 - (-3)(-5) = 4 - 15 = -11 < 0$ and leading coefficient $a = -3 < 0$.
-  + Therefore, $y' < 0$ for all $x \in \mathbb{R}$.
+  + Reduced discriminant: $\Delta' = 2^2 - (-3)(-5) = 4 - 15 = -11 \lt 0$ and leading coefficient $a = -3 \lt 0$.
+  + Therefore, $y' \lt 0$ for all $x \in \mathbb{R}$.
   + Conclusion: The function is decreasing on $\mathbb{R}$.
 
 **Exercise 1.3:** Find the intervals of monotonicity of the following functions:
@@ -234,16 +218,11 @@ $$
 - b) $y = \frac{x^2 + x + 4}{x - 3}$.
 
 **Solution to Exercise 1.3:**
-- **a)** Domain: $D = \mathbb{R} \setminus \{-2\}$.
-  + Derivative: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} > 0, \quad \forall x \ne -2$.
+- **a)** Domain: $D = \mathbb{R} \setminus \lbrace -2 \rbrace$.
+  + Derivative: $y' = \frac{2(x + 2) - (2x - 1)}{(x + 2)^2} = \frac{5}{(x + 2)^2} \gt 0, \quad \forall x \ne -2$.
   + Conclusion: The function is increasing on each interval $(-\infty, -2)$ and $(-2, +\infty)$.
-- **b)** Domain: $D = \mathbb{R} \setminus \{3\}$.
-  + Derivative:
-
-$$
-y' = \frac{(2x + 1)(x - 3) - (x^2 + x + 4)}{(x - 3)^2} = \frac{x^2 - 6x - 7}{(x - 3)^2}.
-$$
-
+- **b)** Domain: $D = \mathbb{R} \setminus \lbrace 3 \rbrace$.
+  + Derivative: $y' = \frac{(2x + 1)(x - 3) - (x^2 + x + 4)}{(x - 3)^2} = \frac{x^2 - 6x - 7}{(x - 3)^2}$.
   + $y' = 0 \Leftrightarrow x^2 - 6x - 7 = 0 \Leftrightarrow x = -1$ or $x = 7$.
   + Conclusion: The function is increasing on the intervals $(-\infty, -1)$ and $(7, +\infty)$; it is decreasing on the intervals $(-1, 3)$ and $(3, 7)$.
 
@@ -261,12 +240,8 @@ $$
   + $y' = 0 \Leftrightarrow x = 0$ or $x = \pm \sqrt{2}$.
   + The function attains a local maximum at $x = 0$, $y_{\text{max}} = y(0) = 2$.
   + The function attains a local minimum at $x = \pm \sqrt{2}$, $y_{\text{min}} = y(\pm \sqrt{2}) = -2$.
-- **c)** $D = \mathbb{R} \setminus \{1\}$.
-
-$$
-y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 3)}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}.
-$$
-
+- **c)** $D = \mathbb{R} \setminus \lbrace 1 \rbrace$.
+  + Derivative: $y' = \frac{(2x - 2)(x - 1) - (x^2 - 2x + 3)}{(x - 1)^2} = \frac{x^2 - 2x - 1}{(x - 1)^2}$.
   + $y' = 0 \Leftrightarrow x^2 - 2x - 1 = 0 \Leftrightarrow x = 1 - \sqrt{2}$ or $x = 1 + \sqrt{2}$.
   + The function attains a local maximum at $x = 1 - \sqrt{2}$, $y_{\text{max}} = y(1 - \sqrt{2}) = -2\sqrt{2}$.
   + The function attains a local minimum at $x = 1 + \sqrt{2}$, $y_{\text{min}} = y(1 + \sqrt{2}) = 2\sqrt{2}$.
