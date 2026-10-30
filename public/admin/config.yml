@@ -23,6 +23,17 @@ collections:
     format: frontmatter
     create: true
     i18n: true
+    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
+    view_filters:
+      - label: "Bản nháp"
+        field: draft
+        pattern: true
+      - label: "Đã xuất bản"
+        field: draft
+        pattern: false
+    view_groups:
+      - label: "Trạng thái xuất bản"
+        field: draft
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
       - { label: "Mô tả ngắn", name: description, widget: text, i18n: true }
@@ -41,6 +52,17 @@ collections:
     format: frontmatter
     create: true
     i18n: true
+    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
+    view_filters:
+      - label: "Bản nháp"
+        field: draft
+        pattern: true
+      - label: "Đã xuất bản"
+        field: draft
+        pattern: false
+    view_groups:
+      - label: "Trạng thái xuất bản"
+        field: draft
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
       - { label: "Mô tả ngắn", name: description, widget: text, i18n: true }
@@ -59,6 +81,17 @@ collections:
     format: frontmatter
     create: true
     i18n: true
+    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
+    view_filters:
+      - label: "Bản nháp"
+        field: draft
+        pattern: true
+      - label: "Đã xuất bản"
+        field: draft
+        pattern: false
+    view_groups:
+      - label: "Trạng thái xuất bản"
+        field: draft
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
       - { label: "Mô tả ngắn", name: description, widget: text, i18n: true }
@@ -77,6 +110,17 @@ collections:
     format: frontmatter
     create: true
     i18n: true
+    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
+    view_filters:
+      - label: "Bản nháp"
+        field: draft
+        pattern: true
+      - label: "Đã xuất bản"
+        field: draft
+        pattern: false
+    view_groups:
+      - label: "Trạng thái xuất bản"
+        field: draft
     fields:
       - { label: "Tiêu đề", name: title, widget: string, i18n: true }
       - { label: "Mô tả ngắn", name: description, widget: text, i18n: true }
