@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import SearchBox from "./SearchBox.astro";
 
 interface Props {
     lang: string;
@@ -16,11 +17,6 @@ const navLinks = [
         href: `/${lang}/concepts`,
     },
 ];
-
-const searchPlaceholder =
-    lang === "vi"
-        ? "Tìm kiếm bài học, định lý, tag..."
-        : "Search lessons, theorems, tags...";
 ---
 
 <div class="navbar">
@@ -35,32 +31,7 @@ const searchPlaceholder =
             ))}
         </nav>
 
-        <form
-            class="navbar__search"
-            role="search"
-            action={`/${lang}/search`}
-            method="get"
-        >
-            <input
-                type="search"
-                name="q"
-                placeholder={searchPlaceholder}
-                aria-label="Search"
-            />
-            <button type="submit" aria-label="Search">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <circle cx="11" cy="11" r="7" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-            </button>
-        </form>
+        <SearchBox lang={lang} />
 
         <LanguageSwitcher lang={lang} pathname={pathname} />
     </div>
@@ -114,42 +85,9 @@ const searchPlaceholder =
         text-decoration: none;
     }
 
-    .navbar__search {
-        flex: 1;
-        max-width: 360px;
-        display: flex;
-        align-items: center;
-        border: 1px solid var(--color-border);
-        border-radius: 999px;
-        padding-inline: 0.75rem;
-        background: var(--color-bg-subtle);
-    }
-    .navbar__search input {
-        flex: 1;
-        border: none;
-        background: transparent;
-        padding-block: 0.45rem;
-        font-size: 0.85rem;
-        outline: none;
-    }
-    .navbar__search button {
-        border: none;
-        background: transparent;
-        color: var(--color-text-muted);
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-    }
-    .navbar__search:focus-within {
-        border-color: var(--color-accent);
-    }
-
     @media (max-width: 768px) {
         .navbar__links {
             display: none;
-        }
-        .navbar__search {
-            max-width: none;
         }
     }
 </style>

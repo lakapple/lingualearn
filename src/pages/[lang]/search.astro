@@ -1,0 +1,675 @@
+---
+// src/pages/[lang]/search.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { LANGS } from "../../lib/i18n.js";
+
+export function getStaticPaths() {
+    return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: "vi" | "en" };
+
+const t = {
+    vi: {
+        pageTitle: "Tìm kiếm",
+        heading: "Tìm kiếm bài học & thuật ngữ",
+        intro: "Tra cứu toàn bộ nội dung chương trình Toán phổ thông và kho thuật ngữ song ngữ Việt - Anh.",
+        placeholder: "Nhập từ khóa bài học, định lý, công thức...",
+        all: "Tất cả",
+        lessons: "Bài học",
+        concepts: "Thuật ngữ Wiki",
+        grades: "Khối lớp:",
+        gradeAll: "Tất cả lớp",
+        grade10: "Lớp 10",
+        grade11: "Lớp 11",
+        grade12: "Lớp 12",
+        resultsFor: "Kết quả cho",
+        found: "Tìm thấy",
+        results: "kết quả",
+        noResults: "Không tìm thấy nội dung phù hợp",
+        noResultsDesc: "Hãy kiểm tra lại chính tả hoặc thử các từ khóa tổng quát hơn.",
+        suggestions: "Gợi ý từ khóa:",
+    },
+    en: {
+        pageTitle: "Search",
+        heading: "Search lessons & concepts",
+        intro: "Explore all high-school math lessons and bilingual Vietnamese - English glossary terms.",
+        placeholder: "Enter lesson keywords, theorems, formulas...",
+        all: "All",
+        lessons: "Lessons",
+        concepts: "Wiki Glossary",
+        grades: "Grades:",
+        gradeAll: "All grades",
+        grade10: "Grade 10",
+        grade11: "Grade 11",
+        grade12: "Grade 12",
+        resultsFor: "Results for",
+        found: "Found",
+        results: "results",
+        noResults: "No matching content found",
+        noResultsDesc: "Please check your spelling or try broader search terms.",
+        suggestions: "Popular terms:",
+    },
+}[lang];
+
+const popularTerms = lang === "vi"
+    ? ["Mặt cầu", "Đạo hàm", "Tích phân", "Véc-tơ", "Cấp số cộng", "Xác suất", "Mệnh đề", "Tập hợp"]
+    : ["Sphere", "Derivative", "Integral", "Vector", "Arithmetic progression", "Probability", "Proposition", "Sets"];
+---
+
+<BaseLayout title={t.pageTitle} lang={lang}>
+    <div class="search-page container" id="search-page-root" data-lang={lang}>
+        <header class="search-page__header">
+            <h1>{t.heading}</h1>
+            <p class="search-page__intro">{t.intro}</p>
+
+            <div class="search-page__bar">
+                <div class="search-page__input-wrap">
+                    <svg
+                        class="search-page__icon"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+
+                    <input
+                        type="search"
+                        id="page-search-input"
+                        class="search-page__input"
+                        placeholder={t.placeholder}
+                        autocomplete="off"
+                        spellcheck="false"
+                        autofocus
+                    />
+
+                    <button
+                        type="button"
+                        id="page-search-clear"
+                        class="search-page__clear"
+                        aria-label="Clear input"
+                        hidden
+                    >
+                        ✕
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="search-page__filters">
+                <div class="search-page__tabs" role="tablist">
+                    <button
+                        type="button"
+                        class="search-page__tab is-active"
+                        role="tab"
+                        aria-selected="true"
+                        data-page-tab="all"
+                    >
+                        {t.all} <span class="tab-count" id="page-count-all">0</span>
+                    </button>
+                    <button
+                        type="button"
+                        class="search-page__tab"
+                        role="tab"
+                        aria-selected="false"
+                        data-page-tab="lesson"
+                    >
+                        {t.lessons} <span class="tab-count" id="page-count-lesson">0</span>
+                    </button>
+                    <button
+                        type="button"
+                        class="search-page__tab"
+                        role="tab"
+                        aria-selected="false"
+                        data-page-tab="concept"
+                    >
+                        {t.concepts} <span class="tab-count" id="page-count-concept">0</span>
+                    </button>
+                </div>
+
+                <div class="search-page__grades" id="page-grades-bar">
+                    <span class="grades-label">{t.grades}</span>
+                    <button type="button" class="page-grade-chip is-active" data-page-grade="all">{t.gradeAll}</button>
+                    <button type="button" class="page-grade-chip" data-page-grade="10">{t.grade10}</button>
+                    <button type="button" class="page-grade-chip" data-page-grade="11">{t.grade11}</button>
+                    <button type="button" class="page-grade-chip" data-page-grade="12">{t.grade12}</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Status Bar -->
+        <div class="search-page__status">
+            <span id="page-search-summary">...</span>
+        </div>
+
+        <!-- Suggestions when empty -->
+        <div class="search-page__suggestions" id="page-suggestions">
+            <span class="suggestions-label">{t.suggestions}</span>
+            <div class="suggestions-list">
+                {popularTerms.map((term) => (
+                    <button type="button" class="term-chip" data-term={term}>
+                        {term}
+                    </button>
+                ))}
+            </div>
+        </div>
+
+        <!-- Results Grid -->
+        <div class="search-page__results" id="page-results-container">
+            <ul class="results-grid" id="page-results-grid">
+                <!-- Dynamically generated via JS -->
+            </ul>
+
+            <!-- Empty State -->
+            <div class="page-empty-state" id="page-empty-state" hidden>
+                <div class="empty-icon">🔍</div>
+                <h3>{t.noResults}</h3>
+                <p>{t.noResultsDesc}</p>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .search-page {
+        padding-block: 2.5rem;
+    }
+
+    .search-page__header {
+        margin-bottom: 2rem;
+    }
+
+    .search-page__header h1 {
+        font-size: 1.85rem;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .search-page__intro {
+        color: var(--color-text-muted);
+        margin: 0 0 1.5rem 0;
+        font-size: 1rem;
+    }
+
+    .search-page__bar {
+        margin-bottom: 1.25rem;
+    }
+
+    .search-page__input-wrap {
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--color-border);
+        border-radius: 12px;
+        background: var(--color-bg);
+        padding: 0.5rem 1rem;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .search-page__input-wrap:focus-within {
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 4px rgba(51, 102, 204, 0.12);
+    }
+
+    .search-page__icon {
+        color: var(--color-text-muted);
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    .search-page__input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        font-size: 1.05rem;
+        color: var(--color-text);
+        outline: none;
+    }
+
+    .search-page__input::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    .search-page__clear {
+        border: none;
+        background: rgba(0, 0, 0, 0.08);
+        color: var(--color-text-muted);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    /* Filters: Tabs + Grade chips */
+    .search-page__filters {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 1rem;
+    }
+
+    .search-page__tabs {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .search-page__tab {
+        border: 1px solid transparent;
+        background: var(--color-bg-subtle);
+        padding: 0.45rem 0.9rem;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: all 0.15s;
+    }
+
+    .search-page__tab:hover {
+        color: var(--color-text);
+        background: rgba(0, 0, 0, 0.06);
+    }
+
+    .search-page__tab.is-active {
+        background: var(--color-accent);
+        color: #ffffff;
+    }
+
+    .tab-count {
+        font-size: 0.72rem;
+        padding: 0.05rem 0.4rem;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.08);
+    }
+
+    .search-page__tab.is-active .tab-count {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .search-page__grades {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.82rem;
+    }
+
+    .grades-label {
+        color: var(--color-text-muted);
+        font-weight: 500;
+        margin-right: 0.2rem;
+    }
+
+    .page-grade-chip {
+        border: 1px solid var(--color-border);
+        background: var(--color-bg);
+        color: var(--color-text-muted);
+        padding: 0.25rem 0.6rem;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: all 0.12s;
+    }
+
+    .page-grade-chip:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
+    .page-grade-chip.is-active {
+        background: #3366cc;
+        border-color: #3366cc;
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    /* Status Bar */
+    .search-page__status {
+        margin-bottom: 1.25rem;
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        font-weight: 500;
+    }
+
+    /* Suggestions */
+    .search-page__suggestions {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .suggestions-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+    }
+
+    .suggestions-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .term-chip {
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-subtle);
+        color: var(--color-text);
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        cursor: pointer;
+        transition: all 0.12s;
+    }
+
+    .term-chip:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+        background: rgba(51, 102, 204, 0.05);
+    }
+
+    /* Results Grid */
+    .results-grid {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.25rem;
+    }
+
+    :global(.page-result-card) {
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var(--color-bg);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    :global(.page-result-card:hover) {
+        transform: translateY(-2px);
+        border-color: var(--color-accent);
+        box-shadow: 0 4px 14px rgba(51, 102, 204, 0.12);
+        text-decoration: none;
+    }
+
+    :global(.page-result-card__header) {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    :global(.page-result-card__title) {
+        font-weight: 600;
+        font-size: 1.08rem;
+        color: var(--color-accent);
+        line-height: 1.35;
+        margin-bottom: 0.45rem;
+    }
+
+    :global(.page-result-card:hover .page-result-card__title) {
+        text-decoration: underline;
+    }
+
+    :global(.page-result-card__desc) {
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
+        line-height: 1.5;
+        margin: 0 0 0.85rem 0;
+        flex-grow: 1;
+    }
+
+    :global(.page-result-card__tags) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-top: auto;
+    }
+
+    /* Empty state */
+    .page-empty-state {
+        text-align: center;
+        padding: 4rem 1rem;
+        color: var(--color-text-muted);
+    }
+
+    .empty-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .page-empty-state h3 {
+        font-size: 1.25rem;
+        color: var(--color-text);
+        margin: 0 0 0.5rem 0;
+    }
+
+    .page-empty-state p {
+        max-width: 420px;
+        margin-inline: auto;
+    }
+</style>
+
+<script>
+    import { searchItems, highlightMatch } from "../../lib/search-utils.js";
+
+    interface SearchIndexItem {
+        id: string;
+        type: "lesson" | "concept";
+        lang: string;
+        title: string;
+        description: string;
+        tags: string[];
+        grade: number | null;
+        url: string;
+        phonetic?: string;
+        summary?: string;
+        order?: number;
+    }
+
+    function initSearchPage() {
+        const root = document.getElementById("search-page-root");
+        if (!root) return;
+
+        const lang = root.dataset.lang || "vi";
+        const input = document.getElementById("page-search-input") as HTMLInputElement;
+        const clearBtn = document.getElementById("page-search-clear") as HTMLButtonElement;
+        const resultsGrid = document.getElementById("page-results-grid") as HTMLUListElement;
+        const emptyState = document.getElementById("page-empty-state") as HTMLElement;
+        const summaryText = document.getElementById("page-search-summary") as HTMLElement;
+        const suggestionsBox = document.getElementById("page-suggestions") as HTMLElement;
+        const gradesBar = document.getElementById("page-grades-bar") as HTMLElement;
+        const countAll = document.getElementById("page-count-all") as HTMLElement;
+        const countLesson = document.getElementById("page-count-lesson") as HTMLElement;
+        const countConcept = document.getElementById("page-count-concept") as HTMLElement;
+
+        let indexData: SearchIndexItem[] | null = null;
+        let currentTab = "all";
+        let currentGrade = "all";
+
+        async function loadIndex() {
+            if (indexData) return indexData;
+            try {
+                const res = await fetch("/search-index.json");
+                indexData = await res.json();
+            } catch (err) {
+                console.error("Failed to load search index", err);
+                indexData = [];
+            }
+            return indexData;
+        }
+
+        async function updateSearch() {
+            const query = input.value.trim();
+            clearBtn.hidden = query.length === 0;
+
+            // Đồng bộ URL mà không reload trang
+            const url = new URL(window.location.href);
+            if (query) {
+                url.searchParams.set("q", query);
+            } else {
+                url.searchParams.delete("q");
+            }
+            window.history.replaceState({}, "", url.toString());
+
+            const data = await loadIndex();
+            if (!data) return;
+
+            if (!query) {
+                suggestionsBox.hidden = false;
+                resultsGrid.innerHTML = "";
+                emptyState.hidden = true;
+                summaryText.textContent = lang === "vi" ? "Nhập từ khóa phía trên để bắt đầu tìm kiếm" : "Enter a search term above to begin";
+                countAll.textContent = "0";
+                countLesson.textContent = "0";
+                countConcept.textContent = "0";
+                return;
+            }
+
+            suggestionsBox.hidden = true;
+
+            // Đếm cho từng tab
+            const allMatches = searchItems(data, query, { lang, filterType: "all", filterGrade: "all" });
+            const lessonMatches = allMatches.filter((r) => r.item.type === "lesson");
+            const conceptMatches = allMatches.filter((r) => r.item.type === "concept");
+
+            countAll.textContent = String(allMatches.length);
+            countLesson.textContent = String(lessonMatches.length);
+            countConcept.textContent = String(conceptMatches.length);
+
+            const filteredResults = searchItems(data, query, {
+                lang,
+                filterType: currentTab,
+                filterGrade: currentGrade,
+            });
+
+            if (filteredResults.length === 0) {
+                resultsGrid.innerHTML = "";
+                emptyState.hidden = false;
+                summaryText.textContent = lang === "vi"
+                    ? `Không tìm thấy kết quả cho "${query}"`
+                    : `No results found for "${query}"`;
+            } else {
+                emptyState.hidden = true;
+                summaryText.textContent = lang === "vi"
+                    ? `Tìm thấy ${filteredResults.length} kết quả cho "${query}"`
+                    : `Found ${filteredResults.length} results for "${query}"`;
+
+                resultsGrid.innerHTML = filteredResults
+                    .map(({ item, queryTokens }) => {
+                        const titleHighlighted = highlightMatch(item.title, queryTokens);
+                        const descHighlighted = highlightMatch(item.description || item.summary || "", queryTokens);
+                        const badgeType = item.type === "lesson"
+                            ? `<span class="search-badge search-badge--lesson">${lang === "vi" ? "Bài học" : "Lesson"}</span>`
+                            : `<span class="search-badge search-badge--concept">${lang === "vi" ? "Thuật ngữ" : "Wiki"}</span>`;
+                        const gradeBadge = item.grade
+                            ? `<span class="search-badge search-badge--grade">${lang === "vi" ? `Lớp ${item.grade}` : `Grade ${item.grade}`}</span>`
+                            : "";
+                        const tagsHtml = (item.tags || [])
+                            .slice(0, 4)
+                            .map((tag) => `<span class="tag-pill">${highlightMatch(tag, queryTokens)}</span>`)
+                            .join("");
+
+                        return `
+                            <li>
+                                <a href="${item.url}" class="page-result-card">
+                                    <div>
+                                        <div class="page-result-card__header">
+                                            ${badgeType}
+                                            ${gradeBadge}
+                                        </div>
+                                        <div class="page-result-card__title">${titleHighlighted}</div>
+                                        ${descHighlighted ? `<p class="page-result-card__desc">${descHighlighted}</p>` : ""}
+                                    </div>
+                                    ${tagsHtml ? `<div class="page-result-card__tags">${tagsHtml}</div>` : ""}
+                                </a>
+                            </li>
+                        `;
+                    })
+                    .join("");
+            }
+        }
+
+        // Lấy query từ URL lúc vào trang lần đầu
+        const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
+        if (initialQuery) {
+            input.value = initialQuery;
+        }
+
+        input.addEventListener("input", updateSearch);
+
+        clearBtn.addEventListener("click", () => {
+            input.value = "";
+            input.focus();
+            updateSearch();
+        });
+
+        // Tabs
+        const tabs = root.querySelectorAll<HTMLButtonElement>("[data-page-tab]");
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((t) => {
+                    t.classList.remove("is-active");
+                    t.setAttribute("aria-selected", "false");
+                });
+                tab.classList.add("is-active");
+                tab.setAttribute("aria-selected", "true");
+
+                currentTab = tab.dataset.pageTab || "all";
+                if (currentTab === "concept") {
+                    gradesBar.style.display = "none";
+                } else {
+                    gradesBar.style.display = "flex";
+                }
+
+                updateSearch();
+            });
+        });
+
+        // Grades
+        const gradeChips = root.querySelectorAll<HTMLButtonElement>("[data-page-grade]");
+        gradeChips.forEach((chip) => {
+            chip.addEventListener("click", () => {
+                gradeChips.forEach((c) => c.classList.remove("is-active"));
+                chip.classList.add("is-active");
+                currentGrade = chip.dataset.pageGrade || "all";
+                updateSearch();
+            });
+        });
+
+        // Suggestions
+        const termChips = root.querySelectorAll<HTMLButtonElement>("[data-term]");
+        termChips.forEach((chip) => {
+            chip.addEventListener("click", () => {
+                input.value = chip.dataset.term || "";
+                input.focus();
+                updateSearch();
+            });
+        });
+
+        // Thực hiện tìm kiếm ngay khi trang mở
+        updateSearch();
+    }
+
+    initSearchPage();
+    document.addEventListener("astro:page-load", initSearchPage);
+</script>
