@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import { byLang } from '../lib/content-helpers.js';
+import { byLang, getLessonOrder } from '../lib/content-helpers.js';
 import { LANGS } from '../lib/i18n.js';
 
 export async function GET() {
@@ -27,7 +27,7 @@ export async function GET() {
         tags: lesson.data.tags || [],
         grade: grade || null,
         url: `/${lang}/lessons/${lesson.slug}`,
-        order: lesson.data.order || 0,
+        order: getLessonOrder(lesson),
       });
     }
 

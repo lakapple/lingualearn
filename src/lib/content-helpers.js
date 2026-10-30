@@ -78,3 +78,28 @@ export function buildHeadingTree(headings) {
 
   return tree;
 }
+
+/**
+ * Lấy thứ tự hiển thị của bài học một cách chuẩn xác:
+ * 1. Nếu có order > 0 thì dùng order
+ * 2. Nếu order = 0 hoặc thiếu, tự động phân tích số bài từ tiêu đề (ví dụ "Bài 12: ..." -> 12)
+ * 3. Nếu tiêu đề không có, phân tích từ slug (ví dụ "lop-10/bài-12-..." -> 12)
+ */
+export function getLessonOrder(lesson) {
+  if (lesson.data?.order && Number(lesson.data.order) > 0) {
+    return Number(lesson.data.order);
+  }
+
+  const titleMatch = (lesson.data?.title || '').match(/(?:Bài|Lesson)\s*(\d+)/i);
+  if (titleMatch) {
+    return parseInt(titleMatch[1], 10);
+  }
+
+  const slugMatch = (lesson.slug || '').match(/b[aà]i-(\d+)/i);
+  if (slugMatch) {
+    return parseInt(slugMatch[1], 10);
+  }
+
+  return 999;
+}
+

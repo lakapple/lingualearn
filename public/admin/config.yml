@@ -23,7 +23,6 @@ collections:
     format: frontmatter
     create: true
     i18n: true
-    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
     view_filters:
       - label: "Bản nháp"
         field: draft
@@ -52,7 +51,6 @@ collections:
     format: frontmatter
     create: true
     i18n: true
-    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
     view_filters:
       - label: "Bản nháp"
         field: draft
@@ -81,7 +79,6 @@ collections:
     format: frontmatter
     create: true
     i18n: true
-    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
     view_filters:
       - label: "Bản nháp"
         field: draft
@@ -110,7 +107,6 @@ collections:
     format: frontmatter
     create: true
     i18n: true
-    summary: "{{title}} {{#draft}}🔴 [BẢN NHÁP]{{/draft}}"
     view_filters:
       - label: "Bản nháp"
         field: draft
